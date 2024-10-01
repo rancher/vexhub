@@ -1,0 +1,29 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-448cca1c5fcf94ecb7030d60b08ef39b387f34f5faaa2be0e8e1f61f31124f1b",
+  "author": "Rancher Security team",
+  "timestamp": "2024-07-12T17:54:37.399069972-03:00",
+  "last_updated": "2024-10-01T21:12:14.432915093Z",
+  "version": 2,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2023-47108"
+      },
+      "timestamp": "2024-10-01T21:12:14.43291565Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc@v0.45.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Manually confirmed after executing govulncheck against https://github.com/k3s-io/containerd/tree/v1.7.21-k3s2"
+    }
+  ]
+}
