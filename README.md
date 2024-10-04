@@ -6,7 +6,7 @@ Harvester, Longhorn and other container and cloud native solutions images from
 SUSE.
 
 For more information about SUSE's VEX Hub initiative, please consult the
-knowledge base article [KB 000021573 - How to use SUSE Rancher’s VEX Reports].
+knowledge base article [KB 000021573 - How to use SUSE Rancher's VEX Reports].
 
 # Scope
 
@@ -118,7 +118,7 @@ from third-parties.
 ## Use in Air-gap Environments
 
 For instructions on how to use our VEX reports in air-gap environments, please
-consult [KB 000021573 - How to use SUSE Rancher’s VEX Reports].
+consult [KB 000021573 - How to use SUSE Rancher's VEX Reports].
 
 # VEXed CVEs
 
@@ -134,7 +134,7 @@ with Attribution (CC-BY-4.0). See the [license] for more information.
 
 <!-- Links -->
 [VEX]: https://www.ntia.gov/files/ntia/publications/vex_one-page_summary.pdf
-[KB 000021573 - How to use SUSE Rancher’s VEX Reports]: https://www.suse.com/support/kb/doc/?id=000021573
+[KB 000021573 - How to use SUSE Rancher's VEX Reports]: https://www.suse.com/support/kb/doc/?id=000021573
 [OpenVEX specification]: https://github.com/openvex/spec
 [VEX Repository specification]: https://github.com/aquasecurity/vex-repo-spec
 [`rancher.openvex.json`]: reports/rancher.openvex.json
