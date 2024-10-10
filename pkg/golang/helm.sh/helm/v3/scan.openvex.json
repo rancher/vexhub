@@ -3,14 +3,52 @@
   "@id": "https://openvex.dev/docs/public/vex-448cca1c5fcf94ecb7030d60b08ef39b387f34f5faaa2be0e8e1f61f31124f1b",
   "author": "Rancher Security team",
   "timestamp": "2024-07-12T17:54:37.399069972-03:00",
-  "last_updated": "2024-10-10T10:24:41.080052156Z",
-  "version": 3,
+  "last_updated": "2024-10-10T17:21:09.737331774Z",
+  "version": 6,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2023-28840"
+      },
+      "timestamp": "2024-10-10T17:21:08.365430312Z",
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v23.0.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Please check https://github.com/helm/helm/issues/12244"
+    },
     {
       "vulnerability": {
         "name": "CVE-2024-41110"
       },
-      "timestamp": "2024-10-10T10:24:41.037702642Z",
+      "timestamp": "2024-10-10T17:21:09.449859911Z",
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v23.0.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Please see upstream issue https://github.com/helm/helm/pull/13226"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-41110"
+      },
+      "timestamp": "2024-10-10T17:21:09.495559313Z",
       "products": [
         {
           "@id": "pkg:golang/helm.sh/helm/v3",
@@ -29,7 +67,7 @@
       "vulnerability": {
         "name": "CVE-2024-41110"
       },
-      "timestamp": "2024-10-10T10:24:41.080052727Z",
+      "timestamp": "2024-10-10T17:21:09.543023318Z",
       "products": [
         {
           "@id": "pkg:golang/helm.sh/helm/v3",
@@ -43,6 +81,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Please see upstream issue https://github.com/helm/helm/pull/13226"
+    },
+    {
+      "vulnerability": {
+        "name": "GHSA-m425-mq94-257g"
+      },
+      "timestamp": "2024-10-10T17:21:09.737332339Z",
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.53.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "govulncheck was manually executed and confirmed to be a false-positive"
     }
   ]
 }
