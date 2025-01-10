@@ -3,14 +3,14 @@
   "@id": "https://openvex.dev/docs/public/vex-448cca1c5fcf94ecb7030d60b08ef39b387f34f5faaa2be0e8e1f61f31124f1b",
   "author": "Rancher Security team",
   "timestamp": "2024-07-12T17:54:37.399069972-03:00",
-  "last_updated": "2024-12-20T13:11:43.932577443Z",
-  "version": 4,
+  "last_updated": "2025-01-10T14:08:53.713527674Z",
+  "version": 5,
   "statements": [
     {
       "vulnerability": {
         "name": "CVE-2023-39325"
       },
-      "timestamp": "2024-12-20T13:10:45.006245063Z",
+      "timestamp": "2025-01-10T14:07:36.820240757Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/opencontainers/runc",
@@ -30,13 +30,35 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2024-45338"
+      },
+      "timestamp": "2025-01-10T14:07:38.101089549Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/opencontainers/runc",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.24.0"
+            },
+            {
+              "@id": "pkg:golang/golang.org/x/net@0.24.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Our runc dependency at tag v1.1.14, and others, version golang.org/x/net and only depend on the bpf submodule, not html - which is the source of this CVE - https://github.com/opencontainers/runc/tree/v1.1.14/vendor/golang.org/x/net."
+    },
+    {
+      "vulnerability": {
         "name": "GO-2023-1631",
         "aliases": [
           "CVE-2023-24535",
           "GHSA-hw7c-3rfg-p46j"
         ]
       },
-      "timestamp": "2024-12-20T13:11:03.44863674Z",
+      "timestamp": "2025-01-10T14:08:00.671575379Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/opencontainers/runc",
@@ -62,7 +84,7 @@
           "GHSA-8r3f-844c-mc37"
         ]
       },
-      "timestamp": "2024-12-20T13:11:43.932577967Z",
+      "timestamp": "2025-01-10T14:08:53.713528224Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/opencontainers/runc",
