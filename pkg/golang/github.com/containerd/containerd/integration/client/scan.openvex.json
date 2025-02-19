@@ -3,9 +3,61 @@
   "@id": "https://openvex.dev/docs/public/vex-448cca1c5fcf94ecb7030d60b08ef39b387f34f5faaa2be0e8e1f61f31124f1b",
   "author": "Rancher Security team",
   "timestamp": "2024-07-12T17:54:37.399069972-03:00",
-  "last_updated": "2025-01-09T14:09:48.325354311Z",
-  "version": 2,
+  "last_updated": "2025-02-19T11:05:04.321499385Z",
+  "version": 5,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "GO-2024-2491",
+        "aliases": [
+          "CVE-2024-21626",
+          "GHSA-xr7r-f8xq-vfvv"
+        ]
+      },
+      "timestamp": "2025-02-19T11:03:39.592741454Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd/integration/client",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/opencontainers/runc@v1.1.5"
+            },
+            {
+              "@id": "pkg:golang/github.com/opencontainers/runc@1.1.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "GO-2024-2611",
+        "aliases": [
+          "CVE-2024-24786",
+          "GHSA-8r3f-844c-mc37"
+        ]
+      },
+      "timestamp": "2025-02-19T11:03:47.330320003Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd/integration/client",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/protobuf@v1.31.0"
+            },
+            {
+              "@id": "pkg:golang/google.golang.org/protobuf@1.31.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
     {
       "vulnerability": {
         "name": "GO-2024-3333",
@@ -14,7 +66,33 @@
           "GHSA-w32m-9786-jp63"
         ]
       },
-      "timestamp": "2025-01-09T14:09:48.325354957Z",
+      "timestamp": "2025-02-19T11:05:04.276114614Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd/integration/client",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.17.0"
+            },
+            {
+              "@id": "pkg:golang/golang.org/x/net@0.17.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "GO-2024-3333",
+        "aliases": [
+          "CVE-2024-45338",
+          "GHSA-w32m-9786-jp63"
+        ]
+      },
+      "timestamp": "2025-02-19T11:05:04.321500035Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/containerd/containerd/integration/client",
