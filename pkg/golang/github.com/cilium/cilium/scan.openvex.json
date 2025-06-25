@@ -3,27 +3,24 @@
   "@id": "https://openvex.dev/docs/public/vex-448cca1c5fcf94ecb7030d60b08ef39b387f34f5faaa2be0e8e1f61f31124f1b",
   "author": "Rancher Security team",
   "timestamp": "2024-07-12T17:54:37.399069972-03:00",
-  "last_updated": "2025-04-22T23:07:31.869576594Z",
-  "version": 32,
+  "last_updated": "2025-06-25T23:02:06.729765618Z",
+  "version": 100,
   "statements": [
     {
       "vulnerability": {
-        "name": "GO-2024-2512",
+        "name": "CVE-2024-24557",
         "aliases": [
-          "CVE-2024-24557",
-          "GHSA-xw73-rw38-6vjc"
+          "GHSA-xw73-rw38-6vjc",
+          "GO-2024-2512"
         ]
       },
-      "timestamp": "2025-04-22T23:04:35.045013906Z",
+      "timestamp": "2025-06-25T22:21:57.82973021Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/github.com/docker/docker@v24.0.7+incompatible"
-            },
-            {
-              "@id": "pkg:golang/github.com/docker/docker@24.0.7+incompatible"
             }
           ]
         }
@@ -34,22 +31,42 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2024-2631",
+        "name": "CVE-2024-24557",
         "aliases": [
-          "CVE-2024-28180",
-          "GHSA-c5q2-7r4c-mv6g"
+          "GHSA-xw73-rw38-6vjc",
+          "GO-2024-2512"
         ]
       },
-      "timestamp": "2025-04-22T23:04:50.291799878Z",
+      "timestamp": "2025-06-25T22:21:57.95125413Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.15.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v24.0.7+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-28180",
+        "aliases": [
+          "GHSA-c5q2-7r4c-mv6g",
+          "GO-2024-2631"
+        ]
+      },
+      "timestamp": "2025-06-25T22:23:16.2392293Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/github.com/go-jose/go-jose/v3@v3.0.1"
-            },
-            {
-              "@id": "pkg:golang/github.com/go-jose/go-jose/v3@3.0.1"
             }
           ]
         }
@@ -60,22 +77,41 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2024-2659",
+        "name": "CVE-2024-28180",
         "aliases": [
-          "CVE-2024-29018",
-          "GHSA-mq39-4gv4-mvpx"
+          "GHSA-c5q2-7r4c-mv6g",
+          "GO-2024-2631"
         ]
       },
-      "timestamp": "2025-04-22T23:04:51.641853543Z",
+      "timestamp": "2025-06-25T22:23:16.352762178Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.15.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v3@v3.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-41110",
+        "aliases": [
+          "GO-2024-3005"
+        ]
+      },
+      "timestamp": "2025-06-25T22:23:55.532635297Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/github.com/docker/docker@v24.0.7+incompatible"
-            },
-            {
-              "@id": "pkg:golang/github.com/docker/docker@24.0.7+incompatible"
             }
           ]
         }
@@ -86,72 +122,18 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2024-2737",
+        "name": "CVE-2024-41110",
         "aliases": [
-          "CVE-2024-32473",
-          "GHSA-x84c-p2g9-rqv9"
+          "GO-2024-3005"
         ]
       },
-      "timestamp": "2025-04-22T23:04:58.820681833Z",
-      "products": [
-        {
-          "@id": "pkg:golang/github.com/cilium/cilium",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/github.com/docker/docker@v24.0.7+incompatible"
-            },
-            {
-              "@id": "pkg:golang/github.com/docker/docker@24.0.7+incompatible"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_present",
-      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
-    },
-    {
-      "vulnerability": {
-        "name": "GO-2024-3005",
-        "aliases": [
-          "CVE-2024-41110"
-        ]
-      },
-      "timestamp": "2025-04-22T23:05:15.695147426Z",
-      "products": [
-        {
-          "@id": "pkg:golang/github.com/cilium/cilium",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/github.com/docker/docker@v24.0.7+incompatible"
-            },
-            {
-              "@id": "pkg:golang/github.com/docker/docker@24.0.7+incompatible"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_present",
-      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
-    },
-    {
-      "vulnerability": {
-        "name": "GO-2024-3005",
-        "aliases": [
-          "CVE-2024-41110"
-        ]
-      },
-      "timestamp": "2025-04-22T23:05:15.742459692Z",
+      "timestamp": "2025-06-25T22:23:55.644457444Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/github.com/docker/docker@v26.1.4+incompatible"
-            },
-            {
-              "@id": "pkg:golang/github.com/docker/docker@26.1.4+incompatible"
             }
           ]
         }
@@ -162,48 +144,85 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2024-3250",
+        "name": "CVE-2024-41110",
         "aliases": [
-          "CVE-2024-51744",
-          "GHSA-29wx-vh33-7x7r"
+          "GO-2024-3005"
         ]
       },
-      "timestamp": "2025-04-22T23:05:20.690133345Z",
+      "timestamp": "2025-06-25T22:23:55.762409514Z",
       "products": [
         {
-          "@id": "pkg:golang/github.com/cilium/cilium",
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.15.5",
           "subcomponents": [
             {
-              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
-            },
-            {
-              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@4.5.0"
+              "@id": "pkg:golang/github.com/docker/docker@v24.0.7+incompatible"
             }
           ]
         }
       ],
       "status": "not_affected",
-      "justification": "vulnerable_code_not_in_execute_path",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     },
     {
       "vulnerability": {
-        "name": "GO-2024-3321",
+        "name": "CVE-2024-41110",
         "aliases": [
-          "CVE-2024-45337",
-          "GHSA-v778-237x-gjrc"
+          "GO-2024-3005"
         ]
       },
-      "timestamp": "2025-04-22T23:05:27.261185451Z",
+      "timestamp": "2025-06-25T22:23:55.886222412Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v26.1.4+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-41110",
+        "aliases": [
+          "GO-2024-3005"
+        ]
+      },
+      "timestamp": "2025-06-25T22:23:56.003056946Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v26.1.4+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45337",
+        "aliases": [
+          "GHSA-v778-237x-gjrc",
+          "GO-2024-3321"
+        ]
+      },
+      "timestamp": "2025-06-25T22:24:22.621675022Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/crypto@0.18.0"
             }
           ]
         }
@@ -214,22 +233,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2024-3321",
+        "name": "CVE-2024-45337",
         "aliases": [
-          "CVE-2024-45337",
-          "GHSA-v778-237x-gjrc"
+          "GHSA-v778-237x-gjrc",
+          "GO-2024-3321"
         ]
       },
-      "timestamp": "2025-04-22T23:05:27.306029333Z",
+      "timestamp": "2025-06-25T22:24:22.750321333Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/crypto@v0.24.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/crypto@0.24.0"
             }
           ]
         }
@@ -240,21 +256,157 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2024-3333",
+        "name": "CVE-2024-45337",
         "aliases": [
-          "CVE-2024-45338"
+          "GHSA-v778-237x-gjrc",
+          "GO-2024-3321"
         ]
       },
-      "timestamp": "2025-04-22T23:05:43.04793549Z",
+      "timestamp": "2025-06-25T22:24:22.875343478Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.15.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45337",
+        "aliases": [
+          "GHSA-v778-237x-gjrc",
+          "GO-2024-3321"
+        ]
+      },
+      "timestamp": "2025-06-25T22:24:23.00059724Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.24.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45337",
+        "aliases": [
+          "GHSA-v778-237x-gjrc",
+          "GO-2024-3321"
+        ]
+      },
+      "timestamp": "2025-06-25T22:24:23.125213697Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.24.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45337",
+        "aliases": [
+          "GHSA-v778-237x-gjrc",
+          "GO-2024-3321"
+        ]
+      },
+      "timestamp": "2025-06-25T22:24:23.251759483Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.24.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45337",
+        "aliases": [
+          "GHSA-v778-237x-gjrc",
+          "GO-2024-3321"
+        ]
+      },
+      "timestamp": "2025-06-25T22:24:23.376284428Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.24.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45337",
+        "aliases": [
+          "GHSA-v778-237x-gjrc",
+          "GO-2024-3321"
+        ]
+      },
+      "timestamp": "2025-06-25T22:24:23.502930888Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.24.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45338",
+        "aliases": [
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
+        ]
+      },
+      "timestamp": "2025-06-25T22:26:36.288340289Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.20.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.20.0"
             }
           ]
         }
@@ -265,21 +417,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2024-3333",
+        "name": "CVE-2024-45338",
         "aliases": [
-          "CVE-2024-45338"
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
         ]
       },
-      "timestamp": "2025-04-22T23:05:43.092914068Z",
+      "timestamp": "2025-06-25T22:26:36.436339097Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.26.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.26.0"
             }
           ]
         }
@@ -290,74 +440,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2024-3333",
+        "name": "CVE-2024-45338",
         "aliases": [
-          "CVE-2024-45338",
-          "GHSA-w32m-9786-jp63"
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
         ]
       },
-      "timestamp": "2025-04-22T23:05:58.576576273Z",
-      "products": [
-        {
-          "@id": "pkg:golang/github.com/cilium/cilium",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/golang.org/x/net@v0.20.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.20.0"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
-    },
-    {
-      "vulnerability": {
-        "name": "GO-2024-3333",
-        "aliases": [
-          "CVE-2024-45338",
-          "GHSA-w32m-9786-jp63"
-        ]
-      },
-      "timestamp": "2025-04-22T23:05:58.622949535Z",
-      "products": [
-        {
-          "@id": "pkg:golang/github.com/cilium/cilium",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.26.0"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
-    },
-    {
-      "vulnerability": {
-        "name": "GO-2024-3333",
-        "aliases": [
-          "CVE-2024-45338",
-          "GHSA-w32m-9786-jp63"
-        ]
-      },
-      "timestamp": "2025-04-22T23:05:58.669635608Z",
+      "timestamp": "2025-06-25T22:26:36.582782588Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.29.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.29.0"
             }
           ]
         }
@@ -368,22 +463,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3485",
+        "name": "CVE-2024-45338",
         "aliases": [
-          "CVE-2025-27144",
-          "GHSA-c6gw-w398-hv78"
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
         ]
       },
-      "timestamp": "2025-04-22T23:06:26.156121406Z",
+      "timestamp": "2025-06-25T22:26:36.724172645Z",
       "products": [
         {
-          "@id": "pkg:golang/github.com/cilium/cilium",
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.15.5",
           "subcomponents": [
             {
-              "@id": "pkg:golang/github.com/go-jose/go-jose/v3@v3.0.1"
-            },
-            {
-              "@id": "pkg:golang/github.com/go-jose/go-jose/v3@3.0.1"
+              "@id": "pkg:golang/golang.org/x/net@v0.20.0"
             }
           ]
         }
@@ -394,22 +486,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3485",
+        "name": "CVE-2024-45338",
         "aliases": [
-          "CVE-2025-27144",
-          "GHSA-c6gw-w398-hv78"
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
         ]
       },
-      "timestamp": "2025-04-22T23:06:26.200887818Z",
+      "timestamp": "2025-06-25T22:26:36.863639919Z",
       "products": [
         {
-          "@id": "pkg:golang/github.com/cilium/cilium",
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.0",
           "subcomponents": [
             {
-              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.2"
-            },
-            {
-              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@4.0.2"
+              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
             }
           ]
         }
@@ -420,22 +509,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3485",
+        "name": "CVE-2024-45338",
         "aliases": [
-          "CVE-2025-27144",
-          "GHSA-c6gw-w398-hv78"
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
         ]
       },
-      "timestamp": "2025-04-22T23:06:26.245955132Z",
+      "timestamp": "2025-06-25T22:26:37.010193449Z",
       "products": [
         {
-          "@id": "pkg:golang/github.com/cilium/cilium",
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.1",
           "subcomponents": [
             {
-              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.4"
-            },
-            {
-              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@4.0.4"
+              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
             }
           ]
         }
@@ -446,121 +532,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3488",
+        "name": "CVE-2024-45338",
         "aliases": [
-          "CVE-2025-22868"
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
         ]
       },
-      "timestamp": "2025-04-22T23:06:39.318125857Z",
+      "timestamp": "2025-06-25T22:26:37.155794557Z",
       "products": [
         {
-          "@id": "pkg:golang/github.com/cilium/cilium",
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.2",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/oauth2@v0.16.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/oauth2@0.16.0"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_present",
-      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
-    },
-    {
-      "vulnerability": {
-        "name": "GO-2025-3488",
-        "aliases": [
-          "CVE-2025-22868"
-        ]
-      },
-      "timestamp": "2025-04-22T23:06:39.364239777Z",
-      "products": [
-        {
-          "@id": "pkg:golang/github.com/cilium/cilium",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/golang.org/x/oauth2@v0.19.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/oauth2@0.19.0"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_present",
-      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
-    },
-    {
-      "vulnerability": {
-        "name": "GO-2025-3488",
-        "aliases": [
-          "CVE-2025-22868"
-        ]
-      },
-      "timestamp": "2025-04-22T23:06:39.412309008Z",
-      "products": [
-        {
-          "@id": "pkg:golang/github.com/cilium/cilium",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/golang.org/x/oauth2@v0.23.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/oauth2@0.23.0"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_present",
-      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
-    },
-    {
-      "vulnerability": {
-        "name": "GO-2025-3488",
-        "aliases": [
-          "CVE-2025-22868"
-        ]
-      },
-      "timestamp": "2025-04-22T23:06:39.458260067Z",
-      "products": [
-        {
-          "@id": "pkg:golang/github.com/cilium/cilium",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/golang.org/x/oauth2@v0.24.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/oauth2@0.24.0"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_present",
-      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
-    },
-    {
-      "vulnerability": {
-        "name": "GO-2025-3503",
-        "aliases": [
-          "CVE-2025-22870"
-        ]
-      },
-      "timestamp": "2025-04-22T23:06:56.169882293Z",
-      "products": [
-        {
-          "@id": "pkg:golang/github.com/cilium/cilium",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/golang.org/x/net@v0.33.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.33.0"
+              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
             }
           ]
         }
@@ -571,22 +555,88 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3553",
+        "name": "CVE-2024-45338",
         "aliases": [
-          "CVE-2025-30204",
-          "GHSA-mh63-6h87-95cp"
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
         ]
       },
-      "timestamp": "2025-04-22T23:07:15.503750948Z",
+      "timestamp": "2025-06-25T22:26:37.302255177Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45338",
+        "aliases": [
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
+        ]
+      },
+      "timestamp": "2025-06-25T22:26:37.448474927Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45338",
+        "aliases": [
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
+        ]
+      },
+      "timestamp": "2025-06-25T22:26:37.591826939Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.29.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-51744",
+        "aliases": [
+          "GHSA-29wx-vh33-7x7r",
+          "GO-2024-3250"
+        ]
+      },
+      "timestamp": "2025-06-25T22:32:46.373807435Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
-            },
-            {
-              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@4.5.0"
             }
           ]
         }
@@ -597,122 +647,465 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3553",
+        "name": "CVE-2024-51744",
         "aliases": [
-          "CVE-2025-30204",
-          "GHSA-mh63-6h87-95cp"
+          "GHSA-29wx-vh33-7x7r",
+          "GO-2024-3250"
         ]
       },
-      "timestamp": "2025-04-22T23:07:15.549082014Z",
+      "timestamp": "2025-06-25T22:32:46.561665225Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.15.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-51744",
+        "aliases": [
+          "GHSA-29wx-vh33-7x7r",
+          "GO-2024-3250"
+        ]
+      },
+      "timestamp": "2025-06-25T22:32:46.741971012Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-51744",
+        "aliases": [
+          "GHSA-29wx-vh33-7x7r",
+          "GO-2024-3250"
+        ]
+      },
+      "timestamp": "2025-06-25T22:32:46.926263252Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-51744",
+        "aliases": [
+          "GHSA-29wx-vh33-7x7r",
+          "GO-2024-3250"
+        ]
+      },
+      "timestamp": "2025-06-25T22:32:47.110010836Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-51744",
+        "aliases": [
+          "GHSA-29wx-vh33-7x7r",
+          "GO-2024-3250"
+        ]
+      },
+      "timestamp": "2025-06-25T22:32:47.293211661Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-51744",
+        "aliases": [
+          "GHSA-29wx-vh33-7x7r",
+          "GO-2024-3250"
+        ]
+      },
+      "timestamp": "2025-06-25T22:32:47.478999615Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-51744",
+        "aliases": [
+          "GHSA-29wx-vh33-7x7r",
+          "GO-2024-3250"
+        ]
+      },
+      "timestamp": "2025-06-25T22:32:47.675941747Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22868",
+        "aliases": [
+          "GO-2025-3488"
+        ]
+      },
+      "timestamp": "2025-06-25T22:33:11.707564849Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
-              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.1"
-            },
-            {
-              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@4.5.1"
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.16.0"
             }
           ]
         }
       ],
       "status": "not_affected",
-      "justification": "vulnerable_code_not_in_execute_path",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3595",
+        "name": "CVE-2025-22868",
         "aliases": [
-          "CVE-2025-22872"
+          "GO-2025-3488"
         ]
       },
-      "timestamp": "2025-04-22T23:07:18.228170938Z",
+      "timestamp": "2025-06-25T22:33:11.901521598Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/net@v0.20.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.20.0"
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.19.0"
             }
           ]
         }
       ],
       "status": "not_affected",
-      "justification": "vulnerable_code_not_in_execute_path",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3595",
+        "name": "CVE-2025-22868",
         "aliases": [
-          "CVE-2025-22872"
+          "GO-2025-3488"
         ]
       },
-      "timestamp": "2025-04-22T23:07:18.273016461Z",
+      "timestamp": "2025-06-25T22:33:12.092594544Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.26.0"
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.23.0"
             }
           ]
         }
       ],
       "status": "not_affected",
-      "justification": "vulnerable_code_not_in_execute_path",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3595",
+        "name": "CVE-2025-22868",
         "aliases": [
-          "CVE-2025-22872"
+          "GO-2025-3488"
         ]
       },
-      "timestamp": "2025-04-22T23:07:18.320028477Z",
+      "timestamp": "2025-06-25T22:33:12.287518083Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/net@v0.29.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.29.0"
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.24.0"
             }
           ]
         }
       ],
       "status": "not_affected",
-      "justification": "vulnerable_code_not_in_execute_path",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3595",
+        "name": "CVE-2025-22868",
         "aliases": [
-          "CVE-2025-22872"
+          "GO-2025-3488"
         ]
       },
-      "timestamp": "2025-04-22T23:07:18.365336263Z",
+      "timestamp": "2025-06-25T22:33:12.484405497Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.15.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.16.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22868",
+        "aliases": [
+          "GO-2025-3488"
+        ]
+      },
+      "timestamp": "2025-06-25T22:33:12.677657407Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.19.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22868",
+        "aliases": [
+          "GO-2025-3488"
+        ]
+      },
+      "timestamp": "2025-06-25T22:33:12.871426584Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.19.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22868",
+        "aliases": [
+          "GO-2025-3488"
+        ]
+      },
+      "timestamp": "2025-06-25T22:33:13.061438243Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.19.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22868",
+        "aliases": [
+          "GO-2025-3488"
+        ]
+      },
+      "timestamp": "2025-06-25T22:33:13.254292358Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.19.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22868",
+        "aliases": [
+          "GO-2025-3488"
+        ]
+      },
+      "timestamp": "2025-06-25T22:33:13.453948179Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.19.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22868",
+        "aliases": [
+          "GO-2025-3488"
+        ]
+      },
+      "timestamp": "2025-06-25T22:33:13.652194494Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22868",
+        "aliases": [
+          "GO-2025-3488"
+        ]
+      },
+      "timestamp": "2025-06-25T22:33:13.847998048Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.17.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.24.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22868",
+        "aliases": [
+          "GO-2025-3488"
+        ]
+      },
+      "timestamp": "2025-06-25T22:33:14.044728775Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.17.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.24.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22870",
+        "aliases": [
+          "GO-2025-3503"
+        ]
+      },
+      "timestamp": "2025-06-25T22:42:15.909510152Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.33.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.33.0"
             }
           ]
         }
@@ -723,22 +1116,878 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3630",
+        "name": "CVE-2025-22870",
         "aliases": [
-          "CVE-2025-43970",
-          "GHSA-hqhq-hp5x-xp3w"
+          "GO-2025-3503"
         ]
       },
-      "timestamp": "2025-04-22T23:07:31.778995452Z",
+      "timestamp": "2025-06-25T22:42:16.104500211Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.17.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.33.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22870",
+        "aliases": [
+          "GO-2025-3503"
+        ]
+      },
+      "timestamp": "2025-06-25T22:42:16.30694237Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.17.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.33.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:01.929548901Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.20.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:02.170575115Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:02.413284859Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.29.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:02.664213003Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.33.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:02.910519403Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.15.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.20.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:03.161268318Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:03.401588629Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:03.638249072Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:03.867432542Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:04.093104522Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:04.325437484Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.29.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:04.549326494Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.17.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.33.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:51:04.78898347Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.17.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.33.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-27144",
+        "aliases": [
+          "GHSA-c6gw-w398-hv78",
+          "GO-2025-3485"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:08.230259809Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v3@v3.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-27144",
+        "aliases": [
+          "GHSA-c6gw-w398-hv78",
+          "GO-2025-3485"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:08.528542997Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-27144",
+        "aliases": [
+          "GHSA-c6gw-w398-hv78",
+          "GO-2025-3485"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:08.822805353Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-27144",
+        "aliases": [
+          "GHSA-c6gw-w398-hv78",
+          "GO-2025-3485"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:09.124402678Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.15.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v3@v3.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-27144",
+        "aliases": [
+          "GHSA-c6gw-w398-hv78",
+          "GO-2025-3485"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:09.423907579Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-27144",
+        "aliases": [
+          "GHSA-c6gw-w398-hv78",
+          "GO-2025-3485"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:09.712515563Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-27144",
+        "aliases": [
+          "GHSA-c6gw-w398-hv78",
+          "GO-2025-3485"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:10.017064337Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-27144",
+        "aliases": [
+          "GHSA-c6gw-w398-hv78",
+          "GO-2025-3485"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:10.316814803Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-27144",
+        "aliases": [
+          "GHSA-c6gw-w398-hv78",
+          "GO-2025-3485"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:10.612337683Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-27144",
+        "aliases": [
+          "GHSA-c6gw-w398-hv78",
+          "GO-2025-3485"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:10.907286368Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-27144",
+        "aliases": [
+          "GHSA-c6gw-w398-hv78",
+          "GO-2025-3485"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:11.199149393Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.17.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-27144",
+        "aliases": [
+          "GHSA-c6gw-w398-hv78",
+          "GO-2025-3485"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:11.487552129Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.17.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30204",
+        "aliases": [
+          "GHSA-mh63-6h87-95cp",
+          "GO-2025-3553"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:24.831967313Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30204",
+        "aliases": [
+          "GHSA-mh63-6h87-95cp",
+          "GO-2025-3553"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:25.130702395Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30204",
+        "aliases": [
+          "GHSA-mh63-6h87-95cp",
+          "GO-2025-3553"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:25.423924123Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.15.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30204",
+        "aliases": [
+          "GHSA-mh63-6h87-95cp",
+          "GO-2025-3553"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:25.725832827Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30204",
+        "aliases": [
+          "GHSA-mh63-6h87-95cp",
+          "GO-2025-3553"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:26.015611937Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30204",
+        "aliases": [
+          "GHSA-mh63-6h87-95cp",
+          "GO-2025-3553"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:26.315284334Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30204",
+        "aliases": [
+          "GHSA-mh63-6h87-95cp",
+          "GO-2025-3553"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:26.623372631Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30204",
+        "aliases": [
+          "GHSA-mh63-6h87-95cp",
+          "GO-2025-3553"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:26.930236709Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30204",
+        "aliases": [
+          "GHSA-mh63-6h87-95cp",
+          "GO-2025-3553"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:27.230163376Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30204",
+        "aliases": [
+          "GHSA-mh63-6h87-95cp",
+          "GO-2025-3553"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:27.531980082Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.17.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30204",
+        "aliases": [
+          "GHSA-mh63-6h87-95cp",
+          "GO-2025-3553"
+        ]
+      },
+      "timestamp": "2025-06-25T23:01:27.814578564Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.17.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.5.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-43970",
+        "aliases": [
+          "GHSA-hqhq-hp5x-xp3w",
+          "GO-2025-3630"
+        ]
+      },
+      "timestamp": "2025-06-25T23:02:03.72171515Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/github.com/osrg/gobgp/v3@v3.23.0"
-            },
-            {
-              "@id": "pkg:golang/github.com/osrg/gobgp/v3@3.23.0"
             }
           ]
         }
@@ -749,22 +1998,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3630",
+        "name": "CVE-2025-43970",
         "aliases": [
-          "CVE-2025-43970",
-          "GHSA-hqhq-hp5x-xp3w"
+          "GHSA-hqhq-hp5x-xp3w",
+          "GO-2025-3630"
         ]
       },
-      "timestamp": "2025-04-22T23:07:31.825317674Z",
+      "timestamp": "2025-06-25T23:02:03.992239535Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/github.com/osrg/gobgp/v3@v3.27.0"
-            },
-            {
-              "@id": "pkg:golang/github.com/osrg/gobgp/v3@3.27.0"
             }
           ]
         }
@@ -775,22 +2021,226 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3630",
+        "name": "CVE-2025-43970",
         "aliases": [
-          "CVE-2025-43970",
-          "GHSA-hqhq-hp5x-xp3w"
+          "GHSA-hqhq-hp5x-xp3w",
+          "GO-2025-3630"
         ]
       },
-      "timestamp": "2025-04-22T23:07:31.869577024Z",
+      "timestamp": "2025-06-25T23:02:04.281396915Z",
       "products": [
         {
           "@id": "pkg:golang/github.com/cilium/cilium",
           "subcomponents": [
             {
               "@id": "pkg:golang/github.com/osrg/gobgp/v3@v3.32.0"
-            },
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-43970",
+        "aliases": [
+          "GHSA-hqhq-hp5x-xp3w",
+          "GO-2025-3630"
+        ]
+      },
+      "timestamp": "2025-06-25T23:02:04.558077192Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.15.5",
+          "subcomponents": [
             {
-              "@id": "pkg:golang/github.com/osrg/gobgp/v3@3.32.0"
+              "@id": "pkg:golang/github.com/osrg/gobgp/v3@v3.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-43970",
+        "aliases": [
+          "GHSA-hqhq-hp5x-xp3w",
+          "GO-2025-3630"
+        ]
+      },
+      "timestamp": "2025-06-25T23:02:04.84283961Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/osrg/gobgp/v3@v3.27.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-43970",
+        "aliases": [
+          "GHSA-hqhq-hp5x-xp3w",
+          "GO-2025-3630"
+        ]
+      },
+      "timestamp": "2025-06-25T23:02:05.115733221Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/osrg/gobgp/v3@v3.27.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-43970",
+        "aliases": [
+          "GHSA-hqhq-hp5x-xp3w",
+          "GO-2025-3630"
+        ]
+      },
+      "timestamp": "2025-06-25T23:02:05.376043522Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/osrg/gobgp/v3@v3.27.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-43970",
+        "aliases": [
+          "GHSA-hqhq-hp5x-xp3w",
+          "GO-2025-3630"
+        ]
+      },
+      "timestamp": "2025-06-25T23:02:05.631650207Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/osrg/gobgp/v3@v3.27.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-43970",
+        "aliases": [
+          "GHSA-hqhq-hp5x-xp3w",
+          "GO-2025-3630"
+        ]
+      },
+      "timestamp": "2025-06-25T23:02:05.895466101Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/osrg/gobgp/v3@v3.27.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-43970",
+        "aliases": [
+          "GHSA-hqhq-hp5x-xp3w",
+          "GO-2025-3630"
+        ]
+      },
+      "timestamp": "2025-06-25T23:02:06.15458376Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.16.5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/osrg/gobgp/v3@v3.27.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-43970",
+        "aliases": [
+          "GHSA-hqhq-hp5x-xp3w",
+          "GO-2025-3630"
+        ]
+      },
+      "timestamp": "2025-06-25T23:02:06.433345562Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.17.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/osrg/gobgp/v3@v3.32.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-43970",
+        "aliases": [
+          "GHSA-hqhq-hp5x-xp3w",
+          "GO-2025-3630"
+        ]
+      },
+      "timestamp": "2025-06-25T23:02:06.729766485Z",
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium@v1.17.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/osrg/gobgp/v3@v3.32.0"
             }
           ]
         }

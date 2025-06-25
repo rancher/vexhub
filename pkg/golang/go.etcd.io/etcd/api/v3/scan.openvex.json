@@ -3,27 +3,116 @@
   "@id": "https://openvex.dev/docs/public/vex-448cca1c5fcf94ecb7030d60b08ef39b387f34f5faaa2be0e8e1f61f31124f1b",
   "author": "Rancher Security team",
   "timestamp": "2024-07-12T17:54:37.399069972-03:00",
-  "last_updated": "2025-06-04T22:12:52.311051679Z",
-  "version": 30,
+  "last_updated": "2025-06-25T22:54:27.615918275Z",
+  "version": 56,
   "statements": [
     {
       "vulnerability": {
-        "name": "GO-2021-0113",
+        "name": "CVE-2021-31525",
         "aliases": [
-          "CVE-2021-38561",
-          "GHSA-ppp9-7jff-5vj2"
+          "GHSA-h86h-8ppg-mxmh",
+          "GO-2022-0236"
         ]
       },
-      "timestamp": "2025-06-04T22:08:53.455275219Z",
+      "timestamp": "2025-06-25T22:18:57.529053766Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2021-31525",
+        "aliases": [
+          "GHSA-h86h-8ppg-mxmh",
+          "GO-2022-0236"
+        ]
+      },
+      "timestamp": "2025-06-25T22:18:57.60210185Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2021-33194",
+        "aliases": [
+          "GHSA-83g2-8m93-v3w7",
+          "GO-2021-0238"
+        ]
+      },
+      "timestamp": "2025-06-25T22:18:57.959903862Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2021-33194",
+        "aliases": [
+          "GHSA-83g2-8m93-v3w7",
+          "GO-2021-0238"
+        ]
+      },
+      "timestamp": "2025-06-25T22:18:58.031985536Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2021-38561",
+        "aliases": [
+          "GHSA-ppp9-7jff-5vj2",
+          "GO-2021-0113"
+        ]
+      },
+      "timestamp": "2025-06-25T22:18:58.554383918Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/text@v0.3.5"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/text@0.3.5"
             }
           ]
         }
@@ -34,22 +123,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2021-0238",
+        "name": "CVE-2021-38561",
         "aliases": [
-          "CVE-2021-33194",
-          "GHSA-83g2-8m93-v3w7"
+          "GHSA-ppp9-7jff-5vj2",
+          "GO-2021-0113"
         ]
       },
-      "timestamp": "2025-06-04T22:08:53.759874746Z",
+      "timestamp": "2025-06-25T22:18:58.630183208Z",
       "products": [
         {
-          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.0.0-20210405180319-a5a99cb37ef4"
+              "@id": "pkg:golang/golang.org/x/text@v0.3.5"
             }
           ]
         }
@@ -60,22 +146,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2022-0236",
+        "name": "CVE-2021-44716",
         "aliases": [
-          "CVE-2021-31525",
-          "GHSA-h86h-8ppg-mxmh"
+          "GHSA-vc3p-29h2-gpcp",
+          "GO-2022-0288"
         ]
       },
-      "timestamp": "2025-06-04T22:08:54.198036702Z",
+      "timestamp": "2025-06-25T22:19:01.086470185Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.0.0-20210405180319-a5a99cb37ef4"
             }
           ]
         }
@@ -86,22 +169,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2022-0288",
+        "name": "CVE-2021-44716",
         "aliases": [
-          "CVE-2021-44716",
-          "GHSA-vc3p-29h2-gpcp"
+          "GHSA-vc3p-29h2-gpcp",
+          "GO-2022-0288"
         ]
       },
-      "timestamp": "2025-06-04T22:08:54.766692287Z",
+      "timestamp": "2025-06-25T22:19:01.166226606Z",
       "products": [
         {
-          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.0.0-20210405180319-a5a99cb37ef4"
             }
           ]
         }
@@ -112,22 +192,65 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2022-0493",
+        "name": "CVE-2022-27664",
         "aliases": [
-          "CVE-2022-29526",
-          "GHSA-p782-xgp4-8hr8"
+          "GHSA-69cg-p879-7622",
+          "GO-2022-0969"
         ]
       },
-      "timestamp": "2025-06-04T22:08:55.726559783Z",
+      "timestamp": "2025-06-25T22:19:02.278594844Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2022-27664",
+        "aliases": [
+          "GHSA-69cg-p879-7622",
+          "GO-2022-0969"
+        ]
+      },
+      "timestamp": "2025-06-25T22:19:02.350969637Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2022-29526",
+        "aliases": [
+          "GHSA-p782-xgp4-8hr8",
+          "GO-2022-0493"
+        ]
+      },
+      "timestamp": "2025-06-25T22:19:03.071668854Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/sys@v0.0.0-20210510120138-977fb7262007"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/sys@0.0.0-20210510120138-977fb7262007"
             }
           ]
         }
@@ -138,22 +261,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2022-0969",
+        "name": "CVE-2022-29526",
         "aliases": [
-          "CVE-2022-27664",
-          "GHSA-69cg-p879-7622"
+          "GHSA-p782-xgp4-8hr8",
+          "GO-2022-0493"
         ]
       },
-      "timestamp": "2025-06-04T22:09:08.39814035Z",
+      "timestamp": "2025-06-25T22:19:03.14541775Z",
       "products": [
         {
-          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.0.0-20210405180319-a5a99cb37ef4"
+              "@id": "pkg:golang/golang.org/x/sys@v0.0.0-20210510120138-977fb7262007"
             }
           ]
         }
@@ -164,22 +284,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2022-1059",
+        "name": "CVE-2022-32149",
         "aliases": [
-          "CVE-2022-32149",
-          "GHSA-69ch-w2m2-3vjp"
+          "GHSA-69ch-w2m2-3vjp",
+          "GO-2022-1059"
         ]
       },
-      "timestamp": "2025-06-04T22:09:09.110357494Z",
+      "timestamp": "2025-06-25T22:19:08.195079223Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/text@v0.3.5"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/text@0.3.5"
             }
           ]
         }
@@ -190,22 +307,42 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2022-1144",
+        "name": "CVE-2022-32149",
         "aliases": [
-          "CVE-2022-41717",
-          "GHSA-xrjj-mj9h-534m"
+          "GHSA-69ch-w2m2-3vjp",
+          "GO-2022-1059"
         ]
       },
-      "timestamp": "2025-06-04T22:09:09.90342547Z",
+      "timestamp": "2025-06-25T22:19:08.26933303Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/text@v0.3.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2022-41717",
+        "aliases": [
+          "GHSA-xrjj-mj9h-534m",
+          "GO-2022-1144"
+        ]
+      },
+      "timestamp": "2025-06-25T22:19:09.322277893Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.0.0-20210405180319-a5a99cb37ef4"
             }
           ]
         }
@@ -216,22 +353,88 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2023-1495",
+        "name": "CVE-2022-41717",
         "aliases": [
-          "CVE-2022-41721",
-          "GHSA-fxg5-wq6x-vr4w"
+          "GHSA-xrjj-mj9h-534m",
+          "GO-2022-1144"
         ]
       },
-      "timestamp": "2025-06-04T22:09:11.047833964Z",
+      "timestamp": "2025-06-25T22:19:09.394868036Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2023-39325",
+        "aliases": [
+          "GHSA-4374-p667-p6c8",
+          "GO-2023-2102"
+        ]
+      },
+      "timestamp": "2025-06-25T22:19:39.739079397Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
-            },
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2023-39325",
+        "aliases": [
+          "GHSA-4374-p667-p6c8",
+          "GO-2023-2102"
+        ]
+      },
+      "timestamp": "2025-06-25T22:19:39.820646783Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
+          "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/net@0.0.0-20210405180319-a5a99cb37ef4"
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2023-3978",
+        "aliases": [
+          "GHSA-2wrh-6pvc-2jm9",
+          "GO-2023-1988"
+        ]
+      },
+      "timestamp": "2025-06-25T22:20:03.196537706Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
             }
           ]
         }
@@ -242,74 +445,42 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2023-1631",
+        "name": "CVE-2023-3978",
         "aliases": [
-          "CVE-2023-24535",
-          "GHSA-hw7c-3rfg-p46j"
+          "GHSA-2wrh-6pvc-2jm9",
+          "GO-2023-1988"
         ]
       },
-      "timestamp": "2025-06-04T22:09:17.217237033Z",
+      "timestamp": "2025-06-25T22:20:03.273089952Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-24786",
+        "aliases": [
+          "GHSA-8r3f-844c-mc37",
+          "GO-2024-2611"
+        ]
+      },
+      "timestamp": "2025-06-25T22:22:41.3253227Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/google.golang.org/protobuf@v1.26.0"
-            },
-            {
-              "@id": "pkg:golang/google.golang.org/protobuf@1.26.0"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_present",
-      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
-    },
-    {
-      "vulnerability": {
-        "name": "GO-2023-1988",
-        "aliases": [
-          "CVE-2023-3978",
-          "GHSA-2wrh-6pvc-2jm9"
-        ]
-      },
-      "timestamp": "2025-06-04T22:09:28.926840246Z",
-      "products": [
-        {
-          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.0.0-20210405180319-a5a99cb37ef4"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_present",
-      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
-    },
-    {
-      "vulnerability": {
-        "name": "GO-2023-2102",
-        "aliases": [
-          "CVE-2023-39325",
-          "GHSA-4374-p667-p6c8"
-        ]
-      },
-      "timestamp": "2025-06-04T22:09:36.45518597Z",
-      "products": [
-        {
-          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.0.0-20210405180319-a5a99cb37ef4"
             }
           ]
         }
@@ -320,73 +491,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2023-2153",
+        "name": "CVE-2024-24786",
         "aliases": [
-          "GHSA-m425-mq94-257g"
+          "GHSA-8r3f-844c-mc37",
+          "GO-2024-2611"
         ]
       },
-      "timestamp": "2025-06-04T22:09:42.483783093Z",
-      "products": [
-        {
-          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/google.golang.org/grpc@v1.41.0"
-            },
-            {
-              "@id": "pkg:golang/google.golang.org/grpc@1.41.0"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
-    },
-    {
-      "vulnerability": {
-        "name": "GO-2024-2611",
-        "aliases": [
-          "CVE-2024-24786",
-          "GHSA-8r3f-844c-mc37"
-        ]
-      },
-      "timestamp": "2025-06-04T22:10:14.090371242Z",
-      "products": [
-        {
-          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/google.golang.org/protobuf@v1.26.0"
-            },
-            {
-              "@id": "pkg:golang/google.golang.org/protobuf@1.26.0"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
-    },
-    {
-      "vulnerability": {
-        "name": "GO-2024-2611",
-        "aliases": [
-          "CVE-2024-24786",
-          "GHSA-8r3f-844c-mc37"
-        ]
-      },
-      "timestamp": "2025-06-04T22:10:14.13443434Z",
+      "timestamp": "2025-06-25T22:22:41.49357215Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/google.golang.org/protobuf@v1.31.0"
-            },
-            {
-              "@id": "pkg:golang/google.golang.org/protobuf@1.31.0"
             }
           ]
         }
@@ -397,47 +514,88 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2024-2978",
+        "name": "CVE-2024-24786",
         "aliases": [
-          "GHSA-xr7q-jx4m-x55m"
+          "GHSA-8r3f-844c-mc37",
+          "GO-2024-2611"
         ]
       },
-      "timestamp": "2025-06-04T22:10:39.559128304Z",
+      "timestamp": "2025-06-25T22:22:41.707711039Z",
       "products": [
         {
-          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.10",
           "subcomponents": [
             {
-              "@id": "pkg:golang/google.golang.org/grpc@v1.41.0"
-            },
-            {
-              "@id": "pkg:golang/google.golang.org/grpc@1.41.0"
+              "@id": "pkg:golang/google.golang.org/protobuf@v1.31.0"
             }
           ]
         }
       ],
       "status": "not_affected",
-      "justification": "vulnerable_code_not_present",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     },
     {
       "vulnerability": {
-        "name": "GO-2024-3333",
+        "name": "CVE-2024-24786",
         "aliases": [
-          "CVE-2024-45338",
-          "GHSA-w32m-9786-jp63"
+          "GHSA-8r3f-844c-mc37",
+          "GO-2024-2611"
         ]
       },
-      "timestamp": "2025-06-04T22:11:40.396167323Z",
+      "timestamp": "2025-06-25T22:22:41.850395864Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.12",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/protobuf@v1.31.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-24786",
+        "aliases": [
+          "GHSA-8r3f-844c-mc37",
+          "GO-2024-2611"
+        ]
+      },
+      "timestamp": "2025-06-25T22:22:41.996108576Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/protobuf@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45338",
+        "aliases": [
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
+        ]
+      },
+      "timestamp": "2025-06-25T22:28:10.953014913Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.0.0-20210405180319-a5a99cb37ef4"
             }
           ]
         }
@@ -448,22 +606,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2024-3333",
+        "name": "CVE-2024-45338",
         "aliases": [
-          "CVE-2024-45338",
-          "GHSA-w32m-9786-jp63"
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
         ]
       },
-      "timestamp": "2025-06-04T22:11:40.439415081Z",
+      "timestamp": "2025-06-25T22:28:11.112391224Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.17.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.17.0"
             }
           ]
         }
@@ -474,22 +629,19 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2024-3333",
+        "name": "CVE-2024-45338",
         "aliases": [
-          "CVE-2024-45338",
-          "GHSA-w32m-9786-jp63"
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
         ]
       },
-      "timestamp": "2025-06-04T22:11:40.483650252Z",
+      "timestamp": "2025-06-25T22:28:11.269648898Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.23.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.23.0"
             }
           ]
         }
@@ -500,21 +652,179 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3503",
+        "name": "CVE-2024-45338",
         "aliases": [
-          "CVE-2025-22870"
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
         ]
       },
-      "timestamp": "2025-06-04T22:12:33.551316138Z",
+      "timestamp": "2025-06-25T22:28:11.425909899Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.10",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.17.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45338",
+        "aliases": [
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
+        ]
+      },
+      "timestamp": "2025-06-25T22:28:11.584820583Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.12",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.17.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45338",
+        "aliases": [
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
+        ]
+      },
+      "timestamp": "2025-06-25T22:28:11.743668576Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.14",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.17.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45338",
+        "aliases": [
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
+        ]
+      },
+      "timestamp": "2025-06-25T22:28:11.899214347Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.15",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45338",
+        "aliases": [
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
+        ]
+      },
+      "timestamp": "2025-06-25T22:28:12.059186895Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.16",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45338",
+        "aliases": [
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
+        ]
+      },
+      "timestamp": "2025-06-25T22:28:12.222009195Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.17",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45338",
+        "aliases": [
+          "GHSA-w32m-9786-jp63",
+          "GO-2024-3333"
+        ]
+      },
+      "timestamp": "2025-06-25T22:28:12.386707976Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22870",
+        "aliases": [
+          "GO-2025-3503"
+        ]
+      },
+      "timestamp": "2025-06-25T22:44:50.58607899Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.0.0-20210405180319-a5a99cb37ef4"
             }
           ]
         }
@@ -525,21 +835,18 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3503",
+        "name": "CVE-2025-22870",
         "aliases": [
-          "CVE-2025-22870"
+          "GO-2025-3503"
         ]
       },
-      "timestamp": "2025-06-04T22:12:33.595846606Z",
+      "timestamp": "2025-06-25T22:44:50.820520284Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.17.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.17.0"
             }
           ]
         }
@@ -550,21 +857,18 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3503",
+        "name": "CVE-2025-22870",
         "aliases": [
-          "CVE-2025-22870"
+          "GO-2025-3503"
         ]
       },
-      "timestamp": "2025-06-04T22:12:33.639482383Z",
+      "timestamp": "2025-06-25T22:44:51.053034191Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.23.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.23.0"
             }
           ]
         }
@@ -575,21 +879,18 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3503",
+        "name": "CVE-2025-22870",
         "aliases": [
-          "CVE-2025-22870"
+          "GO-2025-3503"
         ]
       },
-      "timestamp": "2025-06-04T22:12:33.683800876Z",
+      "timestamp": "2025-06-25T22:44:51.282840864Z",
       "products": [
         {
-          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.10",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/net@v0.34.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.34.0"
+              "@id": "pkg:golang/golang.org/x/net@v0.17.0"
             }
           ]
         }
@@ -600,21 +901,18 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3503",
+        "name": "CVE-2025-22870",
         "aliases": [
-          "CVE-2025-22870"
+          "GO-2025-3503"
         ]
       },
-      "timestamp": "2025-06-04T22:12:33.727474254Z",
+      "timestamp": "2025-06-25T22:44:51.498500118Z",
       "products": [
         {
-          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.12",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/net@v0.35.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.35.0"
+              "@id": "pkg:golang/golang.org/x/net@v0.17.0"
             }
           ]
         }
@@ -625,21 +923,128 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3595",
+        "name": "CVE-2025-22870",
         "aliases": [
-          "CVE-2025-22872"
+          "GO-2025-3503"
         ]
       },
-      "timestamp": "2025-06-04T22:12:52.135433319Z",
+      "timestamp": "2025-06-25T22:44:51.708755865Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.14",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.17.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22870",
+        "aliases": [
+          "GO-2025-3503"
+        ]
+      },
+      "timestamp": "2025-06-25T22:44:51.925193825Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.15",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22870",
+        "aliases": [
+          "GO-2025-3503"
+        ]
+      },
+      "timestamp": "2025-06-25T22:44:52.140243148Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.16",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22870",
+        "aliases": [
+          "GO-2025-3503"
+        ]
+      },
+      "timestamp": "2025-06-25T22:44:52.372671618Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.17",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22870",
+        "aliases": [
+          "GO-2025-3503"
+        ]
+      },
+      "timestamp": "2025-06-25T22:44:52.607917778Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:54:25.454265189Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.0.0-20210405180319-a5a99cb37ef4"
             }
           ]
         }
@@ -650,21 +1055,18 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3595",
+        "name": "CVE-2025-22872",
         "aliases": [
-          "CVE-2025-22872"
+          "GO-2025-3595"
         ]
       },
-      "timestamp": "2025-06-04T22:12:52.178763719Z",
+      "timestamp": "2025-06-25T22:54:25.703256215Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
               "@id": "pkg:golang/golang.org/x/net@v0.17.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.17.0"
             }
           ]
         }
@@ -675,21 +1077,18 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3595",
+        "name": "CVE-2025-22872",
         "aliases": [
-          "CVE-2025-22872"
+          "GO-2025-3595"
         ]
       },
-      "timestamp": "2025-06-04T22:12:52.222341494Z",
+      "timestamp": "2025-06-25T22:54:25.942955625Z",
       "products": [
         {
           "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/net@v0.34.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.34.0"
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
             }
           ]
         }
@@ -700,21 +1099,18 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3595",
+        "name": "CVE-2025-22872",
         "aliases": [
-          "CVE-2025-22872"
+          "GO-2025-3595"
         ]
       },
-      "timestamp": "2025-06-04T22:12:52.266973633Z",
+      "timestamp": "2025-06-25T22:54:26.178355922Z",
       "products": [
         {
-          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.10",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/net@v0.35.0"
-            },
-            {
-              "@id": "pkg:golang/golang.org/x/net@0.35.0"
+              "@id": "pkg:golang/golang.org/x/net@v0.17.0"
             }
           ]
         }
@@ -725,21 +1121,128 @@
     },
     {
       "vulnerability": {
-        "name": "GO-2025-3595",
+        "name": "CVE-2025-22872",
         "aliases": [
-          "CVE-2025-22872"
+          "GO-2025-3595"
         ]
       },
-      "timestamp": "2025-06-04T22:12:52.311052289Z",
+      "timestamp": "2025-06-25T22:54:26.429850107Z",
       "products": [
         {
-          "@id": "pkg:golang/go.etcd.io/etcd/api/v3",
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.12",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/net@v0.36.0"
-            },
+              "@id": "pkg:golang/golang.org/x/net@v0.17.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:54:26.679887946Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.14",
+          "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/net@0.36.0"
+              "@id": "pkg:golang/golang.org/x/net@v0.17.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:54:26.912650975Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.15",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:54:27.146123655Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.16",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:54:27.380059306Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.17",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "aliases": [
+          "GO-2025-3595"
+        ]
+      },
+      "timestamp": "2025-06-25T22:54:27.615918888Z",
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/api/v3@v3.5.9",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.0.0-20210405180319-a5a99cb37ef4"
             }
           ]
         }
