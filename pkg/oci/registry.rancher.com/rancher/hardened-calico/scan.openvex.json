@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2d3dfbbf96fb31ed6ef241d4f5e3440495a25c387b59b4e9f4d55b8cb22405a6",
+  "@id": "https://openvex.dev/docs/public/vex-3c57cab4dc43e8e6c62230454d9a1c2d293f1852c4482e599a1c4c3c1929a4a4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -226,7 +226,43 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "The FIPS module isn't affected"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=registry.rancher.com/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The FIPS module isn't affected"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=registry.rancher.com/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The FIPS module isn't affected"
     }
   ],
-  "timestamp": "2026-01-28T15:14:28Z"
+  "timestamp": "2026-02-02T17:10:25Z"
 }
