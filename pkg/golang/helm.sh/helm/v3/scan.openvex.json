@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1e59a0b332cbbf530540826bda64d7bc0661a5edd42f75af5ea1050a0e8504b9",
+  "@id": "https://openvex.dev/docs/public/vex-92b39e2f6f1c6b6a1bed9788728b924ad4058aac9988349c61c87f6bd10313a3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -5708,6 +5708,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-68121"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Upstream Helm confirmed that they are not affected"
+    },
+    {
+      "vulnerability": {
         "name": "GHSA-m425-mq94-257g"
       },
       "products": [
@@ -5725,5 +5743,5 @@
       "impact_statement": "govulncheck was manually executed and confirmed to be a false-positive"
     }
   ],
-  "timestamp": "2026-02-25T07:06:36Z"
+  "timestamp": "2026-02-27T20:07:38Z"
 }
