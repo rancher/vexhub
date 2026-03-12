@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a4132c65255f306e9289fda18dd662ee022c2c056765e393162a1ec9fa36efe9",
+  "@id": "https://openvex.dev/docs/public/vex-22606419dde578b020cb5e6c2054685923218b54204f8f8a71aeaf761bb975a8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -37,7 +37,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-22184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/local-path-provisioner?repository_url=registry.rancher.com/rancher/local-path-provisioner",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/zlib"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The vulnerability is limited to the demo utility and does not affect the core zlib compression library."
     }
   ],
-  "timestamp": "2026-03-12T10:09:08Z"
+  "timestamp": "2026-03-12T18:57:10Z"
 }
