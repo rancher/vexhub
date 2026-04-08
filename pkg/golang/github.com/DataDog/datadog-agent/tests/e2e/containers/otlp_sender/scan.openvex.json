@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ffe2eb4d06690216be96f7544398ad7340733935ec74626ee594ab0feaebd405",
+  "@id": "https://openvex.dev/docs/public/vex-e92886c2a0bbf7373d6871b5c6868aa601f8d4eb930c121a2386636d753e9920",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -418,6 +418,48 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-32282",
+        "aliases": [
+          "GO-2026-4864"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/DataDog/datadog-agent/tests/e2e/containers/otlp_sender",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32288",
+        "aliases": [
+          "GO-2026-4869"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/DataDog/datadog-agent/tests/e2e/containers/otlp_sender",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33186",
         "aliases": [
           "GO-2026-4762",
@@ -439,5 +481,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-04-01T06:43:30Z"
+  "timestamp": "2026-04-08T06:42:25Z"
 }
