@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-46570be8d8c269c7d5536de3c01d83489eef3d37faab06522cfb66aedaa444e6",
+  "@id": "https://openvex.dev/docs/public/vex-c68c0f8c9cccd336e889452dc6ce25ddb1bce0a2a0ba50049aa8446aede799d5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -265,6 +265,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1352-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Calico is written in Go and uses Go encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1375-1"
       },
       "products": [
@@ -298,7 +316,61 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "RKE2 runs in FIPS mode so the standard OpenSSL code path is not used"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libncurses6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Calico runs as a daemon and does not use interactive terminal interfaces; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/ncurses-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Calico runs as a daemon and does not use interactive terminal interfaces; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/terminfo-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Calico runs as a daemon and does not use interactive terminal interfaces; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-04-29T15:23:08Z"
+  "timestamp": "2026-05-06T15:49:19Z"
 }
