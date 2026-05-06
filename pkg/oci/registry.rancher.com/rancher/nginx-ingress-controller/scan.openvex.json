@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-46570be8d8c269c7d5536de3c01d83489eef3d37faab06522cfb66aedaa444e6",
+  "@id": "https://openvex.dev/docs/public/vex-c68c0f8c9cccd336e889452dc6ce25ddb1bce0a2a0ba50049aa8446aede799d5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -512,6 +512,96 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21142-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtasn1-6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libtasn1 is a GnuTLS dependency; nginx uses OpenSSL and does not call GnuTLS at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21143-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The tar binary is not executed by nginx-ingress-controller at runtime; it is present as an incidental base image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21173-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-ingress-controller does not use SQLite; the library is an incidental base image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21178-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpython3_13-1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python is not used by nginx-ingress-controller at runtime; the library is an incidental base image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21178-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python313-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python is not used by nginx-ingress-controller at runtime; the library is an incidental base image dependency"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21186-1"
       },
       "products": [
@@ -581,7 +671,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "RKE2 runs in FIPS mode so the standard OpenSSL code path is not used"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21192-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-ingress-controller does not use PAM for authentication; PAM is present as an incidental base image dependency"
     }
   ],
-  "timestamp": "2026-04-29T15:23:08Z"
+  "timestamp": "2026-05-06T15:49:19Z"
 }
