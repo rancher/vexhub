@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c68c0f8c9cccd336e889452dc6ce25ddb1bce0a2a0ba50049aa8446aede799d5",
+  "@id": "https://openvex.dev/docs/public/vex-a07533f48feea2fe921a1be28577d1bc53a4da56e9a9ac03688b3eaad620b7bb",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -425,6 +425,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21144-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=index.docker.io/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RKE2 hardened-kubernetes does not use udev code paths from base image"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21173-1"
       },
       "products": [
@@ -486,6 +504,24 @@
           "@id": "pkg:oci/hardened-kubernetes?repository_url=index.docker.io/rancher/hardened-kubernetes",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RKE2 workload does not rely on vulnerable OpenSSL execution path in this image"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21186-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=index.docker.io/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssl-3"
             }
           ]
@@ -494,6 +530,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "RKE2 runs in FIPS mode so the standard OpenSSL code path is not used"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21186-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=index.docker.io/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RKE2 workload does not rely on vulnerable OpenSSL execution path in this image"
     },
     {
       "vulnerability": {
@@ -512,6 +566,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Kubernetes authenticates via certificates tokens and OIDC; PAM is not used at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=index.docker.io/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RKE2 hardened-kubernetes does not execute affected libcap2 code path"
     },
     {
       "vulnerability": {
@@ -550,5 +622,5 @@
       "impact_statement": "Kubernetes uses Go built-in crypto/ssh; the system libssh library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-06T15:49:19Z"
+  "timestamp": "2026-05-07T14:23:38Z"
 }
