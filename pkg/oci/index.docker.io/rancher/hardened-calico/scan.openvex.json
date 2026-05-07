@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c68c0f8c9cccd336e889452dc6ce25ddb1bce0a2a0ba50049aa8446aede799d5",
+  "@id": "https://openvex.dev/docs/public/vex-a07533f48feea2fe921a1be28577d1bc53a4da56e9a9ac03688b3eaad620b7bb",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -315,6 +315,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RKE2 hardened-calico does not rely on vulnerable OpenSSL execution path in this image"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "RKE2 runs in FIPS mode so the standard OpenSSL code path is not used"
     },
     {
@@ -372,5 +390,5 @@
       "impact_statement": "Calico runs as a daemon and does not use interactive terminal interfaces; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-06T15:49:19Z"
+  "timestamp": "2026-05-07T14:23:38Z"
 }
