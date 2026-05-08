@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-bec4b6d421698c81344660296af8c6a2f621b654c3ea2050dedee7f8cd66ba9a",
+  "@id": "https://openvex.dev/docs/public/vex-efe6a9679f6b6492d1f9f3b0bc0f0c54668d4db614092c6303040aaa86ff731b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -288,6 +288,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python3-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     },
     {
       "vulnerability": {
@@ -614,5 +632,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-08T03:58:07Z"
+  "timestamp": "2026-05-08T21:01:07Z"
 }
