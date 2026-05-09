@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-744c2ede24cf8bb631c316c97e210c11c1e52811e716fc8733b30b7e524a57b9",
+  "@id": "https://openvex.dev/docs/public/vex-f7f1f5f3d014e0bcaac1079b579f59ef6b399ecda099296814c77604ee3df5b8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -273,6 +273,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03508-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03624-1"
       },
       "products": [
@@ -324,6 +342,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python3-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     },
     {
       "vulnerability": {
@@ -668,5 +704,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-08T21:01:06Z"
+  "timestamp": "2026-05-09T11:45:18Z"
 }
