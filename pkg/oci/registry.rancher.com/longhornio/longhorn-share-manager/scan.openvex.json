@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f7f1f5f3d014e0bcaac1079b579f59ef6b399ecda099296814c77604ee3df5b8",
+  "@id": "https://openvex.dev/docs/public/vex-be6499017456ffddfe72ae68150e0604b70813add88b5e6074d4c00f35e930c8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -255,6 +255,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03508-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=registry.rancher.com/longhornio/longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03624-1"
       },
       "products": [
@@ -506,5 +524,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-09T11:45:18Z"
+  "timestamp": "2026-05-09T17:13:34Z"
 }
