@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-975a773907fa72d60422f8fe2b1943538bbd516b9655e2483fcff2e14fb75d76",
+  "@id": "https://openvex.dev/docs/public/vex-514f393924ef4ec349072f6e8bb809704e685fbc3441cd5c380ef8840bd6caba",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2082,6 +2082,48 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39825",
+        "aliases": [
+          "GO-2026-4976"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/thanos-io/thanos",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.23.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39825",
+        "aliases": [
+          "GO-2026-4976"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/thanos-io/thanos@v0.37.2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.23.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39883"
       },
       "products": [
@@ -2135,5 +2177,5 @@
       "impact_statement": "This CVE only affects macOS/Darwin systems"
     }
   ],
-  "timestamp": "2026-04-17T15:26:37Z"
+  "timestamp": "2026-05-12T09:52:45Z"
 }
