@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-49219db0b1504d2b0b37403c62b3cd999d223d871b844b4380d8c056793f820a",
+  "@id": "https://openvex.dev/docs/public/vex-58713fc83445b8c8c9383573750270b7b78f71ee9388bfd8e71ed7b6d5c7d5f7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -156,7 +156,60 @@
           "@id": "pkg:oci/longhorn-engine?repository_url=registry.rancher.com/longhornio/longhorn-engine",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/boost-license1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Boost C++ libraries are not used at runtime in this Go container; they are incidental SLES base-image dependencies"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.rancher.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libboost_system1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.rancher.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_system1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Boost C++ libraries are not used at runtime in this Go container; they are incidental SLES base-image dependencies"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.rancher.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_thread1_66_0"
             }
           ]
         }
@@ -179,7 +232,8 @@
         }
       ],
       "status": "not_affected",
-      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Boost C++ libraries are not used at runtime in this Go container; they are incidental SLES base-image dependencies"
     },
     {
       "vulnerability": {
@@ -614,5 +668,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-08T03:58:08Z"
+  "timestamp": "2026-05-13T10:51:49Z"
 }
