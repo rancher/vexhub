@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a1a924389a02b6a40903ce1cae8beba670b89f642aa6dddacb766f69d11f9b13",
+  "@id": "https://openvex.dev/docs/public/vex-a1f4be4ab2b3b98a22c6c26c1d88c1f7bff4776d4265017bf440aaee4b94903e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2190,6 +2190,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-29181"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd/v2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/go.opentelemetry.io/otel@v1.38.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "containerd tracing is gRPC-only and disabled unless OTEL_EXPORTER_OTLP_* is configured; the CVE's multi-value baggage header parsing path is not in the default execution path"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-32282",
         "aliases": [
           "GO-2026-4864"
@@ -2859,6 +2877,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34986"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd/v2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.0.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Based on the RKE2 investigation: go-jose is only an indirect dependency and no JWE decryption path is present in containerd"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34986"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd/v2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v4@v4.1.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Based on the RKE2 investigation: go-jose is only an indirect dependency and no JWE decryption path is present in containerd"
     },
     {
       "vulnerability": {
@@ -3869,5 +3923,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-12T09:52:44Z"
+  "timestamp": "2026-05-13T23:15:14Z"
 }
