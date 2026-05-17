@@ -1,0 +1,45 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-c03c860cf1734d5250e5238f8eb2a74af6e6ec0afc227b6328cca8b1c8e64646",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/prometheus-federator?repository_url=registry.rancher.com/rancher/prometheus-federator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libncurses6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/prometheus-federator?repository_url=registry.rancher.com/rancher/prometheus-federator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/terminfo-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    }
+  ],
+  "timestamp": "2026-05-17T22:36:58Z"
+}
