@@ -1,9 +1,45 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-975a773907fa72d60422f8fe2b1943538bbd516b9655e2483fcff2e14fb75d76",
+  "@id": "https://openvex.dev/docs/public/vex-612c34c0b32f6ed0ff4049f578d30859744316644eb0a05cec545695286b0637",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:3216-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:4035-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:01702-1"
@@ -40,6 +76,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:02027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:02080-1"
       },
       "products": [
@@ -54,6 +108,42 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02229-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02229-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
     },
     {
       "vulnerability": {
@@ -159,6 +249,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:02734-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/update-alternatives"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "update-alternatives is a package management utility; it is not executed at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02970-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03198-1"
       },
       "products": [
@@ -193,6 +319,60 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03624-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:0764-1"
       },
       "products": [
@@ -207,7 +387,115 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:1201-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:1334-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0215-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gpg2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0434-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gpg2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1166-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1177-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-04-17T15:26:37Z"
+  "timestamp": "2026-05-17T11:44:33Z"
 }
