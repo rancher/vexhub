@@ -1,0 +1,45 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-7e1aae1d8cecbcc550d30434325199fccb675c6e55ca65553fb238d336b40ad7",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kuberlr-kubectl?repository_url=registry.rancher.com/rancher/kuberlr-kubectl",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libncurses6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kuberlr-kubectl?repository_url=registry.rancher.com/rancher/kuberlr-kubectl",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/terminfo-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    }
+  ],
+  "timestamp": "2026-05-17T20:51:32Z"
+}
