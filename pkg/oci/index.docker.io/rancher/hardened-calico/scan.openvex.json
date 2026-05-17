@@ -1,9 +1,45 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a07533f48feea2fe921a1be28577d1bc53a4da56e9a9ac03688b3eaad620b7bb",
+  "@id": "https://openvex.dev/docs/public/vex-0d17060ed3f4389457329129238fb4b2835355f9111418ca9de88223d829c705",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2026:1228-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/login_defs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2026:1228-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/shadow"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:01702-1"
@@ -390,5 +426,5 @@
       "impact_statement": "Calico runs as a daemon and does not use interactive terminal interfaces; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-07T14:23:38Z"
+  "timestamp": "2026-05-17T11:44:34Z"
 }
