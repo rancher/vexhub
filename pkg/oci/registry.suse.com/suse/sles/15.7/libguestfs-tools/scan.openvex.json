@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-975a773907fa72d60422f8fe2b1943538bbd516b9655e2483fcff2e14fb75d76",
+  "@id": "https://openvex.dev/docs/public/vex-4f261c4e460f7467b79546f3205b81ccaf25df698b745af372b5071d0cb07da1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -54,7 +54,367 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02734-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/update-alternatives"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "update-alternatives is a package management utility; it is not executed at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03239-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03508-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3903-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/bind-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0215-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gpg2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0348-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/bind-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0434-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gpg2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0646-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0779-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0779-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1177-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1310-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1310-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1351-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/bind-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1352-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libncurses6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/ncurses-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/terminfo-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-04-17T15:26:37Z"
+  "timestamp": "2026-05-18T04:12:18Z"
 }
