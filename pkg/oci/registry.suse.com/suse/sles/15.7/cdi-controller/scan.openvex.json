@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e2e1b2991bdee63d457cd5ce81239bd61b0e3d1923f9bdc644df852ada914d76",
+  "@id": "https://openvex.dev/docs/public/vex-e3094f4a1a859ae21fbc4830660da60a9dd38085dcaa06580242ca7e4c7307dd",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -39,6 +39,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "shadow (passwd/useradd/login tools) never invoked by a Go Kubernetes CDI controller pod"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2026:1228-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/shadow"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "shadow provides user-management CLIs (useradd/passwd); Go CDI controller never invokes them"
     },
     {
       "vulnerability": {
@@ -257,5 +275,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-20T03:34:39Z"
+  "timestamp": "2026-05-20T12:05:55Z"
 }
