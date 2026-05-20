@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a4cca969a83b09c4156f157df2baa2088c29cb43daf9d73a826190fbf23487c9",
+  "@id": "https://openvex.dev/docs/public/vex-9a2e756944642b0b9994981166dd2a4d349206cd91ffb0f66405dad4aad06e6d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -255,6 +255,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid-devel contains only headers/static libs; no runtime code path; runtime uses libuuid1 shared lib"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -435,6 +453,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid-devel contains only headers/static libs; no runtime code path; runtime uses libuuid1 shared lib"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -506,5 +542,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-17T20:51:33Z"
+  "timestamp": "2026-05-20T01:51:54Z"
 }
