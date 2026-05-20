@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-67ae6703f4ddc7aaa556d3a3f36c7cb6b029a0050c1ed55e1cef6afd3cabab1a",
+  "@id": "https://openvex.dev/docs/public/vex-d44f83c61f963e663a07c359e2917a0322d5c55f0084db92824ae3de4278e788",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -255,6 +255,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:02749-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/iperf"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "iperf is a network benchmark CLI; longhornio/backing-image-manager Go service never executes it"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02778-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhornio/backing-image-manager is pure Go; Python C library is not loaded or called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:02778-1"
       },
       "products": [
@@ -370,6 +406,24 @@
           "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhornio/backing-image-manager is pure Go; Python C library is not loaded or called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/python3-base"
             }
           ]
@@ -442,6 +496,24 @@
           "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhornio/backing-image-manager is pure Go; Python C library is not loaded or called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0664-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/python3-base"
             }
           ]
@@ -486,6 +558,60 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0816-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/virtiofsd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virtiofsd is a KubeVirt virt-launcher tool; backing-image-manager never executes it"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0819-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/virtiofsd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virtiofsd is a KubeVirt virt-launcher tool; backing-image-manager never executes it"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1090-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhornio/backing-image-manager is pure Go; Python C library is not loaded or called at runtime"
     },
     {
       "vulnerability": {
@@ -658,6 +784,24 @@
           "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhornio/backing-image-manager is pure Go; Python C library is not loaded or called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1715-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/python3-base"
             }
           ]
@@ -686,5 +830,5 @@
       "impact_statement": "backing-image-manager is a Go binary; sed is a CLI tool never invoked by the container entrypoint"
     }
   ],
-  "timestamp": "2026-05-20T01:51:53Z"
+  "timestamp": "2026-05-20T22:06:57Z"
 }
