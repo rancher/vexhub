@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9a2e756944642b0b9994981166dd2a4d349206cd91ffb0f66405dad4aad06e6d",
+  "@id": "https://openvex.dev/docs/public/vex-e2e1b2991bdee63d457cd5ce81239bd61b0e3d1923f9bdc644df852ada914d76",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -298,6 +298,24 @@
           "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-based static UI server never calls disk-partition library libfdisk1"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/util-linux"
             }
           ]
@@ -306,6 +324,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhorn-ui serves a static web frontend; util-linux CLI tools are not invoked by the web server"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools (mount, fdisk, etc.) are never invoked by the nginx-based longhorn UI"
     },
     {
       "vulnerability": {
@@ -496,6 +532,24 @@
           "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-based static UI server never calls disk-partition library libfdisk1"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/util-linux"
             }
           ]
@@ -504,6 +558,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhorn-ui serves a static web frontend; util-linux CLI tools are not invoked by the web server"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools (mount, fdisk, etc.) are never invoked by the nginx-based longhorn UI"
     },
     {
       "vulnerability": {
@@ -560,5 +632,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-20T01:51:54Z"
+  "timestamp": "2026-05-20T03:34:39Z"
 }

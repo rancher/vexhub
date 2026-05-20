@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-05bbfa2c87391db8ad00baaeed214538e980235699a5787d6736d8757ce02719",
+  "@id": "https://openvex.dev/docs/public/vex-e2e1b2991bdee63d457cd5ce81239bd61b0e3d1923f9bdc644df852ada914d76",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -111,6 +111,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02447-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=index.docker.io/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgcrypt20 (GnuPG crypto library) not called by Go-based Longhorn CLI storage tool"
     },
     {
       "vulnerability": {
@@ -270,6 +288,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3699-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=index.docker.io/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go storage CLI tool does not use Kerberos authentication; krb5 is an incidental SLES dep"
     },
     {
       "vulnerability": {
@@ -452,5 +488,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-13T10:51:50Z"
+  "timestamp": "2026-05-20T03:34:39Z"
 }
