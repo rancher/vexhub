@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-514f393924ef4ec349072f6e8bb809704e685fbc3441cd5c380ef8840bd6caba",
+  "@id": "https://openvex.dev/docs/public/vex-14a4c5a18f26f142e0caac26deb951ffb878c067da1d7bbe4632e2033775fc3b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -5754,6 +5754,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-sigs/cluster-proportional-autoscaler",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.20.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck confirmed not_affected for same binary in hardened-cluster-autoscaler image"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39823",
         "aliases": [
           "GO-2026-4982"
@@ -7433,5 +7451,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-12T09:52:45Z"
+  "timestamp": "2026-05-20T21:17:53Z"
 }
