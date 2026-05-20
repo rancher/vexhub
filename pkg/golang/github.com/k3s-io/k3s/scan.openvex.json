@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-011cda3dbd46c62d5757cca8def2cc3ee109e14271bff8218a574860c8908105",
+  "@id": "https://openvex.dev/docs/public/vex-5fe8825029da3ecdf3e4fb662e71d64d19dd64b7a7e982bdcaa7148539a85b2a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1125,6 +1125,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-34155"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.22.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2024-34155 affects go/parser; k3s is a Kubernetes runtime and does not parse Go source code"
     },
     {
       "vulnerability": {
@@ -28065,5 +28083,5 @@
       "impact_statement": "This CVE only affects macOS/Darwin systems"
     }
   ],
-  "timestamp": "2026-05-15T02:57:38Z"
+  "timestamp": "2026-05-20T17:11:08Z"
 }

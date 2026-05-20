@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a1a924389a02b6a40903ce1cae8beba670b89f642aa6dddacb766f69d11f9b13",
+  "@id": "https://openvex.dev/docs/public/vex-5fe8825029da3ecdf3e4fb662e71d64d19dd64b7a7e982bdcaa7148539a85b2a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -260,6 +260,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2023-45288"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/etcdutl/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.20.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "etcdutl is a CLI data-file utility with no HTTP server; CVE-2023-45288 requires HTTP/2 server"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2023-45288"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/etcdutl/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.20.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "etcdutl is a CLI data-file utility with no HTTP server; CVE-2023-45288 requires HTTP/2 server"
     },
     {
       "vulnerability": {
@@ -19679,5 +19715,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-12T09:52:44Z"
+  "timestamp": "2026-05-20T17:11:08Z"
 }
