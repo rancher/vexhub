@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e2e1b2991bdee63d457cd5ce81239bd61b0e3d1923f9bdc644df852ada914d76",
+  "@id": "https://openvex.dev/docs/public/vex-e639ea04df7e5915486cdfdc040bf2cccc8aee218997b2e4ada53dee9b0ecb62",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -39,6 +39,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libdw1 (DWARF debug library) is not loaded at runtime by a Go webhook service"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libdw1 is a DWARF debug-info library; Go admission webhook has no code path that uses it"
     },
     {
       "vulnerability": {
@@ -201,6 +219,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libdw1 is a DWARF debug-info library; Go admission webhook has no code path that uses it"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0215-1"
       },
       "products": [
@@ -234,6 +270,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "harvester webhook is a Go binary; it does not use SQLite; libsqlite3-0 is not in any execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-node-disk-manager-webhook is a Go k8s webhook; libsqlite3 is not used by it"
     },
     {
       "vulnerability": {
@@ -306,6 +360,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "harvester webhook is a Go binary; it does not use SQLite; libsqlite3-0 is not in any execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1065-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-node-disk-manager-webhook is a Go k8s webhook; libsqlite3 is not used by it"
     },
     {
       "vulnerability": {
@@ -453,6 +525,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21173-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-node-disk-manager-webhook is a Go k8s webhook; libsqlite3 is not used by it"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21192-1"
       },
       "products": [
@@ -470,5 +560,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-20T03:34:39Z"
+  "timestamp": "2026-05-20T12:05:56Z"
 }
