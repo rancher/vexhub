@@ -1,0 +1,120 @@
+name: Sync new VEX entries with upstream vexhub-crawler
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pkg/golang/**'
+      - 'pkg/oci/**'
+  schedule:
+    # Run every Monday at 08:00 UTC to catch any missed additions.
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync-upstream:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout vexhub
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      # -----------------------------------------------------------------------
+      # Find packages in rancher/vexhub that are not yet registered in the
+      # upstream aquasecurity/vexhub-crawler crawler.yaml.
+      # Sets GITHUB_OUTPUT: has_new_entries=true|false
+      # -----------------------------------------------------------------------
+      - name: Find new packages not in upstream crawler
+        id: check
+        run: python3 scripts/sync_upstream_crawler.py
+
+      # -----------------------------------------------------------------------
+      # Warn and print the list of missing entries when the UPSTREAM_SYNC_TOKEN
+      # secret is not configured, so maintainers are still informed.
+      # -----------------------------------------------------------------------
+      - name: Warn about missing UPSTREAM_SYNC_TOKEN
+        if: steps.check.outputs.has_new_entries == 'true'
+        env:
+          TOKEN: ${{ secrets.UPSTREAM_SYNC_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::warning::UPSTREAM_SYNC_TOKEN secret is not set. " \
+              "Configure it to enable automatic upstream PR creation."
+            echo "Packages that need to be added to the upstream crawler.yaml:"
+            cat /tmp/new_entries.yaml
+          fi
+
+      # -----------------------------------------------------------------------
+      # Fork aquasecurity/vexhub-crawler, apply the new entries, and open a PR.
+      # Requires the UPSTREAM_SYNC_TOKEN secret (a PAT with public_repo scope
+      # that belongs to an account that can fork aquasecurity/vexhub-crawler).
+      # -----------------------------------------------------------------------
+      - name: Create PR in upstream vexhub-crawler
+        if: steps.check.outputs.has_new_entries == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.UPSTREAM_SYNC_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "UPSTREAM_SYNC_TOKEN is not set – skipping PR creation."
+            exit 0
+          fi
+
+          # Fork (idempotent) and clone the upstream repo.
+          gh repo fork aquasecurity/vexhub-crawler \
+            --clone \
+            --default-branch-only
+
+          cd vexhub-crawler
+
+          # Skip if an open PR for this sync already exists.
+          EXISTING=$(gh pr list \
+            --repo aquasecurity/vexhub-crawler \
+            --author "@me" \
+            --state open \
+            --json title \
+            --jq '[.[] | select(.title | contains("Rancher VEX Hub"))] | length')
+
+          if [ "$EXISTING" -gt 0 ]; then
+            echo "An open PR for Rancher VEX Hub sync already exists. Skipping."
+            exit 0
+          fi
+
+          # Configure git identity.
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Create a unique branch.
+          BRANCH="sync-rancher-vexhub-$(date +%Y%m%d%H%M%S)"
+          git checkout -b "$BRANCH"
+
+          # Insert the new entries into crawler.yaml.
+          python3 ../scripts/update_upstream_crawler.py \
+            crawler.yaml \
+            /tmp/new_entries.yaml
+
+          # Nothing to commit means all entries are already present.
+          if git diff --quiet crawler.yaml; then
+            echo "No changes to crawler.yaml – skipping PR creation."
+            exit 0
+          fi
+
+          git add crawler.yaml
+          git commit -m "Add new Rancher VEX Hub entries"
+          git push origin "$BRANCH"
+
+          gh pr create \
+            --repo  aquasecurity/vexhub-crawler \
+            --title "Add new Rancher VEX Hub entries" \
+            --body-file /tmp/pr_body.md \
+            --base  main
