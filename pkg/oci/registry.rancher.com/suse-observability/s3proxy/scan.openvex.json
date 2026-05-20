@@ -1,0 +1,27 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-9a2e756944642b0b9994981166dd2a4d349206cd91ffb0f66405dad4aad06e6d",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/s3proxy?repository_url=registry.rancher.com/suse-observability/s3proxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "s3proxy is a Java/Go service; sed is a CLI tool never invoked by the container entrypoint"
+    }
+  ],
+  "timestamp": "2026-05-20T01:51:54Z"
+}

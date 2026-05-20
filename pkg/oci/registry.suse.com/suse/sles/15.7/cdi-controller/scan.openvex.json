@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8ca7b001f765f2b227f0899524f3d7734e1871b929f6ef3b6c1838565ffeec71",
+  "@id": "https://openvex.dev/docs/public/vex-9a2e756944642b0b9994981166dd2a4d349206cd91ffb0f66405dad4aad06e6d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2026:1228-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/shadow"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cdi-controller is a Go Kubernetes controller; shadow (user mgmt suite) is never invoked at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:03369-1"
@@ -221,5 +239,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-18T04:12:17Z"
+  "timestamp": "2026-05-20T01:51:54Z"
 }
