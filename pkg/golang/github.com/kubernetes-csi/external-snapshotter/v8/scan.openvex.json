@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-011cda3dbd46c62d5757cca8def2cc3ee109e14271bff8218a574860c8908105",
+  "@id": "https://openvex.dev/docs/public/vex-d146af260730cccea624b1d82bd9c33f8dc667bd82573d19e11a2959c029c1c9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2329,6 +2329,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39820"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-snapshotter/v8",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck confirmed not_affected for snapshot-controller binary in mirrored sig-storage image"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39820",
         "aliases": [
           "GO-2026-4986"
@@ -3120,5 +3138,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-15T02:57:38Z"
+  "timestamp": "2026-05-20T21:17:54Z"
 }
