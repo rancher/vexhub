@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e639ea04df7e5915486cdfdc040bf2cccc8aee218997b2e4ada53dee9b0ecb62",
+  "@id": "https://openvex.dev/docs/public/vex-162a6c74139d17af9076785693a68fb66f2307a7a96a320daf1b22b9093d46b8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -67,6 +67,24 @@
           "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui is an nginx static file server; Perl interpreter is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/perl-base"
             }
           ]
@@ -111,6 +129,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02362-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/coreutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui serves static assets via nginx; coreutils CLI tools are not invoked at runtime"
     },
     {
       "vulnerability": {
@@ -848,5 +884,5 @@
       "impact_statement": "longhorn-ui is nginx serving static assets; libcurl4 C library is not invoked at runtime"
     }
   ],
-  "timestamp": "2026-05-20T12:05:56Z"
+  "timestamp": "2026-05-21T17:28:38Z"
 }
