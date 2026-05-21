@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6f795ccfe82fffcc29c8df52b1a83baa7819dba72f7b7b62a29e4339802ec870",
+  "@id": "https://openvex.dev/docs/public/vex-de1f901a33def53a2bfe5252e7f5f15556ddc2158c0343b5d1f49afedd68d6c6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2023-45289"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-resizer",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.21.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2023-45289 affects HTTP cookie forwarding on redirects; csi-resizer uses K8s API with Bearer tokens, no HTTP cookies"
+    },
     {
       "vulnerability": {
         "name": "CVE-2023-45289"
@@ -3084,5 +3102,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-21T20:14:13Z"
+  "timestamp": "2026-05-21T21:18:34Z"
 }
