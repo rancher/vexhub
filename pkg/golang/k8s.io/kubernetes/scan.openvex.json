@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-53a1e921aeb7b9c9250240f0b90bc49996a01cb75ac592266bca323749d339a2",
+  "@id": "https://openvex.dev/docs/public/vex-0e5235bd0ffdd4a7a01a9e556e933d1fa3e67a9b62f962b8da4ac32996fb892b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -19586,6 +19586,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-61726"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "net/http.ParseForm not called on large untrusted input; kubectl is a CLI, not HTTP server"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-61728",
         "aliases": [
           "GO-2026-4342",
@@ -21038,6 +21056,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-61729"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GO-2025-4155: govulncheck shows stdlib code path unreachable across analyzed products"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-65637",
         "aliases": [
           "GO-2025-4188",
@@ -21569,6 +21605,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "This CVE only affects macOS/Darwin systems"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32280"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GO-2026-4947: govulncheck shows stdlib code path unreachable across analyzed products"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32280"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.7"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GO-2026-4947: govulncheck shows stdlib code path unreachable across analyzed products"
     },
     {
       "vulnerability": {
@@ -24950,6 +25022,42 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Binary does not generate HTML output; html/template meta-tag code path unreachable"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Binary does not generate HTML output; html/template meta-tag code path unreachable"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39825"
       },
       "products": [
@@ -25129,5 +25237,5 @@
       "impact_statement": "CVE only affects macOS/darwin; this image ships Linux binaries"
     }
   ],
-  "timestamp": "2026-05-21T17:57:51Z"
+  "timestamp": "2026-05-21T20:14:12Z"
 }

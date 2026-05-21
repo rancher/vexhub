@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-bda9aafd4a4134c0af107e672028dfe8c25dbae78f2a040c7879dd49c36b7b2a",
+  "@id": "https://openvex.dev/docs/public/vex-0e5235bd0ffdd4a7a01a9e556e933d1fa3e67a9b62f962b8da4ac32996fb892b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2024-24785"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/cloud-provider-vsphere",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.21.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck confirmed not_affected; binary does not use html/template for output rendering"
+    },
     {
       "vulnerability": {
         "name": "CVE-2026-24051"
@@ -203,5 +221,5 @@
       "impact_statement": "GO-2026-4977: govulncheck shows 1000f analyzed products not_affected; stdlib code path unreachable"
     }
   ],
-  "timestamp": "2026-05-21T17:57:52Z"
+  "timestamp": "2026-05-21T20:14:12Z"
 }
