@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d6132f1fd492834283a2d98c3b79feae4c696dcd2d85a855b05cf4c476930be1",
+  "@id": "https://openvex.dev/docs/public/vex-d2f9cd6dbb2008de3263d65ca704c4d0d4b853a061f74c5d620b9d97202c6d1b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -147,6 +147,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4236-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=registry.rancher.com/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0215-1"
       },
       "products": [
@@ -234,6 +252,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0885-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=registry.rancher.com/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0903-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=registry.rancher.com/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
     },
     {
       "vulnerability": {
@@ -399,6 +453,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1940-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=registry.rancher.com/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21143-1"
       },
       "products": [
@@ -414,6 +486,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21172-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=registry.rancher.com/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCRE2 regex C library; Go uses regexp stdlib, libpcre2 is not in execute path"
     },
     {
       "vulnerability": {
@@ -452,5 +542,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-20T03:34:40Z"
+  "timestamp": "2026-05-21T01:49:48Z"
 }

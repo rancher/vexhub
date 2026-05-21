@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-658c71f2537f81875873525925afdd1b04b1fa6c912e0559a2e189323cd6bff1",
+  "@id": "https://openvex.dev/docs/public/vex-d2f9cd6dbb2008de3263d65ca704c4d0d4b853a061f74c5d620b9d97202c6d1b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -255,6 +255,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:02447-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgcrypt C crypto library; Go uses crypto stdlib, libgcrypt is not called"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:02536-1"
       },
       "products": [
@@ -354,6 +372,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02719-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgcrypt C crypto library; Go uses crypto stdlib, libgcrypt is not called"
     },
     {
       "vulnerability": {
@@ -840,6 +876,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1074-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libnghttp2 C HTTP/2 library; Go uses net/http with native HTTP/2 support"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1166-1"
       },
       "products": [
@@ -909,6 +963,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1350-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libnghttp2 C HTTP/2 library; Go uses net/http with native HTTP/2 support"
     },
     {
       "vulnerability": {
@@ -983,5 +1055,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-20T22:06:56Z"
+  "timestamp": "2026-05-21T01:49:48Z"
 }

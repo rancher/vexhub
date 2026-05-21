@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-041e6aa160a165a786b7abe52255f55e116f3b79f13bef2be9b6938adba41a71",
+  "@id": "https://openvex.dev/docs/public/vex-aab5badeab641b8d9a6e6587a107db997b00aecf0bda87e457bfa7b737df61e7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:01638-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSH server/client; rancher-agent communicates via HTTPS/WebSocket, SSH is unused"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02013-1"
@@ -366,6 +384,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4067-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSH server/client; rancher-agent communicates via HTTPS/WebSocket, SSH is unused"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:4110-1"
       },
       "products": [
@@ -687,7 +723,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1876-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSH server/client; rancher-agent communicates via HTTPS/WebSocket, SSH is unused"
     }
   ],
-  "timestamp": "2026-05-17T22:36:59Z"
+  "timestamp": "2026-05-21T01:49:49Z"
 }

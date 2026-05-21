@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e639ea04df7e5915486cdfdc040bf2cccc8aee218997b2e4ada53dee9b0ecb62",
+  "@id": "https://openvex.dev/docs/public/vex-aab5badeab641b8d9a6e6587a107db997b00aecf0bda87e457bfa7b737df61e7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -237,6 +237,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4236-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0215-1"
       },
       "products": [
@@ -342,6 +360,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0885-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0903-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
     },
     {
       "vulnerability": {
@@ -489,6 +543,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1940-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21143-1"
       },
       "products": [
@@ -560,5 +632,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-20T12:05:56Z"
+  "timestamp": "2026-05-21T01:49:49Z"
 }
