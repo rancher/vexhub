@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-5fe8825029da3ecdf3e4fb662e71d64d19dd64b7a7e982bdcaa7148539a85b2a",
+  "@id": "https://openvex.dev/docs/public/vex-6f795ccfe82fffcc29c8df52b1a83baa7819dba72f7b7b62a29e4339802ec870",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -28081,7 +28081,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "This CVE only affects macOS/Darwin systems"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GO-2026-4977: govulncheck shows stdlib code path unreachable across analyzed products"
     }
   ],
-  "timestamp": "2026-05-20T17:11:08Z"
+  "timestamp": "2026-05-21T20:14:13Z"
 }
