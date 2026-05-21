@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cd310e0a5bf0276f3fba783c4123d2b8d6868d1a6fdda6c7b4eab35ff674d630",
+  "@id": "https://openvex.dev/docs/public/vex-658c71f2537f81875873525925afdd1b04b1fa6c912e0559a2e189323cd6bff1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -129,6 +129,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:0401-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/crypto-policies"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "crypto-policies is a system config package; Go binary uses its own TLS settings, not this tool"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0215-1"
       },
       "products": [
@@ -182,5 +200,5 @@
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-18T02:18:18Z"
+  "timestamp": "2026-05-20T22:06:56Z"
 }
