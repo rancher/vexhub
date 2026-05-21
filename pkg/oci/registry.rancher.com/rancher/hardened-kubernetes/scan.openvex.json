@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c9ba4e00d7528d0ab1080312ee1c8c31c6f5e9de2a1e9b7952e2694738da3b1a",
+  "@id": "https://openvex.dev/docs/public/vex-162a6c74139d17af9076785693a68fb66f2307a7a96a320daf1b22b9093d46b8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -677,6 +677,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "hardened-kubernetes runs Go binaries (kubelet/apiserver); sed is an incidental OS dep not executed"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21142-1"
       },
       "products": [
@@ -910,5 +928,5 @@
       "impact_statement": "Kubernetes uses Go built-in crypto/ssh; the system libssh library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-17T14:19:42Z"
+  "timestamp": "2026-05-21T17:28:38Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2c453bcc6bb47283954ac9b8e91d7737b47a63552fc8ef0cbfd9c60ace15853c",
+  "@id": "https://openvex.dev/docs/public/vex-162a6c74139d17af9076785693a68fb66f2307a7a96a320daf1b22b9093d46b8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -54,7 +54,43 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2029-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-internal?repository_url=index.docker.io/rancher/supportability-review-internal",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2029-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-internal?repository_url=index.docker.io/rancher/supportability-review-internal",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/vim-data-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-04-17T15:26:36Z"
+  "timestamp": "2026-05-21T17:28:38Z"
 }

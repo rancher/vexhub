@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-55152ce9b64c43fc43ecf51b546c007c978fa29ab67d04fa049f2074046e1d87",
+  "@id": "https://openvex.dev/docs/public/vex-41a54436206e240a89b635aaf1c9776df4b73ae42222f22283c5bf4fb72baf25",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -90,6 +90,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02617-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui serves static files via nginx; libxml2-tools CLI (xmllint) is not invoked at runtime"
     },
     {
       "vulnerability": {
@@ -288,6 +306,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui serves static files via nginx; libxml2-tools CLI (xmllint) is not invoked at runtime"
     },
     {
       "vulnerability": {
@@ -542,5 +578,5 @@
       "impact_statement": "longhornio-longhorn-ui is an nginx web UI; libtiff image processing library is never called"
     }
   ],
-  "timestamp": "2026-05-21T12:49:31Z"
+  "timestamp": "2026-05-21T17:28:37Z"
 }

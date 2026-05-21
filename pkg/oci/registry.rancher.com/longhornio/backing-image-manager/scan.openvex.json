@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-26e8c826ed2104a256096344bff3e41c85bdb59decf8bcc87ba863b6d89119b2",
+  "@id": "https://openvex.dev/docs/public/vex-41a54436206e240a89b635aaf1c9776df4b73ae42222f22283c5bf4fb72baf25",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -165,6 +165,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "udev is a system device manager daemon; not started or used by this container"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02362-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/coreutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "backing-image-manager is a Go binary; coreutils CLI tools (cp, ls) are not invoked at runtime"
     },
     {
       "vulnerability": {
@@ -1118,5 +1136,5 @@
       "impact_statement": "backing-image-manager is a Go binary; sed is a CLI tool never invoked by the container entrypoint"
     }
   ],
-  "timestamp": "2026-05-21T12:49:30Z"
+  "timestamp": "2026-05-21T17:28:37Z"
 }
