@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4f261c4e460f7467b79546f3205b81ccaf25df698b745af372b5071d0cb07da1",
+  "@id": "https://openvex.dev/docs/public/vex-57f64e2fa6fbf0fb07d2210f28d3dc3cff62f5bf60aed308c065c74d480c9678",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2026:1228-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/login_defs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CDI operator; login_defs shadow config is not read by the container entrypoint"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:03369-1"
@@ -221,5 +239,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-18T04:12:18Z"
+  "timestamp": "2026-05-21T15:00:32Z"
 }

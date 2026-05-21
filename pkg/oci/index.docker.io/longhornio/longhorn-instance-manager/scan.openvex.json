@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-55152ce9b64c43fc43ecf51b546c007c978fa29ab67d04fa049f2074046e1d87",
+  "@id": "https://openvex.dev/docs/public/vex-96d68b0a736804629a11ab740ddac2f1cdba0dd3f7318fb7b36009063d242a52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -114,6 +114,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:02167-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary + tgtd; neither loads GLib modules via libgmodule at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:02229-1"
       },
       "products": [
@@ -147,6 +165,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02384-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libjq1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go instance manager; libjq1 (jq C library) is not called by the Go binary"
     },
     {
       "vulnerability": {
@@ -244,6 +280,24 @@
           "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Instance manager runs a Go binary + tgtd (iSCSI); Python 3.6 library is never loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02778-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/python3-base"
             }
           ]
@@ -252,6 +306,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02915-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libjq1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go instance manager; libjq1 (jq C library) is not called by the Go binary"
     },
     {
       "vulnerability": {
@@ -399,6 +471,60 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary + tgtd; neither loads GLib modules via libgmodule at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary + tgtd; neither loads GLib modules via libgmodule at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Instance manager runs a Go binary + tgtd (iSCSI); Python 3.6 library is never loaded"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0027-1"
       },
       "products": [
@@ -489,6 +615,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary + tgtd; neither loads GLib modules via libgmodule at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -558,6 +702,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0664-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Instance manager runs a Go binary + tgtd (iSCSI); Python 3.6 library is never loaded"
     },
     {
       "vulnerability": {
@@ -666,6 +828,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "qemu-vmsr-helper is a QEMU VM utility; longhorn-instance-manager storage daemon never executes it"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1090-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Instance manager runs a Go binary + tgtd (iSCSI); Python 3.6 library is never loaded"
     },
     {
       "vulnerability": {
@@ -856,6 +1036,24 @@
           "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Instance manager runs a Go binary + tgtd (iSCSI); Python 3.6 library is never loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1715-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/python3-base"
             }
           ]
@@ -866,5 +1064,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-21T12:49:31Z"
+  "timestamp": "2026-05-21T15:00:31Z"
 }

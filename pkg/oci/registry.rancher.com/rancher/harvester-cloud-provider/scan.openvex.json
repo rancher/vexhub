@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c9ba4e00d7528d0ab1080312ee1c8c31c6f5e9de2a1e9b7952e2694738da3b1a",
+  "@id": "https://openvex.dev/docs/public/vex-96d68b0a736804629a11ab740ddac2f1cdba0dd3f7318fb7b36009063d242a52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cloud-provider?repository_url=registry.rancher.com/rancher/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go cloud provider; libelf1 (ELF parsing) is not used by the Go binary at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02027-1"
@@ -21,6 +39,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cloud-provider?repository_url=registry.rancher.com/rancher/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go cloud provider; libelf1 (ELF parsing) is not used by the Go binary at runtime"
     },
     {
       "vulnerability": {
@@ -59,5 +95,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-17T14:19:42Z"
+  "timestamp": "2026-05-21T15:00:31Z"
 }

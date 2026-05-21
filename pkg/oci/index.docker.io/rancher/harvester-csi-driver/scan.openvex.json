@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-55152ce9b64c43fc43ecf51b546c007c978fa29ab67d04fa049f2074046e1d87",
+  "@id": "https://openvex.dev/docs/public/vex-96d68b0a736804629a11ab740ddac2f1cdba0dd3f7318fb7b36009063d242a52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-FU-2026:21213-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgpg-error0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CSI driver; libgpg-error0 is a GnuPG dependency not invoked at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2024:2658-1"
@@ -1172,5 +1190,5 @@
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-21T12:49:31Z"
+  "timestamp": "2026-05-21T15:00:31Z"
 }
