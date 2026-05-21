@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-011cda3dbd46c62d5757cca8def2cc3ee109e14271bff8218a574860c8908105",
+  "@id": "https://openvex.dev/docs/public/vex-86b95ec9ea8bcfff306490a58cec5da94bf82c79dd62f9376c48b3619dfb5b6a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -24878,6 +24878,42 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kubectl is a CLI client tool; it does not use net/http/httputil.ReverseProxy as a server-side proxy handler"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-39836 triggers a panic only on Windows with NUL in net.Dial/LookupPort; Linux containers are not affected"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39883"
       },
       "products": [
@@ -24985,5 +25021,5 @@
       "impact_statement": "CVE only affects macOS/darwin; this image ships Linux binaries"
     }
   ],
-  "timestamp": "2026-05-15T02:57:38Z"
+  "timestamp": "2026-05-21T15:14:32Z"
 }
