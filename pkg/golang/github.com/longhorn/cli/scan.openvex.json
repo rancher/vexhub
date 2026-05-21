@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-011cda3dbd46c62d5757cca8def2cc3ee109e14271bff8218a574860c8908105",
+  "@id": "https://openvex.dev/docs/public/vex-0e5235bd0ffdd4a7a01a9e556e933d1fa3e67a9b62f962b8da4ac32996fb892b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3721,6 +3721,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32280"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GO-2026-4947: govulncheck shows stdlib code path unreachable across analyzed products"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32280"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.7"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GO-2026-4947: govulncheck shows stdlib code path unreachable across analyzed products"
     },
     {
       "vulnerability": {
@@ -8931,5 +8967,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-15T02:57:38Z"
+  "timestamp": "2026-05-21T20:14:12Z"
 }

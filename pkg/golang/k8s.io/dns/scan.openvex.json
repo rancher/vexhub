@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-53a1e921aeb7b9c9250240f0b90bc49996a01cb75ac592266bca323749d339a2",
+  "@id": "https://openvex.dev/docs/public/vex-6f795ccfe82fffcc29c8df52b1a83baa7819dba72f7b7b62a29e4339802ec870",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2022,6 +2022,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-61726"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/dns",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.23.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "net/http.ParseForm not called on large untrusted input; binary does not serve HTTP forms"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-61726"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/dns",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.23.12"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "net/http.ParseForm not called on large untrusted input; binary does not serve HTTP forms"
     },
     {
       "vulnerability": {
@@ -4062,5 +4098,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-21T17:57:51Z"
+  "timestamp": "2026-05-21T20:14:13Z"
 }

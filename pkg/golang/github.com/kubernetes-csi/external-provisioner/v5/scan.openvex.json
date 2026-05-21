@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-687a6863ed75ba3c7de06fd30c25e9ec7ecd64dab15569ea2c0f775b33a9e806",
+  "@id": "https://openvex.dev/docs/public/vex-6f795ccfe82fffcc29c8df52b1a83baa7819dba72f7b7b62a29e4339802ec870",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3854,6 +3854,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39826"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-provisioner/v5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Binary does not use html/template for HTML rendering; stdlib code path unreachable"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499",
         "aliases": [
           "GO-2026-4977"
@@ -4168,5 +4186,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-15T02:57:39Z"
+  "timestamp": "2026-05-21T20:14:13Z"
 }
