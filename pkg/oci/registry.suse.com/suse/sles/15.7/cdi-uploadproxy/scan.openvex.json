@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-aab5badeab641b8d9a6e6587a107db997b00aecf0bda87e457bfa7b737df61e7",
+  "@id": "https://openvex.dev/docs/public/vex-96d68b0a736804629a11ab740ddac2f1cdba0dd3f7318fb7b36009063d242a52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -42,6 +42,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI upload proxy is Go; GLib C library is not used by the Go runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0018-1"
       },
       "products": [
@@ -75,6 +93,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI upload proxy is Go; GLib C library is not used by the Go runtime"
     },
     {
       "vulnerability": {
@@ -239,5 +275,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-21T01:49:49Z"
+  "timestamp": "2026-05-21T15:00:31Z"
 }

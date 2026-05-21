@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ab233c90eed988d30f295e623181551b45f2e6c083c8d27aeb25413ce47c8f0a",
+  "@id": "https://openvex.dev/docs/public/vex-96d68b0a736804629a11ab740ddac2f1cdba0dd3f7318fb7b36009063d242a52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-kubeovn-operator?repository_url=index.docker.io/rancher/harvester-kubeovn-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go operator; libdw1 (DWARF debug library) is a dev dep not invoked at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02536-1"
@@ -90,6 +108,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-kubeovn-operator?repository_url=index.docker.io/rancher/harvester-kubeovn-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go operator; libdw1 (DWARF debug library) is a dev dep not invoked at runtime"
     },
     {
       "vulnerability": {
@@ -182,5 +218,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-17T16:42:02Z"
+  "timestamp": "2026-05-21T15:00:31Z"
 }
