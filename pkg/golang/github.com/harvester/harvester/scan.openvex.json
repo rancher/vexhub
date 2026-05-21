@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-514f393924ef4ec349072f6e8bb809704e685fbc3441cd5c380ef8840bd6caba",
+  "@id": "https://openvex.dev/docs/public/vex-86b95ec9ea8bcfff306490a58cec5da94bf82c79dd62f9376c48b3619dfb5b6a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -9745,6 +9745,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-32289"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.7"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester upgrade-helper is a backend controller; it does not render HTML with JS template literals via html/template"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33186",
         "aliases": [
           "GO-2026-4762",
@@ -10610,5 +10628,5 @@
       "impact_statement": "The commit version of the dependency in use doesn't have the vulnerable code"
     }
   ],
-  "timestamp": "2026-05-12T09:52:45Z"
+  "timestamp": "2026-05-21T15:14:32Z"
 }

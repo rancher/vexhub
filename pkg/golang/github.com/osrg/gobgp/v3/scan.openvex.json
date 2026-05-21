@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a1a924389a02b6a40903ce1cae8beba670b89f642aa6dddacb766f69d11f9b13",
+  "@id": "https://openvex.dev/docs/public/vex-86b95ec9ea8bcfff306490a58cec5da94bf82c79dd62f9376c48b3619dfb5b6a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -87,6 +87,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-47912"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/osrg/gobgp/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gobgp processes BGP protocol data (AS paths, prefixes); it does not parse URLs with bracketed host components"
     },
     {
       "vulnerability": {
@@ -772,5 +790,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-12T09:52:44Z"
+  "timestamp": "2026-05-21T15:14:32Z"
 }
