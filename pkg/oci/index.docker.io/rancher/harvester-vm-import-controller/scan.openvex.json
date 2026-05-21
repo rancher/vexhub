@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-162a6c74139d17af9076785693a68fb66f2307a7a96a320daf1b22b9093d46b8",
+  "@id": "https://openvex.dev/docs/public/vex-86973952e22ba01571cfc318e3b3630e8ee3807f5fba7cbe50d424aa5c748794",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -183,6 +183,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0445-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=index.docker.io/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-vm-import-controller is a Go operator; qemu-vmsr-helper binary is never executed by the entrypoint"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0646-1"
       },
       "products": [
@@ -270,6 +288,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0832-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=index.docker.io/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-vm-import-controller is a Go operator; qemu-vmsr-helper binary is never executed by the entrypoint"
     },
     {
       "vulnerability": {
@@ -522,7 +558,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21354-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=index.docker.io/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-vm-import-controller is a Go operator; qemu-vmsr-helper binary is never executed by the entrypoint"
     }
   ],
-  "timestamp": "2026-05-21T17:28:38Z"
+  "timestamp": "2026-05-21T19:39:53Z"
 }
