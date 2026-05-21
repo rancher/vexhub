@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f7f1f5f3d014e0bcaac1079b579f59ef6b399ecda099296814c77604ee3df5b8",
+  "@id": "https://openvex.dev/docs/public/vex-96d68b0a736804629a11ab740ddac2f1cdba0dd3f7318fb7b36009063d242a52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -132,6 +132,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:02430-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/iputils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go Longhorn manager K8s controller; iputils (ping) is not invoked at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:02536-1"
       },
       "products": [
@@ -180,6 +198,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02595-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manager is Go; Go uses crypto/tls and does not call libgnutls30"
     },
     {
       "vulnerability": {
@@ -345,6 +381,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4323-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manager is Go; Go uses crypto/tls and does not call libgnutls30"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0027-1"
       },
       "products": [
@@ -486,6 +540,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0829-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manager is Go; Go uses crypto/tls and does not call libgnutls30"
     },
     {
       "vulnerability": {
@@ -704,5 +776,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-09T11:45:18Z"
+  "timestamp": "2026-05-21T15:00:31Z"
 }

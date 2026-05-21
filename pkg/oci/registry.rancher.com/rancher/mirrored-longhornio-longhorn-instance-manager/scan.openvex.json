@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-aab5badeab641b8d9a6e6587a107db997b00aecf0bda87e457bfa7b737df61e7",
+  "@id": "https://openvex.dev/docs/public/vex-96d68b0a736804629a11ab740ddac2f1cdba0dd3f7318fb7b36009063d242a52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -255,6 +255,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary + tgtd; neither loads GLib modules via libgmodule at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0018-1"
       },
       "products": [
@@ -270,6 +288,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "GLib C library; Go image uses Go stdlib, GLib is not linked or called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary + tgtd; neither loads GLib modules via libgmodule at runtime"
     },
     {
       "vulnerability": {
@@ -342,6 +378,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "GLib C library; Go image uses Go stdlib, GLib is not linked or called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary + tgtd; neither loads GLib modules via libgmodule at runtime"
     },
     {
       "vulnerability": {
@@ -668,5 +722,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-21T01:49:49Z"
+  "timestamp": "2026-05-21T15:00:31Z"
 }
