@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-41a54436206e240a89b635aaf1c9776df4b73ae42222f22283c5bf4fb72baf25",
+  "@id": "https://openvex.dev/docs/public/vex-86973952e22ba01571cfc318e3b3630e8ee3807f5fba7cbe50d424aa5c748794",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -165,6 +165,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-handler?repository_url=registry.suse.com/suse/sles/15.7/virt-handler",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-handler is a Go daemon; GLib module C library is not loaded by the Go runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-handler?repository_url=registry.suse.com/suse/sles/15.7/virt-handler",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-handler is a Go daemon; GLib module C library is not loaded by the Go runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0215-1"
       },
       "products": [
@@ -180,6 +216,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-handler?repository_url=registry.suse.com/suse/sles/15.7/virt-handler",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-handler is a Go daemon; GLib module C library is not loaded by the Go runtime"
     },
     {
       "vulnerability": {
@@ -378,7 +432,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-handler?repository_url=registry.suse.com/suse/sles/15.7/virt-handler",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-handler is a Go daemon; sed is an incidental SLES CLI utility never invoked by the Go entrypoint"
     }
   ],
-  "timestamp": "2026-05-21T17:28:37Z"
+  "timestamp": "2026-05-21T19:39:53Z"
 }
