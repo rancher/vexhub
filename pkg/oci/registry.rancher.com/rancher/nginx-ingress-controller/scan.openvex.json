@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c03c860cf1734d5250e5238f8eb2a74af6e6ec0afc227b6328cca8b1c8e64646",
+  "@id": "https://openvex.dev/docs/public/vex-26e8c826ed2104a256096344bff3e41c85bdb59decf8bcc87ba863b6d89119b2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -602,6 +602,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21151-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zlib-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "zlib-devel contains only header files and static libs; no shared library is loaded at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21173-1"
       },
       "products": [
@@ -799,5 +817,5 @@
       "impact_statement": "RKE2 nginx-ingress-controller does not execute affected libcap2 code path"
     }
   ],
-  "timestamp": "2026-05-17T22:36:58Z"
+  "timestamp": "2026-05-21T12:49:30Z"
 }

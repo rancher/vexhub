@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-658c71f2537f81875873525925afdd1b04b1fa6c912e0559a2e189323cd6bff1",
+  "@id": "https://openvex.dev/docs/public/vex-26e8c826ed2104a256096344bff3e41c85bdb59decf8bcc87ba863b6d89119b2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -377,6 +377,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libldb2 is a Samba LDAP-like database library; Longhorn instance manager (Go) does not use it"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3676-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libldb2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libldb2 is a Samba/LDAP library; longhorn-instance-manager storage daemon never calls Samba code"
     },
     {
@@ -431,6 +449,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "qemu-vmsr-helper is a QEMU MSR emulation helper; Longhorn instance manager never invokes it"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0288-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "qemu-vmsr-helper is a QEMU VM utility; longhorn-instance-manager storage daemon never executes it"
     },
     {
@@ -468,6 +504,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0445-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "qemu-vmsr-helper is a QEMU MSR emulation helper; Longhorn instance manager never invokes it"
     },
     {
       "vulnerability": {
@@ -576,6 +630,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0832-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "qemu-vmsr-helper is a QEMU MSR emulation helper; Longhorn instance manager never invokes it"
     },
     {
       "vulnerability": {
@@ -794,5 +866,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-20T22:06:56Z"
+  "timestamp": "2026-05-21T12:49:30Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d2f9cd6dbb2008de3263d65ca704c4d0d4b853a061f74c5d620b9d97202c6d1b",
+  "@id": "https://openvex.dev/docs/public/vex-26e8c826ed2104a256096344bff3e41c85bdb59decf8bcc87ba863b6d89119b2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -74,7 +74,61 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sudo CLI is not executed by the istio-installer Go binary at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:0834-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=index.docker.io/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "sudo CLI tool; installer container runs as root, sudo is never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:1633-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=index.docker.io/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; istio-installer is Go-based and does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:2035-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=index.docker.io/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; istio-installer is Go-based and does not invoke the openssl CLI"
     },
     {
       "vulnerability": {
@@ -111,6 +165,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:2909-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=index.docker.io/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; istio-installer is Go-based and does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:3904-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=index.docker.io/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; istio-installer is Go-based and does not invoke the openssl CLI"
     },
     {
       "vulnerability": {
@@ -182,6 +272,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sudo CLI is not executed by the istio-installer Go binary at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02175-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=index.docker.io/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "sudo CLI tool; installer container runs as root, sudo is never called"
     },
     {
@@ -201,6 +309,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher/istio-installer is a Go Kubernetes job; sudo is not called by the entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02177-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=index.docker.io/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sudo CLI is not executed by the istio-installer Go binary at runtime"
     },
     {
       "vulnerability": {
@@ -435,6 +561,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03440-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=index.docker.io/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; istio-installer is Go-based and does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03537-1"
       },
       "products": [
@@ -450,6 +594,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0356-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=index.docker.io/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; istio-installer is Go-based and does not invoke the openssl CLI"
     },
     {
       "vulnerability": {
@@ -593,8 +755,26 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sudo CLI is not executed by the istio-installer Go binary at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1359-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=index.docker.io/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "sudo CLI tool; installer container runs as root, sudo is never called"
     }
   ],
-  "timestamp": "2026-05-21T01:49:48Z"
+  "timestamp": "2026-05-21T12:49:30Z"
 }
