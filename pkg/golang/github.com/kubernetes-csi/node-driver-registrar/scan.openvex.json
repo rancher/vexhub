@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6f795ccfe82fffcc29c8df52b1a83baa7819dba72f7b7b62a29e4339802ec870",
+  "@id": "https://openvex.dev/docs/public/vex-c2a8720729490a8073657fd1c61d82e74beca3af23280934bccc5b98914a7caf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -193,6 +193,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-34158"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/node-driver-registrar",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.16.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "go/build/constraint is Go build tooling; csi-node-driver-registrar is a runtime CSI sidecar and never parses build const"
     },
     {
       "vulnerability": {
@@ -4307,5 +4325,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-21T20:14:13Z"
+  "timestamp": "2026-05-21T21:18:33Z"
 }
