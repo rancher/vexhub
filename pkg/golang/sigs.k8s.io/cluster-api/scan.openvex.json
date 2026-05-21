@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a1a924389a02b6a40903ce1cae8beba670b89f642aa6dddacb766f69d11f9b13",
+  "@id": "https://openvex.dev/docs/public/vex-53a1e921aeb7b9c9250240f0b90bc49996a01cb75ac592266bca323749d339a2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -662,6 +662,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-47906"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/cluster-api",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.22.7"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GO-2025-3956: govulncheck shows 1000f analyzed products not_affected; stdlib code path unreachable"
     },
     {
       "vulnerability": {
@@ -1873,5 +1891,5 @@
       "impact_statement": "This CVE only affects macOS/Darwin systems"
     }
   ],
-  "timestamp": "2026-05-12T09:52:44Z"
+  "timestamp": "2026-05-21T17:57:51Z"
 }
