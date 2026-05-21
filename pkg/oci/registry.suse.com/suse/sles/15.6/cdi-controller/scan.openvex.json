@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d2f9cd6dbb2008de3263d65ca704c4d0d4b853a061f74c5d620b9d97202c6d1b",
+  "@id": "https://openvex.dev/docs/public/vex-26e8c826ed2104a256096344bff3e41c85bdb59decf8bcc87ba863b6d89119b2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02013-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.6/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI controller is a Go-based Kubernetes controller; it authenticates via SA tokens, not PAM"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02013-1"
@@ -143,6 +161,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI controller is a Go-based Kubernetes controller; it authenticates via SA tokens, not PAM"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02970-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.6/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "PAM auth library; CDI controller uses Kubernetes RBAC, PAM is not invoked"
     },
     {
@@ -198,6 +234,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:1334-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.6/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI controller is a Go-based Kubernetes controller; it authenticates via SA tokens, not PAM"
     },
     {
       "vulnerability": {
@@ -290,5 +344,5 @@
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-21T01:49:48Z"
+  "timestamp": "2026-05-21T12:49:30Z"
 }

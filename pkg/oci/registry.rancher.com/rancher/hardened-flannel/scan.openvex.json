@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d2f9cd6dbb2008de3263d65ca704c4d0d4b853a061f74c5d620b9d97202c6d1b",
+  "@id": "https://openvex.dev/docs/public/vex-26e8c826ed2104a256096344bff3e41c85bdb59decf8bcc87ba863b6d89119b2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -92,7 +92,43 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgio is a GLib I/O library; Flannel is a pure-Go binary that does not link against GLib"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:4254-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgio-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher/hardened-flannel is pure Go; libgio GLib I/O extension is never loaded or called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:4290-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsoup-2_4-1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsoup is a GLib HTTP client library; Flannel is a pure-Go CNI plugin using Go net/http"
     },
     {
       "vulnerability": {
@@ -128,6 +164,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:01802-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsoup-2_4-1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsoup is a GLib HTTP client library; Flannel is a pure-Go CNI plugin using Go net/http"
     },
     {
       "vulnerability": {
@@ -198,6 +252,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02167-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgio-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgio is a GLib I/O library; Flannel is a pure-Go binary that does not link against GLib"
     },
     {
       "vulnerability": {
@@ -620,7 +692,43 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgio is a GLib I/O library; Flannel is a pure-Go binary that does not link against GLib"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:1367-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgio-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher/hardened-flannel is pure Go; libgio GLib I/O extension is never loaded or called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:1503-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsoup-2_4-1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsoup is a GLib HTTP client library; Flannel is a pure-Go CNI plugin using Go net/http"
     },
     {
       "vulnerability": {
@@ -656,7 +764,43 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgio is a GLib I/O library; Flannel is a pure-Go binary that does not link against GLib"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgio-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher/hardened-flannel is pure Go; libgio GLib I/O extension is never loaded or called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgio-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgio is a GLib I/O library; Flannel is a pure-Go binary that does not link against GLib"
     },
     {
       "vulnerability": {
@@ -710,7 +854,43 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsoup is a GLib HTTP client library; Flannel is a pure-Go CNI plugin using Go net/http"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0253-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsoup-2_4-1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher/hardened-flannel is pure Go; libsoup GNOME HTTP client is never loaded or called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgio-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgio is a GLib I/O library; Flannel is a pure-Go binary that does not link against GLib"
     },
     {
       "vulnerability": {
@@ -764,6 +944,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsoup is a GLib HTTP client library; Flannel is a pure-Go CNI plugin using Go net/http"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0574-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsoup-2_4-1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher/hardened-flannel is pure Go; libsoup GNOME HTTP client is never loaded or called"
     },
     {
@@ -783,6 +981,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0657-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsoup-2_4-1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsoup is a GLib HTTP client library; Flannel is a pure-Go CNI plugin using Go net/http"
     },
     {
       "vulnerability": {
@@ -854,7 +1070,43 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsoup is a GLib HTTP client library; Flannel is a pure-Go CNI plugin using Go net/http"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0811-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsoup-2_4-1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher/hardened-flannel is pure Go; libsoup GNOME HTTP client is never loaded or called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0886-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsoup-2_4-1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsoup is a GLib HTTP client library; Flannel is a pure-Go CNI plugin using Go net/http"
     },
     {
       "vulnerability": {
@@ -1055,5 +1307,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-21T01:49:48Z"
+  "timestamp": "2026-05-21T12:49:30Z"
 }
