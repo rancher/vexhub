@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a4cca969a83b09c4156f157df2baa2088c29cb43daf9d73a826190fbf23487c9",
+  "@id": "https://openvex.dev/docs/public/vex-d2f9cd6dbb2008de3263d65ca704c4d0d4b853a061f74c5d620b9d97202c6d1b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -381,6 +381,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libudev device management library; Go application does not use udev device events"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1090-1"
       },
       "products": [
@@ -560,5 +578,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-17T20:51:33Z"
+  "timestamp": "2026-05-21T01:49:48Z"
 }
