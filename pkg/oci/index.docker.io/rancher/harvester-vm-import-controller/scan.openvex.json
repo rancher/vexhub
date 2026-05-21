@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-81656f90093e9afad2dfad73c8f36df91dec0e7cd695e93e3210482eee8f2d31",
+  "@id": "https://openvex.dev/docs/public/vex-162a6c74139d17af9076785693a68fb66f2307a7a96a320daf1b22b9093d46b8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -208,6 +208,24 @@
           "@id": "pkg:oci/harvester-vm-import-controller?repository_url=index.docker.io/rancher/harvester-vm-import-controller",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-vm-import-controller is a Go binary; the Python C library is not loaded at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0664-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=index.docker.io/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/python3-base"
             }
           ]
@@ -252,6 +270,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1090-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=index.docker.io/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-vm-import-controller is a Go binary; the Python C library is not loaded at runtime"
     },
     {
       "vulnerability": {
@@ -424,6 +460,24 @@
           "@id": "pkg:oci/harvester-vm-import-controller?repository_url=index.docker.io/rancher/harvester-vm-import-controller",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libpython3_6m1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-vm-import-controller is a Go binary; the Python C library is not loaded at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1715-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=index.docker.io/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/python3-base"
             }
           ]
@@ -470,5 +524,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-17T18:54:06Z"
+  "timestamp": "2026-05-21T17:28:38Z"
 }
