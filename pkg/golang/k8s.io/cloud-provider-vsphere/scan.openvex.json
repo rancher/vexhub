@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-975a773907fa72d60422f8fe2b1943538bbd516b9655e2483fcff2e14fb75d76",
+  "@id": "https://openvex.dev/docs/public/vex-bda9aafd4a4134c0af107e672028dfe8c25dbae78f2a040c7879dd49c36b7b2a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -183,7 +183,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "This CVE only affects macOS/Darwin systems"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/cloud-provider-vsphere",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.20.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GO-2026-4977: govulncheck shows 1000f analyzed products not_affected; stdlib code path unreachable"
     }
   ],
-  "timestamp": "2026-04-17T15:26:37Z"
+  "timestamp": "2026-05-21T17:57:52Z"
 }

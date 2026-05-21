@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-86b95ec9ea8bcfff306490a58cec5da94bf82c79dd62f9376c48b3619dfb5b6a",
+  "@id": "https://openvex.dev/docs/public/vex-bda9aafd4a4134c0af107e672028dfe8c25dbae78f2a040c7879dd49c36b7b2a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -240,6 +240,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-61730"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubeovn/kube-ovn",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GO-2026-4340: govulncheck shows 1000f analyzed products not_affected; stdlib code path unreachable"
     },
     {
       "vulnerability": {
@@ -626,5 +644,5 @@
       "impact_statement": "This CVE only affects macOS/Darwin systems"
     }
   ],
-  "timestamp": "2026-05-21T15:14:32Z"
+  "timestamp": "2026-05-21T17:57:52Z"
 }
