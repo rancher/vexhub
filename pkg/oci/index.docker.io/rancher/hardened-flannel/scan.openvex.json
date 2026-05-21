@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-96d68b0a736804629a11ab740ddac2f1cdba0dd3f7318fb7b36009063d242a52",
+  "@id": "https://openvex.dev/docs/public/vex-41a54436206e240a89b635aaf1c9776df4b73ae42222f22283c5bf4fb72baf25",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -750,6 +750,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:3699-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "flannel is a Go overlay network daemon; it does not use Kerberos authentication at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:4308-1"
       },
       "products": [
@@ -1343,5 +1361,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-21T15:00:31Z"
+  "timestamp": "2026-05-21T17:28:37Z"
 }
