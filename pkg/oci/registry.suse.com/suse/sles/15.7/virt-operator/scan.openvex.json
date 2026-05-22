@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-113b9c46223010aeabe78a3719296cc238fb92933ce1370be03d22e8543c8835",
+  "@id": "https://openvex.dev/docs/public/vex-929063fd1348309b89c5afddf5c5c136b4b7694ec2eba74e0fc49e4d00346ea0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -72,6 +72,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02719-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-operator?repository_url=registry.suse.com/suse/sles/15.7/virt-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeVirt virt-operator is Go; uses Go crypto package, not the C libgcrypt library"
     },
     {
       "vulnerability": {
@@ -344,5 +362,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-21T19:39:52Z"
+  "timestamp": "2026-05-22T14:12:33Z"
 }
