@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c5e217d83fa84097509f3bc4ffe716dff5ced51d1b32e3576bb4902833205bff",
+  "@id": "https://openvex.dev/docs/public/vex-7e2f33372a0b43a0949ffac5ad6297a4c92649919aeb90d46e36bb6cc4e5e6b6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -525,6 +525,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-node-disk-manager-webhook is a Go admission webhook; libfdisk partition library not called"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -704,5 +722,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-22T12:21:14Z"
+  "timestamp": "2026-05-22T22:36:11Z"
 }
