@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-be4ae4c355cda17e131bdfc89048d45cf8c6b287d565302d106a5d377970ae51",
+  "@id": "https://openvex.dev/docs/public/vex-91aa84d10d7c6f2ea5792309c4ff29c0353b7796142ca5695fe17fe023431044",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -10933,6 +10933,24 @@
           "@id": "pkg:golang/github.com/opencontainers/runc",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-39836 panics only on Windows; target runs in a Linux container"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/opencontainers/runc",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.2"
             }
           ]
@@ -11321,5 +11339,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-22T00:33:52Z"
+  "timestamp": "2026-05-22T18:26:02Z"
 }

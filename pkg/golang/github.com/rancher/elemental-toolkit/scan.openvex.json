@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-975a773907fa72d60422f8fe2b1943538bbd516b9655e2483fcff2e14fb75d76",
+  "@id": "https://openvex.dev/docs/public/vex-91aa84d10d7c6f2ea5792309c4ff29c0353b7796142ca5695fe17fe023431044",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -21,7 +21,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "This CVE only affects Windows and binaries that rely on Docker's pluging manager"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE affects httputil.ReverseProxy; elemental OS installer/upgrader does not act as a reverse proxy"
     }
   ],
-  "timestamp": "2026-04-17T15:26:37Z"
+  "timestamp": "2026-05-22T18:26:02Z"
 }

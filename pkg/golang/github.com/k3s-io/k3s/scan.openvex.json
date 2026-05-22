@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b661054324a72cda625aacb86bb02049763646415227cc743b29cf0338640ad6",
+  "@id": "https://openvex.dev/docs/public/vex-8b82e36e2710d4dfca57120cc3d135b04990e8cecebb0771e573b38ceea130a5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -28037,6 +28037,42 @@
           "@id": "pkg:golang/github.com/k3s-io/k3s",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE affects html/template meta tag XSS; k3s embedded binary does not render HTML via html/template"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE affects html/template meta tag XSS; k3s upgrade binary does not render HTML templates"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.2"
             }
           ]
@@ -28081,6 +28117,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "k3s does not use html/template for HTML rendering; stdlib code path unreachable"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-39836 panics only on Windows; target runs in a Linux container"
     },
     {
       "vulnerability": {
@@ -28235,6 +28289,24 @@
           "@id": "pkg:golang/github.com/k3s-io/k3s",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE affects net/mail consumePhrase; k3s upgrade binary does not parse email addresses"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.2"
             }
           ]
@@ -28263,5 +28335,5 @@
       "impact_statement": "k3s is a Kubernetes distro; it does not parse email addresses via net/mail"
     }
   ],
-  "timestamp": "2026-05-22T12:09:08Z"
+  "timestamp": "2026-05-22T18:26:01Z"
 }
