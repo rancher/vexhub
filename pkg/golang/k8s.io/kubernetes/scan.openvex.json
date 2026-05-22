@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b661054324a72cda625aacb86bb02049763646415227cc743b29cf0338640ad6",
+  "@id": "https://openvex.dev/docs/public/vex-91aa84d10d7c6f2ea5792309c4ff29c0353b7796142ca5695fe17fe023431044",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -25047,6 +25047,24 @@
           "@id": "pkg:golang/k8s.io/kubernetes",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE affects net/mail email parsing; kube-apiserver does not parse RFC5322 email addresses"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39820"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.2"
             }
           ]
@@ -25263,6 +25281,24 @@
           "@id": "pkg:golang/k8s.io/kubernetes",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE affects httputil.ReverseProxy; kubectl CLI does not act as a reverse proxy"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.2"
             }
           ]
@@ -25379,6 +25415,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CVE-2026-39836 triggers a panic only on Windows with NUL in net.Dial/LookupPort; Linux containers are not affected"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-39836 panics only on Windows; target runs in a Linux container"
     },
     {
       "vulnerability": {
@@ -25597,5 +25651,5 @@
       "impact_statement": "kubelet is a node agent; it does not parse email via net/mail"
     }
   ],
-  "timestamp": "2026-05-22T12:09:08Z"
+  "timestamp": "2026-05-22T18:26:02Z"
 }

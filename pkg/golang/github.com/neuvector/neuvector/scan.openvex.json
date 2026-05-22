@@ -1,0 +1,45 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-d2685b5af24cf8bfbfdb7841db05bb5ee052d8cab66c66f7370dcd1c96128bcb",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39820"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/neuvector/neuvector",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE affects net/mail email parsing; NeuVector upgrader binary does not parse email addresses"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/neuvector/neuvector",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-39836 panics only on Windows; target runs in a Linux container"
+    }
+  ],
+  "timestamp": "2026-05-22T18:26:03Z"
+}
