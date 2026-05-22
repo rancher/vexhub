@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-96d68b0a736804629a11ab740ddac2f1cdba0dd3f7318fb7b36009063d242a52",
+  "@id": "https://openvex.dev/docs/public/vex-141bdbeda7cb7e0c551552b078911db6933ee0098617f01f47df7e0bc8f7b2c4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.6/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI Importer is a Go binary; perl-base is an SLES system dep never invoked by the process"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02229-1"
@@ -218,5 +236,5 @@
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-21T15:00:31Z"
+  "timestamp": "2026-05-22T02:13:36Z"
 }
