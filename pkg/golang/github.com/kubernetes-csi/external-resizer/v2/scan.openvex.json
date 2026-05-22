@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-011cda3dbd46c62d5757cca8def2cc3ee109e14271bff8218a574860c8908105",
+  "@id": "https://openvex.dev/docs/public/vex-182d2070dba493982b5bbee5dde580d8252c422360959b594cfef9416a628d4e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -517,6 +517,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39820"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-resizer/v2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-39820 affects net/mail consumeComment; CSI volume resizer does not parse email headers"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39820",
         "aliases": [
           "GO-2026-4986"
@@ -873,5 +891,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-15T02:57:38Z"
+  "timestamp": "2026-05-22T22:51:19Z"
 }
