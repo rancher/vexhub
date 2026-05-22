@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-aab5badeab641b8d9a6e6587a107db997b00aecf0bda87e457bfa7b737df61e7",
+  "@id": "https://openvex.dev/docs/public/vex-9a7905cd620fff04755b66045e61b35bc6fd574145b3a590a0501bea8bc5dd42",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -57,6 +57,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0224-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtasn1-6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI API server is Go; uses Go crypto/x509, not GnuTLS/libtasn1"
     },
     {
       "vulnerability": {
@@ -129,6 +147,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1074-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI API server is Go; uses Go HTTP/2, not the C libnghttp2 library"
     },
     {
       "vulnerability": {
@@ -257,5 +293,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-21T01:49:49Z"
+  "timestamp": "2026-05-22T14:12:34Z"
 }

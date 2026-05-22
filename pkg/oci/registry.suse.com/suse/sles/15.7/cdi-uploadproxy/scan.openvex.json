@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c5e217d83fa84097509f3bc4ffe716dff5ced51d1b32e3576bb4902833205bff",
+  "@id": "https://openvex.dev/docs/public/vex-9a7905cd620fff04755b66045e61b35bc6fd574145b3a590a0501bea8bc5dd42",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02719-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI upload proxy is Go; uses Go crypto package, not the C libgcrypt library"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:03369-1"
@@ -293,5 +311,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-22T12:21:14Z"
+  "timestamp": "2026-05-22T14:12:34Z"
 }
