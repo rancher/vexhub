@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-bda9aafd4a4134c0af107e672028dfe8c25dbae78f2a040c7879dd49c36b7b2a",
+  "@id": "https://openvex.dev/docs/public/vex-070fcb9c60fa19254aaa7ed8c174088bdf3b9f03beeb1f61b6fc27672957b53e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -137,7 +137,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "httputil.ReverseProxy not used; helm-set-status is a Helm status plugin, no HTTP reverse proxying"
     }
   ],
-  "timestamp": "2026-05-21T17:57:52Z"
+  "timestamp": "2026-05-22T12:09:07Z"
 }

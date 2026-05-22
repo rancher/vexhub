@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9046aff307616ee772e69a46a75ca9753c6d95c66076abd9439b9313b7efa17f",
+  "@id": "https://openvex.dev/docs/public/vex-b661054324a72cda625aacb86bb02049763646415227cc743b29cf0338640ad6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3018,6 +3018,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NUL panic in Dial/LookupPort only triggered on Windows; binary runs on Linux containers"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499",
         "aliases": [
           "GO-2026-4977"
@@ -3269,5 +3287,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-21T15:14:31Z"
+  "timestamp": "2026-05-22T12:09:08Z"
 }
