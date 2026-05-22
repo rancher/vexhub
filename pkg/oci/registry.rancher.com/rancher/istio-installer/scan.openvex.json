@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-26e8c826ed2104a256096344bff3e41c85bdb59decf8bcc87ba863b6d89119b2",
+  "@id": "https://openvex.dev/docs/public/vex-c5e217d83fa84097509f3bc4ffe716dff5ced51d1b32e3576bb4902833205bff",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -237,6 +237,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.rancher.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "istio-installer is a Go binary; perl-base is an incidental SLES dependency never invoked at runtime"
     },
     {
       "vulnerability": {
@@ -776,5 +794,5 @@
       "impact_statement": "sudo CLI tool; installer container runs as root, sudo is never called"
     }
   ],
-  "timestamp": "2026-05-21T12:49:30Z"
+  "timestamp": "2026-05-22T12:21:14Z"
 }

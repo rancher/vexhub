@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0d17060ed3f4389457329129238fb4b2835355f9111418ca9de88223d829c705",
+  "@id": "https://openvex.dev/docs/public/vex-c5e217d83fa84097509f3bc4ffe716dff5ced51d1b32e3576bb4902833205bff",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -21,6 +21,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3699-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/appco-k8s-sidecar?repository_url=index.docker.io/rancher/appco-k8s-sidecar",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k8s sidecar uses token/cert auth; Kerberos library is an unused transitive SLES dependency"
     },
     {
       "vulnerability": {
@@ -113,5 +131,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-17T11:44:34Z"
+  "timestamp": "2026-05-22T12:21:14Z"
 }
