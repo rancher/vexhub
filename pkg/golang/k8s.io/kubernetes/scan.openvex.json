@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-be4ae4c355cda17e131bdfc89048d45cf8c6b287d565302d106a5d377970ae51",
+  "@id": "https://openvex.dev/docs/public/vex-5e0192eabd67ecbd90c2ef07b28637b35076ca760d913b62d640309a6e7d0a1d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -25022,6 +25022,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GO-2026-4918: govulncheck shows stdlib code path unreachable across analyzed products"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39820"
       },
       "products": [
@@ -25543,5 +25561,5 @@
       "impact_statement": "kubelet is a node agent; it does not parse email via net/mail"
     }
   ],
-  "timestamp": "2026-05-22T00:33:52Z"
+  "timestamp": "2026-05-22T02:36:47Z"
 }

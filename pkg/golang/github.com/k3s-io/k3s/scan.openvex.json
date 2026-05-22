@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-be4ae4c355cda17e131bdfc89048d45cf8c6b287d565302d106a5d377970ae51",
+  "@id": "https://openvex.dev/docs/public/vex-07270736e5229c530939be6d03df8c5c54a0f73ffe47e9177ac25eb1ee75f4fa",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -23704,6 +23704,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GO-2026-4918: govulncheck shows stdlib code path unreachable across analyzed products"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33815",
         "aliases": [
           "GO-2026-4771"
@@ -27994,6 +28012,60 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Binary does not generate HTML output; html/template meta-tag code path unreachable"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k3s binary does not use net/http/httputil.ReverseProxy"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39826"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k3s does not use html/template for HTML rendering; stdlib code path unreachable"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39836"
       },
       "products": [
@@ -28173,5 +28245,5 @@
       "impact_statement": "k3s is a Kubernetes distro; it does not parse email addresses via net/mail"
     }
   ],
-  "timestamp": "2026-05-22T00:33:52Z"
+  "timestamp": "2026-05-22T02:36:48Z"
 }

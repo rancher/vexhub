@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-be4ae4c355cda17e131bdfc89048d45cf8c6b287d565302d106a5d377970ae51",
+  "@id": "https://openvex.dev/docs/public/vex-5e0192eabd67ecbd90c2ef07b28637b35076ca760d913b62d640309a6e7d0a1d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2196,6 +2196,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/ingress-nginx",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GO-2026-4918: govulncheck shows stdlib code path unreachable across analyzed products"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39820",
         "aliases": [
           "GO-2026-4986"
@@ -2550,6 +2568,60 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/ingress-nginx",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Kubernetes liveness probe binary does not generate HTML output"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/ingress-nginx",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-ingress dbg binary is a debug tool; it does not render HTML via html/template"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/ingress-nginx",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wait-shutdown is a simple shutdown utility; it does not render HTML via html/template"
     },
     {
       "vulnerability": {
@@ -3302,5 +3374,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-22T00:33:52Z"
+  "timestamp": "2026-05-22T02:36:47Z"
 }
