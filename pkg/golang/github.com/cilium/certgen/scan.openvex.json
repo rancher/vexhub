@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-07270736e5229c530939be6d03df8c5c54a0f73ffe47e9177ac25eb1ee75f4fa",
+  "@id": "https://openvex.dev/docs/public/vex-b661054324a72cda625aacb86bb02049763646415227cc743b29cf0338640ad6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -24,6 +24,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-32281"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cilium-certgen generates self-signed certs for Cilium; no policy-based certificate chain validation"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-32282"
       },
       "products": [
@@ -39,6 +57,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32288"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "archive/tar not used; cilium-certgen generates TLS certs and does not process tar archives"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32289"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "html/template not used; cilium-certgen generates TLS certs and does not render HTML"
     },
     {
       "vulnerability": {
@@ -60,6 +114,42 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39820"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "net/mail ParseAddress not reachable; cilium-certgen generates TLS certs with no email processing"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "html/template not used; cilium-certgen generates TLS certs and does not render HTML"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39825"
       },
       "products": [
@@ -75,7 +165,61 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "cilium-certgen generates TLS certificates; it does not use httputil.ReverseProxy"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39826"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "html/template not used; cilium-certgen generates TLS certs and does not render HTML"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NUL panic in Dial/LookupPort only triggered on Windows; binary runs on Linux containers"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "net/mail email parsing not reachable; cilium-certgen generates TLS certs with no email processing"
     }
   ],
-  "timestamp": "2026-05-22T02:36:48Z"
+  "timestamp": "2026-05-22T12:09:08Z"
 }

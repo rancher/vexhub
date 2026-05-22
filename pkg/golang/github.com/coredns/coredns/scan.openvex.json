@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-07270736e5229c530939be6d03df8c5c54a0f73ffe47e9177ac25eb1ee75f4fa",
+  "@id": "https://openvex.dev/docs/public/vex-070fcb9c60fa19254aaa7ed8c174088bdf3b9f03beeb1f61b6fc27672957b53e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -9120,6 +9120,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-32288"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/coredns/coredns",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "archive/tar not used; CoreDNS is a DNS server and does not process tar archives"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-32288",
         "aliases": [
           "GO-2026-4869"
@@ -11281,6 +11299,24 @@
           "@id": "pkg:golang/github.com/coredns/coredns",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "html/template not used; CoreDNS is a DNS server and does not render HTML"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/coredns/coredns",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.2"
             }
           ]
@@ -12270,6 +12306,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "coredns is a DNS server; it does not render HTML via html/template"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/coredns/coredns",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NUL panic in Dial/LookupPort only triggered on Windows; binary runs on Linux containers"
     },
     {
       "vulnerability": {
@@ -13289,5 +13343,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-22T02:36:48Z"
+  "timestamp": "2026-05-22T12:09:07Z"
 }
