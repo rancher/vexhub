@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-57f64e2fa6fbf0fb07d2210f28d3dc3cff62f5bf60aed308c065c74d480c9678",
+  "@id": "https://openvex.dev/docs/public/vex-9a7905cd620fff04755b66045e61b35bc6fd574145b3a590a0501bea8bc5dd42",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -150,6 +150,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1074-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI upload server is Go; uses Go HTTP/2, not the C libnghttp2 library"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1177-1"
       },
       "products": [
@@ -257,5 +275,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-21T15:00:32Z"
+  "timestamp": "2026-05-22T14:12:34Z"
 }

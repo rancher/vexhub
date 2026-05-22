@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-041e6aa160a165a786b7abe52255f55e116f3b79f13bef2be9b6938adba41a71",
+  "@id": "https://openvex.dev/docs/public/vex-9a7905cd620fff04755b66045e61b35bc6fd574145b3a590a0501bea8bc5dd42",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -93,6 +93,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:02719-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-support-bundle-kit?repository_url=index.docker.io/rancher/mirrored-longhornio-support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go support-bundle-kit uses Go crypto package, not the C libgcrypt library"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:02970-1"
       },
       "products": [
@@ -144,6 +162,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3699-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-support-bundle-kit?repository_url=index.docker.io/rancher/mirrored-longhornio-support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go support-bundle-kit collects K8s diagnostics; no Kerberos authentication required"
     },
     {
       "vulnerability": {
@@ -216,6 +252,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1074-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-support-bundle-kit?repository_url=index.docker.io/rancher/mirrored-longhornio-support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses net/http HTTP/2; the C libnghttp2 library is not called at runtime"
     },
     {
       "vulnerability": {
@@ -326,5 +380,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-17T22:36:59Z"
+  "timestamp": "2026-05-22T14:12:34Z"
 }

@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-162a6c74139d17af9076785693a68fb66f2307a7a96a320daf1b22b9093d46b8",
+  "@id": "https://openvex.dev/docs/public/vex-929063fd1348309b89c5afddf5c5c136b4b7694ec2eba74e0fc49e4d00346ea0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-FU-2026:21213-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Hardened Kubernetes is Go; uses Go crypto package, not the C libgcrypt library"
+    },
     {
       "vulnerability": {
         "name": "SUSE-RU-2026:1228-1"
@@ -158,6 +176,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02773-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Hardened Kubernetes is Go; uses Go crypto package, not the C libgcrypt library"
     },
     {
       "vulnerability": {
@@ -404,6 +440,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0224-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtasn1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Hardened Kubernetes is Go; uses Go crypto/x509, not GnuTLS/libtasn1"
     },
     {
       "vulnerability": {
@@ -928,5 +982,5 @@
       "impact_statement": "Kubernetes uses Go built-in crypto/ssh; the system libssh library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-21T17:28:38Z"
+  "timestamp": "2026-05-22T14:12:33Z"
 }
