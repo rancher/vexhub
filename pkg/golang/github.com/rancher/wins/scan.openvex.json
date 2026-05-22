@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-07270736e5229c530939be6d03df8c5c54a0f73ffe47e9177ac25eb1ee75f4fa",
+  "@id": "https://openvex.dev/docs/public/vex-b661054324a72cda625aacb86bb02049763646415227cc743b29cf0338640ad6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -276,6 +276,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-32289"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/wins",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "html/template not used; wins.exe is a Windows host process agent with no HTML rendering"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33811"
       },
       "products": [
@@ -373,6 +391,24 @@
           "@id": "pkg:golang/github.com/rancher/wins",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "html/template not used; wins.exe is a Windows host process agent with no HTML rendering"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/wins",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.2"
             }
           ]
@@ -381,6 +417,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Windows PE binary shipped as static asset in Linux container; never executed at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/wins",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "httputil.ReverseProxy not used; wins.exe is a Windows host process agent, no HTTP proxying"
     },
     {
       "vulnerability": {
@@ -517,6 +571,24 @@
           "@id": "pkg:golang/github.com/rancher/wins",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "net/mail email parsing not reachable; wins.exe is a Windows host process agent with no email processing"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/wins",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.2"
             }
           ]
@@ -527,5 +599,5 @@
       "impact_statement": "Windows PE binary shipped as static asset in Linux container; never executed at runtime"
     }
   ],
-  "timestamp": "2026-05-22T02:36:48Z"
+  "timestamp": "2026-05-22T12:09:08Z"
 }
