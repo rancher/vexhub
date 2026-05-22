@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-86973952e22ba01571cfc318e3b3630e8ee3807f5fba7cbe50d424aa5c748794",
+  "@id": "https://openvex.dev/docs/public/vex-141bdbeda7cb7e0c551552b078911db6933ee0098617f01f47df7e0bc8f7b2c4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -255,6 +255,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:3875-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxslt1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx serves static Longhorn UI files; libxslt XSLT transformation is not used"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:3941-1"
       },
       "products": [
@@ -450,6 +468,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0801-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxslt1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx serves static Longhorn UI files; libxslt XSLT transformation is not used"
     },
     {
       "vulnerability": {
@@ -668,5 +704,5 @@
       "impact_statement": "longhornio-longhorn-ui is an nginx web UI; libtiff image processing library is never called"
     }
   ],
-  "timestamp": "2026-05-21T19:39:53Z"
+  "timestamp": "2026-05-22T02:13:36Z"
 }
