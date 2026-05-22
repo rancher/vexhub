@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-86973952e22ba01571cfc318e3b3630e8ee3807f5fba7cbe50d424aa5c748794",
+  "@id": "https://openvex.dev/docs/public/vex-929063fd1348309b89c5afddf5c5c136b4b7694ec2eba74e0fc49e4d00346ea0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -147,6 +147,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02447-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn engine is Go; uses Go crypto package, not the C libgcrypt library"
     },
     {
       "vulnerability": {
@@ -1010,5 +1028,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-21T19:39:53Z"
+  "timestamp": "2026-05-22T14:12:33Z"
 }
