@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-41a54436206e240a89b635aaf1c9776df4b73ae42222f22283c5bf4fb72baf25",
+  "@id": "https://openvex.dev/docs/public/vex-3e56f44e66f72f88eb61ae0e0fbf8da97c7d1b17502c8321b4e2153d6e8e1546",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/shell?repository_url=registry.rancher.com/rancher/shell",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Shell image entrypoint provides kubectl/bash; perl interpreter is not invoked at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02027-1"
@@ -488,5 +506,5 @@
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-21T17:28:37Z"
+  "timestamp": "2026-05-22T02:13:37Z"
 }

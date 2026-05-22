@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-41a54436206e240a89b635aaf1c9776df4b73ae42222f22283c5bf4fb72baf25",
+  "@id": "https://openvex.dev/docs/public/vex-3e56f44e66f72f88eb61ae0e0fbf8da97c7d1b17502c8321b4e2153d6e8e1546",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -535,6 +535,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03205-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/busybox"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Flannel is a pure-Go CNI daemon; busybox shell utilities are not invoked at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03239-1"
       },
       "products": [
@@ -876,6 +894,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0235-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/busybox"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Flannel is a pure-Go CNI daemon; busybox shell utilities are not invoked at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0253-1"
       },
       "products": [
@@ -1053,6 +1089,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher/hardened-flannel is pure Go; libsoup GNOME HTTP client is never loaded or called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0759-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/busybox"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Flannel is a pure-Go CNI daemon; busybox shell utilities are not invoked at runtime"
     },
     {
       "vulnerability": {
@@ -1361,5 +1415,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-21T17:28:37Z"
+  "timestamp": "2026-05-22T02:13:37Z"
 }
