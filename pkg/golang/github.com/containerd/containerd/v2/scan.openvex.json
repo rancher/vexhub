@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8b82e36e2710d4dfca57120cc3d135b04990e8cecebb0771e573b38ceea130a5",
+  "@id": "https://openvex.dev/docs/public/vex-fd1f607d68d3132071aa375460c11b48c2e26e8c137be9769fe5a92440ba38c6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2869,6 +2869,24 @@
           "@id": "pkg:golang/github.com/containerd/containerd/v2",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-33814 affects net/http HTTP/2 client; containerd-shim uses ttrpc over Unix socket, not HTTP/2"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd/v2",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.2"
             }
           ]
@@ -3583,6 +3601,24 @@
           "@id": "pkg:golang/github.com/containerd/containerd/v2",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-39836 panics only on Windows (NUL byte in net.Dial/LookupPort); image runs on Linux"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd/v2",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.2"
             }
           ]
@@ -4013,5 +4049,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-22T18:26:01Z"
+  "timestamp": "2026-05-22T22:51:20Z"
 }
