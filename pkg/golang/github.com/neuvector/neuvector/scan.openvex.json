@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d2685b5af24cf8bfbfdb7841db05bb5ee052d8cab66c66f7370dcd1c96128bcb",
+  "@id": "https://openvex.dev/docs/public/vex-182d2070dba493982b5bbee5dde580d8252c422360959b594cfef9416a628d4e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -24,6 +24,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/neuvector/neuvector",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-39825 affects httputil.ReverseProxy; NeuVector enforcer agent does not use ReverseProxy"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39836"
       },
       "products": [
@@ -39,7 +57,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CVE-2026-39836 panics only on Windows; target runs in a Linux container"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/neuvector/neuvector",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-42499 affects net/mail address parsing; NeuVector enforcer agent does not parse email"
     }
   ],
-  "timestamp": "2026-05-22T18:26:03Z"
+  "timestamp": "2026-05-22T22:51:19Z"
 }
