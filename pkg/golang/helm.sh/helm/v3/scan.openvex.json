@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-514f393924ef4ec349072f6e8bb809704e685fbc3441cd5c380ef8840bd6caba",
+  "@id": "https://openvex.dev/docs/public/vex-91aa84d10d7c6f2ea5792309c4ff29c0353b7796142ca5695fe17fe023431044",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -8476,6 +8476,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Helm uses text/template for chart rendering, not html/template; no HTML template execution path"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39823",
         "aliases": [
           "GO-2026-4982"
@@ -9337,6 +9355,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39826"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Helm uses text/template for chart rendering, not html/template; no HTML template execution path"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39826",
         "aliases": [
           "GO-2026-4980"
@@ -9900,5 +9936,5 @@
       "impact_statement": "govulncheck was manually executed and confirmed to be a false-positive"
     }
   ],
-  "timestamp": "2026-05-12T09:52:45Z"
+  "timestamp": "2026-05-22T18:26:02Z"
 }

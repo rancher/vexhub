@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-070fcb9c60fa19254aaa7ed8c174088bdf3b9f03beeb1f61b6fc27672957b53e",
+  "@id": "https://openvex.dev/docs/public/vex-8b82e36e2710d4dfca57120cc3d135b04990e8cecebb0771e573b38ceea130a5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -9056,6 +9056,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39820"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE affects net/mail email parsing; Cilium hubble-relay observability daemon has no email parsing"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39823"
       },
       "products": [
@@ -9898,5 +9916,5 @@
       "impact_statement": "net/mail email parsing not reachable; cilium-agent is a network policy agent with no email processing"
     }
   ],
-  "timestamp": "2026-05-22T12:09:07Z"
+  "timestamp": "2026-05-22T18:26:01Z"
 }
