@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0e5235bd0ffdd4a7a01a9e556e933d1fa3e67a9b62f962b8da4ac32996fb892b",
+  "@id": "https://openvex.dev/docs/public/vex-b661054324a72cda625aacb86bb02049763646415227cc743b29cf0338640ad6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -5900,6 +5900,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/security-scan",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kb-summarizer is a CIS benchmark file summarizer; no HTTP/2 server or client transport code path"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33814",
         "aliases": [
           "GO-2026-4918"
@@ -9298,5 +9316,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-21T20:14:12Z"
+  "timestamp": "2026-05-22T12:09:08Z"
 }
