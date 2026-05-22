@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3e56f44e66f72f88eb61ae0e0fbf8da97c7d1b17502c8321b4e2153d6e8e1546",
+  "@id": "https://openvex.dev/docs/public/vex-c5e217d83fa84097509f3bc4ffe716dff5ced51d1b32e3576bb4902833205bff",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -507,6 +507,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui serves static assets via nginx; udev device management is not exercised"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1177-1"
       },
       "products": [
@@ -704,5 +722,5 @@
       "impact_statement": "longhornio-longhorn-ui is an nginx web UI; libtiff image processing library is never called"
     }
   ],
-  "timestamp": "2026-05-22T02:13:37Z"
+  "timestamp": "2026-05-22T12:21:14Z"
 }
