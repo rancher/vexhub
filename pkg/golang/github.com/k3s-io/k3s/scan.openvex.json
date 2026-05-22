@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6f795ccfe82fffcc29c8df52b1a83baa7819dba72f7b7b62a29e4339802ec870",
+  "@id": "https://openvex.dev/docs/public/vex-be4ae4c355cda17e131bdfc89048d45cf8c6b287d565302d106a5d377970ae51",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -27958,6 +27958,60 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39820"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k3s binary used for upgrades; it does not parse email addresses via net/mail"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39820"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k3s is a Kubernetes distro; it does not parse email addresses via net/mail"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-39836 only triggers on Windows; this binary runs in a Linux container"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39883"
       },
       "products": [
@@ -28099,7 +28153,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "GO-2026-4977: govulncheck shows stdlib code path unreachable across analyzed products"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k3s is a Kubernetes distro; it does not parse email addresses via net/mail"
     }
   ],
-  "timestamp": "2026-05-21T20:14:13Z"
+  "timestamp": "2026-05-22T00:33:52Z"
 }
