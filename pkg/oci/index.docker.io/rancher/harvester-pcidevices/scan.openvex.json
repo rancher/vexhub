@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-96d68b0a736804629a11ab740ddac2f1cdba0dd3f7318fb7b36009063d242a52",
+  "@id": "https://openvex.dev/docs/public/vex-194577466a37ab114451fbe3527f011f85474f1c287d883f7b0f573e9f81132c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -471,6 +471,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=index.docker.io/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-pcidevices is a Go Kubernetes operator; sed CLI is not invoked at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21142-1"
       },
       "products": [
@@ -560,5 +578,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-21T15:00:31Z"
+  "timestamp": "2026-05-23T15:30:31Z"
 }
