@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-182d2070dba493982b5bbee5dde580d8252c422360959b594cfef9416a628d4e",
+  "@id": "https://openvex.dev/docs/public/vex-e153650d26bbdbff136fe195fa9413b6fb761d543555e504e79d45b49ec63f86",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -9881,6 +9881,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39826"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "hubble-relay imports only pkg/logging,pkg/option,pkg/version; pkg/metrics (which uses html/template) is not linked"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39836"
       },
       "products": [
@@ -9934,5 +9952,5 @@
       "impact_statement": "net/mail email parsing not reachable; cilium-agent is a network policy agent with no email processing"
     }
   ],
-  "timestamp": "2026-05-22T22:51:19Z"
+  "timestamp": "2026-05-23T01:06:25Z"
 }
