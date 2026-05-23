@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-91aa84d10d7c6f2ea5792309c4ff29c0353b7796142ca5695fe17fe023431044",
+  "@id": "https://openvex.dev/docs/public/vex-c7c193276d778634034db9efd9c693d8400fe2e820d36294a012c689beea18dc",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -5008,6 +5008,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Binary is not a web server; does not render html/template to adversary-controlled input."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39825"
       },
       "products": [
@@ -5133,5 +5151,5 @@
       "impact_statement": "GO-2026-4977: govulncheck shows stdlib code path unreachable across analyzed products"
     }
   ],
-  "timestamp": "2026-05-22T18:26:02Z"
+  "timestamp": "2026-05-23T19:08:44Z"
 }
