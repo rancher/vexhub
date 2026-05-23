@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-182d2070dba493982b5bbee5dde580d8252c422360959b594cfef9416a628d4e",
+  "@id": "https://openvex.dev/docs/public/vex-e153650d26bbdbff136fe195fa9413b6fb761d543555e504e79d45b49ec63f86",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -57,6 +57,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CVE-2026-39823 affects html/template rendering; Envoy ratelimit service does not render HTML"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/envoyproxy/ratelimit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "projectcalico/calico has no html/template in production code; rate-limit proxy serves no HTML with meta tags"
     },
     {
       "vulnerability": {
@@ -129,7 +147,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CVE-2026-42499 affects net/mail address parsing; Envoy ratelimit service does not parse email"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/envoyproxy/ratelimit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "projectcalico/calico confirmed 0 net/mail imports; rate-limiting proxy has no email parsing logic"
     }
   ],
-  "timestamp": "2026-05-22T22:51:19Z"
+  "timestamp": "2026-05-23T01:06:25Z"
 }

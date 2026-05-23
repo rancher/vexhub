@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-182d2070dba493982b5bbee5dde580d8252c422360959b594cfef9416a628d4e",
+  "@id": "https://openvex.dev/docs/public/vex-e153650d26bbdbff136fe195fa9413b6fb761d543555e504e79d45b49ec63f86",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -173,7 +173,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CVE-2026-39826 affects html/template JS rendering; helm-set-status plugin updates CRD status, no HTML"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39826"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "rancher/helm-set-status confirmed 0 html/template imports; helm plugin sets release status with no HTML rendering"
     }
   ],
-  "timestamp": "2026-05-22T22:51:19Z"
+  "timestamp": "2026-05-23T01:06:25Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fd1f607d68d3132071aa375460c11b48c2e26e8c137be9769fe5a92440ba38c6",
+  "@id": "https://openvex.dev/docs/public/vex-3a471287137ccfa87b0b14b053be8bf78a01bd1570153ae6238ab0a4703194c6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3608,6 +3608,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE only affects Windows (NUL in Dial/LookupPort); Linux containers never execute the Windows-specific code path"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd/v2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CVE-2026-39836 panics only on Windows (NUL byte in net.Dial/LookupPort); image runs on Linux"
     },
     {
@@ -4049,5 +4067,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-22T22:51:20Z"
+  "timestamp": "2026-05-23T01:06:26Z"
 }
