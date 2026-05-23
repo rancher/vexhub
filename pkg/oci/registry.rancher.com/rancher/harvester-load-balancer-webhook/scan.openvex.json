@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-35064d2934e334403f0811317e95c911fb3e0ddd632e583dd3994e174bf79714",
+  "@id": "https://openvex.dev/docs/public/vex-6c85bd81f592947e13d2c5ec33706b05f56af60e57d0f11ddc30b358864afd52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -39,7 +39,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21172-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-load-balancer-webhook?repository_url=registry.rancher.com/rancher/harvester-load-balancer-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go Kubernetes webhook uses stdlib regexp package; libpcre2 C library is not loaded by the Go runtime"
     }
   ],
-  "timestamp": "2026-05-17T16:42:01Z"
+  "timestamp": "2026-05-23T18:21:55Z"
 }

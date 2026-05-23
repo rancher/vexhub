@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b2c5887d15051e31f8222384dba266ca8e3387a99db1f4e4d8afb5458d24bd25",
+  "@id": "https://openvex.dev/docs/public/vex-6c85bd81f592947e13d2c5ec33706b05f56af60e57d0f11ddc30b358864afd52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -651,6 +651,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid-devel is a dev package (headers/static libs only); no runtime shared library is loaded by the container"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0288-1"
       },
       "products": [
@@ -1137,6 +1155,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid-devel is a dev package (headers/static libs only); no runtime shared library is loaded by the container"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -1280,5 +1316,5 @@
       "impact_statement": "backing-image-manager is a Go binary; sed is a CLI tool never invoked by the container entrypoint"
     }
   ],
-  "timestamp": "2026-05-23T15:30:30Z"
+  "timestamp": "2026-05-23T18:21:55Z"
 }

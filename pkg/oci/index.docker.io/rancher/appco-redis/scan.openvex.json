@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-612c34c0b32f6ed0ff4049f578d30859744316644eb0a05cec545695286b0637",
+  "@id": "https://openvex.dev/docs/public/vex-6c85bd81f592947e13d2c5ec33706b05f56af60e57d0f11ddc30b358864afd52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -21,7 +21,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3699-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/appco-redis?repository_url=index.docker.io/rancher/appco-redis",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Redis server does not support Kerberos/GSSAPI; krb5 is an incidental SLES OS dependency not loaded at runtime"
     }
   ],
-  "timestamp": "2026-05-17T11:44:33Z"
+  "timestamp": "2026-05-23T18:21:55Z"
 }
