@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-07270736e5229c530939be6d03df8c5c54a0f73ffe47e9177ac25eb1ee75f4fa",
+  "@id": "https://openvex.dev/docs/public/vex-009ae7bec2cac226dce77557f583eeb1ac91a325f390e90c12622db2d5f676aa",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -7853,6 +7853,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/compliance-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Binary has no email address parsing; net/mail CVE not reachable."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499",
         "aliases": [
           "GO-2026-4977"
@@ -8503,5 +8521,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-22T02:36:48Z"
+  "timestamp": "2026-05-23T12:32:11Z"
 }

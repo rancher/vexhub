@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c2a8720729490a8073657fd1c61d82e74beca3af23280934bccc5b98914a7caf",
+  "@id": "https://openvex.dev/docs/public/vex-b9ce4faffbc70aa3f8c7c8da715a32a26fba465364190c73b9cd8157a64a3273",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -4032,6 +4032,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39826"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/node-driver-registrar",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Binary does not render HTML templates; html/template CVE not reachable."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499",
         "aliases": [
           "GO-2026-4977"
@@ -4325,5 +4343,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-21T21:18:33Z"
+  "timestamp": "2026-05-23T12:32:10Z"
 }
