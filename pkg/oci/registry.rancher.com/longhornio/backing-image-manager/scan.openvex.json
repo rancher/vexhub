@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-41a54436206e240a89b635aaf1c9776df4b73ae42222f22283c5bf4fb72baf25",
+  "@id": "https://openvex.dev/docs/public/vex-704e5f366781099c49902ba67002c3a1629a6b265dcc5c981023df322ee08833",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -93,6 +93,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02167-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgio-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Backing Image Manager is a pure-Go binary; libgio-2_0-0 GLib I/O C library is not loaded at runtime"
     },
     {
       "vulnerability": {
@@ -507,6 +525,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgio-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Backing Image Manager is a pure-Go binary; libgio-2_0-0 GLib I/O C library is not loaded at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgio-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Backing Image Manager is a pure-Go binary; libgio-2_0-0 GLib I/O C library is not loaded at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0027-1"
       },
       "products": [
@@ -576,6 +630,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgio-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Backing Image Manager is a pure-Go binary; libgio-2_0-0 GLib I/O C library is not loaded at runtime"
     },
     {
       "vulnerability": {
@@ -1136,5 +1208,5 @@
       "impact_statement": "backing-image-manager is a Go binary; sed is a CLI tool never invoked by the container entrypoint"
     }
   ],
-  "timestamp": "2026-05-21T17:28:37Z"
+  "timestamp": "2026-05-23T12:16:15Z"
 }

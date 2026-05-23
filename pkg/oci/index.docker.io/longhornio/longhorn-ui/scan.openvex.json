@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-929063fd1348309b89c5afddf5c5c136b4b7694ec2eba74e0fc49e4d00346ea0",
+  "@id": "https://openvex.dev/docs/public/vex-704e5f366781099c49902ba67002c3a1629a6b265dcc5c981023df322ee08833",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -478,6 +478,24 @@
           "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn UI serves a static web frontend via nginx; libmount1 C library is never invoked by nginx at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/util-linux"
             }
           ]
@@ -784,6 +802,24 @@
           "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn UI serves a static web frontend via nginx; libmount1 C library is never invoked by nginx at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/util-linux"
             }
           ]
@@ -902,5 +938,5 @@
       "impact_statement": "longhorn-ui is nginx serving static assets; libcurl4 C library is not invoked at runtime"
     }
   ],
-  "timestamp": "2026-05-22T14:12:33Z"
+  "timestamp": "2026-05-23T12:16:15Z"
 }
