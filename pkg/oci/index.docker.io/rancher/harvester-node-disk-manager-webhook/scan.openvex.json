@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7e2f33372a0b43a0949ffac5ad6297a4c92649919aeb90d46e36bb6cc4e5e6b6",
+  "@id": "https://openvex.dev/docs/public/vex-99bc07d7f784297da4ba261451c91be0dd7d5bdf300405956d9f185f66784b35",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -539,7 +539,43 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go does not call libfdisk C library; disk operations handled via Go"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=index.docker.io/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "harvester-node-disk-manager-webhook is a Go admission webhook; libfdisk partition library not called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=index.docker.io/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go manages Linux capabilities via syscalls, not the libcap2 C library"
     },
     {
       "vulnerability": {
@@ -722,5 +758,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-22T22:36:11Z"
+  "timestamp": "2026-05-23T00:54:36Z"
 }

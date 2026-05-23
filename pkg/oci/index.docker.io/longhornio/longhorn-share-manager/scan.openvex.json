@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7e2f33372a0b43a0949ffac5ad6297a4c92649919aeb90d46e36bb6cc4e5e6b6",
+  "@id": "https://openvex.dev/docs/public/vex-03e298c6ba59e3e3337587197670cf19dade9801adc63af61e5bc19f1699a066",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -345,6 +345,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=index.docker.io/longhornio/longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go generates UUIDs via crypto/rand; libuuid C library not called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -507,6 +525,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=index.docker.io/longhornio/longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go generates UUIDs via crypto/rand; libuuid C library not called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -560,5 +596,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-22T22:36:11Z"
+  "timestamp": "2026-05-23T00:54:37Z"
 }
