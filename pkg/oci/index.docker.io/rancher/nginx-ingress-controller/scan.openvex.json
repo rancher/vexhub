@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-26e8c826ed2104a256096344bff3e41c85bdb59decf8bcc87ba863b6d89119b2",
+  "@id": "https://openvex.dev/docs/public/vex-4c40db980501b621d68e5fb6f88b7ab9b8d5795bd9f3fd3baf1b28c85faba01c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -620,6 +620,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21158-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx and Go ingress controller do not use block device identification"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21173-1"
       },
       "products": [
@@ -817,5 +835,5 @@
       "impact_statement": "RKE2 nginx-ingress-controller does not execute affected libcap2 code path"
     }
   ],
-  "timestamp": "2026-05-21T12:49:30Z"
+  "timestamp": "2026-05-23T20:56:03Z"
 }
