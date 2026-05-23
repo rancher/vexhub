@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8ca7b001f765f2b227f0899524f3d7734e1871b929f6ef3b6c1838565ffeec71",
+  "@id": "https://openvex.dev/docs/public/vex-704e5f366781099c49902ba67002c3a1629a6b265dcc5c981023df322ee08833",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -108,6 +108,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeVirt virt-controller is a Go-based K8s controller; libmount1 C library is not in execute path"
     },
     {
       "vulnerability": {
@@ -219,6 +237,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeVirt virt-controller is a Go-based K8s controller; libmount1 C library is not in execute path"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -272,5 +308,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-18T04:12:17Z"
+  "timestamp": "2026-05-23T12:16:15Z"
 }
