@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c5e217d83fa84097509f3bc4ffe716dff5ced51d1b32e3576bb4902833205bff",
+  "@id": "https://openvex.dev/docs/public/vex-6c85bd81f592947e13d2c5ec33706b05f56af60e57d0f11ddc30b358864afd52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -381,6 +381,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui is an nginx web frontend; nginx does not use the libblkid block device identification library"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui is an nginx web frontend; nginx does not use the libuuid library at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -597,6 +633,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui is an nginx web frontend; nginx does not use the libblkid block device identification library"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui is an nginx web frontend; nginx does not use the libuuid library at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1408-1"
       },
       "products": [
@@ -722,5 +794,5 @@
       "impact_statement": "longhornio-longhorn-ui is an nginx web UI; libtiff image processing library is never called"
     }
   ],
-  "timestamp": "2026-05-22T12:21:14Z"
+  "timestamp": "2026-05-23T18:21:55Z"
 }

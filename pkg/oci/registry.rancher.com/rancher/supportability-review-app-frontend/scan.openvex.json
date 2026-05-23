@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cd310e0a5bf0276f3fba783c4123d2b8d6868d1a6fdda6c7b4eab35ff674d630",
+  "@id": "https://openvex.dev/docs/public/vex-0156099139379d0b3b21682a5381287b8f58667afea1d7d811b2772dc64b4c30",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -237,6 +237,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-app-frontend?repository_url=registry.rancher.com/rancher/supportability-review-app-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Node.js web frontend uses built-in UUID generation; system libuuid C library is not loaded at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -290,5 +308,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-18T02:18:18Z"
+  "timestamp": "2026-05-23T18:21:56Z"
 }

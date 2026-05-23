@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-99bc07d7f784297da4ba261451c91be0dd7d5bdf300405956d9f185f66784b35",
+  "@id": "https://openvex.dev/docs/public/vex-6c85bd81f592947e13d2c5ec33706b05f56af60e57d0f11ddc30b358864afd52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -417,6 +417,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=index.docker.io/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-cluster-repo is a Go Helm chart repository server; libmount is not invoked at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -506,5 +524,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-23T00:54:36Z"
+  "timestamp": "2026-05-23T18:21:55Z"
 }

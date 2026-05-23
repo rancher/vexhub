@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-25622f85c8c14c2a64fb6adccedf3dea07d2c474ace7465d82343e83116d68cd",
+  "@id": "https://openvex.dev/docs/public/vex-6c85bd81f592947e13d2c5ec33706b05f56af60e57d0f11ddc30b358864afd52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -57,6 +57,24 @@
       "status": "not_affected",
       "justification": "component_not_present",
       "impact_statement": "boost-license1_66_0 is a license-text-only package; it contains no executable code or shared libraries"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.7/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_thread1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cdi-importer uses Go + qemu-img (C) + nbdkit (C); no C++ component loads the Boost thread library"
     },
     {
       "vulnerability": {
@@ -329,5 +347,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-23T12:16:16Z"
+  "timestamp": "2026-05-23T18:21:55Z"
 }
