@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-86b95ec9ea8bcfff306490a58cec5da94bf82c79dd62f9376c48b3619dfb5b6a",
+  "@id": "https://openvex.dev/docs/public/vex-009ae7bec2cac226dce77557f583eeb1ac91a325f390e90c12622db2d5f676aa",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3679,6 +3679,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/helm/helm-mapkubeapis",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE only affects Windows; all container images run on Linux."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499",
         "aliases": [
           "GO-2026-4977"
@@ -3783,5 +3801,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-21T15:14:32Z"
+  "timestamp": "2026-05-23T12:32:11Z"
 }
