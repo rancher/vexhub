@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9a7905cd620fff04755b66045e61b35bc6fd574145b3a590a0501bea8bc5dd42",
+  "@id": "https://openvex.dev/docs/public/vex-25622f85c8c14c2a64fb6adccedf3dea07d2c474ace7465d82343e83116d68cd",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -39,6 +39,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3699-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI API server uses K8s cert/token authentication; Kerberos (krb5) is not an active auth mechanism"
     },
     {
       "vulnerability": {
@@ -293,5 +311,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-22T14:12:34Z"
+  "timestamp": "2026-05-23T12:16:16Z"
 }

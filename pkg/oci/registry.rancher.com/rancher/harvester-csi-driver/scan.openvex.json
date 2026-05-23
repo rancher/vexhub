@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-99bc07d7f784297da4ba261451c91be0dd7d5bdf300405956d9f185f66784b35",
+  "@id": "https://openvex.dev/docs/public/vex-704e5f366781099c49902ba67002c3a1629a6b265dcc5c981023df322ee08833",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-FU-2026:21213-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester CSI driver is Go-based and uses Go crypto/tls; libgcrypt20 GNU crypto C library is not called"
+    },
     {
       "vulnerability": {
         "name": "SUSE-FU-2026:21213-1"
@@ -489,6 +507,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "harvester-csi-driver is a Go binary; coreutils CLI tools are not invoked by the CSI driver entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02447-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester CSI driver is Go-based and uses Go crypto/tls; libgcrypt20 GNU crypto C library is not called"
     },
     {
       "vulnerability": {
@@ -1262,5 +1298,5 @@
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-23T00:54:36Z"
+  "timestamp": "2026-05-23T12:16:15Z"
 }
