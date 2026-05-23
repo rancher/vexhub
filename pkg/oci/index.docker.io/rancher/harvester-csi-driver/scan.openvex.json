@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-03e298c6ba59e3e3337587197670cf19dade9801adc63af61e5bc19f1699a066",
+  "@id": "https://openvex.dev/docs/public/vex-25622f85c8c14c2a64fb6adccedf3dea07d2c474ace7465d82343e83116d68cd",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-FU-2026:21213-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester CSI driver is Go-based and uses Go crypto/tls; libgcrypt20 GNU crypto C library is not called"
+    },
     {
       "vulnerability": {
         "name": "SUSE-FU-2026:21213-1"
@@ -489,6 +507,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "harvester-csi-driver is a Go binary; coreutils CLI tools are not invoked by the CSI driver entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02447-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester CSI driver is Go-based and uses Go crypto/tls; libgcrypt20 GNU crypto C library is not called"
     },
     {
       "vulnerability": {
@@ -1262,5 +1298,5 @@
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-23T00:54:37Z"
+  "timestamp": "2026-05-23T12:16:16Z"
 }
