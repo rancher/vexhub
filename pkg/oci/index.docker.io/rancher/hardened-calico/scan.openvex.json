@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0d17060ed3f4389457329129238fb4b2835355f9111418ca9de88223d829c705",
+  "@id": "https://openvex.dev/docs/public/vex-99bc07d7f784297da4ba261451c91be0dd7d5bdf300405956d9f185f66784b35",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -301,6 +301,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go does not use libsystemd C library at runtime in this controller image"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1352-1"
       },
       "products": [
@@ -426,5 +444,5 @@
       "impact_statement": "Calico runs as a daemon and does not use interactive terminal interfaces; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-17T11:44:34Z"
+  "timestamp": "2026-05-23T00:54:36Z"
 }

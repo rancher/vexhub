@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7e2f33372a0b43a0949ffac5ad6297a4c92649919aeb90d46e36bb6cc4e5e6b6",
+  "@id": "https://openvex.dev/docs/public/vex-99bc07d7f784297da4ba261451c91be0dd7d5bdf300405956d9f185f66784b35",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -345,6 +345,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools not invoked by Go webhook HTTP server at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -470,5 +488,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-22T22:36:11Z"
+  "timestamp": "2026-05-23T00:54:36Z"
 }
