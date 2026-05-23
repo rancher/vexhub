@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-57f64e2fa6fbf0fb07d2210f28d3dc3cff62f5bf60aed308c065c74d480c9678",
+  "@id": "https://openvex.dev/docs/public/vex-4c40db980501b621d68e5fb6f88b7ab9b8d5795bd9f3fd3baf1b28c85faba01c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -39,6 +39,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.6/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI operator is a Go binary; libudev1 udev library not in execute path"
     },
     {
       "vulnerability": {
@@ -183,6 +201,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.6/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI operator is a Go binary; libudev1 udev library not in execute path"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1177-1"
       },
       "products": [
@@ -200,5 +236,5 @@
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-21T15:00:32Z"
+  "timestamp": "2026-05-23T20:56:03Z"
 }

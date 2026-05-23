@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9a7905cd620fff04755b66045e61b35bc6fd574145b3a590a0501bea8bc5dd42",
+  "@id": "https://openvex.dev/docs/public/vex-4c40db980501b621d68e5fb6f88b7ab9b8d5795bd9f3fd3baf1b28c85faba01c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -255,6 +255,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0224-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=registry.rancher.com/longhornio/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtasn1-6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go support-bundle-kit; libtasn1 (GnuTLS dep) not called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -416,5 +434,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-22T14:12:34Z"
+  "timestamp": "2026-05-23T20:56:03Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6c85bd81f592947e13d2c5ec33706b05f56af60e57d0f11ddc30b358864afd52",
+  "@id": "https://openvex.dev/docs/public/vex-f65360e5c9cfe000c2affaeca92b45631ea583d34e21f66e033a2e5affeda840",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1173,6 +1173,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go backing-image-manager binary; libcap2 not called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -1316,5 +1334,5 @@
       "impact_statement": "backing-image-manager is a Go binary; sed is a CLI tool never invoked by the container entrypoint"
     }
   ],
-  "timestamp": "2026-05-23T18:21:55Z"
+  "timestamp": "2026-05-23T20:56:02Z"
 }
