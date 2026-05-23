@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-704e5f366781099c49902ba67002c3a1629a6b265dcc5c981023df322ee08833",
+  "@id": "https://openvex.dev/docs/public/vex-b2c5887d15051e31f8222384dba266ca8e3387a99db1f4e4d8afb5458d24bd25",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -306,7 +306,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-controller is a Go KubeVirt controller; sed CLI tool is not invoked in normal operation"
     }
   ],
-  "timestamp": "2026-05-23T12:16:15Z"
+  "timestamp": "2026-05-23T15:30:30Z"
 }

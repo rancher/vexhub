@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-704e5f366781099c49902ba67002c3a1629a6b265dcc5c981023df322ee08833",
+  "@id": "https://openvex.dev/docs/public/vex-b2c5887d15051e31f8222384dba266ca8e3387a99db1f4e4d8afb5458d24bd25",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -561,6 +561,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0022-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "qemu-pr-helper handles SCSI persistent reservations for QEMU; backing-image-manager does not run VMs"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0027-1"
       },
       "products": [
@@ -633,6 +651,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0288-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "qemu-pr-helper handles SCSI persistent reservations for QEMU; backing-image-manager does not run VMs"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0373-1"
       },
       "products": [
@@ -666,6 +702,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0445-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "qemu-pr-helper handles SCSI persistent reservations for QEMU; backing-image-manager does not run VMs"
     },
     {
       "vulnerability": {
@@ -864,6 +918,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "virtiofsd is a virtio-fs daemon for VM filesystem sharing; not invoked by backing-image-manager"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0832-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "qemu-pr-helper handles SCSI persistent reservations for QEMU; backing-image-manager does not run VMs"
     },
     {
       "vulnerability": {
@@ -1208,5 +1280,5 @@
       "impact_statement": "backing-image-manager is a Go binary; sed is a CLI tool never invoked by the container entrypoint"
     }
   ],
-  "timestamp": "2026-05-23T12:16:15Z"
+  "timestamp": "2026-05-23T15:30:30Z"
 }
