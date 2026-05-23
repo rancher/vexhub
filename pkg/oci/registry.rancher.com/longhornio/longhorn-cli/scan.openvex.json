@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-99bc07d7f784297da4ba261451c91be0dd7d5bdf300405956d9f185f66784b35",
+  "@id": "https://openvex.dev/docs/public/vex-f65360e5c9cfe000c2affaeca92b45631ea583d34e21f66e033a2e5affeda840",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -813,6 +813,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=registry.rancher.com/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Longhorn CLI tool; libcap2 C library not invoked at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -902,5 +920,5 @@
       "impact_statement": "Go uses net/http for HTTP; libcurl4 C library not called by Go binary"
     }
   ],
-  "timestamp": "2026-05-23T00:54:36Z"
+  "timestamp": "2026-05-23T20:56:02Z"
 }
