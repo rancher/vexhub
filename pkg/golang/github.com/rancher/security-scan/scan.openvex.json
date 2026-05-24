@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b661054324a72cda625aacb86bb02049763646415227cc743b29cf0338640ad6",
+  "@id": "https://openvex.dev/docs/public/vex-2ffa193e28dc1027212d0a343e5d5ce780f2f346b5ae48b4c2d1a21620cdc1cc",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -5417,6 +5417,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33811"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/security-scan",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "rancher/security-scan builds kb-summarizer with CGO_ENABLED=0; cgo DNS code not compiled."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33811",
         "aliases": [
           "GO-2026-4981"
@@ -9316,5 +9334,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-22T12:09:08Z"
+  "timestamp": "2026-05-24T19:24:25Z"
 }
