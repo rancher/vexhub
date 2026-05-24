@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-86973952e22ba01571cfc318e3b3630e8ee3807f5fba7cbe50d424aa5c748794",
+  "@id": "https://openvex.dev/docs/public/vex-d9c3cb3debf55a0c0eeb8f8a2a5ceec922db78dad2215ee28a34a39d53400fe5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-FU-2026:21213-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=index.docker.io/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgpg-error0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based VM import controller; libgpg-error C library not called at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-RU-2026:1228-1"
@@ -578,5 +596,5 @@
       "impact_statement": "harvester-vm-import-controller is a Go operator; qemu-vmsr-helper binary is never executed by the entrypoint"
     }
   ],
-  "timestamp": "2026-05-21T19:39:53Z"
+  "timestamp": "2026-05-24T22:45:56Z"
 }

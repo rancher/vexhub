@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-61a3623df1c41b9029c5549ff39fdb1689de01764e115ba3ca0b77f8de45c107",
+  "@id": "https://openvex.dev/docs/public/vex-7541eada7d29eba6795049c11f5bd925850b627f3b1cc58831857fc638a6ecf7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -201,6 +201,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03333-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libavahi-common3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn engine is a Go storage binary; Avahi/mDNS library not used"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03369-1"
       },
       "products": [
@@ -306,6 +324,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libtasn1 ASN.1 C library; Go uses crypto/x509, libtasn1 is not in execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0259-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libavahi-common3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn engine is a Go storage binary; Avahi/mDNS library not used"
     },
     {
       "vulnerability": {
@@ -579,6 +615,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1441-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libavahi-common3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn engine is a Go storage binary; Avahi/mDNS library not used"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -650,5 +704,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-24T11:47:50Z"
+  "timestamp": "2026-05-24T22:45:57Z"
 }

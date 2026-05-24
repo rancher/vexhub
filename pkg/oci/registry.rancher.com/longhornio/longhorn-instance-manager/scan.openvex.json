@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-194577466a37ab114451fbe3527f011f85474f1c287d883f7b0f573e9f81132c",
+  "@id": "https://openvex.dev/docs/public/vex-7541eada7d29eba6795049c11f5bd925850b627f3b1cc58831857fc638a6ecf7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -921,6 +921,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0816-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/virtiofsd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manages CSI volumes, not VMs; virtiofsd (VM filesystem daemon) not executed"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0819-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/virtiofsd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manages CSI volumes, not VMs; virtiofsd (VM filesystem daemon) not executed"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0832-1"
       },
       "products": [
@@ -1262,5 +1298,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-23T15:30:31Z"
+  "timestamp": "2026-05-24T22:45:57Z"
 }

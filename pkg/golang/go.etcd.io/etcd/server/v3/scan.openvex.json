@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a1a924389a02b6a40903ce1cae8beba670b89f642aa6dddacb766f69d11f9b13",
+  "@id": "https://openvex.dev/docs/public/vex-7541eada7d29eba6795049c11f5bd925850b627f3b1cc58831857fc638a6ecf7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -11760,6 +11760,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/server/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "etcd serves gRPC/JSON APIs only; html/template rendering not used"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39825",
         "aliases": [
           "GO-2026-4976"
@@ -13139,5 +13157,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-12T09:52:44Z"
+  "timestamp": "2026-05-24T22:45:57Z"
 }
