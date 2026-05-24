@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-52687303d73fb5846aed1831979ec9d55b5888496831a53dcf09826048f93c95",
+  "@id": "https://openvex.dev/docs/public/vex-5173a9a0854c14158bf1eb67481fec032a9c591cd002f6571d3ab6a3025b0fc9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -147,6 +147,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher?repository_url=registry.rancher.com/rancher/rancher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Rancher server is a Go web app managing K8s resources; libudev1 device-event library is never called"
     },
     {
       "vulnerability": {
@@ -489,6 +507,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher?repository_url=registry.rancher.com/rancher/rancher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Rancher server is a Go web app managing K8s resources; libudev1 device-event library is never called"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1166-1"
       },
       "products": [
@@ -650,5 +686,5 @@
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-18T00:29:56Z"
+  "timestamp": "2026-05-24T11:47:48Z"
 }

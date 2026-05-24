@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4c40db980501b621d68e5fb6f88b7ab9b8d5795bd9f3fd3baf1b28c85faba01c",
+  "@id": "https://openvex.dev/docs/public/vex-61a3623df1c41b9029c5549ff39fdb1689de01764e115ba3ca0b77f8de45c107",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -568,6 +568,24 @@
           "@id": "pkg:oci/longhorn-cli?repository_url=index.docker.io/longhornio/longhorn-cli",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-cli is a Go management CLI; libfdisk1 partition library is an incidental dep not invoked"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=index.docker.io/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libsmartcols1"
             }
           ]
@@ -802,6 +820,24 @@
           "@id": "pkg:oci/longhorn-cli?repository_url=index.docker.io/longhornio/longhorn-cli",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-cli is a Go management CLI; libfdisk1 partition library is an incidental dep not invoked"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=index.docker.io/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libsmartcols1"
             }
           ]
@@ -920,5 +956,5 @@
       "impact_statement": "Go uses net/http for HTTP; libcurl4 C library not called by Go binary"
     }
   ],
-  "timestamp": "2026-05-23T20:56:03Z"
+  "timestamp": "2026-05-24T11:47:50Z"
 }
