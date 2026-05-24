@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f65360e5c9cfe000c2affaeca92b45631ea583d34e21f66e033a2e5affeda840",
+  "@id": "https://openvex.dev/docs/public/vex-61a3623df1c41b9029c5549ff39fdb1689de01764e115ba3ca0b77f8de45c107",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -399,6 +399,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-share-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-share-manager is a Go NFS share manager; libudev1 device-event library is not in its execute path"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1065-1"
       },
       "products": [
@@ -596,5 +614,5 @@
       "impact_statement": "sed stream editor CLI; Go binary entrypoint does not invoke sed at runtime"
     }
   ],
-  "timestamp": "2026-05-23T20:56:02Z"
+  "timestamp": "2026-05-24T11:47:50Z"
 }

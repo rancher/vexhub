@@ -1,9 +1,45 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-35064d2934e334403f0811317e95c911fb3e0ddd632e583dd3994e174bf79714",
+  "@id": "https://openvex.dev/docs/public/vex-27d0f7b035d230e43e67b972ab9dcb147a62e9dd34fbd528a9a1c110d98ebe46",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-load-balancer?repository_url=registry.rancher.com/rancher/harvester-load-balancer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-load-balancer is a Go binary; libelf1 ELF-parsing library is an incidental dep never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-load-balancer?repository_url=registry.rancher.com/rancher/harvester-load-balancer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-load-balancer is a Go binary; libelf1 ELF-parsing library is an incidental dep never called"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
@@ -41,5 +77,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-17T16:42:01Z"
+  "timestamp": "2026-05-24T11:47:49Z"
 }

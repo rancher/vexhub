@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-90652fbf6b2cb47c742306081fab7b5c4a253901d03ab1c9a2571e8445ce4c47",
+  "@id": "https://openvex.dev/docs/public/vex-61a3623df1c41b9029c5549ff39fdb1689de01764e115ba3ca0b77f8de45c107",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -12408,6 +12408,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/go-spdk-helper",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Windows-only panic; all container images run on Linux where this code path is never reached"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499",
         "aliases": [
           "GO-2026-4977"
@@ -12911,5 +12929,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-19T07:09:33Z"
+  "timestamp": "2026-05-24T11:47:50Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-03e298c6ba59e3e3337587197670cf19dade9801adc63af61e5bc19f1699a066",
+  "@id": "https://openvex.dev/docs/public/vex-61a3623df1c41b9029c5549ff39fdb1689de01764e115ba3ca0b77f8de45c107",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -309,6 +309,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0288-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-engine uses iSCSI/NVMe-TCP; qemu-pr-helper QEMU binary is never executed by the storage engine"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0432-1"
       },
       "products": [
@@ -342,6 +360,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0445-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-engine uses iSCSI/NVMe-TCP; qemu-pr-helper QEMU binary is never executed by the storage engine"
     },
     {
       "vulnerability": {
@@ -414,6 +450,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0832-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-engine uses iSCSI/NVMe-TCP; qemu-pr-helper QEMU binary is never executed by the storage engine"
     },
     {
       "vulnerability": {
@@ -596,5 +650,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-23T00:54:37Z"
+  "timestamp": "2026-05-24T11:47:50Z"
 }

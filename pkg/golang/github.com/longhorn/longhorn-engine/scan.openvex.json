@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d2685b5af24cf8bfbfdb7841db05bb5ee052d8cab66c66f7370dcd1c96128bcb",
+  "@id": "https://openvex.dev/docs/public/vex-5173a9a0854c14158bf1eb67481fec032a9c591cd002f6571d3ab6a3025b0fc9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2712,6 +2712,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Infrastructure binary with no HTML rendering; html/template not used to serve user-controlled content"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39825",
         "aliases": [
           "GO-2026-4976"
@@ -3036,6 +3054,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39826"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Infrastructure binary with no HTML rendering; html/template not used to serve user-controlled content"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39836"
       },
       "products": [
@@ -3051,6 +3087,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "NUL panic in Dial/LookupPort only triggered on Windows; binary runs on Linux containers"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Windows-only panic; all container images run on Linux where this code path is never reached"
     },
     {
       "vulnerability": {
@@ -3305,5 +3359,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-22T18:26:03Z"
+  "timestamp": "2026-05-24T11:47:48Z"
 }
