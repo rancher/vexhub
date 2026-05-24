@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d2f9cd6dbb2008de3263d65ca704c4d0d4b853a061f74c5d620b9d97202c6d1b",
+  "@id": "https://openvex.dev/docs/public/vex-27d0f7b035d230e43e67b972ab9dcb147a62e9dd34fbd528a9a1c110d98ebe46",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -126,6 +126,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3699-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-api?repository_url=registry.suse.com/suse/sles/15.7/virt-api",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-api authenticates via Kubernetes ServiceAccount tokens; Kerberos authentication is not used"
     },
     {
       "vulnerability": {
@@ -326,5 +344,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-21T01:49:48Z"
+  "timestamp": "2026-05-24T11:47:49Z"
 }
