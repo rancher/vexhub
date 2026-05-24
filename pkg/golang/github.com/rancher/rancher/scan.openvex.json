@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e153650d26bbdbff136fe195fa9413b6fb761d543555e504e79d45b49ec63f86",
+  "@id": "https://openvex.dev/docs/public/vex-8ea47f848803b161fc71048f448dfaafffbc956310b9ae6617f23067988918d8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -15491,6 +15491,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39826"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/rancher",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Cluster registration agent; no HTML rendering functionality in its execute path."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39836"
       },
       "products": [
@@ -15616,5 +15634,5 @@
       "impact_statement": "rancher/rancher confirmed 0 net/mail imports; Kubernetes management agent has no email parsing logic"
     }
   ],
-  "timestamp": "2026-05-23T01:06:25Z"
+  "timestamp": "2026-05-24T14:39:48Z"
 }
