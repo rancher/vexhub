@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8ea47f848803b161fc71048f448dfaafffbc956310b9ae6617f23067988918d8",
+  "@id": "https://openvex.dev/docs/public/vex-fbd1ac552e05c47718ce5dd4bcb2f928ec70f4a2abd237d767c90d2eeb5b4c22",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -15491,6 +15491,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/rancher",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "net/http/httputil not found in rancher/rancher source; proxy via other mechanisms"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39826"
       },
       "products": [
@@ -15634,5 +15652,5 @@
       "impact_statement": "rancher/rancher confirmed 0 net/mail imports; Kubernetes management agent has no email parsing logic"
     }
   ],
-  "timestamp": "2026-05-24T14:39:48Z"
+  "timestamp": "2026-05-25T18:58:58Z"
 }

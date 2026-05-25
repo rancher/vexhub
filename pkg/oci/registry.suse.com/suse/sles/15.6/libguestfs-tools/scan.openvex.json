@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-416b64b6eeb3125afab6c78dae6679be41458980938bb66ca13d2d3bdd166efa",
+  "@id": "https://openvex.dev/docs/public/vex-fbd1ac552e05c47718ce5dd4bcb2f928ec70f4a2abd237d767c90d2eeb5b4c22",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -183,6 +183,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.6/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libguestfs container runs virt-* tools as entrypoint; systemd daemon is not PID1 and not exec'd"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1166-1"
       },
       "products": [
@@ -236,5 +254,5 @@
       "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver"
     }
   ],
-  "timestamp": "2026-05-18T02:18:19Z"
+  "timestamp": "2026-05-25T18:58:58Z"
 }

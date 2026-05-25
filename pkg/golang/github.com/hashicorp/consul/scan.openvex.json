@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3a471287137ccfa87b0b14b053be8bf78a01bd1570153ae6238ab0a4703194c6",
+  "@id": "https://openvex.dev/docs/public/vex-fbd1ac552e05c47718ce5dd4bcb2f928ec70f4a2abd237d767c90d2eeb5b4c22",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1984,6 +1984,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/hashicorp/consul",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "net/http/httputil.ReverseProxy absent in consul source codebase"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39826"
       },
       "products": [
@@ -2259,5 +2277,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-23T01:06:26Z"
+  "timestamp": "2026-05-25T18:58:58Z"
 }
