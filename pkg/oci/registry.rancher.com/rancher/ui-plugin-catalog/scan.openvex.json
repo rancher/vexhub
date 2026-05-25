@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-416b64b6eeb3125afab6c78dae6679be41458980938bb66ca13d2d3bdd166efa",
+  "@id": "https://openvex.dev/docs/public/vex-0f34b9a9d785f8065e379a7b8477720ec94a04a5694b4db1d56c6180cafefdcf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -129,6 +129,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:3941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.rancher.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtiff5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-based UI plugin catalog does not process TIFF images; libtiff5 is an incidental SLES dep"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0214-1"
       },
       "products": [
@@ -180,7 +198,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1965-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.rancher.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtiff5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-based UI plugin catalog does not process TIFF images; libtiff5 is an incidental SLES dep"
     }
   ],
-  "timestamp": "2026-05-18T02:18:19Z"
+  "timestamp": "2026-05-25T01:11:26Z"
 }
