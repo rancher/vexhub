@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-27d0f7b035d230e43e67b972ab9dcb147a62e9dd34fbd528a9a1c110d98ebe46",
+  "@id": "https://openvex.dev/docs/public/vex-0e39c5853db56001440217b511b554e7f09d73639fa1f0a9b52ae182a288c7d2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -417,6 +417,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21142-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=index.docker.io/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtasn1-6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ASN.1 lib not called; Go uses own ASN.1 parsing"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21143-1"
       },
       "products": [
@@ -452,5 +470,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-24T11:47:49Z"
+  "timestamp": "2026-05-25T21:19:28Z"
 }

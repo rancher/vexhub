@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4c40db980501b621d68e5fb6f88b7ab9b8d5795bd9f3fd3baf1b28c85faba01c",
+  "@id": "https://openvex.dev/docs/public/vex-0e39c5853db56001440217b511b554e7f09d73639fa1f0a9b52ae182a288c7d2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -489,6 +489,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03443-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/tls; system libssl1.1 C library is not called"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03508-1"
       },
       "products": [
@@ -522,6 +540,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03635-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/tls; system libssl1.1 C library is not called"
     },
     {
       "vulnerability": {
@@ -684,6 +720,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "qemu-pr-helper handles SCSI persistent reservations for QEMU; backing-image-manager does not run VMs"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0331-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/tls; system libssl1.1 C library is not called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0346-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/tls; system libssl1.1 C library is not called"
     },
     {
       "vulnerability": {
@@ -1155,6 +1227,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1386-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/tls; system libssl1.1 C library is not called"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1406-1"
       },
       "products": [
@@ -1242,6 +1332,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1577-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/tls; system libssl1.1 C library is not called"
     },
     {
       "vulnerability": {
@@ -1334,5 +1442,5 @@
       "impact_statement": "backing-image-manager is a Go binary; sed is a CLI tool never invoked by the container entrypoint"
     }
   ],
-  "timestamp": "2026-05-23T20:56:03Z"
+  "timestamp": "2026-05-25T21:19:28Z"
 }
