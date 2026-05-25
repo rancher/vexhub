@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f65360e5c9cfe000c2affaeca92b45631ea583d34e21f66e033a2e5affeda840",
+  "@id": "https://openvex.dev/docs/public/vex-2e9c76cdb7b179246883c6a0a18543b3e2db2117afd4c5214978c4d9772a8650",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:01638-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-clients"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent connects to Rancher server over HTTPS/WebSocket; openssh-clients CLI is never invoked"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:01638-1"
@@ -204,6 +222,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:02384-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent is a Go binary communicating via HTTPS; jq CLI is an incidental SLES package never invoked"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:02447-1"
       },
       "products": [
@@ -237,6 +273,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "update-alternatives is a package management utility; it is not executed at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02915-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent is a Go binary communicating via HTTPS; jq CLI is an incidental SLES package never invoked"
     },
     {
       "vulnerability": {
@@ -543,6 +597,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4067-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-clients"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent connects to Rancher server over HTTPS/WebSocket; openssh-clients CLI is never invoked"
     },
     {
       "vulnerability": {
@@ -1147,6 +1219,24 @@
           "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/openssh-clients"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent connects to Rancher server over HTTPS/WebSocket; openssh-clients CLI is never invoked"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1876-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssh-fips"
             }
           ]
@@ -1175,5 +1265,5 @@
       "impact_statement": "rancher-agent is a Go binary using net/http; libcurl C library not called"
     }
   ],
-  "timestamp": "2026-05-23T20:56:02Z"
+  "timestamp": "2026-05-25T14:02:58Z"
 }
