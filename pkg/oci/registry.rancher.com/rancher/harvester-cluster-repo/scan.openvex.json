@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4c40db980501b621d68e5fb6f88b7ab9b8d5795bd9f3fd3baf1b28c85faba01c",
+  "@id": "https://openvex.dev/docs/public/vex-c4900c2f776f984f31e457c1e89baa9956215f47ea63dafdf7186add1b706a34",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -129,6 +129,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.rancher.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlidec1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses own brotli; system libbrotlidec C lib is not called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03369-1"
       },
       "products": [
@@ -201,6 +219,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4494-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.rancher.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpng16-16"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No image rendering at runtime; libpng is not called by Go entrypoint"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0018-1"
       },
       "products": [
@@ -270,6 +306,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0597-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.rancher.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpng16-16"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No image rendering at runtime; libpng is not called by Go entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.rancher.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; system libxml2 C library is not called"
     },
     {
       "vulnerability": {
@@ -417,6 +489,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1368-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.rancher.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpng16-16"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No image rendering at runtime; libpng is not called by Go entrypoint"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1406-1"
       },
       "products": [
@@ -525,6 +615,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1602-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.rancher.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpng16-16"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No image rendering at runtime; libpng is not called by Go entrypoint"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21143-1"
       },
       "products": [
@@ -561,6 +669,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21364-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.rancher.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpng16-16"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No image rendering at runtime; libpng is not called by Go entrypoint"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21373-1"
       },
       "products": [
@@ -578,5 +704,5 @@
       "impact_statement": "Pure Go Helm chart server; libcap2 C library is not invoked at runtime"
     }
   ],
-  "timestamp": "2026-05-23T20:56:03Z"
+  "timestamp": "2026-05-25T21:19:27Z"
 }

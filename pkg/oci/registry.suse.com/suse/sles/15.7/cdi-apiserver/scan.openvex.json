@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6c85bd81f592947e13d2c5ec33706b05f56af60e57d0f11ddc30b358864afd52",
+  "@id": "https://openvex.dev/docs/public/vex-0e39c5853db56001440217b511b554e7f09d73639fa1f0a9b52ae182a288c7d2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03198-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl CLI is not invoked by the Go controller entrypoint"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:03369-1"
@@ -60,6 +78,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4300-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl CLI is not invoked by the Go controller entrypoint"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:4308-1"
       },
       "products": [
@@ -96,6 +132,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0052-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl CLI is not invoked by the Go controller entrypoint"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0215-1"
       },
       "products": [
@@ -111,6 +165,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0221-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl CLI is not invoked by the Go controller entrypoint"
     },
     {
       "vulnerability": {
@@ -219,6 +291,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0903-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl CLI is not invoked by the Go controller entrypoint"
     },
     {
       "vulnerability": {
@@ -365,5 +455,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-23T18:21:55Z"
+  "timestamp": "2026-05-25T21:19:28Z"
 }

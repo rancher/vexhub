@@ -1,9 +1,45 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-03e298c6ba59e3e3337587197670cf19dade9801adc63af61e5bc19f1699a066",
+  "@id": "https://openvex.dev/docs/public/vex-0e39c5853db56001440217b511b554e7f09d73639fa1f0a9b52ae182a288c7d2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:01638-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.rancher.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-clients"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SSH CLI not invoked by Go entrypoint; Go uses crypto/ssh"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:01638-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.rancher.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSH FIPS CLI not invoked by Go entrypoint; Go uses crypto/ssh"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02027-1"
@@ -150,6 +186,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:0585-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.rancher.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-clients"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SSH CLI not invoked by Go entrypoint; Go uses crypto/ssh"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0585-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.rancher.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSH FIPS CLI not invoked by Go entrypoint; Go uses crypto/ssh"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:1201-1"
       },
       "products": [
@@ -186,6 +258,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4067-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.rancher.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-clients"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SSH CLI not invoked by Go entrypoint; Go uses crypto/ssh"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4067-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.rancher.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSH FIPS CLI not invoked by Go entrypoint; Go uses crypto/ssh"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0312-1"
       },
       "products": [
@@ -201,6 +309,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/tls; libopenssl3 C library is not loaded by Go at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1074-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.rancher.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses own HTTP/2 impl; system libnghttp2 C lib is not called"
     },
     {
       "vulnerability": {
@@ -273,6 +399,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1350-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.rancher.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses own HTTP/2 impl; system libnghttp2 C lib is not called"
     },
     {
       "vulnerability": {
@@ -363,7 +507,43 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/tls; libopenssl3 C library is not loaded by Go at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1876-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.rancher.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-clients"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SSH CLI not invoked by Go entrypoint; Go uses crypto/ssh"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1876-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.rancher.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSH FIPS CLI not invoked by Go entrypoint; Go uses crypto/ssh"
     }
   ],
-  "timestamp": "2026-05-23T00:54:37Z"
+  "timestamp": "2026-05-25T21:19:28Z"
 }
