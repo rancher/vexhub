@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b9ce4faffbc70aa3f8c7c8da715a32a26fba465364190c73b9cd8157a64a3273",
+  "@id": "https://openvex.dev/docs/public/vex-fbd1ac552e05c47718ce5dd4bcb2f928ec70f4a2abd237d767c90d2eeb5b4c22",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3366,6 +3366,42 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/traefik/traefik/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Traefik uses own proxy impl; html/template not found in traefik source codebase"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/traefik/traefik/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Traefik implements own proxy code; net/http/httputil.ReverseProxy absent in source"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39836"
       },
       "products": [
@@ -3800,5 +3836,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-23T12:32:10Z"
+  "timestamp": "2026-05-25T18:58:58Z"
 }
