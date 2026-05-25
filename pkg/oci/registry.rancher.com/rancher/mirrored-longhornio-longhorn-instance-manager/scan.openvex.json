@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-41a54436206e240a89b635aaf1c9776df4b73ae42222f22283c5bf4fb72baf25",
+  "@id": "https://openvex.dev/docs/public/vex-0b3a5a74a9b27f81fc6f2ba58e69ba79b83dff7a46ed4d23b7484e04cd878b91",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -237,6 +237,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03546-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "devel package contains only headers/pkg-config; runtime libssl/libcrypto .so files are in libopenssl3"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:3699-1"
       },
       "products": [
@@ -360,6 +378,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "devel package contains only headers/pkg-config; runtime libssl/libcrypto .so files are in libopenssl3"
     },
     {
       "vulnerability": {
@@ -669,6 +705,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "devel package contains only headers/pkg-config; runtime libssl/libcrypto .so files are in libopenssl3"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -702,6 +756,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tack is a terminfo testing utility; not invoked by the Longhorn instance manager storage daemon"
     },
     {
       "vulnerability": {
@@ -758,5 +830,5 @@
       "impact_statement": "longhorn-instance-manager is a Go binary; sed is an incidental OS dep not invoked at runtime"
     }
   ],
-  "timestamp": "2026-05-21T17:28:37Z"
+  "timestamp": "2026-05-25T01:11:25Z"
 }
