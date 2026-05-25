@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0f34b9a9d785f8065e379a7b8477720ec94a04a5694b4db1d56c6180cafefdcf",
+  "@id": "https://openvex.dev/docs/public/vex-b0105e1e2b2c8668168a02ebed78749090f8954b6ad20aa0a7a0c99a4fcf73e0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -147,6 +147,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:3941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=index.docker.io/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtiff5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ui-plugin-catalog is an nginx static file server; no TIFF image processing occurs at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0214-1"
       },
       "products": [
@@ -216,7 +234,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "nginx-based UI plugin catalog does not process TIFF images; libtiff5 is an incidental SLES dep"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1965-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=index.docker.io/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtiff5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ui-plugin-catalog is an nginx static file server; no TIFF image processing occurs at runtime"
     }
   ],
-  "timestamp": "2026-05-25T01:11:26Z"
+  "timestamp": "2026-05-25T12:22:08Z"
 }

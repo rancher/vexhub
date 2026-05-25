@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0b3a5a74a9b27f81fc6f2ba58e69ba79b83dff7a46ed4d23b7484e04cd878b91",
+  "@id": "https://openvex.dev/docs/public/vex-b0105e1e2b2c8668168a02ebed78749090f8954b6ad20aa0a7a0c99a4fcf73e0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -250,6 +250,24 @@
         }
       ],
       "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl-3-devel contains only headers/static libs for build-time use; runtime loads libopenssl3 shared lib only"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03546-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "devel package contains only headers/pkg-config; runtime libssl/libcrypto .so files are in libopenssl3"
     },
@@ -378,6 +396,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl-3-devel contains only headers/static libs for build-time use; runtime loads libopenssl3 shared lib only"
     },
     {
       "vulnerability": {
@@ -718,6 +754,24 @@
         }
       ],
       "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl-3-devel contains only headers/static libs for build-time use; runtime loads libopenssl3 shared lib only"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "devel package contains only headers/pkg-config; runtime libssl/libcrypto .so files are in libopenssl3"
     },
@@ -756,6 +810,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tack compiles terminfo terminal descriptions; Longhorn instance manager is a storage daemon with no terminal DB use"
     },
     {
       "vulnerability": {
@@ -830,5 +902,5 @@
       "impact_statement": "longhorn-instance-manager is a Go binary; sed is an incidental OS dep not invoked at runtime"
     }
   ],
-  "timestamp": "2026-05-25T01:11:25Z"
+  "timestamp": "2026-05-25T12:22:08Z"
 }
