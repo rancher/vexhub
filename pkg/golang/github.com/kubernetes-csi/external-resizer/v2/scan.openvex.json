@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e153650d26bbdbff136fe195fa9413b6fb761d543555e504e79d45b49ec63f86",
+  "@id": "https://openvex.dev/docs/public/vex-135cef3ade5b5186c42364c9e76d89ce21d2288cbb46d9db8f8666cfccee36c8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -658,6 +658,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-resizer/v2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "html/template not imported; CNI/certgen/calicoctl/flexvol/csi-resizer do not render HTML"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39825",
         "aliases": [
           "GO-2026-4976"
@@ -909,5 +927,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-23T01:06:25Z"
+  "timestamp": "2026-05-26T00:38:40Z"
 }

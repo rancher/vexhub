@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b2c5887d15051e31f8222384dba266ca8e3387a99db1f4e4d8afb5458d24bd25",
+  "@id": "https://openvex.dev/docs/public/vex-135cef3ade5b5186c42364c9e76d89ce21d2288cbb46d9db8f8666cfccee36c8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -90,6 +90,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=registry.rancher.com/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlicommon1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Brotli C library not used by Go-based PCI device manager at runtime"
     },
     {
       "vulnerability": {
@@ -578,5 +596,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-23T15:30:30Z"
+  "timestamp": "2026-05-26T00:38:40Z"
 }
