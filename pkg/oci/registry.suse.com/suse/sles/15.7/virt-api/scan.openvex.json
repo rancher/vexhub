@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7541eada7d29eba6795049c11f5bd925850b627f3b1cc58831857fc638a6ecf7",
+  "@id": "https://openvex.dev/docs/public/vex-b64dde7de8ebdb57afcb4b89a699c4fbfd426661fe7c70a6593dc5a06f9d95e9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -129,6 +129,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03546-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-api?repository_url=registry.suse.com/suse/sles/15.7/virt-api",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeVirt virt-api is Go; FIPS OpenSSL provider is never loaded by Go crypto/tls"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:3699-1"
       },
       "products": [
@@ -180,6 +198,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-api?repository_url=registry.suse.com/suse/sles/15.7/virt-api",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeVirt virt-api is Go; FIPS OpenSSL provider is never loaded by Go crypto/tls"
     },
     {
       "vulnerability": {
@@ -291,6 +327,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-api?repository_url=registry.suse.com/suse/sles/15.7/virt-api",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeVirt virt-api is Go; FIPS OpenSSL provider is never loaded by Go crypto/tls"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -362,5 +416,5 @@
       "impact_statement": "Go-based KubeVirt API server; sed CLI tool is not called by the Go binary"
     }
   ],
-  "timestamp": "2026-05-24T22:45:57Z"
+  "timestamp": "2026-05-26T22:54:08Z"
 }

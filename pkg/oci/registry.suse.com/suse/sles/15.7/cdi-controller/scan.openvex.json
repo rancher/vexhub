@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-03e298c6ba59e3e3337587197670cf19dade9801adc63af61e5bc19f1699a066",
+  "@id": "https://openvex.dev/docs/public/vex-c17eccafa79288da055e3856f3a8c853b4484856c9f06f5fe7af9067101e2390",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -114,6 +114,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03546-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI controller is Go; FIPS OpenSSL provider is never loaded by Go crypto/tls"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:4092-1"
       },
       "products": [
@@ -165,6 +183,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go does not call libblkid C library; block device detection via Go/procfs"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI controller is Go; FIPS OpenSSL provider is never loaded by Go crypto/tls"
     },
     {
       "vulnerability": {
@@ -276,6 +312,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI controller is Go; FIPS OpenSSL provider is never loaded by Go crypto/tls"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1406-1"
       },
       "products": [
@@ -347,5 +401,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-23T00:54:37Z"
+  "timestamp": "2026-05-26T22:54:09Z"
 }

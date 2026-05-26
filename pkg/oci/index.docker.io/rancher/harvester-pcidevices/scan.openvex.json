@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cecfea3a6d14e5649254833331011e98f0cb7258dc796ca4a565cea956d49594",
+  "@id": "https://openvex.dev/docs/public/vex-b64dde7de8ebdb57afcb4b89a699c4fbfd426661fe7c70a6593dc5a06f9d95e9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -399,6 +399,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=index.docker.io/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go PCI devices controller does not invoke util-linux CLI tools at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -507,6 +525,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=index.docker.io/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go PCI devices controller binary does not call liblzma5 at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21142-1"
       },
       "products": [
@@ -596,5 +632,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-26T00:38:41Z"
+  "timestamp": "2026-05-26T22:54:08Z"
 }
