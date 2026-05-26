@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-135cef3ade5b5186c42364c9e76d89ce21d2288cbb46d9db8f8666cfccee36c8",
+  "@id": "https://openvex.dev/docs/public/vex-76c55ab16a20efe597e72bd91c2a0344c15d6e319efd8df060d9029bd64bba64",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -39,6 +39,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "This CVE only affects macOS/Darwin systems"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33811"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/envoyproxy/ratelimit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Binary does not perform CNAME DNS lookups; net.LookupCNAME not reachable"
     },
     {
       "vulnerability": {
@@ -185,5 +203,5 @@
       "impact_statement": "projectcalico/calico confirmed 0 net/mail imports; rate-limiting proxy has no email parsing logic"
     }
   ],
-  "timestamp": "2026-05-26T00:38:40Z"
+  "timestamp": "2026-05-26T20:38:12Z"
 }
