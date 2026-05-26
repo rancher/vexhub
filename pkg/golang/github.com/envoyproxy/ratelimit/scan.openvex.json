@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e153650d26bbdbff136fe195fa9413b6fb761d543555e504e79d45b49ec63f86",
+  "@id": "https://openvex.dev/docs/public/vex-135cef3ade5b5186c42364c9e76d89ce21d2288cbb46d9db8f8666cfccee36c8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -75,6 +75,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "projectcalico/calico has no html/template in production code; rate-limit proxy serves no HTML with meta tags"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/envoyproxy/ratelimit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "net/http/httputil.ReverseProxy not used; CNI/certgen/calicoctl/ratelimit not reverse proxies"
     },
     {
       "vulnerability": {
@@ -167,5 +185,5 @@
       "impact_statement": "projectcalico/calico confirmed 0 net/mail imports; rate-limiting proxy has no email parsing logic"
     }
   ],
-  "timestamp": "2026-05-23T01:06:25Z"
+  "timestamp": "2026-05-26T00:38:40Z"
 }
