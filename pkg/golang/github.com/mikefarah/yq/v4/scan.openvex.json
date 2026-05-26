@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7d405e978ed7974ab0142ccb09e22511c512e2caa8872c8ea7a0039bb32018a5",
+  "@id": "https://openvex.dev/docs/public/vex-18d36f66efff414477e69e947ddda0e560c407218bd9451e7f7cdff6ba13cd74",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -11688,6 +11688,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-39836 only triggers on Windows; binary runs in a Linux container"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/mikefarah/yq/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Windows-only vulnerability; containers run on Linux, Windows-specific code path not executed"
     },
     {
@@ -12633,5 +12651,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-26T01:33:50Z"
+  "timestamp": "2026-05-26T14:12:55Z"
 }

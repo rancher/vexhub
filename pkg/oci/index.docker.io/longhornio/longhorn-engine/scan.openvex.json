@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-135cef3ade5b5186c42364c9e76d89ce21d2288cbb46d9db8f8666cfccee36c8",
+  "@id": "https://openvex.dev/docs/public/vex-18d36f66efff414477e69e947ddda0e560c407218bd9451e7f7cdff6ba13cd74",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -186,6 +186,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:02314-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-engine is a Go iSCSI storage engine; libxml2 C library is not used by the Go binary"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:02362-1"
       },
       "products": [
@@ -201,6 +219,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "coreutils CLI tools are not invoked by the Go-based Longhorn storage engine daemon"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02362-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/coreutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-engine Go storage binary does not invoke coreutils CLI tools in its runtime path"
     },
     {
       "vulnerability": {
@@ -378,6 +414,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libxml2 C library is not loaded by the pure-Go Longhorn engine binary at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02758-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-engine is a Go iSCSI storage engine; libxml2 C library is not used by the Go binary"
     },
     {
       "vulnerability": {
@@ -687,6 +741,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0224-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtasn1-6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-engine is a Go binary using Go crypto/tls; libtasn1 (GnuTLS ASN.1 C lib) is not in the execute path"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0230-1"
       },
       "products": [
@@ -900,6 +972,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libxml2 C library is not loaded by the pure-Go Longhorn engine binary at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-engine is a Go iSCSI storage engine; libxml2 C library is not used by the Go binary"
     },
     {
       "vulnerability": {
@@ -1367,8 +1457,26 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-engine Go binary does not execute the sed CLI tool at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "sed CLI tool is never executed by the Go-based Longhorn storage engine daemon at runtime"
     }
   ],
-  "timestamp": "2026-05-26T00:38:40Z"
+  "timestamp": "2026-05-26T14:12:55Z"
 }
