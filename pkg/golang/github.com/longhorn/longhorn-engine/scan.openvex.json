@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-5173a9a0854c14158bf1eb67481fec032a9c591cd002f6571d3ab6a3025b0fc9",
+  "@id": "https://openvex.dev/docs/public/vex-18d36f66efff414477e69e947ddda0e560c407218bd9451e7f7cdff6ba13cd74",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2460,6 +2460,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33811"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn storage engine binary does not perform DNS CNAME lookups"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39820",
         "aliases": [
           "GO-2026-4986"
@@ -3359,5 +3377,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-24T11:47:48Z"
+  "timestamp": "2026-05-26T14:12:55Z"
 }

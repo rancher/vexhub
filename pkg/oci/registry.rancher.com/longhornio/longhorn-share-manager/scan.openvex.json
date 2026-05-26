@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-03e298c6ba59e3e3337587197670cf19dade9801adc63af61e5bc19f1699a066",
+  "@id": "https://openvex.dev/docs/public/vex-18d36f66efff414477e69e947ddda0e560c407218bd9451e7f7cdff6ba13cd74",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -525,6 +525,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1356-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=registry.rancher.com/longhornio/longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/nfs-client"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-share-manager runs an NFS server; nfs-client provides client-side mount tools not used by the server"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1406-1"
       },
       "products": [
@@ -596,5 +614,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-23T00:54:37Z"
+  "timestamp": "2026-05-26T14:12:55Z"
 }
