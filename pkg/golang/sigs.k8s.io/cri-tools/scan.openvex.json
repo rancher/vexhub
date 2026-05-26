@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c9ade1753d4f79109cd10a40059a515e8c60fe3dc96248765b0c63c858b49d30",
+  "@id": "https://openvex.dev/docs/public/vex-cecfea3a6d14e5649254833331011e98f0cb7258dc796ca4a565cea956d49594",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -4775,6 +4775,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/cri-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "crictl uses gRPC via Unix socket to container runtime; no HTTP/2 network transport used"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-34040"
       },
       "products": [
@@ -7000,5 +7018,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-15T03:10:36Z"
+  "timestamp": "2026-05-26T00:38:41Z"
 }
