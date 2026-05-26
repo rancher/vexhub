@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7541eada7d29eba6795049c11f5bd925850b627f3b1cc58831857fc638a6ecf7",
+  "@id": "https://openvex.dev/docs/public/vex-cecfea3a6d14e5649254833331011e98f0cb7258dc796ca4a565cea956d49594",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -273,6 +273,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03546-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider not activated; Go Longhorn engine does not load system OpenSSL FIPS module"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03546-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI not invoked by Go Longhorn engine; TLS handled via Go crypto"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0027-1"
       },
       "products": [
@@ -360,6 +396,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhorn-engine uses iSCSI/NVMe-TCP; qemu-pr-helper QEMU binary is never executed by the storage engine"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider not activated; Go Longhorn engine does not load system OpenSSL FIPS module"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI not invoked by Go Longhorn engine; TLS handled via Go crypto"
     },
     {
       "vulnerability": {
@@ -615,6 +687,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider not activated; Go Longhorn engine does not load system OpenSSL FIPS module"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI not invoked by Go Longhorn engine; TLS handled via Go crypto"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1441-1"
       },
       "products": [
@@ -704,5 +812,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-24T22:45:57Z"
+  "timestamp": "2026-05-26T00:38:41Z"
 }
