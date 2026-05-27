@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-975a773907fa72d60422f8fe2b1943538bbd516b9655e2483fcff2e14fb75d76",
+  "@id": "https://openvex.dev/docs/public/vex-b5eb281449f922861e9c221223bd15d7b461f6ddebd2e5fa5021d328f3354bf1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -111,7 +111,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "This CVE only affects macOS/Darwin systems"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/envoyproxy/gateway",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "net/mail email parsing not used; binary is Kubernetes/network infrastructure with no mail functionality"
     }
   ],
-  "timestamp": "2026-04-17T15:26:37Z"
+  "timestamp": "2026-05-27T18:49:59Z"
 }

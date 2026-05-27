@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7541eada7d29eba6795049c11f5bd925850b627f3b1cc58831857fc638a6ecf7",
+  "@id": "https://openvex.dev/docs/public/vex-72f9ae9bdc93d1b6482a84f4f9a21d59ff43030e00f9f7ec7d3f47022a2148ed",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -363,6 +363,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0288-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "backing-image-manager manages disk images via Go; qemu-vmsr-helper for VMX MSR passthrough is not invoked"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -378,6 +396,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0445-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "backing-image-manager manages disk images via Go; qemu-vmsr-helper for VMX MSR passthrough is not invoked"
     },
     {
       "vulnerability": {
@@ -468,6 +504,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "virtiofsd is a VirtioFS daemon for VM filesystem sharing; backing-image-manager manages disk images only"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0832-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "backing-image-manager manages disk images via Go; qemu-vmsr-helper for VMX MSR passthrough is not invoked"
     },
     {
       "vulnerability": {
@@ -758,5 +812,5 @@
       "impact_statement": "sed is a CLI text-processing tool; not executed by the Go backing-image-manager binary at runtime"
     }
   ],
-  "timestamp": "2026-05-24T22:45:57Z"
+  "timestamp": "2026-05-27T18:50:01Z"
 }

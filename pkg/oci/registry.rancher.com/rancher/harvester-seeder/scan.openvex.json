@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-55152ce9b64c43fc43ecf51b546c007c978fa29ab67d04fa049f2074046e1d87",
+  "@id": "https://openvex.dev/docs/public/vex-b5eb281449f922861e9c221223bd15d7b461f6ddebd2e5fa5021d328f3354bf1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-seeder is a Go application; libelf ELF-reading library is not used at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2024:1557-2"
@@ -165,6 +183,60 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-seeder is a Go application; libelf ELF-reading library is not used at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-seeder is a Go application; GLib C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-seeder is a Go application; GLib C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0215-1"
       },
       "products": [
@@ -180,6 +252,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-seeder is a Go application; GLib C library is not called at runtime"
     },
     {
       "vulnerability": {
@@ -254,5 +344,5 @@
       "impact_statement": "libcap capabilities library; Go binary does not call libcap APIs at runtime"
     }
   ],
-  "timestamp": "2026-05-21T12:49:31Z"
+  "timestamp": "2026-05-27T18:49:59Z"
 }
