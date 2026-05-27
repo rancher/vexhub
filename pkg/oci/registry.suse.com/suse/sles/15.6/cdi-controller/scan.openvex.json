@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cecfea3a6d14e5649254833331011e98f0cb7258dc796ca4a565cea956d49594",
+  "@id": "https://openvex.dev/docs/public/vex-815ecf142b1ce5dfa975920c9b7c3944bd0d0ba7511e9d3ad0df65134f490e27",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -75,6 +75,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "cdi-controller is a Go K8s controller; PAM login framework is not invoked at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.6/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI controller is a pure Go binary; perl interpreter is not invoked at runtime"
     },
     {
       "vulnerability": {
@@ -306,6 +324,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "openssl CLI not invoked by Go CDI controller; TLS handled via Go crypto"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0401-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.6/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/crypto-policies"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "crypto-policies is a system configuration package not executed at runtime by the Go CDI controller"
     },
     {
       "vulnerability": {
@@ -578,5 +614,5 @@
       "impact_statement": "openssl CLI not invoked by Go CDI controller; TLS handled via Go crypto"
     }
   ],
-  "timestamp": "2026-05-26T00:38:41Z"
+  "timestamp": "2026-05-27T18:50:00Z"
 }
