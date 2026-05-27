@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-00708408af6c0861c7c5b90f253e60dbb7d781e670936daf9ca54ef10f56c195",
+  "@id": "https://openvex.dev/docs/public/vex-b64dde7de8ebdb57afcb4b89a699c4fbfd426661fe7c70a6593dc5a06f9d95e9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -453,6 +453,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=registry.rancher.com/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go VM import controller does not invoke util-linux CLI tools at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -561,6 +579,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=registry.rancher.com/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses own compression; liblzma5 C library is not loaded at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21143-1"
       },
       "products": [
@@ -614,5 +650,5 @@
       "impact_statement": "harvester-vm-import-controller is a Go operator; qemu-vmsr-helper binary is never executed by the entrypoint"
     }
   ],
-  "timestamp": "2026-05-25T16:29:33Z"
+  "timestamp": "2026-05-26T22:54:08Z"
 }

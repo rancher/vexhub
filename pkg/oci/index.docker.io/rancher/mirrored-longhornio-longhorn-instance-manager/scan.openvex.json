@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-de73b39477b78e4eabe7ddcc54b015da6905a32829fe3403f83357b8f27cc840",
+  "@id": "https://openvex.dev/docs/public/vex-b64dde7de8ebdb57afcb4b89a699c4fbfd426661fe7c70a6593dc5a06f9d95e9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -918,7 +918,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhorn-instance-manager is a Go binary; sed is an incidental OS dep not invoked at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/xz"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn instance manager Go binary never invokes the xz CLI compression tool"
     }
   ],
-  "timestamp": "2026-05-25T18:58:59Z"
+  "timestamp": "2026-05-26T22:54:08Z"
 }
