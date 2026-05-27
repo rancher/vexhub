@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cecfea3a6d14e5649254833331011e98f0cb7258dc796ca4a565cea956d49594",
+  "@id": "https://openvex.dev/docs/public/vex-72f9ae9bdc93d1b6482a84f4f9a21d59ff43030e00f9f7ec7d3f47022a2148ed",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -252,6 +252,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses net/http; system libcurl C library is not called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=registry.rancher.com/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlicommon1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "fleet is a Go application; libbrotlicommon1 C library is not loaded or called at runtime"
     },
     {
       "vulnerability": {
@@ -1064,5 +1082,5 @@
       "impact_statement": "Go uses net/http; system libcurl C library is not called"
     }
   ],
-  "timestamp": "2026-05-26T00:38:41Z"
+  "timestamp": "2026-05-27T18:50:01Z"
 }
