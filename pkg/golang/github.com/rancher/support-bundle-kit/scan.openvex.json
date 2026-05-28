@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b5eb281449f922861e9c221223bd15d7b461f6ddebd2e5fa5021d328f3354bf1",
+  "@id": "https://openvex.dev/docs/public/vex-ebc98e2fef9e9c750896e28a05da015ce285da8c7e55e2cd48288e8ac8fb57e8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -11158,6 +11158,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "support-bundle-kit collects k8s diagnostics; does not parse RFC 5322 email addresses via net/mail."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42502",
         "aliases": [
           "GO-2026-5027"
@@ -13929,5 +13947,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-27T18:49:59Z"
+  "timestamp": "2026-05-28T11:38:41Z"
 }

@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-18d36f66efff414477e69e947ddda0e560c407218bd9451e7f7cdff6ba13cd74",
+  "@id": "https://openvex.dev/docs/public/vex-ebc98e2fef9e9c750896e28a05da015ce285da8c7e55e2cd48288e8ac8fb57e8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=index.docker.io/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libelf is for ELF binary manipulation; gitjob is a Go-based operator with no ELF processing at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2024:2051-1"
@@ -597,6 +615,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:0605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=index.docker.io/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gitjob is a Go-based operator using Go crypto/ssh; system openssh-fips binary is not executed at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:0746-1"
       },
       "products": [
@@ -630,6 +666,60 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:1576-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=index.docker.io/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gitjob is a Go-based operator using Go crypto/ssh; system openssh-fips binary is not executed at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=index.docker.io/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libelf is for ELF binary manipulation; gitjob is a Go-based operator with no ELF processing at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4112-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=index.docker.io/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gitjob is a Go-based operator using Go crypto/ssh; system openssh-fips binary is not executed at runtime"
     },
     {
       "vulnerability": {
@@ -846,7 +936,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2024-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=index.docker.io/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gitjob is a Go-based operator using Go crypto/ssh; system openssh-fips binary is not executed at runtime"
     }
   ],
-  "timestamp": "2026-05-26T14:12:55Z"
+  "timestamp": "2026-05-28T11:38:41Z"
 }
