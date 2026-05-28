@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-009ae7bec2cac226dce77557f583eeb1ac91a325f390e90c12622db2d5f676aa",
+  "@id": "https://openvex.dev/docs/public/vex-ebc98e2fef9e9c750896e28a05da015ce285da8c7e55e2cd48288e8ac8fb57e8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -140,6 +140,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39823"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "helm-set-status is a CLI helm plugin that updates release status; does not render HTML templates."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39825"
       },
       "products": [
@@ -211,5 +229,5 @@
       "impact_statement": "Binary has no email address parsing; net/mail CVE not reachable."
     }
   ],
-  "timestamp": "2026-05-23T12:32:11Z"
+  "timestamp": "2026-05-28T11:38:41Z"
 }
