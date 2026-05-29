@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-135cef3ade5b5186c42364c9e76d89ce21d2288cbb46d9db8f8666cfccee36c8",
+  "@id": "https://openvex.dev/docs/public/vex-e2cd9d7557fa0d3e6d24a78877a13b6bf7f9547c52ae298af238a0779a5d3c66",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -586,6 +586,24 @@
           "@id": "pkg:oci/longhorn-cli?repository_url=registry.rancher.com/longhornio/longhorn-cli",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libtasn1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses crypto/x509; libtasn1 C library (used by GnuTLS) is not called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0224-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=registry.rancher.com/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libtasn1-6"
             }
           ]
@@ -1082,5 +1100,5 @@
       "impact_statement": "Go uses net/http for HTTP; libcurl4 C library not called by Go binary"
     }
   ],
-  "timestamp": "2026-05-26T00:38:40Z"
+  "timestamp": "2026-05-29T11:54:24Z"
 }

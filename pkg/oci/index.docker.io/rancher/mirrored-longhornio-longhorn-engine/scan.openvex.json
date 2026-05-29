@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b64dde7de8ebdb57afcb4b89a699c4fbfd426661fe7c70a6593dc5a06f9d95e9",
+  "@id": "https://openvex.dev/docs/public/vex-a03aaf0dc819537b44b62d991dd596540e05b40b9c1a5d6a2bc7d023d0872d33",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -90,6 +90,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02595-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses crypto/tls; gnutls C library is not linked or called at runtime"
     },
     {
       "vulnerability": {
@@ -201,6 +219,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlidec1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image does not use brotli C library; brotli implemented natively in Go deps"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03333-1"
       },
       "products": [
@@ -306,6 +342,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "openssl CLI not invoked by Go Longhorn engine; TLS handled via Go crypto"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4323-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses crypto/tls; gnutls C library is not linked or called at runtime"
     },
     {
       "vulnerability": {
@@ -579,6 +633,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0829-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses crypto/tls; gnutls C library is not linked or called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0832-1"
       },
       "products": [
@@ -848,5 +920,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-26T22:54:08Z"
+  "timestamp": "2026-05-29T11:54:23Z"
 }
