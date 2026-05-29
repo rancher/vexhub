@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b0105e1e2b2c8668168a02ebed78749090f8954b6ad20aa0a7a0c99a4fcf73e0",
+  "@id": "https://openvex.dev/docs/public/vex-a03aaf0dc819537b44b62d991dd596540e05b40b9c1a5d6a2bc7d023d0872d33",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -129,6 +129,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03267-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=index.docker.io/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses net/http; libcurl C library is not linked or called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0370-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=index.docker.io/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses net/http; libcurl C library is not linked or called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:3941-1"
       },
       "products": [
@@ -183,6 +219,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0911-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=index.docker.io/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses net/http; libcurl C library is not linked or called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1166-1"
       },
       "products": [
@@ -216,6 +270,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1717-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=index.docker.io/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses net/http; libcurl C library is not linked or called at runtime"
     },
     {
       "vulnerability": {
@@ -254,5 +326,5 @@
       "impact_statement": "ui-plugin-catalog is an nginx static file server; no TIFF image processing occurs at runtime"
     }
   ],
-  "timestamp": "2026-05-25T12:22:08Z"
+  "timestamp": "2026-05-29T11:54:23Z"
 }
