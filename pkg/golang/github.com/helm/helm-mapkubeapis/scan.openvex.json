@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b5eb281449f922861e9c221223bd15d7b461f6ddebd2e5fa5021d328f3354bf1",
+  "@id": "https://openvex.dev/docs/public/vex-864909ba14ede73d6764f472e97b713b2753be561f4f35ff2ce91353103ca363",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3196,6 +3196,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/helm/helm-mapkubeapis",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-33814 is HTTP/2 server-side DoS; mapkubeapis is a CLI Helm plugin, not an HTTP/2 server."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-35469",
         "aliases": [
           "GO-2026-4958",
@@ -5713,5 +5731,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-27T18:49:59Z"
+  "timestamp": "2026-05-29T00:01:12Z"
 }

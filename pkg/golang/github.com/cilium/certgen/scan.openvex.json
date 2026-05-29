@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b661054324a72cda625aacb86bb02049763646415227cc743b29cf0338640ad6",
+  "@id": "https://openvex.dev/docs/public/vex-864909ba14ede73d6764f472e97b713b2753be561f4f35ff2ce91353103ca363",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -114,6 +114,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-33814 is HTTP/2 server-side DoS; cilium-certgen is a one-shot cert generation job, not an HTTP/2 server."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39820"
       },
       "products": [
@@ -221,5 +239,5 @@
       "impact_statement": "net/mail email parsing not reachable; cilium-certgen generates TLS certs with no email processing"
     }
   ],
-  "timestamp": "2026-05-22T12:09:08Z"
+  "timestamp": "2026-05-29T00:01:12Z"
 }

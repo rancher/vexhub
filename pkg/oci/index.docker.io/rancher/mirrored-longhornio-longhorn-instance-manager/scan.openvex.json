@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-815ecf142b1ce5dfa975920c9b7c3944bd0d0ba7511e9d3ad0df65134f490e27",
+  "@id": "https://openvex.dev/docs/public/vex-864909ba14ede73d6764f472e97b713b2753be561f4f35ff2ce91353103ca363",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -270,6 +270,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "devel package contains only headers/pkg-config; runtime libssl/libcrypto .so files are in libopenssl3"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3676-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libldb2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libldb2 is a Samba/LDAP library; Longhorn instance manager is a storage component with no LDAP or Samba functionality"
     },
     {
       "vulnerability": {
@@ -990,7 +1008,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Longhorn instance manager Go binary never invokes the xz CLI compression tool"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2076-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libldb2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libldb2 is a Samba/LDAP library; Longhorn instance manager is a storage component with no LDAP or Samba functionality"
     }
   ],
-  "timestamp": "2026-05-27T18:50:00Z"
+  "timestamp": "2026-05-29T00:01:12Z"
 }
