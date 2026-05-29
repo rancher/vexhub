@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0e39c5853db56001440217b511b554e7f09d73639fa1f0a9b52ae182a288c7d2",
+  "@id": "https://openvex.dev/docs/public/vex-324564f5e8d42a4d613a9b39157029ed118fd76af8edef7244877ce6e5acf299",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -792,7 +792,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image does not use liblzma C library; Go standard library handles compression"
     }
   ],
-  "timestamp": "2026-05-25T21:19:28Z"
+  "timestamp": "2026-05-29T11:54:25Z"
 }

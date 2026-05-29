@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c5e217d83fa84097509f3bc4ffe716dff5ced51d1b32e3576bb4902833205bff",
+  "@id": "https://openvex.dev/docs/public/vex-e2cd9d7557fa0d3e6d24a78877a13b6bf7f9547c52ae298af238a0779a5d3c66",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -129,7 +129,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/appco-k8s-sidecar?repository_url=index.docker.io/rancher/appco-k8s-sidecar",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image does not use liblzma C library; Go standard library handles compression"
     }
   ],
-  "timestamp": "2026-05-22T12:21:14Z"
+  "timestamp": "2026-05-29T11:54:24Z"
 }
