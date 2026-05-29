@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-eeba3acc92f73cc9c44bfc1d0596127219c302426054ef88c76862c5af186665",
+  "@id": "https://openvex.dev/docs/public/vex-06e205baa5a7d58dd454b63886bb4672a31a8236968059b8b5823cc93de7ec41",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -201,6 +201,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0288-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libguestfs-tools inspects disk images; qemu-pr-helper (SCSI Persistent Reservations) is not invoked for image ops"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0348-1"
       },
       "products": [
@@ -234,6 +252,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0445-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libguestfs-tools inspects disk images; qemu-pr-helper (SCSI Persistent Reservations) is not invoked for image ops"
     },
     {
       "vulnerability": {
@@ -288,6 +324,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0832-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libguestfs-tools inspects disk images; qemu-pr-helper (SCSI Persistent Reservations) is not invoked for image ops"
     },
     {
       "vulnerability": {
@@ -470,5 +524,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-25T18:58:57Z"
+  "timestamp": "2026-05-29T00:01:10Z"
 }
