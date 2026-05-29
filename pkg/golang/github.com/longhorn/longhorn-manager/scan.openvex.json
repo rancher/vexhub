@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ff5606b35431668fb904e18a749b963ad23b02c5204be42964498fd62857b6c6",
+  "@id": "https://openvex.dev/docs/public/vex-c121b1e163f09a008ea13918eb34d8f43564ae87b03a8f6b71f005bcc6932d4b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -11232,6 +11232,24 @@
           "@id": "pkg:golang/github.com/longhorn/longhorn-manager",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Infrastructure binary does not import html/template; confirmed by source analysis"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39826"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/longhorn-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.2"
             }
           ]
@@ -15006,6 +15024,24 @@
           "@id": "pkg:golang/github.com/longhorn/longhorn-manager",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "CVE only affects Windows; net/lookup_windows.go not compiled into Linux binaries"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/longhorn-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.2"
             }
           ]
@@ -18016,5 +18052,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-29T00:01:11Z"
+  "timestamp": "2026-05-29T02:36:57Z"
 }
