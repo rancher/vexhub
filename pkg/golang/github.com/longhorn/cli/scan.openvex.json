@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b5eb281449f922861e9c221223bd15d7b461f6ddebd2e5fa5021d328f3354bf1",
+  "@id": "https://openvex.dev/docs/public/vex-ff5606b35431668fb904e18a749b963ad23b02c5204be42964498fd62857b6c6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -8170,6 +8170,42 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-33814 is HTTP/2 server-side DoS; longhornctl is a CLI tool, not an HTTP/2 server."
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-33814 is HTTP/2 server-side DoS; longhornctl-local is a CLI tool, not an HTTP/2 server."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39820",
         "aliases": [
           "GO-2026-4986"
@@ -14466,5 +14502,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-27T18:49:59Z"
+  "timestamp": "2026-05-29T00:01:11Z"
 }

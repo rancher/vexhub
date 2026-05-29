@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-72f9ae9bdc93d1b6482a84f4f9a21d59ff43030e00f9f7ec7d3f47022a2148ed",
+  "@id": "https://openvex.dev/docs/public/vex-06e205baa5a7d58dd454b63886bb4672a31a8236968059b8b5823cc93de7ec41",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -9421,6 +9421,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-33814 is HTTP/2 server-side DoS; helm is a CLI tool that connects as client, not an HTTP/2 server."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-35469",
         "aliases": [
           "GO-2026-4958",
@@ -18158,5 +18176,5 @@
       "impact_statement": "govulncheck was manually executed and confirmed to be a false-positive"
     }
   ],
-  "timestamp": "2026-05-27T18:50:01Z"
+  "timestamp": "2026-05-29T00:01:10Z"
 }
