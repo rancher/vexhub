@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7541eada7d29eba6795049c11f5bd925850b627f3b1cc58831857fc638a6ecf7",
+  "@id": "https://openvex.dev/docs/public/vex-e2cd9d7557fa0d3e6d24a78877a13b6bf7f9547c52ae298af238a0779a5d3c66",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -324,7 +324,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Node.js frontend app; sed CLI is not invoked by the Node.js runtime or entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-app-frontend?repository_url=index.docker.io/rancher/supportability-review-app-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Web frontend image; liblzma C library not invoked by nginx or Node.js at runtime"
     }
   ],
-  "timestamp": "2026-05-24T22:45:57Z"
+  "timestamp": "2026-05-29T11:54:24Z"
 }

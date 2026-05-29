@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b64dde7de8ebdb57afcb4b89a699c4fbfd426661fe7c70a6593dc5a06f9d95e9",
+  "@id": "https://openvex.dev/docs/public/vex-a03aaf0dc819537b44b62d991dd596540e05b40b9c1a5d6a2bc7d023d0872d33",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -216,6 +216,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "harvester-vm-import-controller is a Go operator; qemu-vmsr-helper binary is never executed by the entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=index.docker.io/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses encoding/xml; libxml2 C library is not linked or called at runtime"
     },
     {
       "vulnerability": {
@@ -650,5 +668,5 @@
       "impact_statement": "harvester-vm-import-controller is a Go operator; qemu-vmsr-helper binary is never executed by the entrypoint"
     }
   ],
-  "timestamp": "2026-05-26T22:54:08Z"
+  "timestamp": "2026-05-29T11:54:23Z"
 }
