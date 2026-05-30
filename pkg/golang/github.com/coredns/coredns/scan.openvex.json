@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-72f9ae9bdc93d1b6482a84f4f9a21d59ff43030e00f9f7ec7d3f47022a2148ed",
+  "@id": "https://openvex.dev/docs/public/vex-b0392d30f1f4b5c91bcfbbbc6edf0534d7995a209c81bbc963e1169ff5ef9ca2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -10311,6 +10311,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33810"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/coredns/coredns",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CoreDNS does not validate cert chains with excluded DNS name constraints"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33811",
         "aliases": [
           "GO-2026-4981"
@@ -11271,6 +11289,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "GO-2026-4918: govulncheck shows 1000f analyzed products not_affected; stdlib code path unreachable"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/coredns/coredns",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CoreDNS is a DNS server; govulncheck on v1.26.2 confirmed HTTP/2 SETTINGS code path unreachable"
     },
     {
       "vulnerability": {
@@ -19328,5 +19364,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-27T18:50:01Z"
+  "timestamp": "2026-05-30T16:29:18Z"
 }
