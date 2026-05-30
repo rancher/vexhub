@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-815ecf142b1ce5dfa975920c9b7c3944bd0d0ba7511e9d3ad0df65134f490e27",
+  "@id": "https://openvex.dev/docs/public/vex-8d51e1bf74463931bf1dd9d707ac0197b46b736e60a6f1e2a6731a9ff9ad1e69",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -4419,6 +4419,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33810"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/local-path-provisioner",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "local-path-provisioner manages storage dirs via k8s API; no cert chain excluded DNS constraint validation"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33811",
         "aliases": [
           "GO-2026-4981"
@@ -6389,5 +6407,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-27T18:50:00Z"
+  "timestamp": "2026-05-30T16:29:17Z"
 }
