@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4c40db980501b621d68e5fb6f88b7ab9b8d5795bd9f3fd3baf1b28c85faba01c",
+  "@id": "https://openvex.dev/docs/public/vex-71275ee27b2fd78d6f3e25180434ed4a8c875dd29938d5a0efda603352ef820c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -833,7 +833,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "RKE2 nginx-ingress-controller does not execute affected libcap2 code path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21574-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/c-ares-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "c-ares-devel is a build-time dev package (headers/static libs); no runtime shared library code is executed"
     }
   ],
-  "timestamp": "2026-05-23T20:56:03Z"
+  "timestamp": "2026-05-30T17:32:39Z"
 }

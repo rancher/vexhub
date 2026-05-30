@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b5eb281449f922861e9c221223bd15d7b461f6ddebd2e5fa5021d328f3354bf1",
+  "@id": "https://openvex.dev/docs/public/vex-377e2647d0ef91d45ffbd68eb92240a21b6b06f68775006d43fcce37972cb640",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -630,7 +630,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21807-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-locale-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glibc-locale-base contains locale data files only; no executable code from this package runs at runtime"
     }
   ],
-  "timestamp": "2026-05-27T18:49:59Z"
+  "timestamp": "2026-05-30T17:32:40Z"
 }
