@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a03aaf0dc819537b44b62d991dd596540e05b40b9c1a5d6a2bc7d023d0872d33",
+  "@id": "https://openvex.dev/docs/public/vex-377e2647d0ef91d45ffbd68eb92240a21b6b06f68775006d43fcce37972cb640",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.rancher.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libdw1 (DWARF debug library) has no execute path in the ui-plugin-catalog nginx/Go entrypoint"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02013-1"
@@ -147,6 +165,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03438-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.rancher.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl1_1-hmac contains FIPS HMAC integrity verification files only, not an executable shared library"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0345-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.rancher.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl1_1-hmac contains FIPS HMAC integrity verification files only, not an executable shared library"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:0370-1"
       },
       "products": [
@@ -201,6 +255,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.rancher.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libdw1 (DWARF debug library) has no execute path in the ui-plugin-catalog nginx/Go entrypoint"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0214-1"
       },
       "products": [
@@ -216,6 +288,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0359-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.rancher.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl1_1-hmac contains FIPS HMAC integrity verification files only, not an executable shared library"
     },
     {
       "vulnerability": {
@@ -273,6 +363,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1290-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.rancher.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl1_1-hmac contains FIPS HMAC integrity verification files only, not an executable shared library"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1550-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.rancher.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl1_1-hmac contains FIPS HMAC integrity verification files only, not an executable shared library"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1717-1"
       },
       "products": [
@@ -326,5 +452,5 @@
       "impact_statement": "ui-plugin-catalog is an nginx static file server; no TIFF image processing occurs at runtime"
     }
   ],
-  "timestamp": "2026-05-29T11:54:23Z"
+  "timestamp": "2026-05-30T17:32:40Z"
 }
