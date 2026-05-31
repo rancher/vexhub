@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e2cd9d7557fa0d3e6d24a78877a13b6bf7f9547c52ae298af238a0779a5d3c66",
+  "@id": "https://openvex.dev/docs/public/vex-174f5cd3da3257c252410ccf93ec9ee2a51fa534ec911c638f9b5d9c7143284e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -255,6 +255,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn backing-image-manager is pure Go; GLib dynamic module loading library is never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn backing-image-manager is pure Go; GLib dynamic module loading library is never called"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0027-1"
       },
       "products": [
@@ -396,6 +432,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "backing-image-manager manages disk images via Go; qemu-vmsr-helper for VMX MSR passthrough is not invoked"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn backing-image-manager is pure Go; GLib dynamic module loading library is never called"
     },
     {
       "vulnerability": {
@@ -848,5 +902,5 @@
       "impact_statement": "sed is a CLI text-processing tool; not executed by the Go backing-image-manager binary at runtime"
     }
   ],
-  "timestamp": "2026-05-29T11:54:24Z"
+  "timestamp": "2026-05-31T15:34:06Z"
 }
