@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a03aaf0dc819537b44b62d991dd596540e05b40b9c1a5d6a2bc7d023d0872d33",
+  "@id": "https://openvex.dev/docs/public/vex-adf3bdde85a6cf942aac58d04e5aef3a3f04b57847ab3fe4854bb2fb1577ac25",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -244,6 +244,24 @@
           "@id": "pkg:oci/supportability-review-app-frontend?repository_url=registry.rancher.com/rancher/supportability-review-app-frontend",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "frontend app image (nginx + static assets); libblkid block-device library not in execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-app-frontend?repository_url=registry.rancher.com/rancher/supportability-review-app-frontend",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libuuid1"
             }
           ]
@@ -344,5 +362,5 @@
       "impact_statement": "Web frontend image; liblzma C library not invoked by nginx or Node.js at runtime"
     }
   ],
-  "timestamp": "2026-05-29T11:54:23Z"
+  "timestamp": "2026-05-31T11:52:06Z"
 }
