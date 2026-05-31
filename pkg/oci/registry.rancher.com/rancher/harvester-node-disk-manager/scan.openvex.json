@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-377e2647d0ef91d45ffbd68eb92240a21b6b06f68775006d43fcce37972cb640",
+  "@id": "https://openvex.dev/docs/public/vex-adf3bdde85a6cf942aac58d04e5aef3a3f04b57847ab3fe4854bb2fb1577ac25",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -460,6 +460,24 @@
           "@id": "pkg:oci/harvester-node-disk-manager?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-node-disk-manager is a Go binary; libsmartcols1 column formatter not in execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libuuid1"
             }
           ]
@@ -650,5 +668,5 @@
       "impact_statement": "glibc-locale-base contains locale data files only; no executable code from this package runs at runtime"
     }
   ],
-  "timestamp": "2026-05-30T17:32:40Z"
+  "timestamp": "2026-05-31T11:52:06Z"
 }
