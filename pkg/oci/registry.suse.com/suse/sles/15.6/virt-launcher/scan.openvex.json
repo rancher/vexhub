@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-06e205baa5a7d58dd454b63886bb4672a31a8236968059b8b5823cc93de7ec41",
+  "@id": "https://openvex.dev/docs/public/vex-f1d2c004edbc5887df749ee43668dc01e635ca654504fc7239db7dd25ba689c4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -237,6 +237,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0022-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.6/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-seabios"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SeaBIOS ROM is firmware mapped into guest VM memory; not executed in the container process space"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0022-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.6/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vgabios"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "VGA BIOS ROM is firmware loaded inside guest VMs; it is never executed in the container process space"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0215-1"
       },
       "products": [
@@ -380,5 +416,5 @@
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-29T00:01:10Z"
+  "timestamp": "2026-05-31T15:34:07Z"
 }

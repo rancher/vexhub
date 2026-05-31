@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2601aa51aeb38f7397195391c59a7299882ccf097eba75b8d129a2f838206a8d",
+  "@id": "https://openvex.dev/docs/public/vex-6f50b2b16685470dd5f4be0ab75c1d85a9c10a0001df59d834a1290d8090f685",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -309,6 +309,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-handler?repository_url=registry.suse.com/suse/sles/15.6/virt-handler",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-handler entrypoint is the Go binary; systemd daemon is not started in containers"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1166-1"
       },
       "products": [
@@ -362,5 +380,5 @@
       "impact_statement": "virt-handler is Go-based; uses Go net/http for HTTP/2, not the system libnghttp2 library"
     }
   ],
-  "timestamp": "2026-05-31T11:52:04Z"
+  "timestamp": "2026-05-31T15:34:08Z"
 }

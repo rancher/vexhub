@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b64dde7de8ebdb57afcb4b89a699c4fbfd426661fe7c70a6593dc5a06f9d95e9",
+  "@id": "https://openvex.dev/docs/public/vex-f1d2c004edbc5887df749ee43668dc01e635ca654504fc7239db7dd25ba689c4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadproxy is a Go binary; libdw1 DWARF debugging library not loaded at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-RU-2025:4092-1"
@@ -244,6 +262,24 @@
           "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadproxy",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadproxy is a Go binary; libdw1 DWARF debugging library not loaded at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadproxy",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libelf1"
             }
           ]
@@ -344,5 +380,5 @@
       "impact_statement": "CDI uploadproxy is a Go binary; liblzma5 C library is not loaded at runtime"
     }
   ],
-  "timestamp": "2026-05-26T22:54:08Z"
+  "timestamp": "2026-05-31T15:34:07Z"
 }
