@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7541eada7d29eba6795049c11f5bd925850b627f3b1cc58831857fc638a6ecf7",
+  "@id": "https://openvex.dev/docs/public/vex-f07e3824184187d208ae6463ce90f92bb41a936b6ca9acb55ed5897577d5e060",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -21,6 +21,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI Importer is a Go binary; perl-base is an SLES system dep never invoked by the process"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02167-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.6/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI importer uses Go+nbdkit+qemu-img; GLib module-loader (libgmodule) not needed in this path"
     },
     {
       "vulnerability": {
@@ -57,6 +75,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.6/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI importer (Go+nbdkit+qemu-img) imports disk images; libudev device enumeration not in execute path"
     },
     {
       "vulnerability": {
@@ -201,6 +237,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:1367-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.6/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI importer uses Go+nbdkit+qemu-img; GLib module-loader (libgmodule) not needed in this path"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:1456-1"
       },
       "products": [
@@ -216,6 +270,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI Importer is a Go binary; SQLite C library not used in Go code paths"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.6/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI importer uses Go+nbdkit+qemu-img; GLib module-loader (libgmodule) not needed in this path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.6/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI importer uses Go+nbdkit+qemu-img; GLib module-loader (libgmodule) not needed in this path"
     },
     {
       "vulnerability": {
@@ -237,6 +327,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.6/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI importer uses Go+nbdkit+qemu-img; GLib module-loader (libgmodule) not needed in this path"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -252,6 +360,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.6/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI importer (Go+nbdkit+qemu-img) imports disk images; libudev device enumeration not in execute path"
     },
     {
       "vulnerability": {
@@ -272,5 +398,5 @@
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-24T22:45:57Z"
+  "timestamp": "2026-05-31T11:52:05Z"
 }

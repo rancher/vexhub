@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fbd1ac552e05c47718ce5dd4bcb2f928ec70f4a2abd237d767c90d2eeb5b4c22",
+  "@id": "https://openvex.dev/docs/public/vex-2601aa51aeb38f7397195391c59a7299882ccf097eba75b8d129a2f838206a8d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -252,6 +252,60 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-launcher runs QEMU; libblkid block-device ID library not used by QEMU or libvirt daemon"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-launcher runs QEMU/KVM; libfdisk (partition editor library) not used by QEMU or libvirt"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-launcher runs QEMU/libvirt; util-linux administrative CLI tools not invoked in execute path"
     },
     {
       "vulnerability": {
@@ -507,6 +561,60 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-launcher runs QEMU; libblkid block-device ID library not used by QEMU or libvirt daemon"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-launcher runs QEMU/KVM; libfdisk (partition editor library) not used by QEMU or libvirt"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-launcher runs QEMU/libvirt; util-linux administrative CLI tools not invoked in execute path"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -668,5 +776,5 @@
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-25T18:58:58Z"
+  "timestamp": "2026-05-31T11:52:04Z"
 }
