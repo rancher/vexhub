@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-72f9ae9bdc93d1b6482a84f4f9a21d59ff43030e00f9f7ec7d3f47022a2148ed",
+  "@id": "https://openvex.dev/docs/public/vex-5d73ab423b8714c28ba3681f0883c92833d3c4ecbbad9daf1f99430801574b96",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -378,6 +378,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4067-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=index.docker.io/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Fleet uses go-git with Go crypto/ssh; openssh CLI tools (ssh-keygen, ssh-keyscan) are not called at runtime"
     },
     {
       "vulnerability": {
@@ -1047,6 +1065,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1876-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=index.docker.io/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Fleet uses go-git with Go crypto/ssh; openssh CLI tools (ssh-keygen, ssh-keyscan) are not called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1940-1"
       },
       "products": [
@@ -1082,5 +1118,5 @@
       "impact_statement": "Go uses net/http; system libcurl C library is not called"
     }
   ],
-  "timestamp": "2026-05-27T18:50:01Z"
+  "timestamp": "2026-06-01T12:54:28Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3c65c843a9f6d7a16b12e6482a2ef198eee03ef2cfd566f1e3e6131d83c97ebb",
+  "@id": "https://openvex.dev/docs/public/vex-39b1267722f1efd6fe030d93535fa0c52f3875dea21b1e33c3488a14219939e0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -829,6 +829,24 @@
           "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/glib2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glib2-tools provides compile-time utilities (gdbus, glib-compile-schemas); flannel/strongswan never invoke them"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libgio-2_0-0"
             }
           ]
@@ -891,6 +909,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "glib2-tools CLI utilities (gdbus, gio) are not invoked by flannel's Go CNI networking runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glib2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glib2-tools provides compile-time utilities (gdbus, glib-compile-schemas); flannel/strongswan never invoke them"
     },
     {
       "vulnerability": {
@@ -1071,6 +1107,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "glib2-tools CLI utilities (gdbus, gio) are not invoked by flannel's Go CNI networking runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glib2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glib2-tools provides compile-time utilities (gdbus, glib-compile-schemas); flannel/strongswan never invoke them"
     },
     {
       "vulnerability": {
@@ -1577,5 +1631,5 @@
       "impact_statement": "Go flanneld binary does not call liblzma5; Go uses its own compress package"
     }
   ],
-  "timestamp": "2026-06-01T03:25:01Z"
+  "timestamp": "2026-06-01T12:54:27Z"
 }
