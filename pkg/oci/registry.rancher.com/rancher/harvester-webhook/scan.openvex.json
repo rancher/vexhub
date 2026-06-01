@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c4900c2f776f984f31e457c1e89baa9956215f47ea63dafdf7186add1b706a34",
+  "@id": "https://openvex.dev/docs/public/vex-80db265b77df98f6551871f1364a68c86aeac0f61ca5555d60019f47d1397f51",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -363,6 +363,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1356-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.rancher.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnfsidmap1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester webhook is a Go admission controller; no NFS ID mapping operations are performed"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -470,5 +488,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-25T21:19:27Z"
+  "timestamp": "2026-06-01T03:25:02Z"
 }
