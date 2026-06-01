@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7541eada7d29eba6795049c11f5bd925850b627f3b1cc58831857fc638a6ecf7",
+  "@id": "https://openvex.dev/docs/public/vex-5ad1787b00f7b7297df3e71b1a9eb118e488df230259c6143db6184d1dcd1af5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -478,7 +478,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Calico runs as a daemon and does not use interactive terminal interfaces; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Calico is a pure-Go CNI daemon; liblzma5 is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-24T22:45:57Z"
+  "timestamp": "2026-06-01T19:58:55Z"
 }
