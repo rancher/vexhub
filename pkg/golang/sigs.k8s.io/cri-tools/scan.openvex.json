@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-815ecf142b1ce5dfa975920c9b7c3944bd0d0ba7511e9d3ad0df65134f490e27",
+  "@id": "https://openvex.dev/docs/public/vex-398233ea81b4310b90e170ada5e4fbfb2310c540c7b964c21e4de2983dbd6f87",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -7649,6 +7649,42 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-41567"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/cri-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v27.1.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RKE2 runtime does not use Docker CLI/engine code paths (docker cp/archive endpoints)"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42306"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/cri-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v27.1.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RKE2 runtime does not use Docker CLI/engine code paths (docker cp/archive endpoints)"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499",
         "aliases": [
           "GO-2026-4977"
@@ -8488,5 +8524,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-27T18:50:00Z"
+  "timestamp": "2026-06-01T16:26:59Z"
 }
