@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a03aaf0dc819537b44b62d991dd596540e05b40b9c1a5d6a2bc7d023d0872d33",
+  "@id": "https://openvex.dev/docs/public/vex-3c65c843a9f6d7a16b12e6482a2ef198eee03ef2cfd566f1e3e6131d83c97ebb",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -811,6 +811,24 @@
           "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/glib2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glib2-tools CLI utilities (gdbus, gio) are not invoked by flannel's Go CNI networking runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libgio-2_0-0"
             }
           ]
@@ -855,6 +873,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Flannel is a Go CNI plugin; Go uses crypto/tls and does not call libgnutls30"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glib2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glib2-tools CLI utilities (gdbus, gio) are not invoked by flannel's Go CNI networking runtime"
     },
     {
       "vulnerability": {
@@ -1017,6 +1053,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher/hardened-flannel is pure Go; libsoup GNOME HTTP client is never loaded or called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glib2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glib2-tools CLI utilities (gdbus, gio) are not invoked by flannel's Go CNI networking runtime"
     },
     {
       "vulnerability": {
@@ -1523,5 +1577,5 @@
       "impact_statement": "Go flanneld binary does not call liblzma5; Go uses its own compress package"
     }
   ],
-  "timestamp": "2026-05-29T11:54:23Z"
+  "timestamp": "2026-06-01T03:25:01Z"
 }

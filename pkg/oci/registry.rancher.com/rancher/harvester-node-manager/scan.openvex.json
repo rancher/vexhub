@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b64dde7de8ebdb57afcb4b89a699c4fbfd426661fe7c70a6593dc5a06f9d95e9",
+  "@id": "https://openvex.dev/docs/public/vex-80db265b77df98f6551871f1364a68c86aeac0f61ca5555d60019f47d1397f51",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-manager?repository_url=registry.rancher.com/rancher/harvester-node-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "DWARF debug-info library not loaded by Go runtime; no debugger or profiler runs in this container"
+    },
     {
       "vulnerability": {
         "name": "SUSE-RU-2026:1228-1"
@@ -126,6 +144,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-manager?repository_url=registry.rancher.com/rancher/harvester-node-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "DWARF debug-info library not loaded by Go runtime; no debugger or profiler runs in this container"
     },
     {
       "vulnerability": {
@@ -542,5 +578,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-26T22:54:08Z"
+  "timestamp": "2026-06-01T03:25:02Z"
 }
