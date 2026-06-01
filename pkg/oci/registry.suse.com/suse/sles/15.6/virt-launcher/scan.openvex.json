@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f1d2c004edbc5887df749ee43668dc01e635ca654504fc7239db7dd25ba689c4",
+  "@id": "https://openvex.dev/docs/public/vex-39b1267722f1efd6fe030d93535fa0c52f3875dea21b1e33c3488a14219939e0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -72,6 +72,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02595-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.6/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gnutls"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gnutls pkg contains CLI tools (certtool, gnutls-cli); virt-launcher runs qemu/libvirt, never calls these"
     },
     {
       "vulnerability": {
@@ -216,6 +234,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libdw1 is a DWARF debug-info library; virt-launcher/QEMU VM execution does not perform ELF debugging"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4323-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.6/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gnutls"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gnutls pkg contains CLI tools (certtool, gnutls-cli); virt-launcher runs qemu/libvirt, never calls these"
     },
     {
       "vulnerability": {
@@ -414,7 +450,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2115-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.6/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gnutls"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gnutls pkg contains CLI tools (certtool, gnutls-cli); virt-launcher runs qemu/libvirt, never calls these"
     }
   ],
-  "timestamp": "2026-05-31T15:34:07Z"
+  "timestamp": "2026-06-01T12:54:27Z"
 }
