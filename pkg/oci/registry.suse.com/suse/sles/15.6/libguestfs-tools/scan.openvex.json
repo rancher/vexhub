@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f1d2c004edbc5887df749ee43668dc01e635ca654504fc7239db7dd25ba689c4",
+  "@id": "https://openvex.dev/docs/public/vex-a293fa1b81455f821270ab5f874126c7312e29b670a642d4781aa10fca3240d8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.6/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/elfutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "elfutils ELF analysis tools (eu-readelf, eu-nm) not invoked by libguestfs disk manipulation workflow"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02536-1"
@@ -126,6 +144,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.6/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/elfutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "elfutils ELF analysis tools (eu-readelf, eu-nm) not invoked by libguestfs disk manipulation workflow"
     },
     {
       "vulnerability": {
@@ -290,5 +326,5 @@
       "impact_statement": "libguestfs-tools accesses disk images; HTTP/2 library libnghttp2 not in execute path"
     }
   ],
-  "timestamp": "2026-05-31T15:34:07Z"
+  "timestamp": "2026-06-02T11:03:35Z"
 }
