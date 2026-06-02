@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-135cef3ade5b5186c42364c9e76d89ce21d2288cbb46d9db8f8666cfccee36c8",
+  "@id": "https://openvex.dev/docs/public/vex-fc367b3f582d80dd730a44274de2d6a014d2c2b0feb5c673addf39fbe58007f0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -144,6 +144,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go-based network controller uses k8s token auth; krb5 is a transitive dep never exercised"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4236-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.rancher.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based Harvester network controller; curl CLI is an incidental SLES dep, not called at runtime"
     },
     {
       "vulnerability": {
@@ -298,6 +316,24 @@
           "@id": "pkg:oci/harvester-network-controller?repository_url=registry.rancher.com/rancher/harvester-network-controller",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based Harvester network controller; curl CLI is an incidental SLES dep, not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0885-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.rancher.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libcurl4"
             }
           ]
@@ -306,6 +342,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses net/http for HTTP; libcurl4 C library not called by Go binary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0903-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.rancher.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based Harvester network controller; curl CLI is an incidental SLES dep, not called at runtime"
     },
     {
       "vulnerability": {
@@ -550,6 +604,24 @@
           "@id": "pkg:oci/harvester-network-controller?repository_url=registry.rancher.com/rancher/harvester-network-controller",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based Harvester network controller; curl CLI is an incidental SLES dep, not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1940-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.rancher.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libcurl4"
             }
           ]
@@ -578,5 +650,5 @@
       "impact_statement": "Go network controller; sed CLI tool is not invoked by the Go binary entrypoint"
     }
   ],
-  "timestamp": "2026-05-26T00:38:40Z"
+  "timestamp": "2026-06-02T01:16:54Z"
 }
