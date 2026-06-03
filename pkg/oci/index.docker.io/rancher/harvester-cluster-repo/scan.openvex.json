@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0e39c5853db56001440217b511b554e7f09d73639fa1f0a9b52ae182a288c7d2",
+  "@id": "https://openvex.dev/docs/public/vex-0e4fa7a5d8aa2cb1ac28967d83edb487e02d2eee9fa7417c52e0b1e4a2bb083d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -702,7 +702,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Pure Go Helm chart server; libcap2 C library is not invoked at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=index.docker.io/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/xz"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based cluster-repo controller; xz CLI is an incidental SLES dep never executed at runtime"
     }
   ],
-  "timestamp": "2026-05-25T21:19:28Z"
+  "timestamp": "2026-06-03T01:36:15Z"
 }
