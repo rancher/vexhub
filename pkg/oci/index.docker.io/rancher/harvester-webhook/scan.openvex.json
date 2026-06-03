@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-80db265b77df98f6551871f1364a68c86aeac0f61ca5555d60019f47d1397f51",
+  "@id": "https://openvex.dev/docs/public/vex-aaf7919240c5489f3e5d52081085f267cad43c01e40eedaf89b285da5cfe7a92",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -262,6 +262,24 @@
           "@id": "pkg:oci/harvester-webhook?repository_url=index.docker.io/rancher/harvester-webhook",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based K8s admission webhook; does not manage hardware devices, libudev is never called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=index.docker.io/rancher/harvester-webhook",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/systemd"
             }
           ]
@@ -471,6 +489,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21144-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=index.docker.io/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based K8s admission webhook; does not manage hardware devices, libudev is never called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21192-1"
       },
       "products": [
@@ -488,5 +524,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-06-01T03:25:02Z"
+  "timestamp": "2026-06-03T01:36:14Z"
 }
