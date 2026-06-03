@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0e4fa7a5d8aa2cb1ac28967d83edb487e02d2eee9fa7417c52e0b1e4a2bb083d",
+  "@id": "https://openvex.dev/docs/public/vex-a8841b48bc394998d6bbcc475259463493c1d54b5bd42e91bf510ac8da9bc022",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -359,6 +359,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx serves static UI plugin files; XSLT module not compiled in; libxslt1 not used at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0603-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=index.docker.io/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxslt1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "ui-plugin-catalog serves static Helm/JS assets via nginx; no XSLT processing at runtime"
     },
     {
@@ -542,5 +560,5 @@
       "impact_statement": "ui-plugin-catalog is an nginx static file server; no TIFF image processing occurs at runtime"
     }
   ],
-  "timestamp": "2026-06-03T01:36:15Z"
+  "timestamp": "2026-06-03T16:11:20Z"
 }

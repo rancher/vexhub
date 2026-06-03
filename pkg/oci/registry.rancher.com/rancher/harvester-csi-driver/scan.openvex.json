@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0e4fa7a5d8aa2cb1ac28967d83edb487e02d2eee9fa7417c52e0b1e4a2bb083d",
+  "@id": "https://openvex.dev/docs/public/vex-5214de2b40b5b10e1266d45a8e843189d96a83b9dff74e076c37c4dd14247789",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1493,6 +1493,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CSI driver is a Go binary; the xz CLI compression tool is not called at container runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/xz"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go-based CSI driver; the xz CLI binary is an incidental SLES dep never invoked by the Go entrypoint"
     },
     {
@@ -1532,5 +1550,5 @@
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-06-03T01:36:15Z"
+  "timestamp": "2026-06-03T16:11:18Z"
 }
