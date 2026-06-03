@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b64dde7de8ebdb57afcb4b89a699c4fbfd426661fe7c70a6593dc5a06f9d95e9",
+  "@id": "https://openvex.dev/docs/public/vex-aaf7919240c5489f3e5d52081085f267cad43c01e40eedaf89b285da5cfe7a92",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -360,7 +360,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-kubeovn-operator?repository_url=index.docker.io/rancher/harvester-kubeovn-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/xz"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based operator; the xz CLI binary is an incidental SLES dep never invoked by the Go entrypoint"
     }
   ],
-  "timestamp": "2026-05-26T22:54:08Z"
+  "timestamp": "2026-06-03T01:36:14Z"
 }
