@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0e4fa7a5d8aa2cb1ac28967d83edb487e02d2eee9fa7417c52e0b1e4a2bb083d",
+  "@id": "https://openvex.dev/docs/public/vex-f8044b49c362afb2040d471cd825ac90cc1b788133d0c1b874cb2b2bf2cc3bf9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -648,7 +648,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go-based PCI devices controller; xz CLI is an incidental SLES dep never executed at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=index.docker.io/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/xz"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCI device manager is a Go binary; the xz CLI compression tool is not invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-03T01:36:15Z"
+  "timestamp": "2026-06-03T16:11:19Z"
 }
