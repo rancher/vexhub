@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-815ecf142b1ce5dfa975920c9b7c3944bd0d0ba7511e9d3ad0df65134f490e27",
+  "@id": "https://openvex.dev/docs/public/vex-ce607cb1fdf77a14f8ad779f11d05531b76e7febda37e2e3d81cc36c7da5a1c7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -9371,6 +9371,42 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Cilium operator manages network policy as k8s controller; acts as HTTP/2 client only to trusted API server"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cilium-bugtool is a diagnostic CLI; does not run as a server, no HTTP/2 connections accepted"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39820"
       },
       "products": [
@@ -11422,5 +11458,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-27T18:50:00Z"
+  "timestamp": "2026-06-04T17:03:52Z"
 }

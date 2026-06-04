@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-90d022ad0513bc905fe75dc5e0c1b60130b45b51e4ee34c47afa5e38aef7102b",
+  "@id": "https://openvex.dev/docs/public/vex-4b17e02c6e83b9d4f368f71376e5404ca5b1373d1a72a8c5b70baeacfe815bfa",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1994,6 +1994,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/cluster-api",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Cluster API manager is a K8s controller/HTTP/2 client to trusted API server; not exposed as HTTP/2 server"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39820"
       },
       "products": [
@@ -3892,5 +3910,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-31T21:45:45Z"
+  "timestamp": "2026-06-04T17:03:53Z"
 }

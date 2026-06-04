@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f1d2c004edbc5887df749ee43668dc01e635ca654504fc7239db7dd25ba689c4",
+  "@id": "https://openvex.dev/docs/public/vex-ce607cb1fdf77a14f8ad779f11d05531b76e7febda37e2e3d81cc36c7da5a1c7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -108,6 +108,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhorn-ui serves static files via nginx; libxml2-tools CLI (xmllint) is not invoked at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02719-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn UI nginx uses OpenSSL for TLS; libgcrypt20 (GnuTLS/GPG dependency) is never invoked"
     },
     {
       "vulnerability": {
@@ -848,5 +866,5 @@
       "impact_statement": "longhornio-longhorn-ui is an nginx web UI; libtiff image processing library is never called"
     }
   ],
-  "timestamp": "2026-05-31T15:34:07Z"
+  "timestamp": "2026-06-04T17:03:52Z"
 }
