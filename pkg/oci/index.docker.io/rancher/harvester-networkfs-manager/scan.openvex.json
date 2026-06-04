@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a8841b48bc394998d6bbcc475259463493c1d54b5bd42e91bf510ac8da9bc022",
+  "@id": "https://openvex.dev/docs/public/vex-ca5430e6908d14d1648abf483d59f724b4a0b582315099bb72af0259db867c69",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -712,6 +712,24 @@
           "@id": "pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io/rancher/harvester-networkfs-manager",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Networkfs manager is a Go binary; liblzma5 is not used in network filesystem management"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io/rancher/harvester-networkfs-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/xz"
             }
           ]
@@ -740,5 +758,5 @@
       "impact_statement": "Networkfs manager is a Go binary; the xz CLI compression tool is not invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-03T16:11:20Z"
+  "timestamp": "2026-06-04T17:03:54Z"
 }

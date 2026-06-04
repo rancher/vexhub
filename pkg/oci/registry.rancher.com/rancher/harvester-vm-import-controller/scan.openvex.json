@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a03aaf0dc819537b44b62d991dd596540e05b40b9c1a5d6a2bc7d023d0872d33",
+  "@id": "https://openvex.dev/docs/public/vex-4b17e02c6e83b9d4f368f71376e5404ca5b1373d1a72a8c5b70baeacfe815bfa",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -666,7 +666,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "harvester-vm-import-controller is a Go operator; qemu-vmsr-helper binary is never executed by the entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=registry.rancher.com/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "VM import controller is a Go binary; it calls external tools for image conversion, not liblzma5 C API"
     }
   ],
-  "timestamp": "2026-05-29T11:54:23Z"
+  "timestamp": "2026-06-04T17:03:53Z"
 }
