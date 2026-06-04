@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f8044b49c362afb2040d471cd825ac90cc1b788133d0c1b874cb2b2bf2cc3bf9",
+  "@id": "https://openvex.dev/docs/public/vex-4b17e02c6e83b9d4f368f71376e5404ca5b1373d1a72a8c5b70baeacfe815bfa",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -640,6 +640,24 @@
           "@id": "pkg:oci/harvester-pcidevices?repository_url=registry.rancher.com/rancher/harvester-pcidevices",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCI devices manager is a Go binary; xz/lzma compression (liblzma5) is unrelated to PCI management"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=registry.rancher.com/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/xz"
             }
           ]
@@ -668,5 +686,5 @@
       "impact_statement": "PCI device manager is a Go binary; the xz CLI compression tool is not invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-03T16:11:19Z"
+  "timestamp": "2026-06-04T17:03:53Z"
 }
