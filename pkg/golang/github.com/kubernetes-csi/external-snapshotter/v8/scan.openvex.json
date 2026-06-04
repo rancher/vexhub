@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a8841b48bc394998d6bbcc475259463493c1d54b5bd42e91bf510ac8da9bc022",
+  "@id": "https://openvex.dev/docs/public/vex-4b17e02c6e83b9d4f368f71376e5404ca5b1373d1a72a8c5b70baeacfe815bfa",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3235,6 +3235,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-snapshotter/v8",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CSI snapshotter is a K8s controller/HTTP/2 client to trusted APIs; not an HTTP/2 server to adversaries"
     },
     {
       "vulnerability": {
@@ -6813,5 +6831,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-06-03T16:11:20Z"
+  "timestamp": "2026-06-04T17:03:53Z"
 }
