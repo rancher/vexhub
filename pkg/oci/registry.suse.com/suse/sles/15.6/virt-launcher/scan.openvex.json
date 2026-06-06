@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-667e43478750dd8d01576b691bf7f06f37e534e4a38da1e1f6ee8491d1a471a2",
+  "@id": "https://openvex.dev/docs/public/vex-c247a3633638be3e4e07896bf63237dc7f60bf4320d4cdc563112edc150b044c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -201,6 +201,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03442-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.6/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module only loaded if OpenSSL FIPS mode explicitly enabled; not default in KubeVirt"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03624-1"
       },
       "products": [
@@ -345,6 +363,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0312-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.6/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module only loaded if OpenSSL FIPS mode explicitly enabled; not default in KubeVirt"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -453,6 +489,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1215-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.6/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module only loaded if OpenSSL FIPS mode explicitly enabled; not default in KubeVirt"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1368-1"
       },
       "products": [
@@ -468,6 +522,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "KubeVirt virt-launcher runs QEMU headless/VNC only; SDL/GTK PNG display backends are not configured"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.6/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module only loaded if OpenSSL FIPS mode explicitly enabled; not default in KubeVirt"
     },
     {
       "vulnerability": {
@@ -522,7 +594,43 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gnutls pkg contains CLI tools (certtool, gnutls-cli); virt-launcher runs qemu/libvirt, never calls these"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2236-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.6/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/vim-data-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2236-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.6/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/vim-small"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-06-05T12:16:07Z"
+  "timestamp": "2026-06-06T13:48:01Z"
 }
