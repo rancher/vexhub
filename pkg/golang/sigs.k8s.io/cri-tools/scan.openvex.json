@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-30b87060b1a9053bfbba4427c3030bc64657f2400bdeda1ee726a876e00bce46",
+  "@id": "https://openvex.dev/docs/public/vex-c247a3633638be3e4e07896bf63237dc7f60bf4320d4cdc563112edc150b044c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -8333,6 +8333,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/cri-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CRI tools CLI with no email/MIME processing; govulncheck confirmed not_affected at stdlib v1.25.5"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42504",
         "aliases": [
           "GO-2026-5038"
@@ -8962,5 +8980,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-06-05T12:16:08Z"
+  "timestamp": "2026-06-06T13:48:01Z"
 }
