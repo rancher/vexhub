@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a8841b48bc394998d6bbcc475259463493c1d54b5bd42e91bf510ac8da9bc022",
+  "@id": "https://openvex.dev/docs/public/vex-30b87060b1a9053bfbba4427c3030bc64657f2400bdeda1ee726a876e00bce46",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -7541,6 +7541,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/cri-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-39836 is Windows-only; Linux container images are not affected"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39883"
       },
       "products": [
@@ -8944,5 +8962,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-06-03T16:11:20Z"
+  "timestamp": "2026-06-05T12:16:08Z"
 }
