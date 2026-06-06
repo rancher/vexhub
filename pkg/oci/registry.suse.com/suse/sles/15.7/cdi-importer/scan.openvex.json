@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f07e3824184187d208ae6463ce90f92bb41a936b6ca9acb55ed5897577d5e060",
+  "@id": "https://openvex.dev/docs/public/vex-5e1207e9abdc5dd0d7a229cdba05028847b2e4e248420cd888f449c7b80f6618",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -114,6 +114,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03546-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.7/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module only loaded if OpenSSL FIPS mode explicitly enabled; not default in CDI"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:4308-1"
       },
       "products": [
@@ -183,6 +201,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI importer uses Go+nbdkit+qemu-img for disk import; util-linux CLI tools not in execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.7/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module only loaded if OpenSSL FIPS mode explicitly enabled; not default in CDI"
     },
     {
       "vulnerability": {
@@ -312,6 +348,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.7/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module only loaded if OpenSSL FIPS mode explicitly enabled; not default in CDI"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1406-1"
       },
       "products": [
@@ -383,5 +437,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-31T11:52:05Z"
+  "timestamp": "2026-06-06T13:48:02Z"
 }
