@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cd310e0a5bf0276f3fba783c4123d2b8d6868d1a6fdda6c7b4eab35ff674d630",
+  "@id": "https://openvex.dev/docs/public/vex-c247a3633638be3e4e07896bf63237dc7f60bf4320d4cdc563112edc150b044c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:1557-2"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/bci-base?repository_url=registry.suse.com/bci/bci-base",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/rpm-ndb"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm/rpm-ndb is package management tooling; not invoked by any workload at container runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02536-1"
@@ -75,6 +93,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0312-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/bci-base?repository_url=registry.suse.com/bci/bci-base",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module only loaded if OpenSSL FIPS mode explicitly enabled; not the default"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -108,7 +144,43 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1215-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/bci-base?repository_url=registry.suse.com/bci/bci-base",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module only loaded if OpenSSL FIPS mode explicitly enabled; not the default"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/bci-base?repository_url=registry.suse.com/bci/bci-base",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module only loaded if OpenSSL FIPS mode explicitly enabled; not the default"
     }
   ],
-  "timestamp": "2026-05-18T02:18:18Z"
+  "timestamp": "2026-06-06T13:48:01Z"
 }

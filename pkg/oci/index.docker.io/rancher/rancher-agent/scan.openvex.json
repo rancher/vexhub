@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-05ae3e422e73207d3aecaf84bfa495b81480c63e962161a4884c99db4237f3a9",
+  "@id": "https://openvex.dev/docs/public/vex-c247a3633638be3e4e07896bf63237dc7f60bf4320d4cdc563112edc150b044c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1263,7 +1263,43 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher-agent is a Go binary using net/http; libcurl C library not called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2236-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=index.docker.io/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/vim-data-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2236-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=index.docker.io/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/vim-small"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-25T14:02:59Z"
+  "timestamp": "2026-06-06T13:48:01Z"
 }
