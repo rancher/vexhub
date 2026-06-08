@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-377e2647d0ef91d45ffbd68eb92240a21b6b06f68775006d43fcce37972cb640",
+  "@id": "https://openvex.dev/docs/public/vex-d1aa83bb919819c8caac498b6b1200e51d5c6892debd05683b1a6ea49bc93e23",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1152,7 +1152,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2115-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=index.docker.io/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn Manager is a Go binary; TLS uses Go crypto/tls, C libgnutls30 is never loaded at runtime"
     }
   ],
-  "timestamp": "2026-05-30T17:32:40Z"
+  "timestamp": "2026-06-08T19:57:38Z"
 }
