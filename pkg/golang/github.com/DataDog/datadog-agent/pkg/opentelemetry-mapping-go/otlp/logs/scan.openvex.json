@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b5eb281449f922861e9c221223bd15d7b461f6ddebd2e5fa5021d328f3354bf1",
+  "@id": "https://openvex.dev/docs/public/vex-d1aa83bb919819c8caac498b6b1200e51d5c6892debd05683b1a6ea49bc93e23",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -495,6 +495,27 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504",
+        "aliases": [
+          "GO-2026-5038"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/DataDog/datadog-agent/pkg/opentelemetry-mapping-go/otlp/logs",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -515,5 +536,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-27T18:49:59Z"
+  "timestamp": "2026-06-08T19:57:38Z"
 }
