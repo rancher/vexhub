@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-72f9ae9bdc93d1b6482a84f4f9a21d59ff43030e00f9f7ec7d3f47022a2148ed",
+  "@id": "https://openvex.dev/docs/public/vex-526537cd2383d14cf5a2b9b83e917ac379a76bec14ee5ef21d711c21a2f4ca0c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -536,6 +536,27 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504",
+        "aliases": [
+          "GO-2026-5038"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/DataDog/datadog-agent/pkg/serializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -556,5 +577,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-05-27T18:50:01Z"
+  "timestamp": "2026-06-08T19:57:37Z"
 }
