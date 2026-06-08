@@ -1,0 +1,27 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-526537cd2383d14cf5a2b9b83e917ac379a76bec14ee5ef21d711c21a2f4ca0c",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2283-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/clickhouse-backup?repository_url=index.docker.io/suse-observability/clickhouse-backup",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libjq1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go backup tool processes JSON natively; jq CLI is not invoked, so libjq1 is never loaded"
+    }
+  ],
+  "timestamp": "2026-06-08T19:57:37Z"
+}

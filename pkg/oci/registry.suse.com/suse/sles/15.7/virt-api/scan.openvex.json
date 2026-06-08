@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fc367b3f582d80dd730a44274de2d6a014d2c2b0feb5c673addf39fbe58007f0",
+  "@id": "https://openvex.dev/docs/public/vex-526537cd2383d14cf5a2b9b83e917ac379a76bec14ee5ef21d711c21a2f4ca0c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -90,6 +90,24 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02617-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-api?repository_url=registry.suse.com/suse/sles/15.7/virt-api",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-api is a Go Kubernetes webhook; uses Go encoding/xml, C libxml2 is never loaded"
     },
     {
       "vulnerability": {
@@ -345,6 +363,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-api?repository_url=registry.suse.com/suse/sles/15.7/virt-api",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-api is a Go Kubernetes webhook; uses Go encoding/xml, C libxml2 is never loaded"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0779-1"
       },
       "products": [
@@ -542,5 +578,5 @@
       "impact_statement": "Go-based KubeVirt API server; sed CLI tool is not called by the Go binary"
     }
   ],
-  "timestamp": "2026-06-02T01:16:54Z"
+  "timestamp": "2026-06-08T19:57:37Z"
 }
