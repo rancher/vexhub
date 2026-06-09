@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-526537cd2383d14cf5a2b9b83e917ac379a76bec14ee5ef21d711c21a2f4ca0c",
+  "@id": "https://openvex.dev/docs/public/vex-f1fce950f0cf4c86efbdfc3a290b3d84d12ce0af15caa0a5e16f577cea017954",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -972,7 +972,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Longhorn Engine is a Go binary; TLS uses Go crypto/tls, C libgnutls30 is never loaded at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2283-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn engine Go binary handles storage I/O; jq CLI tool is an incidental SLES dep, never called"
     }
   ],
-  "timestamp": "2026-06-08T19:57:37Z"
+  "timestamp": "2026-06-09T02:15:27Z"
 }
