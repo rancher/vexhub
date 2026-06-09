@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-678642cdb0ccef61828dfb7655074c426f381471f6e89c6bf8dc83a8e3c2c340",
+  "@id": "https://openvex.dev/docs/public/vex-a25a58bf306de8c5cae0f69404025c095f71ab8f34b15962f6e344793a11035d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -21268,6 +21268,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester bare-metal seeder; no email/MIME header processing in code paths"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -24417,5 +24435,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-06-08T19:57:36Z"
+  "timestamp": "2026-06-09T10:51:06Z"
 }
