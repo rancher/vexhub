@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fc367b3f582d80dd730a44274de2d6a014d2c2b0feb5c673addf39fbe58007f0",
+  "@id": "https://openvex.dev/docs/public/vex-cceccfdf1db7c205c185aaf10786075225612ef4a8d1b60348cdf3713bf604ed",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1134,7 +1134,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libldb2 is a Samba/LDAP library; Longhorn instance manager is a storage component with no LDAP or Samba functionality"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2298-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python311-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-06-02T01:16:54Z"
+  "timestamp": "2026-06-09T18:46:15Z"
 }

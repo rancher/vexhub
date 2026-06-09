@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-324564f5e8d42a4d613a9b39157029ed118fd76af8edef7244877ce6e5acf299",
+  "@id": "https://openvex.dev/docs/public/vex-cceccfdf1db7c205c185aaf10786075225612ef4a8d1b60348cdf3713bf604ed",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -810,7 +810,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go image does not use liblzma C library; Go standard library handles compression"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2297-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libavahi-common3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based storage manager uses Kubernetes service discovery; Avahi mDNS library is never invoked at runtime"
     }
   ],
-  "timestamp": "2026-05-29T11:54:25Z"
+  "timestamp": "2026-06-09T18:46:15Z"
 }
