@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f07e3824184187d208ae6463ce90f92bb41a936b6ca9acb55ed5897577d5e060",
+  "@id": "https://openvex.dev/docs/public/vex-1ddf9a0c7cff29de8011bc1b1c340c3af7f1f713d5da60e0c923ccfed6e65d84",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -869,7 +869,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "c-ares-devel is a build-time dev package (headers/static libs); no runtime shared library code is executed"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx has no xz/lzma module; Go ingress controller doesn't link liblzma; incidental SLES dep"
     }
   ],
-  "timestamp": "2026-05-31T11:52:05Z"
+  "timestamp": "2026-06-10T12:05:38Z"
 }
