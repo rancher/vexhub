@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1ab18392fb2f036b4d97e8d694b51e6f82271b611982ee4f5d4f9bb5cbcef26f",
+  "@id": "https://openvex.dev/docs/public/vex-021e5db9fcc9d0596119f8ca26b4fe616dc805de9405c76a01ff686471b48ca6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1155,6 +1155,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manager is a Go operator; xz/lzma has no role in volume management; no library loads liblzma"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2115-1"
       },
       "products": [
@@ -1190,5 +1208,5 @@
       "impact_statement": "Go-based storage manager uses Kubernetes service discovery; Avahi mDNS library is never invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-09T18:46:14Z"
+  "timestamp": "2026-06-10T12:05:37Z"
 }
