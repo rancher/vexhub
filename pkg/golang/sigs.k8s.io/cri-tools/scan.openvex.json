@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c247a3633638be3e4e07896bf63237dc7f60bf4320d4cdc563112edc150b044c",
+  "@id": "https://openvex.dev/docs/public/vex-866301686ac41aac6543a16d28e3814e2e39bad4e5a2e8eba326d65d753fd71f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -5423,6 +5423,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33997"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/cri-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v27.1.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "crictl is a CRI client CLI; github.com/docker/docker is a transitive dependency and the vulnerable Moby daemon-side code is never executed by crictl"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-34040"
       },
       "products": [
@@ -8980,5 +8998,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-06-06T13:48:01Z"
+  "timestamp": "2026-06-10T20:22:48Z"
 }
