@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-162a6c74139d17af9076785693a68fb66f2307a7a96a320daf1b22b9093d46b8",
+  "@id": "https://openvex.dev/docs/public/vex-2bf98f84376c4ba8dd3af9df57c68dbe3a37de8d6b64bf992d311f4e161c9815",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -90,7 +90,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2298-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-internal?repository_url=index.docker.io/rancher/supportability-review-internal",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python311-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "python311-devel contains build-time headers only; not loaded by Python interpreter at runtime"
     }
   ],
-  "timestamp": "2026-05-21T17:28:38Z"
+  "timestamp": "2026-06-10T03:23:36Z"
 }
