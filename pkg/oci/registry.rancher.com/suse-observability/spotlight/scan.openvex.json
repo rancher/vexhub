@@ -1,0 +1,27 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-021e5db9fcc9d0596119f8ca26b4fe616dc805de9405c76a01ff686471b48ca6",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2298-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/spotlight?repository_url=registry.rancher.com/suse-observability/spotlight",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python311-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "python311-devel contains build-time headers only; not loaded by Python interpreter at runtime"
+    }
+  ],
+  "timestamp": "2026-06-10T12:05:37Z"
+}

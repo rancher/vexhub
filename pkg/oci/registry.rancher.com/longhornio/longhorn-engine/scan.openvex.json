@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-18d36f66efff414477e69e947ddda0e560c407218bd9451e7f7cdff6ba13cd74",
+  "@id": "https://openvex.dev/docs/public/vex-021e5db9fcc9d0596119f8ca26b4fe616dc805de9405c76a01ff686471b48ca6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1476,7 +1476,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "sed CLI tool is never executed by the Go-based Longhorn storage engine daemon at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.rancher.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn engine is a Go block-replication binary; xz/lzma unused in block I/O; incidental SLES dep"
     }
   ],
-  "timestamp": "2026-05-26T14:12:55Z"
+  "timestamp": "2026-06-10T12:05:37Z"
 }
