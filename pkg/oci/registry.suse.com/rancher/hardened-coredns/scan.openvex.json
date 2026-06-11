@@ -1,0 +1,44 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-df5f153e842c44f0afb6a87cfd5812c2c4895ddfe91ae46d0e9234611fc0c062",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:01702-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-coredns?repository_url=registry.suse.com/rancher/hardened-coredns",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2054-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-coredns?repository_url=registry.suse.com/rancher/hardened-coredns",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/busybox"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CoreDNS is a pure-Go daemon; busybox shell utilities are not invoked at runtime"
+    }
+  ],
+  "timestamp": "2026-06-11T16:51:29Z"
+}

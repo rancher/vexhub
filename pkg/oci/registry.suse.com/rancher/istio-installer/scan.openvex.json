@@ -1,0 +1,852 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-04e8ad1937295aeed37d9dbda7919aebf9793ec5d7af4ac5a59ea960e6a5c4b6",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:0136-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:0525-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:0834-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher/istio-installer is a Go Kubernetes job; sudo is not called by the entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:0834-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sudo CLI is not executed by the istio-installer Go binary at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:0834-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sudo CLI tool; installer container runs as root, sudo is never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:1633-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; istio-installer is Go-based and does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:2035-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; istio-installer is Go-based and does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/login_defs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/shadow"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:2909-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; istio-installer is Go-based and does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:3904-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; istio-installer is Go-based and does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:4035-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02013-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "istio-installer is a Go binary; perl-base is an incidental SLES dependency never invoked at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02175-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher/istio-installer is a Go Kubernetes job; sudo is not called by the entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02175-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sudo CLI is not executed by the istio-installer Go binary at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02175-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sudo CLI tool; installer container runs as root, sudo is never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02177-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher/istio-installer is a Go Kubernetes job; sudo is not called by the entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02177-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sudo CLI is not executed by the istio-installer Go binary at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02177-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sudo CLI tool; installer container runs as root, sudo is never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02229-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02229-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02279-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/boost-license1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_system1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_thread1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02815-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtiff5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Istio installer runs Helm/kubectl; libtiff5 is an incidental SLES dep never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0292-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/login_defs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0292-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/shadow"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02970-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02970-2"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03440-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; istio-installer is Go-based and does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03537-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0356-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; istio-installer is Go-based and does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03624-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:1186-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:1201-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:1334-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtiff5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Istio installer runs Helm/kubectl; libtiff5 is an incidental SLES dep never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1166-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1177-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1359-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher/istio-installer is a Go Kubernetes job; sudo is not called by the entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1359-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sudo CLI is not executed by the istio-installer Go binary at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1359-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sudo"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sudo CLI tool; installer container runs as root, sudo is never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1965-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/istio-installer?repository_url=registry.suse.com/rancher/istio-installer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtiff5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Istio installer runs Helm/kubectl; libtiff5 is an incidental SLES dep never called"
+    }
+  ],
+  "timestamp": "2026-06-11T16:51:28Z"
+}

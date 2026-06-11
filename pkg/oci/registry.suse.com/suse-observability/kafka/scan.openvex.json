@@ -1,0 +1,27 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-df5f153e842c44f0afb6a87cfd5812c2c4895ddfe91ae46d0e9234611fc0c062",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kafka?repository_url=registry.suse.com/suse-observability/kafka",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "JVM-based app; Java uses native compression APIs, not the liblzma C library"
+    }
+  ],
+  "timestamp": "2026-06-11T16:51:29Z"
+}
