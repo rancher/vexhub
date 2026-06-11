@@ -1,0 +1,564 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-04e8ad1937295aeed37d9dbda7919aebf9793ec5d7af4ac5a59ea960e6a5c4b6",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libdw1 (DWARF debug library) has no execute path in the ui-plugin-catalog nginx/Go entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02013-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02278-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02278-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/boost-license1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_system1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_thread1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02970-2"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03267-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-based plugin catalog server; curl CLI is an incidental SLES dep, not called by nginx"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03267-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses net/http; libcurl C library is not linked or called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03438-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl1_1-hmac contains FIPS HMAC integrity verification files only, not an executable shared library"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0345-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl1_1-hmac contains FIPS HMAC integrity verification files only, not an executable shared library"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0370-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-based plugin catalog server; curl CLI is an incidental SLES dep, not called by nginx"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0370-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses net/http; libcurl C library is not linked or called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtiff5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-based UI plugin catalog does not process TIFF images; libtiff5 is an incidental SLES dep"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtiff5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ui-plugin-catalog is an nginx static file server; no TIFF image processing occurs at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libdw1 (DWARF debug library) has no execute path in the ui-plugin-catalog nginx/Go entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0214-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gpg2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0359-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl1_1-hmac contains FIPS HMAC integrity verification files only, not an executable shared library"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0603-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxslt1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx serves static UI plugin files; XSLT module not compiled in; libxslt1 not used at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0603-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxslt1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ui-plugin-catalog serves static Helm/JS assets via nginx; no XSLT processing at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0911-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-based plugin catalog server; curl CLI is an incidental SLES dep, not called by nginx"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0911-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses net/http; libcurl C library is not linked or called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1166-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1177-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1290-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl1_1-hmac contains FIPS HMAC integrity verification files only, not an executable shared library"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1550-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl1_1-hmac contains FIPS HMAC integrity verification files only, not an executable shared library"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1717-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-based plugin catalog server; curl CLI is an incidental SLES dep, not called by nginx"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1717-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image uses net/http; libcurl C library is not linked or called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1965-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtiff5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-based UI plugin catalog does not process TIFF images; libtiff5 is an incidental SLES dep"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1965-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtiff5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ui-plugin-catalog is an nginx static file server; no TIFF image processing occurs at runtime"
+    }
+  ],
+  "timestamp": "2026-06-11T16:51:28Z"
+}

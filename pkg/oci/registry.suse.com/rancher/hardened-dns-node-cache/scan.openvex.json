@@ -1,0 +1,44 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-cd259fb9e190e8f873c108a81602ab1c6125b5ff65916cc70349e037e13d7bfc",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:01702-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-dns-node-cache?repository_url=registry.suse.com/rancher/hardened-dns-node-cache",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2054-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-dns-node-cache?repository_url=registry.suse.com/rancher/hardened-dns-node-cache",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/busybox"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "dns-node-cache is a pure-Go daemon; busybox shell utilities are not invoked at runtime"
+    }
+  ],
+  "timestamp": "2026-06-11T16:51:27Z"
+}
