@@ -1,0 +1,45 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-04e8ad1937295aeed37d9dbda7919aebf9793ec5d7af4ac5a59ea960e6a5c4b6",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-enforcer?repository_url=registry.suse.com/rancher/neuvector-enforcer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go image does not use liblzma C library; Go standard library handles compression"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2283-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-enforcer?repository_url=registry.suse.com/rancher/neuvector-enforcer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NeuVector enforcer entrypoint is a compiled Go/C++ binary; jq CLI is an incidental SLES dep, never called"
+    }
+  ],
+  "timestamp": "2026-06-11T16:51:28Z"
+}

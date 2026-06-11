@@ -1,0 +1,654 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-cd259fb9e190e8f873c108a81602ab1c6125b5ff65916cc70349e037e13d7bfc",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2026:1228-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/login_defs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2026:1228-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/shadow"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/boost-license1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_system1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_thread1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3699-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based network controller uses k8s token auth; krb5 is a transitive dep never exercised"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4236-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based Harvester network controller; curl CLI is an incidental SLES dep, not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4236-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses net/http for HTTP; libcurl4 C library not called by Go binary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based network controller; GLib C library not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based network controller; GLib C library not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0215-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gpg2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based network controller; GLib C library not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0434-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gpg2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0779-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0779-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0885-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based Harvester network controller; curl CLI is an incidental SLES dep, not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0885-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses net/http for HTTP; libcurl4 C library not called by Go binary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0903-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based Harvester network controller; curl CLI is an incidental SLES dep, not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0903-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses net/http for HTTP; libcurl4 C library not called by Go binary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1074-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go network controller uses Go net/http; system libnghttp2 C library not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1177-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1310-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1310-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1350-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go network controller uses Go net/http; system libnghttp2 C library not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester Network Controller is a Go-based network controller with no block device identification needs"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-network-controller is a Go K8s controller; util-linux libsmartcols not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols is a table-formatting C lib; not called by Go binaries at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go network controller generates UUIDs natively; system libuuid C library not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libncurses6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/ncurses-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/terminfo-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1940-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based Harvester network controller; curl CLI is an incidental SLES dep, not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1940-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses net/http for HTTP; libcurl4 C library not called by Go binary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.suse.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go network controller; sed CLI tool is not invoked by the Go binary entrypoint"
+    }
+  ],
+  "timestamp": "2026-06-11T16:51:27Z"
+}

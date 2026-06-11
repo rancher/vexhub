@@ -1,0 +1,960 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-04e8ad1937295aeed37d9dbda7919aebf9793ec5d7af4ac5a59ea960e6a5c4b6",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libelf is for ELF binary manipulation; gitjob is a Go-based operator with no ELF processing at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; gitjob is a Go binary that does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:2658-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/login_defs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:2658-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/shadow"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:2804-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/login_defs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:2804-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/shadow"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:2891-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; gitjob is a Go binary that does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:3080-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:3149-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gitjob is a Go Kubernetes operator for git-based jobs; libudev1 device-event library is never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:3211-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:3216-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:3765-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; gitjob is a Go binary that does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:3926-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:4035-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:4078-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GLib C library is not used by the pure-Go gitjob controller at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:4078-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher/gitjob is a pure-Go k8s controller; GLib C library is never loaded or called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:4359-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02013-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02278-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02278-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02314-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; system libxml2 C library is not called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02362-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/coreutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "coreutils CLI tools are not executed by the Go-based gitjob Kubernetes controller"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/boost-license1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_system1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_thread1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02675-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gitjob is a Go Kubernetes operator for git-based jobs; libudev1 device-event library is never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02758-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; system libxml2 C library is not called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02970-2"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03267-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03438-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; gitjob is a Go binary that does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0345-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; gitjob is a Go binary that does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0348-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; system libxml2 C library is not called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03624-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0370-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gitjob is a Go-based operator using Go crypto/ssh; system openssh-fips binary is not executed at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0746-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; system libxml2 C library is not called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:1201-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:1576-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gitjob is a Go-based operator using Go crypto/ssh; system openssh-fips binary is not executed at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libelf is for ELF binary manipulation; gitjob is a Go-based operator with no ELF processing at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4112-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gitjob is a Go-based operator using Go crypto/ssh; system openssh-fips binary is not executed at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4504-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GLib C library is not used by the pure-Go gitjob controller at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4504-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher/gitjob is a pure-Go k8s controller; GLib C library is never loaded or called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0214-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gpg2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0359-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; gitjob is a Go binary that does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0911-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1061-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gitjob is a Go Kubernetes operator for git-based jobs; libudev1 device-event library is never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1166-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1177-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1290-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; gitjob is a Go binary that does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libcap capabilities library; Go binary does not call libcap APIs at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1550-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl-1_1 provides the CLI binary; gitjob is a Go binary that does not invoke the openssl CLI"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1717-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2024-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gitjob is a Go-based operator using Go crypto/ssh; system openssh-fips binary is not executed at runtime"
+    }
+  ],
+  "timestamp": "2026-06-11T16:51:28Z"
+}
