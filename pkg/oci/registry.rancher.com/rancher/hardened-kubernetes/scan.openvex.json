@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-866301686ac41aac6543a16d28e3814e2e39bad4e5a2e8eba326d65d753fd71f",
+  "@id": "https://openvex.dev/docs/public/vex-08334e0a376988f1e8b0313926edbcc12a7f8cde9ad6545027179e7b8a466c9d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -875,6 +875,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binaries do not link liblzma; the vulnerable xz index parser is never reached with attacker-controlled input"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21142-1"
       },
       "products": [
@@ -944,6 +962,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Kubernetes does not use SQLite; data is stored in etcd. The library is an incidental base image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2118-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binaries do not link liblzma; the vulnerable xz index parser is never reached with attacker-controlled input"
     },
     {
       "vulnerability": {
@@ -1144,5 +1180,5 @@
       "impact_statement": "Go binaries do not link liblzma; the vulnerable xz index parser is never reached with attacker-controlled input"
     }
   ],
-  "timestamp": "2026-06-10T20:22:48Z"
+  "timestamp": "2026-06-11T17:05:16Z"
 }

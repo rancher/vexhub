@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c247a3633638be3e4e07896bf63237dc7f60bf4320d4cdc563112edc150b044c",
+  "@id": "https://openvex.dev/docs/public/vex-dc1d508f43607090cf35d27bb15431d042d91efe839db6892283448aa95e9bab",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -334,6 +334,24 @@
           "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/qemu-ipxe"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "iPXE is PXE-boot ROM firmware mapped into guest VM memory; not executed in the container host process"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0288-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/qemu-seabios"
             }
           ]
@@ -396,6 +414,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0445-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-ipxe"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "iPXE is PXE-boot ROM firmware mapped into guest VM memory; not executed in the container host process"
     },
     {
       "vulnerability": {
@@ -504,6 +540,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0832-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-ipxe"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "iPXE is PXE-boot ROM firmware mapped into guest VM memory; not executed in the container host process"
     },
     {
       "vulnerability": {
@@ -956,5 +1010,5 @@
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-06-06T13:48:01Z"
+  "timestamp": "2026-06-11T17:05:17Z"
 }
