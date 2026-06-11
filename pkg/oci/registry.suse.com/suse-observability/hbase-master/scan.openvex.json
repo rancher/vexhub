@@ -1,0 +1,27 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-04e8ad1937295aeed37d9dbda7919aebf9793ec5d7af4ac5a59ea960e6a5c4b6",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hbase-master?repository_url=registry.suse.com/suse-observability/hbase-master",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "HBase is a Java app; sed CLI is never invoked by the JVM runtime process"
+    }
+  ],
+  "timestamp": "2026-06-11T16:51:28Z"
+}

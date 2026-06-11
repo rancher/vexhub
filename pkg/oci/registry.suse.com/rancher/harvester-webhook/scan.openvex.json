@@ -1,0 +1,528 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-cd259fb9e190e8f873c108a81602ab1c6125b5ff65916cc70349e037e13d7bfc",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-FU-2026:21213-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgpg-error0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-webhook is a pure Go admission webhook server; libgpg-error0 GPG library is never called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2026:1228-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/login_defs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2026:1228-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/shadow"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/boost-license1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_system1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_thread1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03624-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0215-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gpg2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0434-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gpg2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0646-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0779-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0779-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based K8s admission webhook; does not manage hardware devices, libudev is never called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd init daemon; Go webhook runs as a standalone process, systemd not invoked"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1166-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1177-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1310-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1310-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1352-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1356-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnfsidmap1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester webhook is a Go admission controller; no NFS ID mapping operations are performed"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libncurses6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/ncurses-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/terminfo-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21142-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtasn1-6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ASN.1 lib not called; Go uses own ASN.1 parsing"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21143-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21144-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based K8s admission webhook; does not manage hardware devices, libudev is never called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21192-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.suse.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    }
+  ],
+  "timestamp": "2026-06-11T16:51:27Z"
+}
