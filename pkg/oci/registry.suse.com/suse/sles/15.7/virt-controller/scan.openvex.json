@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2601aa51aeb38f7397195391c59a7299882ccf097eba75b8d129a2f838206a8d",
+  "@id": "https://openvex.dev/docs/public/vex-b6ca8bb398fbfa2e9acf750ff0139f1c70e60f942ffbbe751e4e9659bd1956cf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -108,6 +108,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0224-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtasn1-6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeVirt Go controller uses crypto/tls; GnuTLS/libtasn1 ASN.1 parsing not in runtime path"
     },
     {
       "vulnerability": {
@@ -416,5 +434,5 @@
       "impact_statement": "virt-controller is a Go KubeVirt controller; sed CLI tool is not invoked in normal operation"
     }
   ],
-  "timestamp": "2026-05-31T11:52:04Z"
+  "timestamp": "2026-06-12T17:41:18Z"
 }

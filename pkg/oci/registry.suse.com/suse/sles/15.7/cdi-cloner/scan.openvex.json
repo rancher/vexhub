@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2601aa51aeb38f7397195391c59a7299882ccf097eba75b8d129a2f838206a8d",
+  "@id": "https://openvex.dev/docs/public/vex-8d57d9ed1c8a276cc4a5fe57b6334242eced5ca79a1111d8c90996e7923ff797",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -85,6 +85,24 @@
           "@id": "pkg:oci/cdi-cloner?repository_url=registry.suse.com/suse/sles/15.7/cdi-cloner",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider only loaded in FIPS-mode systems; standard Kubernetes deployments do not enable FIPS"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03546-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-cloner?repository_url=registry.suse.com/suse/sles/15.7/cdi-cloner",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssl-3"
             }
           ]
@@ -111,6 +129,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-cloner?repository_url=registry.suse.com/suse/sles/15.7/cdi-cloner",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider only loaded in FIPS-mode systems; standard Kubernetes deployments do not enable FIPS"
     },
     {
       "vulnerability": {
@@ -283,6 +319,24 @@
           "@id": "pkg:oci/cdi-cloner?repository_url=registry.suse.com/suse/sles/15.7/cdi-cloner",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider only loaded in FIPS-mode systems; standard Kubernetes deployments do not enable FIPS"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-cloner?repository_url=registry.suse.com/suse/sles/15.7/cdi-cloner",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssl-3"
             }
           ]
@@ -347,5 +401,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-31T11:52:04Z"
+  "timestamp": "2026-06-12T17:41:19Z"
 }
