@@ -1,12 +1,48 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-04e8ad1937295aeed37d9dbda7919aebf9793ec5d7af4ac5a59ea960e6a5c4b6",
+  "@id": "https://openvex.dev/docs/public/vex-a52e63ebceb4477f7beace892874a795d0ad9777b1f04404fae3dc1fde59ab75",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:03442-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/system-agent?repository_url=registry.suse.com/rancher/system-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider not activated; Go system-agent does not load system OpenSSL FIPS module"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03442-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/system-agent?repository_url=registry.suse.com/rancher/system-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Rancher system agent; uses crypto/tls, libopenssl3 shared library not linked or called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0430-1"
       },
       "products": [
         {
@@ -31,6 +67,24 @@
           "@id": "pkg:oci/system-agent?repository_url=registry.suse.com/rancher/system-agent",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Rancher system agent; uses crypto/tls, libopenssl3 shared library not linked or called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:1550-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/system-agent?repository_url=registry.suse.com/rancher/system-agent",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
             }
           ]
@@ -43,6 +97,24 @@
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:1550-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/system-agent?repository_url=registry.suse.com/rancher/system-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Rancher system agent; uses crypto/tls, libopenssl3 shared library not linked or called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0312-1"
       },
       "products": [
         {
@@ -67,6 +139,24 @@
           "@id": "pkg:oci/system-agent?repository_url=registry.suse.com/rancher/system-agent",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Rancher system agent; uses crypto/tls, libopenssl3 shared library not linked or called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1215-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/system-agent?repository_url=registry.suse.com/rancher/system-agent",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
             }
           ]
@@ -79,6 +169,24 @@
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:1215-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/system-agent?repository_url=registry.suse.com/rancher/system-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Rancher system agent; uses crypto/tls, libopenssl3 shared library not linked or called"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
       },
       "products": [
         {
@@ -103,14 +211,14 @@
           "@id": "pkg:oci/system-agent?repository_url=registry.suse.com/rancher/system-agent",
           "subcomponents": [
             {
-              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+              "@id": "pkg:rpm/suse/libopenssl3"
             }
           ]
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "FIPS provider not activated; Go system-agent does not load system OpenSSL FIPS module"
+      "impact_statement": "Pure Go Rancher system agent; uses crypto/tls, libopenssl3 shared library not linked or called"
     },
     {
       "vulnerability": {
@@ -183,7 +291,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "FIPS provider not activated; Go system-agent does not load system OpenSSL FIPS module"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/system-agent?repository_url=registry.suse.com/rancher/system-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Rancher system agent; uses crypto/tls, libopenssl3 shared library not linked or called"
     }
   ],
-  "timestamp": "2026-06-11T16:51:28Z"
+  "timestamp": "2026-06-12T17:41:17Z"
 }

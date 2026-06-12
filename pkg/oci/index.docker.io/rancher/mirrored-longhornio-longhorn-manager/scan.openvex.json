@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cceccfdf1db7c205c185aaf10786075225612ef4a8d1b60348cdf3713bf604ed",
+  "@id": "https://openvex.dev/docs/public/vex-8d57d9ed1c8a276cc4a5fe57b6334242eced5ca79a1111d8c90996e7923ff797",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -108,6 +108,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No CGO SQLite bindings in this Go image; libsqlite3 not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02719-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Kubernetes controller; no GPG/libgcrypt operations in execute path"
     },
     {
       "vulnerability": {
@@ -532,6 +550,24 @@
           "@id": "pkg:oci/mirrored-longhornio-longhorn-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-manager",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Kubernetes controller; no sd_notify/sd_bus calls, libsystemd0 not in execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libudev1"
             }
           ]
@@ -830,5 +866,5 @@
       "impact_statement": "Go-based storage manager uses Kubernetes service discovery; Avahi mDNS library is never invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-09T18:46:15Z"
+  "timestamp": "2026-06-12T17:41:19Z"
 }
