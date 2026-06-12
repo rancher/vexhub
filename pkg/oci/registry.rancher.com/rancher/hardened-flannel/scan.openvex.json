@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4b17e02c6e83b9d4f368f71376e5404ca5b1373d1a72a8c5b70baeacfe815bfa",
+  "@id": "https://openvex.dev/docs/public/vex-b6ca8bb398fbfa2e9acf750ff0139f1c70e60f942ffbbe751e4e9659bd1956cf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -643,6 +643,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03546-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go CNI plugin; flannel uses crypto/tls, system OpenSSL shared library never called"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03624-1"
       },
       "products": [
@@ -1164,6 +1182,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go CNI plugin; flannel uses crypto/tls, system OpenSSL shared library never called"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0373-1"
       },
       "products": [
@@ -1650,6 +1686,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.rancher.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go CNI plugin; flannel uses crypto/tls, system OpenSSL shared library never called"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1406-1"
       },
       "products": [
@@ -1811,5 +1865,5 @@
       "impact_statement": "Flannel is a Go binary using crypto/tls; system libgnutls30 is never invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-04T17:03:53Z"
+  "timestamp": "2026-06-12T17:41:18Z"
 }

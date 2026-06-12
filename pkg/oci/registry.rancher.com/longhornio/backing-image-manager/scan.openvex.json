@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f07e3824184187d208ae6463ce90f92bb41a936b6ca9acb55ed5897577d5e060",
+  "@id": "https://openvex.dev/docs/public/vex-b6ca8bb398fbfa2e9acf750ff0139f1c70e60f942ffbbe751e4e9659bd1956cf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -183,6 +183,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go backing-image-manager uses no sd_notify/sd_bus; libsystemd0 never loaded at runtime"
     },
     {
       "vulnerability": {
@@ -1252,6 +1270,24 @@
           "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go backing-image-manager uses no sd_notify/sd_bus; libsystemd0 never loaded at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/udev"
             }
           ]
@@ -1712,5 +1748,5 @@
       "impact_statement": "backing-image-manager is a Go binary; sed is a CLI tool never invoked by the container entrypoint"
     }
   ],
-  "timestamp": "2026-05-31T11:52:05Z"
+  "timestamp": "2026-06-12T17:41:18Z"
 }

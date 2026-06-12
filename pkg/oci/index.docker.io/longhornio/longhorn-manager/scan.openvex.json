@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1ddf9a0c7cff29de8011bc1b1c340c3af7f1f713d5da60e0c923ccfed6e65d84",
+  "@id": "https://openvex.dev/docs/public/vex-b6ca8bb398fbfa2e9acf750ff0139f1c70e60f942ffbbe751e4e9659bd1956cf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -165,6 +165,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=index.docker.io/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Kubernetes controller; no sd_notify/sd_bus calls, libsystemd0 not in execute path"
     },
     {
       "vulnerability": {
@@ -831,6 +849,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=index.docker.io/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Kubernetes controller; no sd_notify/sd_bus calls, libsystemd0 not in execute path"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1090-1"
       },
       "products": [
@@ -1208,5 +1244,5 @@
       "impact_statement": "Go-based storage manager uses Kubernetes service discovery; Avahi mDNS library is never invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-10T12:05:38Z"
+  "timestamp": "2026-06-12T17:41:18Z"
 }
