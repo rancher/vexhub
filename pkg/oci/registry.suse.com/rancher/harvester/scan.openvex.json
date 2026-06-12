@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cd259fb9e190e8f873c108a81602ab1c6125b5ff65916cc70349e037e13d7bfc",
+  "@id": "https://openvex.dev/docs/public/vex-8d57d9ed1c8a276cc4a5fe57b6334242eced5ca79a1111d8c90996e7923ff797",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -21,6 +21,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses own crypto primitives; libgcrypt C library not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-FU-2026:21213-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester?repository_url=registry.suse.com/rancher/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgpg-error0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based Harvester manager; no GPG operations performed, libgpg-error0 not in execute path"
     },
     {
       "vulnerability": {
@@ -596,5 +614,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-06-11T16:51:27Z"
+  "timestamp": "2026-06-12T17:41:19Z"
 }

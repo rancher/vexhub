@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c247a3633638be3e4e07896bf63237dc7f60bf4320d4cdc563112edc150b044c",
+  "@id": "https://openvex.dev/docs/public/vex-b6ca8bb398fbfa2e9acf750ff0139f1c70e60f942ffbbe751e4e9659bd1956cf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-FU-2026:21213-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=index.docker.io/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based Helm repo server; no GPG chart signing operations, libgcrypt20 not in call path"
+    },
     {
       "vulnerability": {
         "name": "SUSE-FU-2026:21213-1"
@@ -848,5 +866,5 @@
       "impact_statement": "Go-based cluster-repo controller; xz CLI is an incidental SLES dep never executed at runtime"
     }
   ],
-  "timestamp": "2026-06-06T13:48:01Z"
+  "timestamp": "2026-06-12T17:41:18Z"
 }
