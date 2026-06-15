@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b64dde7de8ebdb57afcb4b89a699c4fbfd426661fe7c70a6593dc5a06f9d95e9",
+  "@id": "https://openvex.dev/docs/public/vex-2d3ae488d98e595e7ea2873b87385026847866435c63dab3c3fc2d83452e0381",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -453,6 +453,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-share-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Kubernetes container runs longhorn-share-manager as PID 1; systemd daemon not started"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1065-1"
       },
       "products": [
@@ -686,5 +704,5 @@
       "impact_statement": "Go binary uses own compression; liblzma5 C library is not loaded at runtime"
     }
   ],
-  "timestamp": "2026-05-26T22:54:08Z"
+  "timestamp": "2026-06-15T17:15:38Z"
 }

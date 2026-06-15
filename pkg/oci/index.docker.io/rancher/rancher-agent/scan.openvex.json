@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c247a3633638be3e4e07896bf63237dc7f60bf4320d4cdc563112edc150b044c",
+  "@id": "https://openvex.dev/docs/public/vex-4a5c8511d268a088f1403d107e3dee71f5792bedac2c5d2526655a062b0bebf6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -21,6 +21,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher-agent connects to Rancher server over HTTPS/WebSocket; openssh-clients CLI is never invoked"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:01638-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=index.docker.io/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent Go binary communicates via websocket/TLS; OpenSSH utilities not invoked"
     },
     {
       "vulnerability": {
@@ -615,6 +633,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher-agent connects to Rancher server over HTTPS/WebSocket; openssh-clients CLI is never invoked"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4067-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=index.docker.io/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent Go binary communicates via websocket/TLS; OpenSSH utilities not invoked"
     },
     {
       "vulnerability": {
@@ -1237,6 +1273,24 @@
           "@id": "pkg:oci/rancher-agent?repository_url=index.docker.io/rancher/rancher-agent",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent Go binary communicates via websocket/TLS; OpenSSH utilities not invoked"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1876-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=index.docker.io/rancher/rancher-agent",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssh-fips"
             }
           ]
@@ -1299,7 +1353,79 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2283-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=index.docker.io/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent is a Go binary using encoding/json; jq CLI tool not invoked at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2371-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=index.docker.io/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-clients"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent uses HTTPS/websocket to reach Rancher server; ssh/scp tools not invoked"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2371-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=index.docker.io/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent Go binary communicates via websocket/TLS; OpenSSH utilities not invoked"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2371-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=index.docker.io/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent is a Go binary communicating via websocket/TLS; FIPS SSH daemon never executed"
     }
   ],
-  "timestamp": "2026-06-06T13:48:01Z"
+  "timestamp": "2026-06-15T17:15:40Z"
 }
