@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1ab18392fb2f036b4d97e8d694b51e6f82271b611982ee4f5d4f9bb5cbcef26f",
+  "@id": "https://openvex.dev/docs/public/vex-b92ec9d78c897371186638de33053300602468747ac18cc0b005b759dcb258a8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -561,6 +561,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0022-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manages volumes via longhorn-engine; qemu-tools utilities are not invoked"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0027-1"
       },
       "products": [
@@ -666,6 +684,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary generates UUIDs natively; system libuuid C library is not loaded at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0288-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manages volumes via longhorn-engine; qemu-tools utilities are not invoked"
     },
     {
       "vulnerability": {
@@ -792,6 +828,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0445-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manages volumes via longhorn-engine; qemu-tools utilities are not invoked"
     },
     {
       "vulnerability": {
@@ -972,6 +1026,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Longhorn manages CSI volumes, not VMs; virtiofsd (VM filesystem daemon) not executed"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0832-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manages volumes via longhorn-engine; qemu-tools utilities are not invoked"
     },
     {
       "vulnerability": {
@@ -1388,5 +1460,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-06-09T18:46:14Z"
+  "timestamp": "2026-06-15T17:15:39Z"
 }

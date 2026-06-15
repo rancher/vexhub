@@ -1,9 +1,81 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a6fc7caab044fb18505be8bcba93d0ab34a6e2430cefbe0b219cc00d56539cc4",
+  "@id": "https://openvex.dev/docs/public/vex-4a5c8511d268a088f1403d107e3dee71f5792bedac2c5d2526655a062b0bebf6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2024-25621"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/containerd/containerd@v1.7.12"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE regards permissions on /var/lib/containerd when running that daemon - not relevant to elemental, which seems to just use some code from containerd for manipulating archives"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-36623"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/moby/moby@v25.0.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs seem to be about actually running moby/docker - only indirect dependencies, elemental doesn't run docker"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-41110"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v23.0.8+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs all seem to be about if you're actually running docker - only an indirect dependency of elemental-toolkit, and we're not using it to run docker"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45337"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs related to auth bypass and DoS when implementing servers - elemental is not a server"
+    },
     {
       "vulnerability": {
         "name": "CVE-2025-15558"
@@ -24,6 +96,60 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-21613"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-git/go-git/v5@v5.11.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs seem to be related to input validation, interacting with servers - elemental binary isn't exposed to external input from untrusted sources"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-21614"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-git/go-git/v5@v5.11.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs seem to be related to input validation, interacting with servers - elemental binary isn't exposed to external input from untrusted sources"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22869"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs related to auth bypass and DoS when implementing servers - elemental is not a server"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33811"
       },
       "products": [
@@ -39,6 +165,96 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "OS upgrade tool does not perform DNS CNAME lookups; net.LookupCNAME unreachable"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33997"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v23.0.8+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs all seem to be about if you're actually running docker - only an indirect dependency of elemental-toolkit, and we're not using it to run docker"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33997"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/moby/moby@v25.0.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs seem to be about actually running moby/docker - only indirect dependencies, elemental doesn't run docker"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34040"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v23.0.8+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs all seem to be about if you're actually running docker - only an indirect dependency of elemental-toolkit, and we're not using it to run docker"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34040"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/moby/moby@v25.0.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs seem to be about actually running moby/docker - only indirect dependencies, elemental doesn't run docker"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-35172"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/distribution/distribution@v2.8.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE seems to be about manipulating repositories - not relevant to elemental, which seems to just use some parsing functions and uuid generation"
     },
     {
       "vulnerability": {
@@ -75,7 +291,133 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CVE affects httputil.ReverseProxy; elemental OS installer/upgrader does not act as a reverse proxy"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41567"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v23.0.8+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs all seem to be about if you're actually running docker - only an indirect dependency of elemental-toolkit, and we're not using it to run docker"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41567"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/moby/moby@v25.0.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs seem to be about actually running moby/docker - only indirect dependencies, elemental doesn't run docker"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42306"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v23.0.8+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs all seem to be about if you're actually running docker - only an indirect dependency of elemental-toolkit, and we're not using it to run docker"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42306"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/moby/moby@v25.0.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs seem to be about actually running moby/docker - only indirect dependencies, elemental doesn't run docker"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-44740"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-git/go-billy/v5@v5.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs seem to be related to input validation, interacting with servers - elemental binary isn't exposed to external input from untrusted sources"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-44973"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-git/go-billy/v5@v5.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs seem to be related to input validation, interacting with servers - elemental binary isn't exposed to external input from untrusted sources"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45022"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-git/go-git/v5@v5.11.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVEs seem to be related to input validation, interacting with servers - elemental binary isn't exposed to external input from untrusted sources"
     }
   ],
-  "timestamp": "2026-05-26T14:12:54Z"
+  "timestamp": "2026-06-15T17:15:40Z"
 }
