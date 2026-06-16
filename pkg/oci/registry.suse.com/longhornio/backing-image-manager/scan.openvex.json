@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fc67e8336361009b8483b7013a3adb0ab1a2f4e5ea1875eed196471dff79c604",
+  "@id": "https://openvex.dev/docs/public/vex-ac1ebeddedaa2d527cac7b93a0a23ff9180ee1319f1761fbc1ab1ac6d2cc6c3d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -507,6 +507,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.suse.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlidec1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go image manager; brotli compression not used at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03369-1"
       },
       "products": [
@@ -846,6 +864,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0224-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.suse.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtasn1-6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go image manager; uses crypto/x509 for certs, GnuTLS libtasn1 not loaded"
     },
     {
       "vulnerability": {
@@ -1784,5 +1820,5 @@
       "impact_statement": "Longhorn backing-image-manager transfers disk images only; SCSI persistent-reservation daemon qemu-pr-helper unused"
     }
   ],
-  "timestamp": "2026-06-16T16:44:52Z"
+  "timestamp": "2026-06-16T21:34:32Z"
 }

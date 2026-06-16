@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b6ca8bb398fbfa2e9acf750ff0139f1c70e60f942ffbbe751e4e9659bd1956cf",
+  "@id": "https://openvex.dev/docs/public/vex-5f18e0a98228ff82879b5f2de4df6cce9e21ff8c174d71dc9841bdb43bf96c2b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -183,6 +183,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:3699-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-kubeovn-operator?repository_url=registry.suse.com/rancher/harvester-kubeovn-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go K8s operator; K8s auth uses service account tokens, not Kerberos"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:4092-1"
       },
       "products": [
@@ -288,6 +306,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-kubeovn-operator?repository_url=registry.suse.com/rancher/harvester-kubeovn-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go K8s operator; does not manage hardware devices, libudev not used"
     },
     {
       "vulnerability": {
@@ -399,6 +435,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21144-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-kubeovn-operator?repository_url=registry.suse.com/rancher/harvester-kubeovn-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go K8s operator; does not manage hardware devices, libudev not used"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21186-1"
       },
       "products": [
@@ -488,5 +542,5 @@
       "impact_statement": "KubeOVN operator is a Go binary; the xz CLI tool is not invoked at container runtime"
     }
   ],
-  "timestamp": "2026-06-12T17:41:18Z"
+  "timestamp": "2026-06-16T21:34:33Z"
 }
