@@ -1,9 +1,45 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cd259fb9e190e8f873c108a81602ab1c6125b5ff65916cc70349e037e13d7bfc",
+  "@id": "https://openvex.dev/docs/public/vex-821ea8e5a276e4217abaeb15fe88d737255615d0592ad84081625d7c7a5546b5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-helper?repository_url=registry.suse.com/rancher/harvester-network-helper",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go network helper; DWARF debug library not loaded at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-helper?repository_url=registry.suse.com/rancher/harvester-network-helper",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go network helper; DWARF debug library not loaded at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
@@ -59,5 +95,5 @@
       "impact_statement": "Go network helper binary does not call liblzma5 at runtime"
     }
   ],
-  "timestamp": "2026-06-11T16:51:27Z"
+  "timestamp": "2026-06-16T21:34:34Z"
 }

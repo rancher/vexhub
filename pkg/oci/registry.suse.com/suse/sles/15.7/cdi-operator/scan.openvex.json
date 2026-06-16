@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-815ecf142b1ce5dfa975920c9b7c3944bd0d0ba7511e9d3ad0df65134f490e27",
+  "@id": "https://openvex.dev/docs/public/vex-5f18e0a98228ff82879b5f2de4df6cce9e21ff8c174d71dc9841bdb43bf96c2b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -42,6 +42,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_system1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI operator is a Go binary; libboost_system C++ Boost library is not linked or called at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:02672-1"
       },
       "products": [
@@ -57,6 +75,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI operator is a Go Kubernetes controller; SQLite is not used at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02719-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go CDI operator; Go uses crypto/tls, GnuPG libgcrypt not loaded"
     },
     {
       "vulnerability": {
@@ -473,5 +509,5 @@
       "impact_statement": "cdi-operator is a Go Kubernetes controller; sed CLI tool is an incidental SLES dep never executed"
     }
   ],
-  "timestamp": "2026-05-27T18:50:00Z"
+  "timestamp": "2026-06-16T21:34:33Z"
 }

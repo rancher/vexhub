@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8d57d9ed1c8a276cc4a5fe57b6334242eced5ca79a1111d8c90996e7923ff797",
+  "@id": "https://openvex.dev/docs/public/vex-ac1ebeddedaa2d527cac7b93a0a23ff9180ee1319f1761fbc1ab1ac6d2cc6c3d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -453,6 +453,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.rancher.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go Helm chart repo server; does not manage hardware devices, libudev not used"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1166-1"
       },
       "products": [
@@ -759,6 +777,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21144-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.rancher.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go Helm chart repo server; does not manage hardware devices, libudev not used"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21186-1"
       },
       "products": [
@@ -866,5 +902,5 @@
       "impact_statement": "Go-based cluster-repo controller; xz CLI is an incidental SLES dep never executed at runtime"
     }
   ],
-  "timestamp": "2026-06-12T17:41:19Z"
+  "timestamp": "2026-06-16T21:34:32Z"
 }

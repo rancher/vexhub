@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a52e63ebceb4477f7beace892874a795d0ad9777b1f04404fae3dc1fde59ab75",
+  "@id": "https://openvex.dev/docs/public/vex-821ea8e5a276e4217abaeb15fe88d737255615d0592ad84081625d7c7a5546b5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -39,6 +39,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go-based Harvester manager; no GPG operations performed, libgpg-error0 not in execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester?repository_url=index.docker.io/rancher/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Harvester manager; DWARF debug library not loaded at runtime"
     },
     {
       "vulnerability": {
@@ -234,6 +252,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go does not use system Kerberos libraries; Go handles auth natively"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester?repository_url=index.docker.io/rancher/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go Harvester manager; DWARF debug library not loaded at runtime"
     },
     {
       "vulnerability": {
@@ -614,5 +650,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-06-12T17:41:17Z"
+  "timestamp": "2026-06-16T21:34:34Z"
 }
