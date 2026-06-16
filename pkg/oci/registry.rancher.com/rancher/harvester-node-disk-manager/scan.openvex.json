@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-adf3bdde85a6cf942aac58d04e5aef3a3f04b57847ab3fe4854bb2fb1577ac25",
+  "@id": "https://openvex.dev/docs/public/vex-ac1ebeddedaa2d527cac7b93a0a23ff9180ee1319f1761fbc1ab1ac6d2cc6c3d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -615,6 +615,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21172-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go disk manager; Go has its own regex engine, PCRE2 not needed"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21186-1"
       },
       "products": [
@@ -668,5 +686,5 @@
       "impact_statement": "glibc-locale-base contains locale data files only; no executable code from this package runs at runtime"
     }
   ],
-  "timestamp": "2026-05-31T11:52:06Z"
+  "timestamp": "2026-06-16T21:34:32Z"
 }

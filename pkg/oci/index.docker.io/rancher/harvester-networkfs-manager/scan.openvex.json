@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ca5430e6908d14d1648abf483d59f724b4a0b582315099bb72af0259db867c69",
+  "@id": "https://openvex.dev/docs/public/vex-ac1ebeddedaa2d527cac7b93a0a23ff9180ee1319f1761fbc1ab1ac6d2cc6c3d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -561,6 +561,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io/rancher/harvester-networkfs-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go NFS manager; Go uses own UUID library, system libuuid not needed"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -758,5 +776,5 @@
       "impact_statement": "Networkfs manager is a Go binary; the xz CLI compression tool is not invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-04T17:03:54Z"
+  "timestamp": "2026-06-16T21:34:32Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e5a11cda853f22113c6e338a766ad17e5673b762454a6a3bf69dcf32a674e139",
+  "@id": "https://openvex.dev/docs/public/vex-5f18e0a98228ff82879b5f2de4df6cce9e21ff8c174d71dc9841bdb43bf96c2b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -162,6 +162,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:3699-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-upgrade?repository_url=index.docker.io/rancher/harvester-upgrade",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go upgrade controller; K8s auth uses service account tokens, not Kerberos"
     },
     {
       "vulnerability": {
@@ -489,6 +507,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21172-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-upgrade?repository_url=index.docker.io/rancher/harvester-upgrade",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go upgrade controller; Go has its own regex engine, PCRE2 not needed"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21192-1"
       },
       "products": [
@@ -504,7 +540,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22085-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-upgrade?repository_url=index.docker.io/rancher/harvester-upgrade",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/update-alternatives"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "update-alternatives is a package management utility; it is not executed at runtime"
     }
   ],
-  "timestamp": "2026-06-01T17:56:27Z"
+  "timestamp": "2026-06-16T21:34:33Z"
 }

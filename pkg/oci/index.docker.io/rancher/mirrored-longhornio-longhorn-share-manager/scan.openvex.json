@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b92ec9d78c897371186638de33053300602468747ac18cc0b005b759dcb258a8",
+  "@id": "https://openvex.dev/docs/public/vex-821ea8e5a276e4217abaeb15fe88d737255615d0592ad84081625d7c7a5546b5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -306,6 +306,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0224-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-share-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtasn1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go NFS share manager; uses crypto/x509, GnuTLS libtasn1 not loaded"
     },
     {
       "vulnerability": {
@@ -704,5 +722,5 @@
       "impact_statement": "Go binary uses own compression; liblzma5 C library is not loaded at runtime"
     }
   ],
-  "timestamp": "2026-06-15T17:15:39Z"
+  "timestamp": "2026-06-16T21:34:34Z"
 }
