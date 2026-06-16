@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-526537cd2383d14cf5a2b9b83e917ac379a76bec14ee5ef21d711c21a2f4ca0c",
+  "@id": "https://openvex.dev/docs/public/vex-8006146e2166c1c249d70fd8bebe3cf3c6c8538aa75912be318c62a9824698b8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -10099,6 +10099,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-29181"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/server/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/go.opentelemetry.io/otel@v1.40.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "etcd does not invoke the affected otel baggage header parsing path; tracing is gRPC-only and disabled by default. Previously VEXed in earlier hardened-etcd releases."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-32282",
         "aliases": [
           "GO-2026-4864"
@@ -18198,6 +18216,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39883"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/server/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/go.opentelemetry.io/otel/sdk@v1.40.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "CVE-2026-39883 affects macOS/darwin only; this image ships Linux binaries."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499",
         "aliases": [
           "GO-2026-4977"
@@ -21851,5 +21887,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-06-08T19:57:37Z"
+  "timestamp": "2026-06-16T16:44:51Z"
 }
