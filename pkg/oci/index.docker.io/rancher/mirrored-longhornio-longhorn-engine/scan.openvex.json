@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1ab18392fb2f036b4d97e8d694b51e6f82271b611982ee4f5d4f9bb5cbcef26f",
+  "@id": "https://openvex.dev/docs/public/vex-764ca69f62c58aa00c04233bce9907de61772b7c44a57becce2b1aa575cf7ae4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1008,7 +1008,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go-based storage engine performs block I/O via gRPC; Avahi mDNS library is never called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2385-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn engine handles block-level replication; no SCSI persistent-reservation operations; qemu-pr-helper unused"
     }
   ],
-  "timestamp": "2026-06-09T18:46:14Z"
+  "timestamp": "2026-06-16T16:18:19Z"
 }

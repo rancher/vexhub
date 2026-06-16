@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-021e5db9fcc9d0596119f8ca26b4fe616dc805de9405c76a01ff686471b48ca6",
+  "@id": "https://openvex.dev/docs/public/vex-02279c20c0d192196d9aca04c0de9d9612a2454f28137593d5c8da93f9a56c47",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1494,7 +1494,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Longhorn engine is a Go block-replication binary; xz/lzma unused in block I/O; incidental SLES dep"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2385-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.rancher.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn block storage engine does not run VMs; qemu-vmsr-helper AMD MSR daemon is never invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-10T12:05:37Z"
+  "timestamp": "2026-06-16T16:18:20Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-678642cdb0ccef61828dfb7655074c426f381471f6e89c6bf8dc83a8e3c2c340",
+  "@id": "https://openvex.dev/docs/public/vex-764ca69f62c58aa00c04233bce9907de61772b7c44a57becce2b1aa575cf7ae4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -4096,6 +4096,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33997"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd/v2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v27.3.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RKE2 does not use the Docker CLI or auth/credential plugins, so the affected code path is not invoked."
     },
     {
       "vulnerability": {
@@ -10843,7 +10861,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46680"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd/v2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/containerd/containerd/v2@v2.3.1-k3s1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Fixed in containerd 2.3.1; this image ships containerd 2.3.1-k3s1 which contains the fix, but semver ranks the -k3s1 suffix below 2.3.1, causing a false positive."
     }
   ],
-  "timestamp": "2026-06-08T19:57:36Z"
+  "timestamp": "2026-06-16T16:18:19Z"
 }

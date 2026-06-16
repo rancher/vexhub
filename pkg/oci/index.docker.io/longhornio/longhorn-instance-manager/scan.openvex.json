@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2d3ae488d98e595e7ea2873b87385026847866435c63dab3c3fc2d83452e0381",
+  "@id": "https://openvex.dev/docs/public/vex-764ca69f62c58aa00c04233bce9907de61772b7c44a57becce2b1aa575cf7ae4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1458,7 +1458,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2385-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn instance manager manages storage replicas; qemu-vmsr-helper AMD MSR daemon is not in execute path"
     }
   ],
-  "timestamp": "2026-06-15T17:15:38Z"
+  "timestamp": "2026-06-16T16:18:19Z"
 }

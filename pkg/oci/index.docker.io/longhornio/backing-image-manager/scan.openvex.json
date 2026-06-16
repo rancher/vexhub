@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8d57d9ed1c8a276cc4a5fe57b6334242eced5ca79a1111d8c90996e7923ff797",
+  "@id": "https://openvex.dev/docs/public/vex-02279c20c0d192196d9aca04c0de9d9612a2454f28137593d5c8da93f9a56c47",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1746,7 +1746,43 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "backing-image-manager is a Go binary; sed is a CLI tool never invoked by the container entrypoint"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2385-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn backing-image-manager transfers disk images only; SCSI persistent-reservation daemon qemu-pr-helper unused"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2386-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn backing-image-manager transfers disk images only; SCSI persistent-reservation daemon qemu-pr-helper unused"
     }
   ],
-  "timestamp": "2026-06-12T17:41:19Z"
+  "timestamp": "2026-06-16T16:18:20Z"
 }
