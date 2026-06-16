@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-39b1267722f1efd6fe030d93535fa0c52f3875dea21b1e33c3488a14219939e0",
+  "@id": "https://openvex.dev/docs/public/vex-821ea8e5a276e4217abaeb15fe88d737255615d0592ad84081625d7c7a5546b5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -129,6 +129,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=registry.rancher.com/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go GitOps controller; does not manage hardware devices, libudev not used"
     },
     {
       "vulnerability": {
@@ -633,6 +651,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=registry.rancher.com/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based GitOps controller; does not access block device IDs at runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0309-1"
       },
       "products": [
@@ -849,6 +885,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=registry.rancher.com/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go GitOps controller; does not manage hardware devices, libudev not used"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1065-1"
       },
       "products": [
@@ -864,6 +918,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Fleet agent is pure Go using embedded BoltDB; SQLite C library not used"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1074-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=registry.rancher.com/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based GitOps controller; Go net/http handles HTTP/2 natively"
     },
     {
       "vulnerability": {
@@ -957,6 +1029,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1350-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=registry.rancher.com/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based GitOps controller; Go net/http handles HTTP/2 natively"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1352-1"
       },
       "products": [
@@ -990,6 +1080,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "FIPS provider not activated; pure-Go Fleet binary does not load system OpenSSL FIPS module"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=registry.rancher.com/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based GitOps controller; does not access block device IDs at runtime"
     },
     {
       "vulnerability": {
@@ -1118,5 +1226,5 @@
       "impact_statement": "Go uses net/http; system libcurl C library is not called"
     }
   ],
-  "timestamp": "2026-06-01T12:54:27Z"
+  "timestamp": "2026-06-16T21:34:34Z"
 }

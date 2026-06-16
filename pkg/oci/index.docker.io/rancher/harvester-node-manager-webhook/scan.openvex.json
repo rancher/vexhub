@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-99bc07d7f784297da4ba261451c91be0dd7d5bdf300405956d9f185f66784b35",
+  "@id": "https://openvex.dev/docs/public/vex-5f18e0a98228ff82879b5f2de4df6cce9e21ff8c174d71dc9841bdb43bf96c2b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -352,6 +352,24 @@
           "@id": "pkg:oci/harvester-node-manager-webhook?repository_url=index.docker.io/rancher/harvester-node-manager-webhook",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go K8s webhook; Go uses own UUID library, system libuuid not needed"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-manager-webhook?repository_url=index.docker.io/rancher/harvester-node-manager-webhook",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/util-linux"
             }
           ]
@@ -488,5 +506,5 @@
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime"
     }
   ],
-  "timestamp": "2026-05-23T00:54:36Z"
+  "timestamp": "2026-06-16T21:34:33Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a03aaf0dc819537b44b62d991dd596540e05b40b9c1a5d6a2bc7d023d0872d33",
+  "@id": "https://openvex.dev/docs/public/vex-5f18e0a98228ff82879b5f2de4df6cce9e21ff8c174d71dc9841bdb43bf96c2b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -348,6 +348,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go CDI K8s controller; manages K8s objects not hardware, libudev not used"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1177-1"
       },
       "products": [
@@ -491,5 +509,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-05-29T11:54:23Z"
+  "timestamp": "2026-06-16T21:34:33Z"
 }
