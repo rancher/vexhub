@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-04e8ad1937295aeed37d9dbda7919aebf9793ec5d7af4ac5a59ea960e6a5c4b6",
+  "@id": "https://openvex.dev/docs/public/vex-e960a183e30d3579e2b7c9a7620820280f5a9baab21114a3e840b54908ccd29d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -684,7 +684,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "VM import controller is a Go binary; it calls external tools for image conversion, not liblzma5 C API"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2385-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=registry.suse.com/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "VM import controller converts disk images via qemu-img; qemu-vmsr-helper AMD MSR daemon is never started"
     }
   ],
-  "timestamp": "2026-06-11T16:51:28Z"
+  "timestamp": "2026-06-16T16:44:50Z"
 }
