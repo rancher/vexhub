@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-04e8ad1937295aeed37d9dbda7919aebf9793ec5d7af4ac5a59ea960e6a5c4b6",
+  "@id": "https://openvex.dev/docs/public/vex-8006146e2166c1c249d70fd8bebe3cf3c6c8538aa75912be318c62a9824698b8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -900,7 +900,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "sed is a CLI text-processing tool; not executed by the Go backing-image-manager binary at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2385-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.suse.com/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn backing-image-manager handles image download/upload; qemu-vmsr-helper AMD MSR daemon not invoked"
     }
   ],
-  "timestamp": "2026-06-11T16:51:28Z"
+  "timestamp": "2026-06-16T16:44:51Z"
 }

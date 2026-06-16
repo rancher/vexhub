@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-866301686ac41aac6543a16d28e3814e2e39bad4e5a2e8eba326d65d753fd71f",
+  "@id": "https://openvex.dev/docs/public/vex-fc67e8336361009b8483b7013a3adb0ab1a2f4e5ea1875eed196471dff79c604",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3792,6 +3792,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/cri-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CRI gRPC client using insecure credentials; no TLS connections; crypto/x509 not in execute path"
     },
     {
       "vulnerability": {
@@ -8996,7 +9014,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/cri-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure gRPC tool; no HTTP/1.1 used; net/textproto not imported or called in any execute path"
     }
   ],
-  "timestamp": "2026-06-10T20:22:48Z"
+  "timestamp": "2026-06-16T16:44:52Z"
 }
