@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-165626ab1730c99d33a1a52d53442a1f322d7cbeab1110211e94320c59bf99cf",
+  "@id": "https://openvex.dev/docs/public/vex-4ea325b3ffaf680c3a8f6294abe4690d99a4b9c4996fee595a68bfba3f169dea",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -39,6 +39,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go CDI upload proxy; libelf1 (ELF parsing) is not used by the Go binary at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadproxy is a Go binary; Perl interpreter is not invoked at runtime"
     },
     {
       "vulnerability": {
@@ -470,5 +488,5 @@
       "impact_statement": "CDI uploadproxy is a Go binary; liblzma5 C library is not loaded at runtime"
     }
   ],
-  "timestamp": "2026-06-02T01:16:55Z"
+  "timestamp": "2026-06-17T12:35:04Z"
 }

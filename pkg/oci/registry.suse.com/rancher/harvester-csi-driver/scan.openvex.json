@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ac1ebeddedaa2d527cac7b93a0a23ff9180ee1319f1761fbc1ab1ac6d2cc6c3d",
+  "@id": "https://openvex.dev/docs/public/vex-4ea325b3ffaf680c3a8f6294abe4690d99a4b9c4996fee595a68bfba3f169dea",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1587,6 +1587,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21197-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex utility is not invoked by the Go-based Harvester CSI driver"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21428-1"
       },
       "products": [
@@ -1695,6 +1713,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21859-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex utility is not invoked by the Go-based Harvester CSI driver"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2236-1"
       },
       "products": [
@@ -1730,5 +1766,5 @@
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-06-16T21:34:32Z"
+  "timestamp": "2026-06-17T12:35:04Z"
 }

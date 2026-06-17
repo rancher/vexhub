@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e960a183e30d3579e2b7c9a7620820280f5a9baab21114a3e840b54908ccd29d",
+  "@id": "https://openvex.dev/docs/public/vex-4ea325b3ffaf680c3a8f6294abe4690d99a4b9c4996fee595a68bfba3f169dea",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -240,6 +240,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:02384-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "jq JSON CLI tool is not invoked by the Go-based Longhorn engine binary"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:02447-1"
       },
       "products": [
@@ -468,6 +486,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02915-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "jq JSON CLI tool is not invoked by the Go-based Longhorn engine binary"
     },
     {
       "vulnerability": {
@@ -1497,6 +1533,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2283-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "jq JSON CLI tool is not invoked by the Go-based Longhorn engine binary"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2385-1"
       },
       "products": [
@@ -1514,5 +1568,5 @@
       "impact_statement": "Longhorn block storage engine does not run VMs; qemu-vmsr-helper AMD MSR daemon is never invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-16T16:44:50Z"
+  "timestamp": "2026-06-17T12:35:04Z"
 }
