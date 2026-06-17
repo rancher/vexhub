@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f07e3824184187d208ae6463ce90f92bb41a936b6ca9acb55ed5897577d5e060",
+  "@id": "https://openvex.dev/docs/public/vex-4ea325b3ffaf680c3a8f6294abe4690d99a4b9c4996fee595a68bfba3f169dea",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -93,6 +93,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02167-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui is an nginx frontend serving static files; nginx does not use GLib"
     },
     {
       "vulnerability": {
@@ -381,6 +399,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:3875-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxslt1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui serves static Vue.js files via nginx; XSLT library is not used"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:4236-1"
       },
       "products": [
@@ -414,6 +450,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhorn-ui is nginx serving static assets; libcurl4 C library is not invoked at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui is an nginx frontend serving static files; nginx does not use GLib"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui is an nginx frontend serving static files; nginx does not use GLib"
     },
     {
       "vulnerability": {
@@ -687,6 +759,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui is an nginx frontend serving static files; nginx does not use GLib"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -774,6 +864,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0801-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxslt1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui serves static Vue.js files via nginx; XSLT library is not used"
     },
     {
       "vulnerability": {
@@ -1190,5 +1298,5 @@
       "impact_statement": "longhorn-ui is nginx serving static assets; libcurl4 C library is not invoked at runtime"
     }
   ],
-  "timestamp": "2026-05-31T11:52:05Z"
+  "timestamp": "2026-06-17T12:35:04Z"
 }

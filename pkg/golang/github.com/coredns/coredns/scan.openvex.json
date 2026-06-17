@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4b17e02c6e83b9d4f368f71376e5404ca5b1373d1a72a8c5b70baeacfe815bfa",
+  "@id": "https://openvex.dev/docs/public/vex-4ea325b3ffaf680c3a8f6294abe4690d99a4b9c4996fee595a68bfba3f169dea",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -17808,6 +17808,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/coredns/coredns",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CoreDNS processes DNS packets only; no MIME encoded-word header decoding; mime.WordDecoder unused"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -19382,5 +19400,5 @@
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
     }
   ],
-  "timestamp": "2026-06-04T17:03:53Z"
+  "timestamp": "2026-06-17T12:35:04Z"
 }

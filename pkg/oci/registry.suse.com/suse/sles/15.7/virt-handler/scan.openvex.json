@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fc367b3f582d80dd730a44274de2d6a014d2c2b0feb5c673addf39fbe58007f0",
+  "@id": "https://openvex.dev/docs/public/vex-4ea325b3ffaf680c3a8f6294abe4690d99a4b9c4996fee595a68bfba3f169dea",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-handler?repository_url=registry.suse.com/suse/sles/15.7/virt-handler",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libdw1 DWARF debug library is not invoked by virt-handler VM management code"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02536-1"
@@ -216,6 +234,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "KubeVirt virt-handler is a Go daemon; it does not use Kerberos authentication"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-handler?repository_url=registry.suse.com/suse/sles/15.7/virt-handler",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libdw1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libdw1 DWARF debug library is not invoked by virt-handler VM management code"
     },
     {
       "vulnerability": {
@@ -596,5 +632,5 @@
       "impact_statement": "virt-handler is a Go daemon; sed is an incidental SLES CLI utility never invoked by the Go entrypoint"
     }
   ],
-  "timestamp": "2026-06-02T01:16:54Z"
+  "timestamp": "2026-06-17T12:35:04Z"
 }

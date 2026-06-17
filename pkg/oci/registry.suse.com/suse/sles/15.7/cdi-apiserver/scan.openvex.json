@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-5f18e0a98228ff82879b5f2de4df6cce9e21ff8c174d71dc9841bdb43bf96c2b",
+  "@id": "https://openvex.dev/docs/public/vex-35424e4096cc006eccc23c7931754b3fa66ffc9e1f05c648674f65c462b4d322",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -723,7 +723,25 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI apiserver is a Go binary; sed CLI stream editor is not invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-16T21:34:33Z"
+  "timestamp": "2026-06-17T12:35:05Z"
 }

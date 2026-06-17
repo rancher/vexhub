@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cd310e0a5bf0276f3fba783c4123d2b8d6868d1a6fdda6c7b4eab35ff674d630",
+  "@id": "https://openvex.dev/docs/public/vex-4ea325b3ffaf680c3a8f6294abe4690d99a4b9c4996fee595a68bfba3f169dea",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02167-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadserver is a Go binary; GLib module loading (libgmodule) is not invoked"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02229-1"
@@ -129,6 +147,60 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:1367-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadserver is a Go binary; GLib module loading (libgmodule) is not invoked"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadserver is a Go binary; GLib module loading (libgmodule) is not invoked"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadserver is a Go binary; GLib module loading (libgmodule) is not invoked"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0215-1"
       },
       "products": [
@@ -144,6 +216,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadserver is a Go binary; GLib module loading (libgmodule) is not invoked"
     },
     {
       "vulnerability": {
@@ -182,5 +272,5 @@
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-05-18T02:18:18Z"
+  "timestamp": "2026-06-17T12:35:04Z"
 }
