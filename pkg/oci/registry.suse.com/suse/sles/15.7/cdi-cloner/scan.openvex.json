@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-821ea8e5a276e4217abaeb15fe88d737255615d0592ad84081625d7c7a5546b5",
+  "@id": "https://openvex.dev/docs/public/vex-35424e4096cc006eccc23c7931754b3fa66ffc9e1f05c648674f65c462b4d322",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-cloner?repository_url=registry.suse.com/suse/sles/15.7/cdi-cloner",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI cloner is a Go binary; libelf1 ELF parsing library is not invoked at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02672-1"
@@ -147,6 +165,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go CDI cloner uses crypto/tls; OpenSSL C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-cloner?repository_url=registry.suse.com/suse/sles/15.7/cdi-cloner",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI cloner is a Go binary; libelf1 ELF parsing library is not invoked at runtime"
     },
     {
       "vulnerability": {
@@ -437,5 +473,5 @@
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path"
     }
   ],
-  "timestamp": "2026-06-16T21:34:34Z"
+  "timestamp": "2026-06-17T12:35:05Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ac1ebeddedaa2d527cac7b93a0a23ff9180ee1319f1761fbc1ab1ac6d2cc6c3d",
+  "@id": "https://openvex.dev/docs/public/vex-35424e4096cc006eccc23c7931754b3fa66ffc9e1f05c648674f65c462b4d322",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -948,6 +948,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgobject-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "hardened-flannel is a Go CNI plugin; GObject C library is not used by Go code"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:4323-1"
       },
       "products": [
@@ -1053,6 +1071,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Pure Go Flannel CNI plugin; GLib C library not used by Go networking code"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgobject-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "hardened-flannel is a Go CNI plugin; GObject C library is not used by Go code"
     },
     {
       "vulnerability": {
@@ -1323,6 +1359,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Pure Go Flannel CNI plugin; GLib C library not used by Go networking code"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgobject-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "hardened-flannel is a Go CNI plugin; GObject C library is not used by Go code"
     },
     {
       "vulnerability": {
@@ -1919,5 +1973,5 @@
       "impact_statement": "Flannel is a Go binary using crypto/tls; system libgnutls30 is never invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-16T21:34:32Z"
+  "timestamp": "2026-06-17T12:35:05Z"
 }

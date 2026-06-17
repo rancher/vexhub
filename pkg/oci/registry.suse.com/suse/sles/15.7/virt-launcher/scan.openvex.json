@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fc67e8336361009b8483b7013a3adb0ab1a2f4e5ea1875eed196471dff79c604",
+  "@id": "https://openvex.dev/docs/public/vex-35424e4096cc006eccc23c7931754b3fa66ffc9e1f05c648674f65c462b4d322",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1011,6 +1011,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2364-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/xen-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeVirt virt-launcher uses KVM/QEMU, not Xen; xen-libs not in the execution path"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2385-1"
       },
       "products": [
@@ -1064,5 +1082,5 @@
       "impact_statement": "VGA BIOS ROM is firmware loaded inside guest VMs; it is never executed in the container process space"
     }
   ],
-  "timestamp": "2026-06-16T16:44:52Z"
+  "timestamp": "2026-06-17T12:35:05Z"
 }
