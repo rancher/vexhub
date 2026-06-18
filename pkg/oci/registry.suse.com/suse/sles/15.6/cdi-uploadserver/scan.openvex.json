@@ -1,9 +1,27 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4ea325b3ffaf680c3a8f6294abe4690d99a4b9c4996fee595a68bfba3f169dea",
+  "@id": "https://openvex.dev/docs/public/vex-7b38d29fecb9296bb14ff17dff05aa641dba312dffa8b9c53eb5148577ee4469",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02027-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cdi-uploadserver is a Go HTTP service; Perl interpreter is not invoked at runtime"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02167-1"
@@ -272,5 +290,5 @@
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-06-17T12:35:04Z"
+  "timestamp": "2026-06-18T10:45:44Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-35424e4096cc006eccc23c7931754b3fa66ffc9e1f05c648674f65c462b4d322",
+  "@id": "https://openvex.dev/docs/public/vex-5d8bcd711949f543489446d802f333406dfdfc5cf8aec59ad8b1f815588d94a8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1119,6 +1119,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0816-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.rancher.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/virtiofsd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virtiofsd shares host filesystems with VMs; longhorn-engine manages block volumes, not VM filesystems"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0819-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.rancher.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/virtiofsd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virtiofsd shares host filesystems with VMs; longhorn-engine manages block volumes, not VM filesystems"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0832-1"
       },
       "products": [
@@ -1568,5 +1604,5 @@
       "impact_statement": "Longhorn block storage engine does not run VMs; qemu-vmsr-helper AMD MSR daemon is never invoked at runtime"
     }
   ],
-  "timestamp": "2026-06-17T12:35:05Z"
+  "timestamp": "2026-06-18T10:45:43Z"
 }

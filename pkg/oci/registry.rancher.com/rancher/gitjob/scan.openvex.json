@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ebc98e2fef9e9c750896e28a05da015ce285da8c7e55e2cd48288e8ac8fb57e8",
+  "@id": "https://openvex.dev/docs/public/vex-5d8bcd711949f543489446d802f333406dfdfc5cf8aec59ad8b1f815588d94a8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -201,6 +201,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2024:3360-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.rancher.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/container-suseconnect"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SUSE subscription registration tool never executed at container runtime; gitjob is a Go binary"
     },
     {
       "vulnerability": {
@@ -956,5 +974,5 @@
       "impact_statement": "gitjob is a Go-based operator using Go crypto/ssh; system openssh-fips binary is not executed at runtime"
     }
   ],
-  "timestamp": "2026-05-28T11:38:41Z"
+  "timestamp": "2026-06-18T10:45:43Z"
 }
