@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4ea325b3ffaf680c3a8f6294abe4690d99a4b9c4996fee595a68bfba3f169dea",
+  "@id": "https://openvex.dev/docs/public/vex-5d8bcd711949f543489446d802f333406dfdfc5cf8aec59ad8b1f815588d94a8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -648,6 +648,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "binutils assembler/linker tools are not invoked by the Longhorn instance manager"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4096-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libctf-nobfd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libctf is a binutils debug-format library; not in execute path of Longhorn storage daemon"
     },
     {
       "vulnerability": {
@@ -1802,5 +1820,5 @@
       "impact_statement": "libopenssl-3-devel provides headers only; runtime uses libopenssl3 shared library"
     }
   ],
-  "timestamp": "2026-06-17T12:35:04Z"
+  "timestamp": "2026-06-18T10:45:43Z"
 }
