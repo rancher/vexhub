@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4ea325b3ffaf680c3a8f6294abe4690d99a4b9c4996fee595a68bfba3f169dea",
+  "@id": "https://openvex.dev/docs/public/vex-7b38d29fecb9296bb14ff17dff05aa641dba312dffa8b9c53eb5148577ee4469",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -360,6 +360,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhorn-instance-manager is a Go binary; Kerberos libraries are not in the execute path"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4096-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/binutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "binutils assembler/linker tools are not invoked by the Longhorn instance manager"
     },
     {
       "vulnerability": {
@@ -1352,5 +1370,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-06-17T12:35:04Z"
+  "timestamp": "2026-06-18T10:45:44Z"
 }
