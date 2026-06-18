@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ac1ebeddedaa2d527cac7b93a0a23ff9180ee1319f1761fbc1ab1ac6d2cc6c3d",
+  "@id": "https://openvex.dev/docs/public/vex-7b38d29fecb9296bb14ff17dff05aa641dba312dffa8b9c53eb5148577ee4469",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -921,6 +921,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0288-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.suse.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "qemu-vmsr-helper handles QEMU VM status registers; backing-image-manager is a Go disk image service"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0309-1"
       },
       "products": [
@@ -1080,6 +1098,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "qemu-pr-helper handles SCSI persistent reservations for QEMU; backing-image-manager does not run VMs"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0445-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.suse.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "qemu-vmsr-helper handles QEMU VM status registers; backing-image-manager is a Go disk image service"
     },
     {
       "vulnerability": {
@@ -1296,6 +1332,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "qemu-pr-helper handles SCSI persistent reservations for QEMU; backing-image-manager does not run VMs"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0832-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.suse.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "qemu-vmsr-helper handles QEMU VM status registers; backing-image-manager is a Go disk image service"
     },
     {
       "vulnerability": {
@@ -1803,6 +1857,24 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2385-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.suse.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "qemu-vmsr-helper handles QEMU VM status registers; backing-image-manager is a Go disk image service"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2386-1"
       },
       "products": [
@@ -1820,5 +1892,5 @@
       "impact_statement": "Longhorn backing-image-manager transfers disk images only; SCSI persistent-reservation daemon qemu-pr-helper unused"
     }
   ],
-  "timestamp": "2026-06-16T21:34:32Z"
+  "timestamp": "2026-06-18T10:45:44Z"
 }
