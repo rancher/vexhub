@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a293fa1b81455f821270ab5f874126c7312e29b670a642d4781aa10fca3240d8",
+  "@id": "https://openvex.dev/docs/public/vex-a8d252bad40dc608901a13c7c0d5c1fd04b3f55cbce600defb258fa087ece594",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -183,6 +183,42 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4308-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.6/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glib2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glib2-tools provides compile-time utilities (compile-schemas, genmarshal); never invoked by libguestfs runtime"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.6/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glib2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glib2-tools provides compile-time utilities (compile-schemas, genmarshal); never invoked by libguestfs runtime"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0022-1"
       },
       "products": [
@@ -216,6 +252,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.6/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glib2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glib2-tools provides compile-time utilities (compile-schemas, genmarshal); never invoked by libguestfs runtime"
     },
     {
       "vulnerability": {
@@ -326,5 +380,5 @@
       "impact_statement": "libguestfs-tools accesses disk images; HTTP/2 library libnghttp2 not in execute path"
     }
   ],
-  "timestamp": "2026-06-02T11:03:35Z"
+  "timestamp": "2026-06-19T12:36:43Z"
 }

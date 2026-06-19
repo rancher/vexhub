@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-5d8bcd711949f543489446d802f333406dfdfc5cf8aec59ad8b1f815588d94a8",
+  "@id": "https://openvex.dev/docs/public/vex-4f32fa81ec5b64aa46561b79cc6ea405f25376141ada173dddd7289f2419c315",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -378,6 +378,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "binutils assembler/linker tools are not invoked by the Longhorn instance manager"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4096-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libctf-nobfd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libctf-nobfd0 is a binutils debug-symbol library; Longhorn instance manager never invokes binary analysis tools"
     },
     {
       "vulnerability": {
@@ -1370,5 +1388,5 @@
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency"
     }
   ],
-  "timestamp": "2026-06-18T10:45:43Z"
+  "timestamp": "2026-06-19T12:36:42Z"
 }
