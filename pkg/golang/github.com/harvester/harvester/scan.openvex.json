@@ -1,12 +1,48 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-526537cd2383d14cf5a2b9b83e917ac379a76bec14ee5ef21d711c21a2f4ca0c",
+  "@id": "https://openvex.dev/docs/public/vex-4f32fa81ec5b64aa46561b79cc6ea405f25376141ada173dddd7289f2419c315",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
     {
       "vulnerability": {
         "name": "CVE-2019-11881"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20240919204204-3da2ae0cabd1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The commit version of the dependency in use doesn't have the vulnerable code"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2019-11881"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20250828140533-07a90f09a491"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester doesn't use the Rancher login component."
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2019-12274"
       },
       "products": [
         {
@@ -31,14 +67,14 @@
           "@id": "pkg:golang/github.com/harvester/harvester",
           "subcomponents": [
             {
-              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20240919204204-3da2ae0cabd1"
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20250828140533-07a90f09a491"
             }
           ]
         }
       ],
       "status": "not_affected",
-      "justification": "vulnerable_code_not_present",
-      "impact_statement": "The commit version of the dependency in use doesn't have the vulnerable code"
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester uses Rancher as a client-side Go package to invoke Rancher/Cattle API. It doesn't expose the Rancher management plane."
     },
     {
       "vulnerability": {
@@ -3800,6 +3836,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2021-25313"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20250828140533-07a90f09a491"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester uses Rancher as a client-side Go package to invoke Rancher/Cattle API. It doesn't run the Rancher API server."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2021-36775"
       },
       "products": [
@@ -3815,6 +3869,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
       "impact_statement": "The commit version of the dependency in use doesn't have the vulnerable code"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2021-36775"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20250828140533-07a90f09a491"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester uses Rancher as a client-side Go package to invoke Rancher/Cattle API. It doesn't use the group based authentication."
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2023-32199"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20250828140533-07a90f09a491"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester uses Rancher as a client-side Go package to invoke Rancher/Cattle API. It doesn't use the GlobalRole API."
     },
     {
       "vulnerability": {
@@ -4167,6 +4257,24 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-58269"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20250828140533-07a90f09a491"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester uses Rancher as a client-side Go package to invoke Rancher/Cattle API. It doesn't generates any server-side audit logs."
     },
     {
       "vulnerability": {
@@ -9596,6 +9704,24 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-67601"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20250828140533-07a90f09a491"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester doesn't use the Rancher CLI."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-24051"
       },
       "products": [
@@ -11994,6 +12120,42 @@
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33997"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v25.0.6+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester doesn't use any Docker plugins. This package is an indirect dependency of Helm which Harvester uses only to examine chart configuration."
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34040"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v25.0.6+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester doesn't use Docker/Moby's Authz plugin to access the Docker Engine API internally. This package is an indirect dependency of Helm which Harvester uses only to examine chart configuration."
     },
     {
       "vulnerability": {
@@ -15819,6 +15981,60 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-41567"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v25.0.6+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester doesn't use Docker's `/containers/{id}/archive` API. This package is an indirect dependency of Helm which Harvester uses only to examine chart configuration."
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41568"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v25.0.6+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester doesn't use Docker's `/containers/{id}/archive` API. This package is an indirect dependency of Helm which Harvester uses only to examine chart configuration."
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42306"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v25.0.6+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester doesn't use Docker's `/containers/{id}/archive` API. This package is an indirect dependency of Helm which Harvester uses only to examine chart configuration."
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499"
       },
       "products": [
@@ -18122,5 +18338,5 @@
       "impact_statement": "The commit version of the dependency in use doesn't have the vulnerable code"
     }
   ],
-  "timestamp": "2026-06-08T19:57:37Z"
+  "timestamp": "2026-06-19T12:36:42Z"
 }
