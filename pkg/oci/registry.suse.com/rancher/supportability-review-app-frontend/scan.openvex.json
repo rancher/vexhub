@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-d9dac93be83eedaa85404d6228ba3e7ea43d85092c47994bda09544eefda6041",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -276,6 +276,25 @@
           "@id": "pkg:oci/supportability-review-app-frontend?repository_url=registry.suse.com/rancher/supportability-review-app-frontend",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Web frontend app never calls terminal column formatting lib; libsmartcols1 is an incidental util-linux dep",
+      "timestamp": "2026-06-22T13:13:33Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-app-frontend?repository_url=registry.suse.com/rancher/supportability-review-app-frontend",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libuuid1"
             }
           ]
@@ -382,5 +401,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-22T17:47:03Z"
 }
