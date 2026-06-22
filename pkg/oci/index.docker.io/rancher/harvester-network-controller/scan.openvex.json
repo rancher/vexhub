@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-6011e20cf1f879222085032275a2c6e6655846f487dc36e7e07dba7fab30c004",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -599,6 +599,25 @@
           "@id": "pkg:oci/harvester-network-controller?repository_url=index.docker.io/rancher/harvester-network-controller",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Network controller manages OVN/OVS networking only; libfdisk1 disk-partitioning code never called",
+      "timestamp": "2026-06-22T13:13:33Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=index.docker.io/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libsmartcols1"
             }
           ]
@@ -781,5 +800,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-22T18:28:53Z"
 }
