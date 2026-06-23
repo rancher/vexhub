@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-69f5a90ca1602ae16c8213f6e33bce8108d636426ac6fa7228283803b50383a9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -133,7 +133,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go Prometheus exporter; sed CLI tool is not invoked by the Go binary entrypoint",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2464-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-prometheus-exporter?repository_url=registry.rancher.com/rancher/neuvector-prometheus-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python313-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "python313-devel contains only build-time development headers; not loaded or executed at runtime",
+      "timestamp": "2026-06-23T02:06:01Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-23T10:35:16Z"
 }
