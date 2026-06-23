@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3a139599a2dd0a52e5a4177715db68d8642e77fb255f968064f124aa1a843a2f",
+  "@id": "https://openvex.dev/docs/public/vex-21d502349faf2800be75c758d5932707da6bd2327c8072680ce8ac67f2e2106d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,6 +22,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "SSH CLI not invoked by Go entrypoint; Go uses crypto/ssh",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:01638-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=index.docker.io/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher/machine uses golang.org/x/crypto/ssh for SSH; system openssh binary is not invoked",
+      "timestamp": "2026-06-23T13:35:04Z"
     },
     {
       "vulnerability": {
@@ -98,6 +117,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=index.docker.io/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Docker Machine provisions cloud VMs via provider APIs; libudev1 for local device events is not used",
+      "timestamp": "2026-06-23T13:35:04Z"
     },
     {
       "vulnerability": {
@@ -222,6 +260,25 @@
           "@id": "pkg:oci/machine?repository_url=index.docker.io/rancher/machine",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher/machine uses golang.org/x/crypto/ssh for SSH; system openssh binary is not invoked",
+      "timestamp": "2026-06-23T13:35:04Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0585-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=index.docker.io/rancher/machine",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssh-fips"
             }
           ]
@@ -298,6 +355,25 @@
           "@id": "pkg:oci/machine?repository_url=index.docker.io/rancher/machine",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher/machine uses golang.org/x/crypto/ssh for SSH; system openssh binary is not invoked",
+      "timestamp": "2026-06-23T13:35:04Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4067-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=index.docker.io/rancher/machine",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssh-fips"
             }
           ]
@@ -326,6 +402,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/tls; libopenssl3 C library is not loaded by Go at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=index.docker.io/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Docker Machine provisions cloud VMs via provider APIs; libudev1 for local device events is not used",
+      "timestamp": "2026-06-23T13:35:04Z"
     },
     {
       "vulnerability": {
@@ -564,6 +659,25 @@
           "@id": "pkg:oci/machine?repository_url=index.docker.io/rancher/machine",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher/machine uses golang.org/x/crypto/ssh for SSH; system openssh binary is not invoked",
+      "timestamp": "2026-06-23T13:35:04Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1876-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=index.docker.io/rancher/machine",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssh-fips"
             }
           ]
@@ -573,7 +687,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "OpenSSH FIPS CLI not invoked by Go entrypoint; Go uses crypto/ssh",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2371-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=index.docker.io/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher/machine uses golang.org/x/crypto/ssh for SSH; system openssh binary is not invoked",
+      "timestamp": "2026-06-23T13:35:04Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:34Z"
+  "timestamp": "2026-06-23T15:28:16Z"
 }
