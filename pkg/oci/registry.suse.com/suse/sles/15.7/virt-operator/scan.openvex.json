@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3a139599a2dd0a52e5a4177715db68d8642e77fb255f968064f124aa1a843a2f",
+  "@id": "https://openvex.dev/docs/public/vex-6920f64e4314dfebd6cec035a3a903ee974ef9eeec50e5ebebe0554f45096ad2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -307,6 +307,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-operator?repository_url=registry.suse.com/suse/sles/15.7/virt-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID C library not used by Go-based KubeVirt operator; Go generates UUIDs natively",
+      "timestamp": "2026-06-23T02:06:01Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0373-1"
       },
       "products": [
@@ -478,6 +497,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-operator?repository_url=registry.suse.com/suse/sles/15.7/virt-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID C library not used by Go-based KubeVirt operator; Go generates UUIDs natively",
+      "timestamp": "2026-06-23T02:06:01Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -553,5 +591,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:34Z"
+  "timestamp": "2026-06-23T10:35:17Z"
 }

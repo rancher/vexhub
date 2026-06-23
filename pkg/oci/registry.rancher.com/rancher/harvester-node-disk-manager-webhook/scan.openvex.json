@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-6920f64e4314dfebd6cec035a3a903ee974ef9eeec50e5ebebe0554f45096ad2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1064,7 +1064,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Pure Go admission webhook; libcap2 C library not in execute path",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/xz"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xz CLI compression tool not invoked by Go-based disk manager webhook",
+      "timestamp": "2026-06-23T02:06:01Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-23T10:35:17Z"
 }
