@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6011e20cf1f879222085032275a2c6e6655846f487dc36e7e07dba7fab30c004",
+  "@id": "https://openvex.dev/docs/public/vex-21d502349faf2800be75c758d5932707da6bd2327c8072680ce8ac67f2e2106d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -79,6 +79,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI uploadproxy is a Go binary using net/http; libcurl C library not called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlidec1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadproxy is a pure Go binary; brotli decoder (curl dependency) is not invoked at runtime",
+      "timestamp": "2026-06-23T13:35:04Z"
     },
     {
       "vulnerability": {
@@ -367,6 +386,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0783-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libz1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadproxy is a pure Go proxy; Go compression does not use system libz1 at runtime",
+      "timestamp": "2026-06-23T13:35:04Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0903-1"
       },
       "products": [
@@ -556,5 +594,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-22T18:28:53Z"
+  "timestamp": "2026-06-23T15:28:16Z"
 }

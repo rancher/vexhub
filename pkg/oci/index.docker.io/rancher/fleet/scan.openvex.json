@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-21d502349faf2800be75c758d5932707da6bd2327c8072680ce8ac67f2e2106d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -418,6 +418,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4067-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=index.docker.io/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-clients"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Fleet is a Go GitOps controller; openssh-clients CLI is not invoked by its entrypoint",
+      "timestamp": "2026-06-23T13:35:04Z"
     },
     {
       "vulnerability": {
@@ -1245,6 +1264,25 @@
           "@id": "pkg:oci/fleet?repository_url=index.docker.io/rancher/fleet",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/openssh-clients"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Fleet is a Go GitOps controller; openssh-clients CLI is not invoked by its entrypoint",
+      "timestamp": "2026-06-23T13:35:04Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1876-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=index.docker.io/rancher/fleet",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssh-common"
             }
           ]
@@ -1292,7 +1330,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses net/http; system libcurl C library is not called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2371-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=index.docker.io/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-clients"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Fleet is a Go GitOps controller; openssh-clients CLI is not invoked by its entrypoint",
+      "timestamp": "2026-06-23T13:35:04Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-23T15:28:16Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-69f5a90ca1602ae16c8213f6e33bce8108d636426ac6fa7228283803b50383a9",
+  "@id": "https://openvex.dev/docs/public/vex-166d47e7a32d5d30b9c24d35c093b75071e65986c2bd69b8abcd5eb3c7ec9963",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -95,6 +95,44 @@
       "status": "not_affected",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-cloner?repository_url=registry.suse.com/suse/sles/15.6/cdi-cloner",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlicommon1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI cloner is a Go binary; brotli shared lib (curl dependency) is not loaded at runtime",
+      "timestamp": "2026-06-23T13:35:04Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-cloner?repository_url=registry.suse.com/suse/sles/15.6/cdi-cloner",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlidec1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI cloner is a Go binary; brotli decoder (curl dependency) is not invoked at runtime",
+      "timestamp": "2026-06-23T13:35:04Z"
     },
     {
       "vulnerability": {
@@ -249,5 +287,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-23T10:35:16Z"
+  "timestamp": "2026-06-23T15:28:15Z"
 }
