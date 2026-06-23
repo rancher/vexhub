@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-21d502349faf2800be75c758d5932707da6bd2327c8072680ce8ac67f2e2106d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -136,6 +136,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlicommon1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadserver is Go-based; brotli shared lib (curl dependency) is not invoked at runtime",
+      "timestamp": "2026-06-23T13:35:04Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03369-1"
       },
       "products": [
@@ -171,6 +190,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0401-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.6/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/crypto-policies"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go TLS ignores system crypto-policies; the SLES crypto-policy tool is not invoked at runtime",
+      "timestamp": "2026-06-23T13:35:04Z"
     },
     {
       "vulnerability": {
@@ -306,5 +344,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-23T15:28:16Z"
 }
