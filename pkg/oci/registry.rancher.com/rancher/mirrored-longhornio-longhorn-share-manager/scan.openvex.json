@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-9ad55aa892bf7a348f0453d4f957e3986ccade03e4c5ecf340edcc8189ec00a8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -630,6 +630,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-share-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glibc-devel provides dev headers only; not a runtime library loaded by any process",
+      "timestamp": "2026-06-23T02:06:01Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1375-1"
       },
       "products": [
@@ -760,7 +779,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary uses own compression; liblzma5 C library is not loaded at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2231-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-share-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glibc-devel provides dev headers only; not a runtime library loaded by any process",
+      "timestamp": "2026-06-23T02:06:01Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-23T10:35:18Z"
 }

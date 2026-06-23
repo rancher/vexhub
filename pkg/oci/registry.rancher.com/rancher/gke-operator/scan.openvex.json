@@ -1,0 +1,28 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-6920f64e4314dfebd6cec035a3a903ee974ef9eeec50e5ebebe0554f45096ad2",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gke-operator?repository_url=registry.rancher.com/rancher/gke-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Linux capabilities C library not used by pure-Go GKE operator",
+      "timestamp": "2026-06-23T02:06:01Z"
+    }
+  ],
+  "timestamp": "2026-06-23T10:35:17Z"
+}

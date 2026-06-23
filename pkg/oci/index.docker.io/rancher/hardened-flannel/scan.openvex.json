@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-6920f64e4314dfebd6cec035a3a903ee974ef9eeec50e5ebebe0554f45096ad2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1457,6 +1457,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SQLite C library not used by Go-based flannel CNI networking plugin",
+      "timestamp": "2026-06-23T02:06:01Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -1758,6 +1777,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Flannel uses VXLAN/host-gw, not IPsec; StrongSwan libs are incidental SLES deps, not called at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1065-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=index.docker.io/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SQLite C library not used by Go-based flannel CNI networking plugin",
+      "timestamp": "2026-06-23T02:06:01Z"
     },
     {
       "vulnerability": {
@@ -2083,5 +2121,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-23T10:35:17Z"
 }
