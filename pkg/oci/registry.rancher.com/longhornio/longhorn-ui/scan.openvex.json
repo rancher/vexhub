@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-c0a377f0f46e78605e93a7379bbb30b81c8a5036917c352562722fb16fcac119",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -193,6 +193,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhorn-ui serves static assets via nginx; coreutils CLI tools are not invoked at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02447-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=registry.rancher.com/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn UI is static files served by nginx; nginx does not use libgcrypt for crypto operations",
+      "timestamp": "2026-06-23T13:35:04Z"
     },
     {
       "vulnerability": {
@@ -1370,5 +1389,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-23T15:28:14Z"
 }

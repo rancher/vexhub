@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-69f5a90ca1602ae16c8213f6e33bce8108d636426ac6fa7228283803b50383a9",
+  "@id": "https://openvex.dev/docs/public/vex-21d502349faf2800be75c758d5932707da6bd2327c8072680ce8ac67f2e2106d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -611,6 +611,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/gitjob?repository_url=registry.suse.com/rancher/gitjob",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlicommon1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based K8s job controller uses net/http without brotli; system brotli library not invoked",
+      "timestamp": "2026-06-23T13:35:04Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:03438-1"
       },
       "products": [
@@ -1085,5 +1104,5 @@
       "timestamp": "2026-06-23T02:06:01Z"
     }
   ],
-  "timestamp": "2026-06-23T10:35:16Z"
+  "timestamp": "2026-06-23T15:28:16Z"
 }

@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-c0a377f0f46e78605e93a7379bbb30b81c8a5036917c352562722fb16fcac119",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based storage engine; libelf1 (ELF binary parser) has no role in Longhorn's execution path",
+      "timestamp": "2026-06-23T13:35:04Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-RU-2026:1228-1"
@@ -668,6 +687,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:4092-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libelf1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based storage engine; libelf1 (ELF binary parser) has no role in Longhorn's execution path",
+      "timestamp": "2026-06-23T13:35:04Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:4308-1"
       },
       "products": [
@@ -1276,6 +1314,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1074-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based block storage engine; HTTP/2 is handled by Go stdlib, system libnghttp2 not called",
+      "timestamp": "2026-06-23T13:35:04Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1090-1"
       },
       "products": [
@@ -1406,6 +1463,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1350-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based block storage engine; HTTP/2 is handled by Go stdlib, system libnghttp2 not called",
+      "timestamp": "2026-06-23T13:35:04Z"
     },
     {
       "vulnerability": {
@@ -1693,5 +1769,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-23T15:28:14Z"
 }
