@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fffeacd518fc62eefc14cfaef6595085f4a4117cbf30fbf03def709a497dfe6b",
+  "@id": "https://openvex.dev/docs/public/vex-45afd3653073408a598501064d2fbf496438125f02b89f31587f66cbb0e8ae8e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -23774,6 +23774,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/system-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "System agent for node management never calls mime.WordDecoder.DecodeHeader; no MIME email handling",
+      "timestamp": "2026-06-24T01:34:59Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -27623,5 +27642,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-23T07:21:00Z"
+  "timestamp": "2026-06-24T01:59:55Z"
 }

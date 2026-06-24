@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-549a6ff755466945bbbbddf544e0694f961ba7b2735ecdc468741fbcb3684f20",
+  "@id": "https://openvex.dev/docs/public/vex-64fd1dfe25349faa5378618c80e80607f9d2f3637606c0c586ba09170bc3a48a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -428,6 +428,25 @@
           "@id": "pkg:oci/harvester-pcidevices?repository_url=registry.rancher.com/rancher/harvester-pcidevices",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester PCI-device controller (Go) does not perform block-device discovery; libblkid1 not called",
+      "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=registry.rancher.com/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libfdisk1"
             }
           ]
@@ -741,7 +760,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "PCI device manager is a Go binary; the xz CLI compression tool is not invoked at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=registry.rancher.com/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester PCI-device controller (Go) does not perform block-device discovery; libblkid1 not called",
+      "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-pcidevices?repository_url=registry.rancher.com/rancher/harvester-pcidevices",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester PCI-device controller (Go) manages PCI passthrough, not disk partitions; libfdisk1 not called",
+      "timestamp": "2026-06-24T01:17:46Z"
     }
   ],
-  "timestamp": "2026-06-22T18:28:52Z"
+  "timestamp": "2026-06-24T01:59:56Z"
 }

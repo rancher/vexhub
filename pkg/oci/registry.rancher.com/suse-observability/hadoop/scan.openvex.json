@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6011e20cf1f879222085032275a2c6e6655846f487dc36e7e07dba7fab30c004",
+  "@id": "https://openvex.dev/docs/public/vex-45afd3653073408a598501064d2fbf496438125f02b89f31587f66cbb0e8ae8e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,7 +22,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "The CVE-2024-6763 fix has been backported to the StackState jetty-9.4.x branch and is included in the 9.4.60.sts1 build. The backport consists of commits 9d29061c750 (UriCompliance.USER_INFO violation, from upstream 12.0.x c880d9309b6), db8bb7a8631 'Fix CVE-2024-6763 (#12532)' — full authority parsing hardening), and follow-up 89d2ac7c779 'Regular handling of bad URIs', improving handling of #, ?, ; in authority, IPv6 validation, and scheme validation). All three are ancestors of the current HEAD used to produce 9.4.60.sts1. Grype continues to flag the package because it matches against the upstream advisory's 'fixed in' version of 12.0.12 and only performs version-range comparison; it has no awareness of the 9.4.x backport.",
       "timestamp": "2026-06-22T17:43:02Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hadoop?repository_url=registry.rancher.com/suse-observability/hadoop",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Apache Hadoop (Java) does not link against libblkid1; block-device library not in JVM execute path",
+      "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hadoop?repository_url=registry.rancher.com/suse-observability/hadoop",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Apache Hadoop (Java) does not link against libfdisk1; fdisk library not in JVM execute path",
+      "timestamp": "2026-06-24T01:17:46Z"
     }
   ],
-  "timestamp": "2026-06-22T18:28:53Z"
+  "timestamp": "2026-06-24T01:59:55Z"
 }

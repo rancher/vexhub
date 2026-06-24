@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-64fd1dfe25349faa5378618c80e80607f9d2f3637606c0c586ba09170bc3a48a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,7 +22,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "JVM-based app; Java uses native compression APIs, not the liblzma C library",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kafka?repository_url=registry.rancher.com/suse-observability/kafka",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Apache Kafka (Java) does not link against libsmartcols1; column-format library not in JVM execute path",
+      "timestamp": "2026-06-24T01:17:46Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-24T01:59:56Z"
 }
