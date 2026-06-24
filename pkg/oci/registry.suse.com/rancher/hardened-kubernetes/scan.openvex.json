@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-8987507bf9a5c229e4cdf269e4966ea9d5471608cc1181e127eb614cac6c3ca0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -563,6 +563,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.suse.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go k8s binaries use Go UUID library; C libuuid1 not linked at runtime",
+      "timestamp": "2026-06-24T04:52:24Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0309-1"
       },
       "products": [
@@ -826,6 +845,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "RKE2 runs in FIPS mode so the standard OpenSSL code path is not used",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.suse.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go k8s binaries use Go UUID library; C libuuid1 not linked at runtime",
+      "timestamp": "2026-06-24T04:52:24Z"
     },
     {
       "vulnerability": {
@@ -1244,7 +1282,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binaries do not link liblzma; the vulnerable xz index parser is never reached with attacker-controlled input",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.suse.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go k8s binaries use Go UUID library; C libuuid1 not linked at runtime",
+      "timestamp": "2026-06-24T04:52:24Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-24T11:39:14Z"
 }
