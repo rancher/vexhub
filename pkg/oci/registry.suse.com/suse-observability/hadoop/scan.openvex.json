@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-45afd3653073408a598501064d2fbf496438125f02b89f31587f66cbb0e8ae8e",
+  "@id": "https://openvex.dev/docs/public/vex-8987507bf9a5c229e4cdf269e4966ea9d5471608cc1181e127eb614cac6c3ca0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -51,6 +51,25 @@
           "@id": "pkg:oci/hadoop?repository_url=registry.suse.com/suse-observability/hadoop",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java Hadoop doesn't probe block devices; C libblkid1 not called",
+      "timestamp": "2026-06-24T04:52:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hadoop?repository_url=registry.suse.com/suse-observability/hadoop",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libfdisk1"
             }
           ]
@@ -60,7 +79,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Apache Hadoop (Java) does not link against libfdisk1; fdisk library not in JVM execute path",
       "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hadoop?repository_url=registry.suse.com/suse-observability/hadoop",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java Hadoop doesn't partition disks; C libfdisk1 not called at runtime",
+      "timestamp": "2026-06-24T04:52:24Z"
     }
   ],
-  "timestamp": "2026-06-24T01:59:55Z"
+  "timestamp": "2026-06-24T11:39:14Z"
 }
