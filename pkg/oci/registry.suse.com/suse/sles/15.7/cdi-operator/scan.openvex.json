@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-166d47e7a32d5d30b9c24d35c093b75071e65986c2bd69b8abcd5eb3c7ec9963",
+  "@id": "https://openvex.dev/docs/public/vex-8451f49f7b369424edabd5e55d2b340b6897fe00f34b3226101f8de3d1efa37f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -630,7 +630,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "cdi-operator is a Go Kubernetes controller; sed CLI tool is an incidental SLES dep never executed",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CDI operator manages resources; C libblkid1 not in execute path",
+      "timestamp": "2026-06-24T04:52:24Z"
     }
   ],
-  "timestamp": "2026-06-23T15:28:15Z"
+  "timestamp": "2026-06-24T11:39:15Z"
 }

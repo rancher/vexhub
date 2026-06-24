@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-45afd3653073408a598501064d2fbf496438125f02b89f31587f66cbb0e8ae8e",
+  "@id": "https://openvex.dev/docs/public/vex-8987507bf9a5c229e4cdf269e4966ea9d5471608cc1181e127eb614cac6c3ca0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -608,7 +608,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "UI plugin catalog is a Go HTTP server; libsmartcols1 (column formatting) not linked by Go binary",
       "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=index.docker.io/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UI plugin catalog server doesn't use C libsmartcols1 terminal formatting",
+      "timestamp": "2026-06-24T04:52:24Z"
     }
   ],
-  "timestamp": "2026-06-24T01:59:55Z"
+  "timestamp": "2026-06-24T11:39:14Z"
 }
