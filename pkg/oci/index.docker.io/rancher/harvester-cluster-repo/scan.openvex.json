@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-549a6ff755466945bbbbddf544e0694f961ba7b2735ecdc468741fbcb3684f20",
+  "@id": "https://openvex.dev/docs/public/vex-bde091f6d3ec2433c6c01590728e6eae5e3507c79146a6bc2d212fd7504219d0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -969,7 +969,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go-based cluster-repo controller; xz CLI is an incidental SLES dep never executed at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=index.docker.io/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester cluster-repo is a Go Helm chart HTTP server; libfdisk1 not linked by Go binary",
+      "timestamp": "2026-06-24T01:17:46Z"
     }
   ],
-  "timestamp": "2026-06-22T18:28:52Z"
+  "timestamp": "2026-06-24T01:59:54Z"
 }

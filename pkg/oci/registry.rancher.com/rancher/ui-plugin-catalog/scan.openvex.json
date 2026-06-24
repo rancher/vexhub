@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-64fd1dfe25349faa5378618c80e80607f9d2f3637606c0c586ba09170bc3a48a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -589,7 +589,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "ui-plugin-catalog is an nginx static file server; no TIFF image processing occurs at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.rancher.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UI plugin catalog is a Go HTTP server; libsmartcols1 (column formatting) not linked by Go binary",
+      "timestamp": "2026-06-24T01:17:46Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-24T01:59:56Z"
 }

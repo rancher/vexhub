@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-549a6ff755466945bbbbddf544e0694f961ba7b2735ecdc468741fbcb3684f20",
+  "@id": "https://openvex.dev/docs/public/vex-64fd1dfe25349faa5378618c80e80607f9d2f3637606c0c586ba09170bc3a48a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -798,7 +798,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go network controller; sed CLI tool is not invoked by the Go binary entrypoint",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=registry.rancher.com/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester network controller (Go) manages network interfaces, not disk partitions; libfdisk1 not called",
+      "timestamp": "2026-06-24T01:17:46Z"
     }
   ],
-  "timestamp": "2026-06-22T18:28:52Z"
+  "timestamp": "2026-06-24T01:59:56Z"
 }

@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-45afd3653073408a598501064d2fbf496438125f02b89f31587f66cbb0e8ae8e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2026:1228-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/shadow"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeVirt virt-controller is a Go controller; shadow (useradd/passwd) is never invoked at runtime",
+      "timestamp": "2026-06-24T01:17:46Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2025:02536-1"
@@ -458,5 +477,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-24T01:59:55Z"
 }

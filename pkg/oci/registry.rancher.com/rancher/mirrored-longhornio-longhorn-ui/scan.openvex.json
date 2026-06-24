@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-45afd3653073408a598501064d2fbf496438125f02b89f31587f66cbb0e8ae8e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -950,7 +950,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhornio-longhorn-ui is an nginx web UI; libtiff image processing library is never called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui serves static files via nginx; libsmartcols1 (column formatter) is never invoked",
+      "timestamp": "2026-06-24T01:17:46Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-24T01:59:55Z"
 }
