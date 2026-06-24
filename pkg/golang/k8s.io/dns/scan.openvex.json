@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-2c78ed935e4e72e26cd8c398b4bb6936c31e82570059d15ab6e20543739c30b3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2533,6 +2533,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "This CVE only affects macOS/Darwin systems",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-25680"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/dns",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.52.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "node-cache is a pure-Go DNS caching daemon; golang.org/x/net/html is a transitive dependency and html.Parse is never invoked on attacker-controlled input",
+      "timestamp": "2026-06-24T14:08:13Z"
     },
     {
       "vulnerability": {
@@ -5760,5 +5779,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-24T19:59:50Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3a139599a2dd0a52e5a4177715db68d8642e77fb255f968064f124aa1a843a2f",
+  "@id": "https://openvex.dev/docs/public/vex-d21a2b8f4beafeffcfa52d4d65302ce93cfa3df9e9fe7f48c6d4d7e1be1d6ed7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -4098,6 +4098,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "This CVE only affects macOS/Darwin systems",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-25680"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.52.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "metrics-server is a pure-Go metrics aggregator; golang.org/x/net/html is transitive and html.Parse is never invoked on attacker-controlled input",
+      "timestamp": "2026-06-24T14:08:13Z"
     },
     {
       "vulnerability": {
@@ -8576,5 +8595,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:34Z"
+  "timestamp": "2026-06-24T19:59:52Z"
 }
