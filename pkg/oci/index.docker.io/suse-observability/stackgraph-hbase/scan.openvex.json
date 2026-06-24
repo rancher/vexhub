@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-64fd1dfe25349faa5378618c80e80607f9d2f3637606c0c586ba09170bc3a48a",
+  "@id": "https://openvex.dev/docs/public/vex-8987507bf9a5c229e4cdf269e4966ea9d5471608cc1181e127eb614cac6c3ca0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackgraph-hbase?repository_url=index.docker.io/suse-observability/stackgraph-hbase",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java HBase graph server doesn't partition disks; libfdisk1 not called",
+      "timestamp": "2026-06-24T04:52:24Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:2485-1"
@@ -39,9 +58,28 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java HBase doesn't use C libsmartcols1 terminal formatting",
+      "timestamp": "2026-06-24T04:52:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackgraph-hbase?repository_url=index.docker.io/suse-observability/stackgraph-hbase",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "StackGraph HBase (Java) does not link against libsmartcols1; column-format library not in JVM path",
       "timestamp": "2026-06-24T01:17:46Z"
     }
   ],
-  "timestamp": "2026-06-24T01:59:56Z"
+  "timestamp": "2026-06-24T11:39:14Z"
 }
