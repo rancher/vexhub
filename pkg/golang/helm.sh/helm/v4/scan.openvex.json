@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-7f890f7ebce1958bfdc681e51ccc70bd789e4c7aa840ed7b498c427d7edaac6f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-25680"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "helm renders YAML/text templates and does not parse HTML; golang.org/x/net/html is a transitive dependency not reached with untrusted input",
+      "timestamp": "2026-06-24T14:08:13Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2026-25680",
@@ -1259,5 +1278,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-24T19:59:51Z"
 }

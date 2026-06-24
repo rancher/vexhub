@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-7f890f7ebce1958bfdc681e51ccc70bd789e4c7aa840ed7b498c427d7edaac6f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1170,6 +1170,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-47911"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/opencontainers/runc",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`bin/runc` does not link golang.org/x/net/html; pclntab contains no x/net/html symbols (the binary only links x/net/bpf and x/net/dns) at v0.43.0. Vulnerable code not present.",
+      "timestamp": "2026-06-24T19:37:31Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-58183",
         "aliases": [
           "GO-2025-4014",
@@ -2271,6 +2290,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-58190"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/opencontainers/runc",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`bin/runc` does not link golang.org/x/net/html; pclntab contains no x/net/html symbols (the binary only links x/net/bpf and x/net/dns) at v0.43.0. Vulnerable code not present.",
+      "timestamp": "2026-06-24T19:37:31Z"
     },
     {
       "vulnerability": {
@@ -5584,6 +5622,82 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-25680"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/opencontainers/runc",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "runc is a low-level OCI container runtime (namespaces/cgroups) and never parses HTML; govulncheck binary-mode confirms html.Parse is linked but not reached with untrusted input",
+      "timestamp": "2026-06-24T14:08:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-25680"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/opencontainers/runc",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`bin/runc` does not link golang.org/x/net/html; pclntab contains no x/net/html symbols (the binary only links x/net/bpf and x/net/dns) at v0.43.0. Vulnerable code not present.",
+      "timestamp": "2026-06-24T19:37:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-25681"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/opencontainers/runc",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`bin/runc` does not link golang.org/x/net/html; pclntab contains no x/net/html symbols (the binary only links x/net/bpf and x/net/dns) at v0.43.0. Vulnerable code not present.",
+      "timestamp": "2026-06-24T19:37:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27136"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/opencontainers/runc",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`bin/runc` does not link golang.org/x/net/html; pclntab contains no x/net/html symbols (the binary only links x/net/bpf and x/net/dns) at v0.43.0. Vulnerable code not present.",
+      "timestamp": "2026-06-24T19:37:31Z"
     },
     {
       "vulnerability": {
@@ -9591,6 +9705,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/opencontainers/runc",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`bin/runc` does not link golang.org/x/net/http2; pclntab contains no x/net/http2 symbols (the binary only links x/net/bpf and x/net/dns) at v0.43.0. Vulnerable code not present.",
+      "timestamp": "2026-06-24T19:37:31Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33814",
         "aliases": [
           "GO-2026-4918"
@@ -10380,6 +10513,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39821"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/opencontainers/runc",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`bin/runc` does not link golang.org/x/net/idna; pclntab contains no x/net/idna symbols (the binary only links x/net/bpf and x/net/dns) at v0.43.0. Vulnerable code not present.",
+      "timestamp": "2026-06-24T19:37:31Z"
     },
     {
       "vulnerability": {
@@ -12203,6 +12355,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42502"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/opencontainers/runc",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`bin/runc` does not link golang.org/x/net/html; pclntab contains no x/net/html symbols (the binary only links x/net/bpf and x/net/dns) at v0.43.0. Vulnerable code not present.",
+      "timestamp": "2026-06-24T19:37:31Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42504",
         "aliases": [
           "GO-2026-5038"
@@ -12640,6 +12811,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42506"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/opencontainers/runc",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`bin/runc` does not link golang.org/x/net/html; pclntab contains no x/net/html symbols (the binary only links x/net/bpf and x/net/dns) at v0.43.0. Vulnerable code not present.",
+      "timestamp": "2026-06-24T19:37:31Z"
     },
     {
       "vulnerability": {
@@ -13082,5 +13272,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-24T19:59:51Z"
 }
