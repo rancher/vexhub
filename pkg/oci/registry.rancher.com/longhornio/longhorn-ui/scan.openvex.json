@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c0a377f0f46e78605e93a7379bbb30b81c8a5036917c352562722fb16fcac119",
+  "@id": "https://openvex.dev/docs/public/vex-64fd1dfe25349faa5378618c80e80607f9d2f3637606c0c586ba09170bc3a48a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1387,7 +1387,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhorn-ui is nginx serving static assets; libcurl4 C library is not invoked at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=registry.rancher.com/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn UI is served by nginx; libfdisk1 (fdisk C library) is not invoked by nginx at runtime",
+      "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=registry.rancher.com/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui serves static files via nginx; libsmartcols1 (column formatter) is never invoked",
+      "timestamp": "2026-06-24T01:17:46Z"
     }
   ],
-  "timestamp": "2026-06-23T15:28:14Z"
+  "timestamp": "2026-06-24T01:59:56Z"
 }

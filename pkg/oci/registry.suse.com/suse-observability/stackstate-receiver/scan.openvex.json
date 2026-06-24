@@ -1,0 +1,47 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-64fd1dfe25349faa5378618c80e80607f9d2f3637606c0c586ba09170bc3a48a",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-receiver?repository_url=registry.suse.com/suse-observability/stackstate-receiver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "StackState receiver (Java) does not link against libblkid1; block-device library not in JVM path",
+      "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-receiver?repository_url=registry.suse.com/suse-observability/stackstate-receiver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "StackState receiver (Java) does not link against libfdisk1; fdisk library not in JVM execute path",
+      "timestamp": "2026-06-24T01:17:46Z"
+    }
+  ],
+  "timestamp": "2026-06-24T01:59:56Z"
+}

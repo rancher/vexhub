@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6011e20cf1f879222085032275a2c6e6655846f487dc36e7e07dba7fab30c004",
+  "@id": "https://openvex.dev/docs/public/vex-45afd3653073408a598501064d2fbf496438125f02b89f31587f66cbb0e8ae8e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -399,7 +399,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Web frontend image; liblzma C library not invoked by nginx or Node.js at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-app-frontend?repository_url=index.docker.io/rancher/supportability-review-app-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "frontend app image (nginx + static assets); libblkid block-device library not in execute path",
+      "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-app-frontend?repository_url=index.docker.io/rancher/supportability-review-app-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Frontend web app (nginx+static files) has no execute path for libsmartcols1 (CLI column library)",
+      "timestamp": "2026-06-24T01:17:46Z"
     }
   ],
-  "timestamp": "2026-06-22T18:28:53Z"
+  "timestamp": "2026-06-24T01:59:55Z"
 }
