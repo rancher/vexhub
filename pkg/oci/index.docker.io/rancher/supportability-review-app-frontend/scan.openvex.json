@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-45afd3653073408a598501064d2fbf496438125f02b89f31587f66cbb0e8ae8e",
+  "@id": "https://openvex.dev/docs/public/vex-020d0f68bc6ef91be357611564d889d6825fa22eac5de7b4cb4d6615ebc50b46",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -437,7 +437,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Frontend web app (nginx+static files) has no execute path for libsmartcols1 (CLI column library)",
       "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-app-frontend?repository_url=index.docker.io/rancher/supportability-review-app-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libzypp"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SUSE package-manager library; package installation not performed in running containers",
+      "timestamp": "2026-06-25T02:24:29Z"
     }
   ],
-  "timestamp": "2026-06-24T01:59:55Z"
+  "timestamp": "2026-06-25T17:01:05Z"
 }

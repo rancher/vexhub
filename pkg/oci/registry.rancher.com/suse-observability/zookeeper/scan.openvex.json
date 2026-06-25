@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8451f49f7b369424edabd5e55d2b340b6897fe00f34b3226101f8de3d1efa37f",
+  "@id": "https://openvex.dev/docs/public/vex-020d0f68bc6ef91be357611564d889d6825fa22eac5de7b4cb4d6615ebc50b46",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/zookeeper?repository_url=registry.rancher.com/suse-observability/zookeeper",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java ZooKeeper doesn't partition disks; C libfdisk1 not called at runtime",
+      "timestamp": "2026-06-25T02:24:29Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:2485-1"
@@ -81,5 +100,5 @@
       "timestamp": "2026-06-24T04:52:24Z"
     }
   ],
-  "timestamp": "2026-06-24T11:39:15Z"
+  "timestamp": "2026-06-25T17:01:05Z"
 }
