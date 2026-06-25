@@ -1,11 +1,30 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9ad55aa892bf7a348f0453d4f957e3986ccade03e4c5ecf340edcc8189ec00a8",
+  "@id": "https://openvex.dev/docs/public/vex-6b045fd6a93ecc80d40c4bff885a8d4f5dea245cca1d288fa756684662095248",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
     {
       "vulnerability": {
+        "name": "CVE-2019-12274"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20240919204204-3da2ae0cabd1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "harvester-cloud-provider imports github.com/rancher/rancher only for API type definitions (pkg/apis/*) and generated CRD controllers (pkg/generated/controllers/*). None of the Rancher server packages implementing this vulnerability are linked. pclntab shows no rancher server/handler symbols. Vulnerable code not present.",
+      "timestamp": "2026-06-25T01:40:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2019-13209",
         "aliases": [
           "GO-2022-0755",
@@ -256,6 +275,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2021-36775"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20240919204204-3da2ae0cabd1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "harvester-cloud-provider imports github.com/rancher/rancher only for API type definitions (pkg/apis/*) and generated CRD controllers (pkg/generated/controllers/*); the Rancher server authorization code this CVE affects is not linked. Vulnerable code not present.",
+      "timestamp": "2026-06-25T01:40:09Z"
     },
     {
       "vulnerability": {
@@ -1796,6 +1834,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-58259"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20240919204204-3da2ae0cabd1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "harvester-cloud-provider imports github.com/rancher/rancher only for API type definitions (pkg/apis/*) and generated CRD controllers (pkg/generated/controllers/*); the Rancher server code this CVE affects is not linked. Vulnerable code not present.",
+      "timestamp": "2026-06-25T01:40:09Z"
     },
     {
       "vulnerability": {
@@ -3667,6 +3724,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-52881"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/opencontainers/runc@v1.1.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "harvester-cloud-provider only links runc libcontainer/user and libcontainer/userns (uid/gid + userns lookup helpers); it does not run containers. The container-init/procfs-mount code where this LSM-label bypass lives is not compiled in. pclntab shows no libcontainer mount/init/system symbols. Vulnerable code not present.",
+      "timestamp": "2026-06-25T01:40:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-53547",
         "aliases": [
           "GO-2025-3802",
@@ -5354,6 +5430,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-67601"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20240919204204-3da2ae0cabd1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "harvester-cloud-provider imports github.com/rancher/rancher only for API type definitions (pkg/apis/*) and generated CRD controllers (pkg/generated/controllers/*); the Rancher server code this CVE affects is not linked. Vulnerable code not present.",
+      "timestamp": "2026-06-25T01:40:09Z"
     },
     {
       "vulnerability": {
@@ -10077,5 +10172,5 @@
       "timestamp": "2026-06-23T02:26:59Z"
     }
   ],
-  "timestamp": "2026-06-23T10:35:18Z"
+  "timestamp": "2026-06-25T01:53:39Z"
 }

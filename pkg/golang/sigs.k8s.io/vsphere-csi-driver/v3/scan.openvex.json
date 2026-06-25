@@ -1,0 +1,28 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-d06232d0ea6005aa3f375d7365a5018502791169c10f4f05b52b943d11422ab7",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-52881"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/opencontainers/selinux@v1.11.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vsphere-csi only links github.com/opencontainers/selinux/go-selinux (label helpers) and zero runc libcontainer code; the runc container-init/procfs-mount path this CVE affects is not compiled in. Vulnerable code not present.",
+      "timestamp": "2026-06-25T01:40:09Z"
+    }
+  ],
+  "timestamp": "2026-06-25T01:53:40Z"
+}
