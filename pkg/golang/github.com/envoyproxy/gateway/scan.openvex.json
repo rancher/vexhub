@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-6b045fd6a93ecc80d40c4bff885a8d4f5dea245cca1d288fa756684662095248",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -82,6 +82,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-34040"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/envoyproxy/gateway",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v28.5.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "envoy-gateway only links github.com/docker/docker/pkg/fileutils; the Moby daemon/authz code this CVE affects is not compiled in. pclntab (-s -w stripped, nm=0) shows no docker/docker daemon, api/server, builder or libnetwork symbols. Vulnerable code not present.",
+      "timestamp": "2026-06-25T01:40:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39825"
       },
       "products": [
@@ -139,6 +158,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-41567"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/envoyproxy/gateway",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v28.5.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "envoy-gateway only links github.com/docker/docker/pkg/fileutils; the affected Moby daemon/networking code is not compiled in (pclntab shows no daemon/libnetwork/api symbols). Vulnerable code not present.",
+      "timestamp": "2026-06-25T01:40:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42306"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/envoyproxy/gateway",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v28.5.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "envoy-gateway only links github.com/docker/docker/pkg/fileutils; the affected Moby daemon/builder code is not compiled in (pclntab shows no daemon/builder/api symbols). Vulnerable code not present.",
+      "timestamp": "2026-06-25T01:40:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499"
       },
       "products": [
@@ -157,5 +214,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-25T01:53:39Z"
 }
