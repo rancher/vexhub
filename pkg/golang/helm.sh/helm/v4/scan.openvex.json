@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7f890f7ebce1958bfdc681e51ccc70bd789e4c7aa840ed7b498c427d7edaac6f",
+  "@id": "https://openvex.dev/docs/public/vex-2297e1e7ef3d85076ce79f33c000241270814597256603885c3c8cddc0f2a0dd",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -91,6 +91,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-25681"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/net/html` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/net/html.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-25681",
         "aliases": [
           "GO-2026-5029"
@@ -154,6 +173,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27136"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/net/html` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/net/html.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -289,6 +327,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39827"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39827",
         "aliases": [
           "GO-2026-5016"
@@ -352,6 +409,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39828"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -421,6 +497,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39829"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39829",
         "aliases": [
           "GO-2026-5018"
@@ -484,6 +579,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39830"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -619,6 +733,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39832"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh/agent` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh/agent.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39832",
         "aliases": [
           "GO-2026-5006"
@@ -682,6 +815,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39833"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh/agent` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh/agent.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -817,6 +969,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39835"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39835",
         "aliases": [
           "GO-2026-5015"
@@ -880,6 +1051,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42502"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/net/html` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/net/html.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -949,6 +1139,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42506"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/net/html` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/net/html.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -1012,6 +1221,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42508"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh/knownhosts` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh/knownhosts.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -1081,6 +1309,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-46595"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-46595",
         "aliases": [
           "GO-2026-5023"
@@ -1147,6 +1394,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-46597"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-46597",
         "aliases": [
           "GO-2026-5013"
@@ -1210,6 +1476,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46598"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh/agent` package is NOT compiled into the `helm` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh/agent.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -1278,5 +1563,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-24T19:59:51Z"
+  "timestamp": "2026-06-25T15:17:35Z"
 }
