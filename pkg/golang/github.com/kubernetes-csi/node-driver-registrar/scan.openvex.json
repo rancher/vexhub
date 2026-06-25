@@ -1,9 +1,47 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-8036d9ca5a2c3db06852c532679719591695d009bcc971a4e1687b5d7a8ad2ee",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2021-38561"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/node-driver-registrar",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/text@v0.3.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "csi-node-driver-registrar does not link golang.org/x/text/language (the BCP-47 language-tag parser); pclntab (-s -w stripped, nm=0) has no golang.org/x/text/language symbols at golang.org/x/text v0.3.6. Vulnerable code not present.",
+      "timestamp": "2026-06-24T21:52:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2022-32149"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/node-driver-registrar",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/text@v0.3.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "csi-node-driver-registrar does not link golang.org/x/text/language (the BCP-47 language-tag parser); pclntab (-s -w stripped, nm=0) has no golang.org/x/text/language symbols at golang.org/x/text v0.3.6. Vulnerable code not present.",
+      "timestamp": "2026-06-24T21:52:18Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2023-45289",
@@ -6380,5 +6418,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-25T01:26:42Z"
 }
