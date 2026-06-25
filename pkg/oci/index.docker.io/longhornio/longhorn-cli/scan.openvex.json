@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-14753fbe98b97e41edb554c42de0939755281b5cd5193124a61a11bec5f3a371",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1159,7 +1159,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses net/http for HTTP; libcurl4 C library not called by Go binary",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=index.docker.io/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libzypp"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SUSE package-manager library; package installation not performed in running containers",
+      "timestamp": "2026-06-25T02:24:29Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-25T17:01:03Z"
 }
