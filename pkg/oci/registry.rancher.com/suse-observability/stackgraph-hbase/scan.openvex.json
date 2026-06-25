@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-5a1ed7199b271caf42ee5bb48440e37c469b9de021091ff1ab25f95767d8d1fa",
+  "@id": "https://openvex.dev/docs/public/vex-95a9e3a425aba5e325a1aeafadc13a1beaa80f7315994c7577992f2341e71bbe",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -79,7 +79,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "StackGraph HBase (Java) does not link against libsmartcols1; column-format library not in JVM path",
       "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackgraph-hbase?repository_url=registry.rancher.com/suse-observability/stackgraph-hbase",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java HBase app uses java.util.UUID; C libuuid1 library not loaded by the JVM",
+      "timestamp": "2026-06-25T19:50:46Z"
     }
   ],
-  "timestamp": "2026-06-24T11:39:13Z"
+  "timestamp": "2026-06-25T20:02:20Z"
 }

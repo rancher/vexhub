@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-32f8196dfe9532b4b4e68cafa5137f5b47453ce0429cba73f1d64efd3a8fea4e",
+  "@id": "https://openvex.dev/docs/public/vex-cdd9e0fb90e12836d3a913ac4ec37443ca9aa951c7257b155f5d8d6218405c21",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -402,6 +402,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=registry.suse.com/longhornio/longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go NFS share manager; no C libxml2 usage; XML handled via Go stdlib if needed",
+      "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0646-1"
       },
       "products": [
@@ -667,5 +686,5 @@
       "timestamp": "2026-06-25T02:24:29Z"
     }
   ],
-  "timestamp": "2026-06-25T17:01:04Z"
+  "timestamp": "2026-06-25T20:02:19Z"
 }

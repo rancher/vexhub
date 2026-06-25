@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-020d0f68bc6ef91be357611564d889d6825fa22eac5de7b4cb4d6615ebc50b46",
+  "@id": "https://openvex.dev/docs/public/vex-cdd9e0fb90e12836d3a913ac4ec37443ca9aa951c7257b155f5d8d6218405c21",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -421,6 +421,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=registry.suse.com/longhornio/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go app uses encoding/xml stdlib; C libxml2 library is not linked or called at runtime",
+      "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0779-1"
       },
       "products": [
@@ -667,5 +686,5 @@
       "timestamp": "2026-06-25T02:24:29Z"
     }
   ],
-  "timestamp": "2026-06-25T17:01:05Z"
+  "timestamp": "2026-06-25T20:02:19Z"
 }

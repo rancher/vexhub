@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-bde091f6d3ec2433c6c01590728e6eae5e3507c79146a6bc2d212fd7504219d0",
+  "@id": "https://openvex.dev/docs/public/vex-cdd9e0fb90e12836d3a913ac4ec37443ca9aa951c7257b155f5d8d6218405c21",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,7 +22,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "JMX Exporter (Java) does not link against libfdisk1; fdisk library not in JVM execute path",
       "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jmx-exporter?repository_url=registry.rancher.com/suse-observability/jmx-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java JMX exporter; util-linux C tools are never invoked by the JVM at runtime",
+      "timestamp": "2026-06-25T19:50:46Z"
     }
   ],
-  "timestamp": "2026-06-24T01:59:54Z"
+  "timestamp": "2026-06-25T20:02:19Z"
 }

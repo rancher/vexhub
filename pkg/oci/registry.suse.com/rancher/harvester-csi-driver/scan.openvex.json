@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-21d502349faf2800be75c758d5932707da6bd2327c8072680ce8ac67f2e2106d",
+  "@id": "https://openvex.dev/docs/public/vex-cdd9e0fb90e12836d3a913ac4ec37443ca9aa951c7257b155f5d8d6218405c21",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1846,6 +1846,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22156-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CSI driver uses net/http stdlib for HTTP; C libcurl not linked at runtime",
+      "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2236-1"
       },
       "products": [
@@ -1883,5 +1902,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-23T15:28:16Z"
+  "timestamp": "2026-06-25T20:02:19Z"
 }
