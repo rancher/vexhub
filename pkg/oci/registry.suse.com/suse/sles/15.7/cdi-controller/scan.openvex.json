@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-166d47e7a32d5d30b9c24d35c093b75071e65986c2bd69b8abcd5eb3c7ec9963",
+  "@id": "https://openvex.dev/docs/public/vex-cdd9e0fb90e12836d3a913ac4ec37443ca9aa951c7257b155f5d8d6218405c21",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -196,6 +196,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2025:03546-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CDI controller binary is the entrypoint; openssl CLI tool is never invoked",
+      "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2025:4092-1"
       },
       "products": [
@@ -364,6 +383,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI controller is Go; FIPS OpenSSL provider is never loaded by Go crypto/tls",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CDI controller binary is the entrypoint; openssl CLI tool is never invoked",
+      "timestamp": "2026-06-25T19:50:46Z"
     },
     {
       "vulnerability": {
@@ -557,6 +595,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CDI controller binary is the entrypoint; openssl CLI tool is never invoked",
+      "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1406-1"
       },
       "products": [
@@ -632,5 +689,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-23T15:28:15Z"
+  "timestamp": "2026-06-25T20:02:19Z"
 }
