@@ -1,9 +1,66 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-de993357677b882259c1eb17673398da7af679aba8aaa136b01591e2bf45b6f7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2021-38561"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-resizer",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/text@v0.3.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "csi-resizer does not link golang.org/x/text/language (the BCP-47 language-tag parser); pclntab (-s -w stripped, nm=0) has no golang.org/x/text/language symbols at golang.org/x/text v0.3.5. Vulnerable code not present.",
+      "timestamp": "2026-06-24T21:52:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2022-28948"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-resizer",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/gopkg.in/yaml.v3@v3.0.0-20210107192922-496545a6307b"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "csi-resizer does not link gopkg.in/yaml.v3 (the YAML v3 decoder); pclntab (-s -w stripped, nm=0) has no gopkg.in/yaml.v3 symbols at gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b. Vulnerable code not present.",
+      "timestamp": "2026-06-24T21:52:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2022-32149"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-resizer",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/text@v0.3.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "csi-resizer does not link golang.org/x/text/language (the BCP-47 language-tag parser); pclntab (-s -w stripped, nm=0) has no golang.org/x/text/language symbols at golang.org/x/text v0.3.5. Vulnerable code not present.",
+      "timestamp": "2026-06-24T21:52:18Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2023-45289"
@@ -286,6 +343,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22868"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-resizer",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/oauth2@v0.0.0-20210313182246-cd4f82c27b84"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "csi-resizer does not link golang.org/x/oauth2/jws (the JWS token path); pclntab (-s -w stripped, nm=0) has no golang.org/x/oauth2/jws symbols at golang.org/x/oauth2 v0.0.0-20210313182246-cd4f82c27b84. Vulnerable code not present.",
+      "timestamp": "2026-06-24T21:52:18Z"
     },
     {
       "vulnerability": {
@@ -3971,5 +4047,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-25T01:26:43Z"
 }
