@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8987507bf9a5c229e4cdf269e4966ea9d5471608cc1181e127eb614cac6c3ca0",
+  "@id": "https://openvex.dev/docs/public/vex-cdd9e0fb90e12836d3a913ac4ec37443ca9aa951c7257b155f5d8d6218405c21",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/tephra-server?repository_url=registry.suse.com/suse-observability/tephra-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java JVM application; C libfdisk disk-partition library never loaded by the JVM",
+      "timestamp": "2026-06-25T19:50:46Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:2485-1"
@@ -24,5 +43,5 @@
       "timestamp": "2026-06-24T04:52:24Z"
     }
   ],
-  "timestamp": "2026-06-24T11:39:14Z"
+  "timestamp": "2026-06-25T20:02:19Z"
 }

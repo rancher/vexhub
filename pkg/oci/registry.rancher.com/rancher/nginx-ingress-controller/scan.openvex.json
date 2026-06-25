@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2c78ed935e4e72e26cd8c398b4bb6936c31e82570059d15ab6e20543739c30b3",
+  "@id": "https://openvex.dev/docs/public/vex-95a9e3a425aba5e325a1aeafadc13a1beaa80f7315994c7577992f2341e71bbe",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1032,7 +1032,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "nginx has no xz/lzma module; Go ingress controller doesn't link liblzma; incidental SLES dep",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22172-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zypper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-ingress-controller entrypoint is nginx/controller binary; zypper never invoked",
+      "timestamp": "2026-06-25T19:50:46Z"
     }
   ],
-  "timestamp": "2026-06-24T19:59:50Z"
+  "timestamp": "2026-06-25T20:02:20Z"
 }

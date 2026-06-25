@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-020d0f68bc6ef91be357611564d889d6825fa22eac5de7b4cb4d6615ebc50b46",
+  "@id": "https://openvex.dev/docs/public/vex-95a9e3a425aba5e325a1aeafadc13a1beaa80f7315994c7577992f2341e71bbe",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -656,6 +656,25 @@
           "@id": "pkg:oci/longhorn-engine?repository_url=registry.suse.com/longhornio/longhorn-engine",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go storage engine; FIPS provider only loaded in OpenSSL FIPS mode; not configured here",
+      "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03546-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.suse.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssl-3"
             }
           ]
@@ -703,6 +722,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go-based storage engine; libelf1 (ELF binary parser) has no role in Longhorn's execution path",
       "timestamp": "2026-06-23T13:35:04Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:4300-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.suse.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go storage engine uses net/http stdlib; C libcurl is not linked or called at runtime",
+      "timestamp": "2026-06-25T19:50:46Z"
     },
     {
       "vulnerability": {
@@ -820,6 +858,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0052-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.suse.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go storage engine uses net/http stdlib; C libcurl is not linked or called at runtime",
+      "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0215-1"
       },
       "products": [
@@ -836,6 +893,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gpg2 is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0221-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.suse.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go storage engine uses net/http stdlib; C libcurl is not linked or called at runtime",
+      "timestamp": "2026-06-25T19:50:46Z"
     },
     {
       "vulnerability": {
@@ -931,6 +1007,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "qemu-vmsr-helper is a QEMU VM utility; longhorn-engine storage service never executes it",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.suse.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go storage engine; FIPS provider only loaded in OpenSSL FIPS mode; not configured here",
+      "timestamp": "2026-06-25T19:50:46Z"
     },
     {
       "vulnerability": {
@@ -1295,6 +1390,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0903-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.suse.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go storage engine uses net/http stdlib; C libcurl is not linked or called at runtime",
+      "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1065-1"
       },
       "products": [
@@ -1520,6 +1634,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Longhorn engine uses iSCSI/NBD storage; NFS ID mapping library is not exercised",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.suse.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go storage engine; FIPS provider only loaded in OpenSSL FIPS mode; not configured here",
+      "timestamp": "2026-06-25T19:50:46Z"
     },
     {
       "vulnerability": {
@@ -1807,5 +1940,5 @@
       "timestamp": "2026-06-25T02:24:29Z"
     }
   ],
-  "timestamp": "2026-06-25T17:01:05Z"
+  "timestamp": "2026-06-25T20:02:20Z"
 }

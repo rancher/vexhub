@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-21d502349faf2800be75c758d5932707da6bd2327c8072680ce8ac67f2e2106d",
+  "@id": "https://openvex.dev/docs/public/vex-95a9e3a425aba5e325a1aeafadc13a1beaa80f7315994c7577992f2341e71bbe",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -136,6 +136,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Docker Machine provisions cloud VMs via provider APIs; libudev1 for local device events is not used",
       "timestamp": "2026-06-23T13:35:04Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.rancher.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlidec1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go Docker Machine uses net/http stdlib; C libbrotlidec library not linked at runtime",
+      "timestamp": "2026-06-25T19:50:46Z"
     },
     {
       "vulnerability": {
@@ -708,5 +727,5 @@
       "timestamp": "2026-06-23T13:35:04Z"
     }
   ],
-  "timestamp": "2026-06-23T15:28:16Z"
+  "timestamp": "2026-06-25T20:02:20Z"
 }
