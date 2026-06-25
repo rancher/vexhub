@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7fa7b005e203d072ebc512ba9e3d13368513a1dff35fd166e597802a65511564",
+  "@id": "https://openvex.dev/docs/public/vex-2297e1e7ef3d85076ce79f33c000241270814597256603885c3c8cddc0f2a0dd",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -4208,6 +4208,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-25681"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.52.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/net/html` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/net/html.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-25681",
         "aliases": [
           "GO-2026-5029"
@@ -4293,6 +4312,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27136"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.52.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/net/html` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/net/html.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -6956,6 +6994,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39827"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh` package is NOT compiled into the binary. `go list -deps` over the reproduced build graph (x/crypto v0.49.0, matching the shipped binary) shows only non-ssh x/crypto packages (cryptobyte, hkdf, chacha20poly1305, nacl, etc.); `go mod why golang.org/x/crypto/ssh` reports main module does not need package. Vulnerable code not present.",
       "timestamp": "2026-06-24T21:59:35Z"
     },
@@ -7046,6 +7103,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39828"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -7170,6 +7246,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39829"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh` package is NOT compiled into the binary. `go list -deps` over the reproduced build graph (x/crypto v0.49.0, matching the shipped binary) shows only non-ssh x/crypto packages (cryptobyte, hkdf, chacha20poly1305, nacl, etc.); `go mod why golang.org/x/crypto/ssh` reports main module does not need package. Vulnerable code not present.",
       "timestamp": "2026-06-24T21:59:35Z"
     },
@@ -7260,6 +7355,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39830"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -7491,6 +7605,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh/agent` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh/agent.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39832"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh/agent` package is NOT compiled into the binary. `go list -deps` over the reproduced build graph (x/crypto v0.49.0, matching the shipped binary) shows only non-ssh x/crypto packages (cryptobyte, hkdf, chacha20poly1305, nacl, etc.); `go mod why golang.org/x/crypto/ssh/agent` reports main module does not need package. Vulnerable code not present.",
       "timestamp": "2026-06-24T21:59:35Z"
     },
@@ -7581,6 +7714,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39833"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh/agent` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh/agent.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -7795,6 +7947,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39835"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -8239,6 +8410,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42502"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.52.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/net/html` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/net/html.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42502",
         "aliases": [
           "GO-2026-5027"
@@ -8327,6 +8517,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42506"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.52.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/net/html` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/net/html.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -8412,6 +8621,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42508"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh/knownhosts` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh/knownhosts.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -8536,6 +8764,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46595"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh` package is NOT compiled into the binary. `go list -deps` over the reproduced build graph (x/crypto v0.49.0, matching the shipped binary) shows only non-ssh x/crypto packages (cryptobyte, hkdf, chacha20poly1305, nacl, etc.); `go mod why golang.org/x/crypto/ssh` reports main module does not need package. Vulnerable code not present.",
       "timestamp": "2026-06-24T21:59:35Z"
     },
@@ -8626,6 +8873,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46597"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
     },
     {
       "vulnerability": {
@@ -8750,6 +9016,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
+      "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh/agent` package is NOT compiled into the `metrics-server` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh/agent.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46598"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "metrics-server is a pure-Go Kubernetes metrics aggregator; the `golang.org/x/crypto/ssh/agent` package is NOT compiled into the binary. `go list -deps` over the reproduced build graph (x/crypto v0.49.0, matching the shipped binary) shows only non-ssh x/crypto packages (cryptobyte, hkdf, chacha20poly1305, nacl, etc.); `go mod why golang.org/x/crypto/ssh/agent` reports main module does not need package. Vulnerable code not present.",
       "timestamp": "2026-06-24T21:59:35Z"
     },
@@ -8842,5 +9127,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-24T22:54:07Z"
+  "timestamp": "2026-06-25T15:17:35Z"
 }
