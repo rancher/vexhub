@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-166d47e7a32d5d30b9c24d35c093b75071e65986c2bd69b8abcd5eb3c7ec9963",
+  "@id": "https://openvex.dev/docs/public/vex-020d0f68bc6ef91be357611564d889d6825fa22eac5de7b4cb4d6615ebc50b46",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2033,7 +2033,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Longhorn backing-image-manager transfers disk images only; SCSI persistent-reservation daemon qemu-pr-helper unused",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libzypp"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SUSE package-manager library; package installation not performed in running containers",
+      "timestamp": "2026-06-25T02:24:29Z"
     }
   ],
-  "timestamp": "2026-06-23T15:28:15Z"
+  "timestamp": "2026-06-25T17:01:05Z"
 }
