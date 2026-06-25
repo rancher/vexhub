@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f81b95a5b26207f975aa451028c5874bf7d448b6cb76b1c9c0074b0ef2d6096a",
+  "@id": "https://openvex.dev/docs/public/vex-6b045fd6a93ecc80d40c4bff885a8d4f5dea245cca1d288fa756684662095248",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -14926,6 +14926,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Local Longhorn CLI for node-level filesystem ops; no MIME encoded-word header decoding in any path",
+      "timestamp": "2026-06-25T01:40:05Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -16333,5 +16352,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-23T07:20:58Z"
+  "timestamp": "2026-06-25T01:53:39Z"
 }
