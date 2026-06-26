@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f1037d77d1a78ece2e26ba937681cc789c0dbe6e76a5437f5aa83c601c34ace0",
+  "@id": "https://openvex.dev/docs/public/vex-7d9eb8e09cf9847c8c19fa549def74fdf444f927a73949808bcec5a11d8461e6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1865,6 +1865,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22172-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libzypp"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester CSI driver is a Go binary; libzypp package management library never invoked",
+      "timestamp": "2026-06-26T00:55:16Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2236-1"
       },
       "products": [
@@ -1900,7 +1919,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2590-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libzypp"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester CSI driver is a Go binary; libzypp package management library never invoked",
+      "timestamp": "2026-06-26T00:55:16Z"
     }
   ],
-  "timestamp": "2026-06-25T20:02:18Z"
+  "timestamp": "2026-06-26T13:41:08Z"
 }

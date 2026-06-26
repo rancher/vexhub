@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-32f8196dfe9532b4b4e68cafa5137f5b47453ce0429cba73f1d64efd3a8fea4e",
+  "@id": "https://openvex.dev/docs/public/vex-8065955ce2aee21505df90a64cb8fd6a5ccc205cc081c0b4fc069f87f721d51e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,6 +22,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "JVM-based app; Java uses native compression APIs, not the liblzma C library",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-kafka-to-es?repository_url=quay.io/stackstate/stackstate-kafka-to-es",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Kafka Java application; C libfdisk disk-partition library never loaded by the JVM",
+      "timestamp": "2026-06-26T00:55:16Z"
     },
     {
       "vulnerability": {
@@ -157,5 +176,5 @@
       "timestamp": "2026-06-25T02:24:29Z"
     }
   ],
-  "timestamp": "2026-06-25T17:01:04Z"
+  "timestamp": "2026-06-26T13:41:06Z"
 }
