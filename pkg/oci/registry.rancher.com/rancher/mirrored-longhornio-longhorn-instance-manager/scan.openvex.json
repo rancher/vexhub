@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-95a9e3a425aba5e325a1aeafadc13a1beaa80f7315994c7577992f2341e71bbe",
+  "@id": "https://openvex.dev/docs/public/vex-d6f1b729fe6880953e2209a6e993ffd4c5e409c23f06bb7fd3645db010d93bef",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1542,6 +1542,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2385-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Instance manager handles storage replica processes; qemu-vmsr-helper for VM MSR not invoked",
+      "timestamp": "2026-06-26T00:55:16Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2485-1"
       },
       "products": [
@@ -1596,7 +1615,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go instance manager; C libarchive not linked; archive operations use Go stdlib",
       "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsolv-tools-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go storage manager binary; libsolv package management tools not in any execute path",
+      "timestamp": "2026-06-26T00:55:16Z"
     }
   ],
-  "timestamp": "2026-06-25T20:02:20Z"
+  "timestamp": "2026-06-26T13:41:07Z"
 }
