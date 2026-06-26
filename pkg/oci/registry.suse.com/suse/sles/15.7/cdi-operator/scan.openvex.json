@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-95a9e3a425aba5e325a1aeafadc13a1beaa80f7315994c7577992f2341e71bbe",
+  "@id": "https://openvex.dev/docs/public/vex-d6f1b729fe6880953e2209a6e993ffd4c5e409c23f06bb7fd3645db010d93bef",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -706,7 +706,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go CDI operator manages resources; C libblkid1 not in execute path",
       "timestamp": "2026-06-24T04:52:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zypper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI operator is a Go Kubernetes operator; zypper package manager never invoked at runtime",
+      "timestamp": "2026-06-26T00:55:16Z"
     }
   ],
-  "timestamp": "2026-06-25T20:02:20Z"
+  "timestamp": "2026-06-26T13:41:07Z"
 }
