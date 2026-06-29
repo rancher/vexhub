@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cdd9e0fb90e12836d3a913ac4ec37443ca9aa951c7257b155f5d8d6218405c21",
+  "@id": "https://openvex.dev/docs/public/vex-271787605e6367aa6b3b57d4f8cb8f5129f3fda4f72179bf2e507d407078a33b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackgraph-hbase?repository_url=registry.suse.com/suse-observability/stackgraph-hbase",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "HBase stackgraph is a Java application; libblkid1 block device library not called by JVM",
+      "timestamp": "2026-06-27T01:26:38Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:2485-1"
@@ -98,7 +117,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Java HBase app uses java.util.UUID; C libuuid1 library not loaded by the JVM",
       "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackgraph-hbase?repository_url=registry.suse.com/suse-observability/stackgraph-hbase",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsolv-tools-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "HBase is a Java application; SUSE package solver library (libsolv) not called at runtime",
+      "timestamp": "2026-06-27T01:26:38Z"
     }
   ],
-  "timestamp": "2026-06-25T20:02:19Z"
+  "timestamp": "2026-06-29T12:43:06Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-14753fbe98b97e41edb554c42de0939755281b5cd5193124a61a11bec5f3a371",
+  "@id": "https://openvex.dev/docs/public/vex-a7f7fc1ed288e16ce0a49e32df51e46b2184b0a24e723a9b8fac6d5f36d26a09",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -44,6 +44,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/zookeeper?repository_url=quay.io/stackstate/zookeeper",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ZooKeeper is a Java application; libmount1 filesystem library is not called by JVM at runtime",
+      "timestamp": "2026-06-27T01:26:38Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2528-1"
       },
       "products": [
@@ -62,5 +81,5 @@
       "timestamp": "2026-06-25T02:24:29Z"
     }
   ],
-  "timestamp": "2026-06-25T17:01:03Z"
+  "timestamp": "2026-06-29T12:43:07Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-95a9e3a425aba5e325a1aeafadc13a1beaa80f7315994c7577992f2341e71bbe",
+  "@id": "https://openvex.dev/docs/public/vex-a7f7fc1ed288e16ce0a49e32df51e46b2184b0a24e723a9b8fac6d5f36d26a09",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -896,6 +896,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1941-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.suse.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester cluster-repo is a Go Helm chart controller; sed CLI is not invoked at runtime",
+      "timestamp": "2026-06-27T01:26:38Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21143-1"
       },
       "products": [
@@ -1142,5 +1161,5 @@
       "timestamp": "2026-06-24T01:17:46Z"
     }
   ],
-  "timestamp": "2026-06-25T20:02:20Z"
+  "timestamp": "2026-06-29T12:43:07Z"
 }
