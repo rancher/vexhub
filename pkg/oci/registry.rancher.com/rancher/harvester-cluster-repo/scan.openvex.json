@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a7f7fc1ed288e16ce0a49e32df51e46b2184b0a24e723a9b8fac6d5f36d26a09",
+  "@id": "https://openvex.dev/docs/public/vex-2605d95bf80f27bc8f0a6934f5ec919cd369f90a982f8f6a59067e4bcb2e7e72",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1159,7 +1159,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Harvester cluster-repo is a Go Helm chart HTTP server; libfdisk1 not linked by Go binary",
       "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.rancher.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go Helm repo server binary is the entrypoint; openssl CLI tool is never invoked",
+      "timestamp": "2026-06-29T16:02:31Z"
     }
   ],
-  "timestamp": "2026-06-29T12:43:07Z"
+  "timestamp": "2026-06-29T16:53:03Z"
 }
