@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7d9eb8e09cf9847c8c19fa549def74fdf444f927a73949808bcec5a11d8461e6",
+  "@id": "https://openvex.dev/docs/public/vex-271787605e6367aa6b3b57d4f8cb8f5129f3fda4f72179bf2e507d407078a33b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -307,6 +307,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1478-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-app-frontend?repository_url=index.docker.io/rancher/supportability-review-app-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/npm22"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Frontend container serves static assets; npm package manager CLI is not invoked at runtime",
+      "timestamp": "2026-06-27T01:26:38Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -477,5 +496,5 @@
       "timestamp": "2026-06-25T02:24:29Z"
     }
   ],
-  "timestamp": "2026-06-26T13:41:08Z"
+  "timestamp": "2026-06-29T12:43:06Z"
 }
