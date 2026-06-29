@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7d9eb8e09cf9847c8c19fa549def74fdf444f927a73949808bcec5a11d8461e6",
+  "@id": "https://openvex.dev/docs/public/vex-c0be46ec04c7ef60a6b8e5c31f3dbe4a9fd59c1c3d72eac43f01ec5d7aec6dba",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2014,7 +2014,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libuuid-devel provides only headers/static libs; devel packages have no runtime shared library",
       "timestamp": "2026-06-26T00:55:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl-3-devel provides headers only; runtime uses libopenssl3 shared library",
+      "timestamp": "2026-06-29T16:02:31Z"
     }
   ],
-  "timestamp": "2026-06-26T13:41:08Z"
+  "timestamp": "2026-06-29T16:53:02Z"
 }

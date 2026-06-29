@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-32f8196dfe9532b4b4e68cafa5137f5b47453ce0429cba73f1d64efd3a8fea4e",
+  "@id": "https://openvex.dev/docs/public/vex-2605d95bf80f27bc8f0a6934f5ec919cd369f90a982f8f6a59067e4bcb2e7e72",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -117,7 +117,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "SUSE package-manager library; package installation not performed in running containers",
       "timestamp": "2026-06-25T02:24:29Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2666-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-receiver?repository_url=index.docker.io/suse-observability/stackstate-receiver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgif7"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgif7 unused; stackstate-receiver is a telemetry receiver with no GIF image processing",
+      "timestamp": "2026-06-29T16:02:31Z"
     }
   ],
-  "timestamp": "2026-06-25T17:01:04Z"
+  "timestamp": "2026-06-29T16:53:03Z"
 }

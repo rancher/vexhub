@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-95a9e3a425aba5e325a1aeafadc13a1beaa80f7315994c7577992f2341e71bbe",
+  "@id": "https://openvex.dev/docs/public/vex-2605d95bf80f27bc8f0a6934f5ec919cd369f90a982f8f6a59067e4bcb2e7e72",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -684,7 +684,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "KubeVirt virt-operator is a Go binary; liblzma5 C library is never called at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-operator?repository_url=registry.suse.com/suse/sles/15.7/virt-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go KubeVirt operator binary is the entrypoint; openssl CLI tool is never invoked",
+      "timestamp": "2026-06-29T16:02:31Z"
     }
   ],
-  "timestamp": "2026-06-25T20:02:20Z"
+  "timestamp": "2026-06-29T16:53:03Z"
 }
