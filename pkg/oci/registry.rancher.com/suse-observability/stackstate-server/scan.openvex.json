@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-32f8196dfe9532b4b4e68cafa5137f5b47453ce0429cba73f1d64efd3a8fea4e",
+  "@id": "https://openvex.dev/docs/public/vex-c0be46ec04c7ef60a6b8e5c31f3dbe4a9fd59c1c3d72eac43f01ec5d7aec6dba",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -60,7 +60,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "SUSE package-solver debug tools (dumpsolv/mergesolv); never invoked in container runtime",
       "timestamp": "2026-06-25T02:24:29Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-server?repository_url=registry.rancher.com/suse-observability/stackstate-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libzypp"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "StackState application server never invokes libzypp at runtime; only used by zypper package manager",
+      "timestamp": "2026-06-29T16:02:31Z"
     }
   ],
-  "timestamp": "2026-06-25T17:01:04Z"
+  "timestamp": "2026-06-29T16:53:02Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-2605d95bf80f27bc8f0a6934f5ec919cd369f90a982f8f6a59067e4bcb2e7e72",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -741,7 +741,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libgbm1 GPU buffer management is not used by headless libguestfs disk image tools",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zypper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "zypper is a package manager not invoked by libguestfs tools at runtime",
+      "timestamp": "2026-06-29T16:02:31Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-29T16:53:03Z"
 }
