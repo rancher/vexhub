@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cdd9e0fb90e12836d3a913ac4ec37443ca9aa951c7257b155f5d8d6218405c21",
+  "@id": "https://openvex.dev/docs/public/vex-a7f7fc1ed288e16ce0a49e32df51e46b2184b0a24e723a9b8fac6d5f36d26a09",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1042,6 +1042,25 @@
           "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.suse.com/rancher/nginx-ingress-controller",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libzypp"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Nginx ingress is a Go controller + nginx binary; SUSE package manager library not called",
+      "timestamp": "2026-06-27T01:26:38Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22172-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.suse.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/zypper"
             }
           ]
@@ -1053,5 +1072,5 @@
       "timestamp": "2026-06-25T19:50:46Z"
     }
   ],
-  "timestamp": "2026-06-25T20:02:19Z"
+  "timestamp": "2026-06-29T12:43:07Z"
 }
