@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c0be46ec04c7ef60a6b8e5c31f3dbe4a9fd59c1c3d72eac43f01ec5d7aec6dba",
+  "@id": "https://openvex.dev/docs/public/vex-e4f11c9dac7e91fcbda724b9c094065aa6e6c4cfb429b1ab733b1cd2f31a31ce",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1257,6 +1257,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn instance manager (Go) uses crypto/tls; openssl CLI binary never invoked",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1406-1"
       },
       "products": [
@@ -1292,6 +1311,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libuuid-devel contains only header files (.h); no executable/library loaded at runtime",
       "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn instance manager (Go) does not call libcap2 capability functions at runtime",
+      "timestamp": "2026-06-30T00:07:33Z"
     },
     {
       "vulnerability": {
@@ -1637,6 +1675,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2528-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn uses Kubernetes CRDs for state; libsqlite3 is not linked or loaded at runtime",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2531-1"
       },
       "products": [
@@ -1672,7 +1729,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libopenssl-3-devel provides headers only; runtime uses libopenssl3 shared library",
       "timestamp": "2026-06-29T16:02:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn instance manager (Go) uses crypto/tls; openssl CLI binary never invoked",
+      "timestamp": "2026-06-30T00:07:33Z"
     }
   ],
-  "timestamp": "2026-06-29T16:53:02Z"
+  "timestamp": "2026-06-30T10:50:42Z"
 }

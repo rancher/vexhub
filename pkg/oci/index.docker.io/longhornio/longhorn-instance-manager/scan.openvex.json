@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c0be46ec04c7ef60a6b8e5c31f3dbe4a9fd59c1c3d72eac43f01ec5d7aec6dba",
+  "@id": "https://openvex.dev/docs/public/vex-6508563c159593f3510e27908067ff7adf6336e5b258c93b0f1c991bbd1aa322",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1390,6 +1390,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd daemon not started in containers; longhorn-instance-manager Go binary is PID 1",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1074-1"
       },
       "products": [
@@ -1872,6 +1891,25 @@
           "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn instance manager (Go) does not use XZ compression; liblzma5 not loaded at runtime",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/xz"
             }
           ]
@@ -1979,6 +2017,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2392-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn instance manager (Go) uses crypto/tls; libopenssl1_1 not linked or loaded",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2393-1"
       },
       "products": [
@@ -2035,5 +2092,5 @@
       "timestamp": "2026-06-29T16:02:31Z"
     }
   ],
-  "timestamp": "2026-06-29T16:53:02Z"
+  "timestamp": "2026-06-30T10:50:44Z"
 }

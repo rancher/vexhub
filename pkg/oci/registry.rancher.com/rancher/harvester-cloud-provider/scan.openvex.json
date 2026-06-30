@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-6508563c159593f3510e27908067ff7adf6336e5b258c93b0f1c991bbd1aa322",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -82,6 +82,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0783-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cloud-provider?repository_url=registry.rancher.com/rancher/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libz1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester cloud provider (Go) uses Go's compress/gzip; libz1 not linked or loaded",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -119,5 +138,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-06-30T10:50:44Z"
 }

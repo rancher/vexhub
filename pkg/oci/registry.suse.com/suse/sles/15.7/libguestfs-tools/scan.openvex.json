@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2605d95bf80f27bc8f0a6934f5ec919cd369f90a982f8f6a59067e4bcb2e7e72",
+  "@id": "https://openvex.dev/docs/public/vex-6508563c159593f3510e27908067ff7adf6336e5b258c93b0f1c991bbd1aa322",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -345,6 +345,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0288-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "AMD VMSR helper not invoked during CDI disk image import; requires specific AMD hardware features",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0348-1"
       },
       "products": [
@@ -418,6 +437,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libguestfs-tools inspects disk images; qemu-pr-helper (SCSI Persistent Reservations) is not invoked for image ops",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0445-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "AMD VMSR helper not invoked during CDI disk image import; requires specific AMD hardware features",
+      "timestamp": "2026-06-30T00:07:33Z"
     },
     {
       "vulnerability": {
@@ -497,6 +535,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0832-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "AMD VMSR helper not invoked during CDI disk image import; requires specific AMD hardware features",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1040-1"
       },
       "products": [
@@ -513,6 +570,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libguestfs container runs virt-* tools as entrypoint; systemd daemon is not PID1 and not exec'd",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/udev"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udevd daemon not started in containers; CDI disk image import uses QEMU directly",
+      "timestamp": "2026-06-30T00:07:33Z"
     },
     {
       "vulnerability": {
@@ -744,6 +820,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2385-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "AMD VMSR helper not invoked during CDI disk image import; requires specific AMD hardware features",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2531-1"
       },
       "products": [
@@ -762,5 +857,5 @@
       "timestamp": "2026-06-29T16:02:31Z"
     }
   ],
-  "timestamp": "2026-06-29T16:53:03Z"
+  "timestamp": "2026-06-30T10:50:44Z"
 }

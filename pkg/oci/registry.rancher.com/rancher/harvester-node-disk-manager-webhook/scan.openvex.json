@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c0be46ec04c7ef60a6b8e5c31f3dbe4a9fd59c1c3d72eac43f01ec5d7aec6dba",
+  "@id": "https://openvex.dev/docs/public/vex-0537b48bd5e224566f51fd065ecce3d7c71c2a49b8c8b1eee85d580d079c3df8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -972,6 +972,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go admission webhook; liblzma5 (XZ compression) not linked or loaded at runtime",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21142-1"
       },
       "products": [
@@ -1169,6 +1188,25 @@
           "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go admission webhook; liblzma5 (XZ compression) not linked or loaded at runtime",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/xz"
             }
           ]
@@ -1273,6 +1311,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go webhook binary is the entrypoint; openssl CLI tool is never invoked at runtime",
       "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go admission webhook; libfdisk1 (disk partitioning) not in the webhook execute path",
+      "timestamp": "2026-06-30T00:07:33Z"
     },
     {
       "vulnerability": {
@@ -1446,5 +1503,5 @@
       "timestamp": "2026-06-29T16:02:31Z"
     }
   ],
-  "timestamp": "2026-06-29T16:53:02Z"
+  "timestamp": "2026-06-30T10:50:43Z"
 }
