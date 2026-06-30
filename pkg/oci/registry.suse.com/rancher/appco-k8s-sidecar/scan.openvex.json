@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-6508563c159593f3510e27908067ff7adf6336e5b258c93b0f1c991bbd1aa322",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -44,6 +44,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/appco-k8s-sidecar?repository_url=registry.suse.com/rancher/appco-k8s-sidecar",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k8s-sidecar ConfigMap watcher does not use SQLite; libsqlite3 not in execute path",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0646-1"
       },
       "products": [
@@ -60,6 +79,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1065-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/appco-k8s-sidecar?repository_url=registry.suse.com/rancher/appco-k8s-sidecar",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k8s-sidecar ConfigMap watcher does not use SQLite; libsqlite3 not in execute path",
+      "timestamp": "2026-06-30T00:07:33Z"
     },
     {
       "vulnerability": {
@@ -98,6 +136,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/appco-k8s-sidecar?repository_url=registry.suse.com/rancher/appco-k8s-sidecar",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k8s-sidecar (Python ConfigMap watcher) never calls libcap2 capability functions at runtime",
+      "timestamp": "2026-06-30T00:07:33Z"
     },
     {
       "vulnerability": {
@@ -155,7 +212,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go image does not use liblzma C library; Go standard library handles compression",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2528-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/appco-k8s-sidecar?repository_url=registry.suse.com/rancher/appco-k8s-sidecar",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k8s-sidecar ConfigMap watcher does not use SQLite; libsqlite3 not in execute path",
+      "timestamp": "2026-06-30T00:07:33Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-30T10:50:44Z"
 }

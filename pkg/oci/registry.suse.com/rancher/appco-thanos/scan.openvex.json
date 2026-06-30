@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3a139599a2dd0a52e5a4177715db68d8642e77fb255f968064f124aa1a843a2f",
+  "@id": "https://openvex.dev/docs/public/vex-e4f11c9dac7e91fcbda724b9c094065aa6e6c4cfb429b1ab733b1cd2f31a31ce",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/appco-thanos?repository_url=registry.suse.com/rancher/appco-thanos",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Thanos is a pure-Go Prometheus HA component; libcap2 is not linked or called at runtime",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
@@ -43,5 +62,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:34Z"
+  "timestamp": "2026-06-30T10:50:42Z"
 }

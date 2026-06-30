@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-6508563c159593f3510e27908067ff7adf6336e5b258c93b0f1c991bbd1aa322",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -234,6 +234,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "certgen generates TLS certs only; net/http/httputil package not imported anywhere in source",
+      "timestamp": "2026-06-29T23:57:39Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39826"
       },
       "products": [
@@ -288,7 +307,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "net/mail email parsing not reachable; cilium-certgen generates TLS certs with no email processing",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "certgen generates certs only; mime.WordDecoder.DecodeHeader not imported anywhere in source",
+      "timestamp": "2026-06-29T23:57:39Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-30T10:50:44Z"
 }
