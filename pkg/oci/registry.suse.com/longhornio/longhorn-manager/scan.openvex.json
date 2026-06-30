@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-95a9e3a425aba5e325a1aeafadc13a1beaa80f7315994c7577992f2341e71bbe",
+  "@id": "https://openvex.dev/docs/public/vex-0537b48bd5e224566f51fd065ecce3d7c71c2a49b8c8b1eee85d580d079c3df8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1466,6 +1466,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2392-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.suse.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manager (Go) uses crypto/tls; libopenssl1_1 is not linked or loaded at runtime",
+      "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2531-1"
       },
       "products": [
@@ -1484,5 +1503,5 @@
       "timestamp": "2026-06-25T02:24:29Z"
     }
   ],
-  "timestamp": "2026-06-25T20:02:20Z"
+  "timestamp": "2026-06-30T10:50:43Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-0537b48bd5e224566f51fd065ecce3d7c71c2a49b8c8b1eee85d580d079c3df8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -41,7 +41,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Redis server does not support Kerberos/GSSAPI; krb5 is an incidental SLES OS dependency not loaded at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/appco-redis?repository_url=index.docker.io/rancher/appco-redis",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Redis uses LZF compression, not XZ; liblzma5 is not linked or called by Redis",
+      "timestamp": "2026-06-30T00:07:33Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-06-30T10:50:43Z"
 }
