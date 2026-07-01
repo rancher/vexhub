@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fffeacd518fc62eefc14cfaef6595085f4a4117cbf30fbf03def709a497dfe6b",
+  "@id": "https://openvex.dev/docs/public/vex-b647ac40128d54107bd9fd35df8d422629b3e7b67056ef55d5292e11bb7ae4c2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -7329,6 +7329,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/aks-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "K8s operator connects to K8s API and Azure APIs; adversary cannot control TLS cert SANs",
+      "timestamp": "2026-07-01T00:22:11Z"
     },
     {
       "vulnerability": {
@@ -19797,6 +19816,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/aks-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "K8s cloud operator serves trusted endpoints only; net/textproto not exposed to adversaries",
+      "timestamp": "2026-07-01T00:22:11Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42508",
         "aliases": [
           "GO-2026-5021"
@@ -22524,5 +22562,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-23T07:21:00Z"
+  "timestamp": "2026-07-01T02:54:27Z"
 }

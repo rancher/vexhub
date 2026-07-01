@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-b647ac40128d54107bd9fd35df8d422629b3e7b67056ef55d5292e11bb7ae4c2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1637,6 +1637,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/vmware-tanzu/sonobuoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Sonobuoy test runner connects to K8s API; cluster-managed cert SANs not adversary-controlled",
+      "timestamp": "2026-07-01T00:22:11Z"
     },
     {
       "vulnerability": {
@@ -3913,7 +3932,26 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/vmware-tanzu/sonobuoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Sonobuoy test runner uses K8s API; net/textproto error path not reachable from adversary input",
+      "timestamp": "2026-07-01T00:22:11Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-07-01T02:54:27Z"
 }

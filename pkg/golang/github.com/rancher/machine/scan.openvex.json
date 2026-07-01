@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3a139599a2dd0a52e5a4177715db68d8642e77fb255f968064f124aa1a843a2f",
+  "@id": "https://openvex.dev/docs/public/vex-5da74ee339aef342e0b8bc5d4794a2efea49fef84218d630e1a85570f2457d2c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -9178,6 +9178,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Rancher Machine connects to cloud provider APIs; TLS certs from trusted CAs not adversary-controlled",
+      "timestamp": "2026-07-01T00:22:11Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-29181"
       },
       "products": [
@@ -14652,6 +14671,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Rancher Machine uses cloud provider APIs; net/textproto not exposed to adversary-controlled input",
+      "timestamp": "2026-07-01T00:22:11Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42508",
         "aliases": [
           "GO-2026-5021"
@@ -15839,5 +15877,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:34Z"
+  "timestamp": "2026-07-01T02:54:25Z"
 }

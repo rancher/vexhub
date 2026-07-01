@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2297e1e7ef3d85076ce79f33c000241270814597256603885c3c8cddc0f2a0dd",
+  "@id": "https://openvex.dev/docs/public/vex-5da74ee339aef342e0b8bc5d4794a2efea49fef84218d630e1a85570f2457d2c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -258,6 +258,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Helm CLI connects to K8s API and OCI registries via trusted CA certs; SANs not adversary-controlled",
+      "timestamp": "2026-07-01T00:22:11Z"
     },
     {
       "vulnerability": {
@@ -1139,6 +1158,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Helm CLI processes chart files and K8s API; no RFC 2047 MIME encoded-word header decoding",
+      "timestamp": "2026-07-01T00:22:11Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506"
       },
       "products": [
@@ -1221,6 +1259,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Helm CLI uses K8s API and OCI registries; net/textproto not exposed to adversary-controlled input",
+      "timestamp": "2026-07-01T00:22:11Z"
     },
     {
       "vulnerability": {
@@ -1563,5 +1620,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-25T15:17:35Z"
+  "timestamp": "2026-07-01T02:54:25Z"
 }

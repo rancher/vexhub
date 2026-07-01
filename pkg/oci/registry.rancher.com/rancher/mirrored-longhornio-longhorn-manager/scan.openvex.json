@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0537b48bd5e224566f51fd065ecce3d7c71c2a49b8c8b1eee85d580d079c3df8",
+  "@id": "https://openvex.dev/docs/public/vex-622aa806ddf3d4f895366a64657eb8f84fb93f1cc2400454b3d7b6d731feae93",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -801,6 +801,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manager is a pure Go controller (CGO_ENABLED=0); glibc is not loaded at runtime",
+      "timestamp": "2026-07-01T00:12:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1406-1"
       },
       "products": [
@@ -991,6 +1010,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2231-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manager is a pure Go controller (CGO_ENABLED=0); glibc is not loaded at runtime",
+      "timestamp": "2026-07-01T00:12:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2297-1"
       },
       "products": [
@@ -1083,7 +1121,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "SUSE package-manager library; package installation not performed in running containers",
       "timestamp": "2026-06-25T02:24:29Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2673-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/bind-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver",
+      "timestamp": "2026-07-01T00:12:09Z"
     }
   ],
-  "timestamp": "2026-06-30T10:50:43Z"
+  "timestamp": "2026-07-01T02:54:26Z"
 }

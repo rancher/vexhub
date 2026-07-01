@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-95a9e3a425aba5e325a1aeafadc13a1beaa80f7315994c7577992f2341e71bbe",
+  "@id": "https://openvex.dev/docs/public/vex-b647ac40128d54107bd9fd35df8d422629b3e7b67056ef55d5292e11bb7ae4c2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1523,7 +1523,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher-agent is a Go binary communicating via websocket/TLS; FIPS SSH daemon never executed",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2673-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/bind-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver",
+      "timestamp": "2026-07-01T00:12:09Z"
     }
   ],
-  "timestamp": "2026-06-25T20:02:20Z"
+  "timestamp": "2026-07-01T02:54:27Z"
 }

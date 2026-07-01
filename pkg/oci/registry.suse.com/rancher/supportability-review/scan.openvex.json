@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a7f7fc1ed288e16ce0a49e32df51e46b2184b0a24e723a9b8fac6d5f36d26a09",
+  "@id": "https://openvex.dev/docs/public/vex-5da74ee339aef342e0b8bc5d4794a2efea49fef84218d630e1a85570f2457d2c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -114,7 +114,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "supportability-review runs Python analysis scripts; pip package installer not invoked at runtime",
       "timestamp": "2026-06-27T01:26:38Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2673-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review?repository_url=registry.suse.com/rancher/supportability-review",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/bind-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver",
+      "timestamp": "2026-07-01T00:12:09Z"
     }
   ],
-  "timestamp": "2026-06-29T12:43:07Z"
+  "timestamp": "2026-07-01T02:54:25Z"
 }
