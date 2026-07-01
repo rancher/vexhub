@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7f890f7ebce1958bfdc681e51ccc70bd789e4c7aa840ed7b498c427d7edaac6f",
+  "@id": "https://openvex.dev/docs/public/vex-622aa806ddf3d4f895366a64657eb8f84fb93f1cc2400454b3d7b6d731feae93",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -23861,6 +23861,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/image-build-rke2-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Cloud provider connects to cloud/K8s APIs via trusted CAs; adversary cannot control cert SANs",
+      "timestamp": "2026-07-01T00:22:11Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-32282",
         "aliases": [
           "GO-2026-4864"
@@ -45894,6 +45913,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/image-build-rke2-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Cloud provider binary uses K8s/cloud APIs; net/textproto not exposed to adversary input",
+      "timestamp": "2026-07-01T00:22:11Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42508"
       },
       "products": [
@@ -49225,5 +49263,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-24T19:59:51Z"
+  "timestamp": "2026-07-01T02:54:26Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6508563c159593f3510e27908067ff7adf6336e5b258c93b0f1c991bbd1aa322",
+  "@id": "https://openvex.dev/docs/public/vex-b647ac40128d54107bd9fd35df8d422629b3e7b67056ef55d5292e11bb7ae4c2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -155,6 +155,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "cilium-certgen generates TLS certificates; it does not use net.LookupCNAME",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33811"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Certgen generates TLS certs only; net.LookupCNAME not in execute path; no cgo DNS resolver",
+      "timestamp": "2026-07-01T00:22:11Z"
     },
     {
       "vulnerability": {
@@ -328,5 +347,5 @@
       "timestamp": "2026-06-29T23:57:39Z"
     }
   ],
-  "timestamp": "2026-06-30T10:50:44Z"
+  "timestamp": "2026-07-01T02:54:27Z"
 }
