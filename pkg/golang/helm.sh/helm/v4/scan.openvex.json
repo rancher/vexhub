@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-5da74ee339aef342e0b8bc5d4794a2efea49fef84218d630e1a85570f2457d2c",
+  "@id": "https://openvex.dev/docs/public/vex-5ef5c9345d336d42054fdbb6e0031a42bc9253b12f61bd4b383e1943bad6b060",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1177,6 +1177,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Helm processes OCI/chart archives; mime.WordDecoder.DecodeHeader not in execute path",
+      "timestamp": "2026-07-01T05:02:13Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506"
       },
       "products": [
@@ -1620,5 +1639,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-01T02:54:25Z"
+  "timestamp": "2026-07-01T13:17:05Z"
 }
