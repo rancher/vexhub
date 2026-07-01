@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-aca4d55daf159b51628bb0bda825e35af429a3c8c8ed5ab375aab753453705d1",
+  "@id": "https://openvex.dev/docs/public/vex-5ef5c9345d336d42054fdbb6e0031a42bc9253b12f61bd4b383e1943bad6b060",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2366,6 +2366,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-29T17:18:26Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/ingress-nginx",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx-ingress dbg is a diagnostics CLI; connects to K8s API only; x509 SANs not adversary-controlled",
+      "timestamp": "2026-07-01T05:02:13Z"
     },
     {
       "vulnerability": {
@@ -11453,5 +11472,5 @@
       "timestamp": "2026-06-29T17:18:26Z"
     }
   ],
-  "timestamp": "2026-06-29T19:08:08Z"
+  "timestamp": "2026-07-01T13:17:05Z"
 }
