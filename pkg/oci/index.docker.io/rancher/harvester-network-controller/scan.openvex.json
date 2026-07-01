@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8987507bf9a5c229e4cdf269e4966ea9d5471608cc1181e127eb614cac6c3ca0",
+  "@id": "https://openvex.dev/docs/public/vex-622aa806ddf3d4f895366a64657eb8f84fb93f1cc2400454b3d7b6d731feae93",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -836,7 +836,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Harvester network controller (Go) manages network interfaces, not disk partitions; libfdisk1 not called",
       "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=index.docker.io/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go network controller uses Go crypto/tls; system libopenssl3 is not linked or called at runtime",
+      "timestamp": "2026-07-01T00:12:09Z"
     }
   ],
-  "timestamp": "2026-06-24T11:39:14Z"
+  "timestamp": "2026-07-01T02:54:26Z"
 }
