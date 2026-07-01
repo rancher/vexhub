@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-69f5a90ca1602ae16c8213f6e33bce8108d636426ac6fa7228283803b50383a9",
+  "@id": "https://openvex.dev/docs/public/vex-b647ac40128d54107bd9fd35df8d422629b3e7b67056ef55d5292e11bb7ae4c2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1343,6 +1343,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0371-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.suse.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Flannel is a statically compiled Go CNI plugin (CGO_ENABLED=0); glibc is not loaded at runtime",
+      "timestamp": "2026-07-01T00:12:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0373-1"
       },
       "products": [
@@ -1932,6 +1951,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.suse.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Flannel is a statically compiled Go CNI plugin (CGO_ENABLED=0); glibc is not loaded at runtime",
+      "timestamp": "2026-07-01T00:12:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1375-1"
       },
       "products": [
@@ -2119,7 +2157,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Flannel is a Go binary using crypto/tls; system libgnutls30 is never invoked at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2231-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.suse.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Flannel is a statically compiled Go CNI plugin (CGO_ENABLED=0); glibc is not loaded at runtime",
+      "timestamp": "2026-07-01T00:12:09Z"
     }
   ],
-  "timestamp": "2026-06-23T10:35:16Z"
+  "timestamp": "2026-07-01T02:54:27Z"
 }
