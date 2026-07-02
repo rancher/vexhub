@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b647ac40128d54107bd9fd35df8d422629b3e7b67056ef55d5292e11bb7ae4c2",
+  "@id": "https://openvex.dev/docs/public/vex-0799cb22b77d1bddb79c36a862f6ec05f2fedd4b625dbd67ea521de78df6b1ab",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "certgen connects to K8s API only; x509 SANs not adversary-controlled",
+      "timestamp": "2026-07-02T19:42:22Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2026-32280"
@@ -291,6 +310,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39826"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "certgen generates certs only; html/template Execute/ExecuteTemplate not used in source",
+      "timestamp": "2026-07-02T19:42:22Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39836"
       },
       "products": [
@@ -307,6 +345,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "NUL panic in Dial/LookupPort only triggered on Windows; binary runs on Linux containers",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NUL panic in Dial/LookupPort only triggered on Windows; binary runs on Linux containers",
+      "timestamp": "2026-07-02T19:42:22Z"
     },
     {
       "vulnerability": {
@@ -329,6 +386,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "certgen generates certs only; net/mail ParseAddress/ParseAddressList not used",
+      "timestamp": "2026-07-02T19:42:22Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42504"
       },
       "products": [
@@ -347,5 +423,5 @@
       "timestamp": "2026-06-29T23:57:39Z"
     }
   ],
-  "timestamp": "2026-07-01T02:54:27Z"
+  "timestamp": "2026-07-02T19:49:00Z"
 }
