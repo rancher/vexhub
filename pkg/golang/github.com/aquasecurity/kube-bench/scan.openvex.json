@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-271787605e6367aa6b3b57d4f8cb8f5129f3fda4f72179bf2e507d407078a33b",
+  "@id": "https://openvex.dev/docs/public/vex-33a73201ad8432620b0baf0a71445e771f8bef0dac60aafdbc056fa29a428ced",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2465,6 +2465,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/aquasecurity/kube-bench",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kube-bench connects to K8s API only; x509 SANs not adversary-controlled",
+      "timestamp": "2026-07-02T19:42:22Z"
     },
     {
       "vulnerability": {
@@ -6702,6 +6721,25 @@
           "@id": "pkg:golang/github.com/aquasecurity/kube-bench",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kube-bench reads CIS benchmark config files; mime.WordDecoder.DecodeHeader not called",
+      "timestamp": "2026-07-02T19:42:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/aquasecurity/kube-bench",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.3"
             }
           ]
@@ -6909,6 +6947,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/aquasecurity/kube-bench",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kube-bench reads local CIS config files; no HTTP/1.1; net/textproto Reader not called",
+      "timestamp": "2026-07-02T19:42:22Z"
     },
     {
       "vulnerability": {
@@ -7546,5 +7603,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-29T12:43:06Z"
+  "timestamp": "2026-07-02T19:49:01Z"
 }
