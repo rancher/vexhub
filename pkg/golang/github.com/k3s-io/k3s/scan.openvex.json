@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b30528ac1b2bd988fac847354a657ffc784262cc81d4181a2be0725e06a631bc",
+  "@id": "https://openvex.dev/docs/public/vex-0799cb22b77d1bddb79c36a862f6ec05f2fedd4b625dbd67ea521de78df6b1ab",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -49429,6 +49429,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k3s uses JSON/protobuf for K8s API; mime.WordDecoder.DecodeHeader not called",
+      "timestamp": "2026-07-02T19:42:22Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -56380,5 +56399,5 @@
       "timestamp": "2026-07-01T18:09:58Z"
     }
   ],
-  "timestamp": "2026-07-02T06:40:24Z"
+  "timestamp": "2026-07-02T19:49:00Z"
 }

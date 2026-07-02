@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d21a2b8f4beafeffcfa52d4d65302ce93cfa3df9e9fe7f48c6d4d7e1be1d6ed7",
+  "@id": "https://openvex.dev/docs/public/vex-11ab5bf6fb18de4e3dcb729822aef873d131aa24bcf8f1cb79048aefdb8c6de3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -26934,6 +26934,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kubectl CLI connects to K8s API only; x509 SANs not adversary-controlled",
+      "timestamp": "2026-07-02T19:42:22Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-32280"
       },
       "products": [
@@ -41487,6 +41506,25 @@
           "@id": "pkg:golang/k8s.io/kubernetes",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kubectl CLI uses K8s API (JSON/protobuf); mime.WordDecoder.DecodeHeader not called",
+      "timestamp": "2026-07-02T19:42:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.3"
             }
           ]
@@ -42854,6 +42892,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-23T04:01:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kubectl CLI client to trusted K8s API; net/textproto input not adversary-controlled",
+      "timestamp": "2026-07-02T19:42:22Z"
     },
     {
       "vulnerability": {
@@ -47272,5 +47329,5 @@
       "timestamp": "2026-06-23T04:01:21Z"
     }
   ],
-  "timestamp": "2026-06-24T19:59:52Z"
+  "timestamp": "2026-07-02T19:49:02Z"
 }
