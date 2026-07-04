@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-33a73201ad8432620b0baf0a71445e771f8bef0dac60aafdbc056fa29a428ced",
+  "@id": "https://openvex.dev/docs/public/vex-d0f914c9ff5096cc1d70b1e8db84b0ea1ec59b56733b9c53984af3b1d99b8997",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -646,6 +646,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-07-01T20:48:17Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/wins",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wins.exe is a Windows PE binary; not executable in Linux container; no code paths reachable",
+      "timestamp": "2026-07-04T01:10:55Z"
     },
     {
       "vulnerability": {
@@ -3167,6 +3186,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/wins",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wins.exe is a Windows PE binary; not executable in Linux container; no code paths reachable",
+      "timestamp": "2026-07-04T01:10:55Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42508",
         "aliases": [
           "GO-2026-5021"
@@ -3694,5 +3732,5 @@
       "timestamp": "2026-07-01T20:48:17Z"
     }
   ],
-  "timestamp": "2026-07-02T19:49:01Z"
+  "timestamp": "2026-07-04T13:08:49Z"
 }
