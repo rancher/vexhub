@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-e0a48fe60607ab7891a9f8cae8e5a3942d3f344458a2ce598bfd12dcfcae3e5e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -672,6 +672,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/linode/docker-machine-driver-linode",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "driver connects to Linode API only; server cert SANs not adversary-controlled",
+      "timestamp": "2026-07-04T01:10:55Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-32281"
       },
       "products": [
@@ -732,6 +751,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32283"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/linode/docker-machine-driver-linode",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "docker-machine-driver-linode is a CLI driver; no TLS server exposed to adversary clients",
+      "timestamp": "2026-07-04T01:10:55Z"
     },
     {
       "vulnerability": {
@@ -1860,5 +1898,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-07-04T13:08:50Z"
 }

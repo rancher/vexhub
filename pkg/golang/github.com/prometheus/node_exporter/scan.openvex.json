@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7aa470b38e9031a579cab0066fedc49d92b24e7aa1edd67303c727f8b94a42b7",
+  "@id": "https://openvex.dev/docs/public/vex-e0a48fe60607ab7891a9f8cae8e5a3942d3f344458a2ce598bfd12dcfcae3e5e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3276,6 +3276,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/prometheus/node_exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "node_exporter serves Prometheus metrics; no outbound TLS to adversary-controlled servers",
+      "timestamp": "2026-07-04T01:10:55Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-32280"
       },
       "products": [
@@ -5622,5 +5641,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-03T11:28:39Z"
+  "timestamp": "2026-07-04T13:08:50Z"
 }
