@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c0be46ec04c7ef60a6b8e5c31f3dbe4a9fd59c1c3d72eac43f01ec5d7aec6dba",
+  "@id": "https://openvex.dev/docs/public/vex-82be74eb152acb8f30a5d5059b760ccb27554fa028cb1562c705b6124cb833a4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54515"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-receiver?repository_url=registry.rancher.com/suse-observability/stackstate-receiver",
+          "subcomponents": [
+            {
+              "@id": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "A clean dependency upgrade is not currently available: Maven Central metadata for com.fasterxml.jackson.core:jackson-databind lists 2.22.0 as the newest published 2.x artifact as of 2026-07-01, while the advisory fixed lines 2.18.9, 2.21.5, 2.22.1, and 3.1.4 are not resolvable. Runtime reachability review found no use of the vulnerable annotation/feature combination in StackGraph, docker-images recipes, or the patched TinkerPop fork: recursive searches for JsonIgnoreProperties, JsonFormat, ACCEPT_CASE_INSENSITIVE_PROPERTIES, MapperFeature.ACCEPT_CASE_INSENSITIVE, and equivalent case-insensitive Jackson configuration across repos/stackgraph, repos/docker-images, and repos/tinkerpop returned no production code path that combines ignored properties with case-insensitive Jackson property binding. Upstream source review for the exact versions packaged by docker-images found the same: Kafka 3.9.2 and Hadoop 3.5.0 contain @JsonIgnoreProperties uses, but no Jackson JsonFormat or ACCEPT_CASE_INSENSITIVE_PROPERTIES usage; ZooKeeper 3.9.5 and the S3Proxy fork commit 7925896cf3f6d48cee3c9de5ae80cd5a24ddbdab contain no matching Jackson annotation/configuration hits; the Elasticsearch 8.19.16 modules that contain the flagged jars have no matching Jackson annotation/configuration hits. HBase REST has unrelated ObjectMapper use, but SUSE Observability deploys HBase master and regionserver images from the StackGraph hbase Dockerfile, not the HBase REST server. The StackGraph console image carries gremlin-shaded, but the patched TinkerPop fork likewise has no production use of the vulnerable @JsonIgnoreProperties plus per-property case-insensitive deserialization path. Therefore the vulnerable jackson-databind code is present on disk in these images, but the vulnerable code path is not reached by the supported SUSE Observability runtime configuration. This statement is deliberately image-scoped to the affected SUSE Observability images instead of package-scoped for every possible jackson-databind 2.22.0 consumer.",
+      "timestamp": "2026-07-06T18:15:16Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:2485-1"
@@ -138,5 +157,5 @@
       "timestamp": "2026-06-29T16:02:31Z"
     }
   ],
-  "timestamp": "2026-06-29T16:53:02Z"
+  "timestamp": "2026-07-06T18:25:23Z"
 }
