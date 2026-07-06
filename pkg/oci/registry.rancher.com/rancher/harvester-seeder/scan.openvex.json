@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-95a9e3a425aba5e325a1aeafadc13a1beaa80f7315994c7577992f2341e71bbe",
+  "@id": "https://openvex.dev/docs/public/vex-31de560200cb1ac23a7da147aece1795ca2e2d14d8fb1459435ccd8410107ea1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -478,6 +478,120 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22294-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libncurses6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
+      "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22294-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/ncurses-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
+      "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22294-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/terminfo-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
+      "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22315-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go seeder binary is the entrypoint; openssl CLI tool is never invoked at runtime",
+      "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22325-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sed is a CLI stream editor not invoked by the harvester-seeder Go service binary at runtime",
+      "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22377-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2393-1"
       },
       "products": [
@@ -513,7 +627,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go seeder binary is the entrypoint; openssl CLI tool is never invoked at runtime",
       "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2714-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-06-25T20:02:20Z"
+  "timestamp": "2026-07-06T16:18:15Z"
 }

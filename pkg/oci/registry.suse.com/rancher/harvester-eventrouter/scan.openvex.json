@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-1dcd4478605052e0be800149c86114fa61bc8e6d02440eca07ce6ee7cdc0d38a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -79,7 +79,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Pure Go event router; XZ/LZMA compression library not used at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22294-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-eventrouter?repository_url=registry.suse.com/rancher/harvester-eventrouter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libncurses6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
+      "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22294-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-eventrouter?repository_url=registry.suse.com/rancher/harvester-eventrouter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/terminfo-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
+      "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-07-06T16:18:16Z"
 }
