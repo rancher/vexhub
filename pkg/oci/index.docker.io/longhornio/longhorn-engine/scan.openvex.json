@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e4f11c9dac7e91fcbda724b9c094065aa6e6c4cfb429b1ab733b1cd2f31a31ce",
+  "@id": "https://openvex.dev/docs/public/vex-31de560200cb1ac23a7da147aece1795ca2e2d14d8fb1459435ccd8410107ea1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1957,7 +1957,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "zypper package manager not invoked at runtime in this service container",
       "timestamp": "2026-06-25T02:24:29Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2714-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-06-30T10:50:42Z"
+  "timestamp": "2026-07-06T16:18:15Z"
 }

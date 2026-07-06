@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7aa470b38e9031a579cab0066fedc49d92b24e7aa1edd67303c727f8b94a42b7",
+  "@id": "https://openvex.dev/docs/public/vex-d42733c5eedba96d2cb2c501aeff00bb1e829b85268a0888ffc82a5580aa3d72",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,6 +22,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "hubble-ui backend connects to internal K8s services only; x509 SANs not adversary-controlled",
       "timestamp": "2026-07-02T19:42:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33811"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/hubble-ui/backend",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "net.LookupCNAME cgo not in execute path; binary does not perform CNAME DNS lookups",
+      "timestamp": "2026-07-05T00:36:59Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/hubble-ui/backend",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "HTTP/2 server DoS; binary does not serve HTTP/2 to adversary-controlled clients",
+      "timestamp": "2026-07-05T00:36:59Z"
     },
     {
       "vulnerability": {
@@ -176,5 +214,5 @@
       "timestamp": "2026-07-02T19:42:22Z"
     }
   ],
-  "timestamp": "2026-07-03T11:28:39Z"
+  "timestamp": "2026-07-06T16:18:14Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1cee6eeafb50021fddfb57f67e9fb8bc00d462c58af3b8b65b83484f515c13d9",
+  "@id": "https://openvex.dev/docs/public/vex-1dcd4478605052e0be800149c86114fa61bc8e6d02440eca07ce6ee7cdc0d38a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -562,7 +562,67 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh/agent` package is NOT compiled into the `helm-set-status` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh/agent.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
       "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-50151",
+        "aliases": [
+          "GHSA-vh4v-2xq2-g5cg"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/oras.land/oras-go/v2@v2.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "klipper-helm runs the bundled Helm CLI only against local chart archives and never pushes/pulls charts from an OCI registry, so oras-go's registry-redirect / blob-upload Location credential-forwarding path is never reached. Vulnerable code not in execute path. Fixed upstream in oras-go v2.6.1.",
+      "timestamp": "2026-07-06T15:42:38Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-50162"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/oras.land/oras-go/v2@v2.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "klipper-helm never uses oras-go's file store to materialise OCI content to disk, so the symlink-traversal write-outside-workingDir path is unreachable in this usage. Vulnerable code not in execute path. Fixed upstream in oras-go v2.6.1.",
+      "timestamp": "2026-07-06T15:42:38Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-50163"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/oras.land/oras-go/v2@v2.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "klipper-helm never extracts OCI tar layers via oras-go, so the hardlink tar-extraction directory-escape path is unreachable in this usage. Vulnerable code not in execute path (no fixed oras-go release yet; not exploitable as shipped).",
+      "timestamp": "2026-07-06T15:42:38Z"
     }
   ],
-  "timestamp": "2026-06-25T15:17:36Z"
+  "timestamp": "2026-07-06T16:18:16Z"
 }
