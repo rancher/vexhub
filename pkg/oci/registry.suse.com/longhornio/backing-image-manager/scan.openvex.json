@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7d9eb8e09cf9847c8c19fa549def74fdf444f927a73949808bcec5a11d8461e6",
+  "@id": "https://openvex.dev/docs/public/vex-1dcd4478605052e0be800149c86114fa61bc8e6d02440eca07ce6ee7cdc0d38a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2071,7 +2071,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "SUSE package-manager library; package installation not performed in running containers",
       "timestamp": "2026-06-25T02:24:29Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2714-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.suse.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-06-26T13:41:08Z"
+  "timestamp": "2026-07-06T16:18:16Z"
 }
