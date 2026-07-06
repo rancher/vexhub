@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6b045fd6a93ecc80d40c4bff885a8d4f5dea245cca1d288fa756684662095248",
+  "@id": "https://openvex.dev/docs/public/vex-31de560200cb1ac23a7da147aece1795ca2e2d14d8fb1459435ccd8410107ea1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -6276,6 +6276,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-32283"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "TLS 1.3 server path not reachable; binary does not serve TLS 1.3 to adversary clients",
+      "timestamp": "2026-07-05T00:36:59Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-32288",
         "aliases": [
           "GO-2026-4869"
@@ -7184,6 +7203,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-23T02:26:59Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39825"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "net/http/httputil.ReverseProxy not used; binary is not a reverse proxy",
+      "timestamp": "2026-07-05T00:36:59Z"
     },
     {
       "vulnerability": {
@@ -10172,5 +10210,5 @@
       "timestamp": "2026-06-23T02:26:59Z"
     }
   ],
-  "timestamp": "2026-06-25T01:53:39Z"
+  "timestamp": "2026-07-06T16:18:15Z"
 }

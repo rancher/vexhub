@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0537b48bd5e224566f51fd065ecce3d7c71c2a49b8c8b1eee85d580d079c3df8",
+  "@id": "https://openvex.dev/docs/public/vex-31de560200cb1ac23a7da147aece1795ca2e2d14d8fb1459435ccd8410107ea1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -136,7 +136,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22294-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cloud-provider?repository_url=index.docker.io/rancher/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libncurses6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
+      "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22294-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cloud-provider?repository_url=index.docker.io/rancher/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/terminfo-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
+      "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-06-30T10:50:43Z"
+  "timestamp": "2026-07-06T16:18:15Z"
 }
