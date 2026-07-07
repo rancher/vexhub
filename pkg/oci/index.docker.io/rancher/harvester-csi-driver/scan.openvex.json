@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9c2eaa9448c4e07c0bbb61941027570e1b980c3e6ebc8847e9b1ede4d02217b6",
+  "@id": "https://openvex.dev/docs/public/vex-d6c628e8032b55271f04c13fbbf6aca14451260d8b4ab1ccc28655aefafbfc9e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1371,6 +1371,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1350-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CSI driver Go binary uses Go native HTTP/2 (net/http2) for gRPC; libnghttp2-14 C lib not called",
+      "timestamp": "2026-07-07T04:49:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1605-1"
       },
       "products": [
@@ -2054,5 +2073,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-07T06:21:50Z"
+  "timestamp": "2026-07-07T11:29:55Z"
 }
