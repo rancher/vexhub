@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9c2eaa9448c4e07c0bbb61941027570e1b980c3e6ebc8847e9b1ede4d02217b6",
+  "@id": "https://openvex.dev/docs/public/vex-c59c4a994da47aebde56e94f48c771e04a05196049427667af3483902b8afe5c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -117,6 +117,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses net/http for HTTP; libcurl4 C library not called by Go binary",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlidec1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI upload server handles disk images (qcow2/raw); libbrotlidec1 is not in the upload path",
+      "timestamp": "2026-07-07T04:49:33Z"
     },
     {
       "vulnerability": {
@@ -765,5 +784,5 @@
       "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-07-07T06:21:50Z"
+  "timestamp": "2026-07-07T11:29:54Z"
 }

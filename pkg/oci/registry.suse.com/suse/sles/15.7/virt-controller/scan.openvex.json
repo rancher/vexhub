@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6761c80d1172e91a8d1f2a5f17b3f5f27455b87a06cd3e45b0610aeb43265ad0",
+  "@id": "https://openvex.dev/docs/public/vex-c59c4a994da47aebde56e94f48c771e04a05196049427667af3483902b8afe5c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -288,6 +288,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeVirt controller Go binary manages VMs via Kubernetes API; SQLite not used at runtime",
+      "timestamp": "2026-07-07T04:49:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -380,6 +399,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "virt-controller is a Go API controller; does not enumerate devices, libudev not in execute path",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1065-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeVirt controller Go binary manages VMs via Kubernetes API; SQLite not used at runtime",
+      "timestamp": "2026-07-07T04:49:33Z"
     },
     {
       "vulnerability": {
@@ -592,6 +630,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2528-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeVirt controller Go binary manages VMs via Kubernetes API; SQLite not used at runtime",
+      "timestamp": "2026-07-07T04:49:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2714-1"
       },
       "products": [
@@ -610,5 +667,5 @@
       "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-07-07T06:21:51Z"
+  "timestamp": "2026-07-07T11:29:54Z"
 }
