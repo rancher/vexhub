@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d42733c5eedba96d2cb2c501aeff00bb1e829b85268a0888ffc82a5580aa3d72",
+  "@id": "https://openvex.dev/docs/public/vex-9d16b50bad4c99395db34064ff48db616087f2339b1bb5bc0f3dfd382ca1e89d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -359,6 +359,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27142"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/descheduler",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "descheduler does not render HTML templates; html/template meta-tag URL CVE unreachable",
+      "timestamp": "2026-07-07T01:13:26Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-32282",
         "aliases": [
           "GO-2026-4864"
@@ -463,6 +482,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "html/template JS literal path not reachable; binary has no HTML template rendering",
       "timestamp": "2026-07-05T00:36:59Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33810"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/descheduler",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "descheduler connects to K8s API only; name-constrained cert chains not adversary-controlled",
+      "timestamp": "2026-07-07T01:13:26Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33811"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/descheduler",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-07-07T01:13:26Z"
     },
     {
       "vulnerability": {
@@ -1226,5 +1283,5 @@
       "timestamp": "2026-06-29T17:01:55Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:14Z"
+  "timestamp": "2026-07-07T06:21:49Z"
 }

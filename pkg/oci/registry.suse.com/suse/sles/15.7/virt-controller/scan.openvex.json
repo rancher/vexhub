@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-95a9e3a425aba5e325a1aeafadc13a1beaa80f7315994c7577992f2341e71bbe",
+  "@id": "https://openvex.dev/docs/public/vex-6761c80d1172e91a8d1f2a5f17b3f5f27455b87a06cd3e45b0610aeb43265ad0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -589,7 +589,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "virt-controller is a Go KubeVirt controller; sed CLI tool is not invoked in normal operation",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2714-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-06-25T20:02:20Z"
+  "timestamp": "2026-07-07T06:21:51Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d42733c5eedba96d2cb2c501aeff00bb1e829b85268a0888ffc82a5580aa3d72",
+  "@id": "https://openvex.dev/docs/public/vex-6761c80d1172e91a8d1f2a5f17b3f5f27455b87a06cd3e45b0610aeb43265ad0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -269,6 +269,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0018-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-kubeovn-operator?repository_url=index.docker.io/rancher/harvester-kubeovn-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go Kubernetes operator; GLib/GObject is not used in Go-based controllers",
+      "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0215-1"
       },
       "products": [
@@ -323,6 +342,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "openssl CLI not invoked by Go-based KubeOVN operator; TLS handled via Go crypto",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-kubeovn-operator?repository_url=index.docker.io/rancher/harvester-kubeovn-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go Kubernetes operator; GLib/GObject is not used in Go-based controllers",
+      "timestamp": "2026-07-07T01:05:12Z"
     },
     {
       "vulnerability": {
@@ -800,5 +838,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:14Z"
+  "timestamp": "2026-07-07T06:21:51Z"
 }

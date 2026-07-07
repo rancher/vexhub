@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c0be46ec04c7ef60a6b8e5c31f3dbe4a9fd59c1c3d72eac43f01ec5d7aec6dba",
+  "@id": "https://openvex.dev/docs/public/vex-9c2eaa9448c4e07c0bbb61941027570e1b980c3e6ebc8847e9b1ede4d02217b6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -684,7 +684,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Support-bundle-kit Go binary collects k8s diagnostics; zypper package manager not invoked",
       "timestamp": "2026-06-27T01:26:38Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2714-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=index.docker.io/rancher/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-06-29T16:53:02Z"
+  "timestamp": "2026-07-07T06:21:50Z"
 }

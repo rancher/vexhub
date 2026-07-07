@@ -1,0 +1,47 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-9c2eaa9448c4e07c0bbb61941027570e1b980c3e6ebc8847e9b1ede4d02217b6",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22294-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kafkaup-operator?repository_url=quay.io/stackstate/kafkaup-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libncurses6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
+      "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22294-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kafkaup-operator?repository_url=quay.io/stackstate/kafkaup-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/terminfo-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
+      "timestamp": "2026-07-07T01:05:12Z"
+    }
+  ],
+  "timestamp": "2026-07-07T06:21:50Z"
+}

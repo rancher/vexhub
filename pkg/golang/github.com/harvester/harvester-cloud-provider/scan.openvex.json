@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-31de560200cb1ac23a7da147aece1795ca2e2d14d8fb1459435ccd8410107ea1",
+  "@id": "https://openvex.dev/docs/public/vex-9d16b50bad4c99395db34064ff48db616087f2339b1bb5bc0f3dfd382ca1e89d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -6056,6 +6056,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-32281"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-cloud-provider manages volumes/LBs; does not call os.Root.Chmod on adversary paths",
+      "timestamp": "2026-07-07T01:13:26Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-32282",
         "aliases": [
           "GO-2026-4864"
@@ -6515,6 +6534,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-32289"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-cloud-provider manages cloud resources; does not render HTML templates",
+      "timestamp": "2026-07-07T01:13:26Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33186",
         "aliases": [
           "GO-2026-4762",
@@ -6719,6 +6757,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-23T02:26:59Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33811"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-07-07T01:13:26Z"
     },
     {
       "vulnerability": {
@@ -9029,6 +9086,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "CVE-2026-39836 only triggers on Windows (NUL in net.Dial/LookupPort); runs in Linux container",
+      "timestamp": "2026-07-07T01:13:26Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39883"
       },
       "products": [
@@ -10210,5 +10286,5 @@
       "timestamp": "2026-06-23T02:26:59Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:15Z"
+  "timestamp": "2026-07-07T06:21:49Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e0a48fe60607ab7891a9f8cae8e5a3942d3f344458a2ce598bfd12dcfcae3e5e",
+  "@id": "https://openvex.dev/docs/public/vex-9c2eaa9448c4e07c0bbb61941027570e1b980c3e6ebc8847e9b1ede4d02217b6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1723,6 +1723,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/linode/docker-machine-driver-linode",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "net/textproto adversary input not reachable; binary does not serve HTTP/1.1",
+      "timestamp": "2026-07-07T01:13:26Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42508",
         "aliases": [
           "GO-2026-5021"
@@ -1898,5 +1917,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-04T13:08:50Z"
+  "timestamp": "2026-07-07T06:21:50Z"
 }
