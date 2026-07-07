@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-31de560200cb1ac23a7da147aece1795ca2e2d14d8fb1459435ccd8410107ea1",
+  "@id": "https://openvex.dev/docs/public/vex-d20d523f7af0910b9f5f9940fcf4f5d37b731dfa68b0370e241232f56798800c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1276,6 +1276,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2528-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=registry.suse.com/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn engine Go binary manages block storage via iSCSI/dm; SQLite is not used at runtime",
+      "timestamp": "2026-07-07T04:49:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2531-1"
       },
       "products": [
@@ -1313,5 +1332,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:15Z"
+  "timestamp": "2026-07-07T11:29:56Z"
 }

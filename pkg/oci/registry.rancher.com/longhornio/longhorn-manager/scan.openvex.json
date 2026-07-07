@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1dcd4478605052e0be800149c86114fa61bc8e6d02440eca07ce6ee7cdc0d38a",
+  "@id": "https://openvex.dev/docs/public/vex-d6c628e8032b55271f04c13fbbf6aca14451260d8b4ab1ccc28655aefafbfc9e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -877,6 +877,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manager Go binary stores state in Kubernetes etcd/CRDs; SQLite not used at runtime",
+      "timestamp": "2026-07-07T04:49:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0434-1"
       },
       "products": [
@@ -1026,6 +1045,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Pure Go Kubernetes controller; no sd_notify/sd_bus calls, libsystemd0 not in execute path",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1065-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manager Go binary stores state in Kubernetes etcd/CRDs; SQLite not used at runtime",
+      "timestamp": "2026-07-07T04:49:33Z"
     },
     {
       "vulnerability": {
@@ -1485,6 +1523,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2528-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manager Go binary stores state in Kubernetes etcd/CRDs; SQLite not used at runtime",
+      "timestamp": "2026-07-07T04:49:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2531-1"
       },
       "products": [
@@ -1541,5 +1598,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:16Z"
+  "timestamp": "2026-07-07T11:29:55Z"
 }

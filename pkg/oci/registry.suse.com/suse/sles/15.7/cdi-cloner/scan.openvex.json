@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9d16b50bad4c99395db34064ff48db616087f2339b1bb5bc0f3dfd382ca1e89d",
+  "@id": "https://openvex.dev/docs/public/vex-d20d523f7af0910b9f5f9940fcf4f5d37b731dfa68b0370e241232f56798800c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -136,6 +136,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI cloner is a Go binary; libbrotlicommon1 brotli library not used at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-cloner?repository_url=registry.suse.com/suse/sles/15.7/cdi-cloner",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libbrotlidec1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI cloner Go binary clones PVCs; brotli decompression has no role in PVC cloning",
+      "timestamp": "2026-07-07T04:49:33Z"
     },
     {
       "vulnerability": {
@@ -651,5 +670,5 @@
       "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-07-07T06:21:49Z"
+  "timestamp": "2026-07-07T11:29:56Z"
 }
