@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cc52965ea9fe20261578273721773c46d803b8d5beab3e8e386bc1254a77b532",
+  "@id": "https://openvex.dev/docs/public/vex-6761c80d1172e91a8d1f2a5f17b3f5f27455b87a06cd3e45b0610aeb43265ad0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -839,7 +839,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI operator is a Go Kubernetes operator; zypper package manager never invoked at runtime",
       "timestamp": "2026-06-26T00:55:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2714-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-06-29T12:43:08Z"
+  "timestamp": "2026-07-07T06:21:51Z"
 }
