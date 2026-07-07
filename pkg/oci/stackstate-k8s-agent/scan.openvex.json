@@ -1,0 +1,465 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-539d0ed2cc3ad95d8ff689c8c281f90c646f182d3d023a0e9af18c33eb2cbaec",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-15366"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The image bundles an upstream CPython 3.13.13 interpreter built from python.org sources via omnibus (omnibus/config/software/python3.rb:3, omnibus/config/software/python3.rb:14). Per the CVE intel, the 3.13.x branch is not yet listed among the fixed versions, so the vulnerable Lib/imaplib.py:IMAP4._command sink ships intact at /opt/stackstate-agent/embedded/lib/python3.13/imaplib.py \\u2014 the omnibus build only deletes the test/ subtree (omnibus/config/software/python3.rb:66) and applies two unrelated CVE patches for sqlite and tarfile (omnibus/config/patches/python3/CVE-2025-6965-sqlite-3.50.4.patch, omnibus/config/patches/python3/CVE-2025-8194-tarfile.patch); no imaplib patch is applied. However, the imaplib module is never imported or invoked by any code that runs in the image. A repository-wide search for the canonical import statements ('import imaplib', 'from imaplib') against ~/projects/stackstate-agent returns zero matches, and a broader grep for 'imaplib' across the entire tree returns zero matches. The only 'imap'/'IMAP' substring hits are unrelated: Go 'multimap' identifiers in comp/core/autodiscovery/autodiscoveryimpl/multimap.go and comp/core/autodiscovery/autodiscoveryimpl/configmgr.go, eBPF kernel symbol tables in pkg/ebpf/c/vmlinux_*.h and pkg/ebpf/testdata/kallsyms.*, Windows perfmon counter names containing 'popimap' under pkg/collector/corechecks/system/testfiles/allcounters_en-us.txt, and a JUnit XML test fixture inside tasks/unit_tests/testdata/secret.tar.gz. None of the container entrypoints invoke an IMAP path either: Dockerfiles/agent/entrypoint.sh, Dockerfiles/agent/probe.sh, Dockerfiles/agent/cont-init.d/, Dockerfiles/agent/entrypoint.d/, and the secrets helper Dockerfiles/agent/secrets-helper/readsecret.py contain no 'imap' references. No StackState core check, integration, or rtloader binding pulls imaplib via the embedded interpreter (grep on rtloader/, internal/, tools/, comp/, pkg/, cmd/ returns only the false positives above). The vulnerable IMAP4._command sink also requires CR/LF in caller-supplied IMAP command arguments, which presupposes an imaplib-using program \\u2014 none ships. Defense in depth: the agent process runs as the non-root UID 1000:1000 (Dockerfiles/agent/Dockerfile:71), and the image exposes no IMAP-related listener on its k8s service surface (Dockerfiles/agent/stackstate-kubernetes.yaml only declares the kubelet listener). The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-15366"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The image bundles an upstream CPython 3.13.13 interpreter built from python.org sources via omnibus (omnibus/config/software/python3.rb:3, omnibus/config/software/python3.rb:14). Per the CVE intel, the 3.13.x branch is not yet listed among the fixed versions, so the vulnerable Lib/imaplib.py:IMAP4._command sink ships intact at /opt/stackstate-agent/embedded/lib/python3.13/imaplib.py \\u2014 the omnibus build only deletes the test/ subtree (omnibus/config/software/python3.rb:66) and applies two unrelated CVE patches for sqlite and tarfile (omnibus/config/patches/python3/CVE-2025-6965-sqlite-3.50.4.patch, omnibus/config/patches/python3/CVE-2025-8194-tarfile.patch); no imaplib patch is applied. However, the imaplib module is never imported or invoked by any code that runs in the image. A repository-wide search for the canonical import statements ('import imaplib', 'from imaplib') against ~/projects/stackstate-agent returns zero matches, and a broader grep for 'imaplib' across the entire tree returns zero matches. The only 'imap'/'IMAP' substring hits are unrelated: Go 'multimap' identifiers in comp/core/autodiscovery/autodiscoveryimpl/multimap.go and comp/core/autodiscovery/autodiscoveryimpl/configmgr.go, eBPF kernel symbol tables in pkg/ebpf/c/vmlinux_*.h and pkg/ebpf/testdata/kallsyms.*, Windows perfmon counter names containing 'popimap' under pkg/collector/corechecks/system/testfiles/allcounters_en-us.txt, and a JUnit XML test fixture inside tasks/unit_tests/testdata/secret.tar.gz. None of the container entrypoints invoke an IMAP path either: Dockerfiles/agent/entrypoint.sh, Dockerfiles/agent/probe.sh, Dockerfiles/agent/cont-init.d/, Dockerfiles/agent/entrypoint.d/, and the secrets helper Dockerfiles/agent/secrets-helper/readsecret.py contain no 'imap' references. No StackState core check, integration, or rtloader binding pulls imaplib via the embedded interpreter (grep on rtloader/, internal/, tools/, comp/, pkg/, cmd/ returns only the false positives above). The vulnerable IMAP4._command sink also requires CR/LF in caller-supplied IMAP command arguments, which presupposes an imaplib-using program \\u2014 none ships. Defense in depth: the agent process runs as the non-root UID 1000:1000 (Dockerfiles/agent/Dockerfile:71), and the image exposes no IMAP-related listener on its k8s service surface (Dockerfiles/agent/stackstate-kubernetes.yaml only declares the kubelet listener). The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-15367"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The image bundles an upstream CPython 3.13.13 interpreter built from python.org sources via omnibus (omnibus/config/software/python3.rb:3, omnibus/config/software/python3.rb:14). Per the CVE intel, the 3.13.x branch is not yet listed among the fixed versions, so the vulnerable Lib/imaplib.py:IMAP4._command sink ships intact at /opt/stackstate-agent/embedded/lib/python3.13/imaplib.py \\u2014 the omnibus build only deletes the test/ subtree (omnibus/config/software/python3.rb:66) and applies two unrelated CVE patches for sqlite and tarfile (omnibus/config/patches/python3/CVE-2025-6965-sqlite-3.50.4.patch, omnibus/config/patches/python3/CVE-2025-8194-tarfile.patch); no imaplib patch is applied. However, the imaplib module is never imported or invoked by any code that runs in the image. A repository-wide search for the canonical import statements ('import imaplib', 'from imaplib') against ~/projects/stackstate-agent returns zero matches, and a broader grep for 'imaplib' across the entire tree returns zero matches. The only 'imap'/'IMAP' substring hits are unrelated: Go 'multimap' identifiers in comp/core/autodiscovery/autodiscoveryimpl/multimap.go and comp/core/autodiscovery/autodiscoveryimpl/configmgr.go, eBPF kernel symbol tables in pkg/ebpf/c/vmlinux_*.h and pkg/ebpf/testdata/kallsyms.*, Windows perfmon counter names containing 'popimap' under pkg/collector/corechecks/system/testfiles/allcounters_en-us.txt, and a JUnit XML test fixture inside tasks/unit_tests/testdata/secret.tar.gz. None of the container entrypoints invoke an IMAP path either: Dockerfiles/agent/entrypoint.sh, Dockerfiles/agent/probe.sh, Dockerfiles/agent/cont-init.d/, Dockerfiles/agent/entrypoint.d/, and the secrets helper Dockerfiles/agent/secrets-helper/readsecret.py contain no 'imap' references. No StackState core check, integration, or rtloader binding pulls imaplib via the embedded interpreter (grep on rtloader/, internal/, tools/, comp/, pkg/, cmd/ returns only the false positives above). The vulnerable IMAP4._command sink also requires CR/LF in caller-supplied IMAP command arguments, which presupposes an imaplib-using program \\u2014 none ships. Defense in depth: the agent process runs as the non-root UID 1000:1000 (Dockerfiles/agent/Dockerfile:71), and the image exposes no IMAP-related listener on its k8s service surface (Dockerfiles/agent/stackstate-kubernetes.yaml only declares the kubelet listener). The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-15367"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The image bundles an upstream CPython 3.13.13 interpreter built from python.org sources via omnibus (omnibus/config/software/python3.rb:3, omnibus/config/software/python3.rb:14). Per the CVE intel, the 3.13.x branch is not yet listed among the fixed versions, so the vulnerable Lib/imaplib.py:IMAP4._command sink ships intact at /opt/stackstate-agent/embedded/lib/python3.13/imaplib.py \\u2014 the omnibus build only deletes the test/ subtree (omnibus/config/software/python3.rb:66) and applies two unrelated CVE patches for sqlite and tarfile (omnibus/config/patches/python3/CVE-2025-6965-sqlite-3.50.4.patch, omnibus/config/patches/python3/CVE-2025-8194-tarfile.patch); no imaplib patch is applied. However, the imaplib module is never imported or invoked by any code that runs in the image. A repository-wide search for the canonical import statements ('import imaplib', 'from imaplib') against ~/projects/stackstate-agent returns zero matches, and a broader grep for 'imaplib' across the entire tree returns zero matches. The only 'imap'/'IMAP' substring hits are unrelated: Go 'multimap' identifiers in comp/core/autodiscovery/autodiscoveryimpl/multimap.go and comp/core/autodiscovery/autodiscoveryimpl/configmgr.go, eBPF kernel symbol tables in pkg/ebpf/c/vmlinux_*.h and pkg/ebpf/testdata/kallsyms.*, Windows perfmon counter names containing 'popimap' under pkg/collector/corechecks/system/testfiles/allcounters_en-us.txt, and a JUnit XML test fixture inside tasks/unit_tests/testdata/secret.tar.gz. None of the container entrypoints invoke an IMAP path either: Dockerfiles/agent/entrypoint.sh, Dockerfiles/agent/probe.sh, Dockerfiles/agent/cont-init.d/, Dockerfiles/agent/entrypoint.d/, and the secrets helper Dockerfiles/agent/secrets-helper/readsecret.py contain no 'imap' references. No StackState core check, integration, or rtloader binding pulls imaplib via the embedded interpreter (grep on rtloader/, internal/, tools/, comp/, pkg/, cmd/ returns only the false positives above). The vulnerable IMAP4._command sink also requires CR/LF in caller-supplied IMAP command arguments, which presupposes an imaplib-using program \\u2014 none ships. Defense in depth: the agent process runs as the non-root UID 1000:1000 (Dockerfiles/agent/Dockerfile:71), and the image exposes no IMAP-related listener on its k8s service surface (Dockerfiles/agent/stackstate-kubernetes.yaml only declares the kubelet listener). The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-0864"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-0864 affects CPython configparser when an application writes configuration files containing multiline values with carriage returns controlled by an attacker, allowing unexpected keys or values to be injected into the generated config file. The stackstate-k8s-agent image embeds CPython 3.13.13 from omnibus/config/software/python3.rb:3 and the standard-library configparser module is therefore physically present. Source review of stackstate-agent cef227ab38 found no shipped runtime import of configparser or ConfigParser: the only ConfigParser hits are in pkg/config/legacy/tests/config.py, a legacy test file that is not packaged into the Kubernetes agent image. The Docker image extracts the .deb payload and copies the runtime files under /opt/stackstate-agent plus Dockerfiles/agent entrypoint/probe/secrets-helper scripts; the shipped Python wrappers under cmd/agent/dist/checks, Dockerfiles/agent/secrets-helper/readsecret.py, and omnibus/python-scripts do not import configparser or write INI files. The agent's supported configuration path is YAML/env-driven Go configuration, and the exposed runtime ports (DogStatsD 8125/udp and trace-agent 8126/tcp) do not accept configparser data or drive config file generation. Because no supported running path invokes ConfigParser.write() on attacker-controlled multiline values, the vulnerable sink cannot be reached in this image. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-0864"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-0864 affects CPython configparser when an application writes configuration files containing multiline values with carriage returns controlled by an attacker, allowing unexpected keys or values to be injected into the generated config file. The stackstate-k8s-agent image embeds CPython 3.13.13 from omnibus/config/software/python3.rb:3 and the standard-library configparser module is therefore physically present. Source review of stackstate-agent cef227ab38 found no shipped runtime import of configparser or ConfigParser: the only ConfigParser hits are in pkg/config/legacy/tests/config.py, a legacy test file that is not packaged into the Kubernetes agent image. The Docker image extracts the .deb payload and copies the runtime files under /opt/stackstate-agent plus Dockerfiles/agent entrypoint/probe/secrets-helper scripts; the shipped Python wrappers under cmd/agent/dist/checks, Dockerfiles/agent/secrets-helper/readsecret.py, and omnibus/python-scripts do not import configparser or write INI files. The agent's supported configuration path is YAML/env-driven Go configuration, and the exposed runtime ports (DogStatsD 8125/udp and trace-agent 8126/tcp) do not accept configparser data or drive config file generation. Because no supported running path invokes ConfigParser.write() on attacker-controlled multiline values, the vulnerable sink cannot be reached in this image. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-11940"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-11940 is a CPython tarfile.data_filter / tar_filter bypass where a crafted archive can use a hardlink to a deeper symlink to escape the extraction destination, enabling out-of-destination file reads or writes. The image embeds CPython 3.13.13 from omnibus/config/software/python3.rb:3, so Lib/tarfile.py is present under /opt/stackstate-agent/embedded/lib/python3.13. Source review of stackstate-agent cef227ab38 found no shipped runtime code path that imports tarfile or calls tarfile.extract(), tarfile.extractall(), or shutil.unpack_archive() on external input. The tarfile/import and extraction hits in the repository are developer/test tooling such as tasks/coverage.py, tasks/kmt.py, tasks/libs/common/junit_upload_core.py, and cmd/system-probe/subcommands/usm/debug_scripts/usm_leak_detector/backends/bpftool_downloader.py; these are not part of the supported stackstate-k8s-agent container runtime extracted by Dockerfiles/agent/Dockerfile. The shipped Python surface under cmd/agent/dist/checks, Dockerfiles/agent/secrets-helper/readsecret.py, and omnibus/python-scripts does not import tarfile, and the supported agent service ports (DogStatsD 8125/udp and trace-agent 8126/tcp) do not accept tar archives or invoke archive extraction. Therefore an adversary cannot drive the vulnerable tarfile extraction sink in the deployed k8s-agent image. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-11940"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-11940 is a CPython tarfile.data_filter / tar_filter bypass where a crafted archive can use a hardlink to a deeper symlink to escape the extraction destination, enabling out-of-destination file reads or writes. The image embeds CPython 3.13.13 from omnibus/config/software/python3.rb:3, so Lib/tarfile.py is present under /opt/stackstate-agent/embedded/lib/python3.13. Source review of stackstate-agent cef227ab38 found no shipped runtime code path that imports tarfile or calls tarfile.extract(), tarfile.extractall(), or shutil.unpack_archive() on external input. The tarfile/import and extraction hits in the repository are developer/test tooling such as tasks/coverage.py, tasks/kmt.py, tasks/libs/common/junit_upload_core.py, and cmd/system-probe/subcommands/usm/debug_scripts/usm_leak_detector/backends/bpftool_downloader.py; these are not part of the supported stackstate-k8s-agent container runtime extracted by Dockerfiles/agent/Dockerfile. The shipped Python surface under cmd/agent/dist/checks, Dockerfiles/agent/secrets-helper/readsecret.py, and omnibus/python-scripts does not import tarfile, and the supported agent service ports (DogStatsD 8125/udp and trace-agent 8126/tcp) do not accept tar archives or invoke archive extraction. Therefore an adversary cannot drive the vulnerable tarfile extraction sink in the deployed k8s-agent image. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-11972"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-11972 affects CPython's tarfile module when parsing archives opened in streaming mode (mode='r|') because EOF handling can make archive parsing take exponentially longer. The image embeds CPython 3.13.13 from omnibus/config/software/python3.rb:3, so the affected standard library module is present. Source review of stackstate-agent cef227ab38 found no shipped runtime path that imports tarfile or opens tar archives in streaming mode. Repository hits for tarfile and archive extraction are developer/test tooling not packaged into the stackstate-k8s-agent runtime image; the shipped Python wrappers under cmd/agent/dist/checks, Dockerfiles/agent/secrets-helper/readsecret.py, and omnibus/python-scripts do not import tarfile. The supported agent runtime listens on DogStatsD 8125/udp and trace-agent 8126/tcp and does not accept tar archives, so an adversary cannot supply a crafted streaming tar archive to the vulnerable parser in this image. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-11972"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-11972 affects CPython's tarfile module when parsing archives opened in streaming mode (mode='r|') because EOF handling can make archive parsing take exponentially longer. The image embeds CPython 3.13.13 from omnibus/config/software/python3.rb:3, so the affected standard library module is present. Source review of stackstate-agent cef227ab38 found no shipped runtime path that imports tarfile or opens tar archives in streaming mode. Repository hits for tarfile and archive extraction are developer/test tooling not packaged into the stackstate-k8s-agent runtime image; the shipped Python wrappers under cmd/agent/dist/checks, Dockerfiles/agent/secrets-helper/readsecret.py, and omnibus/python-scripts do not import tarfile. The supported agent runtime listens on DogStatsD 8125/udp and trace-agent 8126/tcp and does not accept tar archives, so an adversary cannot supply a crafted streaming tar archive to the vulnerable parser in this image. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-12003"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "CVE-2026-12003 is a CPython getpath.py search-path confusion issue where the interpreter may treat a release install as an in-tree build when a Modules/setup.local landmark is found relative to VPATH, causing an alternate Lib directory to be discovered at startup. Upstream describes the practical risk around Windows legacy all-users installer layouts where VPATH is set to '..\\\\\\\\..' and the legacy installer places python.exe two levels deep inside a Windows directory, allowing a low-privileged user to create a Modules directory two levels above the install (e.g. in the C: drive root) and ship a Modules/setup.local that drags in a malicious Lib tree. The stackstate-k8s-agent image is a Linux container built on registry.suse.com/bci/bci-micro:latest (SUSE Linux Enterprise 15 SP7 Micro). Runtime inspection of the current embedded interpreter at /opt/stackstate-agent/embedded/bin/python3.13 shows sys.platform is linux, sys.path resolves to /opt/stackstate-agent/embedded/lib/python3.13 plus the corresponding site-packages and lib-dynload directories, and there is no pybuilddir.txt or Modules/setup.local landmark under /opt/stackstate-agent/. The container runs as the non-root stackstate-agent user (UID 1000) while /opt/stackstate-agent, /opt/stackstate-agent/embedded, embedded/bin, and embedded/lib are root-owned and not writable by that user. The Windows legacy-installer attack condition is therefore absent from the supported Linux container deployment: the VPATH-derived landmark resolution in getpath.py is a Windows-specific path-handling code path, there is no Windows drive root or per-machine ProgramFiles equivalent that an unprivileged in-container user can write to, and no source-tree layout to pivot from. The same logic applies to the current 3.13.14 build, since the Linux container runtime still cannot host the Windows-legacy-installer layout that the CVE requires. The only attack surface the upstream advisory describes (low-privilege user creating Modules/setup.local above the install on a writable Windows drive) is not reproducible inside the BCI-micro rootfs the agent ships in. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-12003"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "CVE-2026-12003 is a CPython getpath.py search-path confusion issue where the interpreter may treat a release install as an in-tree build when a Modules/setup.local landmark is found relative to VPATH, causing an alternate Lib directory to be discovered at startup. Upstream describes the practical risk around Windows legacy all-users installer layouts where VPATH is set to '..\\\\\\\\..' and the legacy installer places python.exe two levels deep inside a Windows directory, allowing a low-privileged user to create a Modules directory two levels above the install (e.g. in the C: drive root) and ship a Modules/setup.local that drags in a malicious Lib tree. The stackstate-k8s-agent image is a Linux container built on registry.suse.com/bci/bci-micro:latest (SUSE Linux Enterprise 15 SP7 Micro). Runtime inspection of the current embedded interpreter at /opt/stackstate-agent/embedded/bin/python3.13 shows sys.platform is linux, sys.path resolves to /opt/stackstate-agent/embedded/lib/python3.13 plus the corresponding site-packages and lib-dynload directories, and there is no pybuilddir.txt or Modules/setup.local landmark under /opt/stackstate-agent/. The container runs as the non-root stackstate-agent user (UID 1000) while /opt/stackstate-agent, /opt/stackstate-agent/embedded, embedded/bin, and embedded/lib are root-owned and not writable by that user. The Windows legacy-installer attack condition is therefore absent from the supported Linux container deployment: the VPATH-derived landmark resolution in getpath.py is a Windows-specific path-handling code path, there is no Windows drive root or per-machine ProgramFiles equivalent that an unprivileged in-container user can write to, and no source-tree layout to pivot from. The same logic applies to the current 3.13.14 build, since the Linux container runtime still cannot host the Windows-legacy-installer layout that the CVE requires. The only attack surface the upstream advisory describes (low-privilege user creating Modules/setup.local above the install on a writable Windows drive) is not reproducible inside the BCI-micro rootfs the agent ships in. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3276"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "The image embeds CPython 3.13.13 via the omnibus build (omnibus/config/software/python3.rb:3) and the vulnerable stdlib implementation is present in /opt/stackstate-agent/embedded/. Source review of stackstate-agent cb4d9ce2e7 and stackstate-agent-integrations 7.71.2-3 found exactly one shipped first-party use of unicodedata.normalize: stackstate_checks_base/stackstate_checks/base/checks/base.py:559 inside AgentCheck.normalize(). The only production caller is _get_state_descriptor() at base.py:367-375, which normalizes the old-style check state descriptor string 'instance.\u003ctype\u003e.\u003curl\u003e'. Metric submission paths do not call AgentCheck.normalize(): gauge/rate/count/monotonic_count/histogram submit metric names through _submit_metric()/aggregator, and tag normalization does not use unicodedata.normalize. The integration instance identity values reaching _get_state_descriptor() are local configuration or environment identity values: configured URLs for Dynatrace, ServiceNow, Splunk, and Zabbix; configured vSphere host; configured static topology/health file paths; or cluster/environment identity for kubelet and OpenMetrics. Third-party API responses and monitored service payloads were not found to flow into this sink. A privileged operator or cluster administrator with ability to alter agent configuration or cluster identity labels could provide a pathological string, and there is no generic length cap immediately before the normalize call, but that control is outside the remote or unauthenticated adversary model for this agent image. The supported runtime exposes DogStatsD and trace-agent ports, neither of which can influence the integration instance state descriptor.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3298"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The image bundles CPython 3.13.13 via omnibus (omnibus/config/software/python3.rb:3 sets `default_version '3.13.13'`), which falls inside the affected range (\u003e=3.11,\u003c=3.14). However, CVE-2026-3298 is exclusively a Windows defect: the vulnerable sink `_overlapped_Overlapped_WSARecvFromInto_impl` lives in CPython's `Modules/overlapped.c`, a Win32-only extension that wraps the Winsock `WSARecvFrom` API and Windows `OVERLAPPED` structures. The companion Python wrapper `BaseProactorEventLoop.sock_recvfrom_into` in `Lib/asyncio/proactor_events.py` is only operative on Windows, where `ProactorEventLoop` is the default policy and the `_overlapped` C extension is built. The image under audit is a Linux container: the agent is produced from `Dockerfiles/agent/Dockerfile:1-5` (Ubuntu 20.04 builder) with the runtime stage based on `registry.suse.com/bci/bci-micro:latest` (Dockerfiles/agent/Dockerfile:38), and the omnibus Python recipe takes the Linux branch (`unless windows_target?` at omnibus/config/software/python3.rb:25, configure+make build path through line 82) \\u2014 the Windows-only `else` branch (lines 83-147, which calls `PCbuild\\\\build.bat`) is not executed. Linux CPython builds do not compile `Modules/overlapped.c` and ship no `_overlapped` extension, so the vulnerable symbol is not present in the image's `embedded/lib/python3.13/lib-dynload/`. The only Python-side patches applied to this build are CVE-2025-6965 (sqlite) and CVE-2025-8194 (tarfile) per `omnibus/config/patches/python3/`; neither alters proactor/overlapped code paths. No Go source in the tree (e.g. `pkg/network/dns/driver_windows.go:33`, `pkg/network/driver/handle.go:159`) reaches CPython's overlapped module either, and those files are gated to Windows builds anyway. The image runs as USER 1000:1000 (Dockerfiles/agent/Dockerfile:74) on Linux kernels where `ProactorEventLoop` cannot be instantiated; an attacker has no path to invoke `sock_recvfrom_into` against the missing `_overlapped` extension. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3298"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "The image bundles CPython 3.13.13 via omnibus (omnibus/config/software/python3.rb:3 sets `default_version '3.13.13'`), which falls inside the affected range (\u003e=3.11,\u003c=3.14). However, CVE-2026-3298 is exclusively a Windows defect: the vulnerable sink `_overlapped_Overlapped_WSARecvFromInto_impl` lives in CPython's `Modules/overlapped.c`, a Win32-only extension that wraps the Winsock `WSARecvFrom` API and Windows `OVERLAPPED` structures. The companion Python wrapper `BaseProactorEventLoop.sock_recvfrom_into` in `Lib/asyncio/proactor_events.py` is only operative on Windows, where `ProactorEventLoop` is the default policy and the `_overlapped` C extension is built. The image under audit is a Linux container: the agent is produced from `Dockerfiles/agent/Dockerfile:1-5` (Ubuntu 20.04 builder) with the runtime stage based on `registry.suse.com/bci/bci-micro:latest` (Dockerfiles/agent/Dockerfile:38), and the omnibus Python recipe takes the Linux branch (`unless windows_target?` at omnibus/config/software/python3.rb:25, configure+make build path through line 82) \\u2014 the Windows-only `else` branch (lines 83-147, which calls `PCbuild\\\\build.bat`) is not executed. Linux CPython builds do not compile `Modules/overlapped.c` and ship no `_overlapped` extension, so the vulnerable symbol is not present in the image's `embedded/lib/python3.13/lib-dynload/`. The only Python-side patches applied to this build are CVE-2025-6965 (sqlite) and CVE-2025-8194 (tarfile) per `omnibus/config/patches/python3/`; neither alters proactor/overlapped code paths. No Go source in the tree (e.g. `pkg/network/dns/driver_windows.go:33`, `pkg/network/driver/handle.go:159`) reaches CPython's overlapped module either, and those files are gated to Windows builds anyway. The image runs as USER 1000:1000 (Dockerfiles/agent/Dockerfile:74) on Linux kernels where `ProactorEventLoop` cannot be instantiated; an attacker has no path to invoke `sock_recvfrom_into` against the missing `_overlapped` extension. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-4786"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The image embeds CPython 3.13.13 (omnibus/config/software/python3.rb:3), which is within the vulnerable range for CVE-2026-4786 (\u003e=3.13,\u003c3.13.x-fixed). The vulnerable file Lib/webbrowser.py ships intact inside the embedded interpreter at /opt/stackstate-agent/embedded/lib/python3.13/webbrowser.py \\u2014 the omnibus build only strips the test/ subtree (omnibus/config/software/python3.rb:66) and applies unrelated patches (omnibus/config/patches/python3/CVE-2025-6965-sqlite-3.50.4.patch, CVE-2025-8194-tarfile.patch). However, no code path that ships in the container imports or invokes webbrowser.UnixBrowser.open. A repo-wide grep for 'webbrowser' returns exactly one hit, .dda/extend/commands/run/docs/serve/__init__.py:34-36, which is a developer-only mkdocs serve helper inside the .dda/ dev-tool data directory; this directory is not referenced by Dockerfiles/agent/Dockerfile, Dockerfiles/cluster-agent/Dockerfile, or omnibus/config/projects/agent.rb and is not packaged into the stackstate-agent .deb that the image extracts (Dockerfiles/agent/Dockerfile:8-25). No agent core check, integration, entrypoint script (Dockerfiles/agent/entrypoint.sh, Dockerfiles/agent/cont-init.d/, /probe.sh, /readsecret.py), or stackstate component invokes webbrowser. Additionally, the runtime environment defeats reachability even if a transitive caller existed: the base image is registry.suse.com/bci/bci-micro:latest with no browser binaries, no DISPLAY, no $BROWSER, and the process runs as the non-root UID 1000 in group 1000 (Dockerfiles/agent/Dockerfile:60-66). The CVSS attack vector AV:L/UI:A also requires local access and a user clicking/triggering a browser open inside the container, which is not a supported workflow for this monitoring agent. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-4786"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The image embeds CPython 3.13.13 (omnibus/config/software/python3.rb:3), which is within the vulnerable range for CVE-2026-4786 (\u003e=3.13,\u003c3.13.x-fixed). The vulnerable file Lib/webbrowser.py ships intact inside the embedded interpreter at /opt/stackstate-agent/embedded/lib/python3.13/webbrowser.py \\u2014 the omnibus build only strips the test/ subtree (omnibus/config/software/python3.rb:66) and applies unrelated patches (omnibus/config/patches/python3/CVE-2025-6965-sqlite-3.50.4.patch, CVE-2025-8194-tarfile.patch). However, no code path that ships in the container imports or invokes webbrowser.UnixBrowser.open. A repo-wide grep for 'webbrowser' returns exactly one hit, .dda/extend/commands/run/docs/serve/__init__.py:34-36, which is a developer-only mkdocs serve helper inside the .dda/ dev-tool data directory; this directory is not referenced by Dockerfiles/agent/Dockerfile, Dockerfiles/cluster-agent/Dockerfile, or omnibus/config/projects/agent.rb and is not packaged into the stackstate-agent .deb that the image extracts (Dockerfiles/agent/Dockerfile:8-25). No agent core check, integration, entrypoint script (Dockerfiles/agent/entrypoint.sh, Dockerfiles/agent/cont-init.d/, /probe.sh, /readsecret.py), or stackstate component invokes webbrowser. Additionally, the runtime environment defeats reachability even if a transitive caller existed: the base image is registry.suse.com/bci/bci-micro:latest with no browser binaries, no DISPLAY, no $BROWSER, and the process runs as the non-root UID 1000 in group 1000 (Dockerfiles/agent/Dockerfile:60-66). The CVSS attack vector AV:L/UI:A also requires local access and a user clicking/triggering a browser open inside the container, which is not a supported workflow for this monitoring agent. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6019"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The image embeds CPython 3.13.13 via the omnibus build (omnibus/config/software/python3.rb:3, source tarball SHA256 f9cde7b0e2ec8165d7326e2a0f59ea2686ce9d0c617dbbb3d66a7e54d31b74b9). 3.13.13 was published 2026-04-07, before the 3.13 backport fix for CVE-2026-6019 was merged on 2026-04-21 (cpython commit 3c59b8b53fc75c7f9578d16fb8201ceb43e8f76c), so the vulnerable Lib/http/cookies.py:Morsel.js_output() is physically present on disk inside the image. The repository's only python3 patches are CVE-2025-6965-sqlite-3.50.4.patch and CVE-2025-8194-tarfile.patch (omnibus/config/patches/python3/); no local patch neutralizes Morsel.js_output. However, the sink is unreachable: a tree-wide ripgrep for 'js_output', 'Morsel', 'http.cookies', 'BaseCookie', and 'SimpleCookie' across Go sources, the rtloader Python bridge (pkg/collector/python/), the bundled python-scripts (omnibus/python-scripts/{packages,post,pre}.py), check definitions, and Dockerfile entrypoints returns zero hits in any execute path (only one match in pkg/serverless/trigger/testData/api-gateway-v2.json \\u2014 a static AWS event fixture string, never deserialized via http.cookies). The agent exposes only DogStatsD UDP/8125 and trace-agent TCP/8126 (Dockerfiles/agent/Dockerfile:74) and a Go-based local status API; none of these surfaces emit HTML \u003cscript\u003e blocks containing cookie values, which is the exclusive use case for Morsel.js_output(). Combined with the CVSS PR:H requirement (attacker must already control the cookie value being serialized) and the container running as non-root USER 1000:1000 (Dockerfiles/agent/Dockerfile), there is no realistic call chain that can drive the vulnerable function with attacker-controlled input.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6100"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-6100 requires decompressor instance reuse after a MemoryError. Source review of stackstate-agent stackstate-7.71.2 and stackstate-agent-integrations found no affected Python decompressor API usage. Image inspection found only generic third-party one-shot or per-response decompression helpers; no packaged code catches MemoryError and resumes the same decompressor instance. A MemoryError propagates out of the check/request path and the affected decompressor object is discarded rather than reused. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6100"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-6100 requires decompressor instance reuse after a MemoryError. Source review of stackstate-agent stackstate-7.71.2 and stackstate-agent-integrations found no affected Python decompressor API usage. Image inspection found only generic third-party one-shot or per-response decompression helpers; no packaged code catches MemoryError and resumes the same decompressor instance. A MemoryError propagates out of the check/request path and the affected decompressor object is discarded rather than reused. The 2026-06-30 cve-reporter scan of quay.io/stackstate/stackstate-k8s-agent:5bc56023 reports the same finding against pkg:generic/python@3.13.14 at /opt/stackstate-agent/embedded/bin/python3.13; the source, packaging, and supported-runtime reachability analysis above remains valid for the current 3.13.14 build.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-7210"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The image embeds CPython built from the upstream tarball pinned at omnibus/config/software/python3.rb:3 (default_version '3.13.13'). CVE-2026-7210 affects every CPython release in the 3.10\\u20133.15 series \\u2014 fixed_versions is null in the intel because the fix commits 03794ce9, ccb8d2f7, and 24b8f12 (PRs python/cpython#149023, #149645, #149646) are still landing upstream. None of the patches under omnibus/config/patches/python3/ touch Modules/pyexpat.c or Modules/_elementtree.c (only CVE-2025-6965-sqlite-3.50.4.patch and CVE-2025-8194-tarfile.patch are present), so the vulnerable XML_SetHashSalt call site ships unmodified inside /opt/stackstate-agent/embedded/lib/python3.13/lib-dynload/pyexpat*.so and _elementtree*.so. The bundled libexpat (omnibus/config/software/expat.rb:18, default_version '2.5.0') is also pre-2.8.0, so even the partial mitigation that depends on the wider salt API in libexpat 2.8.0+ is absent. However, the vulnerable sinks are unreachable from any shipped execute path: a tree-wide grep for `xml.etree`, `xml.parsers.expat`, `elementtree`, `pyexpat`, `xml.dom`, and `xml.sax` across cmd/, pkg/, omnibus/python-scripts/, rtloader/, and Dockerfiles/ returns zero hits \\u2014 the only matches are dev-only invoke tasks at tasks/kernel_matrix_testing/ci.py:10, tasks/libs/common/junit_upload_core.py:7, tasks/libs/package/url.py:2, and tasks/kmt.py:15, none of which are packaged into the .deb extracted in Dockerfiles/agent/Dockerfile:9. The agent's first-party shipped Python is limited to cmd/agent/dist/checks/ wrapper modules (network_checks.py, winwmi_check.py, prometheus_check/, libs/wmi/sampler.py) plus Dockerfiles/agent/secrets-helper/readsecret.py and omnibus/python-scripts/{pre,post,packages}.py \\u2014 verified to import only json, argparse, os, and the stackstate_checks/datadog_checks base classes; no xml stdlib is touched. Default check configs under cmd/agent/dist/conf.d/ are Kubernetes-, container-, networking-, and Prometheus-oriented (kubernetes_apiserver.d, kubernetes_api_topology.d, containerd.d, container.d, network.d, etc.), all of which consume JSON or Prometheus exposition format rather than XML. Third-party integrations from StackVista/stackstate-agent-integrations (omnibus/config/software/stackstate-agent-integrations-py3.rb:36, version 7.71.2-3 per stackstate-deps.json:2) are similarly Kubernetes/container-focused and do not exercise the pyexpat/ElementTree code paths against adversary-controlled XML. The container also runs as USER 1000:1000 (Dockerfiles/agent/Dockerfile:67) with read-only-rootfs-friendly volume layout, but those are unrelated to reachability. Because no shipped Python code imports the vulnerable XML modules and no exposed port (8125/udp DogStatsD, 8126/tcp trace-agent at Dockerfiles/agent/Dockerfile:71) accepts XML input, the hash-flooding sink cannot be driven by an adversary in this image.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-7774"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vulnerable_code_not_in_execute_path",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8328"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The image embeds CPython built from the upstream tarball pinned at omnibus/config/software/python3.rb:3 (default_version '3.13.13'), which is below the fixed 3.15.0 line, and none of the patches in omnibus/config/patches/python3/ address ftplib (only CVE-2025-6965-sqlite-3.50.4.patch and CVE-2025-8194-tarfile.patch are applied). The vulnerable Lib/ftplib.py:ftpcp ships unmodified in /opt/stackstate-agent/embedded/lib/python3.13/ftplib.py. However, the sink is unreachable from any shipped execute path: a tree-wide grep for `ftplib`, `from ftplib`, `import ftplib`, `FTP_TLS`, `ftplib.`, and `ftpcp` across cmd/, pkg/, omnibus/python-scripts/, rtloader/, Dockerfiles/, and the embedded check wrappers returns zero hits. The single match on the literal string `ftp://` is at omnibus/python-scripts/packages.py:254, where it is a substring filter used to skip URL-style entries while parsing pip requirements files \\u2014 no ftplib client is constructed and ftpcp is never invoked. The agent's first-party shipped Python under cmd/agent/dist/checks/ (network_checks.py, winwmi_check.py, prometheus_check/, libs/wmi/sampler.py), Dockerfiles/agent/secrets-helper/readsecret.py, and omnibus/python-scripts/{pre,post,packages}.py do not import ftplib, and the stackstate-agent-integrations bundle pinned at omnibus/config/software/stackstate-agent-integrations-py3.rb:36 (STACKSTATE_INTEGRATIONS_VERSION 7.71.2-3 from stackstate-deps.json:2) is Kubernetes/container/Prometheus-oriented with no FTP-based check. Independent of reachability, the ftpcp() SSRF requires the victim to actively call ftpcp() to relay a file between two attacker-influenced FTP servers (the bug is that ftpcp forwards the source server's PASV response into a PORT command on the target), which is a relay pattern the agent has no functional reason to perform. The image's exposed ports at Dockerfiles/agent/Dockerfile:74 are 8125/udp (DogStatsD) and 8126/tcp (trace-agent APM) \\u2014 neither speaks FTP and neither can drive ftplib code. The container also runs non-root as USER 1000:1000 (Dockerfiles/agent/Dockerfile:71), but that is incidental; the determinative fact is that no shipped code path reaches ftpcp.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-9669"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:generic/python@3.13.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CVE-2026-9669 requires an application to catch the OSError raised by a failed bz2.BZ2Decompressor.decompress() call and then call decompress() again on the same instance. Source review of stackstate-agent 02f4adaaf3e60296d0e419a3b5213bca1710e886 found no Python bz2 usage: the only bz2 matches are Go archive/bzip2 code paths compiled into Go binaries (not the embedded CPython) and developer-only invoke tasks under tasks/ that are not shipped in the image. stackstate-agent-integrations has no bz2 usage. Image inspection of /opt/stackstate-agent/embedded/lib/python3.13 and /opt/stackstate-agent/checks.d found BZ2Decompressor referenced only by the CPython standard library itself: zipfile creates a fresh decompressor per archive member (_get_decompressor), bz2.BZ2File via _compression.DecompressReader constructs a new decompressor at init, rewind, and next-stream boundaries, and tarfile maps the OSError to ReadError without reusing the failed decompressor instance. No catch-and-retry pattern over the same decompressor object exists in the shipped image. Worst-case impact of the upstream flaw is an out-of-bounds stack write crashing the process (denial of service), not code execution.",
+      "timestamp": "2026-07-07T13:04:49Z"
+    }
+  ],
+  "timestamp": "2026-07-07T13:16:06Z"
+}
