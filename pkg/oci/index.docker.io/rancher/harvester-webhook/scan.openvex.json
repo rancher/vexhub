@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1dcd4478605052e0be800149c86114fa61bc8e6d02440eca07ce6ee7cdc0d38a",
+  "@id": "https://openvex.dev/docs/public/vex-6761c80d1172e91a8d1f2a5f17b3f5f27455b87a06cd3e45b0610aeb43265ad0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1029,6 +1029,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22332-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=index.docker.io/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go webhook server; libblkid block-ID C library is not linked or called at runtime",
+      "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22332-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=index.docker.io/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go webhook uses Go UUID packages; the libuuid C library is never called at runtime",
+      "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22377-1"
       },
       "products": [
@@ -1218,5 +1256,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:16Z"
+  "timestamp": "2026-07-07T06:21:51Z"
 }

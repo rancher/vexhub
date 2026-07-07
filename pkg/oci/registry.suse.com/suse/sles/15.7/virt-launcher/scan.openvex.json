@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-020d0f68bc6ef91be357611564d889d6825fa22eac5de7b4cb4d6615ebc50b46",
+  "@id": "https://openvex.dev/docs/public/vex-6761c80d1172e91a8d1f2a5f17b3f5f27455b87a06cd3e45b0610aeb43265ad0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1159,7 +1159,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "zypper package-manager CLI; not invoked by KubeVirt VM launcher entrypoint at runtime",
       "timestamp": "2026-06-25T02:24:29Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2714-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-06-25T17:01:05Z"
+  "timestamp": "2026-07-07T06:21:51Z"
 }
