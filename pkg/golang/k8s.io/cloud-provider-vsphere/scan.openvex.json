@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9c2eaa9448c4e07c0bbb61941027570e1b980c3e6ebc8847e9b1ede4d02217b6",
+  "@id": "https://openvex.dev/docs/public/vex-d20d523f7af0910b9f5f9940fcf4f5d37b731dfa68b0370e241232f56798800c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -120,6 +120,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27137"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/cloud-provider-vsphere",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vSphere controller manages cloud resources; infrastructure TLS certs do not carry email address constraints",
+      "timestamp": "2026-07-07T05:00:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-27142"
       },
       "products": [
@@ -174,6 +193,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "vSphere CCM manages cloud resources; does not call os.Root.Chmod on adversary-controlled paths",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32282"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/cloud-provider-vsphere",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "os.Root.Chmod API not used; vSphere controller manages cloud volumes/LBs, not local filesystem permissions",
+      "timestamp": "2026-07-07T05:00:35Z"
     },
     {
       "vulnerability": {
@@ -537,5 +575,5 @@
       "timestamp": "2026-07-07T01:13:26Z"
     }
   ],
-  "timestamp": "2026-07-07T06:21:50Z"
+  "timestamp": "2026-07-07T11:29:56Z"
 }
