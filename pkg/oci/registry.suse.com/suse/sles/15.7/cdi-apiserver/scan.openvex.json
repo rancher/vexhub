@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-622aa806ddf3d4f895366a64657eb8f84fb93f1cc2400454b3d7b6d731feae93",
+  "@id": "https://openvex.dev/docs/public/vex-9c2eaa9448c4e07c0bbb61941027570e1b980c3e6ebc8847e9b1ede4d02217b6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -98,6 +98,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI apiserver is a pure Go binary; Boost C++ thread library not loaded at runtime",
       "timestamp": "2026-06-26T00:55:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02617-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI API server is a pure Go binary; libxml2 XML parsing C library is not used at runtime",
+      "timestamp": "2026-07-07T01:05:12Z"
     },
     {
       "vulnerability": {
@@ -595,6 +614,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI API server is a pure Go binary; libxml2 XML parsing C library is not used at runtime",
+      "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0779-1"
       },
       "products": [
@@ -1010,7 +1048,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "SUSE package-solver debug tools (dumpsolv/mergesolv); never invoked in container runtime",
       "timestamp": "2026-06-25T02:24:29Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2714-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-07-01T02:54:26Z"
+  "timestamp": "2026-07-07T06:21:50Z"
 }

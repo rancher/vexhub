@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-31de560200cb1ac23a7da147aece1795ca2e2d14d8fb1459435ccd8410107ea1",
+  "@id": "https://openvex.dev/docs/public/vex-9c2eaa9448c4e07c0bbb61941027570e1b980c3e6ebc8847e9b1ede4d02217b6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -60,6 +60,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "coreutils CLI tools are not executed by the Go-based Harvester cloud provider controller",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02447-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cloud-provider?repository_url=registry.rancher.com/rancher/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go cloud provider does not call libgcrypt; it is a transitive dep of libsystemd, not used directly",
+      "timestamp": "2026-07-07T01:05:12Z"
     },
     {
       "vulnerability": {
@@ -174,7 +193,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22355-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cloud-provider?repository_url=registry.rancher.com/rancher/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go cloud provider does not call libgcrypt; it is a transitive dep of libsystemd, not used directly",
+      "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:15Z"
+  "timestamp": "2026-07-07T06:21:50Z"
 }

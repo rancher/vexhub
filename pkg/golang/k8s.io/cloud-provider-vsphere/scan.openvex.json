@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-9c2eaa9448c4e07c0bbb61941027570e1b980c3e6ebc8847e9b1ede4d02217b6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -136,6 +136,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "vSphere CCM does not render HTML templates; html/template meta-tag URL CVE unreachable",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/cloud-provider-vsphere",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vSphere CCM connects to VMware/K8s APIs only; server cert SANs not adversary-controlled",
+      "timestamp": "2026-07-07T01:13:26Z"
     },
     {
       "vulnerability": {
@@ -478,7 +497,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "vSphere CCM manages cloud infrastructure; does not parse email via net/mail",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/cloud-provider-vsphere",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mime.WordDecoder.DecodeHeader not called; vSphere CCM has no MIME header processing",
+      "timestamp": "2026-07-07T01:13:26Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/cloud-provider-vsphere",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "net/textproto adversary input not reachable; vSphere CCM does not serve HTTP/1.1",
+      "timestamp": "2026-07-07T01:13:26Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-07-07T06:21:50Z"
 }

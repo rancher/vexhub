@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-271787605e6367aa6b3b57d4f8cb8f5129f3fda4f72179bf2e507d407078a33b",
+  "@id": "https://openvex.dev/docs/public/vex-9d16b50bad4c99395db34064ff48db616087f2339b1bb5bc0f3dfd382ca1e89d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -443,6 +443,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-cloner?repository_url=registry.suse.com/suse/sles/15.7/cdi-cloner",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CDI cloner does not manage hardware devices; libudev C library not called at runtime",
+      "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1065-1"
       },
       "products": [
@@ -611,7 +630,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2714-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-cloner?repository_url=registry.suse.com/suse/sles/15.7/cdi-cloner",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-06-29T12:43:06Z"
+  "timestamp": "2026-07-07T06:21:49Z"
 }
