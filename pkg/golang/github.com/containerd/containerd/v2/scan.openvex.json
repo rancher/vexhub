@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9c2eaa9448c4e07c0bbb61941027570e1b980c3e6ebc8847e9b1ede4d02217b6",
+  "@id": "https://openvex.dev/docs/public/vex-f63144bab2442d65cbaf4695f4edf5fbad21f2a51c131f6778876964516ae430",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3712,6 +3712,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/containerd/containerd/v2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "containerd uses TLS with trusted registry CAs; adversary-controlled cert SANs not reachable",
+      "timestamp": "2026-07-08T00:56:17Z"
     },
     {
       "vulnerability": {
@@ -13863,5 +13882,5 @@
       "timestamp": "2026-06-25T16:17:14Z"
     }
   ],
-  "timestamp": "2026-07-07T06:21:50Z"
+  "timestamp": "2026-07-08T11:49:43Z"
 }

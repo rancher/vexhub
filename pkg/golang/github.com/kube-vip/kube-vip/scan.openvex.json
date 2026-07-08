@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d42733c5eedba96d2cb2c501aeff00bb1e829b85268a0888ffc82a5580aa3d72",
+  "@id": "https://openvex.dev/docs/public/vex-4942e8167491c27f10f010d0cb62a1825d4c63e2af1220e914c573e82ed05f60",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3943,6 +3943,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "kube-vip connects to K8s API only; server cert SANs are admin-controlled",
       "timestamp": "2026-07-03T00:51:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32280"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kube-vip/kube-vip",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck-confirmed unreachable stdlib path; vulnerable code not in execute path",
+      "timestamp": "2026-07-08T00:56:17Z"
     },
     {
       "vulnerability": {
@@ -8818,5 +8837,5 @@
       "timestamp": "2026-06-29T17:06:32Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:14Z"
+  "timestamp": "2026-07-08T11:49:44Z"
 }
