@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d20d523f7af0910b9f5f9940fcf4f5d37b731dfa68b0370e241232f56798800c",
+  "@id": "https://openvex.dev/docs/public/vex-d4e4bfd791b110cb3276ed65fa580ce6df659f7fe72e0e15a6b4bf8f150499ad",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -6075,6 +6075,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27142"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Cloud provider doesn't render HTML; html/template meta-tag injection path unreachable",
+      "timestamp": "2026-07-08T00:56:17Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Uses TLS with trusted cluster/registry CA; adversary-controlled cert SANs not reachable",
+      "timestamp": "2026-07-08T00:56:17Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-32281"
       },
       "products": [
@@ -6091,6 +6129,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "harvester-cloud-provider manages volumes/LBs; does not call os.Root.Chmod on adversary paths",
       "timestamp": "2026-07-07T01:13:26Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32282"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Cloud provider doesn't use os.Root.Chmod API; symlink race path unreachable",
+      "timestamp": "2026-07-08T00:56:17Z"
     },
     {
       "vulnerability": {
@@ -9162,6 +9219,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Cloud provider has no email parsing; net/mail consumePhrase not in execute path",
+      "timestamp": "2026-07-08T00:56:17Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499",
         "aliases": [
           "GO-2026-4977"
@@ -10305,5 +10381,5 @@
       "timestamp": "2026-06-23T02:26:59Z"
     }
   ],
-  "timestamp": "2026-07-07T11:29:56Z"
+  "timestamp": "2026-07-08T11:49:42Z"
 }
