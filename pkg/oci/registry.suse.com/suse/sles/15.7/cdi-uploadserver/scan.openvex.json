@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c59c4a994da47aebde56e94f48c771e04a05196049427667af3483902b8afe5c",
+  "@id": "https://openvex.dev/docs/public/vex-abc9172263e2b2777e36f42a7204070896466f734fdba3c139e8208d18514863",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -386,6 +386,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0230-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadserver handles VM disk HTTP uploads; libsmartcols1 (terminal column formatting) not used at runtime",
+      "timestamp": "2026-07-09T16:32:34Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0373-1"
       },
       "products": [
@@ -652,6 +671,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadserver handles VM disk HTTP uploads; libsmartcols1 (terminal column formatting) not used at runtime",
+      "timestamp": "2026-07-09T16:32:34Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1432-1"
       },
       "products": [
@@ -747,6 +785,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadserver handles VM disk HTTP uploads; libsmartcols1 (terminal column formatting) not used at runtime",
+      "timestamp": "2026-07-09T16:32:34Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2528-1"
       },
       "products": [
@@ -763,6 +820,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI uploadserver is a Go HTTPS server handling VM image uploads to PVCs; no SQLite",
       "timestamp": "2026-06-25T02:24:29Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zypper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "zypper is a package manager; CDI uploadserver does not invoke it at container runtime",
+      "timestamp": "2026-07-09T16:32:34Z"
     },
     {
       "vulnerability": {
@@ -784,5 +860,5 @@
       "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-07-07T11:29:54Z"
+  "timestamp": "2026-07-09T17:46:12Z"
 }

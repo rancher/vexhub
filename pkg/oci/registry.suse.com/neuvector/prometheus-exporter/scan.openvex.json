@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4942e8167491c27f10f010d0cb62a1825d4c63e2af1220e914c573e82ed05f60",
+  "@id": "https://openvex.dev/docs/public/vex-abc9172263e2b2777e36f42a7204070896466f734fdba3c139e8208d18514863",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2464-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/prometheus-exporter?repository_url=registry.suse.com/neuvector/prometheus-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python313-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "neuvector prometheus-exporter is a Go binary; python313-base is not executed by the entrypoint at runtime",
+      "timestamp": "2026-07-09T16:32:34Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:2464-1"
@@ -22,6 +41,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "python313-devel contains build headers only; never loaded at runtime by the Go-based exporter binary",
       "timestamp": "2026-07-08T00:50:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/prometheus-exporter?repository_url=registry.suse.com/neuvector/prometheus-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "neuvector prometheus-exporter exports metrics over HTTP; libblkid1 is not invoked at runtime",
+      "timestamp": "2026-07-09T16:32:34Z"
     },
     {
       "vulnerability": {
@@ -62,5 +100,5 @@
       "timestamp": "2026-07-08T00:50:15Z"
     }
   ],
-  "timestamp": "2026-07-08T11:49:44Z"
+  "timestamp": "2026-07-09T17:46:12Z"
 }
