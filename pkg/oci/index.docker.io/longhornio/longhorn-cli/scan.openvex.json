@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9d16b50bad4c99395db34064ff48db616087f2339b1bb5bc0f3dfd382ca1e89d",
+  "@id": "https://openvex.dev/docs/public/vex-b1760c53a4f94164432485442c53ad2aa552cc2696bfbab4a8ba3ad7a805ba89",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1143,6 +1143,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=index.docker.io/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go Longhorn CLI uses Go-native UUID generation; libuuid1 C library not invoked at runtime",
+      "timestamp": "2026-07-09T04:55:05Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1432-1"
       },
       "products": [
@@ -1333,6 +1352,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=index.docker.io/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go Longhorn CLI uses Go-native UUID generation; libuuid1 C library not invoked at runtime",
+      "timestamp": "2026-07-09T04:55:05Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2531-1"
       },
       "products": [
@@ -1370,5 +1408,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-07T06:21:49Z"
+  "timestamp": "2026-07-09T12:21:54Z"
 }

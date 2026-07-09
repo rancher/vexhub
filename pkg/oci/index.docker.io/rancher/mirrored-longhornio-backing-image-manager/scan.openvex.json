@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c59c4a994da47aebde56e94f48c771e04a05196049427667af3483902b8afe5c",
+  "@id": "https://openvex.dev/docs/public/vex-2452b1ca3ffe48f53f8308aee92f69bf8d2f42b54767a68f0f40b2d56450f145",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1273,7 +1273,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2777-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcryptsetup12"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Backing image manager stores VM images via NBD/NFS; libcryptsetup12 (LUKS) never called",
+      "timestamp": "2026-07-09T04:55:05Z"
     }
   ],
-  "timestamp": "2026-07-07T11:29:54Z"
+  "timestamp": "2026-07-09T12:21:56Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-eefc4e47edf3f75433204acac0fd7530190ea45094b5c83c0223f9a5d0bae1f9",
+  "@id": "https://openvex.dev/docs/public/vex-7ec2e0ae9a8aafb3c2ffdac0f76e80584d07392826ed34d8e6780412c20f346c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -378,6 +378,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27137"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/descheduler",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Connects to trusted K8s API; infrastructure TLS cert chains do not carry email SANs",
+      "timestamp": "2026-07-09T04:52:52Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-27142"
       },
       "products": [
@@ -413,6 +432,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Uses TLS with trusted cluster/registry CA; adversary-controlled cert SANs not reachable",
       "timestamp": "2026-07-08T00:56:17Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32280"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/descheduler",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "K8s controller connects to trusted K8s API; govulncheck confirmed stdlib code path unreachable",
+      "timestamp": "2026-07-09T04:52:52Z"
     },
     {
       "vulnerability": {
@@ -476,6 +514,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-29T17:01:55Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-32283"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/descheduler",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Connects to trusted K8s API; govulncheck confirmed TLS 1.3 stdlib code path unreachable",
+      "timestamp": "2026-07-09T04:52:52Z"
     },
     {
       "vulnerability": {
@@ -1178,6 +1235,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42499"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/descheduler",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Binary does not parse email addresses; net/mail ParseAddress not in execute path",
+      "timestamp": "2026-07-09T04:52:52Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42502",
         "aliases": [
           "GO-2026-5027"
@@ -1282,6 +1358,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-29T17:01:55Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/descheduler",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Connects to trusted K8s API only; no adversary-controlled net/textproto input",
+      "timestamp": "2026-07-09T04:52:52Z"
     },
     {
       "vulnerability": {
@@ -1460,5 +1555,5 @@
       "timestamp": "2026-06-29T17:01:55Z"
     }
   ],
-  "timestamp": "2026-07-09T06:43:56Z"
+  "timestamp": "2026-07-09T12:21:55Z"
 }
