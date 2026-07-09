@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3bb570d92a8ef0d99af993b2c3b43763785991cb09861c3b047af84216f67890",
+  "@id": "https://openvex.dev/docs/public/vex-2c1076502918bd1fc1d678338152ef64d074849fb6e3dfe00ded78d9c27e851d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1657,6 +1657,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/pushprox",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PushProx connects to admin-configured Prometheus endpoints; admin-managed certs; adversary cannot control",
+      "timestamp": "2026-07-09T16:43:11Z"
     },
     {
       "vulnerability": {
@@ -3705,5 +3724,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-09T06:43:54Z"
+  "timestamp": "2026-07-09T17:46:11Z"
 }
