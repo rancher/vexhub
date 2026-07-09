@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d42733c5eedba96d2cb2c501aeff00bb1e829b85268a0888ffc82a5580aa3d72",
+  "@id": "https://openvex.dev/docs/public/vex-b1760c53a4f94164432485442c53ad2aa552cc2696bfbab4a8ba3ad7a805ba89",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -788,6 +788,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21164-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glibc-devel contains only headers/.a static libs; runtime links libc.so.6 from glibc, not devel artifacts",
+      "timestamp": "2026-07-09T04:55:05Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21173-1"
       },
       "products": [
@@ -1016,6 +1035,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21807-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glibc-devel contains only headers/.a static libs; runtime links libc.so.6 from glibc, not devel artifacts",
+      "timestamp": "2026-07-09T04:55:05Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21848-1"
       },
       "products": [
@@ -1148,5 +1186,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:14Z"
+  "timestamp": "2026-07-09T12:21:54Z"
 }
