@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b1760c53a4f94164432485442c53ad2aa552cc2696bfbab4a8ba3ad7a805ba89",
+  "@id": "https://openvex.dev/docs/public/vex-82f796256072b95bd609243fad6190c3f1ce599e6587051bd8945dc96c584341",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2047,6 +2047,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/turtles",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CAPI operator; no MIME encoded-word decoding; mime.WordDecoder not in execute path",
+      "timestamp": "2026-07-09T16:43:11Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -2132,6 +2151,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/turtles",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CAPI operator uses K8s API (HTTP/2) only; net/textproto error injection path unreachable",
+      "timestamp": "2026-07-09T16:43:11Z"
     },
     {
       "vulnerability": {
@@ -2574,5 +2612,5 @@
       "timestamp": "2026-06-23T02:34:26Z"
     }
   ],
-  "timestamp": "2026-07-09T12:21:54Z"
+  "timestamp": "2026-07-09T17:46:10Z"
 }

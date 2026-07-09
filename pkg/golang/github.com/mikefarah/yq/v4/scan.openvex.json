@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-eefc4e47edf3f75433204acac0fd7530190ea45094b5c83c0223f9a5d0bae1f9",
+  "@id": "https://openvex.dev/docs/public/vex-2c1076502918bd1fc1d678338152ef64d074849fb6e3dfe00ded78d9c27e851d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -16275,6 +16275,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/mikefarah/yq/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "yq is a YAML/JSON processor; no MIME encoded-word decoding; mime.WordDecoder not in execute path",
+      "timestamp": "2026-07-09T16:43:11Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42504",
         "aliases": [
           "GO-2026-5038"
@@ -17880,5 +17899,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-09T06:43:56Z"
+  "timestamp": "2026-07-09T17:46:11Z"
 }

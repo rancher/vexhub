@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c59c4a994da47aebde56e94f48c771e04a05196049427667af3483902b8afe5c",
+  "@id": "https://openvex.dev/docs/public/vex-82f796256072b95bd609243fad6190c3f1ce599e6587051bd8945dc96c584341",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1431,6 +1431,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/xz"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent is a Go binary; xz compression CLI is not invoked by the agent at runtime",
+      "timestamp": "2026-07-09T16:32:34Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2236-1"
       },
       "products": [
@@ -1563,5 +1582,5 @@
       "timestamp": "2026-07-01T00:12:09Z"
     }
   ],
-  "timestamp": "2026-07-07T11:29:54Z"
+  "timestamp": "2026-07-09T17:46:10Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9517605413c417c7fe099523c7d0c10bf13e606ab88fbeae328c24846cf6fe69",
+  "@id": "https://openvex.dev/docs/public/vex-abc9172263e2b2777e36f42a7204070896466f734fdba3c139e8208d18514863",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -155,6 +155,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/net/html` package is NOT compiled into the `helm-set-status` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/net/html.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
       "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Helm plugin connects to K8s API only; cluster-managed cert SANs; adversary cannot control",
+      "timestamp": "2026-07-09T16:43:11Z"
     },
     {
       "vulnerability": {
@@ -489,6 +508,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Helm set-status plugin; no MIME encoded-word decoding; mime.WordDecoder not in execute path",
+      "timestamp": "2026-07-09T16:43:11Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506"
       },
       "products": [
@@ -505,6 +543,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/net/html` package is NOT compiled into the `helm-set-status` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/net/html.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
       "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Helm plugin uses K8s API (HTTP/2) only; net/textproto error injection path unreachable",
+      "timestamp": "2026-07-09T16:43:11Z"
     },
     {
       "vulnerability": {
@@ -643,5 +700,5 @@
       "timestamp": "2026-07-06T15:42:38Z"
     }
   ],
-  "timestamp": "2026-07-09T16:00:16Z"
+  "timestamp": "2026-07-09T17:46:12Z"
 }
