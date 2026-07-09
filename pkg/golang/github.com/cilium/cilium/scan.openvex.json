@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b30528ac1b2bd988fac847354a657ffc784262cc81d4181a2be0725e06a631bc",
+  "@id": "https://openvex.dev/docs/public/vex-b1760c53a4f94164432485442c53ad2aa552cc2696bfbab4a8ba3ad7a805ba89",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -11997,6 +11997,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/cilium",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Infrastructure binary has no MIME encoded-word decoding; mime.WordDecoder not in execute path",
+      "timestamp": "2026-07-09T04:52:52Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -12612,5 +12631,5 @@
       "timestamp": "2026-07-01T17:52:02Z"
     }
   ],
-  "timestamp": "2026-07-02T06:40:24Z"
+  "timestamp": "2026-07-09T12:21:54Z"
 }

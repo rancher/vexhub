@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d42733c5eedba96d2cb2c501aeff00bb1e829b85268a0888ffc82a5580aa3d72",
+  "@id": "https://openvex.dev/docs/public/vex-2452b1ca3ffe48f53f8308aee92f69bf8d2f42b54767a68f0f40b2d56450f145",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -573,6 +573,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22355-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.suse.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go bare metal provisioning operator (Redfish/IPMI); no GnuPG ops; libgcrypt20 not invoked",
+      "timestamp": "2026-07-09T04:55:05Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22377-1"
       },
       "products": [
@@ -648,5 +667,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:14Z"
+  "timestamp": "2026-07-09T12:21:56Z"
 }
