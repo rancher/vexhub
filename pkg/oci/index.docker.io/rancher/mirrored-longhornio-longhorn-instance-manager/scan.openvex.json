@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d42733c5eedba96d2cb2c501aeff00bb1e829b85268a0888ffc82a5580aa3d72",
+  "@id": "https://openvex.dev/docs/public/vex-abc9172263e2b2777e36f42a7204070896466f734fdba3c139e8208d18514863",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1542,6 +1542,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2076-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/samba-client-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-instance-manager uses iSCSI/NVMe-oF for block storage; Samba client libs not used at runtime",
+      "timestamp": "2026-07-09T16:32:34Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2115-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-instance-manager uses Go's native crypto/tls; libgnutls30 is not called at runtime",
+      "timestamp": "2026-07-09T16:32:34Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2231-1"
       },
       "products": [
@@ -1769,5 +1807,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:14Z"
+  "timestamp": "2026-07-09T17:46:12Z"
 }

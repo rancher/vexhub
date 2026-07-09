@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9d16b50bad4c99395db34064ff48db616087f2339b1bb5bc0f3dfd382ca1e89d",
+  "@id": "https://openvex.dev/docs/public/vex-82f796256072b95bd609243fad6190c3f1ce599e6587051bd8945dc96c584341",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1732,6 +1732,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1441-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libavahi-client3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-instance-manager is a Go storage manager; libavahi-client3 (mDNS) is not used at runtime",
+      "timestamp": "2026-07-09T16:32:34Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -1998,6 +2017,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2297-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libavahi-client3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-instance-manager is a Go storage manager; libavahi-client3 (mDNS) is not used at runtime",
+      "timestamp": "2026-07-09T16:32:34Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2298-1"
       },
       "products": [
@@ -2149,5 +2187,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-07T06:21:49Z"
+  "timestamp": "2026-07-09T17:46:10Z"
 }
