@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1dcd4478605052e0be800149c86114fa61bc8e6d02440eca07ce6ee7cdc0d38a",
+  "@id": "https://openvex.dev/docs/public/vex-9517605413c417c7fe099523c7d0c10bf13e606ab88fbeae328c24846cf6fe69",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -356,6 +356,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39831"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.47.0. Vulnerable code not present.",
+      "timestamp": "2026-07-09T14:06:08Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39832"
       },
       "products": [
@@ -624,5 +643,5 @@
       "timestamp": "2026-07-06T15:42:38Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:16Z"
+  "timestamp": "2026-07-09T16:00:16Z"
 }
