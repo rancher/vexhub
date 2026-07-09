@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9c2eaa9448c4e07c0bbb61941027570e1b980c3e6ebc8847e9b1ede4d02217b6",
+  "@id": "https://openvex.dev/docs/public/vex-b1760c53a4f94164432485442c53ad2aa552cc2696bfbab4a8ba3ad7a805ba89",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1238,6 +1238,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=index.docker.io/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based GitOps controller; capability management via Go syscalls, not libcap2 C library",
+      "timestamp": "2026-07-09T04:55:05Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -1503,5 +1522,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-07T06:21:50Z"
+  "timestamp": "2026-07-09T12:21:54Z"
 }
