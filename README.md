@@ -2,8 +2,8 @@
 
 Rancher's VEX Hub repository contains a collection of [VEX]
 (Vulnerability-Exploitability eXchange) related reports for Rancher, RKE2, K3s,
-Harvester, Longhorn and other container and cloud native solutions images from
-SUSE.
+Virtualization (Harvester), Storage (Longhorn), Observability (StackState) and
+other container and cloud native solutions images from SUSE.
 
 For more information about SUSE's VEX Hub initiative, please consult the
 knowledge base article [KB 000021573 - How to use SUSE Rancher's VEX Reports].
