@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9d16b50bad4c99395db34064ff48db616087f2339b1bb5bc0f3dfd382ca1e89d",
+  "@id": "https://openvex.dev/docs/public/vex-ee7bc75aa4f8058f9a089ade5cd7896e4758b7da2d9a5f02fa524821b0cd268b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -60,6 +60,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "cdi-uploadproxy is pure Go; libboost C++ library has no caller in the container's Go binary",
       "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libboost_thread1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI uploadproxy is a Go service; libboost C++ threading library has no Go code path",
+      "timestamp": "2026-07-09T21:48:46Z"
     },
     {
       "vulnerability": {
@@ -689,5 +708,5 @@
       "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-07-07T06:21:49Z"
+  "timestamp": "2026-07-10T06:24:51Z"
 }
