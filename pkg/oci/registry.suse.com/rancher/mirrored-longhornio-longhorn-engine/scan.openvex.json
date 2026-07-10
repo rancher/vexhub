@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2c1076502918bd1fc1d678338152ef64d074849fb6e3dfe00ded78d9c27e851d",
+  "@id": "https://openvex.dev/docs/public/vex-1866d5beaa74d24bf556efd1af92b28de689443977153db644204ce827f923a7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1219,6 +1219,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2076-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=registry.suse.com/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libldb2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn block storage has no Samba/LDB code path; libldb2 is an unused transitive dependency",
+      "timestamp": "2026-07-09T21:48:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2115-1"
       },
       "products": [
@@ -1408,5 +1427,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-09T17:46:11Z"
+  "timestamp": "2026-07-10T06:24:49Z"
 }

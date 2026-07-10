@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1dcd4478605052e0be800149c86114fa61bc8e6d02440eca07ce6ee7cdc0d38a",
+  "@id": "https://openvex.dev/docs/public/vex-ee7bc75aa4f8058f9a089ade5cd7896e4758b7da2d9a5f02fa524821b0cd268b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -117,7 +117,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22355-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-eventrouter?repository_url=registry.suse.com/rancher/harvester-eventrouter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Kubernetes event router is Go-based; libgcrypt GnuPG library is not in the execute path",
+      "timestamp": "2026-07-09T21:48:46Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:16Z"
+  "timestamp": "2026-07-10T06:24:51Z"
 }
