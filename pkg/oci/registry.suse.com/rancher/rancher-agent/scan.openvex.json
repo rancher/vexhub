@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-82f796256072b95bd609243fad6190c3f1ce599e6587051bd8945dc96c584341",
+  "@id": "https://openvex.dev/docs/public/vex-d2fdd4fb872a5ad70df17788738af1ac2dae7db3c9ddbd2616501cc6925a840f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1507,6 +1507,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2283-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.suse.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libjq1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent is a pure-Go binary; libjq1 (C library) is not loaded or called at runtime",
+      "timestamp": "2026-07-09T23:57:52Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2371-1"
       },
       "products": [
@@ -1582,5 +1601,5 @@
       "timestamp": "2026-07-01T00:12:09Z"
     }
   ],
-  "timestamp": "2026-07-09T17:46:10Z"
+  "timestamp": "2026-07-10T14:29:51Z"
 }

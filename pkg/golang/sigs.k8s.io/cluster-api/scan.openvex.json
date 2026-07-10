@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3bb570d92a8ef0d99af993b2c3b43763785991cb09861c3b047af84216f67890",
+  "@id": "https://openvex.dev/docs/public/vex-d2fdd4fb872a5ad70df17788738af1ac2dae7db3c9ddbd2616501cc6925a840f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3636,6 +3636,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/cluster-api",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cluster-api controller does not process MIME encoded-word content",
+      "timestamp": "2026-07-10T00:14:21Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -4185,5 +4204,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-09T06:43:54Z"
+  "timestamp": "2026-07-10T14:29:51Z"
 }
