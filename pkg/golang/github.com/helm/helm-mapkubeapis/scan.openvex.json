@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-abc9172263e2b2777e36f42a7204070896466f734fdba3c139e8208d18514863",
+  "@id": "https://openvex.dev/docs/public/vex-d2fdd4fb872a5ad70df17788738af1ac2dae7db3c9ddbd2616501cc6925a840f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2478,6 +2478,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/helm/helm-mapkubeapis",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "helm-mapkubeapis connects only to k8s API; TLS SANs not under adversary control",
+      "timestamp": "2026-07-10T00:14:21Z"
     },
     {
       "vulnerability": {
@@ -5849,6 +5868,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/helm/helm-mapkubeapis",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "helm-mapkubeapis does not process MIME encoded-word content",
+      "timestamp": "2026-07-10T00:14:21Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -6587,5 +6625,5 @@
       "timestamp": "2026-07-06T15:42:38Z"
     }
   ],
-  "timestamp": "2026-07-09T17:46:12Z"
+  "timestamp": "2026-07-10T14:29:51Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-abc9172263e2b2777e36f42a7204070896466f734fdba3c139e8208d18514863",
+  "@id": "https://openvex.dev/docs/public/vex-8d440ef353ac757113979e20888a9c3746052ddcffa82aebb711c8ab7316538c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -13091,6 +13091,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "support-bundle-kit does not process MIME encoded-word (email header) content",
+      "timestamp": "2026-07-10T00:14:21Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -15749,5 +15768,5 @@
       "timestamp": "2026-06-23T03:11:52Z"
     }
   ],
-  "timestamp": "2026-07-09T17:46:12Z"
+  "timestamp": "2026-07-10T14:29:52Z"
 }
