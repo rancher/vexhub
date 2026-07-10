@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-82f796256072b95bd609243fad6190c3f1ce599e6587051bd8945dc96c584341",
+  "@id": "https://openvex.dev/docs/public/vex-953eb10dd5e7c2d84a2c3f728c681a62cca91c8edb9571b9c9401bd34c4b0bd2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -7127,6 +7127,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-provisioner/v5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CSI provisioner controller does not process MIME encoded-word content",
+      "timestamp": "2026-07-10T00:14:21Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -7341,6 +7360,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CSI provisioner uses gRPC; net/textproto not in execute path; error injection path unreachable",
       "timestamp": "2026-07-09T16:43:11Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-provisioner/v5",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CSI provisioner is a k8s controller; does not expose HTTP/1.1 to adversary-controlled input",
+      "timestamp": "2026-07-10T00:14:21Z"
     },
     {
       "vulnerability": {
@@ -7959,5 +7997,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-09T17:46:10Z"
+  "timestamp": "2026-07-10T14:29:50Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-eefc4e47edf3f75433204acac0fd7530190ea45094b5c83c0223f9a5d0bae1f9",
+  "@id": "https://openvex.dev/docs/public/vex-953eb10dd5e7c2d84a2c3f728c681a62cca91c8edb9571b9c9401bd34c4b0bd2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2329,6 +2329,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-snapshotter/v8",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "CSI snapshotter connects only to k8s API; TLS SANs not under adversary control",
+      "timestamp": "2026-07-10T00:14:21Z"
     },
     {
       "vulnerability": {
@@ -6754,6 +6773,25 @@
           "@id": "pkg:golang/github.com/kubernetes-csi/external-snapshotter/v8",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CSI snapshotter controller does not process MIME encoded-word content",
+      "timestamp": "2026-07-10T00:14:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-snapshotter/v8",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.3"
             }
           ]
@@ -7024,6 +7062,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-snapshotter/v8",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CSI snapshotter is a k8s controller; does not expose HTTP/1.1 to adversary-controlled input",
+      "timestamp": "2026-07-10T00:14:21Z"
     },
     {
       "vulnerability": {
@@ -7661,5 +7718,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-09T06:43:56Z"
+  "timestamp": "2026-07-10T14:29:50Z"
 }
