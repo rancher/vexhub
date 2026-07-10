@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c59c4a994da47aebde56e94f48c771e04a05196049427667af3483902b8afe5c",
+  "@id": "https://openvex.dev/docs/public/vex-8d440ef353ac757113979e20888a9c3746052ddcffa82aebb711c8ab7316538c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1561,6 +1561,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21164-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-locale-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glibc-locale-base ships locale data files; Go CSI driver binary does not invoke glibc locale functions",
+      "timestamp": "2026-07-09T23:57:52Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21173-1"
       },
       "products": [
@@ -1767,6 +1786,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21807-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-locale-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glibc-locale-base ships locale data files; Go CSI driver binary does not invoke glibc locale functions",
+      "timestamp": "2026-07-09T23:57:52Z"
     },
     {
       "vulnerability": {
@@ -2073,5 +2111,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-07T11:29:54Z"
+  "timestamp": "2026-07-10T14:29:52Z"
 }

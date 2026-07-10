@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6e80471b4f3af328bc51d3d209e0a834ca38c9f839ae7ec0a12b96714640285e",
+  "@id": "https://openvex.dev/docs/public/vex-d2fdd4fb872a5ad70df17788738af1ac2dae7db3c9ddbd2616501cc6925a840f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1903,6 +1903,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2076-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libldb2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libldb2 is an LDAP/SAM database library; Longhorn engine is a Go block-storage binary with no LDAP dependency",
+      "timestamp": "2026-07-09T23:57:52Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2283-1"
       },
       "products": [
@@ -1997,5 +2016,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-10T06:24:50Z"
+  "timestamp": "2026-07-10T14:29:51Z"
 }
