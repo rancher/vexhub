@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6e80471b4f3af328bc51d3d209e0a834ca38c9f839ae7ec0a12b96714640285e",
+  "@id": "https://openvex.dev/docs/public/vex-530b200e83cd3d74539e31de4cb01fbed7daf6fb18b3616858d09581f9772c69",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -24845,6 +24845,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "network controller uses K8s API; ECH not configured in TLS",
+      "timestamp": "2026-07-11T16:06:44Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -27352,5 +27371,5 @@
       "timestamp": "2026-07-06T03:08:44Z"
     }
   ],
-  "timestamp": "2026-07-10T06:24:50Z"
+  "timestamp": "2026-07-11T16:33:41Z"
 }
