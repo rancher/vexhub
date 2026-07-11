@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-edda7ecb91572a5197a96645cf8faa0dcd499828e8cd20813d2503acc29af4d5",
+  "@id": "https://openvex.dev/docs/public/vex-f76706fe7327fd7b4456e200983dc9d041544d714e59e02c561019c159156c36",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -9731,6 +9731,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn backing-image-manager uses gRPC/K8s API; ECH not configured",
+      "timestamp": "2026-07-11T16:06:44Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -10145,5 +10164,5 @@
       "timestamp": "2026-07-01T00:22:11Z"
     }
   ],
-  "timestamp": "2026-07-10T23:59:46Z"
+  "timestamp": "2026-07-11T16:33:42Z"
 }
