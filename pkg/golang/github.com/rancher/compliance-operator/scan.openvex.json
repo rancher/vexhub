@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-eefc4e47edf3f75433204acac0fd7530190ea45094b5c83c0223f9a5d0bae1f9",
+  "@id": "https://openvex.dev/docs/public/vex-f50b334e64102bfd649b59e7bf5ab3e900fb75d9a0f86680da54327bccf19227",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -9239,6 +9239,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/compliance-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Source review: ComplianceAsCode/compliance-operator does not call os.OpenInRoot or os.Root",
+      "timestamp": "2026-07-11T04:31:41Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39822",
         "aliases": [
           "GO-2026-4970"
@@ -16313,5 +16332,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-09T06:43:56Z"
+  "timestamp": "2026-07-11T12:52:54Z"
 }
