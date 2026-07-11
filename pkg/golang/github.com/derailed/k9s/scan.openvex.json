@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b1391fdb9b634ecdaa6c37f8e5a46471c4417e06a47a12922091f65994f21dd6",
+  "@id": "https://openvex.dev/docs/public/vex-530b200e83cd3d74539e31de4cb01fbed7daf6fb18b3616858d09581f9772c69",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -6171,6 +6171,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/derailed/k9s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k9s is a K8s TUI; it does not use os.Root or OpenInRoot sandboxed file APIs",
+      "timestamp": "2026-07-11T16:06:44Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39822",
         "aliases": [
           "GO-2026-4970"
@@ -9018,5 +9037,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-11T12:52:56Z"
+  "timestamp": "2026-07-11T16:33:41Z"
 }
