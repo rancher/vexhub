@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-abc9172263e2b2777e36f42a7204070896466f734fdba3c139e8208d18514863",
+  "@id": "https://openvex.dev/docs/public/vex-50b7591508a8565d3d01dde50be1e0b06cdbc98650e618c117a7be9b1cfea06a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -337,7 +337,64 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39828"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
+      "timestamp": "2026-07-11T00:59:02Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39829"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh` package is NOT compiled into the `helm-set-status` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39829"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
+      "timestamp": "2026-07-11T00:59:02Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39830"
       },
       "products": [
         {
@@ -363,15 +420,15 @@
           "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
             }
           ]
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
-      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh` package is NOT compiled into the `helm-set-status` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
-      "timestamp": "2026-06-25T14:21:06Z"
+      "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
+      "timestamp": "2026-07-11T00:59:02Z"
     },
     {
       "vulnerability": {
@@ -394,6 +451,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39831"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
+      "timestamp": "2026-07-11T00:59:02Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39832"
       },
       "products": [
@@ -410,6 +486,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh/agent` package is NOT compiled into the `helm-set-status` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh/agent.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
       "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39832"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh/agent; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
+      "timestamp": "2026-07-11T00:59:02Z"
     },
     {
       "vulnerability": {
@@ -448,6 +543,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh` package is NOT compiled into the `helm-set-status` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
       "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39835"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
+      "timestamp": "2026-07-11T00:59:02Z"
     },
     {
       "vulnerability": {
@@ -584,7 +698,64 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42508"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh/knownhosts; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
+      "timestamp": "2026-07-11T00:59:02Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-46595"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh` package is NOT compiled into the `helm-set-status` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
+      "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46595"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
+      "timestamp": "2026-07-11T00:59:02Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46597"
       },
       "products": [
         {
@@ -610,15 +781,15 @@
           "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
           "subcomponents": [
             {
-              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
             }
           ]
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
-      "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/crypto/ssh` package is NOT compiled into the `helm-set-status` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/crypto/ssh.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
-      "timestamp": "2026-06-25T14:21:06Z"
+      "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
+      "timestamp": "2026-07-11T00:59:02Z"
     },
     {
       "vulnerability": {
@@ -700,5 +871,5 @@
       "timestamp": "2026-07-06T15:42:38Z"
     }
   ],
-  "timestamp": "2026-07-09T17:46:12Z"
+  "timestamp": "2026-07-11T01:02:00Z"
 }
