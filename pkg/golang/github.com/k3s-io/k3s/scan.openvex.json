@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b1391fdb9b634ecdaa6c37f8e5a46471c4417e06a47a12922091f65994f21dd6",
+  "@id": "https://openvex.dev/docs/public/vex-8b0b5e8480d056ae882659f1a2f9951ff00ca526592fd7b7a5e2639537b15068",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -33949,6 +33949,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "containerd uses no os.Root/OpenInRoot APIs; source search confirms 0 references",
+      "timestamp": "2026-07-11T16:06:44Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/k3s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k3s does not use os.Root/OpenInRoot; source search confirms 0 references",
+      "timestamp": "2026-07-11T16:06:44Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39823"
       },
       "products": [
@@ -57004,5 +57042,5 @@
       "timestamp": "2026-07-01T18:09:58Z"
     }
   ],
-  "timestamp": "2026-07-11T12:52:56Z"
+  "timestamp": "2026-07-11T16:33:40Z"
 }

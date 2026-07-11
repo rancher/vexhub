@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c20c50d49253324b2a1cbced16e526eb9c813261233f14f71686576d04beae71",
+  "@id": "https://openvex.dev/docs/public/vex-8b0b5e8480d056ae882659f1a2f9951ff00ca526592fd7b7a5e2639537b15068",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -20608,6 +20608,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vm-import-controller uses K8s API; ECH not configured",
+      "timestamp": "2026-07-11T16:06:44Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -23445,5 +23464,5 @@
       "timestamp": "2026-07-06T03:10:40Z"
     }
   ],
-  "timestamp": "2026-07-09T06:43:55Z"
+  "timestamp": "2026-07-11T16:33:40Z"
 }

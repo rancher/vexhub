@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24c262887457d4c4ac93d1dd36d0bb69349edaefb42011e29d5731a3f885aaf8",
+  "@id": "https://openvex.dev/docs/public/vex-8b0b5e8480d056ae882659f1a2f9951ff00ca526592fd7b7a5e2639537b15068",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -60,6 +60,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Binary does not perform CNAME DNS lookups; net.LookupCNAME not reachable",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/envoyproxy/ratelimit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "envoy ratelimit is a gRPC rate-limit service; does not use os.Root/OpenInRoot",
+      "timestamp": "2026-07-11T16:06:44Z"
     },
     {
       "vulnerability": {
@@ -212,7 +231,26 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "projectcalico/calico confirmed 0 net/mail imports; rate-limiting proxy has no email parsing logic",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/envoyproxy/ratelimit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "envoy ratelimit uses gRPC; does not configure EncryptedClientHelloConfigList",
+      "timestamp": "2026-07-11T16:06:44Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:36Z"
+  "timestamp": "2026-07-11T16:33:40Z"
 }
