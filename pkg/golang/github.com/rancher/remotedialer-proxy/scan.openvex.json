@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-69ac030ef169f97e70753b000536e45378bb32fe7b1798acf9e6c0ae17a48555",
+  "@id": "https://openvex.dev/docs/public/vex-f50b334e64102bfd649b59e7bf5ab3e900fb75d9a0f86680da54327bccf19227",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -8107,6 +8107,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/remotedialer-proxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "Source confirmed: rancher/remotedialer does not set EncryptedClientHelloConfigList",
+      "timestamp": "2026-07-11T04:31:41Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -9866,5 +9885,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-10T23:59:47Z"
+  "timestamp": "2026-07-11T12:52:54Z"
 }
