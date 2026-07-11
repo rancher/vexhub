@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3bb570d92a8ef0d99af993b2c3b43763785991cb09861c3b047af84216f67890",
+  "@id": "https://openvex.dev/docs/public/vex-b1391fdb9b634ecdaa6c37f8e5a46471c4417e06a47a12922091f65994f21dd6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -20388,6 +20388,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "Source confirmed: harvester/harvester does not set EncryptedClientHelloConfigList in TLS",
+      "timestamp": "2026-07-11T04:31:41Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -23156,5 +23175,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-09T06:43:54Z"
+  "timestamp": "2026-07-11T12:52:56Z"
 }
