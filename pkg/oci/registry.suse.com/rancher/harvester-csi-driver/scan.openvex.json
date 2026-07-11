@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8d440ef353ac757113979e20888a9c3746052ddcffa82aebb711c8ab7316538c",
+  "@id": "https://openvex.dev/docs/public/vex-b788341e60afec40d5503f0503cfc94f35dd21e914ae075bb273988c9ee1f0c2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1998,6 +1998,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22315-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CSI driver uses crypto/tls; libopenssl3 is not loaded at runtime",
+      "timestamp": "2026-07-11T15:53:45Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22322-1"
       },
       "products": [
@@ -2074,6 +2093,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2393-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CSI driver uses crypto/tls; libopenssl3 is not loaded at runtime",
+      "timestamp": "2026-07-11T15:53:45Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2590-1"
       },
       "products": [
@@ -2111,5 +2149,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-10T14:29:52Z"
+  "timestamp": "2026-07-11T16:40:06Z"
 }
