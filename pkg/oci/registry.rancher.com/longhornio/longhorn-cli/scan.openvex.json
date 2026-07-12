@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7ec2e0ae9a8aafb3c2ffdac0f76e80584d07392826ed34d8e6780412c20f346c",
+  "@id": "https://openvex.dev/docs/public/vex-f8b83708c2521f40f67fff6c221b8707bad1014c82184a6e553ae3451de571e2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1390,6 +1390,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=registry.rancher.com/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zypper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "zypper is an OS package manager used only during image build, not invoked at runtime",
+      "timestamp": "2026-07-11T15:53:45Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2714-1"
       },
       "products": [
@@ -1408,5 +1427,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-09T12:21:55Z"
+  "timestamp": "2026-07-11T16:40:07Z"
 }
