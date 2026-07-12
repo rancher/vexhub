@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-31de560200cb1ac23a7da147aece1795ca2e2d14d8fb1459435ccd8410107ea1",
+  "@id": "https://openvex.dev/docs/public/vex-f8b83708c2521f40f67fff6c221b8707bad1014c82184a6e553ae3451de571e2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -44,6 +44,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-controller?repository_url=index.docker.io/rancher/neuvector-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NeuVector controller is a Go binary using Go crypto; openssl CLI is never invoked at runtime",
+      "timestamp": "2026-07-11T15:53:45Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2714-1"
       },
       "products": [
@@ -62,5 +81,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:15Z"
+  "timestamp": "2026-07-11T16:40:07Z"
 }

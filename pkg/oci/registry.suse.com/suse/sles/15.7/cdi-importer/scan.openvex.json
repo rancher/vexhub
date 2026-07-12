@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d6c628e8032b55271f04c13fbbf6aca14451260d8b4ab1ccc28655aefafbfc9e",
+  "@id": "https://openvex.dev/docs/public/vex-b788341e60afec40d5503f0503cfc94f35dd21e914ae075bb273988c9ee1f0c2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,6 +22,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI data importer is a Go binary; libelf ELF parsing C library not called at runtime",
       "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-RU-2026:1228-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.7/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/login_defs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI importer imports VM disk images via HTTP; no user login operations performed at runtime",
+      "timestamp": "2026-07-11T15:53:45Z"
     },
     {
       "vulnerability": {
@@ -708,5 +727,5 @@
       "timestamp": "2026-07-07T01:05:12Z"
     }
   ],
-  "timestamp": "2026-07-07T11:29:55Z"
+  "timestamp": "2026-07-11T16:40:06Z"
 }
