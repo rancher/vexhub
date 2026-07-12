@@ -1,0 +1,28 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-b788341e60afec40d5503f0503cfc94f35dd21e914ae075bb273988c9ee1f0c2",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-manager?repository_url=registry.suse.com/rancher/neuvector-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NeuVector manager is a Java webapp using JCE; openssl CLI is not called at runtime",
+      "timestamp": "2026-07-11T15:53:45Z"
+    }
+  ],
+  "timestamp": "2026-07-11T16:40:06Z"
+}
