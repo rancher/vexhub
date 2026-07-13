@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f50b334e64102bfd649b59e7bf5ab3e900fb75d9a0f86680da54327bccf19227",
+  "@id": "https://openvex.dev/docs/public/vex-89217a5946abade71a3defbab13348cb8f2a91b9cf499162cb06eade28f26780",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -16404,6 +16404,25 @@
           "@id": "pkg:golang/github.com/longhorn/cli",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhornctl runs local ops on node; uses K8s API with standard TLS; ECH not configured",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/cli",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.4"
             }
           ]
@@ -17842,5 +17861,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-11T12:52:54Z"
+  "timestamp": "2026-07-13T17:50:58Z"
 }

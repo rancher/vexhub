@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ac837bc303c2a79f68ffddf108316e15350bedfa2dcf82e798645f2ac17e0588",
+  "@id": "https://openvex.dev/docs/public/vex-4a98431bc74ec657a8a66a8792faee6c02f809395ef99688ef6095575cbe6789",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,6 +22,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "certgen connects to K8s API only; x509 SANs not adversary-controlled",
       "timestamp": "2026-07-02T19:42:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27145"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cilium-certgen connects to K8s API only; cluster-managed cert SANs not adversary-controlled",
+      "timestamp": "2026-07-13T16:53:15Z"
     },
     {
       "vulnerability": {
@@ -272,6 +291,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cilium-certgen generates TLS certs via K8s API; os.Root sandboxing API not used",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39823"
       },
       "products": [
@@ -481,6 +519,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42504"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cilium-certgen generates TLS certs via K8s API; mime.WordDecoder.DecodeHeader not used",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cilium-certgen connects to K8s API via standard TLS; ECH requires explicit opt-in; not configured",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42507"
       },
       "products": [
@@ -499,5 +575,5 @@
       "timestamp": "2026-07-03T00:51:30Z"
     }
   ],
-  "timestamp": "2026-07-03T11:28:38Z"
+  "timestamp": "2026-07-13T17:51:00Z"
 }
