@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f50b334e64102bfd649b59e7bf5ab3e900fb75d9a0f86680da54327bccf19227",
+  "@id": "https://openvex.dev/docs/public/vex-461acad56dc122caa839f49a34ed7b52c7a3e0010439f1f05f48cba271999537",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -79,6 +79,82 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CVE affects net/mail email parsing; NeuVector upgrader binary does not parse email addresses",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/neuvector/neuvector",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NeuVector controller manages security policies; os.Root sandboxing API not used",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/neuvector/neuvector",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NeuVector enforcer agent inspects containers via /proc; os.Root sandboxing API not used",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/neuvector/neuvector",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NeuVector pathWalker traverses filesystem via filepath.Walk; os.Root sandboxing API not used",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/neuvector/neuvector",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NeuVector upgrader applies updates; reads/writes files via regular os.* calls; os.Root API not used",
+      "timestamp": "2026-07-13T16:53:15Z"
     },
     {
       "vulnerability": {
@@ -279,6 +355,82 @@
           "@id": "pkg:golang/github.com/neuvector/neuvector",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NeuVector controller uses internal cluster TLS; ECH requires explicit opt-in; not configured",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/neuvector/neuvector",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NeuVector enforcer agent uses internal cluster TLS; ECH requires explicit opt-in; not configured",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/neuvector/neuvector",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NeuVector pathWalker scans filesystem paths; makes no TLS connections; ECH not in execute path",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/neuvector/neuvector",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NeuVector upgrader applies updates; connects to K8s API with standard TLS; ECH not configured",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/neuvector/neuvector",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.4"
             }
           ]
@@ -347,5 +499,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-11T12:52:54Z"
+  "timestamp": "2026-07-13T17:50:59Z"
 }

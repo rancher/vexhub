@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c20c50d49253324b2a1cbced16e526eb9c813261233f14f71686576d04beae71",
+  "@id": "https://openvex.dev/docs/public/vex-461acad56dc122caa839f49a34ed7b52c7a3e0010439f1f05f48cba271999537",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -8885,6 +8885,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester CSI driver mounts volumes via K8s/Longhorn APIs; os.Root sandboxing API not used",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39822",
         "aliases": [
           "GO-2026-4970"
@@ -13718,5 +13737,5 @@
       "timestamp": "2026-06-23T02:38:22Z"
     }
   ],
-  "timestamp": "2026-07-09T06:43:55Z"
+  "timestamp": "2026-07-13T17:50:59Z"
 }

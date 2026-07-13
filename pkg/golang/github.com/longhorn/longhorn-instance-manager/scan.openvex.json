@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b1391fdb9b634ecdaa6c37f8e5a46471c4417e06a47a12922091f65994f21dd6",
+  "@id": "https://openvex.dev/docs/public/vex-89217a5946abade71a3defbab13348cb8f2a91b9cf499162cb06eade28f26780",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -6352,6 +6352,25 @@
           "@id": "pkg:golang/github.com/longhorn/longhorn-instance-manager",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn instance manager uses gRPC for internal comms; ECH requires explicit opt-in; not configured",
+      "timestamp": "2026-07-13T16:53:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/longhorn/longhorn-instance-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.4"
             }
           ]
@@ -6734,5 +6753,5 @@
       "timestamp": "2026-07-01T00:22:11Z"
     }
   ],
-  "timestamp": "2026-07-11T12:52:56Z"
+  "timestamp": "2026-07-13T17:50:58Z"
 }
