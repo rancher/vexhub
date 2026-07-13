@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6508563c159593f3510e27908067ff7adf6336e5b258c93b0f1c991bbd1aa322",
+  "@id": "https://openvex.dev/docs/public/vex-2d5ef3ae392cb71100372bb443f2cab8c6191861e0c7240842e8068bdbf5d5bf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -60,7 +60,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Promtail is a Go log-shipping binary; openssl CLI is never invoked at runtime",
       "timestamp": "2026-06-30T00:07:33Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/promtail?repository_url=registry.suse.com/suse-observability/promtail",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Promtail log shipper uses token auth to Loki/K8s; no Kerberos",
+      "timestamp": "2026-07-13T16:50:57Z"
     }
   ],
-  "timestamp": "2026-06-30T10:50:44Z"
+  "timestamp": "2026-07-13T17:19:40Z"
 }
