@@ -1,9 +1,47 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d42733c5eedba96d2cb2c501aeff00bb1e829b85268a0888ffc82a5580aa3d72",
+  "@id": "https://openvex.dev/docs/public/vex-73c8466e5c0a2da077910d0298670d5419ed532e3303c3fa87ffe29071620b3b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-25681"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/hubble-ui/backend",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.53.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`usr/bin/backend` does not link golang.org/x/net/html; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/net v0.53.0. Vulnerable code not present.",
+      "timestamp": "2026-07-13T18:00:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27136"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/hubble-ui/backend",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.53.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`usr/bin/backend` does not link golang.org/x/net/html; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/net v0.53.0. Vulnerable code not present.",
+      "timestamp": "2026-07-13T18:00:05Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2026-27145"
@@ -214,5 +252,5 @@
       "timestamp": "2026-07-02T19:42:22Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:14Z"
+  "timestamp": "2026-07-13T20:23:46Z"
 }
