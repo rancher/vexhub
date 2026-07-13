@@ -1,0 +1,28 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-66230783a74acbf2eaf168255407a5653a0103ebab4d5755520d3d6cdf125ed3",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=quay.io/stackstate/stackstate-k8s-process-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "K8s process agent uses cert-based auth; Kerberos not used",
+      "timestamp": "2026-07-13T16:50:57Z"
+    }
+  ],
+  "timestamp": "2026-07-13T17:19:41Z"
+}

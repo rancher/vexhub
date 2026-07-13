@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d42733c5eedba96d2cb2c501aeff00bb1e829b85268a0888ffc82a5580aa3d72",
+  "@id": "https://openvex.dev/docs/public/vex-66230783a74acbf2eaf168255407a5653a0103ebab4d5755520d3d6cdf125ed3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -703,7 +703,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-upgrade?repository_url=registry.suse.com/rancher/harvester-upgrade",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester upgrade orchestrator uses K8s cert auth; Kerberos not configured",
+      "timestamp": "2026-07-13T16:50:57Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:14Z"
+  "timestamp": "2026-07-13T17:19:41Z"
 }

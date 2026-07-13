@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7ec2e0ae9a8aafb3c2ffdac0f76e80584d07392826ed34d8e6780412c20f346c",
+  "@id": "https://openvex.dev/docs/public/vex-c61ae77427debdd0224d43c95d5d0f270d70caf863d46f083b3653e36d6cf5c0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -741,7 +741,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-support-bundle-kit?repository_url=index.docker.io/rancher/mirrored-longhornio-support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Support bundle collector uses K8s token auth; no Kerberos",
+      "timestamp": "2026-07-13T16:50:57Z"
     }
   ],
-  "timestamp": "2026-07-09T12:21:55Z"
+  "timestamp": "2026-07-13T17:19:42Z"
 }
