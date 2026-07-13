@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ee7bc75aa4f8058f9a089ade5cd7896e4758b7da2d9a5f02fa524821b0cd268b",
+  "@id": "https://openvex.dev/docs/public/vex-c61ae77427debdd0224d43c95d5d0f270d70caf863d46f083b3653e36d6cf5c0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -893,7 +893,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go K8s admission webhook uses TLS certs; Kerberos not in execute path",
+      "timestamp": "2026-07-13T16:50:57Z"
     }
   ],
-  "timestamp": "2026-07-10T06:24:51Z"
+  "timestamp": "2026-07-13T17:19:42Z"
 }

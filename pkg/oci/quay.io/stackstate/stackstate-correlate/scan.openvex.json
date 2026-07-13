@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2f5ebc96f057c478615ecf8a243fb5c8a8c30efc5558c226e1915525624081b5",
+  "@id": "https://openvex.dev/docs/public/vex-66230783a74acbf2eaf168255407a5653a0103ebab4d5755520d3d6cdf125ed3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -98,7 +98,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libgif7 unused; stackstate-correlate is a topology correlation engine with no GIF image processing",
       "timestamp": "2026-06-29T16:02:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-correlate?repository_url=quay.io/stackstate/stackstate-correlate",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Observability correlate service uses token auth; Kerberos not in execution path",
+      "timestamp": "2026-07-13T16:50:57Z"
     }
   ],
-  "timestamp": "2026-07-06T18:25:25Z"
+  "timestamp": "2026-07-13T17:19:41Z"
 }

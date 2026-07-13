@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b1760c53a4f94164432485442c53ad2aa552cc2696bfbab4a8ba3ad7a805ba89",
+  "@id": "https://openvex.dev/docs/public/vex-66230783a74acbf2eaf168255407a5653a0103ebab4d5755520d3d6cdf125ed3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -877,7 +877,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI operator is a Go-based K8s operator using cert auth; no Kerberos",
+      "timestamp": "2026-07-13T16:50:57Z"
     }
   ],
-  "timestamp": "2026-07-09T12:21:54Z"
+  "timestamp": "2026-07-13T17:19:41Z"
 }

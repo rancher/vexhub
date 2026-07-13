@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-271787605e6367aa6b3b57d4f8cb8f5129f3fda4f72179bf2e507d407078a33b",
+  "@id": "https://openvex.dev/docs/public/vex-2d5ef3ae392cb71100372bb443f2cab8c6191861e0c7240842e8068bdbf5d5bf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -117,7 +117,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "SUSE package-manager library; package installation not performed in running containers",
       "timestamp": "2026-06-25T02:24:29Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/vmbackup?repository_url=registry.suse.com/suse-observability/vmbackup",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "VM backup tool connects to K8s API via bearer tokens; no Kerberos configured",
+      "timestamp": "2026-07-13T16:50:57Z"
     }
   ],
-  "timestamp": "2026-06-29T12:43:06Z"
+  "timestamp": "2026-07-13T17:19:40Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2f24d6526412d4230473cd63e0e3b38c393679df90043bc84fb9e869d6c5e230",
+  "@id": "https://openvex.dev/docs/public/vex-2d5ef3ae392cb71100372bb443f2cab8c6191861e0c7240842e8068bdbf5d5bf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2147,7 +2147,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CSI driver authenticates via K8s service accounts and TLS; Kerberos is not used",
+      "timestamp": "2026-07-13T16:50:57Z"
     }
   ],
-  "timestamp": "2026-07-11T16:40:05Z"
+  "timestamp": "2026-07-13T17:19:40Z"
 }
