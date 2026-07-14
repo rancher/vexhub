@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9c2eaa9448c4e07c0bbb61941027570e1b980c3e6ebc8847e9b1ede4d02217b6",
+  "@id": "https://openvex.dev/docs/public/vex-58054d329050fc3561fb68cbcd963ab5d35f83a6ba46e96afde7d2f03197725c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -893,7 +893,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2851-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/dracut"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "dracut creates initramfs images at build/boot time; libguestfs runtime (guestfish, virt-*) never invokes dracut",
+      "timestamp": "2026-07-14T00:11:58Z"
     }
   ],
-  "timestamp": "2026-07-07T06:21:50Z"
+  "timestamp": "2026-07-14T11:21:30Z"
 }
