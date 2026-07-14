@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-dfcd521533b34147d4f839a082f8e58545dad28079e9990d882473149b6fccd2",
+  "@id": "https://openvex.dev/docs/public/vex-58054d329050fc3561fb68cbcd963ab5d35f83a6ba46e96afde7d2f03197725c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -47099,6 +47099,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/image-build-rke2-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RKE2 cloud provider uses K8s/cloud API clients with standard TLS; ECH not configured",
+      "timestamp": "2026-07-14T00:17:23Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506"
       },
       "products": [
@@ -51779,5 +51798,5 @@
       "timestamp": "2026-07-14T03:25:51Z"
     }
   ],
-  "timestamp": "2026-07-14T06:06:22Z"
+  "timestamp": "2026-07-14T11:21:30Z"
 }

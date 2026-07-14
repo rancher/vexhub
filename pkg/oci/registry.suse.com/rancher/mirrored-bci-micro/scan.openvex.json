@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d42733c5eedba96d2cb2c501aeff00bb1e829b85268a0888ffc82a5580aa3d72",
+  "@id": "https://openvex.dev/docs/public/vex-58054d329050fc3561fb68cbcd963ab5d35f83a6ba46e96afde7d2f03197725c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02362-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-bci-micro?repository_url=registry.suse.com/rancher/mirrored-bci-micro",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/coreutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bci-micro is a distroless-like base image; entrypoint is a compiled binary, coreutils never invoked at runtime",
+      "timestamp": "2026-07-14T00:11:58Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:22294-1"
@@ -43,5 +62,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-06T16:18:14Z"
+  "timestamp": "2026-07-14T11:21:30Z"
 }
