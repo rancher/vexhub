@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e808ce755d5fdea148a3375f4e0c09a47c6c9a2da0805d08a55feeb786767a2e",
+  "@id": "https://openvex.dev/docs/public/vex-c9f410067016a434fff14109d50432e7d64165a4488354f2b1daf6bdfaa19c25",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -690,6 +690,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/certgen",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "certgen connects to K8s API only; no adversary-controlled net/textproto input",
+      "timestamp": "2026-07-14T17:44:40Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42508"
       },
       "products": [
@@ -746,5 +765,5 @@
       "timestamp": "2026-07-13T18:00:05Z"
     }
   ],
-  "timestamp": "2026-07-13T20:23:44Z"
+  "timestamp": "2026-07-14T21:02:07Z"
 }

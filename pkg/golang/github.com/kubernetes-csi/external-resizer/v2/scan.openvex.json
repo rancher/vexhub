@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8d440ef353ac757113979e20888a9c3746052ddcffa82aebb711c8ab7316538c",
+  "@id": "https://openvex.dev/docs/public/vex-36b8ef9fc0f786b6d9ee5711f3c79f80f4d856af305cd22f8d48c6dfd1c2e824",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3434,6 +3434,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-resizer/v2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "CSI external-resizer connects to K8s API via gRPC; ECH not configured",
+      "timestamp": "2026-07-14T17:44:40Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -4150,5 +4169,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-10T14:29:52Z"
+  "timestamp": "2026-07-14T21:02:06Z"
 }
