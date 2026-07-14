@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8451f49f7b369424edabd5e55d2b340b6897fe00f34b3226101f8de3d1efa37f",
+  "@id": "https://openvex.dev/docs/public/vex-36b8ef9fc0f786b6d9ee5711f3c79f80f4d856af305cd22f8d48c6dfd1c2e824",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -581,7 +581,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go Calico CNI uses Go UUID library; C libuuid1 not linked at runtime",
       "timestamp": "2026-06-24T04:52:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=registry.suse.com/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Calico components are statically-linked Go binaries; krb5 is a transitive SLES base-image dependency not explicitly installed (absent from packages.txt) and no component performs Kerberos/GSSAPI authentication, so it is not in the execute path",
+      "timestamp": "2026-07-14T20:32:20Z"
     }
   ],
-  "timestamp": "2026-06-24T11:39:15Z"
+  "timestamp": "2026-07-14T21:02:06Z"
 }

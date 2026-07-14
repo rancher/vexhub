@@ -1,0 +1,47 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-36b8ef9fc0f786b6d9ee5711f3c79f80f4d856af305cd22f8d48c6dfd1c2e824",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/StackVista/suse-observability-mcp-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Binary uses standard file I/O; os.Root/OpenInRoot sandboxing API not used",
+      "timestamp": "2026-07-14T17:44:40Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/StackVista/suse-observability-mcp-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "No EncryptedClientHelloConfigList in TLS config; ECH not configured or used",
+      "timestamp": "2026-07-14T17:44:40Z"
+    }
+  ],
+  "timestamp": "2026-07-14T21:02:06Z"
+}
