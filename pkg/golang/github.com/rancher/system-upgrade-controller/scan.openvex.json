@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3bb570d92a8ef0d99af993b2c3b43763785991cb09861c3b047af84216f67890",
+  "@id": "https://openvex.dev/docs/public/vex-36b8ef9fc0f786b6d9ee5711f3c79f80f4d856af305cd22f8d48c6dfd1c2e824",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -9877,6 +9877,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/system-upgrade-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "SUC manages K8s upgrades via K8s API; ECH not configured in TLS",
+      "timestamp": "2026-07-14T17:44:40Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -10731,5 +10750,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-09T06:43:54Z"
+  "timestamp": "2026-07-14T21:02:06Z"
 }
