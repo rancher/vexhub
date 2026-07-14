@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-edda7ecb91572a5197a96645cf8faa0dcd499828e8cd20813d2503acc29af4d5",
+  "@id": "https://openvex.dev/docs/public/vex-efc4ae39fd4a3e2b75616acfb9d091e65844a99e1e3569e2b147df0c4acef576",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -465,7 +465,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/Altinity/clickhouse-backup/v2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ClickHouse backup tool uses standard TLS to storage backends; ECH not configured",
+      "timestamp": "2026-07-14T00:17:23Z"
     }
   ],
-  "timestamp": "2026-07-10T23:59:46Z"
+  "timestamp": "2026-07-14T11:21:29Z"
 }
