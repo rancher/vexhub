@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-abc9172263e2b2777e36f42a7204070896466f734fdba3c139e8208d18514863",
+  "@id": "https://openvex.dev/docs/public/vex-007731862d52eab452fea03c6d0afeb2cc10a005bf4449a4216a33b1d1ea01e0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1599,6 +1599,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2283-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mirrored Longhorn instance manager is a Go binary; jq CLI is not in the execute path",
+      "timestamp": "2026-07-16T00:44:51Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2297-1"
       },
       "products": [
@@ -1805,7 +1824,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2983-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mirrored Longhorn instance manager is a Go binary; jq CLI is not in the execute path",
+      "timestamp": "2026-07-16T00:44:51Z"
     }
   ],
-  "timestamp": "2026-07-09T17:46:12Z"
+  "timestamp": "2026-07-16T14:40:13Z"
 }
