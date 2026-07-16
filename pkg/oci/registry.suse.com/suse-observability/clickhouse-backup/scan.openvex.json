@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8987507bf9a5c229e4cdf269e4966ea9d5471608cc1181e127eb614cac6c3ca0",
+  "@id": "https://openvex.dev/docs/public/vex-bda00f527dae6507141dfb5331f65357bb90ed295e05ea7f6f882db563b6d355",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -60,7 +60,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go clickhouse-backup doesn't mount filesystems; C libmount1 not needed",
       "timestamp": "2026-06-24T04:52:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/clickhouse-backup?repository_url=registry.suse.com/suse-observability/clickhouse-backup",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ClickHouse backup utility performs backup/restore only; Kerberos auth paths are never invoked without explicit config",
+      "timestamp": "2026-07-15T13:41:14Z"
     }
   ],
-  "timestamp": "2026-06-24T11:39:14Z"
+  "timestamp": "2026-07-16T06:26:21Z"
 }

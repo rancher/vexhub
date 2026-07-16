@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2f5ebc96f057c478615ecf8a243fb5c8a8c30efc5558c226e1915525624081b5",
+  "@id": "https://openvex.dev/docs/public/vex-1514029880da143549037def7721551c64f9774b3b9aa86833093b85baa462bf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -193,7 +193,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "SUSE package-solver debug tools (dumpsolv/mergesolv); never invoked in container runtime",
       "timestamp": "2026-06-25T02:24:29Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/elasticsearch?repository_url=registry.rancher.com/suse-observability/elasticsearch",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Elasticsearch uses X-Pack for security; system krb5 paths not invoked without explicit Kerberos/JAAS configuration",
+      "timestamp": "2026-07-15T13:41:14Z"
     }
   ],
-  "timestamp": "2026-07-06T18:25:25Z"
+  "timestamp": "2026-07-16T06:26:22Z"
 }

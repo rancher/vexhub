@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c0be46ec04c7ef60a6b8e5c31f3dbe4a9fd59c1c3d72eac43f01ec5d7aec6dba",
+  "@id": "https://openvex.dev/docs/public/vex-bda00f527dae6507141dfb5331f65357bb90ed295e05ea7f6f882db563b6d355",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -60,7 +60,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "JMX metrics exporter has no image processing; libgif7 is an unused transitive dependency",
       "timestamp": "2026-06-29T16:02:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jmx-exporter?repository_url=registry.rancher.com/suse-observability/jmx-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "JMX Exporter is a Prometheus metrics bridge with no auth; krb5 paths are never invoked without Kerberos config",
+      "timestamp": "2026-07-15T13:41:14Z"
     }
   ],
-  "timestamp": "2026-06-29T16:53:02Z"
+  "timestamp": "2026-07-16T06:26:21Z"
 }
