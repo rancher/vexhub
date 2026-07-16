@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ca41aec45ab67e9b97453cdc2f4d40601a3012013db4b92a04d2f899861a69f7",
+  "@id": "https://openvex.dev/docs/public/vex-bda00f527dae6507141dfb5331f65357bb90ed295e05ea7f6f882db563b6d355",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -12317,6 +12317,28 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39822",
+        "aliases": [
+          "GO-2026-4970"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/vm-import-controller@v1.9.0-rc2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-07-16T03:12:59Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39823",
         "aliases": [
           "GO-2026-4982"
@@ -23486,5 +23508,5 @@
       "timestamp": "2026-07-06T03:10:40Z"
     }
   ],
-  "timestamp": "2026-07-15T06:28:14Z"
+  "timestamp": "2026-07-16T06:26:21Z"
 }
