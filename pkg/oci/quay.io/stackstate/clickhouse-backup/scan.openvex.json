@@ -1,0 +1,28 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-8a61b6d7cc25b539056e18c0915d9721a856aa0c488ae6d9d94671ffa3fe622c",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/clickhouse-backup?repository_url=quay.io/stackstate/clickhouse-backup",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ClickHouse backup utility performs backup/restore only; Kerberos auth paths are never invoked without explicit config",
+      "timestamp": "2026-07-15T13:41:14Z"
+    }
+  ],
+  "timestamp": "2026-07-16T06:26:23Z"
+}
