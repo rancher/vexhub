@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f50b334e64102bfd649b59e7bf5ab3e900fb75d9a0f86680da54327bccf19227",
+  "@id": "https://openvex.dev/docs/public/vex-b7b502cb98e591b2a5fe98bf72f02ccd47cb0a72f5e5647b7bf57cc3af03ee1e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1853,6 +1853,63 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "harvester-cloud-provider imports github.com/rancher/rancher only for API type definitions (pkg/apis/*) and generated CRD controllers (pkg/generated/controllers/*); the Rancher server code this CVE affects is not linked. Vulnerable code not present.",
       "timestamp": "2026-06-25T01:40:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-14525"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.1.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This vulnerability is a runtime exploit on live virtual machines with active guest agent running. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package, which Harvester components uses only for a handful of Go util functions.",
+      "timestamp": "2026-07-16T16:54:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-14525"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This vulnerability is a runtime exploit on live virtual machines with active guest agent running. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package, which Harvester components uses only for a handful of Go util functions.",
+      "timestamp": "2026-07-16T16:54:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-14525"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.7.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This vulnerability is a runtime exploit on live virtual machines with active guest agent running. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package, which Harvester components uses only for a handful of Go util functions.",
+      "timestamp": "2026-07-16T16:54:48Z"
     },
     {
       "vulnerability": {
@@ -10783,7 +10840,178 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-23T02:26:59Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6383"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.1.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester components have no dependency on the virt-api component for RBAC authorization enforcement. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package, which Harvester components uses for a handful of Go util functions.",
+      "timestamp": "2026-07-16T16:54:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6383"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester components have no dependency on the virt-api component for RBAC authorization enforcement. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package, which Harvester components uses for a handful of Go util functions.",
+      "timestamp": "2026-07-16T16:54:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6383"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.7.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester components have no dependency on the virt-api component for RBAC authorization enforcement. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package, which Harvester components uses for a handful of Go util functions.",
+      "timestamp": "2026-07-16T16:54:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-7374"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.1.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This vulnerability is found in the virt-handler component which Harvester components do not spin up nor interact directly with during runtime. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package. Harvester components only depends on this package for a handful of Go util functions.",
+      "timestamp": "2026-07-16T16:54:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-7374"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This vulnerability is found in the virt-handler component which Harvester components do not spin up nor interact directly with during runtime. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package. Harvester components only depends on this package for a handful of Go util functions.",
+      "timestamp": "2026-07-15T23:07:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-7374"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.7.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This vulnerability is found in the virt-handler component which Harvester components do not spin up nor interact directly with during runtime. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package. Harvester components only depends on this package for a handful of Go util functions.",
+      "timestamp": "2026-07-15T23:07:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-9804"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.1.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This vulnerability is found in the virt-exportserver component which Harvester components do not spin up nor interact directly with during runtime. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package. Harvester components only depends on this package for a handful of Go util functions.",
+      "timestamp": "2026-07-15T23:07:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-9804"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This vulnerability is found in the virt-exportserver component which Harvester components do not spin up nor interact directly with during runtime. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package. Harvester components only depends on this package for a handful of Go util functions.",
+      "timestamp": "2026-07-15T23:07:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-9804"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.7.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This vulnerability is found in the virt-exportserver component which Harvester components do not spin up nor interact directly with during runtime. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package. Harvester components only depends on this package for a handful of Go util functions.",
+      "timestamp": "2026-07-15T23:07:06Z"
     }
   ],
-  "timestamp": "2026-07-11T12:52:54Z"
+  "timestamp": "2026-07-16T17:03:32Z"
 }
