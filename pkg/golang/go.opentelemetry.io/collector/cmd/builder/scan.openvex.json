@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-007731862d52eab452fea03c6d0afeb2cc10a005bf4449a4216a33b1d1ea01e0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -25,6 +25,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/go.opentelemetry.io/collector/cmd/builder",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Kubernetes operator/agent does not use os.Root sandboxed file access API (Go 1.24+)",
+      "timestamp": "2026-07-16T00:31:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39883"
       },
       "products": [
@@ -41,7 +60,26 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "This CVE only affects macOS/Darwin systems",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/go.opentelemetry.io/collector/cmd/builder",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Kubernetes operator/agent does not configure Encrypted Client Hello; ECH code path not enabled",
+      "timestamp": "2026-07-16T00:31:46Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-07-16T14:40:13Z"
 }

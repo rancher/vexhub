@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-82f796256072b95bd609243fad6190c3f1ce599e6587051bd8945dc96c584341",
+  "@id": "https://openvex.dev/docs/public/vex-7b7a9e0eed9cf112aa5b3df32108a056396af9f99fb8dbf7df910f4757d0e882",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2005,6 +2005,25 @@
           "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn instance manager is a Go binary; jq CLI is not called by the container entrypoint",
+      "timestamp": "2026-07-16T00:44:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2283-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libjq1"
             }
           ]
@@ -2185,7 +2204,64 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn Go-based storage does not use Kerberos; krb5 is an incidental SLES dependency",
+      "timestamp": "2026-07-16T00:44:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2983-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn instance manager is a Go binary; jq CLI is not called by the container entrypoint",
+      "timestamp": "2026-07-16T00:44:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2983-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libjq1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libjq1 is loaded only when jq CLI is invoked; Go entrypoint does not call jq",
+      "timestamp": "2026-07-16T00:44:51Z"
     }
   ],
-  "timestamp": "2026-07-09T17:46:10Z"
+  "timestamp": "2026-07-16T14:40:12Z"
 }

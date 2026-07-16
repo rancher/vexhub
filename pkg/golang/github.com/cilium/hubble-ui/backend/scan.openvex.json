@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-73c8466e5c0a2da077910d0298670d5419ed532e3303c3fa87ffe29071620b3b",
+  "@id": "https://openvex.dev/docs/public/vex-7b7a9e0eed9cf112aa5b3df32108a056396af9f99fb8dbf7df910f4757d0e882",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -117,6 +117,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "gRPC/JSON observability backend; net/mail ParseAddress not used",
       "timestamp": "2026-07-02T19:42:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/cilium/hubble-ui/backend",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Kubernetes operator/agent does not use os.Root sandboxed file access API (Go 1.24+)",
+      "timestamp": "2026-07-16T00:31:46Z"
     },
     {
       "vulnerability": {
@@ -252,5 +271,5 @@
       "timestamp": "2026-07-02T19:42:22Z"
     }
   ],
-  "timestamp": "2026-07-13T20:23:46Z"
+  "timestamp": "2026-07-16T14:40:12Z"
 }
