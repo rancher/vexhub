@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-66230783a74acbf2eaf168255407a5653a0103ebab4d5755520d3d6cdf125ed3",
+  "@id": "https://openvex.dev/docs/public/vex-4a3da09908add612a92b7f29e6a13af782d1ace6db970011956f9cff5eee8dd8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2093,6 +2093,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22639-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-07-18T04:27:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2393-1"
       },
       "products": [
@@ -2166,7 +2185,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CSI driver authenticates via K8s service accounts and TLS; Kerberos is not used",
       "timestamp": "2026-07-13T16:50:57Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3004-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CSI driver uses crypto/tls; libopenssl3 is not loaded at runtime",
+      "timestamp": "2026-07-18T04:27:18Z"
     }
   ],
-  "timestamp": "2026-07-13T17:19:41Z"
+  "timestamp": "2026-07-20T12:39:03Z"
 }

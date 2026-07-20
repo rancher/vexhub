@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4faf487e284c53d6e7ea1c0c25cd20b764bbd1de9b0fa06ce0ac3db40b3ab96c",
+  "@id": "https://openvex.dev/docs/public/vex-2435057940ae82021ffb62072dbc7a19c3c88b0fd30794f274ce6fb13b33db92",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -117,7 +117,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "NeuVector controller is a Go binary; jq CLI is not called by the container entrypoint",
       "timestamp": "2026-07-16T00:44:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3030-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-controller?repository_url=registry.suse.com/rancher/neuvector-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glibc-devel provides headers only; runtime uses libc.so from glibc package",
+      "timestamp": "2026-07-18T04:27:18Z"
     }
   ],
-  "timestamp": "2026-07-16T14:40:11Z"
+  "timestamp": "2026-07-20T12:39:02Z"
 }

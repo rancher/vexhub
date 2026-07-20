@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4942e8167491c27f10f010d0cb62a1825d4c63e2af1220e914c573e82ed05f60",
+  "@id": "https://openvex.dev/docs/public/vex-e1c5b50b978fd0e75b4bbb217c15c507c36c6cd70077bfc9ab821b55275f80f9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -41,7 +41,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-08T00:50:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3030-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/enforcer?repository_url=registry.rancher.com/neuvector/enforcer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glibc-devel contains only headers/.a static libs; runtime links libc.so.6 from glibc, not devel artifacts",
+      "timestamp": "2026-07-18T04:27:18Z"
     }
   ],
-  "timestamp": "2026-07-08T11:49:44Z"
+  "timestamp": "2026-07-20T12:39:04Z"
 }

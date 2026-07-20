@@ -1,0 +1,47 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-e1c5b50b978fd0e75b4bbb217c15c507c36c6cd70077bfc9ab821b55275f80f9",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22616-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-ui?repository_url=quay.io/stackstate/stackstate-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libtiff6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "StackState web UI frontend server; TIFF image processing not required, libtiff6 never loaded",
+      "timestamp": "2026-07-18T04:27:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22639-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-ui?repository_url=quay.io/stackstate/stackstate-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-07-18T04:27:18Z"
+    }
+  ],
+  "timestamp": "2026-07-20T12:39:04Z"
+}
