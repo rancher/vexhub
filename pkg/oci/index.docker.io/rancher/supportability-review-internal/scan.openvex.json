@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-5da74ee339aef342e0b8bc5d4794a2efea49fef84218d630e1a85570f2457d2c",
+  "@id": "https://openvex.dev/docs/public/vex-2435057940ae82021ffb62072dbc7a19c3c88b0fd30794f274ce6fb13b33db92",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -133,7 +133,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver",
       "timestamp": "2026-07-01T00:12:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3104-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-internal?repository_url=index.docker.io/rancher/supportability-review-internal",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python311-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "python311-devel contains build-time headers only; not loaded by Python interpreter at runtime",
+      "timestamp": "2026-07-20T04:43:38Z"
     }
   ],
-  "timestamp": "2026-07-01T02:54:25Z"
+  "timestamp": "2026-07-20T12:39:02Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d6c628e8032b55271f04c13fbbf6aca14451260d8b4ab1ccc28655aefafbfc9e",
+  "@id": "https://openvex.dev/docs/public/vex-2435057940ae82021ffb62072dbc7a19c3c88b0fd30794f274ce6fb13b33db92",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1197,7 +1197,64 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3038-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-ipxe"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "iPXE is PXE-boot ROM firmware mapped into guest VM memory; not executed in the container host process",
+      "timestamp": "2026-07-18T04:27:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3038-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-seabios"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SeaBIOS ROM is firmware mapped into guest VM memory; not executed in the container process space",
+      "timestamp": "2026-07-18T04:27:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3038-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vgabios"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "VGA BIOS ROM is firmware loaded inside guest VMs; it is never executed in the container process space",
+      "timestamp": "2026-07-18T04:27:18Z"
     }
   ],
-  "timestamp": "2026-07-07T11:29:55Z"
+  "timestamp": "2026-07-20T12:39:02Z"
 }

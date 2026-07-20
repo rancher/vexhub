@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d20d523f7af0910b9f5f9940fcf4f5d37b731dfa68b0370e241232f56798800c",
+  "@id": "https://openvex.dev/docs/public/vex-2435057940ae82021ffb62072dbc7a19c3c88b0fd30794f274ce6fb13b33db92",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1067,6 +1067,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22639-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-networkfs-manager?repository_url=registry.rancher.com/rancher/harvester-networkfs-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-07-18T04:27:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2393-1"
       },
       "products": [
@@ -1218,5 +1237,5 @@
       "timestamp": "2026-07-05T00:42:58Z"
     }
   ],
-  "timestamp": "2026-07-07T11:29:56Z"
+  "timestamp": "2026-07-20T12:39:02Z"
 }

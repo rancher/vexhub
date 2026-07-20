@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-007731862d52eab452fea03c6d0afeb2cc10a005bf4449a4216a33b1d1ea01e0",
+  "@id": "https://openvex.dev/docs/public/vex-2435057940ae82021ffb62072dbc7a19c3c88b0fd30794f274ce6fb13b33db92",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1843,7 +1843,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Mirrored Longhorn instance manager is a Go binary; jq CLI is not in the execute path",
       "timestamp": "2026-07-16T00:44:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3030-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glibc-devel provides headers only; runtime uses libc.so from glibc package",
+      "timestamp": "2026-07-18T04:27:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3104-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python311-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-20T04:43:38Z"
     }
   ],
-  "timestamp": "2026-07-16T14:40:13Z"
+  "timestamp": "2026-07-20T12:39:02Z"
 }
