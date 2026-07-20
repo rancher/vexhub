@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c61ae77427debdd0224d43c95d5d0f270d70caf863d46f083b3653e36d6cf5c0",
+  "@id": "https://openvex.dev/docs/public/vex-4a3da09908add612a92b7f29e6a13af782d1ace6db970011956f9cff5eee8dd8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -820,6 +820,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22639-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-kubeovn-operator?repository_url=index.docker.io/rancher/harvester-kubeovn-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-07-18T04:27:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2590-1"
       },
       "products": [
@@ -876,5 +895,5 @@
       "timestamp": "2026-07-13T16:50:57Z"
     }
   ],
-  "timestamp": "2026-07-13T17:19:42Z"
+  "timestamp": "2026-07-20T12:39:03Z"
 }
