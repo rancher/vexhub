@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7b7a9e0eed9cf112aa5b3df32108a056396af9f99fb8dbf7df910f4757d0e882",
+  "@id": "https://openvex.dev/docs/public/vex-4a3da09908add612a92b7f29e6a13af782d1ace6db970011956f9cff5eee8dd8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2261,7 +2261,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libjq1 is loaded only when jq CLI is invoked; Go entrypoint does not call jq",
       "timestamp": "2026-07-16T00:44:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3030-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glibc-devel provides headers only; runtime uses libc.so from glibc package",
+      "timestamp": "2026-07-18T04:27:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3104-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python311-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-20T04:43:38Z"
     }
   ],
-  "timestamp": "2026-07-16T14:40:12Z"
+  "timestamp": "2026-07-20T12:39:03Z"
 }
