@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4a3da09908add612a92b7f29e6a13af782d1ace6db970011956f9cff5eee8dd8",
+  "@id": "https://openvex.dev/docs/public/vex-454a4e57ae4adcaa9235991f7783054dc9e2ebd2d778805cf1229e9816b042eb",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -7227,6 +7227,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-34986"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v3@v3.0.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a transitive dependency from KubeVirt CDI. Harvester does not use any of the affected functions from this library to decrypt JWE objects.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39820"
       },
       "products": [
@@ -9667,6 +9686,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-41052"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20230124173128-2207cfed1803"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the Rancher's Go package to manage user roles nor PSA labels.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41052"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20240919204204-3da2ae0cabd1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the Rancher's Go package to manage user roles nor PSA labels.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41053"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20230124173128-2207cfed1803"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the Rancher's Go package to interact with Rancher Manager's GitHub App authentication provider.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41053"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20240919204204-3da2ae0cabd1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the Rancher's Go package to interact with Rancher Manager's GitHub App authentication provider.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499"
       },
       "products": [
@@ -10356,6 +10451,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-23T02:26:59Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-44939"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20230124173128-2207cfed1803"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the Rancher's Go package to interact with cluster import endpoint at /v3/import/{token}/_{clusterid}.yaml.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-44939"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20240919204204-3da2ae0cabd1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the Rancher's Go package to interact with cluster import endpoint at /v3/import/{token}/_{clusterid}.yaml.",
+      "timestamp": "2026-07-21T18:44:46Z"
     },
     {
       "vulnerability": {
@@ -11057,5 +11190,5 @@
       "timestamp": "2026-07-15T23:07:06Z"
     }
   ],
-  "timestamp": "2026-07-20T12:39:03Z"
+  "timestamp": "2026-07-21T19:01:39Z"
 }
