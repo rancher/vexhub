@@ -13,7 +13,7 @@
       },
       "products": [
         {
-          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=registry.rancher.com/suse-observability/stackstate-k8s-process-agent",
+          "@id": "pkg:oci/stackstate-k8s-process-agent",
           "subcomponents": [
             {
               "@id": "pkg:golang/github.com/containerd/containerd@v1.7.33"
@@ -35,7 +35,7 @@
       },
       "products": [
         {
-          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=registry.rancher.com/suse-observability/stackstate-k8s-process-agent",
+          "@id": "pkg:oci/stackstate-k8s-process-agent",
           "subcomponents": [
             {
               "@id": "pkg:golang/github.com/containerd/containerd@v1.7.33"
@@ -57,7 +57,7 @@
       },
       "products": [
         {
-          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=registry.rancher.com/suse-observability/stackstate-k8s-process-agent",
+          "@id": "pkg:oci/stackstate-k8s-process-agent",
           "subcomponents": [
             {
               "@id": "pkg:golang/github.com/containerd/containerd@v1.7.33"
@@ -69,25 +69,6 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Grype 0.112.0 incorrectly maps the CVE-2026-53492 advisory (github.com/containerd/containerd/v2, release lines 2.1/2.2/2.3) to the v1 module github.com/containerd/containerd v1.7.33 linked by the process-agent binary. Go major versions \u003e=2 use distinct module paths; the /v2 component is not present.",
       "timestamp": "2026-07-21T13:05:55Z"
-    },
-    {
-      "vulnerability": {
-        "name": "SUSE-SU-2026:2848-1"
-      },
-      "products": [
-        {
-          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=registry.rancher.com/suse-observability/stackstate-k8s-process-agent",
-          "subcomponents": [
-            {
-              "@id": "pkg:rpm/suse/krb5"
-            }
-          ]
-        }
-      ],
-      "status": "not_affected",
-      "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "K8s process agent uses cert-based auth; Kerberos not used",
-      "timestamp": "2026-07-13T16:50:57Z"
     }
   ],
   "timestamp": "2026-07-21T13:21:02Z"
