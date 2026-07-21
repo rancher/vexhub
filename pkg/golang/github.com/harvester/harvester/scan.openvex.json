@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b7b502cb98e591b2a5fe98bf72f02ccd47cb0a72f5e5647b7bf57cc3af03ee1e",
+  "@id": "https://openvex.dev/docs/public/vex-27498b5a5454914e5865d775054b9c9e0f4458ea785cfd3e8894e8e494f3c857",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -14458,6 +14458,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-34986"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v3@v3.0.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a transitive dependency from KubeVirt CDI. Harvester does not use any of the affected functions from this library to decrypt JWE objects.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34986"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-jose/go-jose/v3@v3.0.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a transitive dependency from KubeVirt CDI. Harvester does not use any of the affected functions from this library to decrypt JWE objects.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-35469",
         "aliases": [
           "GO-2026-4958",
@@ -20179,6 +20217,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-41052"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20250828140533-07a90f09a491"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the Rancher's Go package to manage user roles nor PSA labels.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41053"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20250828140533-07a90f09a491"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the Rancher's Go package to interact with Rancher Manager's GitHub App authentication provider.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-41567"
       },
       "products": [
@@ -21990,6 +22066,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-44939"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/rancher/rancher@v0.0.0-20250828140533-07a90f09a491"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the Rancher's Go package to interact with cluster import endpoint at /v3/import/{token}/_{clusterid}.yaml.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-46595",
         "aliases": [
           "GO-2026-5023"
@@ -23703,6 +23798,82 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-07-16T03:10:26Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47262"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/containerd/containerd@v1.7.27"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the containerd's Go package to build or run container images. This runtime unbounded group parsing vulnerability does not affect Harvester.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47262"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/containerd/containerd@v1.7.32"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the containerd's Go package to build or run container images. This runtime unbounded group parsing vulnerability does not affect Harvester.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53488"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/containerd/containerd@v1.7.27"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the containerd's Go package to build or run container images. The propagation of image labels to a container described in this vulnerability does not affect Harvester.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53488"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/containerd/containerd@v1.7.32"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the containerd's Go package to build or run container images. The propagation of image labels to a container described in this vulnerability does not affect Harvester.",
+      "timestamp": "2026-07-21T18:44:46Z"
     },
     {
       "vulnerability": {
@@ -23838,5 +24009,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-16T17:03:32Z"
+  "timestamp": "2026-07-21T19:01:40Z"
 }
