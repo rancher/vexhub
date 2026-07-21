@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f76706fe7327fd7b4456e200983dc9d041544d714e59e02c561019c159156c36",
+  "@id": "https://openvex.dev/docs/public/vex-454a4e57ae4adcaa9235991f7783054dc9e2ebd2d778805cf1229e9816b042eb",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -516,7 +516,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CVEs seem to be related to input validation, interacting with servers - elemental binary isn't exposed to external input from untrusted sources",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47262"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/containerd/containerd@v1.7.12"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the containerd's Go package to build or run container images. This runtime unbounded group parsing vulnerability does not affect Harvester.",
+      "timestamp": "2026-07-21T18:44:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53488"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/containerd/containerd@v1.7.12"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the containerd's Go package to build or run container images. The propagation of image labels to a container described in this vulnerability does not affect Harvester.",
+      "timestamp": "2026-07-21T18:44:46Z"
     }
   ],
-  "timestamp": "2026-07-11T16:33:42Z"
+  "timestamp": "2026-07-21T19:01:39Z"
 }
