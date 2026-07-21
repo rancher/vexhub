@@ -1,9 +1,75 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2d5ef3ae392cb71100372bb443f2cab8c6191861e0c7240842e8068bdbf5d5bf",
+  "@id": "https://openvex.dev/docs/public/vex-95db83e5f14ad51ef486df536ce7e1dbd6e974ff95b8f6f3c644d361b3622cd2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-50195",
+        "aliases": [
+          "GHSA-cvxm-645q-p574"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=registry.suse.com/suse-observability/stackstate-k8s-process-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/containerd/containerd@v1.7.33"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Grype 0.112.0 incorrectly maps the CVE-2026-50195 advisory (github.com/containerd/containerd/v2, release lines 2.1/2.2/2.3) to the v1 module github.com/containerd/containerd v1.7.33 linked by the process-agent binary. Go major versions \u003e=2 use distinct module paths; the /v2 component is not present.",
+      "timestamp": "2026-07-21T13:05:55Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53489",
+        "aliases": [
+          "GHSA-rgh6-rfwx-v388"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=registry.suse.com/suse-observability/stackstate-k8s-process-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/containerd/containerd@v1.7.33"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Grype 0.112.0 incorrectly maps the CVE-2026-53489 advisory (github.com/containerd/containerd/v2, release lines 2.1/2.2/2.3) to the v1 module github.com/containerd/containerd v1.7.33 linked by the process-agent binary. Go major versions \u003e=2 use distinct module paths; the /v2 component is not present.",
+      "timestamp": "2026-07-21T13:05:55Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53492",
+        "aliases": [
+          "GHSA-33vj-92qq-66hc"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=registry.suse.com/suse-observability/stackstate-k8s-process-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/containerd/containerd@v1.7.33"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Grype 0.112.0 incorrectly maps the CVE-2026-53492 advisory (github.com/containerd/containerd/v2, release lines 2.1/2.2/2.3) to the v1 module github.com/containerd/containerd v1.7.33 linked by the process-agent binary. Go major versions \u003e=2 use distinct module paths; the /v2 component is not present.",
+      "timestamp": "2026-07-21T13:05:55Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:2848-1"
@@ -24,5 +90,5 @@
       "timestamp": "2026-07-13T16:50:57Z"
     }
   ],
-  "timestamp": "2026-07-13T17:19:40Z"
+  "timestamp": "2026-07-21T13:21:02Z"
 }
