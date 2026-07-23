@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c8bee0a6ea59d3a2ba2affc52b96ed4e29c2835a2dd88c4129086b1969f3a58a",
+  "@id": "https://openvex.dev/docs/public/vex-3777a72aaf7d39674c26b2c7b45f31cdbc0e051b4d61d721cb4e8fad3b7bf4d5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -44965,7 +44965,64 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-07-22T03:40:36Z"
+    },
+    {
+      "vulnerability": {
+        "name": "GHSA-hrxh-6v49-42gf"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.79.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Same rationale as rancher/fleet: the vulnerable google.golang.org/grpc/internal/xds/rbac and google.golang.org/grpc/internal/transport packages are absent from this binary's import graph. See https://github.com/advisories/GHSA-hrxh-6v49-42gf",
+      "timestamp": "2026-07-23T07:57:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "GHSA-hrxh-6v49-42gf"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.79.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Same rationale as usr/bin/fleet: the vulnerable google.golang.org/grpc/internal/xds/rbac and google.golang.org/grpc/internal/transport packages are absent from this binary's import graph. See https://github.com/advisories/GHSA-hrxh-6v49-42gf",
+      "timestamp": "2026-07-23T07:57:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "GHSA-hrxh-6v49-42gf"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.79.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "grpc-go is pulled in transitively via helm.sh/helm/v3/pkg/registry -\u003e containerd/containerd (remotes/errdefs), which only use the google.golang.org/grpc/status and /codes packages for error-classification types. The top-level google.golang.org/grpc package (containing Dial/NewServer) and the vulnerable google.golang.org/grpc/internal/xds/rbac and google.golang.org/grpc/internal/transport packages are absent from the compiled binary's import graph (verified via go list -deps). See https://github.com/advisories/GHSA-hrxh-6v49-42gf",
+      "timestamp": "2026-07-23T07:57:45Z"
     }
   ],
-  "timestamp": "2026-07-22T06:10:50Z"
+  "timestamp": "2026-07-23T14:28:51Z"
 }
