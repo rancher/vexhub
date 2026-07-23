@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4a3da09908add612a92b7f29e6a13af782d1ace6db970011956f9cff5eee8dd8",
+  "@id": "https://openvex.dev/docs/public/vex-82661a4b2080eb2c6785bc164cf8a0deb42b056483902e27cf82a780f4f6013d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1786,7 +1786,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go K8s admission webhook uses TLS certs; Kerberos not in execute path",
       "timestamp": "2026-07-13T16:50:57Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3163-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.suse.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-07-22T21:11:00Z"
     }
   ],
-  "timestamp": "2026-07-20T12:39:03Z"
+  "timestamp": "2026-07-23T14:28:50Z"
 }

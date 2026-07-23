@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4a3da09908add612a92b7f29e6a13af782d1ace6db970011956f9cff5eee8dd8",
+  "@id": "https://openvex.dev/docs/public/vex-3777a72aaf7d39674c26b2c7b45f31cdbc0e051b4d61d721cb4e8fad3b7bf4d5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1026,7 +1026,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3163-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-07-22T21:11:00Z"
     }
   ],
-  "timestamp": "2026-07-20T12:39:03Z"
+  "timestamp": "2026-07-23T14:28:51Z"
 }

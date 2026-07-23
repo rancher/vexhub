@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2d5ef3ae392cb71100372bb443f2cab8c6191861e0c7240842e8068bdbf5d5bf",
+  "@id": "https://openvex.dev/docs/public/vex-82661a4b2080eb2c6785bc164cf8a0deb42b056483902e27cf82a780f4f6013d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1653,7 +1653,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Longhorn manager uses K8s cert auth; Kerberos not part of storage system",
       "timestamp": "2026-07-13T16:50:57Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3163-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-07-22T21:11:00Z"
     }
   ],
-  "timestamp": "2026-07-13T17:19:40Z"
+  "timestamp": "2026-07-23T14:28:50Z"
 }

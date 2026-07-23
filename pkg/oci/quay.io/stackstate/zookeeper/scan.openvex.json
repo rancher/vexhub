@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d22a7a988732e2a6b1fee7260fe0bdcc5937db818e5162373e81af19b1742c65",
+  "@id": "https://openvex.dev/docs/public/vex-82661a4b2080eb2c6785bc164cf8a0deb42b056483902e27cf82a780f4f6013d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -98,7 +98,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "ZooKeeper is a Java app; the JVM never loads or calls the system libsqlite3-0 C library",
       "timestamp": "2026-06-25T02:24:29Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3163-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/zookeeper?repository_url=quay.io/stackstate/zookeeper",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-07-22T21:11:00Z"
     }
   ],
-  "timestamp": "2026-07-06T19:09:04Z"
+  "timestamp": "2026-07-23T14:28:50Z"
 }

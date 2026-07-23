@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8987507bf9a5c229e4cdf269e4966ea9d5471608cc1181e127eb614cac6c3ca0",
+  "@id": "https://openvex.dev/docs/public/vex-967b2d011523e539a1664bdf7441a8c7a7cbfec08d4d874f01cf2709439fb1da",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -627,7 +627,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "UI plugin catalog server doesn't use C libsmartcols1 terminal formatting",
       "timestamp": "2026-06-24T04:52:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3163-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-plugin-catalog?repository_url=registry.suse.com/rancher/ui-plugin-catalog",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-07-22T21:11:00Z"
     }
   ],
-  "timestamp": "2026-06-24T11:39:14Z"
+  "timestamp": "2026-07-23T14:28:52Z"
 }
