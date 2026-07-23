@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-58054d329050fc3561fb68cbcd963ab5d35f83a6ba46e96afde7d2f03197725c",
+  "@id": "https://openvex.dev/docs/public/vex-967b2d011523e539a1664bdf7441a8c7a7cbfec08d4d874f01cf2709439fb1da",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1358,7 +1358,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3163-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.suse.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-07-22T21:11:00Z"
     }
   ],
-  "timestamp": "2026-07-14T11:21:30Z"
+  "timestamp": "2026-07-23T14:28:52Z"
 }

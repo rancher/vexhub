@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c9f410067016a434fff14109d50432e7d64165a4488354f2b1daf6bdfaa19c25",
+  "@id": "https://openvex.dev/docs/public/vex-967b2d011523e539a1664bdf7441a8c7a7cbfec08d4d874f01cf2709439fb1da",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -600,7 +600,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Calico components are statically-linked Go binaries; krb5 is a transitive SLES base-image dependency not explicitly installed (absent from packages.txt) and no component performs Kerberos/GSSAPI authentication, so it is not in the execute path",
       "timestamp": "2026-07-14T20:32:20Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3163-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-07-22T21:11:00Z"
     }
   ],
-  "timestamp": "2026-07-14T21:02:07Z"
+  "timestamp": "2026-07-23T14:28:52Z"
 }

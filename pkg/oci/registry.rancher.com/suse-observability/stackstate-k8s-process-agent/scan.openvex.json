@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-95db83e5f14ad51ef486df536ce7e1dbd6e974ff95b8f6f3c644d361b3622cd2",
+  "@id": "https://openvex.dev/docs/public/vex-967b2d011523e539a1664bdf7441a8c7a7cbfec08d4d874f01cf2709439fb1da",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -88,7 +88,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "K8s process agent uses cert-based auth; Kerberos not used",
       "timestamp": "2026-07-13T16:50:57Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3163-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=registry.rancher.com/suse-observability/stackstate-k8s-process-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-07-22T21:11:00Z"
     }
   ],
-  "timestamp": "2026-07-21T13:21:02Z"
+  "timestamp": "2026-07-23T14:28:52Z"
 }
