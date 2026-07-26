@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-efc4ae39fd4a3e2b75616acfb9d091e65844a99e1e3569e2b147df0c4acef576",
+  "@id": "https://openvex.dev/docs/public/vex-ebe1b179e089ee303ce2e1c4979b25783148a086d2abfa4df8ddf150e7fa005b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -424,6 +424,29 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-41178",
+        "aliases": [
+          "GO-2026-5158",
+          "GHSA-5wrp-cwcj-q835"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/Altinity/clickhouse-backup/v2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/go.opentelemetry.io/otel@v1.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-07-25T03:09:57Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499",
         "aliases": [
           "GO-2026-4977"
@@ -486,5 +509,5 @@
       "timestamp": "2026-07-14T00:17:23Z"
     }
   ],
-  "timestamp": "2026-07-14T11:21:29Z"
+  "timestamp": "2026-07-26T06:32:27Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-eabf1a407a5528427eb02e7b8a1ec4c6c6861ee8381c18cce9d58e5668e11327",
+  "@id": "https://openvex.dev/docs/public/vex-83f76753582ed2b1a48185b585952350428aa98ca1f873925edc721997d41ed4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,6 +22,52 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "vsphere-csi only links github.com/opencontainers/selinux/go-selinux (label helpers) and zero runc libcontainer code; the runc container-init/procfs-mount path this CVE affects is not compiled in. Vulnerable code not present.",
       "timestamp": "2026-06-25T01:40:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41178",
+        "aliases": [
+          "GO-2026-5158",
+          "GHSA-5wrp-cwcj-q835"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/go.opentelemetry.io/otel@v1.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-07-25T03:13:59Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41178",
+        "aliases": [
+          "GO-2026-5158",
+          "GHSA-5wrp-cwcj-q835"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3@v3.7.2",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/go.opentelemetry.io/otel@v1.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-07-25T03:13:59Z"
     },
     {
       "vulnerability": {
@@ -112,5 +158,5 @@
       "timestamp": "2026-07-23T03:12:54Z"
     }
   ],
-  "timestamp": "2026-07-23T06:16:25Z"
+  "timestamp": "2026-07-26T06:32:28Z"
 }
