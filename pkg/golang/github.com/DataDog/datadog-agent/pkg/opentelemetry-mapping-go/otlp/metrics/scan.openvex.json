@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-83f76753582ed2b1a48185b585952350428aa98ca1f873925edc721997d41ed4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -541,6 +541,29 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-41178",
+        "aliases": [
+          "GO-2026-5158",
+          "GHSA-5wrp-cwcj-q835"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/DataDog/datadog-agent/pkg/opentelemetry-mapping-go/otlp/metrics",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/go.opentelemetry.io/otel@v1.43.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-07-25T03:23:29Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499",
         "aliases": [
           "GO-2026-4977"
@@ -628,5 +651,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-07-26T06:32:28Z"
 }
