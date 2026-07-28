@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4e217b158d3f7f222a1d180a8944b9bf17cb7c4bc62b2fb8aef43aaee8b8f0d8",
+  "@id": "https://openvex.dev/docs/public/vex-35f0f79fdd6fc3b25718df610d607d8e4e49c241a94fdf2380cc0bf7d10228b7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2847,6 +2847,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "This CVE only affects macOS/Darwin systems",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-25680"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/cri-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.53.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "crictl is a CRI gRPC client and never parses HTML, so the golang.org/x/net/html CPU-exhaustion path is not reachable. Consistent with SUSE not-affected on sibling CVE-2026-25681/27136 for this binary.",
+      "timestamp": "2026-07-28T15:05:14Z"
     },
     {
       "vulnerability": {
@@ -10656,5 +10675,5 @@
       "timestamp": "2026-07-22T05:21:38Z"
     }
   ],
-  "timestamp": "2026-07-27T12:23:39Z"
+  "timestamp": "2026-07-28T19:40:04Z"
 }
