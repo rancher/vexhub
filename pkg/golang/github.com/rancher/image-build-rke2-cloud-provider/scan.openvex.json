@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4e217b158d3f7f222a1d180a8944b9bf17cb7c4bc62b2fb8aef43aaee8b8f0d8",
+  "@id": "https://openvex.dev/docs/public/vex-35f0f79fdd6fc3b25718df610d607d8e4e49c241a94fdf2380cc0bf7d10228b7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -42161,6 +42161,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39833"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/image-build-rke2-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "rke2-cloud-provider does not link golang.org/x/crypto/ssh/agent (NewKeyring ConfirmBeforeUse); no SSH agent/keyring is used. Consistent with SUSE not-affected on sibling x/crypto CVEs for this binary at v0.51.0.",
+      "timestamp": "2026-07-28T15:05:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39833",
         "aliases": [
           "GO-2026-5005"
@@ -43101,6 +43120,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "`usr/local/bin/rke2-cloud-provider` does not run an SSH client/server/agent; the golang.org/x/crypto/ssh, ssh/agent and ssh/knownhosts packages are NOT compiled into the binary. The Go function-name table (pclntab, retained despite -s -w stripping) contains no x/crypto/ssh* symbols — only unrelated x/crypto sub-packages (cryptobyte/hkdf/chacha20poly1305/nacl) used by TLS are present at v0.50.0. Vulnerable code not present.",
       "timestamp": "2026-06-24T19:21:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39834"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/image-build-rke2-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "rke2-cloud-provider does not link golang.org/x/crypto/ssh; the \u003e4GB SSH-channel Write overflow is not reachable (no SSH server/channel). Consistent with SUSE not-affected on sibling x/crypto CVEs for this binary at v0.51.0.",
+      "timestamp": "2026-07-28T15:05:14Z"
     },
     {
       "vulnerability": {
@@ -51960,6 +51998,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-46598"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/image-build-rke2-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "rke2-cloud-provider does not link golang.org/x/crypto/ssh/agent; the malformed ed25519 key cast panic is not reachable (no SSH agent parsing untrusted keys). Consistent with SUSE not-affected on sibling x/crypto CVEs for this binary at v0.51.0.",
+      "timestamp": "2026-07-28T15:05:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-46598",
         "aliases": [
           "GO-2026-5033"
@@ -53364,5 +53421,5 @@
       "timestamp": "2026-07-27T12:14:20Z"
     }
   ],
-  "timestamp": "2026-07-27T12:23:39Z"
+  "timestamp": "2026-07-28T19:40:04Z"
 }
