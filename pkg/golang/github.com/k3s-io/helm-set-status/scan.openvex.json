@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-50b7591508a8565d3d01dde50be1e0b06cdbc98650e618c117a7be9b1cfea06a",
+  "@id": "https://openvex.dev/docs/public/vex-ec150c2b4eff5056fe930ac76b78f31882da90bba0cd9fb2680a1ac8106fd574",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -527,6 +527,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39833"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "helm-set-status does not link golang.org/x/crypto/ssh/agent (NewKeyring ConfirmBeforeUse); no SSH agent/keyring is used. Consistent with SUSE not-affected on sibling x/crypto CVEs for this binary at v0.51.0.",
+      "timestamp": "2026-07-28T15:05:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39834"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "helm-set-status does not link golang.org/x/crypto/ssh; the \u003e4GB SSH-channel Write overflow is not reachable (no SSH server/channel). Consistent with SUSE not-affected on sibling x/crypto CVEs for this binary at v0.51.0.",
+      "timestamp": "2026-07-28T15:05:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39835"
       },
       "products": [
@@ -812,6 +850,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-46598"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "helm-set-status does not link golang.org/x/crypto/ssh/agent; the malformed ed25519 key cast panic is not reachable (no SSH agent parsing untrusted keys). Consistent with SUSE not-affected on sibling x/crypto CVEs for this binary at v0.51.0.",
+      "timestamp": "2026-07-28T15:05:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-50151",
         "aliases": [
           "GHSA-vh4v-2xq2-g5cg"
@@ -871,5 +928,5 @@
       "timestamp": "2026-07-06T15:42:38Z"
     }
   ],
-  "timestamp": "2026-07-11T01:02:00Z"
+  "timestamp": "2026-07-28T19:40:05Z"
 }
