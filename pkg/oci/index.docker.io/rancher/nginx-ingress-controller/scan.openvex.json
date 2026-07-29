@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2d347d0e2dd15f1c08b901fd4ed8e57f6a751f55fc6a60ba55968214ab11bea0",
+  "@id": "https://openvex.dev/docs/public/vex-179a3211ad52859f2d640c4f2ec5055dcfd509446c0c9dd2055a2889e28df609",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1244,6 +1244,82 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22818-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SUSE-SU-2026:22818-1 fixes only CVE-2026-41991: insecure temp-file handling in the gzexe utility when mktemp is not in PATH (local, SUSE CVSS 6.9). The nginx-ingress-controller image never invokes gzexe; gzip is a base BCI OS package and is not used by nginx or the controller at runtime, so the vulnerable code path is unreachable.",
+      "timestamp": "2026-07-29T15:47:44Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22846-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glib2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SUSE-SU-2026:22846-1 fixes six glib2 OOB-read/integer-overflow issues (CVE-2026-58010/58011/58012/58013/58014/58016) in GVariant, GDateTime, GRegex, GIOChannel, GKeyFile and GDBus introspection parsing. glib2 is only a transitive dependency of BCI base tooling; it is not linked into or used by nginx or the nginx-ingress-controller binary, and none of the affected GLib APIs are reachable at runtime.",
+      "timestamp": "2026-07-29T15:47:44Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22846-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgio-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SUSE-SU-2026:22846-1 fixes six glib2 OOB-read/integer-overflow issues (CVE-2026-58010/58011/58012/58013/58014/58016) in GVariant, GDateTime, GRegex, GIOChannel, GKeyFile and GDBus introspection parsing. glib2 is only a transitive dependency of BCI base tooling; it is not linked into or used by nginx or the nginx-ingress-controller binary, and none of the affected GLib APIs are reachable at runtime.",
+      "timestamp": "2026-07-29T15:47:44Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22846-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SUSE-SU-2026:22846-1 fixes six glib2 OOB-read/integer-overflow issues (CVE-2026-58010/58011/58012/58013/58014/58016) in GVariant, GDateTime, GRegex, GIOChannel, GKeyFile and GDBus introspection parsing. glib2 is only a transitive dependency of BCI base tooling; it is not linked into or used by nginx or the nginx-ingress-controller binary, and none of the affected GLib APIs are reachable at runtime.",
+      "timestamp": "2026-07-29T15:47:44Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22846-1"
       },
       "products": [
@@ -1260,7 +1336,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libgmodule is a GLib dynamic module loader; nginx and the Go ingress controller do not use GLib",
       "timestamp": "2026-07-29T01:22:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22846-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgobject-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SUSE-SU-2026:22846-1 fixes six glib2 OOB-read/integer-overflow issues (CVE-2026-58010/58011/58012/58013/58014/58016) in GVariant, GDateTime, GRegex, GIOChannel, GKeyFile and GDBus introspection parsing. glib2 is only a transitive dependency of BCI base tooling; it is not linked into or used by nginx or the nginx-ingress-controller binary, and none of the affected GLib APIs are reachable at runtime.",
+      "timestamp": "2026-07-29T15:47:44Z"
     }
   ],
-  "timestamp": "2026-07-29T04:47:12Z"
+  "timestamp": "2026-07-29T16:39:31Z"
 }
