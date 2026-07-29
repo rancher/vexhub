@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-967b2d011523e539a1664bdf7441a8c7a7cbfec08d4d874f01cf2709439fb1da",
+  "@id": "https://openvex.dev/docs/public/vex-0bcb28d04c73cbc5ea58e1c47c69f7e52cfad48dbb3e0f29dc1355fee0f64904",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1238,6 +1238,63 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22846-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.suse.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go Helm chart repo server; GLib not used by Go runtime",
+      "timestamp": "2026-07-29T04:40:43Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22846-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.suse.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "harvester-cluster-repo is a Go catalog server; GLib C library is not linked or invoked at runtime",
+      "timestamp": "2026-07-29T01:22:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22847-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.suse.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-29T01:22:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2393-1"
       },
       "products": [
@@ -1273,6 +1330,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go Helm repo server binary is the entrypoint; openssl CLI tool is never invoked",
       "timestamp": "2026-06-25T19:50:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=registry.suse.com/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go Helm chart repo server; no block device operations, libblkid1 not loaded",
+      "timestamp": "2026-07-29T04:40:43Z"
     },
     {
       "vulnerability": {
@@ -1370,5 +1446,5 @@
       "timestamp": "2026-07-22T21:11:00Z"
     }
   ],
-  "timestamp": "2026-07-23T14:28:52Z"
+  "timestamp": "2026-07-29T04:47:11Z"
 }

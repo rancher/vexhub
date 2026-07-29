@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-967b2d011523e539a1664bdf7441a8c7a7cbfec08d4d874f01cf2709439fb1da",
+  "@id": "https://openvex.dev/docs/public/vex-2d347d0e2dd15f1c08b901fd4ed8e57f6a751f55fc6a60ba55968214ab11bea0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2093,6 +2093,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3038-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-pr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "qemu-pr-helper is a SCSI persistent reservation helper; backing-image-manager Go binary does not invoke it",
+      "timestamp": "2026-07-29T01:22:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3163-1"
       },
       "products": [
@@ -2111,5 +2130,5 @@
       "timestamp": "2026-07-22T21:11:00Z"
     }
   ],
-  "timestamp": "2026-07-23T14:28:52Z"
+  "timestamp": "2026-07-29T04:47:12Z"
 }
