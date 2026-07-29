@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3777a72aaf7d39674c26b2c7b45f31cdbc0e051b4d61d721cb4e8fad3b7bf4d5",
+  "@id": "https://openvex.dev/docs/public/vex-2d347d0e2dd15f1c08b901fd4ed8e57f6a751f55fc6a60ba55968214ab11bea0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -725,6 +725,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22815-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-upgrade?repository_url=registry.suse.com/rancher/harvester-upgrade",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfreetype6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libfreetype6 is a font rendering library; harvester-upgrade is an OS upgrade orchestrator with no font use",
+      "timestamp": "2026-07-29T01:22:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22847-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-upgrade?repository_url=registry.suse.com/rancher/harvester-upgrade",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-07-29T01:22:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2714-1"
       },
       "products": [
@@ -781,5 +819,5 @@
       "timestamp": "2026-07-22T21:11:00Z"
     }
   ],
-  "timestamp": "2026-07-23T14:28:51Z"
+  "timestamp": "2026-07-29T04:47:12Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-83f76753582ed2b1a48185b585952350428aa98ca1f873925edc721997d41ed4",
+  "@id": "https://openvex.dev/docs/public/vex-0bcb28d04c73cbc5ea58e1c47c69f7e52cfad48dbb3e0f29dc1355fee0f64904",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -4007,6 +4007,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-13281"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-load-balancer",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/k8s.io/kubernetes@v1.32.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester has not direct dependency on the kube-controller-manager. The k8s.io/kubernetes Go package is a transitive dependency from the github.com/rancher/rancher package.",
+      "timestamp": "2026-07-29T04:38:51Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-22868",
         "aliases": [
           "GO-2025-3488"
@@ -8134,6 +8153,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-5187"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-load-balancer",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/k8s.io/kubernetes@v1.32.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester has not direct dependency on the K8s NodeRestriction admission controller. The k8s.io/kubernetes Go package is a transitive dependency from the github.com/rancher/rancher package.",
+      "timestamp": "2026-07-29T04:38:51Z"
     },
     {
       "vulnerability": {
@@ -34228,5 +34266,5 @@
       "timestamp": "2026-07-23T03:22:36Z"
     }
   ],
-  "timestamp": "2026-07-26T06:32:28Z"
+  "timestamp": "2026-07-29T04:47:11Z"
 }
