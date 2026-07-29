@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-967b2d011523e539a1664bdf7441a8c7a7cbfec08d4d874f01cf2709439fb1da",
+  "@id": "https://openvex.dev/docs/public/vex-8e75d36790f7875134cd8427ad1a7b37bf8f66c69cc543ef229952aa0a11fa47",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -808,6 +808,25 @@
           "@id": "pkg:oci/harvester-network-controller?repository_url=index.docker.io/rancher/harvester-network-controller",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go network controller manages networking only; block device ID not needed",
+      "timestamp": "2026-07-29T04:40:43Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=index.docker.io/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libfdisk1"
             }
           ]
@@ -877,6 +896,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2925-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-network-controller?repository_url=index.docker.io/rancher/harvester-network-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go network controller uses Go net/http; system libcurl4 not linked or loaded",
+      "timestamp": "2026-07-29T04:40:43Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3163-1"
       },
       "products": [
@@ -895,5 +933,5 @@
       "timestamp": "2026-07-22T21:11:00Z"
     }
   ],
-  "timestamp": "2026-07-23T14:28:52Z"
+  "timestamp": "2026-07-29T04:47:10Z"
 }
