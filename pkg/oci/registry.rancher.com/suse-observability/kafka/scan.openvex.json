@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-967b2d011523e539a1664bdf7441a8c7a7cbfec08d4d874f01cf2709439fb1da",
+  "@id": "https://openvex.dev/docs/public/vex-8e75d36790f7875134cd8427ad1a7b37bf8f66c69cc543ef229952aa0a11fa47",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -155,7 +155,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
       "timestamp": "2026-07-22T21:11:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3269-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kafka?repository_url=registry.rancher.com/suse-observability/kafka",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "JVM Kafka handles compression internally; gzip CLI binary not invoked at runtime",
+      "timestamp": "2026-07-29T04:40:43Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3270-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kafka?repository_url=registry.rancher.com/suse-observability/kafka",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libasound2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libasound2 is an audio library; Kafka is a Java message broker with no audio functionality",
+      "timestamp": "2026-07-29T01:22:06Z"
     }
   ],
-  "timestamp": "2026-07-23T14:28:52Z"
+  "timestamp": "2026-07-29T04:47:10Z"
 }

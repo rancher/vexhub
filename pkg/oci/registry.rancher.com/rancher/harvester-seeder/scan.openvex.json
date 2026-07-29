@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4a3da09908add612a92b7f29e6a13af782d1ace6db970011956f9cff5eee8dd8",
+  "@id": "https://openvex.dev/docs/public/vex-8e75d36790f7875134cd8427ad1a7b37bf8f66c69cc543ef229952aa0a11fa47",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -611,6 +611,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22630-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go seeder uses Go net/http (own HTTP/2 impl); system libnghttp2-14 not loaded",
+      "timestamp": "2026-07-29T04:40:43Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22636-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go seeder binary uses encoding/xml; system libxml2 not linked or loaded",
+      "timestamp": "2026-07-29T04:40:43Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22639-1"
       },
       "products": [
@@ -703,7 +741,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go seeder binary is the entrypoint; openssl CLI tool is never invoked at runtime",
       "timestamp": "2026-07-18T04:27:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3096-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=registry.rancher.com/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go seeder binary uses encoding/xml; system libxml2 not linked or loaded",
+      "timestamp": "2026-07-29T04:40:43Z"
     }
   ],
-  "timestamp": "2026-07-20T12:39:03Z"
+  "timestamp": "2026-07-29T04:47:10Z"
 }

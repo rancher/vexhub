@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ee7bc75aa4f8058f9a089ade5cd7896e4758b7da2d9a5f02fa524821b0cd268b",
+  "@id": "https://openvex.dev/docs/public/vex-2d347d0e2dd15f1c08b901fd4ed8e57f6a751f55fc6a60ba55968214ab11bea0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -706,7 +706,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2925-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CDI upload proxy uses Go net/http; system libcurl4 not linked or loaded",
+      "timestamp": "2026-07-29T04:40:43Z"
     }
   ],
-  "timestamp": "2026-07-10T06:24:51Z"
+  "timestamp": "2026-07-29T04:47:12Z"
 }

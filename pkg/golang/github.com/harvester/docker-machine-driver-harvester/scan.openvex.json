@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-83f76753582ed2b1a48185b585952350428aa98ca1f873925edc721997d41ed4",
+  "@id": "https://openvex.dev/docs/public/vex-8e75d36790f7875134cd8427ad1a7b37bf8f66c69cc543ef229952aa0a11fa47",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1632,6 +1632,63 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-13281"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/k8s.io/kubernetes@v1.30.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester has not direct dependency on the kube-controller-manager. The k8s.io/kubernetes Go package is a transitive dependency from the github.com/rancher/rancher package.",
+      "timestamp": "2026-07-29T04:38:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-13281"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/k8s.io/kubernetes@v1.31.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester has not direct dependency on the kube-controller-manager. The k8s.io/kubernetes Go package is a transitive dependency from the github.com/rancher/rancher package.",
+      "timestamp": "2026-07-29T04:38:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-13281"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/k8s.io/kubernetes@v1.32.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester has not direct dependency on the kube-controller-manager. The k8s.io/kubernetes Go package is a transitive dependency from the github.com/rancher/rancher package.",
+      "timestamp": "2026-07-29T04:38:51Z"
     },
     {
       "vulnerability": {
@@ -3399,6 +3456,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-5187"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/k8s.io/kubernetes@v1.30.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester has not direct dependency on the K8s NodeRestriction admission controller. The k8s.io/kubernetes Go package is a transitive dependency from the github.com/rancher/rancher package.",
+      "timestamp": "2026-07-29T04:38:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-5187"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/k8s.io/kubernetes@v1.32.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester has not direct dependency on the K8s NodeRestriction admission controller. The k8s.io/kubernetes Go package is a transitive dependency from the github.com/rancher/rancher package.",
+      "timestamp": "2026-07-29T04:38:51Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-58181",
         "aliases": [
           "GO-2025-4134",
@@ -4951,6 +5046,405 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64324"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.3.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's hostDisk feature directly in its Go code.",
+      "timestamp": "2026-07-29T04:38:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64324"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's hostDisk feature directly in its Go code.",
+      "timestamp": "2026-07-29T04:38:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64324"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's hostDisk feature directly in its Go code.",
+      "timestamp": "2026-07-29T04:38:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64432"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.3.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-api component directly in its Go code.",
+      "timestamp": "2026-07-29T04:38:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64432"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-api component directly in its Go code.",
+      "timestamp": "2026-07-29T04:38:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64432"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-api component directly in its Go code.",
+      "timestamp": "2026-07-29T04:38:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64433"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.3.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-launcher component directly in its Go code.",
+      "timestamp": "2026-07-29T04:38:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64433"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-launcher component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64433"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-launcher component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64434"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.3.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-handler component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64434"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-handler component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64434"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-handler component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64435"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.3.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-controller component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64435"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-controller component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64435"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-controller component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64436"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.3.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-handler component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64436"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-handler component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64436"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-handler component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64437"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.3.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-handler component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64437"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.5.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-handler component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-64437"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "This is a kubevirt runtime exploit. Harvester does not use kubevirt's virt-handler component directly in its Go code.",
+      "timestamp": "2026-07-29T00:34:13Z"
     },
     {
       "vulnerability": {
@@ -10139,5 +10633,5 @@
       "timestamp": "2026-07-15T23:07:06Z"
     }
   ],
-  "timestamp": "2026-07-26T06:32:28Z"
+  "timestamp": "2026-07-29T04:47:10Z"
 }

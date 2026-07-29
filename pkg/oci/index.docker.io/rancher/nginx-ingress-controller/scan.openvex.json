@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e1c5b50b978fd0e75b4bbb217c15c507c36c6cd70077bfc9ab821b55275f80f9",
+  "@id": "https://openvex.dev/docs/public/vex-2d347d0e2dd15f1c08b901fd4ed8e57f6a751f55fc6a60ba55968214ab11bea0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1073,6 +1073,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22156-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl-mini4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx uses its own HTTP proxy module; libcurl-mini4 is not linked by nginx",
+      "timestamp": "2026-07-29T04:40:43Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22172-1"
       },
       "products": [
@@ -1187,6 +1206,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22582-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl-mini4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx uses its own HTTP proxy module; libcurl-mini4 is not linked by nginx",
+      "timestamp": "2026-07-29T04:40:43Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22639-1"
       },
       "products": [
@@ -1203,7 +1241,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
       "timestamp": "2026-07-18T04:27:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22846-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libgmodule is a GLib dynamic module loader; nginx and the Go ingress controller do not use GLib",
+      "timestamp": "2026-07-29T01:22:06Z"
     }
   ],
-  "timestamp": "2026-07-20T12:39:04Z"
+  "timestamp": "2026-07-29T04:47:12Z"
 }

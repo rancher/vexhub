@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-58054d329050fc3561fb68cbcd963ab5d35f83a6ba46e96afde7d2f03197725c",
+  "@id": "https://openvex.dev/docs/public/vex-2d347d0e2dd15f1c08b901fd4ed8e57f6a751f55fc6a60ba55968214ab11bea0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -326,6 +326,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0279-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libvirt-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libguestfs uses QEMU directly via appliance mode; libvirt daemon libraries are not called at runtime",
+      "timestamp": "2026-07-29T01:22:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0288-1"
       },
       "products": [
@@ -592,6 +611,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1169-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libvirt-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libguestfs uses QEMU directly via appliance mode; libvirt daemon libraries are not called at runtime",
+      "timestamp": "2026-07-29T01:22:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1177-1"
       },
       "products": [
@@ -839,6 +877,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux-systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux-systemd provides systemd-specific utilities not used in a libguestfs container without systemd",
+      "timestamp": "2026-07-29T01:22:06Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2531-1"
       },
       "products": [
@@ -914,5 +971,5 @@
       "timestamp": "2026-07-14T00:11:58Z"
     }
   ],
-  "timestamp": "2026-07-14T11:21:30Z"
+  "timestamp": "2026-07-29T04:47:12Z"
 }
