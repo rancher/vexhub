@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-83f76753582ed2b1a48185b585952350428aa98ca1f873925edc721997d41ed4",
+  "@id": "https://openvex.dev/docs/public/vex-d27ee10bea12f17083bc215f420eefba6d408ebfcde7881f76dd02cc9a578243",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1772,6 +1772,29 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42306",
+        "aliases": [
+          "GO-2026-5617",
+          "GHSA-rg2x-37c3-w2rh"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubeovn/kube-ovn",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v28.3.3+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-07-29T03:33:57Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499"
       },
       "products": [
@@ -2311,5 +2334,5 @@
       "timestamp": "2026-07-08T03:19:41Z"
     }
   ],
-  "timestamp": "2026-07-26T06:32:28Z"
+  "timestamp": "2026-07-29T16:24:27Z"
 }
