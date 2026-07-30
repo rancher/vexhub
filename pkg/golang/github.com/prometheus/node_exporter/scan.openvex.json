@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c8bee0a6ea59d3a2ba2affc52b96ed4e29c2835a2dd88c4129086b1969f3a58a",
+  "@id": "https://openvex.dev/docs/public/vex-2c024f6ce2eb86df2b7554a0118d0bd145a102dc5536e50cb1e7adff1f29af9b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3925,6 +3925,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/prometheus/node_exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Metrics exporter uses standard fs ops; os.Root sandbox API never called",
+      "timestamp": "2026-07-30T00:50:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39822",
         "aliases": [
           "GO-2026-4970"
@@ -5227,6 +5246,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/prometheus/node_exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Metrics exporter does not configure ECH; TLS ECH code path never executed",
+      "timestamp": "2026-07-30T00:50:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -5773,5 +5811,5 @@
       "timestamp": "2026-07-22T03:07:34Z"
     }
   ],
-  "timestamp": "2026-07-22T06:10:50Z"
+  "timestamp": "2026-07-30T06:11:22Z"
 }
