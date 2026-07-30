@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b37d4e2c93f67df578c507f6027727be418131016d409f556c0de83319d13966",
+  "@id": "https://openvex.dev/docs/public/vex-755d89445c6b27f15a5af2010b1e7b4b3fd3b0ba64d3aadca52b0c85d089463f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -8005,6 +8005,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kube-vip/kube-vip",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kube-vip does not configure ECH; TLS ECH code path never executed",
+      "timestamp": "2026-07-30T00:50:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -9189,5 +9208,5 @@
       "timestamp": "2026-07-22T03:18:46Z"
     }
   ],
-  "timestamp": "2026-07-22T06:10:49Z"
+  "timestamp": "2026-07-30T06:11:23Z"
 }

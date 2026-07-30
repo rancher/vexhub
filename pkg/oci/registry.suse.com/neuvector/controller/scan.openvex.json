@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4a3da09908add612a92b7f29e6a13af782d1ace6db970011956f9cff5eee8dd8",
+  "@id": "https://openvex.dev/docs/public/vex-755d89445c6b27f15a5af2010b1e7b4b3fd3b0ba64d3aadca52b0c85d089463f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -117,7 +117,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "glibc-devel contains only headers/.a static libs; runtime links libc.so.6 from glibc, not devel artifacts",
       "timestamp": "2026-07-18T04:27:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3330-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=registry.suse.com/neuvector/controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-07-30T03:00:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3330-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=registry.suse.com/neuvector/controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-07-30T03:00:01Z"
     }
   ],
-  "timestamp": "2026-07-20T12:39:03Z"
+  "timestamp": "2026-07-30T06:11:23Z"
 }
