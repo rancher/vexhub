@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2d347d0e2dd15f1c08b901fd4ed8e57f6a751f55fc6a60ba55968214ab11bea0",
+  "@id": "https://openvex.dev/docs/public/vex-e2fbca0015979c151e31137a0702d7a7c2658cd1b71c8810d1cd3b072f6e1aeb",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -10300,6 +10300,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-41579"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/opencontainers/runc@v1.1.13"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use runc directly to build or run containers. This is a transitive dependency of the kubevirt.io/kubevirt Go package.",
+      "timestamp": "2026-07-30T17:45:59Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499"
       },
       "products": [
@@ -11948,5 +11967,5 @@
       "timestamp": "2026-07-15T23:07:06Z"
     }
   ],
-  "timestamp": "2026-07-29T04:47:12Z"
+  "timestamp": "2026-07-30T17:50:12Z"
 }
