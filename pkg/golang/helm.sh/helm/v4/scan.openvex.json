@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-35f0f79fdd6fc3b25718df610d607d8e4e49c241a94fdf2380cc0bf7d10228b7",
+  "@id": "https://openvex.dev/docs/public/vex-423fc82369e064d8d6e4b2cf87bb8518251f21d09c7753d780da1d6231b92823",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -277,6 +277,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Helm CLI connects to K8s API and OCI registries via trusted CA certs; SANs not adversary-controlled",
       "timestamp": "2026-07-01T00:22:11Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Binary does not use os.Root API for sandboxed filesystem access",
+      "timestamp": "2026-07-30T04:34:29Z"
     },
     {
       "vulnerability": {
@@ -2050,5 +2069,5 @@
       "timestamp": "2026-07-06T15:42:38Z"
     }
   ],
-  "timestamp": "2026-07-28T19:40:04Z"
+  "timestamp": "2026-07-30T16:09:25Z"
 }
