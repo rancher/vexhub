@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3777a72aaf7d39674c26b2c7b45f31cdbc0e051b4d61d721cb4e8fad3b7bf4d5",
+  "@id": "https://openvex.dev/docs/public/vex-755d89445c6b27f15a5af2010b1e7b4b3fd3b0ba64d3aadca52b0c85d089463f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -619,7 +619,64 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
       "timestamp": "2026-07-22T21:11:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3269-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=registry.suse.com/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SUSE-SU-2026:3269-1 fixes only CVE-2026-41991: insecure temp-file handling in the gzexe utility when mktemp is not in PATH (local, SUSE CVSS 6.9). The Calico image never invokes gzexe; gzip is a base BCI OS package and is not used by the Calico binaries at runtime, so the vulnerable code path is unreachable.",
+      "timestamp": "2026-07-30T02:54:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3330-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=registry.suse.com/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-07-30T03:00:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3341-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=registry.suse.com/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SUSE-SU-2026:3341-1 fixes six glib2 OOB-read/integer-overflow issues (CVE-2026-58010/58011/58012/58013/58014/58016) in GVariant, GDateTime, GRegex, GIOChannel, GKeyFile and GDBus introspection parsing. glib2 is only a transitive dependency of BCI base tooling; it is not linked into or used by the statically-linked Calico Go binaries or BIRD/runit, and none of the affected GLib APIs are reachable at runtime.",
+      "timestamp": "2026-07-30T02:54:48Z"
     }
   ],
-  "timestamp": "2026-07-23T14:28:51Z"
+  "timestamp": "2026-07-30T06:11:23Z"
 }
