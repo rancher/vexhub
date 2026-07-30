@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-bec00829c0a9c7711067a7d2688dcc03f51773d62b4ce5778316c5ebdfcdd247",
+  "@id": "https://openvex.dev/docs/public/vex-755d89445c6b27f15a5af2010b1e7b4b3fd3b0ba64d3aadca52b0c85d089463f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1742,6 +1742,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/linode/docker-machine-driver-linode",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Driver does not configure ECH; TLS ECH code path never executed",
+      "timestamp": "2026-07-30T00:50:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -2068,5 +2087,5 @@
       "timestamp": "2026-07-22T03:22:01Z"
     }
   ],
-  "timestamp": "2026-07-22T06:10:51Z"
+  "timestamp": "2026-07-30T06:11:23Z"
 }
