@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-bd7a7c6a088bb9c1e1e4428ed3993c361e8978ec6f07e0980d44cf97f39b9c27",
+  "@id": "https://openvex.dev/docs/public/vex-e2fbca0015979c151e31137a0702d7a7c2658cd1b71c8810d1cd3b072f6e1aeb",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -7677,6 +7677,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-31133"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/opencontainers/runc@v1.1.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use runc directly to build or run containers. This is a transitive dependency of the kubevirt.io/kubevirt Go package.",
+      "timestamp": "2026-07-30T17:45:59Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-31133",
         "aliases": [
           "GO-2025-4096",
@@ -9624,6 +9643,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-52565"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/opencontainers/runc@v1.1.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use runc directly to build or run containers. This is a transitive dependency of the kubevirt.io/kubevirt Go package.",
+      "timestamp": "2026-07-30T17:45:59Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-52565",
         "aliases": [
           "GO-2025-4097",
@@ -9805,6 +9843,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-52881"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/opencontainers/runc@v1.1.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use runc directly to build or run containers. This is a transitive dependency of the kubevirt.io/kubevirt Go package.",
+      "timestamp": "2026-07-30T17:45:59Z"
     },
     {
       "vulnerability": {
@@ -21361,6 +21418,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-41579"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/opencontainers/runc@v1.1.14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use runc directly to build or run containers. This is a transitive dependency of the kubevirt.io/kubevirt Go package.",
+      "timestamp": "2026-07-30T17:45:59Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42306"
       },
       "products": [
@@ -25619,6 +25695,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-54680"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/kube-logging/logging-operator@v0.0.0-20250424202944-7e1f9aad6e21"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use use fluentd directly. This Go package is only used to import the SDK CRD type.",
+      "timestamp": "2026-07-30T17:45:59Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-6383"
       },
       "products": [
@@ -25730,6 +25825,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "This vulnerability is found in the virt-exportserver component which Harvester components do not spin up nor interact directly with during runtime. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package. Harvester components only depends on this package for a handful of Go util functions.",
       "timestamp": "2026-07-15T23:07:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-9804"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.8.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not have direct dependency on KubeVirt's virt-exportserver component. Harvester only uses the kubevirt.io/kubevirt Go package to make client-side API calls.",
+      "timestamp": "2026-07-30T17:45:59Z"
     },
     {
       "vulnerability": {
@@ -25751,5 +25865,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-07-29T06:21:41Z"
+  "timestamp": "2026-07-30T17:50:12Z"
 }
