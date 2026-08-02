@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-bd7a7c6a088bb9c1e1e4428ed3993c361e8978ec6f07e0980d44cf97f39b9c27",
+  "@id": "https://openvex.dev/docs/public/vex-36de21dcc3d624066d555fad7c563428405890bfbc55374e63723550eaf8c95d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -6270,6 +6270,25 @@
           "@id": "pkg:golang/github.com/derailed/k9s",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "k9s K8s terminal UI; uses standard file I/O for kubeconfig; os.Root sandboxing API not used",
+      "timestamp": "2026-07-31T00:55:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/derailed/k9s",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.4"
             }
           ]
@@ -8711,6 +8730,25 @@
           "@id": "pkg:golang/github.com/derailed/k9s",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "k9s K8s terminal UI connects to K8s API only; no EncryptedClientHelloConfigList in TLS config",
+      "timestamp": "2026-07-31T00:55:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/derailed/k9s",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.26.4"
             }
           ]
@@ -9746,5 +9784,5 @@
       "timestamp": "2026-07-25T03:35:27Z"
     }
   ],
-  "timestamp": "2026-07-29T06:21:41Z"
+  "timestamp": "2026-08-02T07:04:20Z"
 }
