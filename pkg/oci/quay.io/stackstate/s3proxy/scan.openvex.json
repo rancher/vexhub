@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-82661a4b2080eb2c6785bc164cf8a0deb42b056483902e27cf82a780f4f6013d",
+  "@id": "https://openvex.dev/docs/public/vex-1d1985f5f349862ffcf0506ab135f35dba8dbb4e64e77860228d4b1def51e17f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -60,7 +60,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
       "timestamp": "2026-07-22T21:11:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3330-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/s3proxy?repository_url=quay.io/stackstate/s3proxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-07-31T01:08:55Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3330-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/s3proxy?repository_url=quay.io/stackstate/s3proxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-07-31T01:08:55Z"
     }
   ],
-  "timestamp": "2026-07-23T14:28:50Z"
+  "timestamp": "2026-08-02T07:04:18Z"
 }
