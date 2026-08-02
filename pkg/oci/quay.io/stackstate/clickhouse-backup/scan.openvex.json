@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1d1985f5f349862ffcf0506ab135f35dba8dbb4e64e77860228d4b1def51e17f",
+  "@id": "https://openvex.dev/docs/public/vex-7fe0ce24f81fb87d0f33f7b9c6b3b5087d7aeb50aea383cfc893805e279ed8ed",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -139,6 +139,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3182-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/clickhouse-backup?repository_url=quay.io/stackstate/clickhouse-backup",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java uses JCE/Go uses crypto stdlib; libgcrypt20 C library not called at runtime",
+      "timestamp": "2026-08-02T00:42:34Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -176,5 +195,5 @@
       "timestamp": "2026-07-31T01:08:55Z"
     }
   ],
-  "timestamp": "2026-08-02T07:04:18Z"
+  "timestamp": "2026-08-02T13:36:45Z"
 }

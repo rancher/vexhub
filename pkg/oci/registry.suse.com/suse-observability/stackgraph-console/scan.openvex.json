@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b230688ae6d3e400e3dac39f6511ed0345ca9f91a863d44c535048cc7f7ee6cb",
+  "@id": "https://openvex.dev/docs/public/vex-7a1f17762d60be0f4a0d6b70b22577ae17fb6f2d7ec0a467b2e825faf221dcbe",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -101,6 +101,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3182-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackgraph-console?repository_url=registry.suse.com/suse-observability/stackgraph-console",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java uses JCE/Go uses crypto stdlib; libgcrypt20 C library not called at runtime",
+      "timestamp": "2026-08-02T00:42:34Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3270-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackgraph-console?repository_url=registry.suse.com/suse-observability/stackgraph-console",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libasound2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ALSA audio library is a JDK dependency; Java HBase console server never uses audio hardware",
+      "timestamp": "2026-08-02T00:42:34Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -138,5 +176,5 @@
       "timestamp": "2026-07-31T01:08:55Z"
     }
   ],
-  "timestamp": "2026-08-02T07:04:19Z"
+  "timestamp": "2026-08-02T13:36:46Z"
 }

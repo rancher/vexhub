@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-36de21dcc3d624066d555fad7c563428405890bfbc55374e63723550eaf8c95d",
+  "@id": "https://openvex.dev/docs/public/vex-3fe498eff2922f8ef855c54b56d4133553a7d89358c5dd1d1badd54e5c6702f7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -196,6 +196,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3182-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackgraph-hbase?repository_url=registry.rancher.com/suse-observability/stackgraph-hbase",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java uses JCE/Go uses crypto stdlib; libgcrypt20 C library not called at runtime",
+      "timestamp": "2026-08-02T00:42:34Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -233,5 +252,5 @@
       "timestamp": "2026-07-31T01:08:55Z"
     }
   ],
-  "timestamp": "2026-08-02T07:04:20Z"
+  "timestamp": "2026-08-02T13:36:44Z"
 }
