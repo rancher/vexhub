@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-83f76753582ed2b1a48185b585952350428aa98ca1f873925edc721997d41ed4",
+  "@id": "https://openvex.dev/docs/public/vex-1d1985f5f349862ffcf0506ab135f35dba8dbb4e64e77860228d4b1def51e17f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -6183,6 +6183,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/hashicorp/consul",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "HashiCorp Consul agent; no EncryptedClientHelloConfigList in TLS config; ECH not configured",
+      "timestamp": "2026-07-31T00:55:37Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -7370,5 +7389,5 @@
       "timestamp": "2026-07-22T03:22:33Z"
     }
   ],
-  "timestamp": "2026-07-26T06:32:28Z"
+  "timestamp": "2026-08-02T07:04:18Z"
 }
