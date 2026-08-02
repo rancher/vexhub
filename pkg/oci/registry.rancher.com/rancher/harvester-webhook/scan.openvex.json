@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-36de21dcc3d624066d555fad7c563428405890bfbc55374e63723550eaf8c95d",
+  "@id": "https://openvex.dev/docs/public/vex-7a1f17762d60be0f4a0d6b70b22577ae17fb6f2d7ec0a467b2e825faf221dcbe",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1219,6 +1219,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-webhook?repository_url=registry.rancher.com/rancher/harvester-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libzypp"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "zypper/libsolv package manager not invoked at container runtime; incidental SLES dep",
+      "timestamp": "2026-08-02T00:42:34Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2590-1"
       },
       "products": [
@@ -1351,5 +1370,5 @@
       "timestamp": "2026-07-31T01:08:55Z"
     }
   ],
-  "timestamp": "2026-08-02T07:04:20Z"
+  "timestamp": "2026-08-02T13:36:46Z"
 }

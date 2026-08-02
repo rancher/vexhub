@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-5e3c87c786f268ead391c9a58e15918bf3fc27010b862a5576060eb9fc9e7014",
+  "@id": "https://openvex.dev/docs/public/vex-7fe0ce24f81fb87d0f33f7b9c6b3b5087d7aeb50aea383cfc893805e279ed8ed",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1710,7 +1710,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-07-30T03:00:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3426-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=index.docker.io/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/bind-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver",
+      "timestamp": "2026-08-02T00:42:34Z"
     }
   ],
-  "timestamp": "2026-07-30T06:11:24Z"
+  "timestamp": "2026-08-02T13:36:45Z"
 }
