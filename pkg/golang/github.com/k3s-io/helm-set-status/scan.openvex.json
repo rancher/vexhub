@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ec150c2b4eff5056fe930ac76b78f31882da90bba0cd9fb2680a1ac8106fd574",
+  "@id": "https://openvex.dev/docs/public/vex-f76bc789aa353f5b8212f588fe1bd2679d045b48d3b724e39d01b82f0da9d208",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -120,6 +120,28 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-25680",
+        "aliases": [
+          "GO-2026-5028"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-25681"
       },
       "products": [
@@ -139,6 +161,28 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-25681",
+        "aliases": [
+          "GO-2026-5029"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-27136"
       },
       "products": [
@@ -155,6 +199,28 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/net/html` package is NOT compiled into the `helm-set-status` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/net/html.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
       "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27136",
+        "aliases": [
+          "GO-2026-5030"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
     },
     {
       "vulnerability": {
@@ -223,6 +289,28 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39822",
+        "aliases": [
+          "GO-2026-4970"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39823"
       },
       "products": [
@@ -239,6 +327,28 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "helm-set-status is a CLI helm plugin that updates release status; does not render HTML templates.",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39824",
+        "aliases": [
+          "GO-2026-5024"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/sys@v0.40.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
     },
     {
       "vulnerability": {
@@ -318,6 +428,28 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39827",
+        "aliases": [
+          "GO-2026-5016"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39828"
       },
       "products": [
@@ -353,6 +485,28 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
       "timestamp": "2026-07-11T00:59:02Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39828",
+        "aliases": [
+          "GO-2026-5014"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
     },
     {
       "vulnerability": {
@@ -394,6 +548,28 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39829",
+        "aliases": [
+          "GO-2026-5018"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39830"
       },
       "products": [
@@ -429,6 +605,28 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
       "timestamp": "2026-07-11T00:59:02Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39830",
+        "aliases": [
+          "GO-2026-5017"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
     },
     {
       "vulnerability": {
@@ -470,6 +668,28 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39831",
+        "aliases": [
+          "GO-2026-5019"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39832"
       },
       "products": [
@@ -505,6 +725,28 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh/agent; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
       "timestamp": "2026-07-11T00:59:02Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39832",
+        "aliases": [
+          "GO-2026-5006"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
     },
     {
       "vulnerability": {
@@ -546,6 +788,28 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39833",
+        "aliases": [
+          "GO-2026-5005"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39834"
       },
       "products": [
@@ -562,6 +826,28 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "helm-set-status does not link golang.org/x/crypto/ssh; the \u003e4GB SSH-channel Write overflow is not reachable (no SSH server/channel). Consistent with SUSE not-affected on sibling x/crypto CVEs for this binary at v0.51.0.",
       "timestamp": "2026-07-28T15:05:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39834",
+        "aliases": [
+          "GO-2026-5020"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
     },
     {
       "vulnerability": {
@@ -600,6 +886,28 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
       "timestamp": "2026-07-11T00:59:02Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39835",
+        "aliases": [
+          "GO-2026-5015"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
     },
     {
       "vulnerability": {
@@ -660,6 +968,28 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42502",
+        "aliases": [
+          "GO-2026-5027"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42504"
       },
       "products": [
@@ -695,6 +1025,28 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "klipper-helm bundles the Helm CLI; helm vendors x/crypto/ssh and x/net/html transitively but never invokes them; the `golang.org/x/net/html` package is NOT compiled into the `helm-set-status` binary. A pclntab function-table scan of the shipped binary (survives `-s -w` stripping) finds no `golang.org/x/net/html.` symbols (linker dead-code elimination). Verified by direct extraction + symbol scan. Vulnerable code not present.",
       "timestamp": "2026-06-25T14:21:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42506",
+        "aliases": [
+          "GO-2026-5025"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
     },
     {
       "vulnerability": {
@@ -755,6 +1107,28 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42508",
+        "aliases": [
+          "GO-2026-5021"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-46595"
       },
       "products": [
@@ -793,6 +1167,28 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-46595",
+        "aliases": [
+          "GO-2026-5023"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-46597"
       },
       "products": [
@@ -828,6 +1224,28 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "`home/klipper-helm/.local/share/helm/plugins/helm-set-status/helm-set-status` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
       "timestamp": "2026-07-11T00:59:02Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46597",
+        "aliases": [
+          "GO-2026-5013"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
     },
     {
       "vulnerability": {
@@ -869,6 +1287,73 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-46598",
+        "aliases": [
+          "GO-2026-5033"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.47.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46600",
+        "aliases": [
+          "GO-2026-5942"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48978",
+        "aliases": [
+          "GO-2026-5885",
+          "GHSA-xf85-363p-868w"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/oras.land/oras-go/v2@v2.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-50151",
         "aliases": [
           "GHSA-vh4v-2xq2-g5cg"
@@ -891,6 +1376,29 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-50151",
+        "aliases": [
+          "GO-2026-5882",
+          "GHSA-jxpm-75mh-9fp7"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/oras.land/oras-go/v2@v2.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-50162"
       },
       "products": [
@@ -910,6 +1418,29 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-50162",
+        "aliases": [
+          "GO-2026-5879",
+          "GHSA-8xwf-rjm4-xvhv"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/oras.land/oras-go/v2@v2.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-50163"
       },
       "products": [
@@ -926,7 +1457,30 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "klipper-helm never extracts OCI tar layers via oras-go, so the hardlink tar-extraction directory-escape path is unreachable in this usage. Vulnerable code not in execute path (no fixed oras-go release yet; not exploitable as shipped).",
       "timestamp": "2026-07-06T15:42:38Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-50163",
+        "aliases": [
+          "GO-2026-5880",
+          "GHSA-fxhp-mv3v-67qp"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/oras.land/oras-go/v2@v2.6.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-03T03:58:35Z"
     }
   ],
-  "timestamp": "2026-07-28T19:40:05Z"
+  "timestamp": "2026-08-03T06:41:22Z"
 }
