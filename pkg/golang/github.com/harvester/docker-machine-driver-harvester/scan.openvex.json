@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9f407af9fa210cd4c46401e35fb12c746eb03158b092f8c4218007f0aeaaf3d3",
+  "@id": "https://openvex.dev/docs/public/vex-dda5bd41d64592f26c6ba66e62dc678743028596d51b9ad0a6befa4e96a5b1d3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -10532,6 +10532,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-54680"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/kube-logging/logging-operator@v0.0.0-20250424202944-7e1f9aad6e21"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use fluentd directly. This Go package is only used to import the SDK CRD type.",
+      "timestamp": "2026-07-31T16:36:38Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-6383"
       },
       "products": [
@@ -10702,5 +10721,5 @@
       "timestamp": "2026-07-15T23:07:06Z"
     }
   ],
-  "timestamp": "2026-07-29T06:21:42Z"
+  "timestamp": "2026-08-02T17:06:54Z"
 }
