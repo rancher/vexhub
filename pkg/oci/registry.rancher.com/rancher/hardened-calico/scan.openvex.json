@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7fe0ce24f81fb87d0f33f7b9c6b3b5087d7aeb50aea383cfc893805e279ed8ed",
+  "@id": "https://openvex.dev/docs/public/vex-4bbdf8854d7fdf06d9265730de54318a942cf9c76f3b26447fa729f9b93d0e4a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -629,6 +629,25 @@
           "@id": "pkg:oci/hardened-calico?repository_url=registry.rancher.com/rancher/hardened-calico",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Calico network plugin is Go; no hardware device enumeration via libudev",
+      "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=registry.rancher.com/rancher/hardened-calico",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/udev"
             }
           ]
@@ -697,5 +716,5 @@
       "timestamp": "2026-07-30T02:54:48Z"
     }
   ],
-  "timestamp": "2026-08-02T13:36:45Z"
+  "timestamp": "2026-08-04T06:06:37Z"
 }
