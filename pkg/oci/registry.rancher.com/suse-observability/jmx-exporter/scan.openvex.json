@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4bbdf8854d7fdf06d9265730de54318a942cf9c76f3b26447fa729f9b93d0e4a",
+  "@id": "https://openvex.dev/docs/public/vex-ab8823bf4d0aae2e844deb35e08cef97472ee73d0fdc2acb47bcd878068cb534",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -139,6 +139,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3270-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jmx-exporter?repository_url=registry.rancher.com/suse-observability/jmx-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libasound2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ALSA sound library unused in a JMX metrics exporter; no audio operations present",
+      "timestamp": "2026-08-04T01:13:49Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -195,5 +214,5 @@
       "timestamp": "2026-08-03T00:45:14Z"
     }
   ],
-  "timestamp": "2026-08-04T06:06:37Z"
+  "timestamp": "2026-08-04T10:52:23Z"
 }
