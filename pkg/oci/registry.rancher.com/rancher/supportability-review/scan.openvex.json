@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-82661a4b2080eb2c6785bc164cf8a0deb42b056483902e27cf82a780f4f6013d",
+  "@id": "https://openvex.dev/docs/public/vex-13907b1bc058ab0f8e5374148a2bbda1a10204969a12506b6429a8b411c9ce73",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -152,7 +152,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
       "timestamp": "2026-07-22T21:11:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3426-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review?repository_url=registry.rancher.com/rancher/supportability-review",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/bind-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver",
+      "timestamp": "2026-08-03T00:45:14Z"
     }
   ],
-  "timestamp": "2026-07-23T14:28:50Z"
+  "timestamp": "2026-08-04T06:06:38Z"
 }
