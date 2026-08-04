@@ -1,0 +1,28 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-41af2daf3564d1ec03289df1b5dafcd040163c6ab5959fbf9c3537473c282f54",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-24061"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kube-ovn?repository_url=registry.rancher.com/kubeovn/kube-ovn",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/inetutils-ping"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "KubeOVN does not run the telnetd daemon. The binary isn't installed in the image OS.",
+      "timestamp": "2026-08-04T17:52:52Z"
+    }
+  ],
+  "timestamp": "2026-08-04T18:52:44Z"
+}
