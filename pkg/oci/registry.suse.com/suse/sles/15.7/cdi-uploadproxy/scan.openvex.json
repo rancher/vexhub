@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2d347d0e2dd15f1c08b901fd4ed8e57f6a751f55fc6a60ba55968214ab11bea0",
+  "@id": "https://openvex.dev/docs/public/vex-6eea8f4d5910cf3a5b5cc9e7d9bc40b798961e59d896376df881a2c5f482b601",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -725,7 +725,121 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go CDI upload proxy uses Go net/http; system libcurl4 not linked or loaded",
       "timestamp": "2026-07-29T04:40:43Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3182-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java uses JCE/Go uses crypto stdlib; libgcrypt20 C library not called at runtime",
+      "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go/Java container does not enumerate hardware devices; udev library not called at runtime",
+      "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3269-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI upload proxy is a Go binary; does not invoke the gzip CLI at runtime",
+      "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3330-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3330-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3341-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadproxy?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadproxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go/Java runtime does not load GLib; libglib-2_0-0 is an incidental SLES dep",
+      "timestamp": "2026-08-03T00:45:14Z"
     }
   ],
-  "timestamp": "2026-07-29T04:47:12Z"
+  "timestamp": "2026-08-04T06:06:36Z"
 }

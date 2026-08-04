@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-66230783a74acbf2eaf168255407a5653a0103ebab4d5755520d3d6cdf125ed3",
+  "@id": "https://openvex.dev/docs/public/vex-13907b1bc058ab0f8e5374148a2bbda1a10204969a12506b6429a8b411c9ce73",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -896,7 +896,102 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI operator is a Go-based K8s operator using cert auth; no Kerberos",
       "timestamp": "2026-07-13T16:50:57Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3182-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI operator is Go; uses Go crypto, libgcrypt20 C library not called",
+      "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3269-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI operator is a Go binary; does not invoke the gzip CLI at runtime",
+      "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3330-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3330-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3341-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI operator is a Go K8s operator; does not use GLib at runtime",
+      "timestamp": "2026-08-03T00:45:14Z"
     }
   ],
-  "timestamp": "2026-07-13T17:19:41Z"
+  "timestamp": "2026-08-04T06:06:38Z"
 }
