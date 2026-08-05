@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7a1f17762d60be0f4a0d6b70b22577ae17fb6f2d7ec0a467b2e825faf221dcbe",
+  "@id": "https://openvex.dev/docs/public/vex-6f02ea611327533cbba22a1fe80349b557c5d85cca865975932cf6b93161f640",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -573,6 +573,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-support-bundle-kit?repository_url=registry.suse.com/rancher/mirrored-longhornio-support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "support-bundle-kit is a Go binary; Go uses crypto/tls and does not call libssl at runtime",
+      "timestamp": "2026-08-05T02:24:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1406-1"
       },
       "products": [
@@ -782,6 +801,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-support-bundle-kit?repository_url=registry.suse.com/rancher/mirrored-longhornio-support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "support-bundle-kit is a Go binary; Go uses crypto/tls and does not call libssl at runtime",
+      "timestamp": "2026-08-05T02:24:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2714-1"
       },
       "products": [
@@ -914,5 +952,5 @@
       "timestamp": "2026-07-31T01:08:55Z"
     }
   ],
-  "timestamp": "2026-08-02T13:36:46Z"
+  "timestamp": "2026-08-05T08:26:16Z"
 }

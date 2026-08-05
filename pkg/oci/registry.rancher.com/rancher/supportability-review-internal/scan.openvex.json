@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6eea8f4d5910cf3a5b5cc9e7d9bc40b798961e59d896376df881a2c5f482b601",
+  "@id": "https://openvex.dev/docs/public/vex-6f02ea611327533cbba22a1fe80349b557c5d85cca865975932cf6b93161f640",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -190,7 +190,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "bind-utils (dig/host/nslookup) is not executed at runtime; DNS resolution goes through the system stub resolver",
       "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3458-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-internal?repository_url=registry.rancher.com/rancher/supportability-review-internal",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-08-05T02:24:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3458-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-internal?repository_url=registry.rancher.com/rancher/supportability-review-internal",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/vim-data-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-08-05T02:24:03Z"
     }
   ],
-  "timestamp": "2026-08-04T06:06:36Z"
+  "timestamp": "2026-08-05T08:26:16Z"
 }
