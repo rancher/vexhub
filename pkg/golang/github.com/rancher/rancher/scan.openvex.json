@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6d175d7edc6c2e8cfbf27411ecae5c0ebb5d52811fbc6d6421c47348d7168ef6",
+  "@id": "https://openvex.dev/docs/public/vex-55320963a8886a125abdaf42c40a24180ce59c7cb92fe7337e86ac1faa55dad9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -28044,6 +28044,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/rancher",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Rancher server uses standard TLS; EncryptedClientHelloConfigList not configured",
+      "timestamp": "2026-08-05T15:26:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -32970,5 +32989,5 @@
       "timestamp": "2026-07-25T03:32:18Z"
     }
   ],
-  "timestamp": "2026-08-05T08:26:15Z"
+  "timestamp": "2026-08-05T18:41:40Z"
 }
