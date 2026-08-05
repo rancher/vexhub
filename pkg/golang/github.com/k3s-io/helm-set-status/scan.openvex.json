@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f76bc789aa353f5b8212f588fe1bd2679d045b48d3b724e39d01b82f0da9d208",
+  "@id": "https://openvex.dev/docs/public/vex-2c8c70d881b025d05013c8ff2c5b15c2999a9442d70a9a3fd3c340f9bf78d5da",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1009,6 +1009,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ECH requires explicit tls.Config.EncryptedClientHelloConfigList; not configured in this binary",
+      "timestamp": "2026-08-05T04:30:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506"
       },
       "products": [
@@ -1482,5 +1501,5 @@
       "timestamp": "2026-08-03T03:58:35Z"
     }
   ],
-  "timestamp": "2026-08-03T06:41:22Z"
+  "timestamp": "2026-08-05T04:53:18Z"
 }
