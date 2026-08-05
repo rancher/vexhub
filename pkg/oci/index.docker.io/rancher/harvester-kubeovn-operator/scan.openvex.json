@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-755d89445c6b27f15a5af2010b1e7b4b3fd3b0ba64d3aadca52b0c85d089463f",
+  "@id": "https://openvex.dev/docs/public/vex-55320963a8886a125abdaf42c40a24180ce59c7cb92fe7337e86ac1faa55dad9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -820,6 +820,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22630-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-kubeovn-operator?repository_url=index.docker.io/rancher/harvester-kubeovn-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses net/http2 natively; C libnghttp2 library not loaded by Go HTTP stack",
+      "timestamp": "2026-08-05T15:40:56Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22639-1"
       },
       "products": [
@@ -836,6 +855,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
       "timestamp": "2026-07-18T04:27:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22826-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-kubeovn-operator?repository_url=index.docker.io/rancher/harvester-kubeovn-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based kube-ovn operator; libgcrypt C library is not loaded at runtime",
+      "timestamp": "2026-08-05T15:40:56Z"
     },
     {
       "vulnerability": {
@@ -971,5 +1009,5 @@
       "timestamp": "2026-07-30T03:00:01Z"
     }
   ],
-  "timestamp": "2026-07-30T06:11:23Z"
+  "timestamp": "2026-08-05T18:41:40Z"
 }
