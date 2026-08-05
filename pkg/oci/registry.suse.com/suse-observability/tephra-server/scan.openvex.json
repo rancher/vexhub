@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4bbdf8854d7fdf06d9265730de54318a942cf9c76f3b26447fa729f9b93d0e4a",
+  "@id": "https://openvex.dev/docs/public/vex-6d175d7edc6c2e8cfbf27411ecae5c0ebb5d52811fbc6d6421c47348d7168ef6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -136,7 +136,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-07-31T01:08:55Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3455-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/tephra-server?repository_url=registry.suse.com/suse-observability/tephra-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gawk"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Apache Tephra is a Java service; gawk CLI is not invoked by the JVM at runtime",
+      "timestamp": "2026-08-05T02:24:03Z"
     }
   ],
-  "timestamp": "2026-08-04T06:06:37Z"
+  "timestamp": "2026-08-05T08:26:15Z"
 }

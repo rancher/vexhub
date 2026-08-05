@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7fe0ce24f81fb87d0f33f7b9c6b3b5087d7aeb50aea383cfc893805e279ed8ed",
+  "@id": "https://openvex.dev/docs/public/vex-1e3721f4529ba32176870e54fe2e6132ac82000a1fe804acaa7d683de74124ac",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -383,6 +383,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=registry.rancher.com/longhornio/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "support-bundle-kit is a Go binary; Go uses crypto/tls and does not call libssl at runtime",
+      "timestamp": "2026-08-05T02:24:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:0312-1"
       },
       "products": [
@@ -611,6 +630,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=registry.rancher.com/longhornio/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "support-bundle-kit is a Go binary; Go uses crypto/tls and does not call libssl at runtime",
+      "timestamp": "2026-08-05T02:24:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1406-1"
       },
       "products": [
@@ -801,6 +839,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=registry.rancher.com/longhornio/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary; FIPS OpenSSL provider not loaded; Go uses crypto/tls",
+      "timestamp": "2026-08-05T02:24:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=registry.rancher.com/longhornio/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "support-bundle-kit is a Go binary; Go uses crypto/tls and does not call libssl at runtime",
+      "timestamp": "2026-08-05T02:24:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2714-1"
       },
       "products": [
@@ -895,5 +971,5 @@
       "timestamp": "2026-07-30T03:00:01Z"
     }
   ],
-  "timestamp": "2026-08-02T13:36:45Z"
+  "timestamp": "2026-08-05T08:26:17Z"
 }
