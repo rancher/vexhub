@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1e3721f4529ba32176870e54fe2e6132ac82000a1fe804acaa7d683de74124ac",
+  "@id": "https://openvex.dev/docs/public/vex-55320963a8886a125abdaf42c40a24180ce59c7cb92fe7337e86ac1faa55dad9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -839,6 +839,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3097-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=index.docker.io/rancher/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based support bundle collector; libxml2 C library not loaded at runtime",
+      "timestamp": "2026-08-05T15:40:56Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3163-1"
       },
       "products": [
@@ -895,5 +914,5 @@
       "timestamp": "2026-07-31T01:08:55Z"
     }
   ],
-  "timestamp": "2026-08-05T08:26:17Z"
+  "timestamp": "2026-08-05T18:41:40Z"
 }

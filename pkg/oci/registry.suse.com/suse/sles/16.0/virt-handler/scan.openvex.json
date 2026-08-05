@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6f02ea611327533cbba22a1fe80349b557c5d85cca865975932cf6b93161f640",
+  "@id": "https://openvex.dev/docs/public/vex-55320963a8886a125abdaf42c40a24180ce59c7cb92fe7337e86ac1faa55dad9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22846-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-handler?repository_url=registry.suse.com/suse/sles/16.0/virt-handler",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based KubeVirt virt-handler daemon; GLib C library not loaded at runtime",
+      "timestamp": "2026-08-05T15:40:56Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:22948-1"
@@ -81,5 +100,5 @@
       "timestamp": "2026-08-05T02:24:03Z"
     }
   ],
-  "timestamp": "2026-08-05T08:26:16Z"
+  "timestamp": "2026-08-05T18:41:40Z"
 }
