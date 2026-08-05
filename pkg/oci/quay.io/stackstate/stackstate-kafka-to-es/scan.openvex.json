@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-5e3c87c786f268ead391c9a58e15918bf3fc27010b862a5576060eb9fc9e7014",
+  "@id": "https://openvex.dev/docs/public/vex-1747ea7e73b88c72ea9af30dbdb4ac925617fd3572aca0acc741027b192a7941",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -215,6 +215,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3269-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-kafka-to-es?repository_url=quay.io/stackstate/stackstate-kafka-to-es",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "JVM-based Kafka-to-ES connector uses Java's internal gzip (java.util.zip); system gzip CLI not called",
+      "timestamp": "2026-08-05T02:24:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3270-1"
       },
       "products": [
@@ -271,5 +290,5 @@
       "timestamp": "2026-07-30T03:00:01Z"
     }
   ],
-  "timestamp": "2026-07-30T06:11:24Z"
+  "timestamp": "2026-08-05T08:26:14Z"
 }
