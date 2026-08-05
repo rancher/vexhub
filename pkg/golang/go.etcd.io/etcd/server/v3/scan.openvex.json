@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-83f76753582ed2b1a48185b585952350428aa98ca1f873925edc721997d41ed4",
+  "@id": "https://openvex.dev/docs/public/vex-c11e9379d9c12fe9d1bbe69f775c4f5a03f0e98649794b8f33581d886a628e69",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -21490,6 +21490,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/server/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ECH requires explicit tls.Config.EncryptedClientHelloConfigList; not configured in this binary",
+      "timestamp": "2026-08-05T04:30:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -24371,5 +24390,5 @@
       "timestamp": "2026-07-22T03:26:03Z"
     }
   ],
-  "timestamp": "2026-07-26T06:32:28Z"
+  "timestamp": "2026-08-05T04:53:17Z"
 }

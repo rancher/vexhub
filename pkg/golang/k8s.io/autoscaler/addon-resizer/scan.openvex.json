@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-bec00829c0a9c7711067a7d2688dcc03f51773d62b4ce5778316c5ebdfcdd247",
+  "@id": "https://openvex.dev/docs/public/vex-2c8c70d881b025d05013c8ff2c5b15c2999a9442d70a9a3fd3c340f9bf78d5da",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3016,6 +3016,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/autoscaler/addon-resizer",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ECH requires explicit tls.Config.EncryptedClientHelloConfigList; not configured in this binary",
+      "timestamp": "2026-08-05T04:30:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506"
       },
       "products": [
@@ -3078,5 +3097,5 @@
       "timestamp": "2026-07-22T03:37:41Z"
     }
   ],
-  "timestamp": "2026-07-22T06:10:51Z"
+  "timestamp": "2026-08-05T04:53:18Z"
 }
