@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-7a1f17762d60be0f4a0d6b70b22577ae17fb6f2d7ec0a467b2e825faf221dcbe",
+  "@id": "https://openvex.dev/docs/public/vex-2fd1caab2223ae315caa076adb561622f84d01baba28e7e03f3cb98223c29940",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -155,6 +155,25 @@
           "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=registry.suse.com/suse-observability/stackstate-k8s-process-agent",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/glib2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based process agent; glib2 CLI utilities not invoked at runtime",
+      "timestamp": "2026-08-05T15:40:56Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3341-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=registry.suse.com/suse-observability/stackstate-k8s-process-agent",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libglib-2_0-0"
             }
           ]
@@ -164,7 +183,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go/Java runtime does not load GLib; libglib-2_0-0 is an incidental SLES dep",
       "timestamp": "2026-08-02T00:42:34Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3341-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=registry.suse.com/suse-observability/stackstate-k8s-process-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based process agent; GLib module loading (libgmodule) not used at runtime",
+      "timestamp": "2026-08-05T15:40:56Z"
     }
   ],
-  "timestamp": "2026-08-02T13:36:46Z"
+  "timestamp": "2026-08-05T18:41:42Z"
 }
