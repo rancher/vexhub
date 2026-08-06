@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cca1a1897c2ce5ff29057d368a83cc020f6688d557f0df23422dba8b07aed8d8",
+  "@id": "https://openvex.dev/docs/public/vex-17f8c7c3b2010bcc7d48b2c19c0bdcc89aff2d72ead5f3fed77498b84ef36595",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -12877,6 +12877,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/mikefarah/yq/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "yq is a YAML processor CLI; it does not use os.Root for filesystem sandboxing",
+      "timestamp": "2026-08-06T04:29:39Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39822",
         "aliases": [
           "GO-2026-4970"
@@ -18729,5 +18748,5 @@
       "timestamp": "2026-07-29T03:19:01Z"
     }
   ],
-  "timestamp": "2026-08-06T11:40:41Z"
+  "timestamp": "2026-08-06T23:02:24Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-33931d8a9eb848dfee24659dfe5263c88387002c0e7fb3466625d193e8c7d37d",
+  "@id": "https://openvex.dev/docs/public/vex-17f8c7c3b2010bcc7d48b2c19c0bdcc89aff2d72ead5f3fed77498b84ef36595",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -19459,6 +19459,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Helm CLI does not configure ECH; TLS to registries and K8s API does not use ECH",
+      "timestamp": "2026-08-06T04:29:39Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Helm CLI uses standard TLS to K8s API and OCI registries; ECH not configured",
       "timestamp": "2026-08-05T15:26:30Z"
     },
@@ -22512,5 +22531,5 @@
       "timestamp": "2026-06-19T00:00:00Z"
     }
   ],
-  "timestamp": "2026-08-06T11:40:42Z"
+  "timestamp": "2026-08-06T23:02:24Z"
 }
