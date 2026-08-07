@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2fd1caab2223ae315caa076adb561622f84d01baba28e7e03f3cb98223c29940",
+  "@id": "https://openvex.dev/docs/public/vex-14ecbf374bc49262f8333b44e2b4d6057755def823e6aaaacf49b224f1e35b89",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1653,7 +1653,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Nginx-served static web UI; GLib C library not loaded by nginx at runtime",
       "timestamp": "2026-08-05T15:40:56Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3341-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=registry.rancher.com/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui serves static files via nginx; nginx does not link or load libglib at runtime",
+      "timestamp": "2026-08-06T04:40:22Z"
     }
   ],
-  "timestamp": "2026-08-05T18:41:42Z"
+  "timestamp": "2026-08-06T23:02:26Z"
 }
