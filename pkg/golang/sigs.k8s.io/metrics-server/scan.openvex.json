@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-33931d8a9eb848dfee24659dfe5263c88387002c0e7fb3466625d193e8c7d37d",
+  "@id": "https://openvex.dev/docs/public/vex-6ce48bfc5a1e284ae228ec9d76b812f9cda3a53b532b06dec915cc7a2c29f249",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -8683,6 +8683,29 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39883",
+        "aliases": [
+          "GO-2026-5426",
+          "GHSA-hfvc-g4fc-pqhx"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server@v0.8.1",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/go.opentelemetry.io/otel@v1.35.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-07T03:17:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42499"
       },
       "products": [
@@ -9966,5 +9989,5 @@
       "timestamp": "2026-08-05T21:40:22Z"
     }
   ],
-  "timestamp": "2026-08-06T11:40:42Z"
+  "timestamp": "2026-08-07T16:52:20Z"
 }
