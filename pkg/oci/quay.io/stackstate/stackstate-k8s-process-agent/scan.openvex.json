@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3e89c1b44f6cba4a1b3f755116ad9dad246e73e335c07fedbe1d9956da6fa3eb",
+  "@id": "https://openvex.dev/docs/public/vex-afe27a32fa6fa1657f7e64d3ba4631a52808d1b113d850b5b366d429be7e29bb",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -174,6 +174,25 @@
           "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=quay.io/stackstate/stackstate-k8s-process-agent",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/glib2-tools"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "glib2-tools CLI dev utilities not invoked by the process agent's container entrypoint",
+      "timestamp": "2026-08-06T04:40:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3341-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=quay.io/stackstate/stackstate-k8s-process-agent",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libglib-2_0-0"
             }
           ]
@@ -204,5 +223,5 @@
       "timestamp": "2026-08-05T15:40:56Z"
     }
   ],
-  "timestamp": "2026-08-05T18:41:41Z"
+  "timestamp": "2026-08-06T23:02:25Z"
 }
