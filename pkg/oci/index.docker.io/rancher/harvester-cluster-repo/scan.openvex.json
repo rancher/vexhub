@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-95cbb21700d197304f8c59e243f7f3285f2c41c3929613e7fc20a4bbf7517eda",
+  "@id": "https://openvex.dev/docs/public/vex-1efcef22b9ddb8847cb5ac79c957e54a643fd0a9a43fbe89e2857799db90da9a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1150,6 +1150,25 @@
           "@id": "pkg:oci/harvester-cluster-repo?repository_url=index.docker.io/rancher/harvester-cluster-repo",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go image uses Go crypto; OpenSSL FIPS provider module is never loaded at runtime",
+      "timestamp": "2026-08-07T03:50:27Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22315-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=index.docker.io/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssl-3"
             }
           ]
@@ -1302,6 +1321,25 @@
           "@id": "pkg:oci/harvester-cluster-repo?repository_url=index.docker.io/rancher/harvester-cluster-repo",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Helm chart repository server does not invoke perl interpreter at runtime",
+      "timestamp": "2026-08-07T03:50:27Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22847-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=index.docker.io/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/perl-base"
             }
           ]
@@ -1406,6 +1444,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Harvester cluster-repo is a Go Helm chart HTTP server; libfdisk1 not linked by Go binary",
       "timestamp": "2026-06-24T01:17:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cluster-repo?repository_url=index.docker.io/rancher/harvester-cluster-repo",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go image uses Go crypto; OpenSSL FIPS provider module is never loaded at runtime",
+      "timestamp": "2026-08-07T03:50:27Z"
     },
     {
       "vulnerability": {
@@ -1560,5 +1617,5 @@
       "timestamp": "2026-08-02T00:42:34Z"
     }
   ],
-  "timestamp": "2026-08-05T18:41:39Z"
+  "timestamp": "2026-08-07T17:24:27Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-13907b1bc058ab0f8e5374148a2bbda1a10204969a12506b6429a8b411c9ce73",
+  "@id": "https://openvex.dev/docs/public/vex-481837660fd956e706f51ba7850cf8e6e1b36c97fee0fa0d80fe10a1aa513805",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -861,6 +861,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go image uses Go crypto; OpenSSL FIPS provider module is never loaded at runtime",
+      "timestamp": "2026-08-07T03:50:27Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2714-1"
       },
       "products": [
@@ -915,6 +934,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI operator is Go; uses Go crypto, libgcrypt20 C library not called",
       "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based Kubernetes operator/server; libudev device monitoring library not called at runtime",
+      "timestamp": "2026-08-07T03:50:27Z"
     },
     {
       "vulnerability": {
@@ -993,5 +1031,5 @@
       "timestamp": "2026-08-03T00:45:14Z"
     }
   ],
-  "timestamp": "2026-08-04T06:06:38Z"
+  "timestamp": "2026-08-07T17:24:28Z"
 }

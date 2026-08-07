@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-55320963a8886a125abdaf42c40a24180ce59c7cb92fe7337e86ac1faa55dad9",
+  "@id": "https://openvex.dev/docs/public/vex-481837660fd956e706f51ba7850cf8e6e1b36c97fee0fa0d80fe10a1aa513805",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -667,6 +667,25 @@
           "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go container does not run systemd as PID1; systemd binaries not in execution path",
+      "timestamp": "2026-08-07T03:50:27Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/udev"
             }
           ]
@@ -735,5 +754,5 @@
       "timestamp": "2026-07-30T02:54:48Z"
     }
   ],
-  "timestamp": "2026-08-05T18:41:40Z"
+  "timestamp": "2026-08-07T17:24:28Z"
 }
