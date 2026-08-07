@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2c024f6ce2eb86df2b7554a0118d0bd145a102dc5536e50cb1e7adff1f29af9b",
+  "@id": "https://openvex.dev/docs/public/vex-e02403b53bbb35ee312e2129ef9af7383b1964c39b20f31660c423c28a9fa58c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1361,6 +1361,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go image uses Go crypto; OpenSSL FIPS provider module is never loaded at runtime",
+      "timestamp": "2026-08-07T03:50:27Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2714-1"
       },
       "products": [
@@ -1472,7 +1491,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "K8s components are pure Go and do not use GLib/GObject at runtime",
       "timestamp": "2026-07-30T03:00:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3455-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gawk"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Kubernetes Go binary does not invoke gawk; incidental SLES package not in execution path",
+      "timestamp": "2026-08-07T03:50:27Z"
     }
   ],
-  "timestamp": "2026-07-30T06:11:22Z"
+  "timestamp": "2026-08-07T17:24:26Z"
 }
