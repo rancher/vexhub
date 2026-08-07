@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-14ecbf374bc49262f8333b44e2b4d6057755def823e6aaaacf49b224f1e35b89",
+  "@id": "https://openvex.dev/docs/public/vex-1efcef22b9ddb8847cb5ac79c957e54a643fd0a9a43fbe89e2857799db90da9a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -789,6 +789,25 @@
           "@id": "pkg:oci/longhorn-ui?repository_url=registry.suse.com/longhornio/longhorn-ui",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go image uses Go crypto; OpenSSL FIPS provider module is never loaded at runtime",
+      "timestamp": "2026-08-07T03:50:27Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0309-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=registry.suse.com/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssl-3"
             }
           ]
@@ -1102,6 +1121,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=registry.suse.com/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go image uses Go crypto; OpenSSL FIPS provider module is never loaded at runtime",
+      "timestamp": "2026-08-07T03:50:27Z"
     },
     {
       "vulnerability": {
@@ -1504,6 +1542,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=registry.suse.com/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure Go image uses Go crypto; OpenSSL FIPS provider module is never loaded at runtime",
+      "timestamp": "2026-08-07T03:50:27Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2714-1"
       },
       "products": [
@@ -1674,5 +1731,5 @@
       "timestamp": "2026-08-06T04:40:22Z"
     }
   ],
-  "timestamp": "2026-08-06T23:02:26Z"
+  "timestamp": "2026-08-07T17:24:27Z"
 }
