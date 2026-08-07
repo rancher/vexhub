@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2c059bf2efd4d93b670723c43181c132efd4bb099f03e72c6196ab14e344c587",
+  "@id": "https://openvex.dev/docs/public/vex-e02403b53bbb35ee312e2129ef9af7383b1964c39b20f31660c423c28a9fa58c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -5361,6 +5361,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39822"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kube-vip/kube-vip",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kube-vip uses standard file I/O only; os.Root sandboxing API not imported or used",
+      "timestamp": "2026-08-07T03:43:54Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39822",
         "aliases": [
           "GO-2026-4970"
@@ -8382,6 +8401,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kube-vip/kube-vip",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kube-vip does not configure EncryptedClientHelloConfigList; TLS ECH code path unreachable",
+      "timestamp": "2026-08-07T03:43:54Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -9830,5 +9868,5 @@
       "timestamp": "2026-08-07T03:15:16Z"
     }
   ],
-  "timestamp": "2026-08-07T16:52:21Z"
+  "timestamp": "2026-08-07T17:24:26Z"
 }
