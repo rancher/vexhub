@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4bbdf8854d7fdf06d9265730de54318a942cf9c76f3b26447fa729f9b93d0e4a",
+  "@id": "https://openvex.dev/docs/public/vex-68353a329191cbc0b8be202fc50076f0bfaf3015bef59b52c9e037d67a761bb5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -972,6 +972,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3038-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libguestfs inspects guest filesystems via QEMU appliance; qemu-vmsr-helper for MSR passthrough not needed",
+      "timestamp": "2026-08-08T00:57:38Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3076-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh2-1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libguestfs accesses guest images via QEMU appliance, not SSH; libssh2 is never called",
+      "timestamp": "2026-08-08T00:57:38Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -1047,5 +1085,5 @@
       "timestamp": "2026-08-03T00:45:14Z"
     }
   ],
-  "timestamp": "2026-08-04T06:06:37Z"
+  "timestamp": "2026-08-10T13:37:27Z"
 }
