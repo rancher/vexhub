@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-481837660fd956e706f51ba7850cf8e6e1b36c97fee0fa0d80fe10a1aa513805",
+  "@id": "https://openvex.dev/docs/public/vex-68fd213ab7ad97d4204239e7f9ac63145754c28e18fdc55d619209eac8424963",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1884,6 +1884,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3038-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.suse.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-instance-manager manages storage volumes; qemu-vmsr-helper for MSR passthrough is not invoked",
+      "timestamp": "2026-08-08T00:57:38Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3104-1"
       },
       "products": [
@@ -2052,7 +2071,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libldb2 is a Samba/LDAP library; Longhorn instance manager is a storage component with no LDAP or Samba functionality",
       "timestamp": "2026-07-31T01:08:55Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3363-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.suse.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/samba-client-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn uses NFS/iSCSI storage protocols; Samba/SMB client libraries are never invoked",
+      "timestamp": "2026-08-08T00:57:38Z"
     }
   ],
-  "timestamp": "2026-08-07T17:24:28Z"
+  "timestamp": "2026-08-10T13:37:26Z"
 }

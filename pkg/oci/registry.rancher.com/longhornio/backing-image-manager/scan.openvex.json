@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-14ecbf374bc49262f8333b44e2b4d6057755def823e6aaaacf49b224f1e35b89",
+  "@id": "https://openvex.dev/docs/public/vex-68fd213ab7ad97d4204239e7f9ac63145754c28e18fdc55d619209eac8424963",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2112,6 +2112,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3038-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/qemu-vmsr-helper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "backing-image-manager manages disk images in Go; qemu-vmsr-helper for MSR passthrough is never called",
+      "timestamp": "2026-08-08T00:57:38Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3163-1"
       },
       "products": [
@@ -2244,5 +2263,5 @@
       "timestamp": "2026-08-06T04:40:22Z"
     }
   ],
-  "timestamp": "2026-08-06T23:02:26Z"
+  "timestamp": "2026-08-10T13:37:26Z"
 }
