@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6d175d7edc6c2e8cfbf27411ecae5c0ebb5d52811fbc6d6421c47348d7168ef6",
+  "@id": "https://openvex.dev/docs/public/vex-65cc1b6e4661ae8d01f92ea975e999ec2e88f6c80186a8c907c0cd53c6bf722a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1257,6 +1257,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3163-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com/suse/sles/15.7/virt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-launcher runs QEMU VMs via K8s tokens; PAM login stack is never invoked in this container",
+      "timestamp": "2026-08-08T00:57:38Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -1332,5 +1351,5 @@
       "timestamp": "2026-08-05T02:24:03Z"
     }
   ],
-  "timestamp": "2026-08-05T08:26:15Z"
+  "timestamp": "2026-08-10T13:37:25Z"
 }

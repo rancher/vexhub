@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cca1a1897c2ce5ff29057d368a83cc020f6688d557f0df23422dba8b07aed8d8",
+  "@id": "https://openvex.dev/docs/public/vex-68fd213ab7ad97d4204239e7f9ac63145754c28e18fdc55d619209eac8424963",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22003,6 +22003,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/go.etcd.io/etcd/etcdctl/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "etcdctl connects to etcd server with standard mTLS; EncryptedClientHelloConfigList not configured",
+      "timestamp": "2026-08-08T00:21:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -24045,5 +24064,5 @@
       "timestamp": "2026-07-22T03:25:44Z"
     }
   ],
-  "timestamp": "2026-08-06T11:40:41Z"
+  "timestamp": "2026-08-10T13:37:26Z"
 }
