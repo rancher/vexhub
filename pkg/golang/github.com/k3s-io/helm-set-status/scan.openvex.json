@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-33931d8a9eb848dfee24659dfe5263c88387002c0e7fb3466625d193e8c7d37d",
+  "@id": "https://openvex.dev/docs/public/vex-68353a329191cbc0b8be202fc50076f0bfaf3015bef59b52c9e037d67a761bb5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2546,6 +2546,25 @@
           "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Helm status plugin connects to K8s API; ECH not configured (govulncheck confirmed at v1.25.11)",
+      "timestamp": "2026-08-08T00:21:33Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/k3s-io/helm-set-status",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.25.11"
             }
           ]
@@ -3361,5 +3380,5 @@
       "timestamp": "2026-08-05T21:45:19Z"
     }
   ],
-  "timestamp": "2026-08-06T11:40:42Z"
+  "timestamp": "2026-08-10T13:37:27Z"
 }
