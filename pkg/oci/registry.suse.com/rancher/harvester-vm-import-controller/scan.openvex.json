@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-68353a329191cbc0b8be202fc50076f0bfaf3015bef59b52c9e037d67a761bb5",
+  "@id": "https://openvex.dev/docs/public/vex-52ac523575e3ff12334a9e90dd8903fcf7c650671acffe63370dc6b5c2c44b2c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1086,6 +1086,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22826-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=registry.suse.com/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go VM import controller uses Go crypto; libgcrypt C library is not called at runtime",
+      "timestamp": "2026-08-11T00:58:31Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2385-1"
       },
       "products": [
@@ -1276,6 +1295,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3182-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=registry.suse.com/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go VM import controller uses Go crypto; libgcrypt C library is not called at runtime",
+      "timestamp": "2026-08-11T00:58:31Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3244-1"
       },
       "products": [
@@ -1332,5 +1370,5 @@
       "timestamp": "2026-07-31T01:08:55Z"
     }
   ],
-  "timestamp": "2026-08-10T13:37:27Z"
+  "timestamp": "2026-08-11T14:10:37Z"
 }

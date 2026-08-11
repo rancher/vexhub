@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ee7bc75aa4f8058f9a089ade5cd7896e4758b7da2d9a5f02fa524821b0cd268b",
+  "@id": "https://openvex.dev/docs/public/vex-52ac523575e3ff12334a9e90dd8903fcf7c650671acffe63370dc6b5c2c44b2c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -136,7 +136,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Kubernetes event router is Go-based; libgcrypt GnuPG library is not in the execute path",
       "timestamp": "2026-07-09T21:48:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22826-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-eventrouter?repository_url=registry.suse.com/rancher/harvester-eventrouter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go event router uses Go crypto; libgcrypt C library is not called at runtime",
+      "timestamp": "2026-08-11T00:58:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3182-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-eventrouter?repository_url=registry.suse.com/rancher/harvester-eventrouter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go event router uses Go crypto; libgcrypt C library is not called at runtime",
+      "timestamp": "2026-08-11T00:58:31Z"
     }
   ],
-  "timestamp": "2026-07-10T06:24:51Z"
+  "timestamp": "2026-08-11T14:10:37Z"
 }
