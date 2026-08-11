@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e02403b53bbb35ee312e2129ef9af7383b1964c39b20f31660c423c28a9fa58c",
+  "@id": "https://openvex.dev/docs/public/vex-d0a999bace1218b59ca7abd6f0716e34e6fe10f4b536c6dd711929f68b2100d7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1399,6 +1399,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3097-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Kubernetes (kubelet/kubectl) is Go-based; no XML parsing via libxml2 in runtime path",
+      "timestamp": "2026-08-11T19:38:42Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3163-1"
       },
       "products": [
@@ -1512,5 +1531,5 @@
       "timestamp": "2026-08-07T03:50:27Z"
     }
   ],
-  "timestamp": "2026-08-07T17:24:26Z"
+  "timestamp": "2026-08-11T21:15:50Z"
 }

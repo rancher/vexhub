@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b0654398db18bf6b6f0873ca5841c0850c500ba0d92a62cc4885ec082c12a9d1",
+  "@id": "https://openvex.dev/docs/public/vex-a58c7c023216a4964901d4cfb0759f9db4490658e876d0f9af49ab0219aa1ec4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -67048,6 +67048,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-webhook is a K8s admission webhook using K8s API; net/textproto not in execute path",
+      "timestamp": "2026-08-11T19:21:52Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42508",
         "aliases": [
           "GO-2026-5021"
@@ -77959,5 +77978,5 @@
       "timestamp": "2026-07-22T05:24:07Z"
     }
   ],
-  "timestamp": "2026-08-09T23:46:10Z"
+  "timestamp": "2026-08-11T21:15:49Z"
 }
