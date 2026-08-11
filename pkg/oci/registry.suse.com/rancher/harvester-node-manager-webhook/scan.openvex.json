@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-755d89445c6b27f15a5af2010b1e7b4b3fd3b0ba64d3aadca52b0c85d089463f",
+  "@id": "https://openvex.dev/docs/public/vex-e80781cbcf126a6bef36fc6be306bd93cfcadd876d6f0434ce43bd1e262add82",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -782,6 +782,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22636-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-manager-webhook?repository_url=registry.suse.com/rancher/harvester-node-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based k8s admission webhook uses encoding/xml; system libxml2 C library not called",
+      "timestamp": "2026-08-11T00:58:31Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22639-1"
       },
       "products": [
@@ -972,6 +991,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3097-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-manager-webhook?repository_url=registry.suse.com/rancher/harvester-node-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-based k8s admission webhook uses encoding/xml; system libxml2 C library not called",
+      "timestamp": "2026-08-11T00:58:31Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3163-1"
       },
       "products": [
@@ -1028,5 +1066,5 @@
       "timestamp": "2026-07-30T03:00:01Z"
     }
   ],
-  "timestamp": "2026-07-30T06:11:23Z"
+  "timestamp": "2026-08-11T14:10:39Z"
 }
