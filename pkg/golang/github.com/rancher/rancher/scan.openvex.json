@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-65cc1b6e4661ae8d01f92ea975e999ec2e88f6c80186a8c907c0cd53c6bf722a",
+  "@id": "https://openvex.dev/docs/public/vex-a5df52d1a5e2b399bee980bb1ddb9bfc3c9a401f6282c3a586e5a02c7f2427b4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -29012,6 +29012,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42507"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/rancher",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Rancher agent connects to K8s API via HTTP/2; net/textproto error injection path unreachable",
+      "timestamp": "2026-08-11T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42508",
         "aliases": [
           "GO-2026-5021"
@@ -33146,5 +33165,5 @@
       "timestamp": "2026-07-25T03:32:18Z"
     }
   ],
-  "timestamp": "2026-08-10T13:37:25Z"
+  "timestamp": "2026-08-11T14:10:38Z"
 }

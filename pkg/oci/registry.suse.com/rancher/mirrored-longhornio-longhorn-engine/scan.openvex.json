@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1efcef22b9ddb8847cb5ac79c957e54a643fd0a9a43fbe89e2857799db90da9a",
+  "@id": "https://openvex.dev/docs/public/vex-a5df52d1a5e2b399bee980bb1ddb9bfc3c9a401f6282c3a586e5a02c7f2427b4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1485,6 +1485,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3218-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=registry.suse.com/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libavahi-client3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn engine manages iSCSI storage; Avahi mDNS library is never called at runtime",
+      "timestamp": "2026-08-11T00:58:31Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3244-1"
       },
       "products": [
@@ -1577,7 +1596,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go-based Longhorn engine; GLib module-loading library (libgmodule) not used by Go runtime",
       "timestamp": "2026-08-05T02:24:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3363-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-engine?repository_url=registry.suse.com/rancher/mirrored-longhornio-longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libldb2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn engine uses iSCSI/gRPC; Samba LDAP database library libldb2 not exercised at runtime",
+      "timestamp": "2026-08-11T00:58:31Z"
     }
   ],
-  "timestamp": "2026-08-07T17:24:27Z"
+  "timestamp": "2026-08-11T14:10:38Z"
 }
