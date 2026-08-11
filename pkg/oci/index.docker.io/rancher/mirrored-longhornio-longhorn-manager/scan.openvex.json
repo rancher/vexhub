@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e02403b53bbb35ee312e2129ef9af7383b1964c39b20f31660c423c28a9fa58c",
+  "@id": "https://openvex.dev/docs/public/vex-52ac523575e3ff12334a9e90dd8903fcf7c650671acffe63370dc6b5c2c44b2c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -801,6 +801,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1356-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnfsidmap1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Longhorn manager is a Go k8s controller; NFS ID mapping library not needed at runtime",
+      "timestamp": "2026-08-11T00:58:31Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1369-1"
       },
       "products": [
@@ -1332,5 +1351,5 @@
       "timestamp": "2026-08-02T00:42:34Z"
     }
   ],
-  "timestamp": "2026-08-07T17:24:26Z"
+  "timestamp": "2026-08-11T14:10:37Z"
 }

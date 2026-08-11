@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-77d01397381c514447394db5869cb0bfd4a9ae4c1b5b33da19c96c680716561c",
+  "@id": "https://openvex.dev/docs/public/vex-52ac523575e3ff12334a9e90dd8903fcf7c650671acffe63370dc6b5c2c44b2c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -43971,6 +43971,25 @@
           "@id": "pkg:golang/github.com/rancher/fleet",
           "subcomponents": [
             {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "fleet-agent connects to K8s API via standard TLS; EncryptedClientHelloConfigList not configured",
+      "timestamp": "2026-08-11T03:58:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/fleet",
+          "subcomponents": [
+            {
               "@id": "pkg:golang/stdlib@v1.25.11"
             }
           ]
@@ -53732,5 +53751,5 @@
       "timestamp": "2026-07-23T07:57:45Z"
     }
   ],
-  "timestamp": "2026-08-09T23:46:11Z"
+  "timestamp": "2026-08-11T14:10:37Z"
 }

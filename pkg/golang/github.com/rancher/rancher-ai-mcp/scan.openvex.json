@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-33931d8a9eb848dfee24659dfe5263c88387002c0e7fb3466625d193e8c7d37d",
+  "@id": "https://openvex.dev/docs/public/vex-e80781cbcf126a6bef36fc6be306bd93cfcadd876d6f0434ce43bd1e262add82",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2496,6 +2496,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42505"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/rancher-ai-mcp",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.10"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "AI MCP server uses JSON-RPC/standard TLS; EncryptedClientHelloConfigList not configured",
+      "timestamp": "2026-08-11T03:58:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42506",
         "aliases": [
           "GO-2026-5025"
@@ -3618,5 +3637,5 @@
       "timestamp": "2026-08-05T05:16:54Z"
     }
   ],
-  "timestamp": "2026-08-06T11:40:42Z"
+  "timestamp": "2026-08-11T14:10:39Z"
 }
