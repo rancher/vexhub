@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-33931d8a9eb848dfee24659dfe5263c88387002c0e7fb3466625d193e8c7d37d",
+  "@id": "https://openvex.dev/docs/public/vex-5f677e1623a3e9a6ea7a15279d5ac233f995b2b4a39fbe8c8bd898757237f2e3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1021,6 +1021,29 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39833",
+        "aliases": [
+          "GO-2026-5005",
+          "GHSA-jppx-rxg9-jmrx"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-12T02:56:53Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-41567"
       },
       "products": [
@@ -1140,6 +1163,52 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Harvester doesn't use Docker's `/containers/{id}/archive` API. This package is an indirect dependency of Helm which Harvester uses only to examine chart configuration.",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41568",
+        "aliases": [
+          "GO-2026-5668",
+          "GHSA-vp62-88p7-qqf5"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/docker/docker@v23.0.8+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-12T02:56:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41568",
+        "aliases": [
+          "GO-2026-5668",
+          "GHSA-vp62-88p7-qqf5"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/moby/moby@v25.0.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-08-12T02:56:53Z"
     },
     {
       "vulnerability": {
@@ -1516,5 +1585,5 @@
       "timestamp": "2026-08-05T21:42:11Z"
     }
   ],
-  "timestamp": "2026-08-06T11:40:42Z"
+  "timestamp": "2026-08-12T06:07:56Z"
 }
