@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-5f677e1623a3e9a6ea7a15279d5ac233f995b2b4a39fbe8c8bd898757237f2e3",
+  "@id": "https://openvex.dev/docs/public/vex-76aefbe70ade3bdf0711e64f7110e813637fa9f44da1ecff697c67226535ab2a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -114,6 +114,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CVE regards permissions on /var/lib/containerd when running that daemon - not relevant to elemental, which seems to just use some code from containerd for manipulating archives",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-36620"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/moby/moby@v25.0.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "moby is an transitive dependency of elemental-cli; it's not used by harvester",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-36621"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/moby/moby@v25.0.1+incompatible"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "moby is an transitive dependency of elemental-cli; it's not used by harvester",
+      "timestamp": "2026-08-13T23:14:41Z"
     },
     {
       "vulnerability": {
@@ -363,6 +401,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-22870"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.20.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "the elemental-cli does not use the x/net package; it's an transitive dependency",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-22872",
         "aliases": [
           "GO-2025-3595"
@@ -407,6 +464,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-47913"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "the elemental-cli does not use the x/crypto package; it's an transitive dependency",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-47914",
         "aliases": [
           "GO-2025-4135",
@@ -427,6 +503,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-08-05T21:42:11Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-58058"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/ulikunitz/xz@v0.5.11"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xz is an transitive dependency of elemental-cli; it's not used by harvester",
+      "timestamp": "2026-08-13T23:14:41Z"
     },
     {
       "vulnerability": {
@@ -539,6 +634,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-08-05T21:42:11Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-25934"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-git/go-git/v5@v5.11.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "go-git is an transitive dependency of elemental-cli; it's not used by harvester",
+      "timestamp": "2026-08-13T23:14:41Z"
     },
     {
       "vulnerability": {
@@ -744,6 +858,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CVEs seem to be about actually running moby/docker - only indirect dependencies, elemental doesn't run docker",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34165"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-git/go-git/v5@v5.11.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "go-git is an transitive dependency of elemental-cli; it's not used by harvester",
+      "timestamp": "2026-08-13T23:14:41Z"
     },
     {
       "vulnerability": {
@@ -977,6 +1110,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-39827"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "the elemental-cli does not use the x/crypto package; it's an transitive dependency",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-39828",
         "aliases": [
           "GO-2026-5014"
@@ -996,6 +1148,82 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-08-05T21:42:11Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39829"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "the elemental-cli does not use the x/crypto package; it's an transitive dependency",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39830"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "the elemental-cli does not use the x/crypto package; it's an transitive dependency",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39831"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "the elemental-cli does not use the x/crypto package; it's an transitive dependency",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39832"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "the elemental-cli does not use the x/crypto package; it's an transitive dependency",
+      "timestamp": "2026-08-13T23:14:41Z"
     },
     {
       "vulnerability": {
@@ -1041,6 +1269,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-08-12T02:56:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39834"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "the elemental-cli does not use the x/crypto package; it's an transitive dependency",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39835"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "the elemental-cli does not use the x/crypto package; it's an transitive dependency",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41506"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-git/go-git/v5@v5.11.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "go-git is an transitive dependency of elemental-cli; it's not used by harvester",
+      "timestamp": "2026-08-13T23:14:41Z"
     },
     {
       "vulnerability": {
@@ -1403,6 +1688,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42508"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "the elemental-cli does not use the x/crypto package; it's an transitive dependency",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-44740"
       },
       "products": [
@@ -1460,6 +1764,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-45571"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-git/go-git/v5@v5.11.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "go-git is an transitive dependency of elemental-cli; it's not used by harvester",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-46595",
         "aliases": [
           "GO-2026-5023"
@@ -1479,6 +1802,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-08-05T21:42:11Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46597"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.18.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "the elemental-cli does not use the x/crypto package; it's an transitive dependency",
+      "timestamp": "2026-08-13T23:14:41Z"
     },
     {
       "vulnerability": {
@@ -1583,7 +1925,64 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-08-05T21:42:11Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-71556"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-git/go-git/v5@v5.11.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "go-git is an transitive dependency of elemental-cli; it's not used by harvester",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-71557"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-git/go-git/v5@v5.11.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "go-git is an transitive dependency of elemental-cli; it's not used by harvester",
+      "timestamp": "2026-08-13T23:14:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "GHSA-w5pp-99ch-qj29"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/elemental-toolkit",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/go-git/go-git/v5@v5.11.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "go-git is an transitive dependency of elemental-cli; it's not used by harvester",
+      "timestamp": "2026-08-13T23:14:41Z"
     }
   ],
-  "timestamp": "2026-08-12T06:07:56Z"
+  "timestamp": "2026-08-14T20:01:58Z"
 }
