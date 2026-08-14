@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8e75d36790f7875134cd8427ad1a7b37bf8f66c69cc543ef229952aa0a11fa47",
+  "@id": "https://openvex.dev/docs/public/vex-89120c3cf480c812eb99da4f7826fa6ff5e62f0f1c9eb89ae2f2ac072a9eaa77",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -231,7 +231,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go cloud provider does not call libgcrypt; it is a transitive dep of libsystemd, not used directly",
       "timestamp": "2026-07-29T01:22:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-cloud-provider?repository_url=registry.suse.com/rancher/harvester-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-07-29T04:47:10Z"
+  "timestamp": "2026-08-14T20:55:34Z"
 }

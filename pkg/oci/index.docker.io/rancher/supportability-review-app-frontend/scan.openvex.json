@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-481837660fd956e706f51ba7850cf8e6e1b36c97fee0fa0d80fe10a1aa513805",
+  "@id": "https://openvex.dev/docs/public/vex-db96b81433c8a8a723bdd0f20dbdfe3032135c31b892f1da94d5e0e7a5ad2c83",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -646,7 +646,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-07-31T01:08:55Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3557-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-app-frontend?repository_url=index.docker.io/rancher/supportability-review-app-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/npm22"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "npm is a build-time package manager; the deployed static frontend never invokes npm at runtime",
+      "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-07T17:24:28Z"
+  "timestamp": "2026-08-14T20:55:35Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3fe498eff2922f8ef855c54b56d4133553a7d89358c5dd1d1badd54e5c6702f7",
+  "@id": "https://openvex.dev/docs/public/vex-280abb747072bb3aea3a553b17a22f914c80d88aa69c68584559b3d31beebba1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -155,7 +155,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go/Java runtime does not load GLib; libglib-2_0-0 is an incidental SLES dep",
       "timestamp": "2026-08-02T00:42:34Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3560-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/spotlight?repository_url=registry.suse.com/suse-observability/spotlight",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python311-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "python311-devel contains build-time headers only; not loaded by Python interpreter at runtime",
+      "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-02T13:36:44Z"
+  "timestamp": "2026-08-14T20:55:33Z"
 }

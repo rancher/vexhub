@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-52ac523575e3ff12334a9e90dd8903fcf7c650671acffe63370dc6b5c2c44b2c",
+  "@id": "https://openvex.dev/docs/public/vex-280abb747072bb3aea3a553b17a22f914c80d88aa69c68584559b3d31beebba1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -174,7 +174,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go event router uses Go crypto; libgcrypt C library is not called at runtime",
       "timestamp": "2026-08-11T00:58:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-eventrouter?repository_url=registry.suse.com/rancher/harvester-eventrouter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-11T14:10:37Z"
+  "timestamp": "2026-08-14T20:55:33Z"
 }

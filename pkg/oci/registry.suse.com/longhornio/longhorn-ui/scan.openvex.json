@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1efcef22b9ddb8847cb5ac79c957e54a643fd0a9a43fbe89e2857799db90da9a",
+  "@id": "https://openvex.dev/docs/public/vex-280abb747072bb3aea3a553b17a22f914c80d88aa69c68584559b3d31beebba1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1729,7 +1729,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhorn-ui serves static files via nginx; nginx does not link or load libglib at runtime",
       "timestamp": "2026-08-06T04:40:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=registry.suse.com/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-07T17:24:27Z"
+  "timestamp": "2026-08-14T20:55:33Z"
 }

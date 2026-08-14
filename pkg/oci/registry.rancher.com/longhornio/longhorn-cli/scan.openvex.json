@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6d175d7edc6c2e8cfbf27411ecae5c0ebb5d52811fbc6d6421c47348d7168ef6",
+  "@id": "https://openvex.dev/docs/public/vex-280abb747072bb3aea3a553b17a22f914c80d88aa69c68584559b3d31beebba1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1672,7 +1672,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go Longhorn CLI tool; GLib/GObject libraries are not used in Go binaries",
       "timestamp": "2026-07-30T03:00:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=registry.rancher.com/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-05T08:26:15Z"
+  "timestamp": "2026-08-14T20:55:33Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d0a999bace1218b59ca7abd6f0716e34e6fe10f4b536c6dd711929f68b2100d7",
+  "@id": "https://openvex.dev/docs/public/vex-db96b81433c8a8a723bdd0f20dbdfe3032135c31b892f1da94d5e0e7a5ad2c83",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1529,7 +1529,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Kubernetes Go binary does not invoke gawk; incidental SLES package not in execution path",
       "timestamp": "2026-08-07T03:50:27Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=index.docker.io/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-11T21:15:50Z"
+  "timestamp": "2026-08-14T20:55:35Z"
 }
