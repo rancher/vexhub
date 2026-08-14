@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-481837660fd956e706f51ba7850cf8e6e1b36c97fee0fa0d80fe10a1aa513805",
+  "@id": "https://openvex.dev/docs/public/vex-db96b81433c8a8a723bdd0f20dbdfe3032135c31b892f1da94d5e0e7a5ad2c83",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1029,7 +1029,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI operator is a Go K8s operator; does not use GLib at runtime",
       "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3592-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-operator?repository_url=registry.suse.com/suse/sles/15.7/cdi-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CDI operator is a Go binary; does not invoke the gzip CLI at runtime",
+      "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-07T17:24:28Z"
+  "timestamp": "2026-08-14T20:55:35Z"
 }

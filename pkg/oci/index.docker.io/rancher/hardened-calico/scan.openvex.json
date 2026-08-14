@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-481837660fd956e706f51ba7850cf8e6e1b36c97fee0fa0d80fe10a1aa513805",
+  "@id": "https://openvex.dev/docs/public/vex-280abb747072bb3aea3a553b17a22f914c80d88aa69c68584559b3d31beebba1",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -752,7 +752,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "SUSE-SU-2026:3341-1 fixes six glib2 OOB-read/integer-overflow issues (CVE-2026-58010/58011/58012/58013/58014/58016) in GVariant, GDateTime, GRegex, GIOChannel, GKeyFile and GDBus introspection parsing. glib2 is only a transitive dependency of BCI base tooling; it is not linked into or used by the statically-linked Calico Go binaries or BIRD/runit, and none of the affected GLib APIs are reachable at runtime.",
       "timestamp": "2026-07-30T02:54:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=index.docker.io/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-07T17:24:28Z"
+  "timestamp": "2026-08-14T20:55:33Z"
 }
