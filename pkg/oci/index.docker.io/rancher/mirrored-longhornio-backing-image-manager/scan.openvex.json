@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-14ecbf374bc49262f8333b44e2b4d6057755def823e6aaaacf49b224f1e35b89",
+  "@id": "https://openvex.dev/docs/public/vex-89120c3cf480c812eb99da4f7826fa6ff5e62f0f1c9eb89ae2f2ac072a9eaa77",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1501,7 +1501,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go-based image manager; GObject C library not loaded at runtime",
       "timestamp": "2026-08-05T15:40:56Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-06T23:02:26Z"
+  "timestamp": "2026-08-14T20:55:34Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-68fd213ab7ad97d4204239e7f9ac63145754c28e18fdc55d619209eac8424963",
+  "@id": "https://openvex.dev/docs/public/vex-89120c3cf480c812eb99da4f7826fa6ff5e62f0f1c9eb89ae2f2ac072a9eaa77",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2261,7 +2261,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "glib2-tools contains only CLI dev utilities (glib-compile-schemas, gdbus, etc.) not invoked by Go binary entrypoint",
       "timestamp": "2026-08-06T04:40:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=registry.suse.com/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-10T13:37:26Z"
+  "timestamp": "2026-08-14T20:55:34Z"
 }
