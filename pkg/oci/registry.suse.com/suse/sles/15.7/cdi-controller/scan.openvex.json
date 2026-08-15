@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-13907b1bc058ab0f8e5374148a2bbda1a10204969a12506b6429a8b411c9ce73",
+  "@id": "https://openvex.dev/docs/public/vex-4b616595e73496f46e3477893c60debeaedb7506b807d57739e7279bfc62af7d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -915,7 +915,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CDI controller is a Go K8s operator; does not use GLib at runtime",
       "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental SLES dependency; the running app never invokes perl",
+      "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-04T06:06:38Z"
+  "timestamp": "2026-08-15T13:20:34Z"
 }

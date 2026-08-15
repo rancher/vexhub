@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4bbdf8854d7fdf06d9265730de54318a942cf9c76f3b26447fa729f9b93d0e4a",
+  "@id": "https://openvex.dev/docs/public/vex-cc56f805ee0fdf099f5f5098e331e0ece96f1b3ae6f266707c48658f20da7fc2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -288,7 +288,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go/Java runtime does not load GLib; libglib-2_0-0 is an incidental SLES dep",
       "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hbase-master?repository_url=registry.rancher.com/suse-observability/hbase-master",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental SLES dependency; the running app never invokes perl",
+      "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3600-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hbase-master?repository_url=registry.rancher.com/suse-observability/hbase-master",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/rpm-ndb"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm-ndb is the rpm package DB backend, only used during image build, never invoked by the running app",
+      "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-04T06:06:37Z"
+  "timestamp": "2026-08-15T13:20:35Z"
 }

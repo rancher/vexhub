@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1efcef22b9ddb8847cb5ac79c957e54a643fd0a9a43fbe89e2857799db90da9a",
+  "@id": "https://openvex.dev/docs/public/vex-4b616595e73496f46e3477893c60debeaedb7506b807d57739e7279bfc62af7d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -155,7 +155,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-07-30T03:00:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3592-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/enforcer?repository_url=registry.rancher.com/neuvector/enforcer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is a base-image dependency not invoked by the container's entrypoint process",
+      "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-07T17:24:27Z"
+  "timestamp": "2026-08-15T13:20:34Z"
 }
