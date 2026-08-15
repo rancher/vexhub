@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6f02ea611327533cbba22a1fe80349b557c5d85cca865975932cf6b93161f640",
+  "@id": "https://openvex.dev/docs/public/vex-1ed65153f745c590734281ae18cdb3f1d9dac4f650ce8da9ab8c628a51416a9f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -345,7 +345,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "JVM-based correlate service; Java does not load or use the GLib C library at runtime",
       "timestamp": "2026-08-05T02:24:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-correlate?repository_url=registry.suse.com/suse-observability/stackstate-correlate",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental SLES dependency; the running app never invokes perl",
+      "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3592-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-correlate?repository_url=registry.suse.com/suse-observability/stackstate-correlate",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is a base-image dependency not invoked by the container's entrypoint process",
+      "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-05T08:26:16Z"
+  "timestamp": "2026-08-15T13:20:36Z"
 }
