@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-89120c3cf480c812eb99da4f7826fa6ff5e62f0f1c9eb89ae2f2ac072a9eaa77",
+  "@id": "https://openvex.dev/docs/public/vex-cc56f805ee0fdf099f5f5098e331e0ece96f1b3ae6f266707c48658f20da7fc2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -231,6 +231,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-internal?repository_url=index.docker.io/rancher/supportability-review-internal",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental SLES dependency; the running app never invokes perl",
+      "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3560-1"
       },
       "products": [
@@ -247,7 +266,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "python311-devel contains build-time headers only; not loaded by Python interpreter at runtime",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3600-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-internal?repository_url=index.docker.io/rancher/supportability-review-internal",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/rpm-ndb"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm-ndb is the rpm package DB backend, only used during image build, never invoked by the running app",
+      "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-14T20:55:34Z"
+  "timestamp": "2026-08-15T13:20:35Z"
 }

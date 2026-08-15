@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-89120c3cf480c812eb99da4f7826fa6ff5e62f0f1c9eb89ae2f2ac072a9eaa77",
+  "@id": "https://openvex.dev/docs/public/vex-1ed65153f745c590734281ae18cdb3f1d9dac4f650ce8da9ab8c628a51416a9f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -771,7 +771,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3592-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-calico?repository_url=registry.rancher.com/rancher/hardened-calico",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is a base-image dependency not invoked by the container's entrypoint process",
+      "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-14T20:55:34Z"
+  "timestamp": "2026-08-15T13:20:36Z"
 }

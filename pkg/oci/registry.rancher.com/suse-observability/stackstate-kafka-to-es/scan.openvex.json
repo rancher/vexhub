@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6d175d7edc6c2e8cfbf27411ecae5c0ebb5d52811fbc6d6421c47348d7168ef6",
+  "@id": "https://openvex.dev/docs/public/vex-60223fa7590d6cb358068ce5bb75c4ab3d03ba08e7b6563b9e46f843da56edd2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -212,7 +212,64 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-07-30T03:00:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-kafka-to-es?repository_url=registry.rancher.com/suse-observability/stackstate-kafka-to-es",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental SLES dependency; the running app never invokes perl",
+      "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3592-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-kafka-to-es?repository_url=registry.rancher.com/suse-observability/stackstate-kafka-to-es",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is a base-image dependency not invoked by the container's entrypoint process",
+      "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3600-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-kafka-to-es?repository_url=registry.rancher.com/suse-observability/stackstate-kafka-to-es",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/rpm-ndb"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm-ndb is the rpm package DB backend, only used during image build, never invoked by the running app",
+      "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-05T08:26:15Z"
+  "timestamp": "2026-08-15T13:20:37Z"
 }

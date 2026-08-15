@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c849ccbdff16d21ce390369902320e79f7fc0514f737b12d03d3d823362a7f37",
+  "@id": "https://openvex.dev/docs/public/vex-4b616595e73496f46e3477893c60debeaedb7506b807d57739e7279bfc62af7d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1995,7 +1995,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3592-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.suse.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is a base-image dependency not invoked by the container's entrypoint process",
+      "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-14T20:55:32Z"
+  "timestamp": "2026-08-15T13:20:34Z"
 }
