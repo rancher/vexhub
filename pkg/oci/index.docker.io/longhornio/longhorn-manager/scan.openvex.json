@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-60223fa7590d6cb358068ce5bb75c4ab3d03ba08e7b6563b9e46f843da56edd2",
+  "@id": "https://openvex.dev/docs/public/vex-f2280877516e1dd4d66acc048636659b78f07c8673d4d0b2ae5b65f83f5fe0f5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1048,6 +1048,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=index.docker.io/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No systemd/init process running in container",
+      "timestamp": "2026-08-18T07:24:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1065-1"
       },
       "products": [
@@ -1656,6 +1675,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2925-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=index.docker.io/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http, not libcurl at runtime",
+      "timestamp": "2026-08-18T07:24:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3163-1"
       },
       "products": [
@@ -1672,6 +1710,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
       "timestamp": "2026-07-22T21:11:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=index.docker.io/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No journald/systemd interaction in Go manager binary",
+      "timestamp": "2026-08-18T07:24:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=index.docker.io/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No systemd/init process running in container",
+      "timestamp": "2026-08-18T07:24:14Z"
     },
     {
       "vulnerability": {
@@ -1769,5 +1845,5 @@
       "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:37Z"
+  "timestamp": "2026-08-18T21:25:46Z"
 }

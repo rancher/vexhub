@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cc56f805ee0fdf099f5f5098e331e0ece96f1b3ae6f266707c48658f20da7fc2",
+  "@id": "https://openvex.dev/docs/public/vex-f2280877516e1dd4d66acc048636659b78f07c8673d4d0b2ae5b65f83f5fe0f5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1621,6 +1621,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2983-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libjq1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary does not use libjq at runtime",
+      "timestamp": "2026-08-18T07:24:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3097-1"
       },
       "products": [
@@ -1751,7 +1770,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gzip CLI is a base-image dependency not invoked by the container's entrypoint process",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No sshd server run by rancher-agent; ssh not invoked",
+      "timestamp": "2026-08-18T07:24:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-fips"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No sshd server run by rancher-agent; ssh not invoked",
+      "timestamp": "2026-08-18T07:24:14Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:35Z"
+  "timestamp": "2026-08-18T21:25:46Z"
 }

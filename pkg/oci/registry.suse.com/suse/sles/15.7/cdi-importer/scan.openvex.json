@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4bbdf8854d7fdf06d9265730de54318a942cf9c76f3b26447fa729f9b93d0e4a",
+  "@id": "https://openvex.dev/docs/public/vex-f2280877516e1dd4d66acc048636659b78f07c8673d4d0b2ae5b65f83f5fe0f5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -785,6 +785,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3269-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.7/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go importer never shells out to gzip CLI",
+      "timestamp": "2026-08-18T07:24:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -820,7 +839,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3592-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.7/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go importer never shells out to gzip CLI",
+      "timestamp": "2026-08-18T07:24:14Z"
     }
   ],
-  "timestamp": "2026-08-04T06:06:37Z"
+  "timestamp": "2026-08-18T21:25:46Z"
 }

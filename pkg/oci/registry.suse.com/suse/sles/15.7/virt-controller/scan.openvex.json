@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-89120c3cf480c812eb99da4f7826fa6ff5e62f0f1c9eb89ae2f2ac072a9eaa77",
+  "@id": "https://openvex.dev/docs/public/vex-f2280877516e1dd4d66acc048636659b78f07c8673d4d0b2ae5b65f83f5fe0f5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -836,7 +836,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "KubeVirt controller is a Go binary; does not invoke the gzip CLI at runtime",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3600-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/rpm-ndb"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go virt-controller never queries local RPM database at runtime",
+      "timestamp": "2026-08-18T07:24:14Z"
     }
   ],
-  "timestamp": "2026-08-14T20:55:34Z"
+  "timestamp": "2026-08-18T21:25:46Z"
 }

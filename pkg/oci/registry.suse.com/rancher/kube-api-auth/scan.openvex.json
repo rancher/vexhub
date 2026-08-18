@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b647ac40128d54107bd9fd35df8d422629b3e7b67056ef55d5292e11bb7ae4c2",
+  "@id": "https://openvex.dev/docs/public/vex-f2280877516e1dd4d66acc048636659b78f07c8673d4d0b2ae5b65f83f5fe0f5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,6 +22,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "kube-api-auth is a pure Go authentication proxy (CGO_ENABLED=0); glibc not loaded at runtime",
       "timestamp": "2026-07-01T00:12:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02362-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kube-api-auth?repository_url=registry.suse.com/rancher/kube-api-auth",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/coreutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "coreutils CLI is incidental dep, not invoked by Go entrypoint",
+      "timestamp": "2026-08-18T07:24:14Z"
     },
     {
       "vulnerability": {
@@ -157,5 +176,5 @@
       "timestamp": "2026-07-01T00:12:09Z"
     }
   ],
-  "timestamp": "2026-07-01T02:54:27Z"
+  "timestamp": "2026-08-18T21:25:46Z"
 }
