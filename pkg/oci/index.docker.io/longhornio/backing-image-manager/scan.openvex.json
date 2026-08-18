@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-280abb747072bb3aea3a553b17a22f914c80d88aa69c68584559b3d31beebba1",
+  "@id": "https://openvex.dev/docs/public/vex-0c5437692fb483ff66c00971f828d45b3cd9711d9197b5f915d30f1e607ccde0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1485,6 +1485,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:0903-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http, not libcurl at runtime",
+      "timestamp": "2026-08-18T07:24:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1040-1"
       },
       "products": [
@@ -1539,6 +1558,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "udev is a system device manager daemon; not started or used by this container",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1074-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "HTTP/2 lib unused; Go binary does not link libcurl/nghttp2",
+      "timestamp": "2026-08-18T07:24:14Z"
     },
     {
       "vulnerability": {
@@ -2093,6 +2131,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2925-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http, not libcurl at runtime",
+      "timestamp": "2026-08-18T07:24:14Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3038-1"
       },
       "products": [
@@ -2176,6 +2233,25 @@
           "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No journald/systemd interaction in Go backing-image-manager",
+      "timestamp": "2026-08-18T07:24:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/udev"
             }
           ]
@@ -2185,6 +2261,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go/Java container does not enumerate hardware devices; udev library not called at runtime",
       "timestamp": "2026-08-02T00:42:34Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3269-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is incidental dep, not invoked by Go entrypoint",
+      "timestamp": "2026-08-18T07:24:14Z"
     },
     {
       "vulnerability": {
@@ -2280,7 +2375,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3592-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/backing-image-manager?repository_url=index.docker.io/longhornio/backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is incidental dep, not invoked by Go entrypoint",
+      "timestamp": "2026-08-18T07:24:14Z"
     }
   ],
-  "timestamp": "2026-08-14T20:55:33Z"
+  "timestamp": "2026-08-18T21:25:45Z"
 }
