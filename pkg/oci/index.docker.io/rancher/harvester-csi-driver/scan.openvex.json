@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1ed65153f745c590734281ae18cdb3f1d9dac4f650ce8da9ab8c628a51416a9f",
+  "@id": "https://openvex.dev/docs/public/vex-f71370549bc7adad8207152c039b7d88c99b0eaa197f49d39d5d19825cbb4e97",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1960,6 +1960,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22172-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zypper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CSI driver is a Go binary; zypper package manager is never invoked at container runtime",
+      "timestamp": "2026-08-18T23:50:39Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22294-1"
       },
       "products": [
@@ -2416,6 +2435,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2590-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zypper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CSI driver is a Go binary; zypper package manager is never invoked at container runtime",
+      "timestamp": "2026-08-18T23:50:39Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2714-1"
       },
       "products": [
@@ -2624,5 +2662,5 @@
       "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:36Z"
+  "timestamp": "2026-08-20T17:06:56Z"
 }
