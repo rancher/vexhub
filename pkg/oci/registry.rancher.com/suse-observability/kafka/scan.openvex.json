@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cc56f805ee0fdf099f5f5098e331e0ece96f1b3ae6f266707c48658f20da7fc2",
+  "@id": "https://openvex.dev/docs/public/vex-aaaeb44705b7dcf04d9a26d2c0443ae1f47a0af42757a3d2e1ceba76d8238f9f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -234,6 +234,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3455-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kafka?repository_url=registry.rancher.com/suse-observability/kafka",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gawk"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Kafka runs as a JVM process; gawk is an incidental SLES dependency never invoked at runtime",
+      "timestamp": "2026-08-18T23:50:39Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3592-1"
       },
       "products": [
@@ -271,5 +290,5 @@
       "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:35Z"
+  "timestamp": "2026-08-20T17:06:57Z"
 }
