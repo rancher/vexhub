@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d0a999bace1218b59ca7abd6f0716e34e6fe10f4b536c6dd711929f68b2100d7",
+  "@id": "https://openvex.dev/docs/public/vex-937572ab17029bed54b0be7de83758aa5146b7595f5202407c8da53d805ff677",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1004,6 +1004,25 @@
           "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.suse.com/rancher/nginx-ingress-controller",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libcap-progs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libcap-progs CLI tools (setcap/getcap) are not invoked by the nginx ingress controller entrypoint",
+      "timestamp": "2026-08-18T23:50:39Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21373-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.suse.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libcap2"
             }
           ]
@@ -1376,5 +1395,5 @@
       "timestamp": "2026-07-29T15:47:44Z"
     }
   ],
-  "timestamp": "2026-08-11T21:15:50Z"
+  "timestamp": "2026-08-20T17:06:54Z"
 }

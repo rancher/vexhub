@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-60223fa7590d6cb358068ce5bb75c4ab3d03ba08e7b6563b9e46f843da56edd2",
+  "@id": "https://openvex.dev/docs/public/vex-aaaeb44705b7dcf04d9a26d2c0443ae1f47a0af42757a3d2e1ceba76d8238f9f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1960,6 +1960,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22172-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zypper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CSI driver is a Go binary; zypper package manager is never invoked at container runtime",
+      "timestamp": "2026-08-18T23:50:39Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22294-1"
       },
       "products": [
@@ -2416,6 +2435,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2590-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zypper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CSI driver is a Go binary; zypper package manager is never invoked at container runtime",
+      "timestamp": "2026-08-18T23:50:39Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2714-1"
       },
       "products": [
@@ -2624,5 +2662,5 @@
       "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:37Z"
+  "timestamp": "2026-08-20T17:06:57Z"
 }
