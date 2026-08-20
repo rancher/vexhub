@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f2280877516e1dd4d66acc048636659b78f07c8673d4d0b2ae5b65f83f5fe0f5",
+  "@id": "https://openvex.dev/docs/public/vex-f71370549bc7adad8207152c039b7d88c99b0eaa197f49d39d5d19825cbb4e97",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -709,6 +709,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.7/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zypper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cdi-importer entrypoint is a Go binary; zypper is not invoked at container runtime",
+      "timestamp": "2026-08-18T23:50:39Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2648-1"
       },
       "products": [
@@ -860,5 +879,5 @@
       "timestamp": "2026-08-18T07:24:14Z"
     }
   ],
-  "timestamp": "2026-08-18T21:25:46Z"
+  "timestamp": "2026-08-20T17:06:56Z"
 }
