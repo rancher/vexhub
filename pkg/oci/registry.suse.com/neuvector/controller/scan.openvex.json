@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6f02ea611327533cbba22a1fe80349b557c5d85cca865975932cf6b93161f640",
+  "@id": "https://openvex.dev/docs/public/vex-a0bc6b0226b531bf16b66af155997b304879d81533f317a5f738bc5fb8c7e2d8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -120,6 +120,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=registry.suse.com/neuvector/controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go controller binary runs without systemd/journald present; libsystemd code paths unreachable",
+      "timestamp": "2026-08-21T00:38:15Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -176,5 +195,5 @@
       "timestamp": "2026-08-05T02:24:03Z"
     }
   ],
-  "timestamp": "2026-08-05T08:26:16Z"
+  "timestamp": "2026-08-21T20:06:49Z"
 }

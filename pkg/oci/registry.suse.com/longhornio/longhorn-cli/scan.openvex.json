@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-db96b81433c8a8a723bdd0f20dbdfe3032135c31b892f1da94d5e0e7a5ad2c83",
+  "@id": "https://openvex.dev/docs/public/vex-d817a47ff03e88c5a9c990baabc006d3ef8fc9eccb11f11a9cddba23809f6d35",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1691,7 +1691,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3600-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=registry.suse.com/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/rpm-ndb"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Static Go CLI never invokes rpm/librpm at runtime; rpm-ndb is an incidental base-image dependency",
+      "timestamp": "2026-08-21T00:38:15Z"
     }
   ],
-  "timestamp": "2026-08-14T20:55:35Z"
+  "timestamp": "2026-08-21T20:06:48Z"
 }

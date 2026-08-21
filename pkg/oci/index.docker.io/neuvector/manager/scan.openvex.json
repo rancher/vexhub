@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b1391fdb9b634ecdaa6c37f8e5a46471c4417e06a47a12922091f65994f21dd6",
+  "@id": "https://openvex.dev/docs/public/vex-a0bc6b0226b531bf16b66af155997b304879d81533f317a5f738bc5fb8c7e2d8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2464-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/manager?repository_url=index.docker.io/neuvector/manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpython3_13-1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "neuvector/manager is a Java GUI app; the SLES Python runtime library is never invoked",
+      "timestamp": "2026-08-21T00:38:15Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:2464-1"
@@ -22,7 +41,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "NeuVector Manager is a Java/Go web UI; Python 3.13 is an incidental OS dep, not invoked at runtime",
       "timestamp": "2026-07-11T03:58:26Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/manager?repository_url=index.docker.io/neuvector/manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java app uses JVM's own Kerberos support; system krb5 C library is not exercised at runtime",
+      "timestamp": "2026-08-21T00:38:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/manager?repository_url=index.docker.io/neuvector/manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Java app container has no systemd/journald running; libsystemd IPC paths are unreachable",
+      "timestamp": "2026-08-21T00:38:15Z"
     }
   ],
-  "timestamp": "2026-07-11T12:52:56Z"
+  "timestamp": "2026-08-21T20:06:49Z"
 }
