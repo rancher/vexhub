@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-db96b81433c8a8a723bdd0f20dbdfe3032135c31b892f1da94d5e0e7a5ad2c83",
+  "@id": "https://openvex.dev/docs/public/vex-4e72097732406c8c3a4a93913fb217d62439e9a39d669da3fffe8c3d7b878908",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1295,6 +1295,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3553-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=registry.suse.com/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgd3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "longhorn-ui serves a Node.js/nginx web UI; no image-processing code path uses libgd",
+      "timestamp": "2026-08-21T00:38:15Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3558-1"
       },
       "products": [
@@ -1313,5 +1332,5 @@
       "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-14T20:55:35Z"
+  "timestamp": "2026-08-21T20:06:50Z"
 }
