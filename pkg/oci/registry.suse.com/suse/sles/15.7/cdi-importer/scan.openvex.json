@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f71370549bc7adad8207152c039b7d88c99b0eaa197f49d39d5d19825cbb4e97",
+  "@id": "https://openvex.dev/docs/public/vex-4e72097732406c8c3a4a93913fb217d62439e9a39d669da3fffe8c3d7b878908",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -877,7 +877,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go importer never shells out to gzip CLI",
       "timestamp": "2026-08-18T07:24:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3600-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-importer?repository_url=registry.suse.com/suse/sles/15.7/cdi-importer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/rpm-ndb"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cdi-importer is a Go data-import binary; rpm database library is never invoked at runtime",
+      "timestamp": "2026-08-21T00:38:15Z"
     }
   ],
-  "timestamp": "2026-08-20T17:06:56Z"
+  "timestamp": "2026-08-21T20:06:50Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-89120c3cf480c812eb99da4f7826fa6ff5e62f0f1c9eb89ae2f2ac072a9eaa77",
+  "@id": "https://openvex.dev/docs/public/vex-a0bc6b0226b531bf16b66af155997b304879d81533f317a5f738bc5fb8c7e2d8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1387,7 +1387,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3600-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-vm-import-controller?repository_url=registry.suse.com/rancher/harvester-vm-import-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/rpm-ndb"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go controller binary never calls rpm/librpm; rpm-ndb is unused leftover package metadata lib",
+      "timestamp": "2026-08-21T00:38:15Z"
     }
   ],
-  "timestamp": "2026-08-14T20:55:34Z"
+  "timestamp": "2026-08-21T20:06:49Z"
 }
