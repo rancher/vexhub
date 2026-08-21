@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-31676a9e9050289f6a38fde4e0e5bf34a1b59da59e1113756c3e9c06429ed7d7",
+  "@id": "https://openvex.dev/docs/public/vex-a0bc6b0226b531bf16b66af155997b304879d81533f317a5f738bc5fb8c7e2d8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -915,7 +915,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3605-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.suse.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses golang.org/x/crypto/ssh; system openssh binaries never invoked",
+      "timestamp": "2026-08-21T00:38:15Z"
     }
   ],
-  "timestamp": "2026-08-18T21:25:48Z"
+  "timestamp": "2026-08-21T20:06:49Z"
 }
