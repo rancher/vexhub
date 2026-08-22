@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0c5437692fb483ff66c00971f828d45b3cd9711d9197b5f915d30f1e607ccde0",
+  "@id": "https://openvex.dev/docs/public/vex-11370e109d83a51a79ab7d6d14b3b8ecccda797b0333d8fdd9cbf3e96f2f0b14",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2508,7 +2508,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go instance-manager never queries local RPM database at runtime",
       "timestamp": "2026-08-18T07:24:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.suse.com/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python311-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-08-22T00:47:48Z"
     }
   ],
-  "timestamp": "2026-08-18T21:25:45Z"
+  "timestamp": "2026-08-22T17:57:55Z"
 }
