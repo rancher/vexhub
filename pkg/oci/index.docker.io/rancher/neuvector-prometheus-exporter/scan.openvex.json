@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-60223fa7590d6cb358068ce5bb75c4ab3d03ba08e7b6563b9e46f843da56edd2",
+  "@id": "https://openvex.dev/docs/public/vex-de03b1f3ee83407f1d61458b49d0d5ae793ad4901a867f273be3250339a8ed29",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -342,7 +342,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rpm-ndb is the rpm package DB backend, only used during image build, never invoked by the running app",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3649-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-prometheus-exporter?repository_url=index.docker.io/rancher/neuvector-prometheus-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpython3_13-1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "NeuVector Prometheus exporter is a Go binary; Python shared library is never loaded at runtime",
+      "timestamp": "2026-08-22T00:47:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3649-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-prometheus-exporter?repository_url=index.docker.io/rancher/neuvector-prometheus-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python313-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "python313-devel contains only build-time development headers; not loaded or executed at runtime",
+      "timestamp": "2026-08-22T00:47:48Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:37Z"
+  "timestamp": "2026-08-22T17:57:54Z"
 }
