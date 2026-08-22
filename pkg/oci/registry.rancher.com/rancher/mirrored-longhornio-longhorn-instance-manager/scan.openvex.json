@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f2280877516e1dd4d66acc048636659b78f07c8673d4d0b2ae5b65f83f5fe0f5",
+  "@id": "https://openvex.dev/docs/public/vex-11370e109d83a51a79ab7d6d14b3b8ecccda797b0333d8fdd9cbf3e96f2f0b14",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2318,7 +2318,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rpm-ndb is the rpm package DB backend, only used during image build, never invoked by the running app",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python311-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-08-22T00:47:48Z"
     }
   ],
-  "timestamp": "2026-08-18T21:25:46Z"
+  "timestamp": "2026-08-22T17:57:55Z"
 }
