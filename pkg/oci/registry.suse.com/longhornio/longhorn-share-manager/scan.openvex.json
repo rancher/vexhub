@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-89120c3cf480c812eb99da4f7826fa6ff5e62f0f1c9eb89ae2f2ac072a9eaa77",
+  "@id": "https://openvex.dev/docs/public/vex-c75b8201a745ffe1c4414c4ebc455197e108ff144e26ff0a064cf336e7f56a27",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -744,6 +744,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3269-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=registry.suse.com/longhornio/longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is incidental; Go share-manager binary never invokes gzip command",
+      "timestamp": "2026-08-23T03:47:11Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -798,7 +817,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3592-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=registry.suse.com/longhornio/longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is incidental; Go share-manager binary never invokes gzip command",
+      "timestamp": "2026-08-23T03:47:11Z"
     }
   ],
-  "timestamp": "2026-08-14T20:55:34Z"
+  "timestamp": "2026-08-23T13:32:26Z"
 }
