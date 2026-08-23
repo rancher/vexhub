@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-937572ab17029bed54b0be7de83758aa5146b7595f5202407c8da53d805ff677",
+  "@id": "https://openvex.dev/docs/public/vex-c75b8201a745ffe1c4414c4ebc455197e108ff144e26ff0a064cf336e7f56a27",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1099,6 +1099,25 @@
           "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.suse.com/rancher/nginx-ingress-controller",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl CLI is incidental; nginx-ingress-controller entrypoint never shells out to curl",
+      "timestamp": "2026-08-23T03:47:11Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22156-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.suse.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libcurl-mini4"
             }
           ]
@@ -1222,6 +1241,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22582-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.suse.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl CLI is incidental; nginx-ingress-controller entrypoint never shells out to curl",
+      "timestamp": "2026-08-23T03:47:11Z"
     },
     {
       "vulnerability": {
@@ -1395,5 +1433,5 @@
       "timestamp": "2026-07-29T15:47:44Z"
     }
   ],
-  "timestamp": "2026-08-20T17:06:54Z"
+  "timestamp": "2026-08-23T13:32:26Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d817a47ff03e88c5a9c990baabc006d3ef8fc9eccb11f11a9cddba23809f6d35",
+  "@id": "https://openvex.dev/docs/public/vex-1a064d404dcc7a8059364576204b81f4c96dc0b76111913cf2b8e19f766c15b6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -804,6 +804,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.rancher.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "krb5 is an incidental SLES dependency; Go docker-machine binary never invokes Kerberos code",
+      "timestamp": "2026-08-23T03:47:11Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2925-1"
       },
       "products": [
@@ -936,5 +955,5 @@
       "timestamp": "2026-08-21T00:38:15Z"
     }
   ],
-  "timestamp": "2026-08-21T20:06:48Z"
+  "timestamp": "2026-08-23T13:32:28Z"
 }
