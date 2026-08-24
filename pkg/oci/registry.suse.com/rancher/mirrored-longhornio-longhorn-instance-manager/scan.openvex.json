@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6b5eb538c63d2f397675f0e66cde1a23271e3ceb508c8fa4115e0aa998502a68",
+  "@id": "https://openvex.dev/docs/public/vex-55771dd6f614a969a3bcdfa98e4c8e39cbea4e39cb099c636616a585cd05ddff",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1865,6 +1865,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=registry.suse.com/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zypper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "zypper CLI is an incidental SLES dependency, never invoked by the instance-manager process",
+      "timestamp": "2026-08-24T00:20:32Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2648-1"
       },
       "products": [
@@ -2339,5 +2358,5 @@
       "timestamp": "2026-08-22T00:47:48Z"
     }
   ],
-  "timestamp": "2026-08-22T17:57:53Z"
+  "timestamp": "2026-08-24T12:03:18Z"
 }
