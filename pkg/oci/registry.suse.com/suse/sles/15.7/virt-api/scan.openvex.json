@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1a064d404dcc7a8059364576204b81f4c96dc0b76111913cf2b8e19f766c15b6",
+  "@id": "https://openvex.dev/docs/public/vex-55771dd6f614a969a3bcdfa98e4c8e39cbea4e39cb099c636616a585cd05ddff",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -789,6 +789,44 @@
           "@id": "pkg:oci/virt-api?repository_url=registry.suse.com/suse/sles/15.7/virt-api",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-api is an API-server Go binary; libfdisk partitioning code is never called",
+      "timestamp": "2026-08-24T00:20:32Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-api?repository_url=registry.suse.com/suse/sles/15.7/virt-api",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-api never performs filesystem mount operations that call libmount",
+      "timestamp": "2026-08-24T00:20:32Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-api?repository_url=registry.suse.com/suse/sles/15.7/virt-api",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libuuid1"
             }
           ]
@@ -1009,5 +1047,5 @@
       "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-23T13:32:28Z"
+  "timestamp": "2026-08-24T12:03:18Z"
 }

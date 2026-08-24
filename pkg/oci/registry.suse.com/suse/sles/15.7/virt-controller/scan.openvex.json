@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1a064d404dcc7a8059364576204b81f4c96dc0b76111913cf2b8e19f766c15b6",
+  "@id": "https://openvex.dev/docs/public/vex-c18034d21af953efb2d6c5f2d2cbd74ca56c6f7f062da76b768cbb38fc3bb52f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -668,6 +668,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libfdisk1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-controller is a Kubernetes control-plane binary; disk-partitioning code is unused",
+      "timestamp": "2026-08-24T00:20:32Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2528-1"
       },
       "products": [
@@ -876,5 +895,5 @@
       "timestamp": "2026-08-18T07:24:14Z"
     }
   ],
-  "timestamp": "2026-08-23T13:32:28Z"
+  "timestamp": "2026-08-24T12:03:17Z"
 }

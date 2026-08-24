@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d817a47ff03e88c5a9c990baabc006d3ef8fc9eccb11f11a9cddba23809f6d35",
+  "@id": "https://openvex.dev/docs/public/vex-55771dd6f614a969a3bcdfa98e4c8e39cbea4e39cb099c636616a585cd05ddff",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -732,6 +732,25 @@
           "@id": "pkg:oci/virt-handler?repository_url=registry.suse.com/suse/sles/15.7/virt-handler",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libsolv-tools-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsolv resolver code is never invoked by the virt-handler Go daemon at runtime",
+      "timestamp": "2026-08-24T00:20:32Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-handler?repository_url=registry.suse.com/suse/sles/15.7/virt-handler",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libzypp"
             }
           ]
@@ -933,5 +952,5 @@
       "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-21T20:06:48Z"
+  "timestamp": "2026-08-24T12:03:18Z"
 }
