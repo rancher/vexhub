@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-3872f04e7c563c35c1735fee441463a2c21f70ee6880496535d276fc189098fa",
+  "@id": "https://openvex.dev/docs/public/vex-c18034d21af953efb2d6c5f2d2cbd74ca56c6f7f062da76b768cbb38fc3bb52f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -234,6 +234,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3455-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/enforcer?repository_url=registry.rancher.com/neuvector/enforcer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gawk"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gawk is an incidental SLES dependency never invoked by the enforcer agent",
+      "timestamp": "2026-08-24T00:20:32Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3558-1"
       },
       "products": [
@@ -271,5 +290,5 @@
       "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-23T13:32:25Z"
+  "timestamp": "2026-08-24T12:03:17Z"
 }
