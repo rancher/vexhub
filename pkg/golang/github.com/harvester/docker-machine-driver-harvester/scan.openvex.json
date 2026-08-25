@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9657e308e9c3a3be4beba6a2dd7ff25f64601a66e225fe5275dd275ef8e83105",
+  "@id": "https://openvex.dev/docs/public/vex-2a1161ba7c8fdd067d673ead885e104f3a0c0b1dc0a002356d0e7cefac0835bf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1815,6 +1815,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "This vulnerability is a runtime exploit on live virtual machines with active guest agent running. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package, which Harvester components uses only for a handful of Go util functions.",
       "timestamp": "2026-07-16T16:54:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-14525"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.7.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not have any runtime dependency on KubeVirt's guest agent component. The package is imported as a client-side SDK.",
+      "timestamp": "2026-08-25T20:41:30Z"
     },
     {
       "vulnerability": {
@@ -7160,6 +7179,101 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33818"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.23.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not use the Unmarshal function",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33818"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not use the Unmarshal function",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33818"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not use the Unmarshal function",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33818"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not use the Unmarshal function",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33818"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not use the Unmarshal function",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33997",
         "aliases": [
           "GO-2026-4883",
@@ -7534,6 +7648,101 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Harvester docker-machine driver does not use the ToASCII and ToUnicode functions.",
       "timestamp": "2026-08-11T02:14:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39821"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.23.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not use the ToASCII and ToUnicode functions",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39821"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not use the ToASCII and ToUnicode functions",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39821"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not use the ToASCII and ToUnicode functions",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39821"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not use the ToASCII and ToUnicode functions",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39821"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not use the ToASCII and ToUnicode functions",
+      "timestamp": "2026-08-25T20:41:30Z"
     },
     {
       "vulnerability": {
@@ -12254,6 +12463,101 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-56853"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.23.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not serve unencrypted HTTP/2",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-56853"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not serve unencrypted HTTP/2",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-56853"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not serve unencrypted HTTP/2",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-56853"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not serve unencrypted HTTP/2",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-56853"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.26.5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not serve unencrypted HTTP/2",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-56859",
         "aliases": [
           "GO-2026-6088"
@@ -12355,6 +12659,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-6383"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.7.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not have any runtime dependency on KubeVirt's RBAC evaluation logic. The package is imported as a client-side SDK.",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-7374"
       },
       "products": [
@@ -12412,6 +12735,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-7374"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.7.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not have any runtime dependency on KubeVirt's virt-handler component. The package is imported as a client-side SDK.",
+      "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-9804"
       },
       "products": [
@@ -12466,7 +12808,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "This vulnerability is found in the virt-exportserver component which Harvester components do not spin up nor interact directly with during runtime. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package. Harvester components only depends on this package for a handful of Go util functions.",
       "timestamp": "2026-07-15T23:07:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-9804"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.7.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The Harvester Docker machine driver does not have any runtime dependency on KubeVirt's virt-exportserver component. The package is imported as a client-side SDK.",
+      "timestamp": "2026-08-25T20:41:30Z"
     }
   ],
-  "timestamp": "2026-08-15T05:37:36Z"
+  "timestamp": "2026-08-25T21:51:23Z"
 }
