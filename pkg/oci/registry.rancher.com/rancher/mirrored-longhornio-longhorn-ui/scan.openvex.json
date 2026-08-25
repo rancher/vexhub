@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-711e48e403c0de6c0c74fa7c996d32cca96e4f6e4600f4bc8c43d18cb8ff51d9",
+  "@id": "https://openvex.dev/docs/public/vex-839aec851a0d6ce8e76cefbf256df272216e5d825b08adf70af1a1e9fd7767a3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1257,6 +1257,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3269-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui serves static assets via nginx; gzip CLI binary is never executed",
+      "timestamp": "2026-08-25T17:12:43Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -1330,7 +1349,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3592-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=registry.rancher.com/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhorn-ui serves static assets via nginx; gzip CLI binary is never executed",
+      "timestamp": "2026-08-25T17:12:43Z"
     }
   ],
-  "timestamp": "2026-08-21T20:06:51Z"
+  "timestamp": "2026-08-25T18:36:24Z"
 }

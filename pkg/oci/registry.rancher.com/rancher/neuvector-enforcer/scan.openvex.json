@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f2280877516e1dd4d66acc048636659b78f07c8673d4d0b2ae5b65f83f5fe0f5",
+  "@id": "https://openvex.dev/docs/public/vex-839aec851a0d6ce8e76cefbf256df272216e5d825b08adf70af1a1e9fd7767a3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -158,6 +158,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3327-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-enforcer?repository_url=registry.rancher.com/rancher/neuvector-enforcer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/yq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "enforcer is a Go binary; yq CLI is an incidental SLES dependency never invoked at runtime",
+      "timestamp": "2026-08-25T17:12:43Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -252,5 +271,5 @@
       "timestamp": "2026-08-18T07:24:14Z"
     }
   ],
-  "timestamp": "2026-08-18T21:25:46Z"
+  "timestamp": "2026-08-25T18:36:24Z"
 }
