@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-14ecbf374bc49262f8333b44e2b4d6057755def823e6aaaacf49b224f1e35b89",
+  "@id": "https://openvex.dev/docs/public/vex-096de84fec30bcdb5fa3858482038772146abedc22f00fc092f456d152fa71c5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -107,6 +107,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
       "timestamp": "2026-07-22T21:11:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3182-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-k8s-process-agent?repository_url=registry.suse.com/suse-observability/stackstate-k8s-process-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go monitoring agent does not call libgcrypt20 at runtime",
+      "timestamp": "2026-08-25T00:44:23Z"
     },
     {
       "vulnerability": {
@@ -223,5 +242,5 @@
       "timestamp": "2026-08-05T15:40:56Z"
     }
   ],
-  "timestamp": "2026-08-06T23:02:26Z"
+  "timestamp": "2026-08-25T11:37:48Z"
 }
