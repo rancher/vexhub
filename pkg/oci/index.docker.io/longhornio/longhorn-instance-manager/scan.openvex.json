@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-de03b1f3ee83407f1d61458b49d0d5ae793ad4901a867f273be3250339a8ed29",
+  "@id": "https://openvex.dev/docs/public/vex-839aec851a0d6ce8e76cefbf256df272216e5d825b08adf70af1a1e9fd7767a3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1751,6 +1751,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1441-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libavahi-common3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "instance-manager is a Go binary; avahi mDNS library is an incidental unused dependency",
+      "timestamp": "2026-08-25T17:12:43Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -2052,6 +2071,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhorn-instance-manager is a Go storage manager; libavahi-client3 (mDNS) is not used at runtime",
       "timestamp": "2026-07-09T16:32:34Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2297-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libavahi-common3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "instance-manager is a Go binary; avahi mDNS library is an incidental unused dependency",
+      "timestamp": "2026-08-25T17:12:43Z"
     },
     {
       "vulnerability": {
@@ -2359,6 +2397,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3218-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libavahi-common3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "instance-manager is a Go binary; avahi mDNS library is an incidental unused dependency",
+      "timestamp": "2026-08-25T17:12:43Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3244-1"
       },
       "products": [
@@ -2529,5 +2586,5 @@
       "timestamp": "2026-08-22T00:47:48Z"
     }
   ],
-  "timestamp": "2026-08-22T17:57:54Z"
+  "timestamp": "2026-08-25T18:36:24Z"
 }
