@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a8fd02bce02adc8254885625519319518c972e902e9baa122efd06143478bd1a",
+  "@id": "https://openvex.dev/docs/public/vex-096de84fec30bcdb5fa3858482038772146abedc22f00fc092f456d152fa71c5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -725,6 +725,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1375-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher?repository_url=registry.suse.com/rancher/rancher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses crypto/tls; system libopenssl3 is not linked/called at runtime",
+      "timestamp": "2026-08-25T00:44:23Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
       },
       "products": [
@@ -858,6 +877,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher?repository_url=registry.suse.com/rancher/rancher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses crypto/tls; system libopenssl3 is not linked/called at runtime",
+      "timestamp": "2026-08-25T00:44:23Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3163-1"
       },
       "products": [
@@ -971,5 +1009,5 @@
       "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-18T21:25:47Z"
+  "timestamp": "2026-08-25T11:37:48Z"
 }
