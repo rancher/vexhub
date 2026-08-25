@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-096de84fec30bcdb5fa3858482038772146abedc22f00fc092f456d152fa71c5",
+  "@id": "https://openvex.dev/docs/public/vex-ec5ddcf7b2849708581b3008a89e629b6a92b2eceaf9aa4287c14252e351d6eb",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -880,6 +880,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3269-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cdi-controller is a Go binary; gzip CLI tool is never exec'd at runtime",
+      "timestamp": "2026-08-25T17:12:43Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -953,7 +972,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl interpreter is an incidental SLES dependency; the running app never invokes perl",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3592-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cdi-controller is a Go binary; gzip CLI tool is never exec'd at runtime",
+      "timestamp": "2026-08-25T17:12:43Z"
     }
   ],
-  "timestamp": "2026-08-25T11:37:48Z"
+  "timestamp": "2026-08-25T18:36:23Z"
 }

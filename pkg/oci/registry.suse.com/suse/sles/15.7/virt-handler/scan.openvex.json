@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-55771dd6f614a969a3bcdfa98e4c8e39cbea4e39cb099c636616a585cd05ddff",
+  "@id": "https://openvex.dev/docs/public/vex-ec5ddcf7b2849708581b3008a89e629b6a92b2eceaf9aa4287c14252e351d6eb",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -801,6 +801,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-handler?repository_url=registry.suse.com/suse/sles/15.7/virt-handler",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-handler authenticates via TLS certs, not Kerberos; krb5 libs are unused",
+      "timestamp": "2026-08-25T17:12:43Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3244-1"
       },
       "products": [
@@ -952,5 +971,5 @@
       "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-24T12:03:18Z"
+  "timestamp": "2026-08-25T18:36:23Z"
 }
