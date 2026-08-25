@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-de03b1f3ee83407f1d61458b49d0d5ae793ad4901a867f273be3250339a8ed29",
+  "@id": "https://openvex.dev/docs/public/vex-096de84fec30bcdb5fa3858482038772146abedc22f00fc092f456d152fa71c5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -326,6 +326,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3341-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-prometheus-exporter?repository_url=registry.suse.com/rancher/neuvector-prometheus-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go exporter binary does not use GLib at runtime",
+      "timestamp": "2026-08-25T00:44:23Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3600-1"
       },
       "products": [
@@ -382,5 +401,5 @@
       "timestamp": "2026-08-22T00:47:48Z"
     }
   ],
-  "timestamp": "2026-08-22T17:57:54Z"
+  "timestamp": "2026-08-25T11:37:48Z"
 }
