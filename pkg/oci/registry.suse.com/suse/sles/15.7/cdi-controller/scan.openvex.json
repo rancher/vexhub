@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4b616595e73496f46e3477893c60debeaedb7506b807d57739e7279bfc62af7d",
+  "@id": "https://openvex.dev/docs/public/vex-096de84fec30bcdb5fa3858482038772146abedc22f00fc092f456d152fa71c5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -811,6 +811,25 @@
           "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go controller binary uses crypto/tls; libopenssl3 not exercised at runtime",
+      "timestamp": "2026-08-25T00:44:23Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2648-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/openssl-3"
             }
           ]
@@ -936,5 +955,5 @@
       "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:34Z"
+  "timestamp": "2026-08-25T11:37:48Z"
 }

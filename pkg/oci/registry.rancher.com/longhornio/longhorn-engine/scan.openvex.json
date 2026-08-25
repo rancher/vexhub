@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-280abb747072bb3aea3a553b17a22f914c80d88aa69c68584559b3d31beebba1",
+  "@id": "https://openvex.dev/docs/public/vex-25236d6ecf69d40e52f9ae30a1c0d7414db42c667db1045062a1c976aeabe6ac",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2036,6 +2036,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2925-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-engine?repository_url=registry.rancher.com/longhornio/longhorn-engine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http/crypto/tls; system libcurl4 is never invoked at runtime",
+      "timestamp": "2026-08-25T00:44:23Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2983-1"
       },
       "products": [
@@ -2206,5 +2225,5 @@
       "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-14T20:55:33Z"
+  "timestamp": "2026-08-25T11:37:46Z"
 }
