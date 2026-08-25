@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c33411e9835aeea3abeb9b5758bfbc04e36b8d3ee3c43da160c12aceb97ac0c3",
+  "@id": "https://openvex.dev/docs/public/vex-035dfdbd45230d5246f2a31f90d65326715c5f88cc6b1aac3c46d7d342e70790",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -741,7 +741,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "npm is a build-time package manager; the deployed static frontend never invokes npm at runtime",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-app-frontend?repository_url=registry.suse.com/rancher/supportability-review-app-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "static frontend image serves assets; perl interpreter is never invoked at runtime",
+      "timestamp": "2026-08-25T17:12:43Z"
     }
   ],
-  "timestamp": "2026-08-23T13:32:27Z"
+  "timestamp": "2026-08-25T18:36:25Z"
 }
