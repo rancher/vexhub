@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-55771dd6f614a969a3bcdfa98e4c8e39cbea4e39cb099c636616a585cd05ddff",
+  "@id": "https://openvex.dev/docs/public/vex-412a999edad802e7492de8f5391703d6f2127a097b57a976cc139217a36ad334",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1105,6 +1105,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/libguestfs-tools?repository_url=registry.suse.com/suse/sles/15.7/libguestfs-tools",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/udev"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udevd device manager is never started inside the container; no device hotplug events occur",
+      "timestamp": "2026-08-26T00:31:02Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3330-1"
       },
       "products": [
@@ -1218,5 +1237,5 @@
       "timestamp": "2026-08-24T00:20:32Z"
     }
   ],
-  "timestamp": "2026-08-24T12:03:18Z"
+  "timestamp": "2026-08-26T11:48:17Z"
 }
