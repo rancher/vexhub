@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-096de84fec30bcdb5fa3858482038772146abedc22f00fc092f456d152fa71c5",
+  "@id": "https://openvex.dev/docs/public/vex-412a999edad802e7492de8f5391703d6f2127a097b57a976cc139217a36ad334",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1599,6 +1599,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3182-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=registry.rancher.com/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "fleet is a Go binary; libgcrypt is an unused transitive dependency, no gpg operations at runtime",
+      "timestamp": "2026-08-26T00:31:02Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3244-1"
       },
       "products": [
@@ -1750,5 +1769,5 @@
       "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-25T11:37:48Z"
+  "timestamp": "2026-08-26T11:48:17Z"
 }
