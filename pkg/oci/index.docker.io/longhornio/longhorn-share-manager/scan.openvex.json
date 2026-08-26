@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b20fa4f9bbaf88972fddf5f55b72cab2cfaaa5a6c4c6cdf22bdddef5319f9663",
+  "@id": "https://openvex.dev/docs/public/vex-2f3ec7a0b496af871b530d6140844a525f07be779c2bd9836bcf60f65921d41b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -893,7 +893,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gzip CLI is incidental; Go share-manager binary never invokes gzip command",
       "timestamp": "2026-08-23T03:47:11Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3600-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=index.docker.io/longhornio/longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/rpm-ndb"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm-ndb is an RPM database library; the Go-based share-manager never invokes rpm at runtime",
+      "timestamp": "2026-08-26T00:31:02Z"
     }
   ],
-  "timestamp": "2026-08-25T11:37:47Z"
+  "timestamp": "2026-08-26T11:48:19Z"
 }

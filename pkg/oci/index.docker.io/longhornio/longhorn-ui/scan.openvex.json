@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b20fa4f9bbaf88972fddf5f55b72cab2cfaaa5a6c4c6cdf22bdddef5319f9663",
+  "@id": "https://openvex.dev/docs/public/vex-412a999edad802e7492de8f5391703d6f2127a097b57a976cc139217a36ad334",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1549,6 +1549,25 @@
           "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libsolv-tools-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsolv is used by zypper dependency resolution at build time; the UI (node/nginx) never calls it",
+      "timestamp": "2026-08-26T00:31:02Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libzypp"
             }
           ]
@@ -1826,5 +1845,5 @@
       "timestamp": "2026-08-18T07:24:14Z"
     }
   ],
-  "timestamp": "2026-08-25T11:37:47Z"
+  "timestamp": "2026-08-26T11:48:17Z"
 }
