@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b20fa4f9bbaf88972fddf5f55b72cab2cfaaa5a6c4c6cdf22bdddef5319f9663",
+  "@id": "https://openvex.dev/docs/public/vex-49548153bc210cfb3de9b74b12b8c8502e3e400fd9c2e518b476f56371cfaa61",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1656,6 +1656,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:21158-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CSI driver uses pure-Go uuid generation, libuuid C library never invoked",
+      "timestamp": "2026-08-27T05:12:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:21164-1"
       },
       "products": [
@@ -2185,6 +2204,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CSI driver authenticates via K8s service accounts and TLS; Kerberos is not used",
       "timestamp": "2026-07-07T01:05:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22332-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CSI driver uses pure-Go uuid generation, libuuid C library never invoked",
+      "timestamp": "2026-08-27T05:12:25Z"
     },
     {
       "vulnerability": {
@@ -2871,5 +2909,5 @@
       "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-25T11:37:47Z"
+  "timestamp": "2026-08-27T12:44:56Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-55771dd6f614a969a3bcdfa98e4c8e39cbea4e39cb099c636616a585cd05ddff",
+  "@id": "https://openvex.dev/docs/public/vex-2d1705bc4572254be5c6c88a136c18b0985876b27daf4171b89510d4777f2d9d",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -139,6 +139,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3097-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/enforcer?repository_url=index.docker.io/neuvector/enforcer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "enforcer Go binary does not parse XML; libxml2 is an incidental base-image dependency",
+      "timestamp": "2026-08-27T05:12:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3163-1"
       },
       "products": [
@@ -234,6 +253,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3341-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/enforcer?repository_url=index.docker.io/neuvector/enforcer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgmodule-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "enforcer is a static Go binary; glib/GObject module system never loaded or called",
+      "timestamp": "2026-08-27T05:12:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3455-1"
       },
       "products": [
@@ -290,5 +328,5 @@
       "timestamp": "2026-08-15T01:52:46Z"
     }
   ],
-  "timestamp": "2026-08-24T12:03:18Z"
+  "timestamp": "2026-08-27T12:44:58Z"
 }
