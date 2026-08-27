@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2450aef1921483f5376c4f5b24a6f5ac36551daca1fe928d54074840de1b8a8e",
+  "@id": "https://openvex.dev/docs/public/vex-54da7b28e511d621e6c071072e4e5a6e7247db92f948006c853fe886fdbaecee",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -98,6 +98,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "`nginx-ingress-controller` does not parse HTML; the golang.org/x/net/html package is NOT compiled into the binary. The Go function-name table (pclntab, retained despite -s -w stripping) contains no x/net/html symbols (only http2/idna are linked) at v0.52.0. Vulnerable code not present.",
       "timestamp": "2026-06-24T19:51:51Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-FU-2026:21213-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx's TLS stack uses OpenSSL, not libgcrypt/GnuTLS; libgcrypt is unused transitive dep",
+      "timestamp": "2026-08-27T05:12:25Z"
     },
     {
       "vulnerability": {
@@ -1339,6 +1358,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22355-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx's TLS stack uses OpenSSL, not libgcrypt/GnuTLS; libgcrypt is unused transitive dep",
+      "timestamp": "2026-08-27T05:12:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22377-1"
       },
       "products": [
@@ -1453,6 +1491,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22826-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=index.docker.io/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nginx's TLS stack uses OpenSSL, not libgcrypt/GnuTLS; libgcrypt is unused transitive dep",
+      "timestamp": "2026-08-27T05:12:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22846-1"
       },
       "products": [
@@ -1547,5 +1604,5 @@
       "timestamp": "2026-07-29T15:47:44Z"
     }
   ],
-  "timestamp": "2026-08-24T12:03:16Z"
+  "timestamp": "2026-08-27T12:44:57Z"
 }

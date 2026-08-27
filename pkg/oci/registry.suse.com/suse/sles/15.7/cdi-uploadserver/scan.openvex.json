@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-25236d6ecf69d40e52f9ae30a1c0d7414db42c667db1045062a1c976aeabe6ac",
+  "@id": "https://openvex.dev/docs/public/vex-54da7b28e511d621e6c071072e4e5a6e7247db92f948006c853fe886fdbaecee",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -830,6 +830,25 @@
           "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadserver",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libsolv-tools-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "cdi-uploadserver is a Go HTTP upload service; libsolv package-resolver tools are never invoked",
+      "timestamp": "2026-08-27T05:12:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-uploadserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-uploadserver",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/zypper"
             }
           ]
@@ -1050,5 +1069,5 @@
       "timestamp": "2026-08-18T07:24:14Z"
     }
   ],
-  "timestamp": "2026-08-25T11:37:46Z"
+  "timestamp": "2026-08-27T12:44:57Z"
 }
