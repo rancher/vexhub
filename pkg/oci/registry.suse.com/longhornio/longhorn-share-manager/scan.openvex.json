@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-412a999edad802e7492de8f5391703d6f2127a097b57a976cc139217a36ad334",
+  "@id": "https://openvex.dev/docs/public/vex-49548153bc210cfb3de9b74b12b8c8502e3e400fd9c2e518b476f56371cfaa61",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -706,6 +706,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=registry.suse.com/longhornio/longhorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses pure-Go uuid pkg; libuuid present only as transitive dep, not called",
+      "timestamp": "2026-08-27T05:12:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2531-1"
       },
       "products": [
@@ -914,5 +933,5 @@
       "timestamp": "2026-08-26T00:31:02Z"
     }
   ],
-  "timestamp": "2026-08-26T11:48:17Z"
+  "timestamp": "2026-08-27T12:44:56Z"
 }
