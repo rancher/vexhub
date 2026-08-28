@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-de9c0a77014bb53fd467ec501f972fa925c316615f429ae1ce83f837cd944b71",
+  "@id": "https://openvex.dev/docs/public/vex-fe2cbc912f09c5988df7e195f6880854ada34cca226c50e3fc749e204a253641",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1843,7 +1843,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "UI served via nginx/node; never queries local RPM database",
       "timestamp": "2026-08-18T07:24:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=registry.rancher.com/longhornio/longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http, not libcurl; C library not linked/called at runtime",
+      "timestamp": "2026-08-28T03:20:03Z"
     }
   ],
-  "timestamp": "2026-08-26T11:48:18Z"
+  "timestamp": "2026-08-28T11:56:34Z"
 }

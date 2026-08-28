@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-035dfdbd45230d5246f2a31f90d65326715c5f88cc6b1aac3c46d7d342e70790",
+  "@id": "https://openvex.dev/docs/public/vex-2754109e2dd2342813d87d73a3f5c491f5791e80c6722cfc5ef96583618ff232",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1368,7 +1368,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhorn-ui serves static assets via nginx; gzip CLI binary is never executed",
       "timestamp": "2026-08-25T17:12:43Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-ui?repository_url=registry.suse.com/rancher/mirrored-longhornio-longhorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http; curl CLI/libcurl not invoked at runtime",
+      "timestamp": "2026-08-28T03:20:03Z"
     }
   ],
-  "timestamp": "2026-08-25T18:36:25Z"
+  "timestamp": "2026-08-28T11:56:35Z"
 }
