@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d817a47ff03e88c5a9c990baabc006d3ef8fc9eccb11f11a9cddba23809f6d35",
+  "@id": "https://openvex.dev/docs/public/vex-2754109e2dd2342813d87d73a3f5c491f5791e80c6722cfc5ef96583618ff232",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1710,7 +1710,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Static Go CLI never invokes rpm/librpm at runtime; rpm-ndb is an incidental base-image dependency",
       "timestamp": "2026-08-21T00:38:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=registry.suse.com/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http; curl CLI/libcurl not invoked at runtime",
+      "timestamp": "2026-08-28T03:20:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=registry.suse.com/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http, not libcurl; C library not linked/called at runtime",
+      "timestamp": "2026-08-28T03:20:03Z"
     }
   ],
-  "timestamp": "2026-08-21T20:06:48Z"
+  "timestamp": "2026-08-28T11:56:35Z"
 }
