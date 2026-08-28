@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-839aec851a0d6ce8e76cefbf256df272216e5d825b08adf70af1a1e9fd7767a3",
+  "@id": "https://openvex.dev/docs/public/vex-1394c187fdee034ba2a9b2faaa3fecb2c79fd2a96bf01fb7566e6ef1be048a62",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1615,7 +1615,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary never invokes rpm tooling at runtime; rpm-ndb library is not exercised",
       "timestamp": "2026-08-21T00:38:15Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.suse.com/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http; curl CLI/libcurl not invoked at runtime",
+      "timestamp": "2026-08-28T03:20:03Z"
     }
   ],
-  "timestamp": "2026-08-25T18:36:24Z"
+  "timestamp": "2026-08-28T11:56:33Z"
 }
