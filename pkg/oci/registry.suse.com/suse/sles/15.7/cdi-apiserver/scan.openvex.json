@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-55771dd6f614a969a3bcdfa98e4c8e39cbea4e39cb099c636616a585cd05ddff",
+  "@id": "https://openvex.dev/docs/public/vex-2754109e2dd2342813d87d73a3f5c491f5791e80c6722cfc5ef96583618ff232",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1146,6 +1146,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2925-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http, not libcurl; C library not linked/called at runtime",
+      "timestamp": "2026-08-28T03:20:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3097-1"
       },
       "products": [
@@ -1219,7 +1238,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-07-31T01:08:55Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http; curl CLI/libcurl not invoked at runtime",
+      "timestamp": "2026-08-28T03:20:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-apiserver?repository_url=registry.suse.com/suse/sles/15.7/cdi-apiserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http, not libcurl; C library not linked/called at runtime",
+      "timestamp": "2026-08-28T03:20:03Z"
     }
   ],
-  "timestamp": "2026-08-24T12:03:18Z"
+  "timestamp": "2026-08-28T11:56:35Z"
 }

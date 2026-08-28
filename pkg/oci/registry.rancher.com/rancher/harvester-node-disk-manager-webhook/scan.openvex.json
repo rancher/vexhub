@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1ed65153f745c590734281ae18cdb3f1d9dac4f650ce8da9ab8c628a51416a9f",
+  "@id": "https://openvex.dev/docs/public/vex-1394c187fdee034ba2a9b2faaa3fecb2c79fd2a96bf01fb7566e6ef1be048a62",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2014,7 +2014,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gzip CLI is a base-image dependency not invoked by the container's entrypoint process",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http, not libcurl; C library not linked/called at runtime",
+      "timestamp": "2026-08-28T03:20:03Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:36Z"
+  "timestamp": "2026-08-28T11:56:33Z"
 }
