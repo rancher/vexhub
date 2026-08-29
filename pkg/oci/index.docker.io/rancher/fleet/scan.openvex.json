@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-54da7b28e511d621e6c071072e4e5a6e7247db92f948006c853fe886fdbaecee",
+  "@id": "https://openvex.dev/docs/public/vex-8013f32515f0f96e8eb3adc3338f71dbbdc682a5361136add5db844fed179e11",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1805,7 +1805,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Fleet is a Go GitOps controller; openssh-clients CLI is not invoked by its entrypoint",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/fleet?repository_url=index.docker.io/rancher/fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Fleet agent is a Go binary using net/http; curl CLI is never invoked at runtime",
+      "timestamp": "2026-08-29T03:35:43Z"
     }
   ],
-  "timestamp": "2026-08-27T12:44:57Z"
+  "timestamp": "2026-08-29T17:29:35Z"
 }
