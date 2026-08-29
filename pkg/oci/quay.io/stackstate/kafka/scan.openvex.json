@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9b13d5c679d0691aac05b89a288a145aa44d3b1e467b3aee5293757015469d31",
+  "@id": "https://openvex.dev/docs/public/vex-1ab99254c6cda5237df98aff1503e821bd2a7bd057f498d09d0ce021ac7b6c79",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -307,7 +307,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rpm-ndb is the rpm package DB backend, only used during image build, never invoked by the running app",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kafka?repository_url=quay.io/stackstate/kafka",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Kafka is a JVM application; curl CLI binary is not invoked by the JVM process at runtime",
+      "timestamp": "2026-08-29T03:35:43Z"
     }
   ],
-  "timestamp": "2026-08-20T17:06:55Z"
+  "timestamp": "2026-08-29T17:29:33Z"
 }
