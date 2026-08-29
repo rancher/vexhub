@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-60223fa7590d6cb358068ce5bb75c4ab3d03ba08e7b6563b9e46f843da56edd2",
+  "@id": "https://openvex.dev/docs/public/vex-e3f6c37aa515f6c4d1b0420ec7fb928bf570363e0aae86da1d5415fe13bc4672",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -269,7 +269,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rpm-ndb is the rpm package DB backend, only used during image build, never invoked by the running app",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-kafka-to-es?repository_url=registry.rancher.com/suse-observability/stackstate-kafka-to-es",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "JVM-based Kafka-to-ES connector; curl CLI binary is not invoked by the running process",
+      "timestamp": "2026-08-29T03:35:43Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:37Z"
+  "timestamp": "2026-08-29T17:29:32Z"
 }

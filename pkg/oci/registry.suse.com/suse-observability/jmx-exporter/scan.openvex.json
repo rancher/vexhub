@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-99ccfbecaca17e3787006c93535872990aa9a58500fe821e5e0c985bb90ba445",
+  "@id": "https://openvex.dev/docs/public/vex-1ab99254c6cda5237df98aff1503e821bd2a7bd057f498d09d0ce021ac7b6c79",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -212,7 +212,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go/Java runtime does not load GLib; libglib-2_0-0 is an incidental SLES dep",
       "timestamp": "2026-08-03T00:45:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jmx-exporter?repository_url=registry.suse.com/suse-observability/jmx-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "jmx-exporter is a JVM Java agent; curl CLI is an incidental dependency, never executed",
+      "timestamp": "2026-08-29T03:35:43Z"
     }
   ],
-  "timestamp": "2026-08-04T10:52:24Z"
+  "timestamp": "2026-08-29T17:29:33Z"
 }
