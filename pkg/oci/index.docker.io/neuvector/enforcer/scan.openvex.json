@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2d1705bc4572254be5c6c88a136c18b0985876b27daf4171b89510d4777f2d9d",
+  "@id": "https://openvex.dev/docs/public/vex-13c0e1ebd538d321512cd9e5c7053765e57f10020e44ff6b1563fb689fb503d2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -326,7 +326,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gzip CLI is a base-image dependency not invoked by the container's entrypoint process",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/enforcer?repository_url=index.docker.io/neuvector/enforcer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "enforcer is a Go binary using its own HTTP client; curl CLI is never invoked at runtime",
+      "timestamp": "2026-08-29T03:35:43Z"
     }
   ],
-  "timestamp": "2026-08-27T12:44:58Z"
+  "timestamp": "2026-08-29T17:29:34Z"
 }

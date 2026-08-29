@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2d1705bc4572254be5c6c88a136c18b0985876b27daf4171b89510d4777f2d9d",
+  "@id": "https://openvex.dev/docs/public/vex-1ab99254c6cda5237df98aff1503e821bd2a7bd057f498d09d0ce021ac7b6c79",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1064,7 +1064,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "KubeVirt API server is a Go binary; does not invoke the gzip CLI at runtime",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-api?repository_url=registry.suse.com/suse/sles/15.7/virt-api",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-api is a Go binary that uses net/http; the curl CLI is an incidental dependency never invoked",
+      "timestamp": "2026-08-29T03:35:43Z"
     }
   ],
-  "timestamp": "2026-08-27T12:44:58Z"
+  "timestamp": "2026-08-29T17:29:33Z"
 }

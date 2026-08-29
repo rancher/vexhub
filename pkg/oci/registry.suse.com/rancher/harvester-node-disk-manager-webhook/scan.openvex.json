@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2754109e2dd2342813d87d73a3f5c491f5791e80c6722cfc5ef96583618ff232",
+  "@id": "https://openvex.dev/docs/public/vex-e3f6c37aa515f6c4d1b0420ec7fb928bf570363e0aae86da1d5415fe13bc4672",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2024,6 +2024,25 @@
           "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.suse.com/rancher/harvester-node-disk-manager-webhook",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go webhook binary uses net/http; curl CLI is an incidental dependency never executed",
+      "timestamp": "2026-08-29T03:35:43Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.suse.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libcurl4"
             }
           ]
@@ -2035,5 +2054,5 @@
       "timestamp": "2026-08-28T03:20:03Z"
     }
   ],
-  "timestamp": "2026-08-28T11:56:35Z"
+  "timestamp": "2026-08-29T17:29:32Z"
 }
