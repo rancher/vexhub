@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1d1985f5f349862ffcf0506ab135f35dba8dbb4e64e77860228d4b1def51e17f",
+  "@id": "https://openvex.dev/docs/public/vex-23db1014019911d1d3ac002529d47902f68a42013a999e434a631db2aef1e0c2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -41,7 +41,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-07-31T01:08:55Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-updater?repository_url=index.docker.io/rancher/neuvector-updater",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Updater is a Go binary using net/http; system libcurl is not invoked",
+      "timestamp": "2026-08-30T03:35:09Z"
     }
   ],
-  "timestamp": "2026-08-02T07:04:18Z"
+  "timestamp": "2026-08-31T13:08:54Z"
 }

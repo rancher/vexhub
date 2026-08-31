@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f2280877516e1dd4d66acc048636659b78f07c8673d4d0b2ae5b65f83f5fe0f5",
+  "@id": "https://openvex.dev/docs/public/vex-23db1014019911d1d3ac002529d47902f68a42013a999e434a631db2aef1e0c2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -174,7 +174,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "kube-api-auth is a pure Go authentication proxy (CGO_ENABLED=0); glibc not loaded at runtime",
       "timestamp": "2026-07-01T00:12:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3030-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kube-api-auth?repository_url=registry.rancher.com/rancher/kube-api-auth",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Static Go auth webhook binary; glibc present only as base image dependency",
+      "timestamp": "2026-08-30T03:35:09Z"
     }
   ],
-  "timestamp": "2026-08-18T21:25:46Z"
+  "timestamp": "2026-08-31T13:08:54Z"
 }

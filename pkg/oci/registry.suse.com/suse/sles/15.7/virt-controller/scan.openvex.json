@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2754109e2dd2342813d87d73a3f5c491f5791e80c6722cfc5ef96583618ff232",
+  "@id": "https://openvex.dev/docs/public/vex-00b639d1b08d28d56d05d11d43504fa5260690ec4988d3f198bd0ef963e24c3a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -801,6 +801,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2925-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-controller is a Go binary using net/http; libcurl is not invoked",
+      "timestamp": "2026-08-30T03:35:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3097-1"
       },
       "products": [
@@ -931,7 +950,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary uses net/http; curl CLI/libcurl not invoked at runtime",
       "timestamp": "2026-08-28T03:20:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-controller?repository_url=registry.suse.com/suse/sles/15.7/virt-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "virt-controller is a Go binary using net/http; libcurl is not invoked",
+      "timestamp": "2026-08-30T03:35:09Z"
     }
   ],
-  "timestamp": "2026-08-28T11:56:35Z"
+  "timestamp": "2026-08-31T13:08:53Z"
 }
