@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c18034d21af953efb2d6c5f2d2cbd74ca56c6f7f062da76b768cbb38fc3bb52f",
+  "@id": "https://openvex.dev/docs/public/vex-23db1014019911d1d3ac002529d47902f68a42013a999e434a631db2aef1e0c2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2356,7 +2356,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-08-22T00:47:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses net/http; system libcurl C library is not invoked",
+      "timestamp": "2026-08-30T03:35:09Z"
     }
   ],
-  "timestamp": "2026-08-24T12:03:17Z"
+  "timestamp": "2026-08-31T13:08:54Z"
 }

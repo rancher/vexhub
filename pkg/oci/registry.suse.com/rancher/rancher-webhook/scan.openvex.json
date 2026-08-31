@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-490a50c78498ba64fdb509f9fe7560c38fcb82b1d8893146e716f10c98f7e1ad",
+  "@id": "https://openvex.dev/docs/public/vex-64db2deee9250d973ed50d41b0c1ef68a82c7d985244ae9a03ebd3da72c0c4ae",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1369-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-webhook?repository_url=registry.suse.com/rancher/rancher-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Static Go webhook binary; glibc present only as base OS dependency",
+      "timestamp": "2026-08-30T03:35:09Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:1510-1"
@@ -41,7 +60,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a daemon without interactive terminal; ncurses is not in the execute path",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2231-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-webhook?repository_url=registry.suse.com/rancher/rancher-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Static Go webhook binary; glibc present only as base OS dependency",
+      "timestamp": "2026-08-30T03:35:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3030-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-webhook?repository_url=registry.suse.com/rancher/rancher-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Static Go webhook binary; glibc present only as base OS dependency",
+      "timestamp": "2026-08-30T03:35:09Z"
     }
   ],
-  "timestamp": "2026-06-19T19:37:35Z"
+  "timestamp": "2026-08-31T13:08:55Z"
 }

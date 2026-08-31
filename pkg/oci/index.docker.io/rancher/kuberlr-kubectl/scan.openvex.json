@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6761c80d1172e91a8d1f2a5f17b3f5f27455b87a06cd3e45b0610aeb43265ad0",
+  "@id": "https://openvex.dev/docs/public/vex-23db1014019911d1d3ac002529d47902f68a42013a999e434a631db2aef1e0c2",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -326,7 +326,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "kuberlr and kubectl are pure Go binaries (CGO_ENABLED=0); glibc is not loaded at runtime",
       "timestamp": "2026-07-01T00:12:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3030-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kuberlr-kubectl?repository_url=index.docker.io/rancher/kuberlr-kubectl",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kubectl is a statically-linked Go binary; glibc CVE code path not exercised",
+      "timestamp": "2026-08-30T03:35:09Z"
     }
   ],
-  "timestamp": "2026-07-07T06:21:51Z"
+  "timestamp": "2026-08-31T13:08:54Z"
 }
