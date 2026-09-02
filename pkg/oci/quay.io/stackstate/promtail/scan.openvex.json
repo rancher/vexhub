@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-00b639d1b08d28d56d05d11d43504fa5260690ec4988d3f198bd0ef963e24c3a",
+  "@id": "https://openvex.dev/docs/public/vex-4449428c13346297676c376d65c3259eb49e96c6ca21d85efd83258153e5e5d0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -165,6 +165,25 @@
           "@id": "pkg:oci/promtail?repository_url=quay.io/stackstate/promtail",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl is a base-image dependency; the app's own HTTP client is used, curl CLI is never invoked at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/promtail?repository_url=quay.io/stackstate/promtail",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libcurl4"
             }
           ]
@@ -176,5 +195,5 @@
       "timestamp": "2026-08-30T03:35:09Z"
     }
   ],
-  "timestamp": "2026-08-31T13:08:53Z"
+  "timestamp": "2026-09-02T13:59:42Z"
 }
