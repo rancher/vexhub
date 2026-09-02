@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-60223fa7590d6cb358068ce5bb75c4ab3d03ba08e7b6563b9e46f843da56edd2",
+  "@id": "https://openvex.dev/docs/public/vex-e453634172f8cbcfe4f862f1463903efca83c302aad8171c884a6ba8927c23d6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -288,7 +288,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl interpreter is an incidental SLES dependency; the running app never invokes perl",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/clickhouse-backup?repository_url=registry.suse.com/suse-observability/clickhouse-backup",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl is a base-image dependency; the app's own HTTP client is used, curl CLI is never invoked at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:37Z"
+  "timestamp": "2026-09-02T13:59:44Z"
 }

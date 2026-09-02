@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cc56f805ee0fdf099f5f5098e331e0ece96f1b3ae6f266707c48658f20da7fc2",
+  "@id": "https://openvex.dev/docs/public/vex-21eee7baf0ac3e750c09c9aa58ec430635d378597f3dcff93862c9b774ee29e5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -383,7 +383,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gzip CLI is a base-image dependency not invoked by the container's entrypoint process",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-correlate?repository_url=registry.rancher.com/suse-observability/stackstate-correlate",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl is a base-image dependency; the app's own HTTP client is used, curl CLI is never invoked at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:35Z"
+  "timestamp": "2026-09-02T13:59:43Z"
 }

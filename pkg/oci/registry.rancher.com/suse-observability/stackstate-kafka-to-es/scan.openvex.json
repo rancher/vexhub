@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e3f6c37aa515f6c4d1b0420ec7fb928bf570363e0aae86da1d5415fe13bc4672",
+  "@id": "https://openvex.dev/docs/public/vex-21eee7baf0ac3e750c09c9aa58ec430635d378597f3dcff93862c9b774ee29e5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -288,7 +288,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "JVM-based Kafka-to-ES connector; curl CLI binary is not invoked by the running process",
       "timestamp": "2026-08-29T03:35:43Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/stackstate-kafka-to-es?repository_url=registry.rancher.com/suse-observability/stackstate-kafka-to-es",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl is a base-image dependency; the app's own HTTP client is used, curl CLI is never invoked at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
     }
   ],
-  "timestamp": "2026-08-29T17:29:32Z"
+  "timestamp": "2026-09-02T13:59:43Z"
 }

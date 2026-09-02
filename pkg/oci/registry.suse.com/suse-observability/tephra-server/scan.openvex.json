@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1ed65153f745c590734281ae18cdb3f1d9dac4f650ce8da9ab8c628a51416a9f",
+  "@id": "https://openvex.dev/docs/public/vex-21eee7baf0ac3e750c09c9aa58ec430635d378597f3dcff93862c9b774ee29e5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -212,7 +212,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rpm-ndb is the rpm package DB backend, only used during image build, never invoked by the running app",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/tephra-server?repository_url=registry.suse.com/suse-observability/tephra-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl is a base-image dependency; the app's own HTTP client is used, curl CLI is never invoked at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:36Z"
+  "timestamp": "2026-09-02T13:59:43Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f2280877516e1dd4d66acc048636659b78f07c8673d4d0b2ae5b65f83f5fe0f5",
+  "@id": "https://openvex.dev/docs/public/vex-ffe37a7ac7bef502d37286bf26f538926a0256bd041ecb42af22c8a5c6675a3c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -345,7 +345,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rpm-ndb is the rpm package DB backend, only used during image build, never invoked by the running app",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hbase-master?repository_url=registry.suse.com/suse-observability/hbase-master",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcurl4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl/libcurl is a base-image dependency; the app's own HTTP client is used, curl CLI is never invoked at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
     }
   ],
-  "timestamp": "2026-08-18T21:25:46Z"
+  "timestamp": "2026-09-02T13:59:41Z"
 }
