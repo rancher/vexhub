@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fe2cbc912f09c5988df7e195f6880854ada34cca226c50e3fc749e204a253641",
+  "@id": "https://openvex.dev/docs/public/vex-21eee7baf0ac3e750c09c9aa58ec430635d378597f3dcff93862c9b774ee29e5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1542,6 +1542,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2076-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/samba-client-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "samba-client-libs is an incidental dependency of the base image; longhorn-manager control plane never invokes samba/cifs",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2115-1"
       },
       "products": [
@@ -1865,6 +1884,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3363-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com/longhornio/longhorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/samba-client-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "samba-client-libs is an incidental dependency of the base image; longhorn-manager control plane never invokes samba/cifs",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3426-1"
       },
       "products": [
@@ -1959,5 +1997,5 @@
       "timestamp": "2026-08-28T03:20:03Z"
     }
   ],
-  "timestamp": "2026-08-28T11:56:34Z"
+  "timestamp": "2026-09-02T13:59:43Z"
 }

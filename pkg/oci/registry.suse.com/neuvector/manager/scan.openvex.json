@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4e72097732406c8c3a4a93913fb217d62439e9a39d669da3fffe8c3d7b878908",
+  "@id": "https://openvex.dev/docs/public/vex-e453634172f8cbcfe4f862f1463903efca83c302aad8171c884a6ba8927c23d6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -44,6 +44,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/manager?repository_url=registry.suse.com/neuvector/manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is an incidental dependency; the manager Go binary uses its own UUID generation, not libuuid",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2848-1"
       },
       "products": [
@@ -81,5 +100,5 @@
       "timestamp": "2026-08-21T00:38:15Z"
     }
   ],
-  "timestamp": "2026-08-21T20:06:50Z"
+  "timestamp": "2026-09-02T13:59:44Z"
 }

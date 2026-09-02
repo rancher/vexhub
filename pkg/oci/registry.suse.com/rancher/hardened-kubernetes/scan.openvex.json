@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-64db2deee9250d973ed50d41b0c1ef68a82c7d985244ae9a03ebd3da72c0c4ae",
+  "@id": "https://openvex.dev/docs/public/vex-21eee7baf0ac3e750c09c9aa58ec430635d378597f3dcff93862c9b774ee29e5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -931,6 +931,25 @@
           "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.suse.com/rancher/hardened-kubernetes",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libblkid is an incidental dependency; the k8s Go binaries never probe block devices directly",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.suse.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libfdisk1"
             }
           ]
@@ -1406,6 +1425,25 @@
           "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.suse.com/rancher/hardened-kubernetes",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libblkid is an incidental dependency; the k8s Go binaries never probe block devices directly",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.suse.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libfdisk1"
             }
           ]
@@ -1664,5 +1702,5 @@
       "timestamp": "2026-08-14T20:30:41Z"
     }
   ],
-  "timestamp": "2026-08-31T13:08:55Z"
+  "timestamp": "2026-09-02T13:59:43Z"
 }
