@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-de03b1f3ee83407f1d61458b49d0d5ae793ad4901a867f273be3250339a8ed29",
+  "@id": "https://openvex.dev/docs/public/vex-e453634172f8cbcfe4f862f1463903efca83c302aad8171c884a6ba8927c23d6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-ai-agent?repository_url=stgregistry.suse.com/rancher/rancher-ai-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "liblzma is an incidental dependency pulled by base image; not exercised by the AI agent runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:2464-1"
@@ -81,5 +100,5 @@
       "timestamp": "2026-08-22T00:47:48Z"
     }
   ],
-  "timestamp": "2026-08-22T17:57:54Z"
+  "timestamp": "2026-09-02T13:59:44Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fe2cbc912f09c5988df7e195f6880854ada34cca226c50e3fc749e204a253641",
+  "@id": "https://openvex.dev/docs/public/vex-21eee7baf0ac3e750c09c9aa58ec430635d378597f3dcff93862c9b774ee29e5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1143,6 +1143,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "liblzma is an incidental dependency; the manager (Go binary) does not call liblzma at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2231-1"
       },
       "products": [
@@ -1636,5 +1655,5 @@
       "timestamp": "2026-08-28T03:20:03Z"
     }
   ],
-  "timestamp": "2026-08-28T11:56:34Z"
+  "timestamp": "2026-09-02T13:59:43Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-49548153bc210cfb3de9b74b12b8c8502e3e400fd9c2e518b476f56371cfaa61",
+  "@id": "https://openvex.dev/docs/public/vex-4449428c13346297676c376d65c3259eb49e96c6ca21d85efd83258153e5e5d0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -630,6 +630,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/tls; libopenssl3 C library is not loaded by Go at runtime",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:21006-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:21161-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssh-common is an incidental dependency; rancher-agent authenticates via tokens/certs, not ssh",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:21213-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent is a Go binary; Go uses crypto/tls, not the system libssl C library",
+      "timestamp": "2026-09-02T00:29:37Z"
     },
     {
       "vulnerability": {
@@ -1431,6 +1488,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:20223-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent is a Go binary; Go uses crypto/tls, not the system libssl C library",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:20233-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libxml2 is an incidental dependency; rancher-agent (Go binary) parses XML/YAML using Go libraries, not libxml2",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2051-1"
       },
       "products": [
@@ -1466,6 +1561,348 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher-agent is a Go binary; xz compression CLI is not invoked by the agent at runtime",
       "timestamp": "2026-07-09T16:32:34Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:20627-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:20631-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libxml2 is an incidental dependency; rancher-agent (Go binary) parses XML/YAML using Go libraries, not libxml2",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:20985-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21143-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21158-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libblkid is an incidental dependency; rancher-agent (Go binary) never probes block devices",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21158-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLIs are incidental base-image tools; rancher-agent never shells out to them",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21186-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent is a Go binary; Go uses crypto/tls, not the system libssl C library",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21192-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21428-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21428-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21798-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssh-common is an incidental dependency; rancher-agent authenticates via tokens/certs, not ssh",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "liblzma is an incidental dependency; rancher-agent (Go binary) does not link/call liblzma at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:21848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/xz"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xz CLI is a base-image tool; rancher-agent (Go binary) never shells out to xz at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22085-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/update-alternatives"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "update-alternatives is a package management utility; it is not executed at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22315-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rancher-agent is a Go binary; Go uses crypto/tls, not the system libssl C library",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22332-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libblkid is an incidental dependency; rancher-agent (Go binary) never probes block devices",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22332-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLIs are incidental base-image tools; rancher-agent never shells out to them",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22352-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssh-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssh-common is an incidental dependency; rancher-agent authenticates via tokens/certs, not ssh",
+      "timestamp": "2026-09-02T00:29:37Z"
     },
     {
       "vulnerability": {
@@ -1507,6 +1944,120 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22377-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22566-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libjq1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libjq is an incidental dependency; rancher-agent (Go binary) never calls jq at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22636-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libxml2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libxml2 is an incidental dependency; rancher-agent (Go binary) parses XML/YAML using Go libraries, not libxml2",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22637-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libjq1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libjq is an incidental dependency; rancher-agent (Go binary) never calls jq at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22639-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/pam"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22818-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is a base-image tool; rancher-agent (Go binary) never shells out to gzip at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2283-1"
       },
       "products": [
@@ -1542,6 +2093,82 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rancher-agent is a pure-Go binary; libjq1 (C library) is not loaded or called at runtime",
       "timestamp": "2026-07-09T23:57:52Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22948-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22948-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22956-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22956-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-agent?repository_url=registry.rancher.com/rancher/rancher-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
+      "timestamp": "2026-09-02T00:29:37Z"
     },
     {
       "vulnerability": {
@@ -1829,5 +2456,5 @@
       "timestamp": "2026-08-18T07:24:14Z"
     }
   ],
-  "timestamp": "2026-08-27T12:44:56Z"
+  "timestamp": "2026-09-02T13:59:42Z"
 }
