@@ -7731,7 +7731,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "traefik uses google.golang.org/grpc as a client only (health checks and OTLP export) plus grpc/codes and grpc/status constants; it runs no grpc-go server (grpc.NewServer appears only in tests) and does not use xDS or the RBAC engine, so the server-side xDS RBAC and HTTP/2 Rapid Reset code paths are not in the execute path. Ref https://github.com/advisories/GHSA-hrxh-6v49-42gf",
       "timestamp": "2026-07-23T19:37:04Z"
+    },
+    {
+      "vulnerability": {
+        "name": "GO-2026-5932"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/traefik/traefik/v3",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org%2Fx%2Fcrypto@v0.55.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Ruled out by vexscan (pclntab)",
+      "timestamp": "2026-09-03T14:17:41Z"
     }
   ],
-  "timestamp": "2026-09-03T04:41:12Z"
+  "timestamp": "2026-09-03T14:17:41Z"
 }

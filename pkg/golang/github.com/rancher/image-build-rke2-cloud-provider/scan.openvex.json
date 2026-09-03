@@ -70175,7 +70175,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "grpc-go pulled in transitively. rke2-cloud-provider is a cloud-controller-manager acting as a client to the kube-apiserver; it does not run a gRPC server nor use gRPC xDS/RBAC. All three sub-issues (xDS RBAC bypass, HTTP/2 rapid-reset server DoS, xDS RBAC panic) require running a gRPC/xDS server, so the vulnerable code is not in the execute path. Please adjust if triage determines otherwise.",
       "timestamp": "2026-07-27T12:14:20Z"
+    },
+    {
+      "vulnerability": {
+        "name": "GO-2026-5932"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/image-build-rke2-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org%2Fx%2Fcrypto@v0.54.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Ruled out by vexscan (pclntab)",
+      "timestamp": "2026-09-03T14:17:41Z"
     }
   ],
-  "timestamp": "2026-09-03T04:41:11Z"
+  "timestamp": "2026-09-03T14:17:41Z"
 }
