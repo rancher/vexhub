@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a2a3253235bec166ce7bc45a7fcdfec172ac20e34cb07fbf65204fc762fb5e5b",
+  "@id": "https://openvex.dev/docs/public/vex-6babb1b64b098f93ab42038f5a83ef576c65674044ed11e168174175cebcb563",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3959,6 +3959,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-56854"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`usr/bin/helm` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
+      "timestamp": "2026-09-03T15:34:05Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-56854",
         "aliases": [
           "GO-2026-6303"
@@ -4310,5 +4329,5 @@
       "timestamp": "2026-09-03T02:49:55Z"
     }
   ],
-  "timestamp": "2026-09-03T04:41:12Z"
+  "timestamp": "2026-09-03T16:29:05Z"
 }
