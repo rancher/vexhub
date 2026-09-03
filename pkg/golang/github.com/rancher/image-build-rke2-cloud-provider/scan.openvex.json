@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ac4faed9139e88c82497cfba840c34fe2a934eafb9526f6eeb5869b71d071ca4",
+  "@id": "https://openvex.dev/docs/public/vex-f72bce4a7048c9f287555a26f13434fba50d8808b7055d926e4e8e70803cb3d7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -68468,6 +68468,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-56854"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/rancher/image-build-rke2-cloud-provider",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.54.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`usr/local/bin/rke2-cloud-provider` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.54.0. Vulnerable code not present.",
+      "timestamp": "2026-09-03T15:34:05Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-56854",
         "aliases": [
           "GO-2026-6303"
@@ -70177,5 +70196,5 @@
       "timestamp": "2026-07-27T12:14:20Z"
     }
   ],
-  "timestamp": "2026-09-03T04:41:11Z"
+  "timestamp": "2026-09-03T16:29:07Z"
 }
