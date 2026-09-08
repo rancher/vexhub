@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-54da7b28e511d621e6c071072e4e5a6e7247db92f948006c853fe886fdbaecee",
+  "@id": "https://openvex.dev/docs/public/vex-913523bbb516a56898f1a48042a227865ae61e3276112813ab421fb11fcaa809",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1010,7 +1010,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "cdi-controller is a Go binary; gzip CLI tool is never exec'd at runtime",
       "timestamp": "2026-08-25T17:12:43Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3835-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cdi-controller?repository_url=registry.suse.com/suse/sles/15.7/cdi-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CDI controller binary is the entrypoint; openssl CLI tool is never invoked",
+      "timestamp": "2026-09-05T00:53:01Z"
     }
   ],
-  "timestamp": "2026-08-27T12:44:57Z"
+  "timestamp": "2026-09-08T12:04:02Z"
 }

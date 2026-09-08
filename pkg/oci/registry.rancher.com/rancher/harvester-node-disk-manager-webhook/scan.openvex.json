@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-13c0e1ebd538d321512cd9e5c7053765e57f10020e44ff6b1563fb689fb503d2",
+  "@id": "https://openvex.dev/docs/public/vex-6d51694fa261d6ded6317f923f481a1ec6f4f3064fa6059d43524143719896bd",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2052,7 +2052,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary uses net/http, not libcurl; C library not linked/called at runtime",
       "timestamp": "2026-08-28T03:20:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3835-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=registry.rancher.com/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go webhook binary is the entrypoint; openssl CLI tool is never invoked at runtime",
+      "timestamp": "2026-09-05T00:53:01Z"
     }
   ],
-  "timestamp": "2026-08-29T17:29:34Z"
+  "timestamp": "2026-09-08T12:04:00Z"
 }
