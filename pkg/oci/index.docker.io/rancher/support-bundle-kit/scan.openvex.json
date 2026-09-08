@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1ed65153f745c590734281ae18cdb3f1d9dac4f650ce8da9ab8c628a51416a9f",
+  "@id": "https://openvex.dev/docs/public/vex-6d51694fa261d6ded6317f923f481a1ec6f4f3064fa6059d43524143719896bd",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -931,7 +931,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gzip CLI is a base-image dependency not invoked by the container's entrypoint process",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3835-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=index.docker.io/rancher/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary; FIPS OpenSSL provider not loaded; Go uses crypto/tls",
+      "timestamp": "2026-09-05T00:53:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3835-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=index.docker.io/rancher/support-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "support-bundle-kit is a Go binary; Go uses crypto/tls and does not call libssl at runtime",
+      "timestamp": "2026-09-05T00:53:01Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:36Z"
+  "timestamp": "2026-09-08T12:04:00Z"
 }

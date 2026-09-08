@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-23db1014019911d1d3ac002529d47902f68a42013a999e434a631db2aef1e0c2",
+  "@id": "https://openvex.dev/docs/public/vex-50173ab9c0fe963959ef7583c1c20b17af7cd6c267e2ec1549929141119d9508",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2375,7 +2375,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary uses net/http; system libcurl C library is not invoked",
       "timestamp": "2026-08-30T03:35:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3835-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-longhorn-instance-manager?repository_url=index.docker.io/rancher/mirrored-longhornio-longhorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libopenssl-3-devel provides headers only; runtime uses libopenssl3 shared library",
+      "timestamp": "2026-09-05T00:53:01Z"
     }
   ],
-  "timestamp": "2026-08-31T13:08:54Z"
+  "timestamp": "2026-09-08T12:04:01Z"
 }
