@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4449428c13346297676c376d65c3259eb49e96c6ca21d85efd83258153e5e5d0",
+  "@id": "https://openvex.dev/docs/public/vex-50173ab9c0fe963959ef7583c1c20b17af7cd6c267e2ec1549929141119d9508",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1026,7 +1026,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "curl/libcurl is a base-image dependency; the app's own HTTP client is used, curl CLI is never invoked at runtime",
       "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3835-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-operator?repository_url=registry.suse.com/suse/sles/15.7/virt-operator",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go KubeVirt operator binary is the entrypoint; openssl CLI tool is never invoked",
+      "timestamp": "2026-09-05T00:53:01Z"
     }
   ],
-  "timestamp": "2026-09-02T13:59:42Z"
+  "timestamp": "2026-09-08T12:04:01Z"
 }
