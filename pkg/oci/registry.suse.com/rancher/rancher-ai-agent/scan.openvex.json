@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-54da7b28e511d621e6c071072e4e5a6e7247db92f948006c853fe886fdbaecee",
+  "@id": "https://openvex.dev/docs/public/vex-00047118fd2a9d58f0b22b8ea10f0922bab786e84dea89ab51e63d1dbcd426c6",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48710"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher-ai-agent?repository_url=registry.suse.com/rancher/rancher-ai-agent",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/starlette@1.0.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "the application does not rely on request.url or request.url.path for security-sensitive decisions",
+      "timestamp": "2026-09-09T17:50:36Z"
+    },
     {
       "vulnerability": {
         "name": "SUSE-SU-2026:2464-1"
@@ -100,5 +119,5 @@
       "timestamp": "2026-08-22T00:47:48Z"
     }
   ],
-  "timestamp": "2026-08-27T12:44:57Z"
+  "timestamp": "2026-09-09T17:55:17Z"
 }
