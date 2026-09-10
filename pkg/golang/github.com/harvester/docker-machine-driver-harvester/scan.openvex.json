@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fdbdde5c18162ea2d6628d998ee1a73560987b4839f7d0c39fc9bfcc7ba02c18",
+  "@id": "https://openvex.dev/docs/public/vex-61146cd6433f804c94791292fd78bead0f4508b323f408dcba289eda156c7bd7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -13162,6 +13162,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-6383"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.7.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester docker machine driver doesn't use the KubeVirt's RBAC evaluation mechanism.",
+      "timestamp": "2026-09-09T22:50:00Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-7374"
       },
       "products": [
@@ -13575,7 +13594,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "The Harvester Docker machine driver does not have any runtime dependency on KubeVirt's virt-exportserver component. The package is imported as a client-side SDK.",
       "timestamp": "2026-08-25T20:41:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-9804"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/kubevirt.io/kubevirt@v1.7.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester docker machine driver doesn't use the KubeVirt's virt-exportserver at runtime.",
+      "timestamp": "2026-09-09T22:50:00Z"
     }
   ],
-  "timestamp": "2026-09-08T06:10:15Z"
+  "timestamp": "2026-09-10T16:56:04Z"
 }
