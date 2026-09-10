@@ -1,0 +1,47 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-6211911054d45348f3b373497d68106b541a31d2661ec6f134a7b3e206650ec7",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-62593"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/alibi-explainer?repository_url=index.docker.io/kserve/alibi-explainer",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/ray@2.10.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Ray is used as a local Python backend library; Ray Dashboard/API (port 8265) is not started or exposed in the container config",
+      "timestamp": "2026-09-10T16:45:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48710"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/alibi-explainer?repository_url=index.docker.io/kserve/alibi-explainer",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/starlette@0.36.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FastAPI/Starlette ASGI server inside the container has no internal path-based access control middleware relying on request.url.path to bypass; access control is strictly enforced at ingress/istio",
+      "timestamp": "2026-09-10T16:45:49Z"
+    }
+  ],
+  "timestamp": "2026-09-10T16:56:01Z"
+}
