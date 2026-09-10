@@ -1,0 +1,123 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-444ee51251ab8201def0219b34ac0e4d038d28089d4091c64312e3bc03b31d4e",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-48384"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mlserver?repository_url=registry.rancher.com/seldonio/mlserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/git"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "skopeo inspect: mlserver entrypoint loads models from local filesystem, git is an unused dependency left from build",
+      "timestamp": "2026-09-10T16:45:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-48384"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mlserver?repository_url=registry.rancher.com/seldonio/mlserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/git-core"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "skopeo inspect: mlserver entrypoint loads models from local filesystem, git is an unused dependency left from build",
+      "timestamp": "2026-09-10T16:45:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-48384"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mlserver?repository_url=registry.rancher.com/seldonio/mlserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/git-core-doc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "skopeo inspect: mlserver entrypoint loads models from local filesystem, git is an unused dependency left from build",
+      "timestamp": "2026-09-10T16:45:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-48384"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mlserver?repository_url=registry.rancher.com/seldonio/mlserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/perl-Git"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "skopeo inspect: mlserver entrypoint loads models from local filesystem, git is an unused dependency left from build",
+      "timestamp": "2026-09-10T16:45:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48710"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mlserver?repository_url=registry.rancher.com/seldonio/mlserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/starlette@0.46.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FastAPI/Starlette ASGI server inside the container has no internal path-based access control middleware relying on request.url.path to bypass; access control is strictly enforced at ingress/istio",
+      "timestamp": "2026-09-10T16:45:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-64849"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mlserver?repository_url=registry.rancher.com/seldonio/mlserver",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/mlflow@2.22.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mlflow is used purely as a python library to load model artifacts via mlflow.pyfunc.load_model; webhook server is not run",
+      "timestamp": "2026-09-10T16:45:49Z"
+    }
+  ],
+  "timestamp": "2026-09-10T16:56:03Z"
+}

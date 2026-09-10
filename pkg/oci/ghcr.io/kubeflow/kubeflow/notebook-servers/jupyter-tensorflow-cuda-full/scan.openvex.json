@@ -1,0 +1,28 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-444ee51251ab8201def0219b34ac0e4d038d28089d4091c64312e3bc03b31d4e",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2023-44487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-cuda-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-cuda-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nodejs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "image skopeo config + s6 init invokes python/tornado, nodejs is only a build tool for jupyterlab extensions",
+      "timestamp": "2026-09-10T16:45:49Z"
+    }
+  ],
+  "timestamp": "2026-09-10T16:56:03Z"
+}
