@@ -1,0 +1,28 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-e23d4266d69935bc74ffddf3f8d361381ef49e01d4b6955f716de485ba2b9952",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2023-44487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nodejs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "image skopeo config + s6 init invokes python/tornado, nodejs is only a build tool for jupyterlab extensions",
+      "timestamp": "2026-09-11T01:22:05Z"
+    }
+  ],
+  "timestamp": "2026-09-11T01:28:50Z"
+}
