@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-035dfdbd45230d5246f2a31f90d65326715c5f88cc6b1aac3c46d7d342e70790",
+  "@id": "https://openvex.dev/docs/public/vex-9794e6cef91fb89de96786b590b1eb052659c54c2025f2e7782d66459a25df9a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -931,7 +931,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rpm-ndb is the rpm package DB backend, only used during image build, never invoked by the running app",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3866-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-seeder?repository_url=index.docker.io/rancher/harvester-seeder",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go seeder binary is the entrypoint; openssl CLI tool is never invoked at runtime",
+      "timestamp": "2026-09-12T01:06:17Z"
     }
   ],
-  "timestamp": "2026-08-25T18:36:25Z"
+  "timestamp": "2026-09-13T17:38:04Z"
 }
