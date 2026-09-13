@@ -1,0 +1,28 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-9794e6cef91fb89de96786b590b1eb052659c54c2025f2e7782d66459a25df9a",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:23303-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-vsphere-csi-driver?repository_url=registry.rancher.com/rancher/hardened-vsphere-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python313-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-09-12T01:06:17Z"
+    }
+  ],
+  "timestamp": "2026-09-13T17:38:04Z"
+}
