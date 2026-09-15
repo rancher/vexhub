@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-538b319a181620443d2eac622594c8895744568448e5c2dc717ae30e743d3ea7",
+  "@id": "https://openvex.dev/docs/public/vex-fae7bf50eb75cf5365b85701c42bcc6d9450693f73793ce0ac2baabf58ef6237",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1612,6 +1612,44 @@
           "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libpython3_13-1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python interpreter ships in the SLE BCI base image but is never invoked by the nginx-ingress-controller entrypoint at runtime",
+      "timestamp": "2026-09-15T19:44:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:23303-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python313-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python interpreter ships in the SLE BCI base image but is never invoked by the nginx-ingress-controller entrypoint at runtime",
+      "timestamp": "2026-09-15T19:44:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:23303-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/python313-base"
             }
           ]
@@ -1621,7 +1659,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-09-12T01:06:17Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:23326-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/nginx-ingress-controller?repository_url=registry.rancher.com/rancher/nginx-ingress-controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/wget"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wget is a base-image utility that is not called by the nginx-ingress-controller entrypoint at runtime",
+      "timestamp": "2026-09-15T19:44:03Z"
     }
   ],
-  "timestamp": "2026-09-13T17:38:03Z"
+  "timestamp": "2026-09-15T19:49:06Z"
 }
