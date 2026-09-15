@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ffe37a7ac7bef502d37286bf26f538926a0256bd041ecb42af22c8a5c6675a3c",
+  "@id": "https://openvex.dev/docs/public/vex-ce1648395363707c3914df404cdf50ec33786ff938c77ae83ac1e8f617193119",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1653,7 +1653,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary uses net/http; curl CLI/libcurl not invoked at runtime",
       "timestamp": "2026-08-28T03:20:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4049-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.suse.com/rancher/mirrored-longhornio-backing-image-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/wget"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go backing-image-manager uses its own HTTP client; wget CLI tool not invoked by the binary",
+      "timestamp": "2026-09-15T01:37:05Z"
     }
   ],
-  "timestamp": "2026-09-02T13:59:41Z"
+  "timestamp": "2026-09-15T12:16:56Z"
 }

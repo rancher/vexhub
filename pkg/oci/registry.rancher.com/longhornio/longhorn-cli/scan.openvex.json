@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6d51694fa261d6ded6317f923f481a1ec6f4f3064fa6059d43524143719896bd",
+  "@id": "https://openvex.dev/docs/public/vex-ce1648395363707c3914df404cdf50ec33786ff938c77ae83ac1e8f617193119",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1805,7 +1805,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "longhornio/longhorn-cli is a Go binary; crypto/tls used instead of libssl",
       "timestamp": "2026-09-05T00:53:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4039-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=registry.rancher.com/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go CLI; does not link or call OpenSSL; FIPS provider not loaded",
+      "timestamp": "2026-09-15T01:37:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4039-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-cli?repository_url=registry.rancher.com/longhornio/longhorn-cli",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "longhornio/longhorn-cli is a Go binary; crypto/tls used instead of libssl",
+      "timestamp": "2026-09-15T01:37:05Z"
     }
   ],
-  "timestamp": "2026-09-08T12:04:00Z"
+  "timestamp": "2026-09-15T12:16:56Z"
 }
