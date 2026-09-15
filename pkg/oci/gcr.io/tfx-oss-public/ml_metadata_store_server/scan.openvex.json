@@ -1,0 +1,104 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-704f9fb8c59806cd69dac4f7935af655cc1f08faf10216102789d83c7da28b74",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2024-12133"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ml_metadata_store_server?repository_url=gcr.io/tfx-oss-public/ml_metadata_store_server",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libtasn1-6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libtasn1 is only reached via GnuTLS",
+      "timestamp": "2026-09-15T12:25:26Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-12243"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ml_metadata_store_server?repository_url=gcr.io/tfx-oss-public/ml_metadata_store_server",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gRPC server uses OpenSSL for TLS; GnuTLS is not loaded at runtime",
+      "timestamp": "2026-09-15T12:25:26Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30258"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ml_metadata_store_server?repository_url=gcr.io/tfx-oss-public/ml_metadata_store_server",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/gpgv"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gpgv is only used by apt at build time; no key import happens at runtime",
+      "timestamp": "2026-09-15T12:25:26Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-4802"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ml_metadata_store_server?repository_url=gcr.io/tfx-oss-public/ml_metadata_store_server",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libc-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No statically linked setuid binaries; LD_LIBRARY_PATH is not adversary controlled",
+      "timestamp": "2026-09-15T12:25:26Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-4802"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ml_metadata_store_server?repository_url=gcr.io/tfx-oss-public/ml_metadata_store_server",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libc6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No statically linked setuid binaries; LD_LIBRARY_PATH is not adversary controlled",
+      "timestamp": "2026-09-15T12:25:26Z"
+    }
+  ],
+  "timestamp": "2026-09-15T13:21:43Z"
+}
