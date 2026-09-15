@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-913523bbb516a56898f1a48042a227865ae61e3276112813ab421fb11fcaa809",
+  "@id": "https://openvex.dev/docs/public/vex-0837da427a35a412092fa0a4ab96640df8285bd74d8df7e2383961a3e5798fa3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2071,7 +2071,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go webhook binary is the entrypoint; openssl CLI tool is never invoked at runtime",
       "timestamp": "2026-09-05T00:53:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4039-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-node-disk-manager-webhook?repository_url=index.docker.io/rancher/harvester-node-disk-manager-webhook",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go webhook binary is the entrypoint; openssl CLI tool is never invoked at runtime",
+      "timestamp": "2026-09-15T01:37:05Z"
     }
   ],
-  "timestamp": "2026-09-08T12:04:02Z"
+  "timestamp": "2026-09-15T12:16:54Z"
 }
