@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-dd737fb1903ee44c180933cf1a3e8cf2b3f98920fd6a5125ef4b0d054604a389",
+  "@id": "https://openvex.dev/docs/public/vex-597d473fd71c8292cb4834d49129b6f18504d71a954c2ef57ebd821b6e1ca02b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-15649"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2025-69720"
@@ -22,6 +41,82 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Terminal UI library unused by the Flask/gunicorn web app entrypoint",
       "timestamp": "2026-09-15T15:40:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libtinfo6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "terminfo handling is unreachable in this non-interactive web app container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/ncurses-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ncurses terminal handling is unreachable in this non-interactive container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/ncurses-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ncurses CLI tools are never executed by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-8869"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@25.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is a build-time installer and is never executed by the runtime entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
     },
     {
       "vulnerability": {
@@ -63,6 +158,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-12087"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13221"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13346"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@25.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is a build-time installer and is never executed by the runtime entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-13595"
       },
       "products": [
@@ -158,6 +310,234 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is not used at runtime by the Python Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su in this non-interactive Flask web app container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No systemd/journald present or used at runtime in this container image",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No udev daemon or device enumeration is used at runtime in this container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15534"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No systemd/journald present or used at runtime in this container image",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No udev daemon or device enumeration is used at runtime in this container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18477"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The tar CLI is never executed at runtime by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18508"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The tar CLI is never executed at runtime by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-27456"
       },
       "products": [
@@ -253,6 +633,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is not used at runtime by the Python Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su in this non-interactive Flask web app container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-3184"
       },
       "products": [
@@ -345,6 +801,101 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Table formatting library for CLI tools not executed by the web app entrypoint",
       "timestamp": "2026-09-15T15:40:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is not used at runtime by the Python Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su in this non-interactive Flask web app container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3219"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@25.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is a build-time installer and is never executed by the runtime entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
     },
     {
       "vulnerability": {
@@ -383,6 +934,101 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gzip CLI is an incidental dependency never executed by the container entrypoint",
       "timestamp": "2026-09-15T15:40:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42496"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42497"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48959"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48962"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
     },
     {
       "vulnerability": {
@@ -519,6 +1165,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is not used at runtime by the Python Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su in this non-interactive Flask web app container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53613"
       },
       "products": [
@@ -614,6 +1336,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is not used at runtime by the Python Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su in this non-interactive Flask web app container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53614"
       },
       "products": [
@@ -709,6 +1507,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is not used at runtime by the Python Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su in this non-interactive Flask web app container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53615"
       },
       "products": [
@@ -801,6 +1675,82 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Table formatting library for CLI tools not executed by the web app entrypoint",
       "timestamp": "2026-09-15T15:40:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is not used at runtime by the Python Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su in this non-interactive Flask web app container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
     },
     {
       "vulnerability": {
@@ -937,6 +1887,120 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-5704"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The tar CLI is never executed at runtime by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57433"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6357"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@25.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is a build-time installer and is never executed by the runtime entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-7010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-7017"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-76642"
       },
       "products": [
@@ -1032,6 +2096,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is not used at runtime by the Python Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su in this non-interactive Flask web app container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-78408"
       },
       "products": [
@@ -1127,6 +2267,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is not used at runtime by the Python Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su in this non-interactive Flask web app container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-78409"
       },
       "products": [
@@ -1222,6 +2438,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is not used at runtime by the Python Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su in this non-interactive Flask web app container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-78410"
       },
       "products": [
@@ -1314,6 +2606,101 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Table formatting library for CLI tools not executed by the web app entrypoint",
       "timestamp": "2026-09-15T15:40:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is not used at runtime by the Python Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su in this non-interactive Flask web app container",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are never invoked by the Flask web app entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8376"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
     },
     {
       "vulnerability": {
@@ -1333,6 +2720,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python uses its own re engine; PCRE2 gets no attacker-controlled patterns",
       "timestamp": "2026-09-15T15:40:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8643"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@25.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is a build-time installer and is never executed by the runtime entrypoint",
+      "timestamp": "2026-09-15T20:34:42Z"
     },
     {
       "vulnerability": {
@@ -1390,7 +2796,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python uses its own re engine; PCRE2 gets no attacker-controlled patterns",
       "timestamp": "2026-09-15T15:40:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-9538"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
+      "timestamp": "2026-09-15T20:34:42Z"
     }
   ],
-  "timestamp": "2026-09-15T16:15:39Z"
+  "timestamp": "2026-09-15T21:19:03Z"
 }
