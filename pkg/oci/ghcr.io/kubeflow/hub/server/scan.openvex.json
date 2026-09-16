@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e1cd8c2c324b9e82a88bd9c5c8a8332493c8e468e014caef33ef4d38aef8254e",
+  "@id": "https://openvex.dev/docs/public/vex-ba97d08d9ed3ec6901e904b4c5e7e684550d6bca37db508a642af9a35957e8f0",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -25,6 +25,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-68972"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/gnupg2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gnupg2 is only used at image build time and is never executed at runtime",
+      "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libblkid"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libblkid block-device probing is not used by the container workload",
+      "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-13595"
       },
       "products": [
@@ -41,6 +79,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux block-device/mount/column libraries are not called at runtime by this application container",
       "timestamp": "2026-09-15T22:12:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libfdisk"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libfdisk partitioning code is never reached by the container workload",
+      "timestamp": "2026-09-16T00:07:12Z"
     },
     {
       "vulnerability": {
@@ -77,8 +134,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table handling is not used by the container workload",
+      "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libmount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux block-device/mount/column libraries are not called at runtime by this application container",
       "timestamp": "2026-09-15T22:12:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libsmartcols"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by unused util-linux CLI tools",
+      "timestamp": "2026-09-16T00:07:12Z"
     },
     {
       "vulnerability": {
@@ -115,8 +210,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is an incidental dependency and is not called by the container workload",
+      "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libuuid"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux block-device/mount/column libraries are not called at runtime by this application container",
       "timestamp": "2026-09-15T22:12:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are not invoked by the container entrypoint",
+      "timestamp": "2026-09-16T00:07:12Z"
     },
     {
       "vulnerability": {
@@ -158,6 +291,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/util-linux-core"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux core CLI tools are not invoked by the container entrypoint",
+      "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libblkid"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libblkid block-device probing is not used by the container workload",
+      "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-27456"
       },
       "products": [
@@ -174,6 +345,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux block-device/mount/column libraries are not called at runtime by this application container",
       "timestamp": "2026-09-15T22:12:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libfdisk"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libfdisk partitioning code is never reached by the container workload",
+      "timestamp": "2026-09-16T00:07:12Z"
     },
     {
       "vulnerability": {
@@ -210,8 +400,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table handling is not used by the container workload",
+      "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libmount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux block-device/mount/column libraries are not called at runtime by this application container",
       "timestamp": "2026-09-15T22:12:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libsmartcols"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by unused util-linux CLI tools",
+      "timestamp": "2026-09-16T00:07:12Z"
     },
     {
       "vulnerability": {
@@ -248,8 +476,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid is an incidental dependency and is not called by the container workload",
+      "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libuuid"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux block-device/mount/column libraries are not called at runtime by this application container",
       "timestamp": "2026-09-15T22:12:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are not invoked by the container entrypoint",
+      "timestamp": "2026-09-16T00:07:12Z"
     },
     {
       "vulnerability": {
@@ -288,6 +554,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux block-device/mount/column libraries are not called at runtime by this application container",
       "timestamp": "2026-09-15T22:12:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/util-linux-core"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux core CLI tools are not invoked by the container entrypoint",
+      "timestamp": "2026-09-16T00:07:12Z"
     },
     {
       "vulnerability": {
@@ -307,6 +592,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container does not run systemd/udev or a D-Bus client; systemd-libs is not in the execute path",
       "timestamp": "2026-09-15T22:12:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41991"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is an incidental dependency and is never executed by the container",
+      "timestamp": "2026-09-16T00:07:12Z"
     },
     {
       "vulnerability": {
@@ -355,6 +659,25 @@
           "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm CLI is only used at image build time and is never executed at runtime",
+      "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-44604"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/redhat/rpm-libs"
             }
           ]
@@ -367,7 +690,64 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-44604"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "librpm is only used at image build time and is never loaded at runtime",
+      "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-9149"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libsolv"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Package manager tooling is not executed at runtime; it is an incidental base-image dependency",
+      "timestamp": "2026-09-15T22:12:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-9149"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libsolv"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsolv is only used by package management at build time",
+      "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-9150"
       },
       "products": [
         {
@@ -400,9 +780,9 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Package manager tooling is not executed at runtime; it is an incidental base-image dependency",
-      "timestamp": "2026-09-15T22:12:01Z"
+      "impact_statement": "libsolv is only used by package management at build time",
+      "timestamp": "2026-09-16T00:07:12Z"
     }
   ],
-  "timestamp": "2026-09-15T22:29:19Z"
+  "timestamp": "2026-09-16T00:16:58Z"
 }
