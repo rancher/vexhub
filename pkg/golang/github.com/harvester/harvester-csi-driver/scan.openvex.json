@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f6c6bdadd85eb4a2f26871555cea3e2250cce3a3a900a106573518bdda5b0d77",
+  "@id": "https://openvex.dev/docs/public/vex-803d1c194451e42b4e4fe9d687bfc188973b4922146da8849a47a995f779d351",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -15598,6 +15598,120 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-84303"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.73.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the xDS RBAC HTTP component",
+      "timestamp": "2026-09-16T18:45:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84303"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.79.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the xDS RBAC HTTP component",
+      "timestamp": "2026-09-16T18:45:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84304"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.73.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester only uses client-side GRPC component",
+      "timestamp": "2026-09-16T18:45:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84304"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.79.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester only uses client-side GRPC component",
+      "timestamp": "2026-09-16T18:45:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84445"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.73.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use GRPC server configured with xds.NewGRPCServer()",
+      "timestamp": "2026-09-16T18:45:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84445"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.79.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use GRPC server configured with xds.NewGRPCServer()",
+      "timestamp": "2026-09-16T18:45:45Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-9804"
       },
       "products": [
@@ -15633,7 +15747,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "This vulnerability is found in the virt-exportserver component which Harvester components do not spin up nor interact directly with during runtime. The kubevirt.io/kubevirt package is a transitive dependency from the github.com/harvester/harvester package. Harvester components only depends on this package for a handful of Go util functions.",
       "timestamp": "2026-07-15T23:07:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "GHSA-hrxh-6v49-42gf"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.73.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the xDS RBAC authorization engine",
+      "timestamp": "2026-09-16T18:45:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "GHSA-hrxh-6v49-42gf"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/harvester/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.79.3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Harvester does not use the xDS RBAC authorization engine",
+      "timestamp": "2026-09-16T18:45:45Z"
     }
   ],
-  "timestamp": "2026-09-03T04:41:13Z"
+  "timestamp": "2026-09-16T19:27:00Z"
 }
