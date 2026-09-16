@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6b21082f384796ff8ef24b54749d30490bd4f7530732ff57f065fbaa603761d7",
+  "@id": "https://openvex.dev/docs/public/vex-b6f327b19e9d6199f6c655ebf56128784ed08dc91f69a02f2fb1c095c1c15e03",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -934,7 +934,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "OpenSSL CMP client/server protocol is not used by this image",
       "timestamp": "2026-09-15T12:25:26Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75803"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/seaweedfs?repository_url=index.docker.io/chrislusf/seaweedfs",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/libcrypto3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Statically linked Go binary uses Go crypto; the OpenSSL shared library is never loaded",
+      "timestamp": "2026-09-16T11:52:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75803"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/seaweedfs?repository_url=index.docker.io/chrislusf/seaweedfs",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/libssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Statically linked Go binary uses Go crypto; the OpenSSL shared library is never loaded",
+      "timestamp": "2026-09-16T11:52:06Z"
     }
   ],
-  "timestamp": "2026-09-15T13:21:45Z"
+  "timestamp": "2026-09-16T12:06:37Z"
 }

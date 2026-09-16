@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-597d473fd71c8292cb4834d49129b6f18504d71a954c2ef57ebd821b6e1ca02b",
+  "@id": "https://openvex.dev/docs/public/vex-d6bec98dcc9f8a38d9172c7ac15facd5fd11f2092684481c3f3c291d6c726c75",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1048,7 +1048,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "kube-vip is a pure-Go binary using crypto/tls; OpenSSL is never loaded at runtime",
       "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75803"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kube-vip-iptables?repository_url=ghcr.io/kube-vip/kube-vip-iptables",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/libcrypto3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Statically linked Go binary uses Go crypto; the OpenSSL shared library is never loaded",
+      "timestamp": "2026-09-16T11:52:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75803"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kube-vip-iptables?repository_url=ghcr.io/kube-vip/kube-vip-iptables",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/libssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Statically linked Go binary uses Go crypto; the OpenSSL shared library is never loaded",
+      "timestamp": "2026-09-16T11:52:06Z"
     }
   ],
-  "timestamp": "2026-09-15T21:19:03Z"
+  "timestamp": "2026-09-16T12:06:38Z"
 }
