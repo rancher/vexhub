@@ -1,9 +1,104 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-89f1148e785b2a9ef316f45e0b8f2375c85cdeb050b3ab628519127e036773ff",
+  "@id": "https://openvex.dev/docs/public/vex-2d21f7b20b15620e1abc280d658e2e775e0c13d663818819106fd64b76ae9daf",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libncursesw6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs non-interactively without a terminal; ncurses is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libtinfo6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container runs non-interactively without a terminal; terminfo code is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-7709"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The training entrypoint does not import sqlite3; libsqlite3 is not loaded at runtime",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-11822"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The training entrypoint does not import sqlite3; libsqlite3 is not loaded at runtime",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-11824"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The training entrypoint does not import sqlite3; libsqlite3 is not loaded at runtime",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2026-13595"
@@ -32,6 +127,44 @@
           "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux utilities are not executed by the Python training entrypoint; code is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block-device ID library is never loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libblkid1"
             }
           ]
@@ -41,6 +174,82 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libblkid is not loaded or called by the Python ML training entrypoint",
       "timestamp": "2026-09-16T01:51:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 library is only used by login tooling",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library is not loaded by the Python training entrypoint; mounting is handled by the kubelet",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table-formatting library is only used by util-linux CLI tools",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is not loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
     },
     {
       "vulnerability": {
@@ -60,6 +269,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No package installation happens at runtime; dpkg is never executed in the container",
       "timestamp": "2026-09-16T01:51:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-2219"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/dpkg"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "dpkg is a build-time package manager and is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-23949"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/jaraco.context@5.3.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Build-time setuptools vendored helper; not imported by the training code at runtime",
+      "timestamp": "2026-09-16T03:33:22Z"
     },
     {
       "vulnerability": {
@@ -101,6 +348,120 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux utilities are not executed by the Python training entrypoint; code is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block-device ID library is never loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 library is only used by login tooling",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library is not loaded by the Python training entrypoint; mounting is handled by the kubelet",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table-formatting library is only used by util-linux CLI tools",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is not loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-3184"
       },
       "products": [
@@ -120,7 +481,178 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux utilities are not executed by the Python training entrypoint; code is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block-device ID library is never loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 library is only used by login tooling",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library is not loaded by the Python training entrypoint; mounting is handled by the kubelet",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table-formatting library is only used by util-linux CLI tools",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is not loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34743"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "LZMA decompression is not performed on untrusted input by the training entrypoint at runtime",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-41991"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is an incidental dependency and is not executed by the container entrypoint",
+      "timestamp": "2026-09-16T01:51:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41991"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is not executed at runtime; it is an incidental Debian base-image dependency",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41992"
       },
       "products": [
         {
@@ -153,12 +685,202 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "gzip CLI is an incidental dependency and is not executed by the container entrypoint",
+      "impact_statement": "gzip CLI is not executed at runtime; it is an incidental Debian base-image dependency",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-4878"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Capability library is only used by setup tooling; not called by the Python training entrypoint",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-50812"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The training entrypoint does not import sqlite3; libsqlite3 is not loaded at runtime",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-50813"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The training entrypoint does not import sqlite3; libsqlite3 is not loaded at runtime",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utils not invoked by the Python ML entrypoint in this image",
       "timestamp": "2026-09-16T01:51:45Z"
     },
     {
       "vulnerability": {
         "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux utilities are not executed by the Python training entrypoint; code is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block-device ID library is never loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 library is only used by login tooling",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library is not loaded by the Python training entrypoint; mounting is handled by the kubelet",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table-formatting library is only used by util-linux CLI tools",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is not loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
       },
       "products": [
         {
@@ -191,12 +913,240 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux utilities are not executed by the Python training entrypoint; code is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block-device ID library is never loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 library is only used by login tooling",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library is not loaded by the Python training entrypoint; mounting is handled by the kubelet",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table-formatting library is only used by util-linux CLI tools",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is not loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI utils not invoked by the Python ML entrypoint in this image",
       "timestamp": "2026-09-16T01:51:45Z"
     },
     {
       "vulnerability": {
         "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux utilities are not executed by the Python training entrypoint; code is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block-device ID library is never loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 library is only used by login tooling",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library is not loaded by the Python training entrypoint; mounting is handled by the kubelet",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table-formatting library is only used by util-linux CLI tools",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is not loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
       },
       "products": [
         {
@@ -229,8 +1179,103 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "util-linux CLI utils not invoked by the Python ML entrypoint in this image",
-      "timestamp": "2026-09-16T01:51:45Z"
+      "impact_statement": "util-linux utilities are not executed by the Python training entrypoint; code is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block-device ID library is never loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 library is only used by login tooling",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library is not loaded by the Python training entrypoint; mounting is handled by the kubelet",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table-formatting library is only used by util-linux CLI tools",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54369"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libacl1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "POSIX ACL library is not loaded by the Python training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
     },
     {
       "vulnerability": {
@@ -250,6 +1295,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "POSIX ACL library is not used by the Python ML workload at runtime",
       "timestamp": "2026-09-16T01:51:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54370"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libacl1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "POSIX ACL library is not loaded by the Python training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
     },
     {
       "vulnerability": {
@@ -291,7 +1355,216 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-54371"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libattr1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Extended-attribute library is not loaded by the Python training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam-modules"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via Kubernetes service accounts; PAM modules are never loaded at runtime",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam-modules-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PAM helper binaries are never executed; the container does not perform local authentication",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PAM configuration is unused; the container does not perform local user authentication",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam0g"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container authenticates via Kubernetes service accounts; PAM is never invoked at runtime",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utils not invoked by the Python ML entrypoint in this image",
+      "timestamp": "2026-09-16T01:51:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux utilities are not executed by the Python training entrypoint; code is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block-device ID library is never loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 library is only used by login tooling",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library is not loaded by the Python training entrypoint; mounting is handled by the kubelet",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table-formatting library is only used by util-linux CLI tools",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
       },
       "products": [
         {
@@ -324,12 +1597,202 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux utilities are not executed by the Python training entrypoint; code is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block-device ID library is never loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 library is only used by login tooling",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library is not loaded by the Python training entrypoint; mounting is handled by the kubelet",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table-formatting library is only used by util-linux CLI tools",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI utils not invoked by the Python ML entrypoint in this image",
       "timestamp": "2026-09-16T01:51:45Z"
     },
     {
       "vulnerability": {
         "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux utilities are not executed by the Python training entrypoint; code is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block-device ID library is never loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 library is only used by login tooling",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library is not loaded by the Python training entrypoint; mounting is handled by the kubelet",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table-formatting library is only used by util-linux CLI tools",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
       },
       "products": [
         {
@@ -362,9 +1825,161 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "util-linux CLI utils not invoked by the Python ML entrypoint in this image",
-      "timestamp": "2026-09-16T01:51:45Z"
+      "impact_statement": "util-linux utilities are not executed by the Python training entrypoint; code is not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block-device ID library is never loaded by the Python ML training process; not in the execute path",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 library is only used by login tooling",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library is not loaded by the Python training entrypoint; mounting is handled by the kubelet",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table-formatting library is only used by util-linux CLI tools",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-86145"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python uses its own re engine; the system PCRE2 library is not called by the training code",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89157"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python uses its own re engine; the system PCRE2 library is not called by the training code",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89158"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python uses its own re engine; the system PCRE2 library is not called by the training code",
+      "timestamp": "2026-09-16T03:33:22Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89161"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python uses its own re engine; the system PCRE2 library is not called by the training code",
+      "timestamp": "2026-09-16T03:33:22Z"
     }
   ],
-  "timestamp": "2026-09-16T02:31:40Z"
+  "timestamp": "2026-09-16T10:56:08Z"
 }
