@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c2ab4f31b2e6ab86ca0e1dec632799dcb39846f4975c49823170dbc7abcbbcc8",
+  "@id": "https://openvex.dev/docs/public/vex-cbf676b118a32bc533181fe44fa9c0809d45b8181910975fa623f26a83523d67",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1239,6 +1239,29 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-84303",
+        "aliases": [
+          "GO-2026-6441",
+          "GHSA-qc2q-p7wx-3px3"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubernetes-csi/external-provisioner",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.60.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-09-17T02:11:59Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-84445"
       },
       "products": [
@@ -1257,5 +1280,5 @@
       "timestamp": "2026-09-16T18:54:16Z"
     }
   ],
-  "timestamp": "2026-09-16T19:26:59Z"
+  "timestamp": "2026-09-17T05:18:17Z"
 }
