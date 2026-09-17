@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cbf676b118a32bc533181fe44fa9c0809d45b8181910975fa623f26a83523d67",
+  "@id": "https://openvex.dev/docs/public/vex-ecd42c8cb84085c4a6ab4e81dcaa88057513b3fb5ce26e8a5fb44f4fbbcd06bc",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -4088,6 +4088,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-56855"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`usr/bin/helm` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
+      "timestamp": "2026-09-17T12:06:23Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-56855",
         "aliases": [
           "GO-2026-6355"
@@ -4217,6 +4236,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-08-20T02:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78662"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/helm.sh/helm/v4",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.51.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`usr/bin/helm` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.51.0. Vulnerable code not present.",
+      "timestamp": "2026-09-17T12:06:23Z"
     },
     {
       "vulnerability": {
@@ -4559,5 +4597,5 @@
       "timestamp": "2026-09-17T02:42:04Z"
     }
   ],
-  "timestamp": "2026-09-17T05:18:17Z"
+  "timestamp": "2026-09-17T15:08:52Z"
 }
