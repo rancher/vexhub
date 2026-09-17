@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-974291300a1039c7a38408a82d662adb4a915419c259550b6efd475831f647c3",
+  "@id": "https://openvex.dev/docs/public/vex-238157a73b3366d971e505ea528b1ff38f0b5dca9f162930df40ab8e3908e4ea",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -10350,6 +10350,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-56855"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.52.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`metrics-server` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.52.0. Vulnerable code not present.",
+      "timestamp": "2026-09-17T12:06:23Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-56855",
         "aliases": [
           "GO-2026-6355"
@@ -10504,6 +10523,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
       "timestamp": "2026-08-19T02:33:07Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78662"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/sigs.k8s.io/metrics-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.52.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "`metrics-server` does not link golang.org/x/crypto/ssh; the Go function-name table (pclntab, retained despite -s -w stripping) contains no matching symbols at golang.org/x/crypto v0.52.0. Vulnerable code not present.",
+      "timestamp": "2026-09-17T12:06:23Z"
     },
     {
       "vulnerability": {
@@ -10664,5 +10702,5 @@
       "timestamp": "2026-09-17T03:10:18Z"
     }
   ],
-  "timestamp": "2026-09-17T05:18:19Z"
+  "timestamp": "2026-09-17T15:08:51Z"
 }
