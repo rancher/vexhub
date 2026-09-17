@@ -1,9 +1,427 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a8db0f1fec21ad151defe388259d2ec878684744305e78e618fc4d2d6d2fa2d4",
+  "@id": "https://openvex.dev/docs/public/vex-64b9b104c07e193b273ccbfd495822b7280ae93a1354fb8b673ceadb5adbb17f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2023-5752"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@23.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is only used at image build time and is never executed at container runtime",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-5206"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/scikit-learn@1.3.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Affected TfidfVectorizer code is not used; skopt performs no text vectorization",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-11187"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-11187"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-15467"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-15467"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-15649"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69419"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69419"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69421"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69421"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libncursesw6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ncurses terminal handling is unreachable in this non-interactive container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libtinfo6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "terminfo handling is unreachable in this non-interactive container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/ncurses-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ncurses terminal data is unused in this non-interactive container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/ncurses-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ncurses CLI tools are never executed in this non-interactive container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-7709"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SQLite is not used by this service; metadata is stored in the external Katib DB",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-8869"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@23.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is only used at image build time and is never executed at container runtime",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-11822"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SQLite is not used by this service; metadata is stored in the external Katib DB",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-11824"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SQLite is not used by this service; metadata is stored in the external Katib DB",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-12087"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13221"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13346"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@23.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is only used at image build time and is never executed at container runtime",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2026-13595"
@@ -41,6 +459,367 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI/libs not invoked by the Python suggestion service entrypoint",
       "timestamp": "2026-09-16T18:21:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 is only used by login tooling which never runs in this container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table parsing is not used by this Python gRPC service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by CLI tools never run in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid affected code paths are only reached via util-linux CLI tools not run here",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/su utilities are never executed; container runs a non-interactive Python service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CLI disk/system utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-14456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-14456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd is not present or running in this container; the library is never exercised",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udev is not present or running in this container; the library is never exercised",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15534"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd is not present or running in this container; the library is never exercised",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udev is not present or running in this container; the library is never exercised",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18477"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is an incidental dependency and is never executed at runtime by the entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18508"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is an incidental dependency and is never executed at runtime by the entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18798"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18798"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
     },
     {
       "vulnerability": {
@@ -82,6 +861,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-24049"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/wheel@0.45.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wheel is a build-time packaging tool and is not executed at container runtime",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-2673"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-2673"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-27456"
       },
       "products": [
@@ -120,6 +956,405 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 is only used by login tooling which never runs in this container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table parsing is not used by this Python gRPC service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by CLI tools never run in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid affected code paths are only reached via util-linux CLI tools not run here",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/su utilities are never executed; container runs a non-interactive Python service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CLI disk/system utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-28387"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-28387"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-28388"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-28388"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-28389"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-28389"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-28390"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-28390"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-29111"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd is not present or running in this container; the library is never exercised",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-29111"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udev is not present or running in this container; the library is never exercised",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-31789"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-31789"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-31790"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-31790"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-3184"
       },
       "products": [
@@ -155,6 +1390,367 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI/libs not invoked by the Python suggestion service entrypoint",
       "timestamp": "2026-09-16T18:21:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 is only used by login tooling which never runs in this container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table parsing is not used by this Python gRPC service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by CLI tools never run in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid affected code paths are only reached via util-linux CLI tools not run here",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/su utilities are never executed; container runs a non-interactive Python service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CLI disk/system utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3219"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@23.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is only used at image build time and is never executed at container runtime",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34182"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34182"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34183"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34183"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34743"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xz decompression is not reached; the service never processes xz archives",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40225"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd is not present or running in this container; the library is never exercised",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40225"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udev is not present or running in this container; the library is never exercised",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40226"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd is not present or running in this container; the library is never exercised",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40226"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udev is not present or running in this container; the library is never exercised",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-4105"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd is not present or running in this container; the library is never exercised",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-4105"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udev is not present or running in this container; the library is never exercised",
+      "timestamp": "2026-09-16T22:51:09Z"
     },
     {
       "vulnerability": {
@@ -196,6 +1792,253 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42496"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42497"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42764"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42764"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45445"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45445"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45447"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45447"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48959"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48962"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-50812"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SQLite is not used by this service; metadata is stored in the external Katib DB",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-50813"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SQLite is not used by this service; metadata is stored in the external Katib DB",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53612"
       },
       "products": [
@@ -231,6 +2074,139 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI/libs not invoked by the Python suggestion service entrypoint",
       "timestamp": "2026-09-16T18:21:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 is only used by login tooling which never runs in this container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table parsing is not used by this Python gRPC service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by CLI tools never run in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid affected code paths are only reached via util-linux CLI tools not run here",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/su utilities are never executed; container runs a non-interactive Python service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CLI disk/system utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
     },
     {
       "vulnerability": {
@@ -272,6 +2248,139 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 is only used by login tooling which never runs in this container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table parsing is not used by this Python gRPC service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by CLI tools never run in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid affected code paths are only reached via util-linux CLI tools not run here",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/su utilities are never executed; container runs a non-interactive Python service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CLI disk/system utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53614"
       },
       "products": [
@@ -310,6 +2419,139 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 is only used by login tooling which never runs in this container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table parsing is not used by this Python gRPC service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by CLI tools never run in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid affected code paths are only reached via util-linux CLI tools not run here",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/su utilities are never executed; container runs a non-interactive Python service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CLI disk/system utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53615"
       },
       "products": [
@@ -345,6 +2587,139 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI/libs not invoked by the Python suggestion service entrypoint",
       "timestamp": "2026-09-16T18:21:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 is only used by login tooling which never runs in this container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table parsing is not used by this Python gRPC service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by CLI tools never run in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid affected code paths are only reached via util-linux CLI tools not run here",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/su utilities are never executed; container runs a non-interactive Python service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CLI disk/system utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
     },
     {
       "vulnerability": {
@@ -405,6 +2780,348 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam-modules"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PAM modules are unused; no login or PAM-based authentication occurs in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam-modules-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PAM helper binaries are never executed; no PAM authentication occurs in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PAM runtime configuration is unused; no PAM authentication occurs in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam0g"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PAM is unused; the service authenticates via Kubernetes service accounts not PAM",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-5704"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is an incidental dependency and is never executed at runtime by the entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57433"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-5958"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sed CLI is an incidental dependency and is never executed at runtime",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59890"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/setuptools@79.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "setuptools is a build-time packaging tool and is not executed at container runtime",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6357"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@23.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is only used at image build time and is never executed at container runtime",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-7010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-7017"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75803"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The openssl CLI binary is never executed by the container entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75803"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy crypto provider is not loaded; the service uses only default OpenSSL providers",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-76642"
       },
       "products": [
@@ -440,6 +3157,139 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI/libs not invoked by the Python suggestion service entrypoint",
       "timestamp": "2026-09-16T18:21:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 is only used by login tooling which never runs in this container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table parsing is not used by this Python gRPC service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by CLI tools never run in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid affected code paths are only reached via util-linux CLI tools not run here",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/su utilities are never executed; container runs a non-interactive Python service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CLI disk/system utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
     },
     {
       "vulnerability": {
@@ -481,6 +3331,139 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 is only used by login tooling which never runs in this container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table parsing is not used by this Python gRPC service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by CLI tools never run in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid affected code paths are only reached via util-linux CLI tools not run here",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/su utilities are never executed; container runs a non-interactive Python service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CLI disk/system utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-78409"
       },
       "products": [
@@ -519,6 +3502,139 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 is only used by login tooling which never runs in this container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table parsing is not used by this Python gRPC service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by CLI tools never run in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid affected code paths are only reached via util-linux CLI tools not run here",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/su utilities are never executed; container runs a non-interactive Python service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CLI disk/system utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-78410"
       },
       "products": [
@@ -554,7 +3670,273 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI/libs not invoked by the Python suggestion service entrypoint",
       "timestamp": "2026-09-16T18:21:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog2 is only used by login tooling which never runs in this container",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libmount mount-table parsing is not used by this Python gRPC service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsmartcols table formatting is only used by CLI tools never run in this image",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libuuid affected code paths are only reached via util-linux CLI tools not run here",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/su utilities are never executed; container runs a non-interactive Python service",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CLI disk/system utilities are never executed by this Python gRPC service entrypoint",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8376"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-86145"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCRE2 is not reached; the service uses Python re and parses no untrusted patterns",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8643"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@23.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is only used at image build time and is never executed at container runtime",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89157"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCRE2 is not reached; the service uses Python re and parses no untrusted patterns",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89158"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCRE2 is not reached; the service uses Python re and parses no untrusted patterns",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89161"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCRE2 is not reached; the service uses Python re and parses no untrusted patterns",
+      "timestamp": "2026-09-16T22:51:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-9538"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-skopt?repository_url=ghcr.io/kubeflow/katib/suggestion-skopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is never invoked; container entrypoint is a Python application",
+      "timestamp": "2026-09-16T22:51:09Z"
     }
   ],
-  "timestamp": "2026-09-16T18:38:52Z"
+  "timestamp": "2026-09-17T01:14:54Z"
 }
