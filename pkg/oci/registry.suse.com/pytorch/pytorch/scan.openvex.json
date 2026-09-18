@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-61146cd6433f804c94791292fd78bead0f4508b323f408dcba289eda156c7bd7",
+  "@id": "https://openvex.dev/docs/public/vex-ad0d687cca9376eec2b0c61aa1cc3fd99183274036942c21ef105f0aaccf982c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -25,6 +25,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53266"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch?repository_url=registry.suse.com/pytorch/pytorch",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/linux-libc-dev"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "It is an incidental dependency of the Linux kernel package not used by the application",
+      "timestamp": "2026-09-18T19:59:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53362"
       },
       "products": [
@@ -43,5 +62,5 @@
       "timestamp": "2026-09-10T16:45:49Z"
     }
   ],
-  "timestamp": "2026-09-10T16:56:04Z"
+  "timestamp": "2026-09-18T20:02:24Z"
 }
