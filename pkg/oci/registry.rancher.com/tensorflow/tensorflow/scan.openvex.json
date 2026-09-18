@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-61146cd6433f804c94791292fd78bead0f4508b323f408dcba289eda156c7bd7",
+  "@id": "https://openvex.dev/docs/public/vex-bc7f6e3f88b739483e91ea5b7b0d6ed1bc07f0e2599014937cbadacd5f2f6d0f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,7 +22,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "kernel headers/dev packages are inert; execution uses host kernel",
       "timestamp": "2026-09-10T16:45:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53266"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/tensorflow?repository_url=registry.rancher.com/tensorflow/tensorflow",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/linux-libc-dev"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "It is an incidental dependency of the Linux kernel package not used by the application",
+      "timestamp": "2026-09-18T19:59:18Z"
     }
   ],
-  "timestamp": "2026-09-10T16:56:04Z"
+  "timestamp": "2026-09-18T20:02:23Z"
 }
