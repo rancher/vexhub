@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-63c8967d371cbbca43b9c62c65e9952b284ab27cef78a980e4954363537a2985",
+  "@id": "https://openvex.dev/docs/public/vex-c312fd51db60e97eab2089c4e2b409ea17db3975f056203ca4ec1267f41b234c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -63,6 +63,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-12087"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "perl interpreter is an incidental base image package never executed at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-13221"
       },
       "products": [
@@ -79,6 +98,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy is a C++ binary; the Perl interpreter is not invoked at runtime",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13221"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "perl interpreter is an incidental base image package never executed at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -108,6 +146,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libblkid1"
             }
           ]
@@ -117,6 +174,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "block device ID library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -146,6 +222,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount helper library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libsmartcols1"
             }
           ]
@@ -155,6 +250,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "table formatting library is only used by CLI tools",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -184,7 +298,64 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is an incidental dependency not used at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
+      "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount utilities are never executed by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
             }
           ]
         }
@@ -210,8 +381,8 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
-      "timestamp": "2026-09-18T13:23:31Z"
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -260,6 +431,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd library is unused; no systemd services run inside the container",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libudev1"
             }
           ]
@@ -269,6 +459,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No systemd or udev runs in this container; journald/udev client code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udev library is unused; the container has no device management at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -288,6 +497,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy is a C++ binary; the Perl interpreter is not invoked at runtime",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15534"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "perl interpreter is an incidental base image package never executed at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -317,6 +545,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd library is unused; no systemd services run inside the container",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libudev1"
             }
           ]
@@ -326,6 +573,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No systemd or udev runs in this container; journald/udev client code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udev library is unused; the container has no device management at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18477"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar CLI is an incidental base image dependency never run by the entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -345,6 +630,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is an incidental base-image CLI utility; it is not executed by the Envoy entrypoint",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18508"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar CLI is an incidental base image dependency never run by the entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -405,6 +709,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-19487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "perl interpreter is an incidental base image package never executed at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-27456"
       },
       "products": [
@@ -421,6 +744,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -450,6 +792,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "block device ID library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libmount1"
             }
           ]
@@ -459,6 +820,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount helper library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -488,6 +868,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "table formatting library is only used by CLI tools",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libuuid1"
             }
           ]
@@ -497,6 +896,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is an incidental dependency not used at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -526,6 +944,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount utilities are never executed by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/util-linux"
             }
           ]
@@ -535,6 +972,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -564,6 +1020,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd library is unused; no systemd services run inside the container",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-29111"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libudev1"
             }
           ]
@@ -573,6 +1048,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No systemd or udev runs in this container; journald/udev client code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-29111"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udev library is unused; the container has no device management at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -678,6 +1172,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd library is unused; no systemd services run inside the container",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40225"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libudev1"
             }
           ]
@@ -687,6 +1200,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No systemd or udev runs in this container; journald/udev client code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40225"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udev library is unused; the container has no device management at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -716,6 +1248,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd library is unused; no systemd services run inside the container",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40226"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libudev1"
             }
           ]
@@ -725,6 +1276,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No systemd or udev runs in this container; journald/udev client code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40226"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "udev library is unused; the container has no device management at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -761,8 +1331,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is an incidental base image dependency never run by the entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41991"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gzip is an incidental base-image CLI utility; it is not executed by the Envoy entrypoint",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41992"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is an incidental base image dependency never run by the entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -937,6 +1545,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42496"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "perl interpreter is an incidental base image package never executed at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-4878"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "capability library is not loaded in the application execution path",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-5260"
       },
       "products": [
@@ -982,6 +1628,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libblkid1"
             }
           ]
@@ -991,6 +1656,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "block device ID library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -1020,6 +1704,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount helper library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libsmartcols1"
             }
           ]
@@ -1029,6 +1732,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "table formatting library is only used by CLI tools",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -1058,7 +1780,64 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is an incidental dependency not used at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
+      "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount utilities are never executed by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
             }
           ]
         }
@@ -1084,8 +1863,8 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
-      "timestamp": "2026-09-18T13:23:31Z"
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -1115,6 +1894,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libblkid1"
             }
           ]
@@ -1124,6 +1922,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "block device ID library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -1153,6 +1970,25 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount helper library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libsmartcols1"
             }
           ]
@@ -1162,6 +1998,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "table formatting library is only used by CLI tools",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -1191,7 +2046,64 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is an incidental dependency not used at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
+      "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount utilities are never executed by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
             }
           ]
         }
@@ -1217,8 +2129,8 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
-      "timestamp": "2026-09-18T13:23:31Z"
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -1260,6 +2172,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-54371"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libattr1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xattr library is an incidental dependency of CLI tools",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-54411"
       },
       "products": [
@@ -1276,6 +2207,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy authenticates via Kubernetes service account tokens and TLS; PAM is never called",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libpam-modules"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PAM modules are unused; authentication uses Kubernetes tokens and certificates",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -1305,7 +2255,64 @@
           "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/libpam-modules-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PAM helper binaries are never executed in this container",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/libpam-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy authenticates via Kubernetes service account tokens and TLS; PAM is never called",
+      "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libpam-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PAM configuration is unused; no local login occurs in this container",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libpam0g"
             }
           ]
         }
@@ -1331,8 +2338,27 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Envoy proxy authenticates via Kubernetes service account tokens and TLS; PAM is never called",
-      "timestamp": "2026-09-18T13:23:31Z"
+      "impact_statement": "PAM is unused; the workload authenticates via Kubernetes tokens and certificates",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-5704"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar CLI is an incidental base image dependency never run by the entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -1374,6 +2400,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "perl interpreter is an incidental base image package never executed at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-57433"
       },
       "products": [
@@ -1390,6 +2435,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy is a C++ binary; the Perl interpreter is not invoked at runtime",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57433"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "perl interpreter is an incidental base image package never executed at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-5958"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sed CLI is an incidental base image dependency never run by the entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -1428,7 +2511,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy is a C++ binary; the Perl interpreter is not invoked at runtime",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8376"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "perl interpreter is an incidental base image package never executed at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     }
   ],
-  "timestamp": "2026-09-18T13:27:04Z"
+  "timestamp": "2026-09-18T13:39:09Z"
 }

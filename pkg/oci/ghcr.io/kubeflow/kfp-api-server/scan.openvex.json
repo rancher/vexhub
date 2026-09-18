@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-63c8967d371cbbca43b9c62c65e9952b284ab27cef78a980e4954363537a2985",
+  "@id": "https://openvex.dev/docs/public/vex-2d16f44880910fde73597629c6f7dd52d6c5f1c2372905da2506859d019eaf3e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -894,6 +894,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wget CLI is an incidental base image dependency never run by the entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-58470"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-api-server?repository_url=ghcr.io/kubeflow/kfp-api-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/wget"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "wget is an incidental base-image CLI; the Go API server performs HTTP via the standard library",
       "timestamp": "2026-09-18T13:23:31Z"
     },
@@ -913,8 +932,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wget CLI is an incidental base image dependency never run by the entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-58471"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-api-server?repository_url=ghcr.io/kubeflow/kfp-api-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/wget"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "wget is an incidental base-image CLI; the Go API server performs HTTP via the standard library",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-58472"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-api-server?repository_url=ghcr.io/kubeflow/kfp-api-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/wget"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wget CLI is an incidental base image dependency never run by the entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -1678,6 +1735,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-89156"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-api-server?repository_url=ghcr.io/kubeflow/kfp-api-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89160"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-api-server?repository_url=ghcr.io/kubeflow/kfp-api-server",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-9538"
       },
       "products": [
@@ -1696,5 +1791,5 @@
       "timestamp": "2026-09-17T01:53:31Z"
     }
   ],
-  "timestamp": "2026-09-18T13:27:04Z"
+  "timestamp": "2026-09-18T13:39:11Z"
 }
