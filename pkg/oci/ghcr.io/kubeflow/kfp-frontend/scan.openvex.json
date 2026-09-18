@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-022a697094196868ae01b32bb700c56edd14aa331e1da1732ac201d29fc1d673",
+  "@id": "https://openvex.dev/docs/public/vex-bc0e88543d8693eaeefff161bf7a34855747bc0dd91e830cc25304c361754019",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-22184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/zlib"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Flaw is limited to the contrib/untgz demo utility",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2026-59871"
@@ -82,6 +101,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-69153"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:npm/postcss@8.5.15"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PostCSS is a build-time CSS toolchain dependency; it is not executed by the running frontend server",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-73566"
       },
       "products": [
@@ -98,6 +136,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental base-image dependency",
       "timestamp": "2026-09-18T13:39:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73646"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:npm/postcss@8.5.15"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PostCSS is a build-time CSS toolchain dependency; it is not executed by the running frontend server",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84373"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:npm/vitest@4.1.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vitest is a dev/test-only dependency; its Vite mocker plugin does not run in the production frontend",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -138,5 +214,5 @@
       "timestamp": "2026-09-18T13:39:53Z"
     }
   ],
-  "timestamp": "2026-09-18T13:48:09Z"
+  "timestamp": "2026-09-18T14:00:49Z"
 }

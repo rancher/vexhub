@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f996fb7f82c2da06ebab44513affffa7faf91498d03bd49b38001d56f208de88",
+  "@id": "https://openvex.dev/docs/public/vex-bbfece1854491530e79e65b84a61b3b30d36633f0683cd3f47160af35ebccacc",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -60,6 +60,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "jaraco.context is a setuptools/packaging helper; not imported by the application at runtime",
       "timestamp": "2026-09-18T13:39:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-23949"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/jaraco.context@5.3.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "jaraco.context is vendored by setuptools; the vulnerable tarball() helper is never called at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -153,6 +172,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/mount/nsenter util-linux binaries are never executed by the Python metadata writer",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
       "timestamp": "2026-09-18T13:32:30Z"
     },
@@ -212,6 +250,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libblkid block-device probing library is not called at runtime by this application container",
       "timestamp": "2026-09-18T13:39:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/mount/nsenter util-linux binaries are never executed by the Python metadata writer",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -326,6 +383,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "table formatting library is only used by CLI tools",
       "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41991"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The gzexe wrapper script is never invoked at runtime; only the gzip binary ships in the image",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -519,6 +595,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-54369"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libacl1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The metadata writer never calls acl_get_file/acl_set_file",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-54370"
       },
       "products": [
@@ -576,6 +671,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-54370"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libacl1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The metadata writer never calls acl_get_file/acl_set_file",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-54371"
       },
       "products": [
@@ -630,6 +744,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "xattr library is an incidental dependency of CLI tools",
       "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54371"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libattr1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Flaw is in the getfattr/setfattr utilities of the attr package",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -837,6 +970,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/mount/nsenter util-linux binaries are never executed by the Python metadata writer",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
       "timestamp": "2026-09-18T13:32:30Z"
     },
@@ -896,6 +1048,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libblkid block-device probing library is not called at runtime by this application container",
       "timestamp": "2026-09-18T13:39:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/mount/nsenter util-linux binaries are never executed by the Python metadata writer",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -1065,6 +1236,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/mount/nsenter util-linux binaries are never executed by the Python metadata writer",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
       "timestamp": "2026-09-18T13:32:30Z"
     },
@@ -1124,6 +1314,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libblkid block-device probing library is not called at runtime by this application container",
       "timestamp": "2026-09-18T13:39:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/mount/nsenter util-linux binaries are never executed by the Python metadata writer",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -1293,6 +1502,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/mount/nsenter util-linux binaries are never executed by the Python metadata writer",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
       "timestamp": "2026-09-18T13:32:30Z"
     },
@@ -1352,6 +1580,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libblkid block-device probing library is not called at runtime by this application container",
       "timestamp": "2026-09-18T13:39:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/mount/nsenter util-linux binaries are never executed by the Python metadata writer",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -1466,6 +1713,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "bsdutils CLI tools are incidental base-image deps; never invoked by the container entrypoint",
       "timestamp": "2026-09-18T13:39:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "login/mount/nsenter util-linux binaries are never executed by the Python metadata writer",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -1715,5 +1981,5 @@
       "timestamp": "2026-09-18T13:32:30Z"
     }
   ],
-  "timestamp": "2026-09-18T13:48:11Z"
+  "timestamp": "2026-09-18T14:00:51Z"
 }
