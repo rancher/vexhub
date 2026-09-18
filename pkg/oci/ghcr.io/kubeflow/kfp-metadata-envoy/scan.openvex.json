@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f996fb7f82c2da06ebab44513affffa7faf91498d03bd49b38001d56f208de88",
+  "@id": "https://openvex.dev/docs/public/vex-bbfece1854491530e79e65b84a61b3b30d36633f0683cd3f47160af35ebccacc",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,6 +22,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy statically links BoringSSL for TLS; GnuTLS stack is an incidental base dep never loaded",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-14831"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -58,8 +77,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is never executed by the Envoy entrypoint; no untrusted archive is extracted at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-45582"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental base-image dependency",
       "timestamp": "2026-09-18T13:39:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-12087"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy is a C++ binary; the Perl interpreter is an incidental base-image dependency never executed",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -117,6 +174,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "perl interpreter is an incidental base image package never executed at runtime",
       "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13221"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy is a C++ binary; the Perl interpreter is an incidental base-image dependency never executed",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -193,6 +269,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -267,6 +362,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "block device ID library is not loaded by the application at runtime",
       "timestamp": "2026-09-18T13:32:30Z"
     },
@@ -307,6 +421,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -381,6 +514,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libsmartcols is a table formatter for util-linux CLIs; never invoked at runtime",
       "timestamp": "2026-09-18T13:39:53Z"
     },
@@ -421,6 +573,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -495,6 +666,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "mount utilities are never executed by the container entrypoint",
       "timestamp": "2026-09-18T13:32:30Z"
     },
@@ -535,6 +725,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -595,6 +804,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-13757"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libp11-kit0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No p11-kit RPC server or socket exists in the container",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-15059"
       },
       "products": [
@@ -706,6 +934,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "udev library is unused; the container has no device management at runtime",
       "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15534"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy is a C++ binary; the Perl interpreter is an incidental base-image dependency never executed",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -932,6 +1179,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is never executed by the Envoy entrypoint; no untrusted archive is extracted at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18477"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental base-image dependency",
       "timestamp": "2026-09-18T13:39:53Z"
     },
@@ -989,6 +1255,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is never executed by the Envoy entrypoint; no untrusted archive is extracted at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18508"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental base-image dependency",
       "timestamp": "2026-09-18T13:39:53Z"
     },
@@ -1010,6 +1295,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy statically links BoringSSL for TLS; GnuTLS stack is an incidental base dep never loaded",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18938"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libp11-kit0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No p11-kit RPC server or socket exists in the container",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy is a C++ binary; the Perl interpreter is an incidental base-image dependency never executed",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -1086,6 +1409,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -1160,6 +1502,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "block device ID library is not loaded by the application at runtime",
       "timestamp": "2026-09-18T13:32:30Z"
     },
@@ -1200,6 +1561,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -1274,6 +1654,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libsmartcols is a table formatter for util-linux CLIs; never invoked at runtime",
       "timestamp": "2026-09-18T13:39:53Z"
     },
@@ -1314,6 +1713,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -1388,6 +1806,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "mount utilities are never executed by the container entrypoint",
       "timestamp": "2026-09-18T13:32:30Z"
     },
@@ -1428,6 +1865,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy proxy does not mount or inspect block devices; util-linux code is never in the execute path",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy proxy never runs mount/blkid partition probing; no udev or SUID mount in the execute path",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -1602,7 +2058,64 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-33845"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-33846"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy statically links BoringSSL for TLS; GnuTLS stack is an incidental base dep never loaded",
+      "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33846"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3832"
       },
       "products": [
         {
@@ -1635,8 +2148,8 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Envoy statically links BoringSSL for TLS; GnuTLS stack is an incidental base dep never loaded",
-      "timestamp": "2026-09-18T13:23:31Z"
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -1659,6 +2172,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-3833"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-40225"
       },
       "products": [
@@ -1884,6 +2416,177 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "udev library is unused; the container has no device management at runtime",
       "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40355"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgssapi-krb5-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy performs no GSSAPI/Kerberos authentication and no NegoEx mechanism is registered in /etc/gss/mech",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40355"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libk5crypto3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy performs no GSSAPI/Kerberos authentication and no NegoEx mechanism is registered in /etc/gss/mech",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40355"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libkrb5-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy performs no GSSAPI/Kerberos authentication and no NegoEx mechanism is registered in /etc/gss/mech",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40355"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libkrb5support0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy performs no GSSAPI/Kerberos authentication and no NegoEx mechanism is registered in /etc/gss/mech",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40356"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgssapi-krb5-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy performs no GSSAPI/Kerberos authentication and no NegoEx mechanism is registered in /etc/gss/mech",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40356"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libk5crypto3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy performs no GSSAPI/Kerberos authentication and no NegoEx mechanism is registered in /etc/gss/mech",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40356"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libkrb5-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy performs no GSSAPI/Kerberos authentication and no NegoEx mechanism is registered in /etc/gss/mech",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40356"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libkrb5support0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy performs no GSSAPI/Kerberos authentication and no NegoEx mechanism is registered in /etc/gss/mech",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41989"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgcrypt20"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy does not use libgcrypt for crypto; gcry_pk_decrypt is never called at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -1903,6 +2606,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy statically links BoringSSL for TLS; GnuTLS stack is an incidental base dep never loaded",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41991"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The gzexe wrapper script is never invoked at runtime; only the gzip binary ships in the image",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -2039,7 +2761,64 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42009"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy statically links BoringSSL for TLS; GnuTLS stack is an incidental base dep never loaded",
+      "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42011"
       },
       "products": [
         {
@@ -2072,12 +2851,50 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42012"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy statically links BoringSSL for TLS; GnuTLS stack is an incidental base dep never loaded",
       "timestamp": "2026-09-18T13:23:31Z"
     },
     {
       "vulnerability": {
         "name": "CVE-2026-42012"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42013"
       },
       "products": [
         {
@@ -2110,12 +2927,50 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42014"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Envoy statically links BoringSSL for TLS; GnuTLS stack is an incidental base dep never loaded",
       "timestamp": "2026-09-18T13:23:31Z"
     },
     {
       "vulnerability": {
         "name": "CVE-2026-42014"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42015"
       },
       "products": [
         {
@@ -2148,8 +3003,27 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Envoy statically links BoringSSL for TLS; GnuTLS stack is an incidental base dep never loaded",
-      "timestamp": "2026-09-18T13:23:31Z"
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42496"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy is a C++ binary; the Perl interpreter is an incidental base-image dependency never executed",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -2248,6 +3122,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-5260"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libgnutls30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy terminates TLS with its statically linked BoringSSL; GnuTLS is never loaded for TLS at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53613"
       },
       "products": [
@@ -3043,6 +3936,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
       "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53910"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/diffutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The diff3 utility is not invoked by the Envoy proxy; diffutils is an incidental base-image dependency",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -3138,6 +4050,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "xattr library is an incidental dependency of CLI tools",
       "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54371"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libattr1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Flaw is in the getfattr/setfattr utilities of the attr package",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -3421,8 +4352,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is never executed by the Envoy entrypoint; no untrusted archive is extracted at runtime",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-5704"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental base-image dependency",
       "timestamp": "2026-09-18T13:39:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy is a C++ binary; the Perl interpreter is an incidental base-image dependency never executed",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -3480,6 +4449,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "perl interpreter is an incidental base image package never executed at runtime",
       "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57433"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy is a C++ binary; the Perl interpreter is an incidental base-image dependency never executed",
+      "timestamp": "2026-09-18T13:49:03Z"
     },
     {
       "vulnerability": {
@@ -3597,6 +4585,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-74860"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libxml2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Flaw requires libxml2 Python bindings; the Envoy image ships no Python bindings for libxml2",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8376"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io/kubeflow/kfp-metadata-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Envoy is a C++ binary; the Perl interpreter is an incidental base-image dependency never executed",
+      "timestamp": "2026-09-18T13:49:03Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-8376"
       },
       "products": [
@@ -3653,5 +4679,5 @@
       "timestamp": "2026-09-18T13:32:30Z"
     }
   ],
-  "timestamp": "2026-09-18T13:48:11Z"
+  "timestamp": "2026-09-18T14:00:51Z"
 }
