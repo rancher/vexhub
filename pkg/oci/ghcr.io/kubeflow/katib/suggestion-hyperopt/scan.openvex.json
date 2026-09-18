@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-24d532576f9e1019f8218fc26a91a3769d8cb420673f3d1b4bf9cdc23abc8c58",
+  "@id": "https://openvex.dev/docs/public/vex-2d16f44880910fde73597629c6f7dd52d6c5f1c2372905da2506859d019eaf3e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3863,6 +3863,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-89156"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-hyperopt?repository_url=ghcr.io/kubeflow/katib/suggestion-hyperopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-89157"
       },
       "products": [
@@ -3898,6 +3917,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "PCRE2 is a transitive dependency; Python re does not use it and it is unreachable",
       "timestamp": "2026-09-16T15:59:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89160"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-hyperopt?repository_url=ghcr.io/kubeflow/katib/suggestion-hyperopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -3938,5 +3976,5 @@
       "timestamp": "2026-09-16T15:59:10Z"
     }
   ],
-  "timestamp": "2026-09-16T17:33:36Z"
+  "timestamp": "2026-09-18T13:39:11Z"
 }

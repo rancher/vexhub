@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6be7aa595308747f969f8b275cd2aeabad25215bef73aedad1d16f4eda3469ec",
+  "@id": "https://openvex.dev/docs/public/vex-c312fd51db60e97eab2089c4e2b409ea17db3975f056203ca4ec1267f41b234c",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -25,6 +25,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libncursesw6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ncurses terminal library is not loaded by the non-interactive workload",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-23949"
       },
       "products": [
@@ -41,6 +60,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "jaraco.context ships only as a vendored setuptools build helper; not imported by the writer at runtime",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-23949"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/jaraco.context@5.3.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "setuptools helper library is build-time only and not on the execute path",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -70,6 +108,25 @@
           "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libblkid1"
             }
           ]
@@ -79,6 +136,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "block device ID library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -108,7 +184,64 @@
           "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog library is only used by login tooling",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
+      "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount helper library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
             }
           ]
         }
@@ -134,8 +267,27 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
-      "timestamp": "2026-09-18T13:23:31Z"
+      "impact_statement": "table formatting library is only used by CLI tools",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41991"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is an incidental base image dependency never run by the entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -172,8 +324,65 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is an incidental base image dependency never run by the entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41992"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gzip is an incidental base-image CLI utility; it is not executed by the metadata writer entrypoint",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42250"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libbz2-1.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bzip2 library is not loaded in the application execution path",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54369"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libacl1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ACL library is an incidental dependency of CLI tools",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -193,6 +402,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Metadata writer does not read or set POSIX ACLs/xattrs; incidental base-image dependency",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54370"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libacl1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ACL library is an incidental dependency of CLI tools",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -234,6 +462,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-54371"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libattr1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xattr library is an incidental dependency of CLI tools",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-54411"
       },
       "products": [
@@ -250,6 +497,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Metadata writer uses Kubernetes service account tokens; no local login",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam-modules"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PAM modules are unused; authentication uses Kubernetes tokens and certificates",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -279,7 +545,64 @@
           "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/libpam-modules-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PAM helper binaries are never executed in this container",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libpam-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Metadata writer uses Kubernetes service account tokens; no local login",
+      "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PAM configuration is unused; no local login occurs in this container",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam0g"
             }
           ]
         }
@@ -305,8 +628,8 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Metadata writer uses Kubernetes service account tokens; no local login",
-      "timestamp": "2026-09-18T13:23:31Z"
+      "impact_statement": "PAM is unused; the workload authenticates via Kubernetes tokens and certificates",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -336,6 +659,25 @@
           "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libblkid1"
             }
           ]
@@ -345,6 +687,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "block device ID library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -374,7 +735,64 @@
           "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog library is only used by login tooling",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
+      "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount helper library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
             }
           ]
         }
@@ -400,8 +818,8 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
-      "timestamp": "2026-09-18T13:23:31Z"
+      "impact_statement": "table formatting library is only used by CLI tools",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -431,6 +849,25 @@
           "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libblkid1"
             }
           ]
@@ -440,6 +877,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "block device ID library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -469,7 +925,64 @@
           "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog library is only used by login tooling",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
+      "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount helper library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
             }
           ]
         }
@@ -495,8 +1008,8 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
-      "timestamp": "2026-09-18T13:23:31Z"
+      "impact_statement": "table formatting library is only used by CLI tools",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -526,6 +1039,25 @@
           "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libblkid1"
             }
           ]
@@ -535,6 +1067,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "block device ID library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -564,6 +1115,25 @@
           "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog library is only used by login tooling",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libmount1"
             }
           ]
@@ -573,6 +1143,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount helper library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -602,6 +1191,25 @@
           "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are not invoked by the container entrypoint",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libblkid1"
             }
           ]
@@ -611,6 +1219,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "block device ID library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     },
     {
       "vulnerability": {
@@ -640,6 +1267,25 @@
           "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog library is only used by login tooling",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libmount1"
             }
           ]
@@ -649,7 +1295,140 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python metadata writer does not mount or inspect block devices; util-linux code is never executed",
       "timestamp": "2026-09-18T13:23:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount helper library is not loaded by the application at runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-86145"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89156"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89157"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89158"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89160"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89161"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-metadata-writer?repository_url=ghcr.io/kubeflow/kfp-metadata-writer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
+      "timestamp": "2026-09-18T13:32:30Z"
     }
   ],
-  "timestamp": "2026-09-18T13:27:05Z"
+  "timestamp": "2026-09-18T13:39:09Z"
 }
