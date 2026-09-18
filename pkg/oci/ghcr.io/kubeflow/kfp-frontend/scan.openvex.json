@@ -1,0 +1,28 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-4d6c808b9a01f54481fd9372617e416b2350cf39daefb1a540c72c8f9512adf5",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84373"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend",
+          "subcomponents": [
+            {
+              "@id": "pkg:npm/vitest@4.1.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vitest is a development/test-only dependency and is never loaded by the frontend at runtime",
+      "timestamp": "2026-09-18T13:23:31Z"
+    }
+  ],
+  "timestamp": "2026-09-18T13:27:03Z"
+}
