@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2d16f44880910fde73597629c6f7dd52d6c5f1c2372905da2506859d019eaf3e",
+  "@id": "https://openvex.dev/docs/public/vex-10a6325e4f7bff4493aaab79252f0931a6ae43dfbde94ab2078f06582cb522b8",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3782,6 +3782,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCRE2 is an incidental base-image dep; no attacker-controlled regex is compiled at runtime",
+      "timestamp": "2026-09-18T13:39:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89156"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-optuna?repository_url=ghcr.io/kubeflow/katib/suggestion-optuna",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
       "timestamp": "2026-09-18T13:32:30Z"
     },
@@ -3822,6 +3841,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "PCRE2 not used by the suggestion service; no untrusted regexes are compiled",
       "timestamp": "2026-09-16T17:21:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89160"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-optuna?repository_url=ghcr.io/kubeflow/katib/suggestion-optuna",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCRE2 is an incidental base-image dep; no attacker-controlled regex is compiled at runtime",
+      "timestamp": "2026-09-18T13:39:53Z"
     },
     {
       "vulnerability": {
@@ -3881,5 +3919,5 @@
       "timestamp": "2026-09-16T17:21:35Z"
     }
   ],
-  "timestamp": "2026-09-18T13:39:11Z"
+  "timestamp": "2026-09-18T13:48:10Z"
 }
