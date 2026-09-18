@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-444ee51251ab8201def0219b34ac0e4d038d28089d4091c64312e3bc03b31d4e",
+  "@id": "https://openvex.dev/docs/public/vex-bc7f6e3f88b739483e91ea5b7b0d6ed1bc07f0e2599014937cbadacd5f2f6d0f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-39964"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/torchtune-trainer?repository_url=ghcr.io/kubeflow/trainer/torchtune-trainer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/linux-libc-dev"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "It is an incidental dependency of the Linux kernel package not used by the application",
+      "timestamp": "2026-09-18T19:59:18Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2026-31431"
@@ -22,7 +41,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "kernel headers/dev packages are inert; execution uses host kernel",
       "timestamp": "2026-09-10T16:45:49Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53266"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/torchtune-trainer?repository_url=ghcr.io/kubeflow/trainer/torchtune-trainer",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/linux-libc-dev"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "It is an incidental dependency of the Linux kernel package not used by the application",
+      "timestamp": "2026-09-18T19:59:18Z"
     }
   ],
-  "timestamp": "2026-09-10T16:56:03Z"
+  "timestamp": "2026-09-18T20:02:23Z"
 }
