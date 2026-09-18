@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2d16f44880910fde73597629c6f7dd52d6c5f1c2372905da2506859d019eaf3e",
+  "@id": "https://openvex.dev/docs/public/vex-f996fb7f82c2da06ebab44513affffa7faf91498d03bd49b38001d56f208de88",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2756,6 +2756,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCRE2 is an incidental base-image dep; no attacker-controlled regex is compiled at runtime",
+      "timestamp": "2026-09-18T13:39:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89156"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
       "timestamp": "2026-09-18T13:32:30Z"
     },
@@ -2796,6 +2815,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python uses its own re engine; PCRE2 gets no attacker-controlled patterns",
       "timestamp": "2026-09-15T15:40:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89160"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCRE2 is an incidental base-image dep; no attacker-controlled regex is compiled at runtime",
+      "timestamp": "2026-09-18T13:39:53Z"
     },
     {
       "vulnerability": {
@@ -2855,5 +2893,5 @@
       "timestamp": "2026-09-15T20:34:42Z"
     }
   ],
-  "timestamp": "2026-09-18T13:39:11Z"
+  "timestamp": "2026-09-18T13:48:11Z"
 }
