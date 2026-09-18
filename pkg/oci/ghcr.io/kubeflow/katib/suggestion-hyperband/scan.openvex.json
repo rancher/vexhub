@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c312fd51db60e97eab2089c4e2b409ea17db3975f056203ca4ec1267f41b234c",
+  "@id": "https://openvex.dev/docs/public/vex-022a697094196868ae01b32bb700c56edd14aa331e1da1732ac201d29fc1d673",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2927,8 +2927,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCRE2 is an incidental base-image dep; no attacker-controlled regex is compiled at runtime",
+      "timestamp": "2026-09-18T13:39:53Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89156"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-hyperband?repository_url=ghcr.io/kubeflow/katib/suggestion-hyperband",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "pcre2 is an incidental base image dependency not used by the application runtime",
       "timestamp": "2026-09-18T13:32:30Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89160"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-hyperband?repository_url=ghcr.io/kubeflow/katib/suggestion-hyperband",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PCRE2 is an incidental base-image dep; no attacker-controlled regex is compiled at runtime",
+      "timestamp": "2026-09-18T13:39:53Z"
     },
     {
       "vulnerability": {
@@ -2969,5 +3007,5 @@
       "timestamp": "2026-09-16T15:59:10Z"
     }
   ],
-  "timestamp": "2026-09-18T13:39:09Z"
+  "timestamp": "2026-09-18T13:48:09Z"
 }
