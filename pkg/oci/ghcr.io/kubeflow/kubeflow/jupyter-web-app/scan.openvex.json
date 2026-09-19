@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-0837d3126d120446e0375d634d100df796deec69dd11082d357a1ecb84f50cb9",
+  "@id": "https://openvex.dev/docs/public/vex-8c3e13e85f15649283ee40b8a5e44ddec288ee6cfe604a72296a359ae5ae0cb3",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2023-31484"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2023-4641"
@@ -22,6 +41,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No interactive or local login occurs; shadow login utilities are not executed at runtime",
       "timestamp": "2026-09-19T17:29:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2023-4641"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/passwd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Account management CLI is never executed; image runs a non-interactive Flask web app.",
+      "timestamp": "2026-09-19T19:14:35Z"
     },
     {
       "vulnerability": {
@@ -98,6 +136,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Container runs as a non-interactive web daemon; ncurses CLI tools are never executed",
       "timestamp": "2026-09-19T17:29:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2023-5752"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@23.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is a build-time installer only; it is not executed at container runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
     },
     {
       "vulnerability": {
@@ -329,6 +386,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2024-56406"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-6345"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/setuptools@65.5.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "setuptools is a build-time packaging tool only; not executed at container runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-1390"
       },
       "products": [
@@ -364,6 +459,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python TLS uses OpenSSL via the ssl module; GnuTLS is not loaded by the application at runtime",
       "timestamp": "2026-09-19T17:29:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-15649"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
     },
     {
       "vulnerability": {
@@ -595,6 +709,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-40909"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-47273"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/setuptools@65.5.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "setuptools is a build-time packaging tool only; not executed at container runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-6020"
       },
       "products": [
@@ -804,6 +956,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-8869"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@23.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is a build-time installer only; it is not executed at container runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-12087"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13221"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13346"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@23.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is a build-time installer only; it is not executed at container runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-13595"
       },
       "products": [
@@ -896,6 +1124,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux mount/block-device tooling is never invoked by the Flask web app entrypoint",
       "timestamp": "2026-09-19T17:29:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux-extra"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
     },
     {
       "vulnerability": {
@@ -918,6 +1184,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-15534"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18477"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar CLI is an incidental base-image dependency and is not executed by the entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18508"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar CLI is an incidental base-image dependency and is not executed by the entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-18938"
       },
       "products": [
@@ -934,6 +1257,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No PKCS#11 smartcard or HSM modules are configured or loaded by this container at runtime",
       "timestamp": "2026-09-19T17:29:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
     },
     {
       "vulnerability": {
@@ -956,6 +1298,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-24049"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/wheel@0.45.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wheel is a build-time packaging tool only; not executed at container runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-27456"
       },
       "products": [
@@ -1051,6 +1412,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux-extra"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-3184"
       },
       "products": [
@@ -1143,6 +1542,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux mount/block-device tooling is never invoked by the Flask web app entrypoint",
       "timestamp": "2026-09-19T17:29:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux-extra"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3219"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@23.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is a build-time installer only; it is not executed at container runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
     },
     {
       "vulnerability": {
@@ -1545,6 +2001,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42496"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42497"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-4878"
       },
       "products": [
@@ -1561,6 +2055,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Capability tooling is not invoked by the web app; libcap code is not in the execute path",
       "timestamp": "2026-09-19T17:29:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48959"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48962"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
     },
     {
       "vulnerability": {
@@ -1678,6 +2229,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux-extra"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53615"
       },
       "products": [
@@ -1770,6 +2359,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux mount/block-device tooling is never invoked by the Flask web app entrypoint",
       "timestamp": "2026-09-19T17:29:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux-extra"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
     },
     {
       "vulnerability": {
@@ -1906,6 +2533,158 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-5704"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar CLI is an incidental base-image dependency and is not executed by the entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57433"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-5958"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sed CLI is an incidental base-image dependency and is not executed by the entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59890"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/setuptools@65.5.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "setuptools is a build-time packaging tool only; not executed at container runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6357"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@23.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is a build-time installer only; it is not executed at container runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-7010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-7017"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-76642"
       },
       "products": [
@@ -2001,6 +2780,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux-extra"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-78408"
       },
       "products": [
@@ -2096,6 +2913,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux-extra"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-78409"
       },
       "products": [
@@ -2191,6 +3046,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux-extra"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-78410"
       },
       "products": [
@@ -2283,7 +3176,102 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux mount/block-device tooling is never invoked by the Flask web app entrypoint",
       "timestamp": "2026-09-19T17:29:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux-extra"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Disk/mount utilities are not executed by the Python web app entrypoint.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8376"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8643"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/pip@23.0.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pip is a build-time installer only; it is not executed at container runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-9538"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-web-app?repository_url=ghcr.io/kubeflow/kubeflow/jupyter-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Flask/Python web app entrypoint at runtime.",
+      "timestamp": "2026-09-19T19:14:35Z"
     }
   ],
-  "timestamp": "2026-09-19T17:50:16Z"
+  "timestamp": "2026-09-19T19:25:25Z"
 }
