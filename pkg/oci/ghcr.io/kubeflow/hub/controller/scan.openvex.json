@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e3f38b4e07e3ae1663c2634df896fad0a7815c98b2e6911cd933fac44c8f4dda",
+  "@id": "https://openvex.dev/docs/public/vex-111177ebd0f62c18fdda221815a9f81dca18bd495c8694c89cc9ea6755d918da",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -193,6 +193,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux block-device/mount/column libraries are not called at runtime by this application container",
       "timestamp": "2026-09-15T22:12:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15028"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io/kubeflow/hub/controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libarchive"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go application does not link libarchive; no archive extraction runs in the container",
+      "timestamp": "2026-09-22T14:57:46Z"
     },
     {
       "vulnerability": {
@@ -842,6 +861,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-76781"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io/kubeflow/hub/controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libxml2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go application uses encoding/xml; the system libxml2 library is not called at runtime",
+      "timestamp": "2026-09-22T14:57:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-77117"
       },
       "products": [
@@ -994,6 +1032,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-8674"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io/kubeflow/hub/controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Locale data only; the package ships no executable code affected by the flaw",
+      "timestamp": "2026-09-22T14:57:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89092"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io/kubeflow/hub/controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Locale data only; the package ships no executable code affected by the flaw",
+      "timestamp": "2026-09-22T14:57:46Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-89157"
       },
       "products": [
@@ -1126,5 +1202,5 @@
       "timestamp": "2026-09-16T00:07:12Z"
     }
   ],
-  "timestamp": "2026-09-21T23:39:12Z"
+  "timestamp": "2026-09-22T18:34:47Z"
 }
