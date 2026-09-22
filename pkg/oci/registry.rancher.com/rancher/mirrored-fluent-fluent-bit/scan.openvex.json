@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-111177ebd0f62c18fdda221815a9f81dca18bd495c8694c89cc9ea6755d918da",
+  "@id": "https://openvex.dev/docs/public/vex-e24251c6f220366cfb5f4124b06d7e8b6feb423bae7e01c80732611852124576",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,7 +22,26 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "MiniZip (zipOpenNewFileInZip4_64) is not built into zlib1g; the vulnerable code is absent from libz",
       "timestamp": "2026-09-22T18:31:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-4878"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com/rancher/mirrored-fluent-fluent-bit",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Capabilities are set by the container runtime; the libcap parsing code is not called by the app",
+      "timestamp": "2026-09-22T21:37:16Z"
     }
   ],
-  "timestamp": "2026-09-22T18:34:47Z"
+  "timestamp": "2026-09-22T21:39:56Z"
 }

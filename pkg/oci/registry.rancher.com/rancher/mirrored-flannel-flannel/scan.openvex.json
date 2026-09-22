@@ -1,0 +1,123 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-6d5312168184f213a84dcc222581967dbe5d483b8ca0adfe5c234db110063ac0",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-26519"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-flannel-flannel?repository_url=registry.rancher.com/rancher/mirrored-flannel-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/musl-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "musl-utils helper binaries (ldconfig/getconf) are not executed by the container entrypoint",
+      "timestamp": "2026-09-22T21:37:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-6965"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-flannel-flannel?repository_url=registry.rancher.com/rancher/mirrored-flannel-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/sqlite-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go application does not use the system SQLite C library; it is an incidental base-image dependency",
+      "timestamp": "2026-09-22T21:37:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27135"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-flannel-flannel?repository_url=registry.rancher.com/rancher/mirrored-flannel-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/nghttp2-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses golang.org/x/net/http2; the system nghttp2 C library is not called at runtime",
+      "timestamp": "2026-09-22T21:37:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33630"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-flannel-flannel?repository_url=registry.rancher.com/rancher/mirrored-flannel-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/c-ares"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go resolves DNS via the standard library resolver; the c-ares C library is not called at runtime",
+      "timestamp": "2026-09-22T21:37:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40200"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-flannel-flannel?repository_url=registry.rancher.com/rancher/mirrored-flannel-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/musl-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "musl-utils helper binaries (ldconfig/getconf) are not executed by the container entrypoint",
+      "timestamp": "2026-09-22T21:37:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-4878"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-flannel-flannel?repository_url=registry.rancher.com/rancher/mirrored-flannel-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Capabilities are set by the container runtime; the libcap parsing code is not called by the app",
+      "timestamp": "2026-09-22T21:37:16Z"
+    }
+  ],
+  "timestamp": "2026-09-22T21:39:54Z"
+}

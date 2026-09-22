@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a2afebc40b85a4dfb8b66bd3218181bae2848b95ba2b7e9ae299dd0ffccc9041",
+  "@id": "https://openvex.dev/docs/public/vex-b1399e7173bc11a812ab3dda0a0d3302d41d49ea8015c1ee292277e7ffc6244e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -808,6 +808,25 @@
           "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libbrotlicommon1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Brotli is a libcurl transport dependency; it is not called at runtime by this Go container",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03268-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libbrotlidec1"
             }
           ]
@@ -1378,6 +1397,25 @@
           "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No udev daemon runs in the container; libudev device enumeration is not in the execute path",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/systemd"
             }
           ]
@@ -1482,6 +1520,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "CSI driver Go binary uses Go native HTTP/2 (net/http2) for gRPC; libnghttp2-14 C lib not called",
       "timestamp": "2026-07-07T04:49:33Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Capabilities are set by the container runtime; the libcap parsing code is not called by the app",
+      "timestamp": "2026-09-22T21:33:10Z"
     },
     {
       "vulnerability": {
@@ -1596,6 +1653,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "curl/libcurl; Go binary uses net/http for HTTP, libcurl is not loaded",
       "timestamp": "2026-06-19T00:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2051-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/liblzma5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "liblzma is pulled in by RPM tooling that is not executed at runtime by this Go container",
+      "timestamp": "2026-09-22T21:33:10Z"
     },
     {
       "vulnerability": {
@@ -2720,6 +2796,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2528-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go application does not use the system SQLite C library; it is an incidental base-image dependency",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2590-1"
       },
       "products": [
@@ -3024,6 +3119,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:3600-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/rpm-ndb"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM package manager is not executed at container runtime; it is an incidental base-image dependency",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3866-1"
       },
       "products": [
@@ -3040,7 +3154,102 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go CSI driver uses crypto/tls; libopenssl3 is not loaded at runtime",
       "timestamp": "2026-09-12T01:06:17Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4176-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libacl1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ACL/xattr helper library pulled in by coreutils; not called by the container entrypoint",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4176-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libattr1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ACL/xattr helper library pulled in by coreutils; not called by the container entrypoint",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4207-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/kbd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kbd console/keymap utilities are never executed in a headless container",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4207-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/kbd-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kbd console/keymap utilities are never executed in a headless container",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4241-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.suse.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Application uses its own regex engine; the system PCRE2 C library is not called at runtime",
+      "timestamp": "2026-09-22T21:33:10Z"
     }
   ],
-  "timestamp": "2026-09-22T18:34:46Z"
+  "timestamp": "2026-09-22T21:39:53Z"
 }

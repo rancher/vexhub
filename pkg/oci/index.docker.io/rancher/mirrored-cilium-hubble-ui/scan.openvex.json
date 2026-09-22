@@ -1,0 +1,28 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-e24251c6f220366cfb5f4124b06d7e8b6feb423bae7e01c80732611852124576",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40200"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-cilium-hubble-ui?repository_url=index.docker.io/rancher/mirrored-cilium-hubble-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/musl-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "musl-utils helper binaries (ldconfig/getconf) are not executed by the container entrypoint",
+      "timestamp": "2026-09-22T21:33:10Z"
+    }
+  ],
+  "timestamp": "2026-09-22T21:39:56Z"
+}
