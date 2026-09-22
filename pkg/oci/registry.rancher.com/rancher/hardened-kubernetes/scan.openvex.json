@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e453634172f8cbcfe4f862f1463903efca83c302aad8171c884a6ba8927c23d6",
+  "@id": "https://openvex.dev/docs/public/vex-48e2643cd8f0d71b90ccccbb9070778dbc4ad18d17df47bb6f99866cd855847a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -791,6 +791,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No udev daemon runs in the container; libudev device enumeration is not in the execute path",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1074-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libnghttp2-14"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses golang.org/x/net/http2; the system nghttp2 C library is not called at runtime",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:1177-1"
       },
       "products": [
@@ -978,6 +1016,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go k8s binaries use Go UUID library; C libuuid1 not linked at runtime",
       "timestamp": "2026-06-24T04:52:24Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1432-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libcap2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Capabilities are set by the container runtime; the libcap parsing code is not called by the app",
+      "timestamp": "2026-09-22T21:33:10Z"
     },
     {
       "vulnerability": {
@@ -1475,6 +1532,63 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2528-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go application does not use the system SQLite C library; it is an incidental base-image dependency",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsolv-tools-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "zypper/libsolv package-management stack is never invoked at container runtime",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libzypp"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "zypper/libsolv package-management stack is never invoked at container runtime",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2531-1"
       },
       "products": [
@@ -1529,6 +1643,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2848-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/krb5"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Kerberos/GSSAPI authentication is not used by this component; krb5 is not in the execute path",
+      "timestamp": "2026-09-22T21:33:10Z"
     },
     {
       "vulnerability": {
@@ -1605,6 +1738,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go Kubernetes components use Go crypto; system libgcrypt20 not loaded at runtime",
       "timestamp": "2026-07-29T04:40:43Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3269-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip CLI is not executed by the container entrypoint; it is an incidental base-image dependency",
+      "timestamp": "2026-09-22T21:33:10Z"
     },
     {
       "vulnerability": {
@@ -1700,7 +1852,83 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3600-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/rpm-ndb"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM package manager is not executed at container runtime; it is an incidental base-image dependency",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4176-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libacl1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ACL/xattr helper library pulled in by coreutils; not called by the container entrypoint",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4176-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libattr1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ACL/xattr helper library pulled in by coreutils; not called by the container entrypoint",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4241-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-kubernetes?repository_url=registry.rancher.com/rancher/hardened-kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Application uses its own regex engine; the system PCRE2 C library is not called at runtime",
+      "timestamp": "2026-09-22T21:33:10Z"
     }
   ],
-  "timestamp": "2026-09-02T13:59:44Z"
+  "timestamp": "2026-09-22T21:39:55Z"
 }

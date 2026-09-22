@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-bbed889c725eac8667a49d1585cc065f8b12c838dc1ab4b69c162edde2fd9678",
+  "@id": "https://openvex.dev/docs/public/vex-e24251c6f220366cfb5f4124b06d7e8b6feb423bae7e01c80732611852124576",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-0799"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-calico-node?repository_url=index.docker.io/rancher/mirrored-calico-node",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libpcap"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libpcap packet-capture library comes from tcpdump tooling and is never called by Calico Go binaries",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2026-14456"
@@ -22,6 +41,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary uses Go crypto/tls; openssl libraries are not loaded or called at runtime",
       "timestamp": "2026-09-22T18:17:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-4878"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-calico-node?repository_url=index.docker.io/rancher/mirrored-calico-node",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libcap"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Capabilities are set by the container runtime; the libcap parsing code is not called by the app",
+      "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-calico-node?repository_url=index.docker.io/rancher/mirrored-calico-node",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI utilities are not executed by the container entrypoint; incidental base-image dep",
+      "timestamp": "2026-09-22T21:33:10Z"
     },
     {
       "vulnerability": {
@@ -119,5 +176,5 @@
       "timestamp": "2026-09-22T18:17:09Z"
     }
   ],
-  "timestamp": "2026-09-22T18:34:49Z"
+  "timestamp": "2026-09-22T21:39:56Z"
 }
