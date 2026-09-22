@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d6baa02e546859a42831db58dcfe6da7776c8dd362d34d43f2560ef41df8b32c",
+  "@id": "https://openvex.dev/docs/public/vex-e3f38b4e07e3ae1663c2634df896fad0a7815c98b2e6911cd933fac44c8f4dda",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -196,6 +196,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/systemd-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No systemd",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18374"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-minimal-langpack ships only C/POSIX locale data; the vulnerable libc code is not in this package",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19499"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-minimal-langpack ships only C/POSIX locale data; the vulnerable libc code is not in this package",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19542"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-minimal-langpack ships only C/POSIX locale data; the vulnerable libc code is not in this package",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-27456"
       },
       "products": [
@@ -348,6 +424,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-40467"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/gawk"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gawk is an incidental base-image dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40468"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/gawk"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gawk is an incidental base-image dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40553"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/gawk"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gawk is an incidental base-image dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-4105"
       },
       "products": [
@@ -440,6 +573,82 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "librpm is only used at image build time and is never loaded at runtime",
       "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libblkid"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux disk/mount utilities are not invoked by the entrypoint; no block device handling at runtime",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libmount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux disk/mount utilities are not invoked by the entrypoint; no block device handling at runtime",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libsmartcols"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux disk/mount utilities are not invoked by the entrypoint; no block device handling at runtime",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libuuid"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux disk/mount utilities are not invoked by the entrypoint; no block device handling at runtime",
+      "timestamp": "2026-09-21T22:50:05Z"
     },
     {
       "vulnerability": {
@@ -595,6 +804,253 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-6368"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-minimal-langpack ships only C/POSIX locale data; the vulnerable libc code is not in this package",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6791"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-minimal-langpack ships only C/POSIX locale data; the vulnerable libc code is not in this package",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-77117"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-minimal-langpack ships only C/POSIX locale data; the vulnerable libc code is not in this package",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78367"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm is only used to build the image; no package management runs at container runtime",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78367"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm is only used to build the image; no package management runs at container runtime",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-80489"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-minimal-langpack ships only C/POSIX locale data; the vulnerable libc code is not in this package",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-82327"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libsolv"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libsolv is a dnf/rpm dependency solver used at build time only; never loaded at runtime",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84837"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm is only used to build the image; no package management runs at container runtime",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84837"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm is only used to build the image; no package management runs at container runtime",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-86145"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "pcre2-syntax ships only man pages/documentation; it contains no executable or library code",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89157"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "pcre2-syntax ships only man pages/documentation; it contains no executable or library code",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89158"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "pcre2-syntax ships only man pages/documentation; it contains no executable or library code",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89161"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "pcre2-syntax ships only man pages/documentation; it contains no executable or library code",
+      "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-9149"
       },
       "products": [
@@ -670,5 +1126,5 @@
       "timestamp": "2026-09-16T00:07:12Z"
     }
   ],
-  "timestamp": "2026-09-20T16:53:04Z"
+  "timestamp": "2026-09-21T23:39:12Z"
 }
