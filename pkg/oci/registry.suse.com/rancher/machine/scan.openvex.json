@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-23db1014019911d1d3ac002529d47902f68a42013a999e434a631db2aef1e0c2",
+  "@id": "https://openvex.dev/docs/public/vex-c641f4a3cfd662fde26acf14f9695148d97ee8a6e0fad44a25243fa7d73be771",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1010,7 +1010,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary uses net/http, not libcurl; C library not linked/called at runtime",
       "timestamp": "2026-08-28T03:20:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4241-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/machine?repository_url=registry.suse.com/rancher/machine",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-only runtime; no component links or calls libpcre2 during container execution",
+      "timestamp": "2026-09-22T18:17:09Z"
     }
   ],
-  "timestamp": "2026-08-31T13:08:54Z"
+  "timestamp": "2026-09-22T18:34:48Z"
 }
