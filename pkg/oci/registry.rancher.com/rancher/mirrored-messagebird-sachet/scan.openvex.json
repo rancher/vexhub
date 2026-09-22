@@ -1,0 +1,28 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-111177ebd0f62c18fdda221815a9f81dca18bd495c8694c89cc9ea6755d918da",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2022-37434"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-messagebird-sachet?repository_url=registry.rancher.com/rancher/mirrored-messagebird-sachet",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/zlib"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sachet is a Go binary using compress/flate; the Alpine zlib C library is not linked at runtime",
+      "timestamp": "2026-09-22T18:31:01Z"
+    }
+  ],
+  "timestamp": "2026-09-22T18:34:47Z"
+}

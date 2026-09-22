@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-23db1014019911d1d3ac002529d47902f68a42013a999e434a631db2aef1e0c2",
+  "@id": "https://openvex.dev/docs/public/vex-bbed889c725eac8667a49d1585cc065f8b12c838dc1ab4b69c162edde2fd9678",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -60,7 +60,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Static Go CNI plugin; glibc not invoked at runtime",
       "timestamp": "2026-08-30T03:35:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4241-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-multus-thick?repository_url=registry.rancher.com/rancher/hardened-multus-thick",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-only runtime; no component links or calls libpcre2 during container execution",
+      "timestamp": "2026-09-22T18:17:09Z"
     }
   ],
-  "timestamp": "2026-08-31T13:08:54Z"
+  "timestamp": "2026-09-22T18:34:49Z"
 }

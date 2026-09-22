@@ -1,0 +1,123 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-bbed889c725eac8667a49d1585cc065f8b12c838dc1ab4b69c162edde2fd9678",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-14456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-calico-node?repository_url=index.docker.io/rancher/mirrored-calico-node",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses Go crypto/tls; openssl libraries are not loaded or called at runtime",
+      "timestamp": "2026-09-22T18:17:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54369"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-calico-node?repository_url=index.docker.io/rancher/mirrored-calico-node",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libacl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "POSIX ACL library only pulled in as transitive dep; never called by the Go entrypoint",
+      "timestamp": "2026-09-22T18:17:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-86145"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-calico-node?repository_url=index.docker.io/rancher/mirrored-calico-node",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-only runtime; no component links or calls libpcre2 during container execution",
+      "timestamp": "2026-09-22T18:17:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-86145"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-calico-node?repository_url=index.docker.io/rancher/mirrored-calico-node",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Documentation/data-only package; ships no executable code in the image",
+      "timestamp": "2026-09-22T18:17:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89161"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-calico-node?repository_url=index.docker.io/rancher/mirrored-calico-node",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-only runtime; no component links or calls libpcre2 during container execution",
+      "timestamp": "2026-09-22T18:17:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89161"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-calico-node?repository_url=index.docker.io/rancher/mirrored-calico-node",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Documentation/data-only package; ships no executable code in the image",
+      "timestamp": "2026-09-22T18:17:09Z"
+    }
+  ],
+  "timestamp": "2026-09-22T18:34:49Z"
+}
