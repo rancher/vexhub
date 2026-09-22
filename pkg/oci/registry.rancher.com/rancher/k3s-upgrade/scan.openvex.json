@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c641f4a3cfd662fde26acf14f9695148d97ee8a6e0fad44a25243fa7d73be771",
+  "@id": "https://openvex.dev/docs/public/vex-b1399e7173bc11a812ab3dda0a0d3302d41d49ea8015c1ee292277e7ffc6244e",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -77,7 +77,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary uses Go crypto/tls; libssl3 is not loaded or called at runtime",
       "timestamp": "2026-09-22T18:17:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40200"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/k3s-upgrade?repository_url=registry.rancher.com/rancher/k3s-upgrade",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/musl-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "musl-utils helper binaries (ldconfig/getconf) are not executed by the container entrypoint",
+      "timestamp": "2026-09-22T21:33:10Z"
     }
   ],
-  "timestamp": "2026-09-22T18:34:48Z"
+  "timestamp": "2026-09-22T21:39:53Z"
 }
