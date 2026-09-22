@@ -1,9 +1,28 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-40d51e6ae804a4699619cf5d888abada0dfa3bcf60508ac0b5a16d4fee48a806",
+  "@id": "https://openvex.dev/docs/public/vex-7ac2f3d52b052b1be087f7d7b9a4e43d376972c0e636398f4b2b46913e7b03ac",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2021-31879"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/wget"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wget CLI is a build-time helper and is not invoked by the notebook server at runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2022-3109"
@@ -2077,6 +2096,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-45582"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GNU tar CLI is only an incidental dependency",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-52968"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xdg-utils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Desktop integration scripts require a desktop session that does not exist in the container",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-59529"
       },
       "products": [
@@ -2514,6 +2571,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-12087"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental dependency and is not used by the notebook runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-12087"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl base is only a packaging dependency; no Perl code runs in the notebook container",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-12087"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl modules are never loaded; no Perl script is executed by the container entrypoint",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-12706"
       },
       "products": [
@@ -2590,6 +2704,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-13221"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental dependency and is not used by the notebook runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13221"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl base is only a packaging dependency; no Perl code runs in the notebook container",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13221"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl modules are never loaded; no Perl script is executed by the container entrypoint",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-13595"
       },
       "products": [
@@ -2628,6 +2799,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount utilities are not executed inside the container; mounts are managed by kubelet",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental and not invoked by the notebook server runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-15059"
       },
       "products": [
@@ -2682,6 +2891,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No systemd",
       "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container has no init/systemd process; the notebook server runs as PID 1 directly",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/systemd-sysv"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SysV compat scripts for systemd are never executed; no init system runs in the container",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15146"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/wget"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wget CLI is a build-time helper and is not invoked by the notebook server at runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
     },
     {
       "vulnerability": {
@@ -2704,6 +2970,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-15534"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental dependency and is not used by the notebook runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15534"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl base is only a packaging dependency; no Perl code runs in the notebook container",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15534"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl modules are never loaded; no Perl script is executed by the container entrypoint",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-16742"
       },
       "products": [
@@ -2761,6 +3084,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container has no init/systemd process; the notebook server runs as PID 1 directly",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/systemd-sysv"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SysV compat scripts for systemd are never executed; no init system runs in the container",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-18374"
       },
       "products": [
@@ -2780,6 +3141,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-18477"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GNU tar CLI is only an incidental dependency",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18508"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GNU tar CLI is only an incidental dependency",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-19487"
       },
       "products": [
@@ -2796,6 +3195,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is an incidental package dependency and is never executed by the Jupyter notebook entrypoint",
       "timestamp": "2026-09-21T21:09:07Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental dependency and is not used by the notebook runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl base is only a packaging dependency; no Perl code runs in the notebook container",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl modules are never loaded; no Perl script is executed by the container entrypoint",
+      "timestamp": "2026-09-22T13:48:12Z"
     },
     {
       "vulnerability": {
@@ -2872,6 +3328,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux uuid library is an incidental dependency; the affected code path is never executed",
       "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount utilities are not executed inside the container; mounts are managed by kubelet",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental and not invoked by the notebook server runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
     },
     {
       "vulnerability": {
@@ -3008,6 +3502,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-35177"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-35177"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-35177"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-35177"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-38076"
       },
       "products": [
@@ -3119,6 +3689,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No systemd",
       "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40226"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Container has no init/systemd process; the notebook server runs as PID 1 directly",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40226"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/systemd-sysv"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SysV compat scripts for systemd are never executed; no init system runs in the container",
+      "timestamp": "2026-09-22T13:48:12Z"
     },
     {
       "vulnerability": {
@@ -3464,6 +4072,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42496"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental dependency and is not used by the notebook runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42496"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl base is only a packaging dependency; no Perl code runs in the notebook container",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42496"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl modules are never loaded; no Perl script is executed by the container entrypoint",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-4367"
       },
       "products": [
@@ -3480,6 +4145,82 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No X11 server or display is present; XPM image parsing is never performed at runtime",
       "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-43961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-43961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-43961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-43961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
     },
     {
       "vulnerability": {
@@ -3521,6 +4262,234 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-46483"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46483"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46483"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46483"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47162"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47162"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47162"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47162"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47167"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47167"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47167"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47167"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-50593"
       },
       "products": [
@@ -3540,6 +4509,386 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-51400"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51400"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51400"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51400"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51401"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51401"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51401"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51401"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52859"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52859"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52859"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52859"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52860"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52860"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52860"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52860"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53613"
       },
       "products": [
@@ -3578,6 +4927,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount utilities are not executed inside the container; mounts are managed by kubelet",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental and not invoked by the notebook server runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53615"
       },
       "products": [
@@ -3613,6 +5000,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux uuid library is an incidental dependency; the affected code path is never executed",
       "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount utilities are not executed inside the container; mounts are managed by kubelet",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental and not invoked by the notebook server runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
     },
     {
       "vulnerability": {
@@ -3730,6 +5155,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-55693"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55693"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55693"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55693"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-55868"
       },
       "products": [
@@ -3768,7 +5269,254 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-55892"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55892"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55892"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55892"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55895"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55895"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55895"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55895"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-5704"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GNU tar CLI is only an incidental dependency",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libperl5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental package dependency and is never executed by the Jupyter notebook entrypoint",
+      "timestamp": "2026-09-21T21:09:07Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental dependency and is not used by the notebook runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl base is only a packaging dependency; no Perl code runs in the notebook container",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl modules are never loaded; no Perl script is executed by the container entrypoint",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57433"
       },
       "products": [
         {
@@ -3794,15 +5542,281 @@
           "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
           "subcomponents": [
             {
-              "@id": "pkg:deb/ubuntu/libperl5.34"
+              "@id": "pkg:deb/ubuntu/perl"
             }
           ]
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Perl is an incidental package dependency and is never executed by the Jupyter notebook entrypoint",
-      "timestamp": "2026-09-21T21:09:07Z"
+      "impact_statement": "Perl interpreter is an incidental dependency and is not used by the notebook runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57433"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl base is only a packaging dependency; no Perl code runs in the notebook container",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57433"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl modules are never loaded; no Perl script is executed by the container entrypoint",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57452"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57452"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57452"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57452"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57455"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57455"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57455"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57455"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
     },
     {
       "vulnerability": {
@@ -3863,6 +5877,101 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-58469"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/wget"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wget CLI is a build-time helper and is not invoked by the notebook server at runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-58470"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/wget"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wget CLI is a build-time helper and is not invoked by the notebook server at runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-58471"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/wget"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wget CLI is a build-time helper and is not invoked by the notebook server at runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-58472"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/wget"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "wget CLI is a build-time helper and is not invoked by the notebook server at runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-5928"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships locale data only; the vulnerable glibc library code is not in this package",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-59843"
       },
       "products": [
@@ -4088,6 +6197,234 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libssh is an incidental dependency; no SSH client or server session is established by the notebook entrypoint",
       "timestamp": "2026-09-21T21:09:07Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59856"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59856"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59856"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59856"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59857"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59857"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59857"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59857"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
     },
     {
       "vulnerability": {
@@ -4129,6 +6466,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-6238"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships locale data only; the vulnerable glibc library code is not in this package",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6368"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships locale data only; the vulnerable glibc library code is not in this package",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6390"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nano"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive text editor is incidental and never run by the container entrypoint",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-64830"
       },
       "products": [
@@ -4813,6 +7207,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-6791"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships locale data only; the vulnerable glibc library code is not in this package",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6842"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nano"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive text editor is incidental and never run by the container entrypoint",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6843"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nano"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive text editor is incidental and never run by the container entrypoint",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-70628"
       },
       "products": [
@@ -5098,6 +7549,519 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-73071"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73071"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73071"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73071"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73073"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73073"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73073"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73073"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73074"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73074"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73074"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73074"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73077"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73077"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73077"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73077"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "xxd binary does not contain the affected vim core code and is never executed",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73078"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Interactive editor never invoked by the Jupyter notebook entrypoint or its services",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73078"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Vim support files only; editor is never executed in the notebook container runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73078"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Runtime package ships only data/syntax files; no vulnerable vim binary code present",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-75141"
       },
       "products": [
@@ -5380,6 +8344,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "ffmpeg media scaling/resampling/encoding libs are incidental deps; the notebook server decodes no media",
       "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-77117"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships locale data only; the vulnerable glibc library code is not in this package",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-80489"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships locale data only; the vulnerable glibc library code is not in this package",
+      "timestamp": "2026-09-22T13:48:12Z"
     },
     {
       "vulnerability": {
@@ -5399,6 +8401,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is an incidental package dependency and is never executed by the Jupyter notebook entrypoint",
       "timestamp": "2026-09-21T21:09:07Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8376"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental dependency and is not used by the notebook runtime",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8376"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl base is only a packaging dependency; no Perl code runs in the notebook container",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8376"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl modules are never loaded; no Perl script is executed by the container entrypoint",
+      "timestamp": "2026-09-22T13:48:12Z"
     },
     {
       "vulnerability": {
@@ -5494,7 +8553,64 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No polkit daemon or authentication agent runs in the container; privileges are never negotiated via polkit",
       "timestamp": "2026-09-21T21:09:07Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-85498"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/pkexec"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "pkexec is never executed; the notebook runs as a single unprivileged user",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-85498"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/policykit-1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "polkit authorization daemon is not started in the container; no D-Bus privilege requests",
+      "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-85498"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/polkitd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "polkitd daemon never runs in the container; no privilege authorization path exists",
+      "timestamp": "2026-09-22T13:48:12Z"
     }
   ],
-  "timestamp": "2026-09-21T23:39:10Z"
+  "timestamp": "2026-09-22T13:51:20Z"
 }
