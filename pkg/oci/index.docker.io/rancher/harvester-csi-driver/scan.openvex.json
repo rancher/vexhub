@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9794e6cef91fb89de96786b590b1eb052659c54c2025f2e7782d66459a25df9a",
+  "@id": "https://openvex.dev/docs/public/vex-111177ebd0f62c18fdda221815a9f81dca18bd495c8694c89cc9ea6755d918da",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2055,6 +2055,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:22166-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No SQLite database is opened; the library is never loaded by the Go entrypoint",
+      "timestamp": "2026-09-22T18:17:09Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:22172-1"
       },
       "products": [
@@ -2176,6 +2195,25 @@
           "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module is not loaded; the Go entrypoint does not use OpenSSL",
+      "timestamp": "2026-09-22T18:17:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22315-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libopenssl3"
             }
           ]
@@ -2185,6 +2223,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go CSI driver uses crypto/tls; libopenssl3 is not loaded at runtime",
       "timestamp": "2026-07-11T15:53:45Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22315-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses Go crypto/tls; the openssl package is not executed at runtime",
+      "timestamp": "2026-09-22T18:17:09Z"
     },
     {
       "vulnerability": {
@@ -2280,6 +2337,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:22582-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/curl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "curl CLI is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-09-22T18:17:09Z"
     },
     {
       "vulnerability": {
@@ -2584,6 +2660,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go uses crypto/ssh; the system libssh C library is not called at runtime",
       "timestamp": "2026-07-30T03:00:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:23303-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=index.docker.io/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpython3_13-1_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No Python interpreter runs in this image; libpython is never loaded at runtime",
+      "timestamp": "2026-09-22T18:17:09Z"
     },
     {
       "vulnerability": {
@@ -2947,5 +3042,5 @@
       "timestamp": "2026-09-12T01:06:17Z"
     }
   ],
-  "timestamp": "2026-09-13T17:38:04Z"
+  "timestamp": "2026-09-22T18:34:47Z"
 }

@@ -1,0 +1,66 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-a2afebc40b85a4dfb8b66bd3218181bae2848b95ba2b7e9ae299dd0ffccc9041",
+  "author": "Rancher Security team",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2024-37371"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-idealista-prom2teams?repository_url=registry.rancher.com/rancher/mirrored-idealista-prom2teams",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/krb5-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "prom2teams is a Flask app using HTTP/token auth only; Kerberos GSS-API code is never executed",
+      "timestamp": "2026-09-22T18:31:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45491"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-idealista-prom2teams?repository_url=registry.rancher.com/rancher/mirrored-idealista-prom2teams",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/libexpat"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "prom2teams handles JSON only; the expat XML parser is not in the execute path of this service",
+      "timestamp": "2026-09-22T18:31:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45492"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-idealista-prom2teams?repository_url=registry.rancher.com/rancher/mirrored-idealista-prom2teams",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/libexpat"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "prom2teams handles JSON only; the expat XML parser is not in the execute path of this service",
+      "timestamp": "2026-09-22T18:31:01Z"
+    }
+  ],
+  "timestamp": "2026-09-22T18:34:46Z"
+}
