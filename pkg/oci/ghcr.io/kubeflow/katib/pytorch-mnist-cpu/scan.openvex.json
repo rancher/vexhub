@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-f996fb7f82c2da06ebab44513affffa7faf91498d03bd49b38001d56f208de88",
+  "@id": "https://openvex.dev/docs/public/vex-8e18ca484294adf9d2e9083c03f2c05d53aa4f4f5620e54d84980a9863316b5b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3179,6 +3179,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-86805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libc-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Image runs no setuid/setgid binaries; the AT_SECURE ld.so $ORIGIN RPATH path is never executed",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-86805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libc6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Image runs no setuid/setgid binaries; the AT_SECURE ld.so $ORIGIN RPATH path is never executed",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-89156"
       },
       "products": [
@@ -3328,7 +3366,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is an incidental base-image dependency and is not executed by the workload",
       "timestamp": "2026-09-16T11:52:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95818"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libc-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Image runs no setuid/setgid binaries; the AT_SECURE ld.so $ORIGIN RPATH path is never executed",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95818"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libc6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Image runs no setuid/setgid binaries; the AT_SECURE ld.so $ORIGIN RPATH path is never executed",
+      "timestamp": "2026-09-24T13:08:00Z"
     }
   ],
-  "timestamp": "2026-09-18T13:48:11Z"
+  "timestamp": "2026-09-24T13:32:35Z"
 }
