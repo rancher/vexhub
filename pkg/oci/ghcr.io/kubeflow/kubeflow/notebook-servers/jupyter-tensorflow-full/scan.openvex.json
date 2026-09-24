@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b435eac451f54077499ca8cb787b4c665896e5ddf6637d8e14c143d63904a3c4",
+  "@id": "https://openvex.dev/docs/public/vex-27db440c86f90ea3001a2f8d06a111cd8c7fceb6d53c3000f284d5953493df78",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -41,6 +41,63 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package ships only manual pages; no vulnerable executable code is present",
       "timestamp": "2026-09-23T12:03:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-45582"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GNU tar is not invoked at runtime; no untrusted archives are extracted by the image entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-11822"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The FTS5 full-text extension is not used; no crafted SQLite database is opened by the workload",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-11824"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The FTS5 full-text extension is not used; no crafted SQLite database is opened by the workload",
+      "timestamp": "2026-09-24T13:08:00Z"
     },
     {
       "vulnerability": {
@@ -139,6 +196,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-12087"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-12087"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-12087"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-13221"
       },
       "products": [
@@ -155,6 +269,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl interpreter is not invoked by the Python-based notebook server",
       "timestamp": "2026-09-23T12:03:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13221"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13221"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13221"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
     },
     {
       "vulnerability": {
@@ -215,6 +386,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libblkid nested partition probing is never invoked; the container does not probe block devices",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libblkid nested partition probing is never invoked; the container does not probe block devices",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libblkid nested partition probing is never invoked; the container does not probe block devices",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-15059"
       },
       "products": [
@@ -234,6 +462,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd-oomd",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd-oomd",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd-oomd",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/systemd-sysv"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd-oomd",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-15534"
       },
       "products": [
@@ -250,6 +554,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl interpreter is not invoked by the Python-based notebook server",
       "timestamp": "2026-09-23T12:03:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15534"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15534"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15534"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
     },
     {
       "vulnerability": {
@@ -348,6 +709,139 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd-oomd",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd-oomd",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd-oomd",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/systemd-sysv"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd-oomd",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18374"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships only locale definition data; the affected glibc C code lives in libc6",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18477"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GNU tar is not invoked at runtime; no untrusted archives are extracted by the image entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18508"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GNU tar is not invoked at runtime; no untrusted archives are extracted by the image entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-19487"
       },
       "products": [
@@ -364,6 +858,82 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl interpreter is not invoked by the Python-based notebook server",
       "timestamp": "2026-09-23T12:03:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-19542"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships only locale definition data; the affected glibc C code lives in libc6",
+      "timestamp": "2026-09-24T13:08:00Z"
     },
     {
       "vulnerability": {
@@ -443,6 +1013,158 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount(8) is not executed and is not setuid-exploitable in this image; no loop device setup occurs",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount(8) is not executed and is not setuid-exploitable in this image; no loop device setup occurs",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount(8) is not executed and is not setuid-exploitable in this image; no loop device setup occurs",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34182"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CMS AuthEnvelopedData/key-unwrap parsing is not reachable; the image only uses OpenSSL for TLS",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34182"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nodejs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Node.js does not expose CMS AuthEnvelopedData or CMS key unwrapping",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34182"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CMS AuthEnvelopedData/key-unwrap parsing is not reachable; the image only uses OpenSSL for TLS",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34183"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nodejs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC is not used by Node.js in this image and no QUIC endpoint is served",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39113"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Flaw only exists in trunk snapshots from 2026-03-11 onward; shipped 3.37.2 release does not contain it",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-40226"
       },
       "products": [
@@ -462,6 +1184,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-40226"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd-oomd",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40226"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd-oomd",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40226"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd-oomd",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-40226"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/systemd-sysv"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd-oomd",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-40355"
       },
       "products": [
@@ -611,6 +1409,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "No Kerberos/GSSAPI authentication is used by the notebook at runtime",
       "timestamp": "2026-09-23T12:03:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-4046"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships only locale definition data; the affected glibc C code lives in libc6",
+      "timestamp": "2026-09-24T13:08:00Z"
     },
     {
       "vulnerability": {
@@ -668,6 +1485,234 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl interpreter is not invoked by the Python-based notebook server",
       "timestamp": "2026-09-23T12:03:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42496"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42496"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42496"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42764"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nodejs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC is not used by Node.js in this image and no QUIC endpoint is served",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45445"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "AES-OCB via the one-shot EVP_Cipher() interface is not used by any component in this image",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45445"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nodejs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Node.js crypto does not drive AES-OCB through the one-shot EVP_Cipher() interface",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45445"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "AES-OCB via the one-shot EVP_Cipher() interface is not used by any component in this image",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45447"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PKCS7_verify() is not called; the image does not process PKCS#7 or S/MIME signed messages",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45447"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nodejs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Node.js does not call PKCS7_verify(); PKCS#7 and S/MIME verification are not exposed",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45447"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "PKCS7_verify() is not called; the image does not process PKCS#7 or S/MIME signed messages",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-50812"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The SQLite session extension changeset APIs are never used by the workload in this image",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-50813"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libsqlite3-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The SQLite session extension changeset APIs are never used by the workload in this image",
+      "timestamp": "2026-09-24T13:08:00Z"
     },
     {
       "vulnerability": {
@@ -804,6 +1849,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-5435"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships only locale definition data; the affected glibc C code lives in libc6",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-54371"
       },
       "products": [
@@ -899,7 +1963,121 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-5450"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships only locale definition data; the affected glibc C code lives in libc6",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-5704"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "GNU tar is not invoked at runtime; no untrusted archives are extracted by the image entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libperl5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is not invoked by the Python-based notebook server",
+      "timestamp": "2026-09-23T12:03:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57433"
       },
       "products": [
         {
@@ -925,15 +2103,53 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
-              "@id": "pkg:deb/ubuntu/libperl5.34"
+              "@id": "pkg:deb/ubuntu/perl"
             }
           ]
         }
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Perl interpreter is not invoked by the Python-based notebook server",
-      "timestamp": "2026-09-23T12:03:21Z"
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57433"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57433"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
     },
     {
       "vulnerability": {
@@ -1200,6 +2416,253 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package ships only data files; no vulnerable executable code is present",
       "timestamp": "2026-09-23T12:03:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-5928"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships only locale definition data; the affected glibc C code lives in libc6",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59843"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libssh-4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libssh is an incidental dependency; no SSH client or server code runs in this notebook image",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59845"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libssh-4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libssh is an incidental dependency; no SSH client or server code runs in this notebook image",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59846"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libssh-4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libssh is an incidental dependency; no SSH client or server code runs in this notebook image",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59847"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libssh-4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libssh is an incidental dependency; no SSH client or server code runs in this notebook image",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59848"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libssh-4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libssh is an incidental dependency; no SSH client or server code runs in this notebook image",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59850"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libssh-4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libssh is an incidental dependency; no SSH client or server code runs in this notebook image",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6238"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships only locale definition data; the affected glibc C code lives in libc6",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CMS AuthEnvelopedData/key-unwrap parsing is not reachable; the image only uses OpenSSL for TLS",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nodejs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Node.js does not expose CMS AuthEnvelopedData or CMS key unwrapping",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "CMS AuthEnvelopedData/key-unwrap parsing is not reachable; the image only uses OpenSSL for TLS",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No OpenSSL CMP server runs in this image",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No OpenSSL CMP server runs in this image",
+      "timestamp": "2026-09-24T13:08:00Z"
     },
     {
       "vulnerability": {
@@ -1298,6 +2761,158 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-6368"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships only locale definition data; the affected glibc C code lives in libc6",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6390"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nano"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nano is an incidental editor never executed by the image entrypoint; all flaws need local interactive use",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6791"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships only locale definition data; the affected glibc C code lives in libc6",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6842"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nano"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nano is an incidental editor never executed by the image entrypoint; all flaws need local interactive use",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-6843"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/nano"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nano is an incidental editor never executed by the image entrypoint; all flaws need local interactive use",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-74860"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libxml2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Flaw is in the libxml2 Python bindings package",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-77117"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships only locale definition data; the affected glibc C code lives in libc6",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-80489"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/locales"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "locales ships only locale definition data; the affected glibc C code lives in libc6",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-8376"
       },
       "products": [
@@ -1314,6 +2929,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl interpreter is not invoked by the Python-based notebook server",
       "timestamp": "2026-09-23T12:03:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8376"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8376"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-8376"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/perl-modules-5.34"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental packaging dependency and is never executed by the Jupyter entrypoint",
+      "timestamp": "2026-09-24T13:08:00Z"
     },
     {
       "vulnerability": {
@@ -1354,5 +3026,5 @@
       "timestamp": "2026-09-23T12:03:21Z"
     }
   ],
-  "timestamp": "2026-09-23T12:08:51Z"
+  "timestamp": "2026-09-24T13:32:36Z"
 }
