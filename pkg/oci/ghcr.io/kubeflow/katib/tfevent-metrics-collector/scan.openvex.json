@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-10a6325e4f7bff4493aaab79252f0931a6ae43dfbde94ab2078f06582cb522b8",
+  "@id": "https://openvex.dev/docs/public/vex-27db440c86f90ea3001a2f8d06a111cd8c7fceb6d53c3000f284d5953493df78",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2951,6 +2951,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-86805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/tfevent-metrics-collector?repository_url=ghcr.io/kubeflow/katib/tfevent-metrics-collector",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libc-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Image runs no setuid/setgid binaries; the AT_SECURE ld.so $ORIGIN RPATH path is never executed",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-86805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/tfevent-metrics-collector?repository_url=ghcr.io/kubeflow/katib/tfevent-metrics-collector",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libc6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Image runs no setuid/setgid binaries; the AT_SECURE ld.so $ORIGIN RPATH path is never executed",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-89156"
       },
       "products": [
@@ -3043,7 +3081,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl interpreter is a dpkg dependency only and is never executed by the container entrypoint",
       "timestamp": "2026-09-17T01:53:31Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95818"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/tfevent-metrics-collector?repository_url=ghcr.io/kubeflow/katib/tfevent-metrics-collector",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libc-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Image runs no setuid/setgid binaries; the AT_SECURE ld.so $ORIGIN RPATH path is never executed",
+      "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95818"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/tfevent-metrics-collector?repository_url=ghcr.io/kubeflow/katib/tfevent-metrics-collector",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libc6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Image runs no setuid/setgid binaries; the AT_SECURE ld.so $ORIGIN RPATH path is never executed",
+      "timestamp": "2026-09-24T13:08:00Z"
     }
   ],
-  "timestamp": "2026-09-18T13:48:10Z"
+  "timestamp": "2026-09-24T13:32:36Z"
 }
