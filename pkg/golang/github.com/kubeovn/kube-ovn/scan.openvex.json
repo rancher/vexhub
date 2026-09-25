@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-499688d6558f3edda573d47a4f0474d00a1d5fd5a1692b951be27e9e49a44837",
+  "@id": "https://openvex.dev/docs/public/vex-b8f1d1608c41f19eb0f29ba57fda245965d0b53d4c1f7b8ec5ae3ebedd6e03f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -3670,7 +3670,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Govulncheck determined that the vulnerable code isn't called.",
       "timestamp": "2026-09-21T17:23:27Z"
+    },
+    {
+      "vulnerability": {
+        "name": "GHSA-hrxh-6v49-42gf"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubeovn/kube-ovn",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc@v1.80.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "kubeovn does not use the xDS RBAC authorization component",
+      "timestamp": "2026-09-25T11:40:09Z"
     }
   ],
-  "timestamp": "2026-09-21T17:44:12Z"
+  "timestamp": "2026-09-25T11:50:16Z"
 }
