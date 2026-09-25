@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-026692c569868724e0967492fa3e4c3c578d1b64809594b898422c3f8cf29162",
+  "@id": "https://openvex.dev/docs/public/vex-540c9fa5006677df44823f3e36d54530910f814b5c4ebfe6e7c1dd182e152eae",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1032,6 +1032,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-86805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-minimal-langpack ships locale data only; the vulnerable glibc code lives in libc.so.6",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-89092"
       },
       "products": [
@@ -1238,7 +1257,26 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package ships only minimal locale data files; no glibc executable code is present in it.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95818"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-minimal-langpack ships locale data only; the vulnerable glibc code lives in libc.so.6",
+      "timestamp": "2026-09-25T11:21:37Z"
     }
   ],
-  "timestamp": "2026-09-25T04:49:47Z"
+  "timestamp": "2026-09-25T11:50:17Z"
 }
