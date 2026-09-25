@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8e18ca484294adf9d2e9083c03f2c05d53aa4f4f5620e54d84980a9863316b5b",
+  "@id": "https://openvex.dev/docs/public/vex-342ed1cde1633ef51a39799624b4e518e0ed4f21ba9e3ede733aeb06d693f34b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1222,6 +1222,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-86805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Package ships only minimal locale data files; no glibc executable code is present in it.",
+      "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-89092"
       },
       "products": [
@@ -1390,7 +1409,26 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "libgcc does not ship the libstdc++ aligned operator new code; only the gcc source package matches",
       "timestamp": "2026-09-24T13:08:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95818"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/server?repository_url=ghcr.io/kubeflow/hub/server",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Package ships only minimal locale data files; no glibc executable code is present in it.",
+      "timestamp": "2026-09-24T21:29:16Z"
     }
   ],
-  "timestamp": "2026-09-24T13:32:35Z"
+  "timestamp": "2026-09-25T04:49:46Z"
 }
