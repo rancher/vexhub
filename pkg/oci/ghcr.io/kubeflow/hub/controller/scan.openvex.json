@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-eb8bb5f39ff776242902700ec502f5547e930aa9078ad8d82d2bc662f52871fb",
+  "@id": "https://openvex.dev/docs/public/vex-b8f1d1608c41f19eb0f29ba57fda245965d0b53d4c1f7b8ec5ae3ebedd6e03f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1070,6 +1070,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-86805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io/kubeflow/hub/controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-minimal-langpack ships locale data only; the vulnerable glibc code lives in libc.so.6",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-89092"
       },
       "products": [
@@ -1276,7 +1295,26 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package ships only minimal locale data files; no glibc executable code is present in it.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95818"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io/kubeflow/hub/controller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/glibc-minimal-langpack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-minimal-langpack ships locale data only; the vulnerable glibc code lives in libc.so.6",
+      "timestamp": "2026-09-25T11:21:37Z"
     }
   ],
-  "timestamp": "2026-09-25T04:49:48Z"
+  "timestamp": "2026-09-25T11:50:16Z"
 }

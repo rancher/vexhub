@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-eb8bb5f39ff776242902700ec502f5547e930aa9078ad8d82d2bc662f52871fb",
+  "@id": "https://openvex.dev/docs/public/vex-b8f1d1608c41f19eb0f29ba57fda245965d0b53d4c1f7b8ec5ae3ebedd6e03f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -478,6 +478,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI tools are not invoked by the entrypoint; container runs unprivileged.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux disk/mount utilities are incidental deps not executed by the notebook entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -1146,6 +1165,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux disk/mount utilities are incidental deps not executed by the notebook entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-34182"
       },
       "products": [
@@ -1248,6 +1286,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-35177"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -1267,6 +1324,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-35177"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -1276,6 +1352,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-35177"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-35177"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -1742,6 +1856,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-43961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -1761,6 +1894,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-43961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -1770,6 +1922,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-43961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-43961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -1932,6 +2122,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46483"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -1951,6 +2160,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46483"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -1960,6 +2188,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46483"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-46483"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -2008,6 +2274,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47162"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -2027,6 +2312,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47162"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -2036,6 +2340,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47162"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47162"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -2084,6 +2426,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47167"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -2103,6 +2464,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47167"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -2112,6 +2492,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47167"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-47167"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -2198,6 +2616,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51400"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -2207,6 +2644,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Vim support files are incidental; the vulnerable editor code is never executed by the entrypoint.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51400"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -2236,6 +2692,44 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51400"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51400"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/xxd"
             }
           ]
@@ -2274,6 +2768,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51401"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -2293,6 +2806,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51401"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -2302,6 +2834,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51401"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-51401"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -2350,6 +2920,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -2369,6 +2958,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -2378,6 +2986,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -2426,6 +3072,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52859"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -2445,6 +3110,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52859"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -2454,6 +3138,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52859"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52859"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -2502,6 +3224,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52860"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -2521,6 +3262,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52860"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -2530,6 +3290,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52860"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-52860"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -2628,6 +3426,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux disk/mount utilities are incidental deps not executed by the notebook entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53615"
       },
       "products": [
@@ -2701,6 +3518,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI tools are not invoked by the entrypoint; container runs unprivileged.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux disk/mount utilities are incidental deps not executed by the notebook entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -2882,6 +3718,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55693"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -2901,6 +3756,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55693"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -2910,6 +3784,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55693"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55693"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -2958,6 +3870,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55892"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -2977,6 +3908,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55892"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -2986,6 +3936,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55892"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55892"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -3034,6 +4022,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55895"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -3053,6 +4060,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55895"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -3062,6 +4088,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55895"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-55895"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -3281,6 +4345,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57452"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -3300,6 +4383,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57452"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -3309,6 +4411,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57452"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57452"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -3357,6 +4497,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57455"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -3376,6 +4535,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57455"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -3385,6 +4563,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57455"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57455"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -3433,6 +4649,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -3452,6 +4687,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -3461,6 +4715,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-57456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -3984,6 +5276,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59856"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -4003,6 +5314,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59856"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -4012,6 +5342,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59856"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59856"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -4060,6 +5428,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59857"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -4079,6 +5466,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59857"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -4088,6 +5494,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59857"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59857"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -4136,6 +5580,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -4155,6 +5618,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -4164,6 +5646,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-59858"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -4516,6 +6036,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73071"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -4525,6 +6064,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Vim support files are incidental; the vulnerable editor code is never executed by the entrypoint.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73071"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -4554,6 +6112,44 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73071"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73071"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/xxd"
             }
           ]
@@ -4592,6 +6188,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -4611,6 +6226,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -4620,6 +6254,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -4668,6 +6340,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73073"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -4687,6 +6378,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73073"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -4696,6 +6406,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73073"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73073"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -4744,6 +6492,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73074"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -4763,6 +6530,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73074"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -4772,6 +6558,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73074"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73074"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -4820,6 +6644,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -4839,6 +6682,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -4848,6 +6710,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -4896,6 +6796,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73077"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -4915,6 +6834,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73077"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -4924,6 +6862,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73077"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73077"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -4972,6 +6948,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim editor is an incidental base-image dependency never executed by the container entrypoint",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73078"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-common"
             }
           ]
@@ -4991,6 +6986,25 @@
           "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
           "subcomponents": [
             {
+              "@id": "pkg:deb/ubuntu/vim-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim-common support files back the vim editor",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73078"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/ubuntu/vim-runtime"
             }
           ]
@@ -5000,6 +7014,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Package contains only runtime syntax/doc data files; no vulnerable Vim binary code present.",
       "timestamp": "2026-09-24T21:29:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73078"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/vim-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "vim-runtime ships syntax/help data files only; it contains no executable code",
+      "timestamp": "2026-09-25T11:21:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73078"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex-dump utility is an incidental vim dependency never invoked at runtime",
+      "timestamp": "2026-09-25T11:21:37Z"
     },
     {
       "vulnerability": {
@@ -5192,5 +7244,5 @@
       "timestamp": "2026-09-23T12:03:21Z"
     }
   ],
-  "timestamp": "2026-09-25T04:49:48Z"
+  "timestamp": "2026-09-25T11:50:16Z"
 }
