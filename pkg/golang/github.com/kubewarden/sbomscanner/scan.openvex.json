@@ -1,9 +1,55 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-01ab649b27690a0b62281cf6cc8ee40c0c2a8d8ba60b69d73fbefa20cf8c47fe",
+  "@id": "https://openvex.dev/docs/public/vex-1b074b4f2ceb45a2d8d7c8daf0448c45b0eb929c3f7e385aff6f240a9f09ca7a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73500",
+        "aliases": [
+          "GO-2026-6107",
+          "GHSA-6vch-q96h-7gc3"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubewarden/sbomscanner",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/go.etcd.io/etcd/client/pkg/v3@v3.7.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-09-26T02:22:13Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-73500",
+        "aliases": [
+          "GO-2026-6107",
+          "GHSA-6vch-q96h-7gc3"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/kubewarden/sbomscanner@v0.13.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/go.etcd.io/etcd/client/pkg/v3@v3.7.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-09-26T02:22:13Z"
+    },
     {
       "vulnerability": {
         "name": "CVE-2026-84445",
@@ -74,5 +120,5 @@
       "timestamp": "2026-09-24T02:23:14Z"
     }
   ],
-  "timestamp": "2026-09-24T04:44:50Z"
+  "timestamp": "2026-09-26T04:35:33Z"
 }
