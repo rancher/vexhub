@@ -120,12 +120,6 @@ from third-parties.
 For instructions on how to use our VEX reports in air-gap environments, please
 consult [KB 000021573 - How to use SUSE Rancher's VEX Reports].
 
-# VEXed CVEs
-
-The full list of VEXed CVEs in CSV format is available in [`vex_cves.csv`] for
-easy consumption. There it's possible to see all the VEXed vulnerabilities and
-their respective statuses and justifications.
-
 # License
 
 The SUSE Rancher VEX data is provided by SUSE under the Creative Commons license
@@ -143,6 +137,4 @@ with Attribution (CC-BY-4.0). See the [license] for more information.
 [standalone]: reports/rancher.openvex.json
 [raw format]: https://raw.githubusercontent.com/rancher/vexhub/refs/heads/main/reports/rancher.openvex.json
 [VEX Hub repository format]: reports/rancher.openvex.json
-[`vex_cves.csv`]: reports/vex_cves.csv
 [license]: LICENSE
-
