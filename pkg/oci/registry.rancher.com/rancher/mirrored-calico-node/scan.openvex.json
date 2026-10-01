@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b1399e7173bc11a812ab3dda0a0d3302d41d49ea8015c1ee292277e7ffc6244e",
+  "@id": "https://openvex.dev/docs/public/vex-afde2d076714ff7a02323242d68397f8f012fc164160af0375f774d81e1da248",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,6 +22,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libpcap packet-capture library comes from tcpdump tooling and is never called by Calico Go binaries",
       "timestamp": "2026-09-22T21:33:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103111"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com/rancher/mirrored-calico-node",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-only runtime; no component links or calls libpcre2 during container execution",
+      "timestamp": "2026-10-01T14:52:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103111"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com/rancher/mirrored-calico-node",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Documentation/data-only package; ships no executable code in the image",
+      "timestamp": "2026-10-01T14:52:25Z"
     },
     {
       "vulnerability": {
@@ -101,6 +139,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-75804"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com/rancher/mirrored-calico-node",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses Go crypto/tls; openssl libraries are not loaded or called at runtime",
+      "timestamp": "2026-10-01T14:52:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-86145"
       },
       "products": [
@@ -176,5 +233,5 @@
       "timestamp": "2026-09-22T18:17:09Z"
     }
   ],
-  "timestamp": "2026-09-22T21:39:53Z"
+  "timestamp": "2026-10-01T17:00:27Z"
 }

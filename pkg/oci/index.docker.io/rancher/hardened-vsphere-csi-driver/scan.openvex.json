@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-9794e6cef91fb89de96786b590b1eb052659c54c2025f2e7782d66459a25df9a",
+  "@id": "https://openvex.dev/docs/public/vex-8fdeb02c4ea7679059ab902d5879755c9e0e6e385bb918fe8b5a756d951aae53",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,7 +22,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-09-12T01:06:17Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:23906-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-vsphere-csi-driver?repository_url=index.docker.io/rancher/hardened-vsphere-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-only runtime; no component links or calls libpcre2 during container execution",
+      "timestamp": "2026-10-01T14:52:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:23912-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-vsphere-csi-driver?repository_url=index.docker.io/rancher/hardened-vsphere-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime",
+      "timestamp": "2026-10-01T14:52:25Z"
     }
   ],
-  "timestamp": "2026-09-13T17:38:04Z"
+  "timestamp": "2026-10-01T17:00:25Z"
 }
