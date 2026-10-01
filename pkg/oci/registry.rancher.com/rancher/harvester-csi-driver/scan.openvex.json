@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-48e2643cd8f0d71b90ccccbb9070778dbc4ad18d17df47bb6f99866cd855847a",
+  "@id": "https://openvex.dev/docs/public/vex-8fdeb02c4ea7679059ab902d5879755c9e0e6e385bb918fe8b5a756d951aae53",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2777,6 +2777,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:23906-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-only runtime; no component links or calls libpcre2 during container execution",
+      "timestamp": "2026-10-01T14:52:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:23912-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com/rancher/harvester-csi-driver",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime",
+      "timestamp": "2026-10-01T14:52:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2393-1"
       },
       "products": [
@@ -3251,5 +3289,5 @@
       "timestamp": "2026-09-22T21:33:10Z"
     }
   ],
-  "timestamp": "2026-09-22T21:39:55Z"
+  "timestamp": "2026-10-01T17:00:25Z"
 }

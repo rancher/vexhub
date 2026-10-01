@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b1399e7173bc11a812ab3dda0a0d3302d41d49ea8015c1ee292277e7ffc6244e",
+  "@id": "https://openvex.dev/docs/public/vex-afde2d076714ff7a02323242d68397f8f012fc164160af0375f774d81e1da248",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -2179,6 +2179,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:23906-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hardened-flannel?repository_url=registry.suse.com/rancher/hardened-flannel",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go-only runtime; no component links or calls libpcre2 during container execution",
+      "timestamp": "2026-10-01T14:52:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:3030-1"
       },
       "products": [
@@ -2216,5 +2235,5 @@
       "timestamp": "2026-09-22T21:33:10Z"
     }
   ],
-  "timestamp": "2026-09-22T21:39:53Z"
+  "timestamp": "2026-10-01T17:00:27Z"
 }
