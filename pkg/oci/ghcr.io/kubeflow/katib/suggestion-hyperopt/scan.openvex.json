@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c77c0152672adbd0e8d45666cd991459771e310e8e5b5dff416d9bbb362d8256",
+  "@id": "https://openvex.dev/docs/public/vex-46f254dd7d9e583473ef412bb73e54df8909cf2e280615230877976b0cfeb68b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -4072,6 +4072,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-95619"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-hyperopt?repository_url=ghcr.io/kubeflow/katib/suggestion-hyperopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gcc-14-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "gcc-base is a metapackage with only docs/copyright files; the flawed libstdc++ new operator code is absent",
+      "timestamp": "2026-10-02T16:55:47Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95619"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-hyperopt?repository_url=ghcr.io/kubeflow/katib/suggestion-hyperopt",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libgcc-s1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Flaw is in libstdc++ operator new; libgcc-s1 is the low-level GCC runtime and ships no such code",
+      "timestamp": "2026-10-02T16:55:47Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-95818"
       },
       "products": [
@@ -4109,5 +4147,5 @@
       "timestamp": "2026-09-24T13:08:00Z"
     }
   ],
-  "timestamp": "2026-10-02T12:45:21Z"
+  "timestamp": "2026-10-02T17:43:57Z"
 }
