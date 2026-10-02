@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-921da45c4946731974b6f5d48d61a153c2e17e6980aab9432a941b9d6c5f0b65",
+  "@id": "https://openvex.dev/docs/public/vex-a49fcdd212e5ed5a80666a3350831ef8fbe10a35a103f2e58a25bcb95049e74a",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -4091,6 +4091,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-95619"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gcc-14-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "gcc-base is a metapackage with only docs/copyright files; the flawed libstdc++ new operator code is absent",
+      "timestamp": "2026-10-02T16:55:47Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95619"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libgcc-s1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Flaw is in libstdc++ operator new; libgcc-s1 is the low-level GCC runtime and ships no such code",
+      "timestamp": "2026-10-02T16:55:47Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-95818"
       },
       "products": [
@@ -4128,5 +4166,5 @@
       "timestamp": "2026-09-24T13:08:00Z"
     }
   ],
-  "timestamp": "2026-10-02T12:45:22Z"
+  "timestamp": "2026-10-02T17:43:58Z"
 }
