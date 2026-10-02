@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a291120a343d296cae3d5fd1b2ec07cce7a172685dcfbac83d8d39b3baed64df",
+  "@id": "https://openvex.dev/docs/public/vex-c77c0152672adbd0e8d45666cd991459771e310e8e5b5dff416d9bbb362d8256",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -136,6 +136,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python packaging tooling used only at image build time; not invoked by the gRPC service entrypoint",
       "timestamp": "2026-09-16T14:50:32Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-102010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-enas?repository_url=ghcr.io/kubeflow/katib/suggestion-enas",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gcc-14-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Metadata-only package shipping docs and copyright files; vulnerable GCC runtime code is not present",
+      "timestamp": "2026-10-02T12:17:36Z"
     },
     {
       "vulnerability": {
@@ -3235,5 +3254,5 @@
       "timestamp": "2026-09-24T13:08:00Z"
     }
   ],
-  "timestamp": "2026-10-02T11:46:38Z"
+  "timestamp": "2026-10-02T12:45:21Z"
 }
