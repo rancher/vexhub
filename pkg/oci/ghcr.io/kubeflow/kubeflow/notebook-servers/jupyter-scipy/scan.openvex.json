@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-bbed889c725eac8667a49d1585cc065f8b12c838dc1ab4b69c162edde2fd9678",
+  "@id": "https://openvex.dev/docs/public/vex-50172dc0b22173acdb8726944bae3450cd0acc637acfea968d25d62f279bedf7",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -8629,7 +8629,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "polkitd daemon never runs in the container; no privilege authorization path exists",
       "timestamp": "2026-09-22T13:48:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-94287"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jupyter-scipy?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/libxpm4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libXpm write path needs an X11/XPM workload; this headless Jupyter image never executes it",
+      "timestamp": "2026-10-02T16:55:47Z"
     }
   ],
-  "timestamp": "2026-09-22T18:34:49Z"
+  "timestamp": "2026-10-02T17:43:59Z"
 }
