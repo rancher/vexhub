@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6e8c50a3548b3ef7bb36983ef93509bf3b314d61de67d4d483c46339b6f15f6e",
+  "@id": "https://openvex.dev/docs/public/vex-a291120a343d296cae3d5fd1b2ec07cce7a172685dcfbac83d8d39b3baed64df",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -41,6 +41,120 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gnupg2 is only used at image build time and is never executed at runtime",
       "timestamp": "2026-09-16T00:07:12Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-102010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libgcc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "libgcc provides low-level runtime support only; the vulnerable libstdc++ code is absent",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-102010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libstdc++"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure-Go binary does not use the C++ standard library; libstdc++ is an unused base-image dep",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103111"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No attacker-controlled regex reaches PCRE2 and the JIT API is not used by this image",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103111"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "pcre2-syntax ships documentation only and contains no PCRE2 JIT executable code",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103242"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm is only base-image metadata; no untrusted RPM is parsed at container runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103242"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm is only base-image metadata; no untrusted RPM is parsed at container runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
     },
     {
       "vulnerability": {
@@ -500,6 +614,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42772"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC API is never used; these workloads only terminate or initiate TLS over TCP",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-44604"
       },
       "products": [
@@ -649,6 +782,82 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux disk/mount utilities are not invoked by the entrypoint; no block device handling at runtime",
       "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54872"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Only NIST curves with constant-time implementations are used; no non-NIST EC signing",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54873"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC API is never used; these workloads only terminate or initiate TLS over TCP",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54875"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SM2 is not used; TLS and signing rely on NIST P-curves",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54876"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OCSP response checking flags are never enabled",
+      "timestamp": "2026-10-02T11:41:18Z"
     },
     {
       "vulnerability": {
@@ -842,6 +1051,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-72897"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Application never calls SSL_set_SSL_CTX(); no SNI context switching mid-handshake",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75804"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC API is never used; these workloads only terminate or initiate TLS over TCP",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL CMP client is never invoked; no certificate revocation requests are made",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75806"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No DTLS listener or client in this image; only stream TLS over TCP is used at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-77117"
       },
       "products": [
@@ -858,6 +1143,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "glibc-minimal-langpack ships only C/POSIX locale data; the vulnerable libc code is not in this package",
       "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-77696"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SM2 signature generation is never performed by this image at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
     },
     {
       "vulnerability": {
@@ -934,6 +1238,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libsolv is a dnf/rpm dependency solver used at build time only; never loaded at runtime",
       "timestamp": "2026-09-21T22:50:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84782"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No DTLS listener or client in this image; only stream TLS over TCP is used at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84783"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/openssl-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go binary uses crypto/tls; OpenSSL X.509 verification is never exercised at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
     },
     {
       "vulnerability": {
@@ -1241,6 +1583,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-95520"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm2cpio/rpm2archive/rpm -qlvp are never run; no untrusted package is parsed",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95520"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "rpm2cpio/rpm2archive/rpm -qlvp are never run; no untrusted package is parsed",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-95521"
       },
       "products": [
@@ -1354,5 +1734,5 @@
       "timestamp": "2026-09-25T11:21:37Z"
     }
   ],
-  "timestamp": "2026-09-25T13:49:10Z"
+  "timestamp": "2026-10-02T11:46:38Z"
 }

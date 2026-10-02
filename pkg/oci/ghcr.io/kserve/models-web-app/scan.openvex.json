@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-27db440c86f90ea3001a2f8d06a111cd8c7fceb6d53c3000f284d5953493df78",
+  "@id": "https://openvex.dev/docs/public/vex-84195de075e06f3429a4179e2eb4f9fd4a19db3767d7996ebf374de4027d7e35",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -117,6 +117,82 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "pip is a build-time installer and is never executed by the runtime entrypoint",
       "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-102010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gcc-14-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "gcc-14-base holds only common files; the vulnerable libstdc++ erase_if code is absent",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-102010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libgcc-s1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "libgcc-s1 provides low-level runtime support only; the vulnerable libstdc++ code is absent",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-102473"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/dash"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Debian dash is built with libc fnmatch and no shell glob runs on untrusted filenames",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103111"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpcre2-8-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No attacker-controlled regex reaches PCRE2 and the JIT API is not used by this image",
+      "timestamp": "2026-10-02T11:41:18Z"
     },
     {
       "vulnerability": {
@@ -975,6 +1051,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42772"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libssl3t64"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC API is never used; these workloads only terminate or initiate TLS over TCP",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42772"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC API is never used; these workloads only terminate or initiate TLS over TCP",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42772"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL legacy provider is not loaded at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-48959"
       },
       "products": [
@@ -1029,6 +1162,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
       "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-49264"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/oauthlib@3.3.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "oauthlib is used as an OAuth client only; RevocationEndpoint and JSONP are never enabled",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-49265"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:pypi/oauthlib@3.3.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "oauthlib is used as an OAuth client only; no PKCE authorization server grant is served",
+      "timestamp": "2026-10-02T11:41:18Z"
     },
     {
       "vulnerability": {
@@ -1887,6 +2058,177 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-54872"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libssl3t64"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Only NIST curves with constant-time implementations are used; no non-NIST EC signing",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54872"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Only NIST curves with constant-time implementations are used; no non-NIST EC signing",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54872"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL legacy provider is not loaded at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54873"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libssl3t64"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC API is never used; these workloads only terminate or initiate TLS over TCP",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54873"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC API is never used; these workloads only terminate or initiate TLS over TCP",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54873"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL legacy provider is not loaded at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54875"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libssl3t64"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SM2 is not used; TLS and signing rely on NIST P-curves",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54875"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SM2 is not used; TLS and signing rely on NIST P-curves",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54875"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL legacy provider is not loaded at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-5704"
       },
       "products": [
@@ -1998,6 +2340,234 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl is an incidental dpkg dependency and is never executed by this Python app",
       "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-72897"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libssl3t64"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Application never calls SSL_set_SSL_CTX(); no SNI context switching mid-handshake",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-72897"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Application never calls SSL_set_SSL_CTX(); no SNI context switching mid-handshake",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-72897"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL legacy provider is not loaded at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75804"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libssl3t64"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC API is never used; these workloads only terminate or initiate TLS over TCP",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75804"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC API is never used; these workloads only terminate or initiate TLS over TCP",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75804"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL legacy provider is not loaded at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libssl3t64"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL CMP client is never invoked; no certificate revocation requests are made",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL CMP client is never invoked; no certificate revocation requests are made",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL legacy provider is not loaded at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75806"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libssl3t64"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No DTLS listener or client in this image; only stream TLS over TCP is used at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75806"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No DTLS listener or client in this image; only stream TLS over TCP is used at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75806"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL legacy provider is not loaded at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
     },
     {
       "vulnerability": {
@@ -2169,6 +2739,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI utilities are never invoked by the Flask web app entrypoint",
       "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-77696"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libssl3t64"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SM2 signature generation is never performed by this image at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-77696"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SM2 signature generation is never performed by this image at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-77696"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL legacy provider is not loaded at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
     },
     {
       "vulnerability": {
@@ -2704,6 +3331,120 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-84782"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libssl3t64"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No DTLS listener or client in this image; only stream TLS over TCP is used at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84782"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No DTLS listener or client in this image; only stream TLS over TCP is used at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84782"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL legacy provider is not loaded at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84784"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libssl3t64"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC API is never used; these workloads only terminate or initiate TLS over TCP",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84784"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL QUIC API is never used; these workloads only terminate or initiate TLS over TCP",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84784"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The OpenSSL legacy provider is not loaded at runtime",
+      "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-86145"
       },
       "products": [
@@ -2969,5 +3710,5 @@
       "timestamp": "2026-09-24T13:08:00Z"
     }
   ],
-  "timestamp": "2026-09-24T13:32:36Z"
+  "timestamp": "2026-10-02T11:46:37Z"
 }
