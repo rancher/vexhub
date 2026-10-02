@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a291120a343d296cae3d5fd1b2ec07cce7a172685dcfbac83d8d39b3baed64df",
+  "@id": "https://openvex.dev/docs/public/vex-921da45c4946731974b6f5d48d61a153c2e17e6980aab9432a941b9d6c5f0b65",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -115,6 +115,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
+      "impact_statement": "Documentation-only package shipping PCRE2 man pages; contains no vulnerable library or binary code",
+      "timestamp": "2026-10-02T12:17:36Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103111"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "pcre2-syntax ships documentation only and contains no PCRE2 JIT executable code",
       "timestamp": "2026-10-02T11:41:18Z"
     },
@@ -134,8 +153,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM CLI is a base image artifact only; it is never invoked at runtime by the container entrypoint",
+      "timestamp": "2026-10-02T12:17:36Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103242"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rpm is only base-image metadata; no untrusted RPM is parsed at container runtime",
       "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103242"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM libraries are base image leftovers; no package management runs at runtime in this image",
+      "timestamp": "2026-10-02T12:17:36Z"
     },
     {
       "vulnerability": {
@@ -1597,8 +1654,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM CLI is a base image artifact only; it is never invoked at runtime by the container entrypoint",
+      "timestamp": "2026-10-02T12:17:36Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95520"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rpm2cpio/rpm2archive/rpm -qlvp are never run; no untrusted package is parsed",
       "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95520"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io/kubeflow/hub/storage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM libraries are base image leftovers; no package management runs at runtime in this image",
+      "timestamp": "2026-10-02T12:17:36Z"
     },
     {
       "vulnerability": {
@@ -1734,5 +1829,5 @@
       "timestamp": "2026-09-25T11:21:37Z"
     }
   ],
-  "timestamp": "2026-10-02T11:46:38Z"
+  "timestamp": "2026-10-02T12:45:22Z"
 }

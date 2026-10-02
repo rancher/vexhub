@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8e18ca484294adf9d2e9083c03f2c05d53aa4f4f5620e54d84980a9863316b5b",
+  "@id": "https://openvex.dev/docs/public/vex-3b9d447bbfdc5e5dace476e0c3f7ffb207cded3c573f4c55b11d85d79c2b939f",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -117,6 +117,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "pip is only used at image build time and is never executed at container runtime",
       "timestamp": "2026-09-16T15:59:10Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-102010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/suggestion-hyperband?repository_url=ghcr.io/kubeflow/katib/suggestion-hyperband",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gcc-14-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Metadata-only package shipping docs and copyright files; vulnerable GCC runtime code is not present",
+      "timestamp": "2026-10-02T12:17:36Z"
     },
     {
       "vulnerability": {
@@ -3083,5 +3102,5 @@
       "timestamp": "2026-09-24T13:08:00Z"
     }
   ],
-  "timestamp": "2026-09-24T13:32:35Z"
+  "timestamp": "2026-10-02T12:45:23Z"
 }
