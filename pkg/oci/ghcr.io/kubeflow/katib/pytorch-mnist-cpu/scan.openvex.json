@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a291120a343d296cae3d5fd1b2ec07cce7a172685dcfbac83d8d39b3baed64df",
+  "@id": "https://openvex.dev/docs/public/vex-921da45c4946731974b6f5d48d61a153c2e17e6980aab9432a941b9d6c5f0b65",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -136,6 +136,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Package installer is only used at image build time",
       "timestamp": "2026-09-16T11:52:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-102010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/pytorch-mnist-cpu?repository_url=ghcr.io/kubeflow/katib/pytorch-mnist-cpu",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gcc-14-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Metadata-only package shipping docs and copyright files; vulnerable GCC runtime code is not present",
+      "timestamp": "2026-10-02T12:17:36Z"
     },
     {
       "vulnerability": {
@@ -4109,5 +4128,5 @@
       "timestamp": "2026-09-24T13:08:00Z"
     }
   ],
-  "timestamp": "2026-10-02T11:46:38Z"
+  "timestamp": "2026-10-02T12:45:22Z"
 }

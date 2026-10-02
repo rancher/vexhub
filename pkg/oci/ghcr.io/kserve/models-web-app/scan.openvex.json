@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-84195de075e06f3429a4179e2eb4f9fd4a19db3767d7996ebf374de4027d7e35",
+  "@id": "https://openvex.dev/docs/public/vex-921da45c4946731974b6f5d48d61a153c2e17e6980aab9432a941b9d6c5f0b65",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -117,6 +117,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "pip is a build-time installer and is never executed by the runtime entrypoint",
       "timestamp": "2026-09-15T20:34:42Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-102010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/models-web-app?repository_url=ghcr.io/kserve/models-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gcc-14-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Metadata-only package shipping docs and copyright files; vulnerable GCC runtime code is not present",
+      "timestamp": "2026-10-02T12:17:36Z"
     },
     {
       "vulnerability": {
@@ -3710,5 +3729,5 @@
       "timestamp": "2026-09-24T13:08:00Z"
     }
   ],
-  "timestamp": "2026-10-02T11:46:37Z"
+  "timestamp": "2026-10-02T12:45:22Z"
 }
