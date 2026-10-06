@@ -23,7 +23,7 @@ Aqua Security's [VEX Repository specification].
 
 SUSE's Rancher Prime VEX reports are distributed in two formats:
 
-- A standalone report file: [`rancher.openvex.json`].
+- A gzipped standalone report file: [`rancher.openvex.json.gz`].
 - The VEX Hub repository format: [`index.json`].
 
 # How to Use the Reports
@@ -34,7 +34,8 @@ The following instructions are specific to [Trivy].
 ## Standalone Report
 
 The [standalone] report contains all the VEX statements. After downloading the
-file in its [raw format], you can pass it to Trivy with the `--vex` parameter:
+file in its [raw format] (decompress it with `gzip -d rancher.openvex.json.gz`),
+you can pass it to Trivy with the `--vex` parameter:
 `--vex rancher.openvex.json --show-suppressed`.
 
 ```
@@ -131,10 +132,10 @@ with Attribution (CC-BY-4.0). See the [license] for more information.
 [KB 000021573 - How to use SUSE Rancher's VEX Reports]: https://www.suse.com/support/kb/doc/?id=000021573
 [OpenVEX specification]: https://github.com/openvex/spec
 [VEX Repository specification]: https://github.com/aquasecurity/vex-repo-spec
-[`rancher.openvex.json`]: reports/rancher.openvex.json
+[`rancher.openvex.json.gz`]: reports/rancher.openvex.json.gz
 [`index.json`]: index.json
 [Trivy]: https://github.com/aquasecurity/trivy
-[standalone]: reports/rancher.openvex.json
-[raw format]: https://raw.githubusercontent.com/rancher/vexhub/refs/heads/main/reports/rancher.openvex.json
-[VEX Hub repository format]: reports/rancher.openvex.json
+[standalone]: reports/rancher.openvex.json.gz
+[raw format]: https://github.com/rancher/vexhub/raw/refs/heads/main/reports/rancher.openvex.json.gz
+[VEX Hub repository format]: index.json
 [license]: LICENSE
