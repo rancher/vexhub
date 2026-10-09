@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-d6bec98dcc9f8a38d9172c7ac15facd5fd11f2092684481c3f3c291d6c726c75",
+  "@id": "https://openvex.dev/docs/public/vex-dfa4e7b93c6b9f9e8974162d31a00f396b2adf7dc7609137beb18c4b82bcf5da",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1086,7 +1086,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Statically linked Go binary uses Go crypto; the OpenSSL shared library is never loaded",
       "timestamp": "2026-09-16T11:52:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-85091"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kube-vip-iptables?repository_url=ghcr.io%2Fkube-vip%2Fkube-vip-iptables",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/zlib"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure-Go image: zlib C library is not linked; Go uses its own compress/zlib implementation",
+      "timestamp": "2026-10-09T18:11:47Z"
     }
   ],
-  "timestamp": "2026-09-16T12:06:38Z"
+  "timestamp": "2026-10-09T18:37:46Z"
 }

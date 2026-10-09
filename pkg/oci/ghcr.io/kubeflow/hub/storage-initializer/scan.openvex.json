@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-50172dc0b22173acdb8726944bae3450cd0acc637acfea968d25d62f279bedf7",
+  "@id": "https://openvex.dev/docs/public/vex-dfa4e7b93c6b9f9e8974162d31a00f396b2adf7dc7609137beb18c4b82bcf5da",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -269,6 +269,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rpm is only base-image metadata; no untrusted RPM is parsed at container runtime",
       "timestamp": "2026-10-02T11:41:18Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-107161"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/storage-initializer?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fstorage-initializer",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/cyrus-sasl-lib"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "SASL is not used; this pure-Go image performs no LDAP or SASL authentication",
+      "timestamp": "2026-10-09T18:11:47Z"
     },
     {
       "vulnerability": {
@@ -1924,5 +1943,5 @@
       "timestamp": "2026-09-25T11:21:37Z"
     }
   ],
-  "timestamp": "2026-10-02T17:43:59Z"
+  "timestamp": "2026-10-09T18:37:46Z"
 }
