@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-cfdb5c789a8db94a37dcd8d24d9c5dfb87b0c8526eb7489dc9a4dc0614b41ff7",
+  "@id": "https://openvex.dev/docs/public/vex-dfa4e7b93c6b9f9e8974162d31a00f396b2adf7dc7609137beb18c4b82bcf5da",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -231,7 +231,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called",
       "timestamp": "2026-09-18T15:33:57Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-85091"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/kfp-launcher?repository_url=ghcr.io%2Fkubeflow%2Fkfp-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/zlib"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure-Go image: zlib C library is not linked; Go uses its own compress/zlib implementation",
+      "timestamp": "2026-10-09T18:11:47Z"
     }
   ],
-  "timestamp": "2026-09-18T16:35:36Z"
+  "timestamp": "2026-10-09T18:37:46Z"
 }

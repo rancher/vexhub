@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-98dcece82f702fed1b411a201e6859d8af88b3ed19b28664034c40dbb56e96da",
+  "@id": "https://openvex.dev/docs/public/vex-1cdef4df099f7002399d266dbbbad47dbd9971756d9c2655f30caa8ae2f57705",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -972,7 +972,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Statically linked Go binary uses Go crypto; the OpenSSL shared library is never loaded",
       "timestamp": "2026-09-16T11:52:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-85091"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/seaweedfs?repository_url=registry.rancher.com%2Fchrislusf%2Fseaweedfs",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/zlib"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Pure-Go image: zlib C library is not linked; Go uses its own compress/zlib implementation",
+      "timestamp": "2026-10-09T18:11:47Z"
     }
   ],
-  "timestamp": "2026-09-16T12:06:36Z"
+  "timestamp": "2026-10-09T18:37:47Z"
 }
