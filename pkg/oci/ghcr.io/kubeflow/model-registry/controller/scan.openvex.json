@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1cdef4df099f7002399d266dbbbad47dbd9971756d9c2655f30caa8ae2f57705",
+  "@id": "https://openvex.dev/docs/public/vex-dd44694249cb27624d74abb6cf992786e7ce6e88c817e58840c7e1d53b727310",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -177,6 +177,82 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-102010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libgcc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Only the GCC runtime support library ships; vulnerable compiler code is absent",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103111"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Package ships documentation/man pages only and contains no executable code",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103242"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM package manager is not executed at runtime; images are immutable",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-103242"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM libraries are not loaded at runtime; no package operations occur",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-107161"
       },
       "products": [
@@ -269,6 +345,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libblkid is only used by util-linux block device tooling",
       "timestamp": "2026-10-09T15:20:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libmount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Filesystem mount library is not loaded by the Go service runtime",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libsmartcols"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libuuid"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is not used by the Go service at runtime",
+      "timestamp": "2026-10-10T00:28:28Z"
     },
     {
       "vulnerability": {
@@ -478,6 +611,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libblkid is only used by util-linux block device tooling",
       "timestamp": "2026-10-09T15:20:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libmount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Filesystem mount library is not loaded by the Go service runtime",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libsmartcols"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libuuid"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is not used by the Go service at runtime",
+      "timestamp": "2026-10-10T00:28:28Z"
     },
     {
       "vulnerability": {
@@ -1013,6 +1203,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libmount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Filesystem mount library is not loaded by the Go service runtime",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libsmartcols"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libuuid"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID library is not used by the Go service at runtime",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-54369"
       },
       "products": [
@@ -1298,6 +1545,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-5958"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/sed"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "sed CLI is an incidental base dependency not executed by the Go service",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-6253"
       },
       "products": [
@@ -1507,6 +1773,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-78367"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM package manager is not executed at runtime; images are immutable",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78367"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM libraries are not loaded at runtime; no package operations occur",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-8286"
       },
       "products": [
@@ -1580,6 +1884,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libcurl is not linked or loaded; the Go controller uses Go's native net/http stack",
       "timestamp": "2026-10-09T15:20:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84837"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM package manager is not executed at runtime; images are immutable",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84837"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM libraries are not loaded at runtime; no package operations occur",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-86145"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Package ships documentation/man pages only and contains no executable code",
+      "timestamp": "2026-10-10T00:28:28Z"
     },
     {
       "vulnerability": {
@@ -1602,6 +1963,63 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-89157"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Package ships documentation/man pages only and contains no executable code",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89158"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Package ships documentation/man pages only and contains no executable code",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-89161"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Package ships documentation/man pages only and contains no executable code",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-8924"
       },
       "products": [
@@ -1751,7 +2169,140 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libcurl is not linked or loaded; the Go controller uses Go's native net/http stack",
       "timestamp": "2026-10-09T15:20:14Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95519"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM package manager is not executed at runtime; images are immutable",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95519"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM libraries are not loaded at runtime; no package operations occur",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95520"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM package manager is not executed at runtime; images are immutable",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95520"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM libraries are not loaded at runtime; no package operations occur",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95521"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM package manager is not executed at runtime; images are immutable",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95521"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/rpm-libs"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "RPM libraries are not loaded at runtime; no package operations occur",
+      "timestamp": "2026-10-10T00:28:28Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95619"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libgcc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Only the GCC runtime support library ships; vulnerable compiler code is absent",
+      "timestamp": "2026-10-10T00:28:28Z"
     }
   ],
-  "timestamp": "2026-10-09T18:37:47Z"
+  "timestamp": "2026-10-10T04:48:13Z"
 }
