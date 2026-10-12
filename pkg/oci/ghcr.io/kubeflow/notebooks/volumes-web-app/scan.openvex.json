@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8466f6bd740d1e436cfcfc09ab998d6dd68fea1591047d044262c046cfadcec2",
+  "@id": "https://openvex.dev/docs/public/vex-bf8ed965309c09f7818ba11e23ce864af50d4e589b38bb3614effba36bedec0b",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,6 +22,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl interpreter is an incidental dependency and is never invoked by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-15649"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libncursesw6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Terminal UI library not loaded; container runs non-interactively with no TUI",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -70,6 +108,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/libtinfo6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Terminfo library not loaded; container runs non-interactively with no TTY handling",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/ncurses-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Terminal database only; container runs non-interactively with no TTY handling",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/ncurses-base"
             }
           ]
@@ -101,6 +177,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2025-69720"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/ncurses-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "ncurses CLI tools are never executed; container runs non-interactively",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2025-8869"
       },
       "products": [
@@ -117,6 +212,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "pip is only used at image build time; no package installation happens at runtime",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-102010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gcc-14-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Base package with metadata only; the vulnerable compiler components are not installed",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -158,6 +272,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-12087"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-13221"
       },
       "products": [
@@ -174,6 +307,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl interpreter is an incidental dependency and is never invoked by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13221"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -222,6 +374,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bsdutils CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block device probing library is not used by the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libblkid1"
             }
           ]
@@ -231,6 +421,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libblkid block device probing is never exercised by the container workload",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog database is never written or read; no interactive login happens in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -267,8 +476,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library not loaded at runtime; no mount operations occur inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libmount is only used by mount utilities which are never executed in this container",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs that are never executed",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -305,6 +552,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID helper library is not reachable from the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libuuid is an incidental dependency and is not in the execute path of the container workload",
       "timestamp": "2026-10-11T23:41:35Z"
     },
@@ -324,8 +590,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su/shadow flow is performed inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "login/shadow utilities are never executed; the container does not perform interactive logins",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount are not executed; volumes are mounted by the kubelet outside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -367,6 +671,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-13595"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-14456"
       },
       "products": [
@@ -383,6 +706,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Only the openssl CLI is shipped by this package; it is never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-14456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-14456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -419,8 +780,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No systemd/journald runs in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "systemd is not running in the container; libsystemd code paths are never exercised",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-15059"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No udev daemon runs in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -462,6 +861,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-15534"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No systemd/journald runs in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-16742"
       },
       "products": [
@@ -478,6 +915,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "systemd is not running in the container; libsystemd code paths are never exercised",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-16742"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No udev daemon runs in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -514,8 +970,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is an incidental dependency and is not executed at runtime; exploit needs a crafted archive",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18477"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is an incidental dependency and is not executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18508"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is an incidental dependency and is not executed at runtime; exploit needs a crafted archive",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -564,6 +1058,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18798"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18798"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/openssl-provider-legacy"
             }
           ]
@@ -595,6 +1127,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-19487"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-27456"
       },
       "products": [
@@ -611,6 +1162,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "bsdutils CLI tools are incidental dependencies never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bsdutils CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block device probing library is not used by the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -647,8 +1236,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog database is never written or read; no interactive login happens in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "lastlog2 tracks interactive logins; no login occurs in this container",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library not loaded at runtime; no mount operations occur inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -685,8 +1312,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs that are never executed",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libsmartcols only formats CLI table output for util-linux tools that are never run",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID helper library is not reachable from the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -723,8 +1388,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su/shadow flow is performed inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "login/shadow utilities are never executed; the container does not perform interactive logins",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount are not executed; volumes are mounted by the kubelet outside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -766,6 +1469,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-27456"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-3184"
       },
       "products": [
@@ -782,6 +1504,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "bsdutils CLI tools are incidental dependencies never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bsdutils CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block device probing library is not used by the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -818,8 +1578,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog database is never written or read; no interactive login happens in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "lastlog2 tracks interactive logins; no login occurs in this container",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library not loaded at runtime; no mount operations occur inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -856,8 +1654,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs that are never executed",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libsmartcols only formats CLI table output for util-linux tools that are never run",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID helper library is not reachable from the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -894,8 +1730,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su/shadow flow is performed inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "login/shadow utilities are never executed; the container does not perform interactive logins",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount are not executed; volumes are mounted by the kubelet outside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -934,6 +1808,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI tools are incidental dependencies never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-3184"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -982,6 +1875,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34182"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34182"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/openssl-provider-legacy"
             }
           ]
@@ -1020,6 +1951,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34183"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-34183"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/openssl-provider-legacy"
             }
           ]
@@ -1046,8 +2015,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip is an incidental dependency and is not executed at runtime on untrusted input",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41991"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "gzip is an incidental dependency and is not executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-41992"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "gzip is an incidental dependency and is not executed at runtime on untrusted input",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1089,6 +2096,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42496"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42497"
       },
       "products": [
@@ -1108,6 +2134,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-42497"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-42764"
       },
       "products": [
@@ -1124,6 +2169,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Only the openssl CLI is shipped by this package; it is never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42764"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42764"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1162,6 +2245,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Only the openssl CLI is shipped by this package; it is never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42772"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-42772"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1200,6 +2321,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Only the openssl CLI is shipped by this package; it is never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45445"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45445"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1238,6 +2397,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Only the openssl CLI is shipped by this package; it is never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45447"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-45447"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1279,7 +2476,64 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-48959"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-48961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental dependency and is never invoked by the container entrypoint",
+      "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48961"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-48962"
       },
       "products": [
         {
@@ -1312,8 +2566,8 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
-      "impact_statement": "Perl interpreter is an incidental dependency and is never invoked by the container entrypoint",
-      "timestamp": "2026-10-11T23:41:35Z"
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1333,6 +2587,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "bsdutils CLI tools are incidental dependencies never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bsdutils CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block device probing library is not used by the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1369,8 +2661,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog database is never written or read; no interactive login happens in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "lastlog2 tracks interactive logins; no login occurs in this container",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library not loaded at runtime; no mount operations occur inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1407,8 +2737,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs that are never executed",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libsmartcols only formats CLI table output for util-linux tools that are never run",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID helper library is not reachable from the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1445,8 +2813,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su/shadow flow is performed inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "login/shadow utilities are never executed; the container does not perform interactive logins",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount are not executed; volumes are mounted by the kubelet outside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1488,6 +2894,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53612"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53613"
       },
       "products": [
@@ -1504,6 +2929,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "bsdutils CLI tools are incidental dependencies never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bsdutils CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block device probing library is not used by the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1540,8 +3003,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog database is never written or read; no interactive login happens in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "lastlog2 tracks interactive logins; no login occurs in this container",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library not loaded at runtime; no mount operations occur inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1578,8 +3079,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs that are never executed",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libsmartcols only formats CLI table output for util-linux tools that are never run",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID helper library is not reachable from the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1616,8 +3155,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su/shadow flow is performed inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "login/shadow utilities are never executed; the container does not perform interactive logins",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount are not executed; volumes are mounted by the kubelet outside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1659,6 +3236,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53613"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53614"
       },
       "products": [
@@ -1675,6 +3271,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "bsdutils CLI tools are incidental dependencies never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bsdutils CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block device probing library is not used by the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1711,8 +3345,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog database is never written or read; no interactive login happens in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "lastlog2 tracks interactive logins; no login occurs in this container",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library not loaded at runtime; no mount operations occur inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1749,8 +3421,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs that are never executed",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libsmartcols only formats CLI table output for util-linux tools that are never run",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID helper library is not reachable from the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1787,8 +3497,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su/shadow flow is performed inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "login/shadow utilities are never executed; the container does not perform interactive logins",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount are not executed; volumes are mounted by the kubelet outside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1830,6 +3578,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-53614"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-53615"
       },
       "products": [
@@ -1846,6 +3613,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "bsdutils CLI tools are incidental dependencies never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bsdutils CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block device probing library is not used by the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1882,8 +3687,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog database is never written or read; no interactive login happens in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "lastlog2 tracks interactive logins; no login occurs in this container",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library not loaded at runtime; no mount operations occur inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1920,8 +3763,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs that are never executed",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libsmartcols only formats CLI table output for util-linux tools that are never run",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID helper library is not reachable from the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1958,8 +3839,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su/shadow flow is performed inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "login/shadow utilities are never executed; the container does not perform interactive logins",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount are not executed; volumes are mounted by the kubelet outside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -1998,6 +3917,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI tools are incidental dependencies never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-53615"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam-modules"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No PAM authentication occurs; container runs a single non-interactive service",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2034,6 +3991,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No PAM authentication occurs; container runs a single non-interactive service",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam-modules-bin"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "PAM helper binaries are not executed; the container does not authenticate users",
       "timestamp": "2026-10-11T23:41:35Z"
     },
@@ -2053,8 +4029,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No PAM authentication occurs; container runs a single non-interactive service",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam-runtime"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "PAM runtime configuration is unused; the container does not authenticate users",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54411"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libpam0g"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No PAM authentication occurs; container runs a single non-interactive service",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2103,6 +4117,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54872"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54872"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/openssl-provider-legacy"
             }
           ]
@@ -2131,6 +4183,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Only the openssl CLI is shipped by this package; it is never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54873"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54873"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2179,6 +4269,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54875"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-54875"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/openssl-provider-legacy"
             }
           ]
@@ -2188,6 +4316,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Legacy provider is only loaded when explicitly configured; it is not enabled in this image",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-5704"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is an incidental dependency and is not executed at runtime; exploit needs a crafted archive",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2229,6 +4376,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-57432"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-57433"
       },
       "products": [
@@ -2248,6 +4414,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-57433"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-63072"
       },
       "products": [
@@ -2264,6 +4449,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Only the openssl CLI is shipped by this package; it is never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63072"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2302,6 +4525,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Only the openssl CLI is shipped by this package; it is never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-63076"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2362,6 +4623,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-7010"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-7017"
       },
       "products": [
@@ -2381,6 +4661,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-7017"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-72897"
       },
       "products": [
@@ -2397,6 +4696,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Only the openssl CLI is shipped by this package; it is never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-72897"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-72897"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2445,6 +4782,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75804"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75804"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/openssl-provider-legacy"
             }
           ]
@@ -2473,6 +4848,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Only the openssl CLI is shipped by this package; it is never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75805"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2521,6 +4934,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75806"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-75806"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/openssl-provider-legacy"
             }
           ]
@@ -2559,6 +5010,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bsdutils CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block device probing library is not used by the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libblkid1"
             }
           ]
@@ -2568,6 +5057,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libblkid block device probing is never exercised by the container workload",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog database is never written or read; no interactive login happens in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2604,8 +5112,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library not loaded at runtime; no mount operations occur inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libmount is only used by mount utilities which are never executed in this container",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs that are never executed",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2642,6 +5188,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID helper library is not reachable from the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libuuid is an incidental dependency and is not in the execute path of the container workload",
       "timestamp": "2026-10-11T23:41:35Z"
     },
@@ -2661,8 +5226,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su/shadow flow is performed inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "login/shadow utilities are never executed; the container does not perform interactive logins",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount are not executed; volumes are mounted by the kubelet outside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2701,6 +5304,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI tools are incidental dependencies never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-76642"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2730,6 +5352,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-77696"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-77696"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/openssl-provider-legacy"
             }
           ]
@@ -2768,6 +5428,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bsdutils CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block device probing library is not used by the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libblkid1"
             }
           ]
@@ -2777,6 +5475,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libblkid block device probing is never exercised by the container workload",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog database is never written or read; no interactive login happens in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2813,8 +5530,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library not loaded at runtime; no mount operations occur inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libmount is only used by mount utilities which are never executed in this container",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs that are never executed",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2851,6 +5606,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID helper library is not reachable from the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libuuid is an incidental dependency and is not in the execute path of the container workload",
       "timestamp": "2026-10-11T23:41:35Z"
     },
@@ -2870,8 +5644,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su/shadow flow is performed inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "login/shadow utilities are never executed; the container does not perform interactive logins",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount are not executed; volumes are mounted by the kubelet outside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2910,6 +5722,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI tools are incidental dependencies never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78408"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2939,6 +5770,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bsdutils CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block device probing library is not used by the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libblkid1"
             }
           ]
@@ -2948,6 +5817,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libblkid block device probing is never exercised by the container workload",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog database is never written or read; no interactive login happens in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -2984,8 +5872,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library not loaded at runtime; no mount operations occur inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libmount is only used by mount utilities which are never executed in this container",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs that are never executed",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -3022,6 +5948,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID helper library is not reachable from the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libuuid is an incidental dependency and is not in the execute path of the container workload",
       "timestamp": "2026-10-11T23:41:35Z"
     },
@@ -3041,8 +5986,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su/shadow flow is performed inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "login/shadow utilities are never executed; the container does not perform interactive logins",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount are not executed; volumes are mounted by the kubelet outside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -3081,6 +6064,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI tools are incidental dependencies never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78409"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -3110,6 +6112,44 @@
           "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
           "subcomponents": [
             {
+              "@id": "pkg:deb/debian/bsdutils"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "bsdutils CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libblkid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Block device probing library is not used by the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
               "@id": "pkg:deb/debian/libblkid1"
             }
           ]
@@ -3119,6 +6159,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libblkid block device probing is never exercised by the container workload",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/liblastlog2-2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "lastlog database is never written or read; no interactive login happens in the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -3155,8 +6214,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Mount library not loaded at runtime; no mount operations occur inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libmount1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libmount is only used by mount utilities which are never executed in this container",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libsmartcols1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Table formatting library used only by util-linux CLIs that are never executed",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -3193,6 +6290,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "UUID helper library is not reachable from the container workload",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/libuuid1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libuuid is an incidental dependency and is not in the execute path of the container workload",
       "timestamp": "2026-10-11T23:41:35Z"
     },
@@ -3212,8 +6328,46 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No interactive login or su/shadow flow is performed inside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/login"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "login/shadow utilities are never executed; the container does not perform interactive logins",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/mount"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "mount/umount are not executed; volumes are mounted by the kubelet outside the container",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -3252,6 +6406,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "util-linux CLI tools are incidental dependencies never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-78410"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/util-linux"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "util-linux CLI tools are incidental deps and are never invoked by the entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -3274,6 +6447,25 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-8376"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-84782"
       },
       "products": [
@@ -3290,6 +6482,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Only the openssl CLI is shipped by this package; it is never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84782"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84782"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -3328,6 +6558,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Only the openssl CLI is shipped by this package; it is never executed by the container entrypoint",
       "timestamp": "2026-10-11T23:41:35Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84784"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "openssl CLI tool is not executed at runtime; the workload does not shell out to it",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-84784"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/openssl-provider-legacy"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Legacy provider is not enabled or loaded by the container workload at runtime",
+      "timestamp": "2026-10-12T21:04:25Z"
     },
     {
       "vulnerability": {
@@ -3388,6 +6656,44 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-9538"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/perl-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl is an incidental dependency and is never executed by the container entrypoint",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-95619"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fvolumes-web-app",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/debian/gcc-14-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Base package with metadata only; the vulnerable compiler components are not installed",
+      "timestamp": "2026-10-12T21:04:25Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-95619"
       },
       "products": [
@@ -3406,5 +6712,5 @@
       "timestamp": "2026-10-11T23:41:35Z"
     }
   ],
-  "timestamp": "2026-10-12T04:34:50Z"
+  "timestamp": "2026-10-12T21:12:53Z"
 }
