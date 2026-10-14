@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4449428c13346297676c376d65c3259eb49e96c6ca21d85efd83258153e5e5d0",
+  "@id": "https://openvex.dev/docs/public/vex-fa9cabd0343939b4285f55b94b482ef52f186077a830a2bdd7a6f45203eae8f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -155,7 +155,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "curl/libcurl is a base-image dependency; the app's own HTTP client is used, curl CLI is never invoked at runtime",
       "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/s3proxy?repository_url=quay.io%2Fstackstate%2Fs3proxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Architecture-independent data files only; package ships no executable code",
+      "timestamp": "2026-10-14T14:33:21Z"
     }
   ],
-  "timestamp": "2026-09-02T13:59:42Z"
+  "timestamp": "2026-10-14T15:28:51Z"
 }

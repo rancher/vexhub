@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-6396d7385ad2c1017ce7585ba89dc940aa97972ff9fdf1c4af57ae7dd1001579",
+  "@id": "https://openvex.dev/docs/public/vex-fa9cabd0343939b4285f55b94b482ef52f186077a830a2bdd7a6f45203eae8f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1394,6 +1394,44 @@
       },
       "products": [
         {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd/udev is not running in the container; no init system in the execute path",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd/udev is not running in the container; no init system in the execute path",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1040-1"
+      },
+      "products": [
+        {
           "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
           "subcomponents": [
             {
@@ -1660,6 +1698,25 @@
       },
       "products": [
         {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux-systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd/udev is not running in the container; no init system in the execute path",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1406-1"
+      },
+      "products": [
+        {
           "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
           "subcomponents": [
             {
@@ -1767,6 +1824,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "instance-manager is a Go binary; avahi mDNS library is an incidental unused dependency",
       "timestamp": "2026-08-25T17:12:43Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/tack"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Incidental CLI utility that is never invoked by the container entrypoint or workload",
+      "timestamp": "2026-10-14T14:20:06Z"
     },
     {
       "vulnerability": {
@@ -2173,6 +2249,25 @@
       },
       "products": [
         {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/util-linux-systemd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd/udev is not running in the container; no init system in the execute path",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2485-1"
+      },
+      "products": [
+        {
           "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
           "subcomponents": [
             {
@@ -2204,6 +2299,63 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libuuid-devel provides only headers/static libs; devel packages have no runtime shared library",
       "timestamp": "2026-06-26T00:55:16Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsolv-tools-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Package manager tooling used only at image build time; never run by the entrypoint",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libzypp"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Package manager tooling used only at image build time; never run by the entrypoint",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2531-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/zypper"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Package manager tooling used only at image build time; never run by the entrypoint",
+      "timestamp": "2026-10-14T14:20:06Z"
     },
     {
       "vulnerability": {
@@ -2420,6 +2572,44 @@
       },
       "products": [
         {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libsystemd0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd/udev is not running in the container; no init system in the execute path",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3244-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libudev1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "systemd/udev is not running in the container; no init system in the execute path",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3244-1"
+      },
+      "products": [
+        {
           "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
           "subcomponents": [
             {
@@ -2432,6 +2622,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Pure Go container does not run systemd as PID1; systemd binaries not in execution path",
       "timestamp": "2026-08-07T03:50:27Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3269-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Incidental CLI utility that is never invoked by the container entrypoint or workload",
+      "timestamp": "2026-10-14T14:20:06Z"
     },
     {
       "vulnerability": {
@@ -2515,6 +2724,25 @@
       },
       "products": [
         {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/perl"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Perl interpreter is an incidental dependency and is never executed by the entrypoint",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3558-1"
+      },
+      "products": [
+        {
           "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
           "subcomponents": [
             {
@@ -2546,6 +2774,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency",
       "timestamp": "2026-08-14T20:30:41Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3592-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/gzip"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Incidental CLI utility that is never invoked by the container entrypoint or workload",
+      "timestamp": "2026-10-14T14:20:06Z"
     },
     {
       "vulnerability": {
@@ -2591,6 +2838,44 @@
       },
       "products": [
         {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Development headers package; no code from it is executed at container runtime",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3835-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL development headers only; vulnerable runtime library code is not executed",
+      "timestamp": "2026-10-14T14:33:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3835-1"
+      },
+      "products": [
+        {
           "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com/longhornio/longhorn-instance-manager",
           "subcomponents": [
             {
@@ -2603,6 +2888,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libopenssl-3-devel provides headers only; runtime uses libopenssl3 shared library",
       "timestamp": "2026-09-05T00:53:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4012-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/cpio"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Incidental CLI utility that is never invoked by the container entrypoint or workload",
+      "timestamp": "2026-10-14T14:20:06Z"
     },
     {
       "vulnerability": {
@@ -2622,7 +2926,159 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libopenssl-3-devel provides headers only; runtime uses libopenssl3 shared library",
       "timestamp": "2026-09-15T01:37:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4050-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libusb-1_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No USB device access in the container; library is never loaded at runtime",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4211-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/kbd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Incidental CLI utility that is never invoked by the container entrypoint or workload",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4250-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Development headers package; no code from it is executed at container runtime",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4250-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Headers/dev files only; no runtime code executed by the container entrypoint",
+      "timestamp": "2026-10-14T14:33:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4275-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/jq"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Incidental CLI utility that is never invoked by the container entrypoint or workload",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4275-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libjq1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Incidental CLI utility that is never invoked by the container entrypoint or workload",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4414-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Development headers package; no code from it is executed at container runtime",
+      "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4414-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-instance-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-instance-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "OpenSSL development headers only; vulnerable runtime library code is not executed",
+      "timestamp": "2026-10-14T14:33:21Z"
     }
   ],
-  "timestamp": "2026-09-15T12:16:55Z"
+  "timestamp": "2026-10-14T15:28:51Z"
 }

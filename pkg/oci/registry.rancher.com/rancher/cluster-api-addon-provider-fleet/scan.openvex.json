@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c641f4a3cfd662fde26acf14f9695148d97ee8a6e0fad44a25243fa7d73be771",
+  "@id": "https://openvex.dev/docs/public/vex-fa9cabd0343939b4285f55b94b482ef52f186077a830a2bdd7a6f45203eae8f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -136,6 +136,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "libcap only an incidental dependency; capabilities are set by the kubelet",
       "timestamp": "2026-09-22T18:17:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1510-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cluster-api-addon-provider-fleet?repository_url=registry.rancher.com%2Francher%2Fcluster-api-addon-provider-fleet",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/terminfo-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Terminal description data only; not reached by the container entrypoint",
+      "timestamp": "2026-10-14T14:33:21Z"
     },
     {
       "vulnerability": {
@@ -366,5 +385,5 @@
       "timestamp": "2026-09-22T18:17:09Z"
     }
   ],
-  "timestamp": "2026-09-22T18:34:48Z"
+  "timestamp": "2026-10-14T15:28:51Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-00b639d1b08d28d56d05d11d43504fa5260690ec4988d3f198bd0ef963e24c3a",
+  "@id": "https://openvex.dev/docs/public/vex-fa9cabd0343939b4285f55b94b482ef52f186077a830a2bdd7a6f45203eae8f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -231,7 +231,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go exporter uses net/http; system libcurl C library is not invoked",
       "timestamp": "2026-08-30T03:35:09Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4401-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/prometheus-exporter?repository_url=registry.rancher.com%2Fneuvector%2Fprometheus-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python313-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Python development headers only; vulnerable runtime code is not executed",
+      "timestamp": "2026-10-14T14:33:21Z"
     }
   ],
-  "timestamp": "2026-08-31T13:08:53Z"
+  "timestamp": "2026-10-14T15:28:51Z"
 }

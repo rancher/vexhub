@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ffe37a7ac7bef502d37286bf26f538926a0256bd041ecb42af22c8a5c6675a3c",
+  "@id": "https://openvex.dev/docs/public/vex-fa9cabd0343939b4285f55b94b482ef52f186077a830a2bdd7a6f45203eae8f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -801,6 +801,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:23899-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-upgrade?repository_url=registry.suse.com%2Francher%2Fharvester-upgrade",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Architecture-independent data files only; package ships no executable code",
+      "timestamp": "2026-10-14T14:33:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:23934-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-upgrade?repository_url=registry.suse.com%2Francher%2Fharvester-upgrade",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-locale-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Locale data only; package ships no executable code",
+      "timestamp": "2026-10-14T14:33:21Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2485-1"
       },
       "products": [
@@ -1045,7 +1083,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "curl/libcurl is a base-image dependency; the app's own HTTP client is used, curl CLI is never invoked at runtime",
       "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/harvester-upgrade?repository_url=registry.suse.com%2Francher%2Fharvester-upgrade",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Architecture-independent data files only; package ships no executable code",
+      "timestamp": "2026-10-14T14:33:21Z"
     }
   ],
-  "timestamp": "2026-09-02T13:59:41Z"
+  "timestamp": "2026-10-14T15:28:51Z"
 }

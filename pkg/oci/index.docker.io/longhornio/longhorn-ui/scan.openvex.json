@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-2754109e2dd2342813d87d73a3f5c491f5791e80c6722cfc5ef96583618ff232",
+  "@id": "https://openvex.dev/docs/public/vex-fa9cabd0343939b4285f55b94b482ef52f186077a830a2bdd7a6f45203eae8f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1862,7 +1862,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary uses net/http, not libcurl; C library not linked/called at runtime",
       "timestamp": "2026-08-28T03:20:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=index.docker.io%2Flonghornio%2Flonghorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Architecture-independent data files only; package ships no executable code",
+      "timestamp": "2026-10-14T14:33:21Z"
     }
   ],
-  "timestamp": "2026-08-28T11:56:35Z"
+  "timestamp": "2026-10-14T15:28:51Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-a0bc6b0226b531bf16b66af155997b304879d81533f317a5f738bc5fb8c7e2d8",
+  "@id": "https://openvex.dev/docs/public/vex-fa9cabd0343939b4285f55b94b482ef52f186077a830a2bdd7a6f45203eae8f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -193,7 +193,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "NeuVector controller is a Go binary; gawk CLI text-processing tool is not invoked at runtime",
       "timestamp": "2026-08-05T02:24:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4250-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/controller?repository_url=index.docker.io%2Fneuvector%2Fcontroller",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Headers/dev files only; no runtime code executed by the container entrypoint",
+      "timestamp": "2026-10-14T14:33:21Z"
     }
   ],
-  "timestamp": "2026-08-21T20:06:49Z"
+  "timestamp": "2026-10-14T15:28:51Z"
 }

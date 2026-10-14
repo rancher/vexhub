@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1ab99254c6cda5237df98aff1503e821bd2a7bd057f498d09d0ce021ac7b6c79",
+  "@id": "https://openvex.dev/docs/public/vex-fa9cabd0343939b4285f55b94b482ef52f186077a830a2bdd7a6f45203eae8f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -231,7 +231,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "jmx-exporter is a JVM Java agent; curl CLI is an incidental dependency, never executed",
       "timestamp": "2026-08-29T03:35:43Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/jmx-exporter?repository_url=registry.suse.com%2Fsuse-observability%2Fjmx-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Architecture-independent data files only; package ships no executable code",
+      "timestamp": "2026-10-14T14:33:21Z"
     }
   ],
-  "timestamp": "2026-08-29T17:29:33Z"
+  "timestamp": "2026-10-14T15:28:51Z"
 }
