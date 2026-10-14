@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ffe37a7ac7bef502d37286bf26f538926a0256bd041ecb42af22c8a5c6675a3c",
+  "@id": "https://openvex.dev/docs/public/vex-c35f1d91ad4f986ff6530548d53eeefc8ea619a5cc2d3ce5d3155a9455b43e03",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -364,7 +364,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "curl/libcurl is a base-image dependency; the app's own HTTP client is used, curl CLI is never invoked at runtime",
       "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hbase-master?repository_url=registry.suse.com%2Fsuse-observability%2Fhbase-master",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Data-only subpackage with locale/config files; the vulnerable library code is not shipped here",
+      "timestamp": "2026-10-14T16:18:17Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hbase-master?repository_url=registry.suse.com%2Fsuse-observability%2Fhbase-master",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Data-only subpackage with static config/locale files; no executable vulnerable code present",
+      "timestamp": "2026-10-14T15:46:20Z"
     }
   ],
-  "timestamp": "2026-09-02T13:59:41Z"
+  "timestamp": "2026-10-14T16:26:08Z"
 }

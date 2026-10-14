@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c641f4a3cfd662fde26acf14f9695148d97ee8a6e0fad44a25243fa7d73be771",
+  "@id": "https://openvex.dev/docs/public/vex-c35f1d91ad4f986ff6530548d53eeefc8ea619a5cc2d3ce5d3155a9455b43e03",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -60,7 +60,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "prom2teams handles JSON only; the expat XML parser is not in the execute path of this service",
       "timestamp": "2026-09-22T18:31:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-26519"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-idealista-prom2teams?repository_url=registry.suse.com%2Francher%2Fmirrored-idealista-prom2teams",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/musl-dev"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Development package ships only headers/static libs; no runtime code executed by the container entrypoint",
+      "timestamp": "2026-10-14T16:18:17Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-26519"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-idealista-prom2teams?repository_url=registry.suse.com%2Francher%2Fmirrored-idealista-prom2teams",
+          "subcomponents": [
+            {
+              "@id": "pkg:apk/alpine/musl-dev"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Development/header subpackage; ships no runtime executable code used by the container entrypoint",
+      "timestamp": "2026-10-14T15:46:20Z"
     }
   ],
-  "timestamp": "2026-09-22T18:34:48Z"
+  "timestamp": "2026-10-14T16:26:08Z"
 }
