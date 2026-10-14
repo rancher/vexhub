@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-49548153bc210cfb3de9b74b12b8c8502e3e400fd9c2e518b476f56371cfaa61",
+  "@id": "https://openvex.dev/docs/public/vex-fa9cabd0343939b4285f55b94b482ef52f186077a830a2bdd7a6f45203eae8f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -596,6 +596,25 @@
       },
       "products": [
         {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=registry.suse.com%2Flonghornio%2Flonghorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/nfsidmap-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "nfsidmap development headers only; vulnerable runtime library code is not executed",
+      "timestamp": "2026-10-14T14:33:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1356-1"
+      },
+      "products": [
+        {
           "@id": "pkg:oci/longhorn-share-manager?repository_url=registry.suse.com/longhornio/longhorn-share-manager",
           "subcomponents": [
             {
@@ -706,6 +725,25 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:2231-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=registry.suse.com%2Flonghornio%2Flonghorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Headers/dev files only; no runtime code executed by the container entrypoint",
+      "timestamp": "2026-10-14T14:33:21Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2485-1"
       },
       "products": [
@@ -779,6 +817,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-07-05T00:42:58Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3030-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=registry.suse.com%2Flonghornio%2Flonghorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Headers/dev files only; no runtime code executed by the container entrypoint",
+      "timestamp": "2026-10-14T14:33:21Z"
     },
     {
       "vulnerability": {
@@ -931,7 +988,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "rpm-ndb is an RPM database library; the Go-based share-manager never invokes rpm at runtime",
       "timestamp": "2026-08-26T00:31:02Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4250-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=registry.suse.com%2Flonghornio%2Flonghorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Headers/dev files only; no runtime code executed by the container entrypoint",
+      "timestamp": "2026-10-14T14:33:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-share-manager?repository_url=registry.suse.com%2Flonghornio%2Flonghorn-share-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Architecture-independent data files only; package ships no executable code",
+      "timestamp": "2026-10-14T14:33:21Z"
     }
   ],
-  "timestamp": "2026-08-27T12:44:56Z"
+  "timestamp": "2026-10-14T15:28:51Z"
 }

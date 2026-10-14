@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-1ed65153f745c590734281ae18cdb3f1d9dac4f650ce8da9ab8c628a51416a9f",
+  "@id": "https://openvex.dev/docs/public/vex-fa9cabd0343939b4285f55b94b482ef52f186077a830a2bdd7a6f45203eae8f4",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -231,7 +231,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Perl interpreter is an incidental SLES dependency; the running app never invokes perl",
       "timestamp": "2026-08-15T01:52:46Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/hadoop?repository_url=registry.suse.com%2Fsuse-observability%2Fhadoop",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Architecture-independent data files only; package ships no executable code",
+      "timestamp": "2026-10-14T14:33:21Z"
     }
   ],
-  "timestamp": "2026-08-15T13:20:36Z"
+  "timestamp": "2026-10-14T15:28:51Z"
 }
