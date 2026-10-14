@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-65cc1b6e4661ae8d01f92ea975e999ec2e88f6c80186a8c907c0cd53c6bf722a",
+  "@id": "https://openvex.dev/docs/public/vex-c35f1d91ad4f986ff6530548d53eeefc8ea619a5cc2d3ce5d3155a9455b43e03",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1349,7 +1349,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency",
       "timestamp": "2026-08-05T02:24:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-launcher?repository_url=registry.suse.com%2Fsuse%2Fsles%2F15.7%2Fvirt-launcher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Data-only subpackage with locale/config files; the vulnerable library code is not shipped here",
+      "timestamp": "2026-10-14T16:18:17Z"
     }
   ],
-  "timestamp": "2026-08-10T13:37:25Z"
+  "timestamp": "2026-10-14T16:26:08Z"
 }

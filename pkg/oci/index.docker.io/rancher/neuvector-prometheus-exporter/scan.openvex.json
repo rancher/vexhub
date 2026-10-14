@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-b20fa4f9bbaf88972fddf5f55b72cab2cfaaa5a6c4c6cdf22bdddef5319f9663",
+  "@id": "https://openvex.dev/docs/public/vex-c35f1d91ad4f986ff6530548d53eeefc8ea619a5cc2d3ce5d3155a9455b43e03",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -399,7 +399,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "python313-devel contains only build-time development headers; not loaded or executed at runtime",
       "timestamp": "2026-08-22T00:47:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4401-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-prometheus-exporter?repository_url=index.docker.io%2Francher%2Fneuvector-prometheus-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python313-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Development package ships only headers/static libs; no runtime code executed by the container entrypoint",
+      "timestamp": "2026-10-14T16:18:17Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4401-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/neuvector-prometheus-exporter?repository_url=index.docker.io%2Francher%2Fneuvector-prometheus-exporter",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/python313-devel"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Development/header subpackage; ships no runtime executable code used by the container entrypoint",
+      "timestamp": "2026-10-14T15:46:20Z"
     }
   ],
-  "timestamp": "2026-08-25T11:37:47Z"
+  "timestamp": "2026-10-14T16:26:08Z"
 }

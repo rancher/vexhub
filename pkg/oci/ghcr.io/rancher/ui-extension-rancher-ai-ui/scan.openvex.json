@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-fa9cabd0343939b4285f55b94b482ef52f186077a830a2bdd7a6f45203eae8f4",
+  "@id": "https://openvex.dev/docs/public/vex-c35f1d91ad4f986ff6530548d53eeefc8ea619a5cc2d3ce5d3155a9455b43e03",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -77,6 +77,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Config-only subpackage shipping static files; vulnerable library code is not in the execute path",
+      "timestamp": "2026-10-14T15:46:20Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02278-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Configuration files only; no libssh code executed by the container entrypoint",
       "timestamp": "2026-10-14T14:33:21Z"
     },
@@ -98,6 +117,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "SSH client library is not used; the workload makes no SSH connections at runtime",
       "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02278-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Config-only subpackage shipping ssh client config files",
+      "timestamp": "2026-10-14T16:18:17Z"
     },
     {
       "vulnerability": {
@@ -136,6 +174,44 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "License text files only; package ships no executable code",
       "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/boost-license1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "License-only subpackage containing just the Boost license text",
+      "timestamp": "2026-10-14T16:18:17Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02536-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/boost-license1_66_0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "License-text-only subpackage; contains no code",
+      "timestamp": "2026-10-14T15:46:20Z"
     },
     {
       "vulnerability": {
@@ -248,6 +324,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
+      "impact_statement": "FIPS HMAC checksum subpackage contains only digest files",
+      "timestamp": "2026-10-14T15:46:20Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:02773-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libgcrypt20-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "Ships only FIPS HMAC checksum files; package contains no vulnerable executable code",
       "timestamp": "2026-10-14T14:20:06Z"
     },
@@ -305,6 +400,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
+      "impact_statement": "FIPS HMAC checksum subpackage contains only digest files",
+      "timestamp": "2026-10-14T15:46:20Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:03438-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "Ships only FIPS HMAC checksum files; package contains no vulnerable executable code",
       "timestamp": "2026-10-14T14:20:06Z"
     },
@@ -326,6 +440,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "FIPS HMAC checksum file only; package ships no executable library code",
       "timestamp": "2026-10-14T14:33:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2025:0345-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "FIPS HMAC checksum subpackage contains only digest files",
+      "timestamp": "2026-10-14T15:46:20Z"
     },
     {
       "vulnerability": {
@@ -438,6 +571,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
+      "impact_statement": "FIPS HMAC checksum subpackage contains only digest files",
+      "timestamp": "2026-10-14T15:46:20Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:0359-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "Ships only FIPS HMAC checksum files; package contains no vulnerable executable code",
       "timestamp": "2026-10-14T14:20:06Z"
     },
@@ -533,6 +685,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_present",
+      "impact_statement": "FIPS HMAC checksum subpackage contains only digest files",
+      "timestamp": "2026-10-14T15:46:20Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1290-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
       "impact_statement": "Ships only FIPS HMAC checksum files; package contains no vulnerable executable code",
       "timestamp": "2026-10-14T14:20:06Z"
     },
@@ -554,6 +725,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "FIPS HMAC checksum file only; package ships no executable library code",
       "timestamp": "2026-10-14T14:33:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:1550-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "FIPS HMAC checksum subpackage contains only digest files",
+      "timestamp": "2026-10-14T15:46:20Z"
     },
     {
       "vulnerability": {
@@ -592,6 +782,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "FIPS HMAC checksum file only; package ships no executable library code",
       "timestamp": "2026-10-14T14:33:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:2405-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "FIPS HMAC checksum subpackage contains only digest files",
+      "timestamp": "2026-10-14T15:46:20Z"
     },
     {
       "vulnerability": {
@@ -742,6 +951,25 @@
       ],
       "status": "not_affected",
       "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Config-only subpackage shipping static files; vulnerable library code is not in the execute path",
+      "timestamp": "2026-10-14T15:46:20Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3463-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Configuration files only; no libssh code executed by the container entrypoint",
       "timestamp": "2026-10-14T14:33:21Z"
     },
@@ -763,6 +991,25 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "SSH client library is not used; the workload makes no SSH connections at runtime",
       "timestamp": "2026-10-14T14:20:06Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3463-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libssh-config"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Config-only subpackage shipping ssh client config files",
+      "timestamp": "2026-10-14T16:18:17Z"
     },
     {
       "vulnerability": {
@@ -858,6 +1105,25 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "FIPS HMAC checksum file only; package ships no executable library code",
       "timestamp": "2026-10-14T14:33:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:3877-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl1_1-hmac"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "FIPS HMAC checksum subpackage contains only digest files",
+      "timestamp": "2026-10-14T15:46:20Z"
     },
     {
       "vulnerability": {
@@ -975,6 +1241,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:4500-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Data-only subpackage with locale/config files; the vulnerable library code is not shipped here",
+      "timestamp": "2026-10-14T16:18:17Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4500-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Data-only subpackage with static config/locale files; no executable vulnerable code present",
+      "timestamp": "2026-10-14T15:46:20Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:4502-1"
       },
       "products": [
@@ -1029,7 +1333,45 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Architecture-independent data files only; package ships no executable code",
       "timestamp": "2026-10-14T14:33:21Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Data-only subpackage with locale/config files; the vulnerable library code is not shipped here",
+      "timestamp": "2026-10-14T16:18:17Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-data"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Data-only subpackage with static config/locale files; no executable vulnerable code present",
+      "timestamp": "2026-10-14T15:46:20Z"
     }
   ],
-  "timestamp": "2026-10-14T15:28:51Z"
+  "timestamp": "2026-10-14T16:26:08Z"
 }
