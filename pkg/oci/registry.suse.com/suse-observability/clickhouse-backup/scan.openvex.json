@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e453634172f8cbcfe4f862f1463903efca83c302aad8171c884a6ba8927c23d6",
+  "@id": "https://openvex.dev/docs/public/vex-8ef0b796eaf1b7bd9efddcb2b2308328306fdf3093d9ab798595d0345f8a85a5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -307,7 +307,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "curl/libcurl is a base-image dependency; the app's own HTTP client is used, curl CLI is never invoked at runtime",
       "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4414-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/clickhouse-backup?repository_url=registry.suse.com%2Fsuse-observability%2Fclickhouse-backup",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module is not loaded; image does not enable OpenSSL FIPS mode at runtime",
+      "timestamp": "2026-10-15T01:02:04Z"
     }
   ],
-  "timestamp": "2026-09-02T13:59:44Z"
+  "timestamp": "2026-10-15T04:35:25Z"
 }
