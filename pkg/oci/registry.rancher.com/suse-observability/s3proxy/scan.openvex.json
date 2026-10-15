@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c35f1d91ad4f986ff6530548d53eeefc8ea619a5cc2d3ce5d3155a9455b43e03",
+  "@id": "https://openvex.dev/docs/public/vex-8ef0b796eaf1b7bd9efddcb2b2308328306fdf3093d9ab798595d0345f8a85a5",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -215,6 +215,44 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:4414-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/s3proxy?repository_url=registry.rancher.com%2Fsuse-observability%2Fs3proxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module is not loaded; image does not enable OpenSSL FIPS mode at runtime",
+      "timestamp": "2026-10-15T01:02:04Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/s3proxy?repository_url=registry.rancher.com%2Fsuse-observability%2Fs3proxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libX11-6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Headless JVM server image; no X server or GUI",
+      "timestamp": "2026-10-15T01:02:04Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:4502-1"
       },
       "products": [
@@ -269,7 +307,26 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Data-only subpackage with static config/locale files; no executable vulnerable code present",
       "timestamp": "2026-10-14T15:46:20Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4566-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/s3proxy?repository_url=registry.rancher.com%2Fsuse-observability%2Fs3proxy",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libXtst6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "XTEST input-synthesis lib unused in headless server image; no X display at runtime",
+      "timestamp": "2026-10-15T01:02:04Z"
     }
   ],
-  "timestamp": "2026-10-14T16:26:08Z"
+  "timestamp": "2026-10-15T04:35:25Z"
 }
