@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-8ef0b796eaf1b7bd9efddcb2b2308328306fdf3093d9ab798595d0345f8a85a5",
+  "@id": "https://openvex.dev/docs/public/vex-74a328d05ac140d94b09247a9598fa028a9a30fa1bd37f77352259b5cdfa7532",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -250,7 +250,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "FIPS provider module is not loaded; image does not enable OpenSSL FIPS mode at runtime",
       "timestamp": "2026-10-15T01:02:04Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4414-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/zookeeper?repository_url=quay.io%2Fstackstate%2Fzookeeper",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "FIPS provider module is only loaded when OpenSSL runs in FIPS mode; not enabled in this image",
+      "timestamp": "2026-10-15T12:52:56Z"
     }
   ],
-  "timestamp": "2026-10-15T04:35:25Z"
+  "timestamp": "2026-10-15T12:59:58Z"
 }
