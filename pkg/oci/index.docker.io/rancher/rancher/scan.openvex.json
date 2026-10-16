@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e453634172f8cbcfe4f862f1463903efca83c302aad8171c884a6ba8927c23d6",
+  "@id": "https://openvex.dev/docs/public/vex-b16587c921316ed94c2b0a8926bd4e9cb3d35b95e4a1a7694f0876312a8d8ed9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1501,7 +1501,26 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "curl/libcurl is a base-image dependency; the app's own HTTP client is used, curl CLI is never invoked at runtime",
       "timestamp": "2026-09-02T00:29:37Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4619-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/rancher?repository_url=index.docker.io%2Francher%2Francher",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go uses encoding/xml; the system libexpat C library is not called at runtime",
+      "timestamp": "2026-10-16T01:32:33Z"
     }
   ],
-  "timestamp": "2026-09-02T13:59:44Z"
+  "timestamp": "2026-10-16T02:11:13Z"
 }

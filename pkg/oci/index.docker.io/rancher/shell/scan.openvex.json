@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-4449428c13346297676c376d65c3259eb49e96c6ca21d85efd83258153e5e5d0",
+  "@id": "https://openvex.dev/docs/public/vex-b16587c921316ed94c2b0a8926bd4e9cb3d35b95e4a1a7694f0876312a8d8ed9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -877,6 +877,63 @@
     },
     {
       "vulnerability": {
+        "name": "SUSE-SU-2026:23552-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/shell?repository_url=index.docker.io%2Francher%2Fshell",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/vim"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-10-16T01:32:33Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:23552-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/shell?repository_url=index.docker.io%2Francher%2Fshell",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/vim-data-common"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "vim/vi is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-10-16T01:32:33Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:23552-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/shell?repository_url=index.docker.io%2Francher%2Fshell",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/xxd"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "xxd hex dump utility ships with vim and is never executed by the shell image entrypoint",
+      "timestamp": "2026-10-16T01:32:33Z"
+    },
+    {
+      "vulnerability": {
         "name": "SUSE-SU-2026:2925-1"
       },
       "products": [
@@ -1047,5 +1104,5 @@
       "timestamp": "2026-09-02T00:29:37Z"
     }
   ],
-  "timestamp": "2026-09-02T13:59:42Z"
+  "timestamp": "2026-10-16T02:11:13Z"
 }
