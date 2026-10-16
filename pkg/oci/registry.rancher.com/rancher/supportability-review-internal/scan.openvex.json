@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-de03b1f3ee83407f1d61458b49d0d5ae793ad4901a867f273be3250339a8ed29",
+  "@id": "https://openvex.dev/docs/public/vex-b16587c921316ed94c2b0a8926bd4e9cb3d35b95e4a1a7694f0876312a8d8ed9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -304,7 +304,45 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "python311-devel contains build-time headers only; not loaded by Python interpreter at runtime",
       "timestamp": "2026-08-22T00:47:48Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4656-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-internal?repository_url=registry.rancher.com%2Francher%2Fsupportability-review-internal",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-locale"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-locale packages ship locale data only; the vulnerable glibc library code is not in them",
+      "timestamp": "2026-10-16T01:32:33Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4656-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/supportability-review-internal?repository_url=registry.rancher.com%2Francher%2Fsupportability-review-internal",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/glibc-locale-base"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "glibc-locale packages ship locale data only; the vulnerable glibc library code is not in them",
+      "timestamp": "2026-10-16T01:32:33Z"
     }
   ],
-  "timestamp": "2026-08-22T17:57:54Z"
+  "timestamp": "2026-10-16T02:11:13Z"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-e58e8f5981b1991a64fc9da4495c68980d2c886813f59734f6130ad538468d98",
+  "@id": "https://openvex.dev/docs/public/vex-b16587c921316ed94c2b0a8926bd4e9cb3d35b95e4a1a7694f0876312a8d8ed9",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -22,6 +22,44 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "JIT regex APIs are not used by the Go entrypoint; PCRE2 is only a transitive base-OS dependency",
       "timestamp": "2026-10-14T19:19:02Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18477"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-10-16T01:32:33Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-18508"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy",
+          "subcomponents": [
+            {
+              "@id": "pkg:deb/ubuntu/tar"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "tar is not executed at runtime; it is an incidental SLES base-image dependency",
+      "timestamp": "2026-10-16T01:32:33Z"
     },
     {
       "vulnerability": {
@@ -100,5 +138,5 @@
       "timestamp": "2026-10-14T19:19:02Z"
     }
   ],
-  "timestamp": "2026-10-14T19:29:47Z"
+  "timestamp": "2026-10-16T02:11:13Z"
 }
