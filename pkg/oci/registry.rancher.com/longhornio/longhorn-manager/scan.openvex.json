@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-21eee7baf0ac3e750c09c9aa58ec430635d378597f3dcff93862c9b774ee29e5",
+  "@id": "https://openvex.dev/docs/public/vex-23ebc1be57e5577bab9a06f58f1c2fc41b70c447d5a489ed054c888e885f6463",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1995,7 +1995,102 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "Go binary uses net/http, not libcurl; C library not linked/called at runtime",
       "timestamp": "2026-08-28T03:20:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4414-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go static entrypoint uses Go crypto; no OpenSSL consumer reachable from entrypoint",
+      "timestamp": "2026-10-17T16:27:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4414-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go static entrypoint uses Go crypto; no OpenSSL consumer reachable from entrypoint",
+      "timestamp": "2026-10-17T16:27:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4414-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go static entrypoint uses Go crypto; no OpenSSL consumer reachable from entrypoint",
+      "timestamp": "2026-10-17T16:27:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4568-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/rpcbind"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go entrypoint never starts rpcbind/rpcinfo; NFS exports use NFSv4 which needs no portmapper",
+      "timestamp": "2026-10-17T16:27:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4619-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-manager",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libexpat only used by unused dbus-daemon/python/fontconfig; not reached by entrypoint",
+      "timestamp": "2026-10-17T16:27:00Z"
     }
   ],
-  "timestamp": "2026-09-02T13:59:43Z"
+  "timestamp": "2026-10-17T17:55:38Z"
 }
