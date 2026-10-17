@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-c35f1d91ad4f986ff6530548d53eeefc8ea619a5cc2d3ce5d3155a9455b43e03",
+  "@id": "https://openvex.dev/docs/public/vex-23ebc1be57e5577bab9a06f58f1c2fc41b70c447d5a489ed054c888e885f6463",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1872,6 +1872,25 @@
           "@id": "pkg:oci/longhorn-ui?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-ui",
           "subcomponents": [
             {
+              "@id": "pkg:rpm/suse/libX11-6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "No X server or X client runs; libX11 is an incidental dependency of unused tooling",
+      "timestamp": "2026-10-17T16:27:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4502-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-ui",
+          "subcomponents": [
+            {
               "@id": "pkg:rpm/suse/libX11-data"
             }
           ]
@@ -1919,7 +1938,26 @@
       "justification": "vulnerable_code_not_present",
       "impact_statement": "Data-only subpackage with static config/locale files; no executable vulnerable code present",
       "timestamp": "2026-10-14T15:46:20Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4619-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/longhorn-ui?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-ui",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libexpat1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libexpat only used by unused dbus-daemon/python/fontconfig; not reached by entrypoint",
+      "timestamp": "2026-10-17T16:27:00Z"
     }
   ],
-  "timestamp": "2026-10-14T16:26:08Z"
+  "timestamp": "2026-10-17T17:55:38Z"
 }

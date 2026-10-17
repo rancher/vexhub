@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-ce1648395363707c3914df404cdf50ec33786ff938c77ae83ac1e8f617193119",
+  "@id": "https://openvex.dev/docs/public/vex-23ebc1be57e5577bab9a06f58f1c2fc41b70c447d5a489ed054c888e885f6463",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -1197,7 +1197,83 @@
       "justification": "vulnerable_code_not_in_execute_path",
       "impact_statement": "support-bundle-kit is a Go binary; Go uses crypto/tls and does not call libssl at runtime",
       "timestamp": "2026-09-15T01:37:05Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4367-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=registry.rancher.com%2Flonghornio%2Fsupport-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libglib-2_0-0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "libglib only linked by unused zypper/libzypp; no GDBusServer runs in this image",
+      "timestamp": "2026-10-17T16:27:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4414-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=registry.rancher.com%2Flonghornio%2Fsupport-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl-3-fips-provider"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go static entrypoint uses Go crypto; no OpenSSL consumer reachable from entrypoint",
+      "timestamp": "2026-10-17T16:27:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4414-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=registry.rancher.com%2Flonghornio%2Fsupport-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/libopenssl3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go static entrypoint uses Go crypto; no OpenSSL consumer reachable from entrypoint",
+      "timestamp": "2026-10-17T16:27:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "SUSE-SU-2026:4414-1"
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/support-bundle-kit?repository_url=registry.rancher.com%2Flonghornio%2Fsupport-bundle-kit",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/suse/openssl-3"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Go static entrypoint uses Go crypto; no OpenSSL consumer reachable from entrypoint",
+      "timestamp": "2026-10-17T16:27:00Z"
     }
   ],
-  "timestamp": "2026-09-15T12:16:56Z"
+  "timestamp": "2026-10-17T17:55:38Z"
 }
