@@ -1,0 +1,956 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:golang/github.com/projectcalico/calico/lib/std",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:golang/github.com/projectcalico/calico/lib/std",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:golang/github.com/projectcalico/calico/lib/std"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/projectcalico/calico/lib/std",
+        "product": {
+          "name": "pkg:golang/github.com/projectcalico/calico/lib/std",
+          "product_id": "pkg-golang-github-com-projectcalico-calico-lib-std",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/projectcalico/calico/lib/std"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.25.11",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.25.11",
+          "product_id": "pkg-golang-stdlib-v1-25-11",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.25.11"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.0",
+        "product": {
+          "name": "pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.0",
+          "product_id": "pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.26.8",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.26.8",
+          "product_id": "pkg-golang-stdlib-v1-26-8",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.26.8"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2",
+        "product": {
+          "name": "pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2",
+          "product_id": "pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.25.11 as a component of pkg:golang/github.com/projectcalico/calico/lib/std",
+          "product_id": "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-25-11",
+        "relates_to_product_reference": "pkg-golang-github-com-projectcalico-calico-lib-std"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.25.11 as a component of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.0",
+          "product_id": "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-0"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-25-11",
+        "relates_to_product_reference": "pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-0"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.8 as a component of pkg:golang/github.com/projectcalico/calico/lib/std",
+          "product_id": "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-8",
+        "relates_to_product_reference": "pkg-golang-github-com-projectcalico-calico-lib-std"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.8 as a component of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2",
+          "product_id": "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-8",
+        "relates_to_product_reference": "pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-39822",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-0"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-4970"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.25.11 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.25.11 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.25.11 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.0. It does not assert the status of pkg:golang/stdlib@v1.25.11 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-0"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-0"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-42505",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-0"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-5856"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42505 in pkg:golang/stdlib@v1.25.11 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.25.11 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42505 in pkg:golang/stdlib@v1.25.11 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.0. It does not assert the status of pkg:golang/stdlib@v1.25.11 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-0"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-0"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56857",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6604"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56866",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6605"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56866 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56866 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-78659",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6603"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78659 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78659 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-78660",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6610"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78660 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78660 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-78663",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6612"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78663 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78663 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-78667",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6609"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-78669",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6611"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78669 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78669 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-94439",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6613"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94439 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94439 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-94440",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6608"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94440 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94440 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-94448",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6599"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94448 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94448 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-97030",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6600"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97030 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97030 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-97031",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6607"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97031 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97031 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-97032",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6617"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97032 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97032 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/projectcalico/calico/lib/std@v3.32.2. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std",
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-projectcalico-calico-lib-std-v3-32-2"
+          ]
+        }
+      ]
+    }
+  ]
+}

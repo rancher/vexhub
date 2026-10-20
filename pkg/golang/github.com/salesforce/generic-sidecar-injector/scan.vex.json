@@ -1,0 +1,102 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:golang/github.com/salesforce/generic-sidecar-injector",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:golang/github.com/salesforce/generic-sidecar-injector",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:golang/github.com/salesforce/generic-sidecar-injector"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/salesforce/generic-sidecar-injector",
+        "product": {
+          "name": "pkg:golang/github.com/salesforce/generic-sidecar-injector",
+          "product_id": "pkg-golang-github-com-salesforce-generic-sidecar-injector",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/salesforce/generic-sidecar-injector"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.26.3",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.26.3",
+          "product_id": "pkg-golang-stdlib-v1-26-3",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.26.3"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.3 as a component of pkg:golang/github.com/salesforce/generic-sidecar-injector",
+          "product_id": "pkg-golang-stdlib-v1-26-3-in-pkg-golang-github-com-salesforce-generic-sidecar-injector"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-3",
+        "relates_to_product_reference": "pkg-golang-github-com-salesforce-generic-sidecar-injector"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-42504",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-3-in-pkg-golang-github-com-salesforce-generic-sidecar-injector"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "No MIME encoded-word decoding; infrastructure tool has no email/MIME header processing. This statement concerns CVE-2026-42504 in pkg:golang/stdlib@v1.26.3 as a subcomponent of pkg:golang/github.com/salesforce/generic-sidecar-injector. It does not assert the status of pkg:golang/stdlib@v1.26.3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-3-in-pkg-golang-github-com-salesforce-generic-sidecar-injector"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-3-in-pkg-golang-github-com-salesforce-generic-sidecar-injector"
+          ]
+        }
+      ]
+    }
+  ]
+}

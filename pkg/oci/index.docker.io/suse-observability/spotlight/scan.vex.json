@@ -1,0 +1,163 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/spotlight?repository_url=index.docker.io%2Fsuse-observability%2Fspotlight",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/spotlight?repository_url=index.docker.io%2Fsuse-observability%2Fspotlight",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/spotlight?repository_url=index.docker.io/suse-observability/spotlight"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/spotlight?repository_url=index.docker.io/suse-observability/spotlight",
+        "product": {
+          "name": "pkg:oci/spotlight?repository_url=index.docker.io/suse-observability/spotlight",
+          "product_id": "pkg-oci-spotlight-repository-url-index-docker-io-suse-observability-spotlight",
+          "product_identification_helper": {
+            "purl": "pkg:oci/spotlight?repository_url=index.docker.io/suse-observability/spotlight"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/python311-devel",
+        "product": {
+          "name": "pkg:rpm/suse/python311-devel",
+          "product_id": "pkg-rpm-suse-python311-devel",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/python311-devel"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libuuid1",
+        "product": {
+          "name": "pkg:rpm/suse/libuuid1",
+          "product_id": "pkg-rpm-suse-libuuid1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libuuid1"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/python311-devel as a component of pkg:oci/spotlight?repository_url=index.docker.io/suse-observability/spotlight",
+          "product_id": "pkg-rpm-suse-python311-devel-in-pkg-oci-spotlight-repository-url-index-docker-io-suse-observability-spotlight"
+        },
+        "product_reference": "pkg-rpm-suse-python311-devel",
+        "relates_to_product_reference": "pkg-oci-spotlight-repository-url-index-docker-io-suse-observability-spotlight"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libuuid1 as a component of pkg:oci/spotlight?repository_url=index.docker.io/suse-observability/spotlight",
+          "product_id": "pkg-rpm-suse-libuuid1-in-pkg-oci-spotlight-repository-url-index-docker-io-suse-observability-spotlight"
+        },
+        "product_reference": "pkg-rpm-suse-libuuid1",
+        "relates_to_product_reference": "pkg-oci-spotlight-repository-url-index-docker-io-suse-observability-spotlight"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-python311-devel-in-pkg-oci-spotlight-repository-url-index-docker-io-suse-observability-spotlight"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2298-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "python311-devel contains build-time headers only; not loaded by Python interpreter at runtime. This statement concerns SUSE-SU-2026:2298-1 in pkg:rpm/suse/python311-devel as a subcomponent of pkg:oci/spotlight?repository_url=index.docker.io/suse-observability/spotlight. It does not assert the status of pkg:rpm/suse/python311-devel when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-python311-devel-in-pkg-oci-spotlight-repository-url-index-docker-io-suse-observability-spotlight"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-python311-devel-in-pkg-oci-spotlight-repository-url-index-docker-io-suse-observability-spotlight"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libuuid1-in-pkg-oci-spotlight-repository-url-index-docker-io-suse-observability-spotlight"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2485-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "JVM app uses java.util.UUID; C libuuid1 not called at runtime. This statement concerns SUSE-SU-2026:2485-1 in pkg:rpm/suse/libuuid1 as a subcomponent of pkg:oci/spotlight?repository_url=index.docker.io/suse-observability/spotlight. It does not assert the status of pkg:rpm/suse/libuuid1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libuuid1-in-pkg-oci-spotlight-repository-url-index-docker-io-suse-observability-spotlight"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libuuid1-in-pkg-oci-spotlight-repository-url-index-docker-io-suse-observability-spotlight"
+          ]
+        }
+      ]
+    }
+  ]
+}

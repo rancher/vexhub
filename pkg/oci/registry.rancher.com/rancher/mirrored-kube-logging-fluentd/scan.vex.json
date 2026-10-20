@@ -1,0 +1,140 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/mirrored-kube-logging-fluentd?repository_url=registry.rancher.com%2Francher%2Fmirrored-kube-logging-fluentd",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/mirrored-kube-logging-fluentd?repository_url=registry.rancher.com%2Francher%2Fmirrored-kube-logging-fluentd",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/mirrored-kube-logging-fluentd?repository_url=registry.rancher.com/rancher/mirrored-kube-logging-fluentd"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/mirrored-kube-logging-fluentd?repository_url=registry.rancher.com/rancher/mirrored-kube-logging-fluentd",
+        "product": {
+          "name": "pkg:oci/mirrored-kube-logging-fluentd?repository_url=registry.rancher.com/rancher/mirrored-kube-logging-fluentd",
+          "product_id": "pkg-oci-mirrored-kube-logging-fluentd-repository-url-registry-rancher-com-rancher-mirrored-kube-logging-fluentd",
+          "product_identification_helper": {
+            "purl": "pkg:oci/mirrored-kube-logging-fluentd?repository_url=registry.rancher.com/rancher/mirrored-kube-logging-fluentd"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:gem/net-imap@0.3.4.1",
+        "product": {
+          "name": "pkg:gem/net-imap@0.3.4.1",
+          "product_id": "pkg-gem-net-imap-0-3-4-1",
+          "product_identification_helper": {
+            "purl": "pkg:gem/net-imap@0.3.4.1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:gem/net-imap@0.4.2",
+        "product": {
+          "name": "pkg:gem/net-imap@0.4.2",
+          "product_id": "pkg-gem-net-imap-0-4-2",
+          "product_identification_helper": {
+            "purl": "pkg:gem/net-imap@0.4.2"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:gem/net-imap@0.3.4.1 as a component of pkg:oci/mirrored-kube-logging-fluentd?repository_url=registry.rancher.com/rancher/mirrored-kube-logging-fluentd",
+          "product_id": "pkg-gem-net-imap-0-3-4-1-in-pkg-oci-mirrored-kube-logging-fluentd-repository-url-registry-rancher-com-rancher-mirrored-kube-logging-fluentd"
+        },
+        "product_reference": "pkg-gem-net-imap-0-3-4-1",
+        "relates_to_product_reference": "pkg-oci-mirrored-kube-logging-fluentd-repository-url-registry-rancher-com-rancher-mirrored-kube-logging-fluentd"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:gem/net-imap@0.4.2 as a component of pkg:oci/mirrored-kube-logging-fluentd?repository_url=registry.rancher.com/rancher/mirrored-kube-logging-fluentd",
+          "product_id": "pkg-gem-net-imap-0-4-2-in-pkg-oci-mirrored-kube-logging-fluentd-repository-url-registry-rancher-com-rancher-mirrored-kube-logging-fluentd"
+        },
+        "product_reference": "pkg-gem-net-imap-0-4-2",
+        "relates_to_product_reference": "pkg-oci-mirrored-kube-logging-fluentd-repository-url-registry-rancher-com-rancher-mirrored-kube-logging-fluentd"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-42257",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-gem-net-imap-0-3-4-1-in-pkg-oci-mirrored-kube-logging-fluentd-repository-url-registry-rancher-com-rancher-mirrored-kube-logging-fluentd"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-gem-net-imap-0-4-2-in-pkg-oci-mirrored-kube-logging-fluentd-repository-url-registry-rancher-com-rancher-mirrored-kube-logging-fluentd"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "fluentd aggregates logs and loads no IMAP input plugin; net-imap is an unused Ruby default gem. This statement concerns CVE-2026-42257 in pkg:gem/net-imap@0.3.4.1 as a subcomponent of pkg:oci/mirrored-kube-logging-fluentd?repository_url=registry.rancher.com/rancher/mirrored-kube-logging-fluentd. It does not assert the status of pkg:gem/net-imap@0.3.4.1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "fluentd aggregates logs and loads no IMAP input plugin; net-imap is an unused Ruby default gem. This statement concerns CVE-2026-42257 in pkg:gem/net-imap@0.4.2 as a subcomponent of pkg:oci/mirrored-kube-logging-fluentd?repository_url=registry.rancher.com/rancher/mirrored-kube-logging-fluentd. It does not assert the status of pkg:gem/net-imap@0.4.2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-gem-net-imap-0-3-4-1-in-pkg-oci-mirrored-kube-logging-fluentd-repository-url-registry-rancher-com-rancher-mirrored-kube-logging-fluentd",
+          "pkg-gem-net-imap-0-4-2-in-pkg-oci-mirrored-kube-logging-fluentd-repository-url-registry-rancher-com-rancher-mirrored-kube-logging-fluentd"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-gem-net-imap-0-3-4-1-in-pkg-oci-mirrored-kube-logging-fluentd-repository-url-registry-rancher-com-rancher-mirrored-kube-logging-fluentd"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-gem-net-imap-0-4-2-in-pkg-oci-mirrored-kube-logging-fluentd-repository-url-registry-rancher-com-rancher-mirrored-kube-logging-fluentd"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,447 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/kfp-launcher?repository_url=ghcr.io%2Fkubeflow%2Fkfp-launcher",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/kfp-launcher?repository_url=ghcr.io%2Fkubeflow%2Fkfp-launcher",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher",
+        "product": {
+          "name": "pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher",
+          "product_id": "pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher",
+          "product_identification_helper": {
+            "purl": "pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libcrypto3",
+        "product": {
+          "name": "pkg:apk/alpine/libcrypto3",
+          "product_id": "pkg-apk-alpine-libcrypto3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libcrypto3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libssl3",
+        "product": {
+          "name": "pkg:apk/alpine/libssl3",
+          "product_id": "pkg-apk-alpine-libssl3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libssl3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:oci/kfp-launcher?repository_url=ghcr.io%2Fkubeflow%2Fkfp-launcher",
+        "product": {
+          "name": "pkg:oci/kfp-launcher?repository_url=ghcr.io%2Fkubeflow%2Fkfp-launcher",
+          "product_id": "pkg-oci-kfp-launcher-repository-url-ghcr-io-2Fkubeflow-2Fkfp-launcher",
+          "product_identification_helper": {
+            "purl": "pkg:oci/kfp-launcher?repository_url=ghcr.io%2Fkubeflow%2Fkfp-launcher"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/zlib",
+        "product": {
+          "name": "pkg:apk/alpine/zlib",
+          "product_id": "pkg-apk-alpine-zlib",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/zlib"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libcrypto3 as a component of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher",
+          "product_id": "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+        },
+        "product_reference": "pkg-apk-alpine-libcrypto3",
+        "relates_to_product_reference": "pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libssl3 as a component of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher",
+          "product_id": "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+        },
+        "product_reference": "pkg-apk-alpine-libssl3",
+        "relates_to_product_reference": "pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/zlib as a component of pkg:oci/kfp-launcher?repository_url=ghcr.io%2Fkubeflow%2Fkfp-launcher",
+          "product_id": "pkg-apk-alpine-zlib-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-2Fkubeflow-2Fkfp-launcher"
+        },
+        "product_reference": "pkg-apk-alpine-zlib",
+        "relates_to_product_reference": "pkg-oci-kfp-launcher-repository-url-ghcr-io-2Fkubeflow-2Fkfp-launcher"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-34182",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called. This statement concerns CVE-2026-34182 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called. This statement concerns CVE-2026-34182 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-34183",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called. This statement concerns CVE-2026-34183 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called. This statement concerns CVE-2026-34183 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-45445",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called. This statement concerns CVE-2026-45445 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called. This statement concerns CVE-2026-45445 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-45447",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called. This statement concerns CVE-2026-45447 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called. This statement concerns CVE-2026-45447 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-63072",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called. This statement concerns CVE-2026-63072 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called. This statement concerns CVE-2026-63072 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-63076",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called. This statement concerns CVE-2026-63076 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Go binary uses crypto/tls from the standard library; the system OpenSSL library is not called. This statement concerns CVE-2026-63076 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io/kubeflow/kfp-launcher. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-kubeflow-kfp-launcher"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-85091",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-zlib-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-2Fkubeflow-2Fkfp-launcher"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Pure-Go image: zlib C library is not linked; Go uses its own compress/zlib implementation. This statement concerns CVE-2026-85091 in pkg:apk/alpine/zlib as a subcomponent of pkg:oci/kfp-launcher?repository_url=ghcr.io%2Fkubeflow%2Fkfp-launcher. It does not assert the status of pkg:apk/alpine/zlib when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-zlib-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-2Fkubeflow-2Fkfp-launcher"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-zlib-in-pkg-oci-kfp-launcher-repository-url-ghcr-io-2Fkubeflow-2Fkfp-launcher"
+          ]
+        }
+      ]
+    }
+  ]
+}

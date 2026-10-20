@@ -1,0 +1,410 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend",
+        "product": {
+          "name": "pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend",
+          "product_id": "pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend",
+          "product_identification_helper": {
+            "purl": "pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/zlib",
+        "product": {
+          "name": "pkg:apk/alpine/zlib",
+          "product_id": "pkg-apk-alpine-zlib",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/zlib"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:npm/tar@7.5.16",
+        "product": {
+          "name": "pkg:npm/tar@7.5.16",
+          "product_id": "pkg-npm-tar-7-5-16",
+          "product_identification_helper": {
+            "purl": "pkg:npm/tar@7.5.16"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:npm/postcss@8.5.15",
+        "product": {
+          "name": "pkg:npm/postcss@8.5.15",
+          "product_id": "pkg-npm-postcss-8-5-15",
+          "product_identification_helper": {
+            "purl": "pkg:npm/postcss@8.5.15"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:npm/vitest@4.1.9",
+        "product": {
+          "name": "pkg:npm/vitest@4.1.9",
+          "product_id": "pkg-npm-vitest-4-1-9",
+          "product_identification_helper": {
+            "purl": "pkg:npm/vitest@4.1.9"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/zlib as a component of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend",
+          "product_id": "pkg-apk-alpine-zlib-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        },
+        "product_reference": "pkg-apk-alpine-zlib",
+        "relates_to_product_reference": "pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:npm/tar@7.5.16 as a component of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend",
+          "product_id": "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        },
+        "product_reference": "pkg-npm-tar-7-5-16",
+        "relates_to_product_reference": "pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:npm/postcss@8.5.15 as a component of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend",
+          "product_id": "pkg-npm-postcss-8-5-15-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        },
+        "product_reference": "pkg-npm-postcss-8-5-15",
+        "relates_to_product_reference": "pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:npm/vitest@4.1.9 as a component of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend",
+          "product_id": "pkg-npm-vitest-4-1-9-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        },
+        "product_reference": "pkg-npm-vitest-4-1-9",
+        "relates_to_product_reference": "pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-22184",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-apk-alpine-zlib-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Flaw is limited to the contrib/untgz demo utility. This statement concerns CVE-2026-22184 in pkg:apk/alpine/zlib as a subcomponent of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend. It does not assert the status of pkg:apk/alpine/zlib when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-zlib-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-apk-alpine-zlib-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-59871",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "tar is not executed at runtime; it is an incidental base-image dependency. This statement concerns CVE-2026-59871 in pkg:npm/tar@7.5.16 as a subcomponent of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend. It does not assert the status of pkg:npm/tar@7.5.16 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-59873",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "tar is not executed at runtime; it is an incidental base-image dependency. This statement concerns CVE-2026-59873 in pkg:npm/tar@7.5.16 as a subcomponent of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend. It does not assert the status of pkg:npm/tar@7.5.16 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-59874",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "tar is not executed at runtime; it is an incidental base-image dependency. This statement concerns CVE-2026-59874 in pkg:npm/tar@7.5.16 as a subcomponent of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend. It does not assert the status of pkg:npm/tar@7.5.16 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-59875",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "tar is not executed at runtime; it is an incidental base-image dependency. This statement concerns CVE-2026-59875 in pkg:npm/tar@7.5.16 as a subcomponent of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend. It does not assert the status of pkg:npm/tar@7.5.16 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-69153",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-postcss-8-5-15-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "PostCSS is a build-time CSS toolchain dependency; it is not executed by the running frontend server. This statement concerns CVE-2026-69153 in pkg:npm/postcss@8.5.15 as a subcomponent of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend. It does not assert the status of pkg:npm/postcss@8.5.15 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-npm-postcss-8-5-15-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-postcss-8-5-15-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-73566",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "tar is not executed at runtime; it is an incidental base-image dependency. This statement concerns CVE-2026-73566 in pkg:npm/tar@7.5.16 as a subcomponent of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend. It does not assert the status of pkg:npm/tar@7.5.16 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-tar-7-5-16-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-73646",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-postcss-8-5-15-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "PostCSS is a build-time CSS toolchain dependency; it is not executed by the running frontend server. This statement concerns CVE-2026-73646 in pkg:npm/postcss@8.5.15 as a subcomponent of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend. It does not assert the status of pkg:npm/postcss@8.5.15 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-npm-postcss-8-5-15-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-postcss-8-5-15-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-84373",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-vitest-4-1-9-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "vitest is a development/test-only dependency and is never loaded by the frontend at runtime. This statement concerns CVE-2026-84373 in pkg:npm/vitest@4.1.9 as a subcomponent of pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend. It does not assert the status of pkg:npm/vitest@4.1.9 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-npm-vitest-4-1-9-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-vitest-4-1-9-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-kubeflow-kfp-frontend"
+          ]
+        }
+      ]
+    }
+  ]
+}

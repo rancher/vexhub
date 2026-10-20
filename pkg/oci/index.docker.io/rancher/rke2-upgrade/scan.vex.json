@@ -1,0 +1,140 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/rke2-upgrade?repository_url=index.docker.io%2Francher%2Frke2-upgrade",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/rke2-upgrade?repository_url=index.docker.io%2Francher%2Frke2-upgrade",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/rke2-upgrade?repository_url=index.docker.io/rancher/rke2-upgrade"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/rke2-upgrade?repository_url=index.docker.io/rancher/rke2-upgrade",
+        "product": {
+          "name": "pkg:oci/rke2-upgrade?repository_url=index.docker.io/rancher/rke2-upgrade",
+          "product_id": "pkg-oci-rke2-upgrade-repository-url-index-docker-io-rancher-rke2-upgrade",
+          "product_identification_helper": {
+            "purl": "pkg:oci/rke2-upgrade?repository_url=index.docker.io/rancher/rke2-upgrade"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libcrypto3",
+        "product": {
+          "name": "pkg:apk/alpine/libcrypto3",
+          "product_id": "pkg-apk-alpine-libcrypto3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libcrypto3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libssl3",
+        "product": {
+          "name": "pkg:apk/alpine/libssl3",
+          "product_id": "pkg-apk-alpine-libssl3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libssl3"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libcrypto3 as a component of pkg:oci/rke2-upgrade?repository_url=index.docker.io/rancher/rke2-upgrade",
+          "product_id": "pkg-apk-alpine-libcrypto3-in-pkg-oci-rke2-upgrade-repository-url-index-docker-io-rancher-rke2-upgrade"
+        },
+        "product_reference": "pkg-apk-alpine-libcrypto3",
+        "relates_to_product_reference": "pkg-oci-rke2-upgrade-repository-url-index-docker-io-rancher-rke2-upgrade"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libssl3 as a component of pkg:oci/rke2-upgrade?repository_url=index.docker.io/rancher/rke2-upgrade",
+          "product_id": "pkg-apk-alpine-libssl3-in-pkg-oci-rke2-upgrade-repository-url-index-docker-io-rancher-rke2-upgrade"
+        },
+        "product_reference": "pkg-apk-alpine-libssl3",
+        "relates_to_product_reference": "pkg-oci-rke2-upgrade-repository-url-index-docker-io-rancher-rke2-upgrade"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-12797",
+      "flags": [
+        {
+          "label": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-rke2-upgrade-repository-url-index-docker-io-rancher-rke2-upgrade"
+          ]
+        },
+        {
+          "label": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-rke2-upgrade-repository-url-index-docker-io-rancher-rke2-upgrade"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "This statement concerns CVE-2024-12797 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/rke2-upgrade?repository_url=index.docker.io/rancher/rke2-upgrade. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "This statement concerns CVE-2024-12797 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/rke2-upgrade?repository_url=index.docker.io/rancher/rke2-upgrade. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-rke2-upgrade-repository-url-index-docker-io-rancher-rke2-upgrade",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-rke2-upgrade-repository-url-index-docker-io-rancher-rke2-upgrade"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-rke2-upgrade-repository-url-index-docker-io-rancher-rke2-upgrade"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-rke2-upgrade-repository-url-index-docker-io-rancher-rke2-upgrade"
+          ]
+        }
+      ]
+    }
+  ]
+}

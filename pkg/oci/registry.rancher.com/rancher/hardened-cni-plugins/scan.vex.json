@@ -1,0 +1,235 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/hardened-cni-plugins?repository_url=registry.rancher.com%2Francher%2Fhardened-cni-plugins",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/hardened-cni-plugins?repository_url=registry.rancher.com%2Francher%2Fhardened-cni-plugins",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/hardened-cni-plugins?repository_url=registry.rancher.com/rancher/hardened-cni-plugins"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/hardened-cni-plugins?repository_url=registry.rancher.com/rancher/hardened-cni-plugins",
+        "product": {
+          "name": "pkg:oci/hardened-cni-plugins?repository_url=registry.rancher.com/rancher/hardened-cni-plugins",
+          "product_id": "pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins",
+          "product_identification_helper": {
+            "purl": "pkg:oci/hardened-cni-plugins?repository_url=registry.rancher.com/rancher/hardened-cni-plugins"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/busybox",
+        "product": {
+          "name": "pkg:rpm/suse/busybox",
+          "product_id": "pkg-rpm-suse-busybox",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/busybox"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libpcre2-8-0",
+        "product": {
+          "name": "pkg:rpm/suse/libpcre2-8-0",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpcre2-8-0"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/busybox as a component of pkg:oci/hardened-cni-plugins?repository_url=registry.rancher.com/rancher/hardened-cni-plugins",
+          "product_id": "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+        },
+        "product_reference": "pkg-rpm-suse-busybox",
+        "relates_to_product_reference": "pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/hardened-cni-plugins?repository_url=registry.rancher.com/rancher/hardened-cni-plugins",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
+        "relates_to_product_reference": "pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:0235-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go CNI plugin binaries do not invoke busybox; it is an incidental base image dependency. This statement concerns SUSE-SU-2026:0235-1 in pkg:rpm/suse/busybox as a subcomponent of pkg:oci/hardened-cni-plugins?repository_url=registry.rancher.com/rancher/hardened-cni-plugins. It does not assert the status of pkg:rpm/suse/busybox when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:0759-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go CNI plugin binaries do not invoke busybox; it is an incidental base image dependency. This statement concerns SUSE-SU-2026:0759-1 in pkg:rpm/suse/busybox as a subcomponent of pkg:oci/hardened-cni-plugins?repository_url=registry.rancher.com/rancher/hardened-cni-plugins. It does not assert the status of pkg:rpm/suse/busybox when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2054-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go CNI plugin binaries do not invoke busybox; it is an incidental base image dependency. This statement concerns SUSE-SU-2026:2054-1 in pkg:rpm/suse/busybox as a subcomponent of pkg:oci/hardened-cni-plugins?repository_url=registry.rancher.com/rancher/hardened-cni-plugins. It does not assert the status of pkg:rpm/suse/busybox when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4241-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Application uses its own regex engine; the system PCRE2 C library is not called at runtime. This statement concerns SUSE-SU-2026:4241-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/hardened-cni-plugins?repository_url=registry.rancher.com/rancher/hardened-cni-plugins. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-cni-plugins-repository-url-registry-rancher-com-rancher-hardened-cni-plugins"
+          ]
+        }
+      ]
+    }
+  ]
+}

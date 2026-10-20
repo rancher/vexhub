@@ -1,0 +1,102 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/mirrored-messagebird-sachet?repository_url=registry.rancher.com%2Francher%2Fmirrored-messagebird-sachet",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/mirrored-messagebird-sachet?repository_url=registry.rancher.com%2Francher%2Fmirrored-messagebird-sachet",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/mirrored-messagebird-sachet?repository_url=registry.rancher.com/rancher/mirrored-messagebird-sachet"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/mirrored-messagebird-sachet?repository_url=registry.rancher.com/rancher/mirrored-messagebird-sachet",
+        "product": {
+          "name": "pkg:oci/mirrored-messagebird-sachet?repository_url=registry.rancher.com/rancher/mirrored-messagebird-sachet",
+          "product_id": "pkg-oci-mirrored-messagebird-sachet-repository-url-registry-rancher-com-rancher-mirrored-messagebird-sachet",
+          "product_identification_helper": {
+            "purl": "pkg:oci/mirrored-messagebird-sachet?repository_url=registry.rancher.com/rancher/mirrored-messagebird-sachet"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/zlib",
+        "product": {
+          "name": "pkg:apk/alpine/zlib",
+          "product_id": "pkg-apk-alpine-zlib",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/zlib"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/zlib as a component of pkg:oci/mirrored-messagebird-sachet?repository_url=registry.rancher.com/rancher/mirrored-messagebird-sachet",
+          "product_id": "pkg-apk-alpine-zlib-in-pkg-oci-mirrored-messagebird-sachet-repository-url-registry-rancher-com-rancher-mirrored-messagebird-sachet"
+        },
+        "product_reference": "pkg-apk-alpine-zlib",
+        "relates_to_product_reference": "pkg-oci-mirrored-messagebird-sachet-repository-url-registry-rancher-com-rancher-mirrored-messagebird-sachet"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-37434",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-zlib-in-pkg-oci-mirrored-messagebird-sachet-repository-url-registry-rancher-com-rancher-mirrored-messagebird-sachet"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "sachet is a Go binary using compress/flate; the Alpine zlib C library is not linked at runtime. This statement concerns CVE-2022-37434 in pkg:apk/alpine/zlib as a subcomponent of pkg:oci/mirrored-messagebird-sachet?repository_url=registry.rancher.com/rancher/mirrored-messagebird-sachet. It does not assert the status of pkg:apk/alpine/zlib when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-zlib-in-pkg-oci-mirrored-messagebird-sachet-repository-url-registry-rancher-com-rancher-mirrored-messagebird-sachet"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-zlib-in-pkg-oci-mirrored-messagebird-sachet-repository-url-registry-rancher-com-rancher-mirrored-messagebird-sachet"
+          ]
+        }
+      ]
+    }
+  ]
+}

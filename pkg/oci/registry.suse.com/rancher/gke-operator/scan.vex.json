@@ -1,0 +1,107 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/gke-operator?repository_url=registry.suse.com%2Francher%2Fgke-operator",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/gke-operator?repository_url=registry.suse.com%2Francher%2Fgke-operator",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/gke-operator?repository_url=registry.suse.com/rancher/gke-operator"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/gke-operator?repository_url=registry.suse.com/rancher/gke-operator",
+        "product": {
+          "name": "pkg:oci/gke-operator?repository_url=registry.suse.com/rancher/gke-operator",
+          "product_id": "pkg-oci-gke-operator-repository-url-registry-suse-com-rancher-gke-operator",
+          "product_identification_helper": {
+            "purl": "pkg:oci/gke-operator?repository_url=registry.suse.com/rancher/gke-operator"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libcap2",
+        "product": {
+          "name": "pkg:rpm/suse/libcap2",
+          "product_id": "pkg-rpm-suse-libcap2",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libcap2"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libcap2 as a component of pkg:oci/gke-operator?repository_url=registry.suse.com/rancher/gke-operator",
+          "product_id": "pkg-rpm-suse-libcap2-in-pkg-oci-gke-operator-repository-url-registry-suse-com-rancher-gke-operator"
+        },
+        "product_reference": "pkg-rpm-suse-libcap2",
+        "relates_to_product_reference": "pkg-oci-gke-operator-repository-url-registry-suse-com-rancher-gke-operator"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libcap2-in-pkg-oci-gke-operator-repository-url-registry-suse-com-rancher-gke-operator"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:1432-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Linux capabilities C library not used by pure-Go GKE operator. This statement concerns SUSE-SU-2026:1432-1 in pkg:rpm/suse/libcap2 as a subcomponent of pkg:oci/gke-operator?repository_url=registry.suse.com/rancher/gke-operator. It does not assert the status of pkg:rpm/suse/libcap2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libcap2-in-pkg-oci-gke-operator-repository-url-registry-suse-com-rancher-gke-operator"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libcap2-in-pkg-oci-gke-operator-repository-url-registry-suse-com-rancher-gke-operator"
+          ]
+        }
+      ]
+    }
+  ]
+}

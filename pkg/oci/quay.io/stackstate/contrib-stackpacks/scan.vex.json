@@ -1,0 +1,107 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/contrib-stackpacks?repository_url=quay.io%2Fstackstate%2Fcontrib-stackpacks",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/contrib-stackpacks?repository_url=quay.io%2Fstackstate%2Fcontrib-stackpacks",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/contrib-stackpacks?repository_url=quay.io/stackstate/contrib-stackpacks"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/contrib-stackpacks?repository_url=quay.io/stackstate/contrib-stackpacks",
+        "product": {
+          "name": "pkg:oci/contrib-stackpacks?repository_url=quay.io/stackstate/contrib-stackpacks",
+          "product_id": "pkg-oci-contrib-stackpacks-repository-url-quay-io-stackstate-contrib-stackpacks",
+          "product_identification_helper": {
+            "purl": "pkg:oci/contrib-stackpacks?repository_url=quay.io/stackstate/contrib-stackpacks"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/rpm-ndb",
+        "product": {
+          "name": "pkg:rpm/suse/rpm-ndb",
+          "product_id": "pkg-rpm-suse-rpm-ndb",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/rpm-ndb"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/rpm-ndb as a component of pkg:oci/contrib-stackpacks?repository_url=quay.io/stackstate/contrib-stackpacks",
+          "product_id": "pkg-rpm-suse-rpm-ndb-in-pkg-oci-contrib-stackpacks-repository-url-quay-io-stackstate-contrib-stackpacks"
+        },
+        "product_reference": "pkg-rpm-suse-rpm-ndb",
+        "relates_to_product_reference": "pkg-oci-contrib-stackpacks-repository-url-quay-io-stackstate-contrib-stackpacks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-rpm-ndb-in-pkg-oci-contrib-stackpacks-repository-url-quay-io-stackstate-contrib-stackpacks"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:3600-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "rpm-ndb is the rpm package DB backend, only used during image build, never invoked by the running app. This statement concerns SUSE-SU-2026:3600-1 in pkg:rpm/suse/rpm-ndb as a subcomponent of pkg:oci/contrib-stackpacks?repository_url=quay.io/stackstate/contrib-stackpacks. It does not assert the status of pkg:rpm/suse/rpm-ndb when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-rpm-ndb-in-pkg-oci-contrib-stackpacks-repository-url-quay-io-stackstate-contrib-stackpacks"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-rpm-ndb-in-pkg-oci-contrib-stackpacks-repository-url-quay-io-stackstate-contrib-stackpacks"
+          ]
+        }
+      ]
+    }
+  ]
+}

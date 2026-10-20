@@ -1,0 +1,201 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/clickhouse-backup?repository_url=index.docker.io%2Fsuse-observability%2Fclickhouse-backup",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/clickhouse-backup?repository_url=index.docker.io%2Fsuse-observability%2Fclickhouse-backup",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/clickhouse-backup?repository_url=index.docker.io/suse-observability/clickhouse-backup"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/clickhouse-backup?repository_url=index.docker.io/suse-observability/clickhouse-backup",
+        "product": {
+          "name": "pkg:oci/clickhouse-backup?repository_url=index.docker.io/suse-observability/clickhouse-backup",
+          "product_id": "pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup",
+          "product_identification_helper": {
+            "purl": "pkg:oci/clickhouse-backup?repository_url=index.docker.io/suse-observability/clickhouse-backup"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libjq1",
+        "product": {
+          "name": "pkg:rpm/suse/libjq1",
+          "product_id": "pkg-rpm-suse-libjq1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libjq1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libblkid1",
+        "product": {
+          "name": "pkg:rpm/suse/libblkid1",
+          "product_id": "pkg-rpm-suse-libblkid1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libblkid1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libmount1",
+        "product": {
+          "name": "pkg:rpm/suse/libmount1",
+          "product_id": "pkg-rpm-suse-libmount1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libmount1"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libjq1 as a component of pkg:oci/clickhouse-backup?repository_url=index.docker.io/suse-observability/clickhouse-backup",
+          "product_id": "pkg-rpm-suse-libjq1-in-pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+        },
+        "product_reference": "pkg-rpm-suse-libjq1",
+        "relates_to_product_reference": "pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libblkid1 as a component of pkg:oci/clickhouse-backup?repository_url=index.docker.io/suse-observability/clickhouse-backup",
+          "product_id": "pkg-rpm-suse-libblkid1-in-pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+        },
+        "product_reference": "pkg-rpm-suse-libblkid1",
+        "relates_to_product_reference": "pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libmount1 as a component of pkg:oci/clickhouse-backup?repository_url=index.docker.io/suse-observability/clickhouse-backup",
+          "product_id": "pkg-rpm-suse-libmount1-in-pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+        },
+        "product_reference": "pkg-rpm-suse-libmount1",
+        "relates_to_product_reference": "pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libjq1-in-pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2283-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go backup tool processes JSON natively; jq CLI is not invoked, so libjq1 is never loaded. This statement concerns SUSE-SU-2026:2283-1 in pkg:rpm/suse/libjq1 as a subcomponent of pkg:oci/clickhouse-backup?repository_url=index.docker.io/suse-observability/clickhouse-backup. It does not assert the status of pkg:rpm/suse/libjq1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libjq1-in-pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libjq1-in-pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libblkid1-in-pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libmount1-in-pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2485-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go clickhouse-backup backs up data; C libblkid1 block probing not needed. This statement concerns SUSE-SU-2026:2485-1 in pkg:rpm/suse/libblkid1 as a subcomponent of pkg:oci/clickhouse-backup?repository_url=index.docker.io/suse-observability/clickhouse-backup. It does not assert the status of pkg:rpm/suse/libblkid1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Go clickhouse-backup doesn't mount filesystems; C libmount1 not needed. This statement concerns SUSE-SU-2026:2485-1 in pkg:rpm/suse/libmount1 as a subcomponent of pkg:oci/clickhouse-backup?repository_url=index.docker.io/suse-observability/clickhouse-backup. It does not assert the status of pkg:rpm/suse/libmount1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libblkid1-in-pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup",
+          "pkg-rpm-suse-libmount1-in-pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libblkid1-in-pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libmount1-in-pkg-oci-clickhouse-backup-repository-url-index-docker-io-suse-observability-clickhouse-backup"
+          ]
+        }
+      ]
+    }
+  ]
+}

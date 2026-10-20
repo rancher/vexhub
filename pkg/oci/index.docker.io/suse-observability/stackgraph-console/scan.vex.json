@@ -1,0 +1,107 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/stackgraph-console?repository_url=index.docker.io%2Fsuse-observability%2Fstackgraph-console",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/stackgraph-console?repository_url=index.docker.io%2Fsuse-observability%2Fstackgraph-console",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/stackgraph-console?repository_url=index.docker.io/suse-observability/stackgraph-console"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/stackgraph-console?repository_url=index.docker.io/suse-observability/stackgraph-console",
+        "product": {
+          "name": "pkg:oci/stackgraph-console?repository_url=index.docker.io/suse-observability/stackgraph-console",
+          "product_id": "pkg-oci-stackgraph-console-repository-url-index-docker-io-suse-observability-stackgraph-console",
+          "product_identification_helper": {
+            "purl": "pkg:oci/stackgraph-console?repository_url=index.docker.io/suse-observability/stackgraph-console"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libuuid1",
+        "product": {
+          "name": "pkg:rpm/suse/libuuid1",
+          "product_id": "pkg-rpm-suse-libuuid1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libuuid1"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libuuid1 as a component of pkg:oci/stackgraph-console?repository_url=index.docker.io/suse-observability/stackgraph-console",
+          "product_id": "pkg-rpm-suse-libuuid1-in-pkg-oci-stackgraph-console-repository-url-index-docker-io-suse-observability-stackgraph-console"
+        },
+        "product_reference": "pkg-rpm-suse-libuuid1",
+        "relates_to_product_reference": "pkg-oci-stackgraph-console-repository-url-index-docker-io-suse-observability-stackgraph-console"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libuuid1-in-pkg-oci-stackgraph-console-repository-url-index-docker-io-suse-observability-stackgraph-console"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2485-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "StackGraph console (Java) uses java.util.UUID; libuuid1 C library not linked by JVM. This statement concerns SUSE-SU-2026:2485-1 in pkg:rpm/suse/libuuid1 as a subcomponent of pkg:oci/stackgraph-console?repository_url=index.docker.io/suse-observability/stackgraph-console. It does not assert the status of pkg:rpm/suse/libuuid1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libuuid1-in-pkg-oci-stackgraph-console-repository-url-index-docker-io-suse-observability-stackgraph-console"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libuuid1-in-pkg-oci-stackgraph-console-repository-url-index-docker-io-suse-observability-stackgraph-console"
+          ]
+        }
+      ]
+    }
+  ]
+}

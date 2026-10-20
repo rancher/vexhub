@@ -1,0 +1,140 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/qdrant?repository_url=registry.rancher.com%2Fqdrant%2Fqdrant",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/qdrant?repository_url=registry.rancher.com%2Fqdrant%2Fqdrant",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/qdrant?repository_url=registry.rancher.com/qdrant/qdrant"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/qdrant?repository_url=registry.rancher.com/qdrant/qdrant",
+        "product": {
+          "name": "pkg:oci/qdrant?repository_url=registry.rancher.com/qdrant/qdrant",
+          "product_id": "pkg-oci-qdrant-repository-url-registry-rancher-com-qdrant-qdrant",
+          "product_identification_helper": {
+            "purl": "pkg:oci/qdrant?repository_url=registry.rancher.com/qdrant/qdrant"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/libc-bin",
+        "product": {
+          "name": "pkg:deb/ubuntu/libc-bin",
+          "product_id": "pkg-deb-ubuntu-libc-bin",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libc-bin"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/libc6",
+        "product": {
+          "name": "pkg:deb/ubuntu/libc6",
+          "product_id": "pkg-deb-ubuntu-libc6",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libc6"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/libc-bin as a component of pkg:oci/qdrant?repository_url=registry.rancher.com/qdrant/qdrant",
+          "product_id": "pkg-deb-ubuntu-libc-bin-in-pkg-oci-qdrant-repository-url-registry-rancher-com-qdrant-qdrant"
+        },
+        "product_reference": "pkg-deb-ubuntu-libc-bin",
+        "relates_to_product_reference": "pkg-oci-qdrant-repository-url-registry-rancher-com-qdrant-qdrant"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/libc6 as a component of pkg:oci/qdrant?repository_url=registry.rancher.com/qdrant/qdrant",
+          "product_id": "pkg-deb-ubuntu-libc6-in-pkg-oci-qdrant-repository-url-registry-rancher-com-qdrant-qdrant"
+        },
+        "product_reference": "pkg-deb-ubuntu-libc6",
+        "relates_to_product_reference": "pkg-oci-qdrant-repository-url-registry-rancher-com-qdrant-qdrant"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-4911",
+      "flags": [
+        {
+          "label": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-qdrant-repository-url-registry-rancher-com-qdrant-qdrant"
+          ]
+        },
+        {
+          "label": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-qdrant-repository-url-registry-rancher-com-qdrant-qdrant"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Looney Tunables requires local environment manipulation (GLIBC_TUNABLES) under SUID execution. Network adversaries have no shell access, and SUID is disabled via allowPrivilegeEscalation: false. This statement concerns CVE-2023-4911 in pkg:deb/ubuntu/libc-bin as a subcomponent of pkg:oci/qdrant?repository_url=registry.rancher.com/qdrant/qdrant. It does not assert the status of pkg:deb/ubuntu/libc-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Looney Tunables requires local environment manipulation (GLIBC_TUNABLES) under SUID execution. Network adversaries have no shell access, and SUID is disabled via allowPrivilegeEscalation: false. This statement concerns CVE-2023-4911 in pkg:deb/ubuntu/libc6 as a subcomponent of pkg:oci/qdrant?repository_url=registry.rancher.com/qdrant/qdrant. It does not assert the status of pkg:deb/ubuntu/libc6 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libc-bin-in-pkg-oci-qdrant-repository-url-registry-rancher-com-qdrant-qdrant",
+          "pkg-deb-ubuntu-libc6-in-pkg-oci-qdrant-repository-url-registry-rancher-com-qdrant-qdrant"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-qdrant-repository-url-registry-rancher-com-qdrant-qdrant"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-qdrant-repository-url-registry-rancher-com-qdrant-qdrant"
+          ]
+        }
+      ]
+    }
+  ]
+}

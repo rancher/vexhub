@@ -1,0 +1,219 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/promtail?repository_url=index.docker.io%2Fsuse-observability%2Fpromtail",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/promtail?repository_url=index.docker.io%2Fsuse-observability%2Fpromtail",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/promtail?repository_url=index.docker.io/suse-observability/promtail"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/promtail?repository_url=index.docker.io/suse-observability/promtail",
+        "product": {
+          "name": "pkg:oci/promtail?repository_url=index.docker.io/suse-observability/promtail",
+          "product_id": "pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail",
+          "product_identification_helper": {
+            "purl": "pkg:oci/promtail?repository_url=index.docker.io/suse-observability/promtail"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libsqlite3-0",
+        "product": {
+          "name": "pkg:rpm/suse/libsqlite3-0",
+          "product_id": "pkg-rpm-suse-libsqlite3-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libsqlite3-0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libzypp",
+        "product": {
+          "name": "pkg:rpm/suse/libzypp",
+          "product_id": "pkg-rpm-suse-libzypp",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libzypp"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/openssl-3",
+        "product": {
+          "name": "pkg:rpm/suse/openssl-3",
+          "product_id": "pkg-rpm-suse-openssl-3",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/openssl-3"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libsqlite3-0 as a component of pkg:oci/promtail?repository_url=index.docker.io/suse-observability/promtail",
+          "product_id": "pkg-rpm-suse-libsqlite3-0-in-pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+        },
+        "product_reference": "pkg-rpm-suse-libsqlite3-0",
+        "relates_to_product_reference": "pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libzypp as a component of pkg:oci/promtail?repository_url=index.docker.io/suse-observability/promtail",
+          "product_id": "pkg-rpm-suse-libzypp-in-pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+        },
+        "product_reference": "pkg-rpm-suse-libzypp",
+        "relates_to_product_reference": "pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/openssl-3 as a component of pkg:oci/promtail?repository_url=index.docker.io/suse-observability/promtail",
+          "product_id": "pkg-rpm-suse-openssl-3-in-pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+        },
+        "product_reference": "pkg-rpm-suse-openssl-3",
+        "relates_to_product_reference": "pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libsqlite3-0-in-pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2528-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Promtail is a Go log shipper using BoltDB/filesystem storage; not libsqlite3. This statement concerns SUSE-SU-2026:2528-1 in pkg:rpm/suse/libsqlite3-0 as a subcomponent of pkg:oci/promtail?repository_url=index.docker.io/suse-observability/promtail. It does not assert the status of pkg:rpm/suse/libsqlite3-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libsqlite3-0-in-pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libsqlite3-0-in-pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libzypp-in-pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2531-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "SUSE package-manager library; package installation not performed in running containers. This statement concerns SUSE-SU-2026:2531-1 in pkg:rpm/suse/libzypp as a subcomponent of pkg:oci/promtail?repository_url=index.docker.io/suse-observability/promtail. It does not assert the status of pkg:rpm/suse/libzypp when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libzypp-in-pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libzypp-in-pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssl-3-in-pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2648-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Promtail is a Go log-shipping binary; openssl CLI is never invoked at runtime. This statement concerns SUSE-SU-2026:2648-1 in pkg:rpm/suse/openssl-3 as a subcomponent of pkg:oci/promtail?repository_url=index.docker.io/suse-observability/promtail. It does not assert the status of pkg:rpm/suse/openssl-3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-openssl-3-in-pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssl-3-in-pkg-oci-promtail-repository-url-index-docker-io-suse-observability-promtail"
+          ]
+        }
+      ]
+    }
+  ]
+}

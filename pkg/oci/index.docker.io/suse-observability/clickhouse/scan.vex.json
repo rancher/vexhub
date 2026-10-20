@@ -1,0 +1,107 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/clickhouse?repository_url=index.docker.io%2Fsuse-observability%2Fclickhouse",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/clickhouse?repository_url=index.docker.io%2Fsuse-observability%2Fclickhouse",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/clickhouse?repository_url=index.docker.io/suse-observability/clickhouse"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/clickhouse?repository_url=index.docker.io/suse-observability/clickhouse",
+        "product": {
+          "name": "pkg:oci/clickhouse?repository_url=index.docker.io/suse-observability/clickhouse",
+          "product_id": "pkg-oci-clickhouse-repository-url-index-docker-io-suse-observability-clickhouse",
+          "product_identification_helper": {
+            "purl": "pkg:oci/clickhouse?repository_url=index.docker.io/suse-observability/clickhouse"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libsmartcols1",
+        "product": {
+          "name": "pkg:rpm/suse/libsmartcols1",
+          "product_id": "pkg-rpm-suse-libsmartcols1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libsmartcols1"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libsmartcols1 as a component of pkg:oci/clickhouse?repository_url=index.docker.io/suse-observability/clickhouse",
+          "product_id": "pkg-rpm-suse-libsmartcols1-in-pkg-oci-clickhouse-repository-url-index-docker-io-suse-observability-clickhouse"
+        },
+        "product_reference": "pkg-rpm-suse-libsmartcols1",
+        "relates_to_product_reference": "pkg-oci-clickhouse-repository-url-index-docker-io-suse-observability-clickhouse"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libsmartcols1-in-pkg-oci-clickhouse-repository-url-index-docker-io-suse-observability-clickhouse"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2485-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "ClickHouse uses own table formatting; C libsmartcols1 not called. This statement concerns SUSE-SU-2026:2485-1 in pkg:rpm/suse/libsmartcols1 as a subcomponent of pkg:oci/clickhouse?repository_url=index.docker.io/suse-observability/clickhouse. It does not assert the status of pkg:rpm/suse/libsmartcols1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libsmartcols1-in-pkg-oci-clickhouse-repository-url-index-docker-io-suse-observability-clickhouse"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libsmartcols1-in-pkg-oci-clickhouse-repository-url-index-docker-io-suse-observability-clickhouse"
+          ]
+        }
+      ]
+    }
+  ]
+}

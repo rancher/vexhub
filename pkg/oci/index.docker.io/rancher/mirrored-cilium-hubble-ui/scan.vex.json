@@ -1,0 +1,102 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/mirrored-cilium-hubble-ui?repository_url=index.docker.io%2Francher%2Fmirrored-cilium-hubble-ui",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/mirrored-cilium-hubble-ui?repository_url=index.docker.io%2Francher%2Fmirrored-cilium-hubble-ui",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/mirrored-cilium-hubble-ui?repository_url=index.docker.io/rancher/mirrored-cilium-hubble-ui"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/mirrored-cilium-hubble-ui?repository_url=index.docker.io/rancher/mirrored-cilium-hubble-ui",
+        "product": {
+          "name": "pkg:oci/mirrored-cilium-hubble-ui?repository_url=index.docker.io/rancher/mirrored-cilium-hubble-ui",
+          "product_id": "pkg-oci-mirrored-cilium-hubble-ui-repository-url-index-docker-io-rancher-mirrored-cilium-hubble-ui",
+          "product_identification_helper": {
+            "purl": "pkg:oci/mirrored-cilium-hubble-ui?repository_url=index.docker.io/rancher/mirrored-cilium-hubble-ui"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/musl-utils",
+        "product": {
+          "name": "pkg:apk/alpine/musl-utils",
+          "product_id": "pkg-apk-alpine-musl-utils",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/musl-utils"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/musl-utils as a component of pkg:oci/mirrored-cilium-hubble-ui?repository_url=index.docker.io/rancher/mirrored-cilium-hubble-ui",
+          "product_id": "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-index-docker-io-rancher-mirrored-cilium-hubble-ui"
+        },
+        "product_reference": "pkg-apk-alpine-musl-utils",
+        "relates_to_product_reference": "pkg-oci-mirrored-cilium-hubble-ui-repository-url-index-docker-io-rancher-mirrored-cilium-hubble-ui"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-40200",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-index-docker-io-rancher-mirrored-cilium-hubble-ui"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "musl-utils helper binaries (ldconfig/getconf) are not executed by the container entrypoint. This statement concerns CVE-2026-40200 in pkg:apk/alpine/musl-utils as a subcomponent of pkg:oci/mirrored-cilium-hubble-ui?repository_url=index.docker.io/rancher/mirrored-cilium-hubble-ui. It does not assert the status of pkg:apk/alpine/musl-utils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-index-docker-io-rancher-mirrored-cilium-hubble-ui"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-index-docker-io-rancher-mirrored-cilium-hubble-ui"
+          ]
+        }
+      ]
+    }
+  ]
+}

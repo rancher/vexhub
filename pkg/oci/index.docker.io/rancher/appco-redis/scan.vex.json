@@ -1,0 +1,219 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/appco-redis?repository_url=index.docker.io%2Francher%2Fappco-redis",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/appco-redis?repository_url=index.docker.io%2Francher%2Fappco-redis",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/appco-redis?repository_url=index.docker.io/rancher/appco-redis"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/appco-redis?repository_url=index.docker.io/rancher/appco-redis",
+        "product": {
+          "name": "pkg:oci/appco-redis?repository_url=index.docker.io/rancher/appco-redis",
+          "product_id": "pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis",
+          "product_identification_helper": {
+            "purl": "pkg:oci/appco-redis?repository_url=index.docker.io/rancher/appco-redis"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/pam",
+        "product": {
+          "name": "pkg:rpm/suse/pam",
+          "product_id": "pkg-rpm-suse-pam",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/pam"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/krb5",
+        "product": {
+          "name": "pkg:rpm/suse/krb5",
+          "product_id": "pkg-rpm-suse-krb5",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/krb5"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/liblzma5",
+        "product": {
+          "name": "pkg:rpm/suse/liblzma5",
+          "product_id": "pkg-rpm-suse-liblzma5",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/liblzma5"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/pam as a component of pkg:oci/appco-redis?repository_url=index.docker.io/rancher/appco-redis",
+          "product_id": "pkg-rpm-suse-pam-in-pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+        },
+        "product_reference": "pkg-rpm-suse-pam",
+        "relates_to_product_reference": "pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/krb5 as a component of pkg:oci/appco-redis?repository_url=index.docker.io/rancher/appco-redis",
+          "product_id": "pkg-rpm-suse-krb5-in-pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+        },
+        "product_reference": "pkg-rpm-suse-krb5",
+        "relates_to_product_reference": "pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/liblzma5 as a component of pkg:oci/appco-redis?repository_url=index.docker.io/rancher/appco-redis",
+          "product_id": "pkg-rpm-suse-liblzma5-in-pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+        },
+        "product_reference": "pkg-rpm-suse-liblzma5",
+        "relates_to_product_reference": "pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-pam-in-pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2025:02970-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Container authenticates via certificates/tokens/OIDC; the PAM library is not called at runtime. This statement concerns SUSE-SU-2025:02970-1 in pkg:rpm/suse/pam as a subcomponent of pkg:oci/appco-redis?repository_url=index.docker.io/rancher/appco-redis. It does not assert the status of pkg:rpm/suse/pam when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-pam-in-pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-pam-in-pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-krb5-in-pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2025:3699-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Redis server does not support Kerberos/GSSAPI; krb5 is an incidental SLES OS dependency not loaded at runtime. This statement concerns SUSE-SU-2025:3699-1 in pkg:rpm/suse/krb5 as a subcomponent of pkg:oci/appco-redis?repository_url=index.docker.io/rancher/appco-redis. It does not assert the status of pkg:rpm/suse/krb5 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-krb5-in-pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-krb5-in-pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-liblzma5-in-pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2051-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Redis uses LZF compression, not XZ; liblzma5 is not linked or called by Redis. This statement concerns SUSE-SU-2026:2051-1 in pkg:rpm/suse/liblzma5 as a subcomponent of pkg:oci/appco-redis?repository_url=index.docker.io/rancher/appco-redis. It does not assert the status of pkg:rpm/suse/liblzma5 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-liblzma5-in-pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-liblzma5-in-pkg-oci-appco-redis-repository-url-index-docker-io-rancher-appco-redis"
+          ]
+        }
+      ]
+    }
+  ]
+}

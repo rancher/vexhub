@@ -1,0 +1,201 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/jmx-exporter?repository_url=index.docker.io%2Fsuse-observability%2Fjmx-exporter",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/jmx-exporter?repository_url=index.docker.io%2Fsuse-observability%2Fjmx-exporter",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/jmx-exporter?repository_url=index.docker.io/suse-observability/jmx-exporter"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/jmx-exporter?repository_url=index.docker.io/suse-observability/jmx-exporter",
+        "product": {
+          "name": "pkg:oci/jmx-exporter?repository_url=index.docker.io/suse-observability/jmx-exporter",
+          "product_id": "pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter",
+          "product_identification_helper": {
+            "purl": "pkg:oci/jmx-exporter?repository_url=index.docker.io/suse-observability/jmx-exporter"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libfdisk1",
+        "product": {
+          "name": "pkg:rpm/suse/libfdisk1",
+          "product_id": "pkg-rpm-suse-libfdisk1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libfdisk1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/util-linux",
+        "product": {
+          "name": "pkg:rpm/suse/util-linux",
+          "product_id": "pkg-rpm-suse-util-linux",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/util-linux"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libgif7",
+        "product": {
+          "name": "pkg:rpm/suse/libgif7",
+          "product_id": "pkg-rpm-suse-libgif7",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libgif7"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libfdisk1 as a component of pkg:oci/jmx-exporter?repository_url=index.docker.io/suse-observability/jmx-exporter",
+          "product_id": "pkg-rpm-suse-libfdisk1-in-pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+        },
+        "product_reference": "pkg-rpm-suse-libfdisk1",
+        "relates_to_product_reference": "pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/util-linux as a component of pkg:oci/jmx-exporter?repository_url=index.docker.io/suse-observability/jmx-exporter",
+          "product_id": "pkg-rpm-suse-util-linux-in-pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+        },
+        "product_reference": "pkg-rpm-suse-util-linux",
+        "relates_to_product_reference": "pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libgif7 as a component of pkg:oci/jmx-exporter?repository_url=index.docker.io/suse-observability/jmx-exporter",
+          "product_id": "pkg-rpm-suse-libgif7-in-pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+        },
+        "product_reference": "pkg-rpm-suse-libgif7",
+        "relates_to_product_reference": "pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libfdisk1-in-pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-util-linux-in-pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2485-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "JMX Exporter (Java) does not link against libfdisk1; fdisk library not in JVM execute path. This statement concerns SUSE-SU-2026:2485-1 in pkg:rpm/suse/libfdisk1 as a subcomponent of pkg:oci/jmx-exporter?repository_url=index.docker.io/suse-observability/jmx-exporter. It does not assert the status of pkg:rpm/suse/libfdisk1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Java JMX exporter; util-linux C tools are never invoked by the JVM at runtime. This statement concerns SUSE-SU-2026:2485-1 in pkg:rpm/suse/util-linux as a subcomponent of pkg:oci/jmx-exporter?repository_url=index.docker.io/suse-observability/jmx-exporter. It does not assert the status of pkg:rpm/suse/util-linux when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libfdisk1-in-pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter",
+          "pkg-rpm-suse-util-linux-in-pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libfdisk1-in-pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-util-linux-in-pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libgif7-in-pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2666-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "JMX metrics exporter has no image processing; libgif7 is an unused transitive dependency. This statement concerns SUSE-SU-2026:2666-1 in pkg:rpm/suse/libgif7 as a subcomponent of pkg:oci/jmx-exporter?repository_url=index.docker.io/suse-observability/jmx-exporter. It does not assert the status of pkg:rpm/suse/libgif7 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libgif7-in-pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libgif7-in-pkg-oci-jmx-exporter-repository-url-index-docker-io-suse-observability-jmx-exporter"
+          ]
+        }
+      ]
+    }
+  ]
+}
