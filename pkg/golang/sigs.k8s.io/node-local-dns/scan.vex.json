@@ -1,0 +1,295 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:golang/sigs.k8s.io/node-local-dns",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:golang/sigs.k8s.io/node-local-dns",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:golang/sigs.k8s.io/node-local-dns"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:golang/sigs.k8s.io/node-local-dns",
+        "product": {
+          "name": "pkg:golang/sigs.k8s.io/node-local-dns",
+          "product_id": "pkg-golang-sigs-k8s-io-node-local-dns",
+          "product_identification_helper": {
+            "purl": "pkg:golang/sigs.k8s.io/node-local-dns"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.26.8",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.26.8",
+          "product_id": "pkg-golang-stdlib-v1-26-8",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.26.8"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/golang.org%2Fx%2Fmod@v0.38.0",
+        "product": {
+          "name": "pkg:golang/golang.org%2Fx%2Fmod@v0.38.0",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fmod-v0-38-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/golang.org%2Fx%2Fmod@v0.38.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/golang.org/x/mod@v0.38.0",
+        "product": {
+          "name": "pkg:golang/golang.org/x/mod@v0.38.0",
+          "product_id": "pkg-golang-golang-org-x-mod-v0-38-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/golang.org/x/mod@v0.38.0"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.8 as a component of pkg:golang/sigs.k8s.io/node-local-dns",
+          "product_id": "pkg-golang-stdlib-v1-26-8-in-pkg-golang-sigs-k8s-io-node-local-dns"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-8",
+        "relates_to_product_reference": "pkg-golang-sigs-k8s-io-node-local-dns"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Fmod@v0.38.0 as a component of pkg:golang/sigs.k8s.io/node-local-dns",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fmod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Fmod-v0-38-0",
+        "relates_to_product_reference": "pkg-golang-sigs-k8s-io-node-local-dns"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/golang.org/x/mod@v0.38.0 as a component of pkg:golang/sigs.k8s.io/node-local-dns",
+          "product_id": "pkg-golang-golang-org-x-mod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns"
+        },
+        "product_reference": "pkg-golang-golang-org-x-mod-v0-38-0",
+        "relates_to_product_reference": "pkg-golang-sigs-k8s-io-node-local-dns"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-56857",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-sigs-k8s-io-node-local-dns"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6604"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/sigs.k8s.io/node-local-dns. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-sigs-k8s-io-node-local-dns"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-sigs-k8s-io-node-local-dns"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56864",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fmod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-x-mod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6180"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56864 in pkg:golang/golang.org%2Fx%2Fmod@v0.38.0 as a subcomponent of pkg:golang/sigs.k8s.io/node-local-dns. It does not assert the status of pkg:golang/golang.org%2Fx%2Fmod@v0.38.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56864 in pkg:golang/golang.org/x/mod@v0.38.0 as a subcomponent of pkg:golang/sigs.k8s.io/node-local-dns. It does not assert the status of pkg:golang/golang.org/x/mod@v0.38.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-golang-org-2Fx-2Fmod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns",
+          "pkg-golang-golang-org-x-mod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fmod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-x-mod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56865",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fmod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-x-mod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6179"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56865 in pkg:golang/golang.org%2Fx%2Fmod@v0.38.0 as a subcomponent of pkg:golang/sigs.k8s.io/node-local-dns. It does not assert the status of pkg:golang/golang.org%2Fx%2Fmod@v0.38.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56865 in pkg:golang/golang.org/x/mod@v0.38.0 as a subcomponent of pkg:golang/sigs.k8s.io/node-local-dns. It does not assert the status of pkg:golang/golang.org/x/mod@v0.38.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-golang-org-2Fx-2Fmod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns",
+          "pkg-golang-golang-org-x-mod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fmod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-x-mod-v0-38-0-in-pkg-golang-sigs-k8s-io-node-local-dns"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-78667",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-sigs-k8s-io-node-local-dns"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6609"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/sigs.k8s.io/node-local-dns. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-sigs-k8s-io-node-local-dns"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-8-in-pkg-golang-sigs-k8s-io-node-local-dns"
+          ]
+        }
+      ]
+    }
+  ]
+}

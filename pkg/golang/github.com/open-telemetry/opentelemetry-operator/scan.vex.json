@@ -1,0 +1,235 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:golang/github.com/open-telemetry/opentelemetry-operator",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:golang/github.com/open-telemetry/opentelemetry-operator",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:golang/github.com/open-telemetry/opentelemetry-operator"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/open-telemetry/opentelemetry-operator",
+        "product": {
+          "name": "pkg:golang/github.com/open-telemetry/opentelemetry-operator",
+          "product_id": "pkg-golang-github-com-open-telemetry-opentelemetry-operator",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/open-telemetry/opentelemetry-operator"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.26.4",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.26.4",
+          "product_id": "pkg-golang-stdlib-v1-26-4",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.26.4"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/docker/docker@v28.5.2+incompatible",
+        "product": {
+          "name": "pkg:golang/github.com/docker/docker@v28.5.2+incompatible",
+          "product_id": "pkg-golang-github-com-docker-docker-v28-5-2-incompatible",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/docker/docker@v28.5.2+incompatible"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.4 as a component of pkg:golang/github.com/open-telemetry/opentelemetry-operator",
+          "product_id": "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-4",
+        "relates_to_product_reference": "pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com/docker/docker@v28.5.2+incompatible as a component of pkg:golang/github.com/open-telemetry/opentelemetry-operator",
+          "product_id": "pkg-golang-github-com-docker-docker-v28-5-2-incompatible-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+        },
+        "product_reference": "pkg-golang-github-com-docker-docker-v28-5-2-incompatible",
+        "relates_to_product_reference": "pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-39822",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OTel target allocator distributes scrape targets; does not use os.Root sandboxed file access API. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.26.4 as a subcomponent of pkg:golang/github.com/open-telemetry/opentelemetry-operator. It does not assert the status of pkg:golang/stdlib@v1.26.4 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-41567",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-docker-docker-v28-5-2-incompatible-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-5746"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-x86f-5xw2-fm2r"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-41567 in pkg:golang/github.com/docker/docker@v28.5.2+incompatible as a subcomponent of pkg:golang/github.com/open-telemetry/opentelemetry-operator. It does not assert the status of pkg:golang/github.com/docker/docker@v28.5.2+incompatible when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-docker-docker-v28-5-2-incompatible-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-docker-docker-v28-5-2-incompatible-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-42306",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-docker-docker-v28-5-2-incompatible-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-5617"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-rg2x-37c3-w2rh"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42306 in pkg:golang/github.com/docker/docker@v28.5.2+incompatible as a subcomponent of pkg:golang/github.com/open-telemetry/opentelemetry-operator. It does not assert the status of pkg:golang/github.com/docker/docker@v28.5.2+incompatible when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-docker-docker-v28-5-2-incompatible-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-docker-docker-v28-5-2-incompatible-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-42505",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OTel target allocator uses standard TLS to Prometheus/K8s APIs; ECH not configured. This statement concerns CVE-2026-42505 in pkg:golang/stdlib@v1.26.4 as a subcomponent of pkg:golang/github.com/open-telemetry/opentelemetry-operator. It does not assert the status of pkg:golang/stdlib@v1.26.4 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-open-telemetry-opentelemetry-operator"
+          ]
+        }
+      ]
+    }
+  ]
+}

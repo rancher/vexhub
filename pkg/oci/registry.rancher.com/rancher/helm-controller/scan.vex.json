@@ -1,0 +1,189 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/helm-controller?repository_url=registry.rancher.com%2Francher%2Fhelm-controller",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/helm-controller?repository_url=registry.rancher.com%2Francher%2Fhelm-controller",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/helm-controller?repository_url=registry.rancher.com/rancher/helm-controller"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/helm-controller?repository_url=registry.rancher.com/rancher/helm-controller",
+        "product": {
+          "name": "pkg:oci/helm-controller?repository_url=registry.rancher.com/rancher/helm-controller",
+          "product_id": "pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller",
+          "product_identification_helper": {
+            "purl": "pkg:oci/helm-controller?repository_url=registry.rancher.com/rancher/helm-controller"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libcrypto3",
+        "product": {
+          "name": "pkg:apk/alpine/libcrypto3",
+          "product_id": "pkg-apk-alpine-libcrypto3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libcrypto3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libssl3",
+        "product": {
+          "name": "pkg:apk/alpine/libssl3",
+          "product_id": "pkg-apk-alpine-libssl3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libssl3"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libcrypto3 as a component of pkg:oci/helm-controller?repository_url=registry.rancher.com/rancher/helm-controller",
+          "product_id": "pkg-apk-alpine-libcrypto3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+        },
+        "product_reference": "pkg-apk-alpine-libcrypto3",
+        "relates_to_product_reference": "pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libssl3 as a component of pkg:oci/helm-controller?repository_url=registry.rancher.com/rancher/helm-controller",
+          "product_id": "pkg-apk-alpine-libssl3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+        },
+        "product_reference": "pkg-apk-alpine-libssl3",
+        "relates_to_product_reference": "pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-14456",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go binary uses Go crypto/tls; libcrypto3 is not loaded or called at runtime. This statement concerns CVE-2026-14456 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/helm-controller?repository_url=registry.rancher.com/rancher/helm-controller. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Go binary uses Go crypto/tls; libssl3 is not loaded or called at runtime. This statement concerns CVE-2026-14456 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/helm-controller?repository_url=registry.rancher.com/rancher/helm-controller. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-31789",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "helm-controller is a static Go binary using crypto/tls; Alpine OpenSSL libs are not loaded at runtime. This statement concerns CVE-2026-31789 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/helm-controller?repository_url=registry.rancher.com/rancher/helm-controller. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "helm-controller is a static Go binary using crypto/tls; Alpine OpenSSL libs are not loaded at runtime. This statement concerns CVE-2026-31789 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/helm-controller?repository_url=registry.rancher.com/rancher/helm-controller. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-rancher-helm-controller"
+          ]
+        }
+      ]
+    }
+  ]
+}

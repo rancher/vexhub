@@ -1,0 +1,140 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=registry.rancher.com%2Francher%2Fmirrored-kube-vip-kube-vip-iptables",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=registry.rancher.com%2Francher%2Fmirrored-kube-vip-kube-vip-iptables",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=registry.rancher.com/rancher/mirrored-kube-vip-kube-vip-iptables"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=registry.rancher.com/rancher/mirrored-kube-vip-kube-vip-iptables",
+        "product": {
+          "name": "pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=registry.rancher.com/rancher/mirrored-kube-vip-kube-vip-iptables",
+          "product_id": "pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-registry-rancher-com-rancher-mirrored-kube-vip-kube-vip-iptables",
+          "product_identification_helper": {
+            "purl": "pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=registry.rancher.com/rancher/mirrored-kube-vip-kube-vip-iptables"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libcrypto3",
+        "product": {
+          "name": "pkg:apk/alpine/libcrypto3",
+          "product_id": "pkg-apk-alpine-libcrypto3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libcrypto3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libssl3",
+        "product": {
+          "name": "pkg:apk/alpine/libssl3",
+          "product_id": "pkg-apk-alpine-libssl3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libssl3"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libcrypto3 as a component of pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=registry.rancher.com/rancher/mirrored-kube-vip-kube-vip-iptables",
+          "product_id": "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-registry-rancher-com-rancher-mirrored-kube-vip-kube-vip-iptables"
+        },
+        "product_reference": "pkg-apk-alpine-libcrypto3",
+        "relates_to_product_reference": "pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-registry-rancher-com-rancher-mirrored-kube-vip-kube-vip-iptables"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libssl3 as a component of pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=registry.rancher.com/rancher/mirrored-kube-vip-kube-vip-iptables",
+          "product_id": "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-registry-rancher-com-rancher-mirrored-kube-vip-kube-vip-iptables"
+        },
+        "product_reference": "pkg-apk-alpine-libssl3",
+        "relates_to_product_reference": "pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-registry-rancher-com-rancher-mirrored-kube-vip-kube-vip-iptables"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-31789",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-registry-rancher-com-rancher-mirrored-kube-vip-kube-vip-iptables"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-registry-rancher-com-rancher-mirrored-kube-vip-kube-vip-iptables"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Harvester kube-vip does not print or log contents of untrusted X.509 certificates. This statement concerns CVE-2026-31789 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=registry.rancher.com/rancher/mirrored-kube-vip-kube-vip-iptables. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Harvester kube-vip does not print or log contents of untrusted X.509 certificates. This statement concerns CVE-2026-31789 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=registry.rancher.com/rancher/mirrored-kube-vip-kube-vip-iptables. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-registry-rancher-com-rancher-mirrored-kube-vip-kube-vip-iptables",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-registry-rancher-com-rancher-mirrored-kube-vip-kube-vip-iptables"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-registry-rancher-com-rancher-mirrored-kube-vip-kube-vip-iptables"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-registry-rancher-com-rancher-mirrored-kube-vip-kube-vip-iptables"
+          ]
+        }
+      ]
+    }
+  ]
+}

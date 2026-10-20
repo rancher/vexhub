@@ -1,0 +1,153 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com%2Francher%2Fmirrored-fluent-fluent-bit",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com%2Francher%2Fmirrored-fluent-fluent-bit",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com/rancher/mirrored-fluent-fluent-bit"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com/rancher/mirrored-fluent-fluent-bit",
+        "product": {
+          "name": "pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com/rancher/mirrored-fluent-fluent-bit",
+          "product_id": "pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-rancher-mirrored-fluent-fluent-bit",
+          "product_identification_helper": {
+            "purl": "pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com/rancher/mirrored-fluent-fluent-bit"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/debian/zlib1g",
+        "product": {
+          "name": "pkg:deb/debian/zlib1g",
+          "product_id": "pkg-deb-debian-zlib1g",
+          "product_identification_helper": {
+            "purl": "pkg:deb/debian/zlib1g"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/debian/libcap2",
+        "product": {
+          "name": "pkg:deb/debian/libcap2",
+          "product_id": "pkg-deb-debian-libcap2",
+          "product_identification_helper": {
+            "purl": "pkg:deb/debian/libcap2"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/debian/zlib1g as a component of pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com/rancher/mirrored-fluent-fluent-bit",
+          "product_id": "pkg-deb-debian-zlib1g-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-rancher-mirrored-fluent-fluent-bit"
+        },
+        "product_reference": "pkg-deb-debian-zlib1g",
+        "relates_to_product_reference": "pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-rancher-mirrored-fluent-fluent-bit"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/debian/libcap2 as a component of pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com/rancher/mirrored-fluent-fluent-bit",
+          "product_id": "pkg-deb-debian-libcap2-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-rancher-mirrored-fluent-fluent-bit"
+        },
+        "product_reference": "pkg-deb-debian-libcap2",
+        "relates_to_product_reference": "pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-rancher-mirrored-fluent-fluent-bit"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-45853",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-zlib1g-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-rancher-mirrored-fluent-fluent-bit"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "MiniZip (zipOpenNewFileInZip4_64) is not built into zlib1g; the vulnerable code is absent from libz. This statement concerns CVE-2023-45853 in pkg:deb/debian/zlib1g as a subcomponent of pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com/rancher/mirrored-fluent-fluent-bit. It does not assert the status of pkg:deb/debian/zlib1g when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-zlib1g-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-rancher-mirrored-fluent-fluent-bit"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-zlib1g-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-rancher-mirrored-fluent-fluent-bit"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-4878",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libcap2-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-rancher-mirrored-fluent-fluent-bit"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Capabilities are set by the container runtime; the libcap parsing code is not called by the app. This statement concerns CVE-2026-4878 in pkg:deb/debian/libcap2 as a subcomponent of pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com/rancher/mirrored-fluent-fluent-bit. It does not assert the status of pkg:deb/debian/libcap2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libcap2-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-rancher-mirrored-fluent-fluent-bit"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libcap2-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-rancher-mirrored-fluent-fluent-bit"
+          ]
+        }
+      ]
+    }
+  ]
+}

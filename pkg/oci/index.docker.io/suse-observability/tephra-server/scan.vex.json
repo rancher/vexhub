@@ -1,0 +1,145 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/tephra-server?repository_url=index.docker.io%2Fsuse-observability%2Ftephra-server",
+    "tracking": {
+      "current_release_date": "2026-10-20T21:41:46Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/tephra-server?repository_url=index.docker.io%2Fsuse-observability%2Ftephra-server",
+      "initial_release_date": "2026-10-20T21:41:46Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T21:41:46Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/tephra-server?repository_url=index.docker.io/suse-observability/tephra-server"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/tephra-server?repository_url=index.docker.io/suse-observability/tephra-server",
+        "product": {
+          "name": "pkg:oci/tephra-server?repository_url=index.docker.io/suse-observability/tephra-server",
+          "product_id": "pkg-oci-tephra-server-repository-url-index-docker-io-suse-observability-tephra-server",
+          "product_identification_helper": {
+            "purl": "pkg:oci/tephra-server?repository_url=index.docker.io/suse-observability/tephra-server"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libfdisk1",
+        "product": {
+          "name": "pkg:rpm/suse/libfdisk1",
+          "product_id": "pkg-rpm-suse-libfdisk1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libfdisk1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/util-linux",
+        "product": {
+          "name": "pkg:rpm/suse/util-linux",
+          "product_id": "pkg-rpm-suse-util-linux",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/util-linux"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libfdisk1 as a component of pkg:oci/tephra-server?repository_url=index.docker.io/suse-observability/tephra-server",
+          "product_id": "pkg-rpm-suse-libfdisk1-in-pkg-oci-tephra-server-repository-url-index-docker-io-suse-observability-tephra-server"
+        },
+        "product_reference": "pkg-rpm-suse-libfdisk1",
+        "relates_to_product_reference": "pkg-oci-tephra-server-repository-url-index-docker-io-suse-observability-tephra-server"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/util-linux as a component of pkg:oci/tephra-server?repository_url=index.docker.io/suse-observability/tephra-server",
+          "product_id": "pkg-rpm-suse-util-linux-in-pkg-oci-tephra-server-repository-url-index-docker-io-suse-observability-tephra-server"
+        },
+        "product_reference": "pkg-rpm-suse-util-linux",
+        "relates_to_product_reference": "pkg-oci-tephra-server-repository-url-index-docker-io-suse-observability-tephra-server"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libfdisk1-in-pkg-oci-tephra-server-repository-url-index-docker-io-suse-observability-tephra-server"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-util-linux-in-pkg-oci-tephra-server-repository-url-index-docker-io-suse-observability-tephra-server"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:2485-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Java JVM application; C libfdisk disk-partition library never loaded by the JVM. This statement concerns SUSE-SU-2026:2485-1 in pkg:rpm/suse/libfdisk1 as a subcomponent of pkg:oci/tephra-server?repository_url=index.docker.io/suse-observability/tephra-server. It does not assert the status of pkg:rpm/suse/libfdisk1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Java Tephra TX server doesn't exec util-linux CLI tools at runtime. This statement concerns SUSE-SU-2026:2485-1 in pkg:rpm/suse/util-linux as a subcomponent of pkg:oci/tephra-server?repository_url=index.docker.io/suse-observability/tephra-server. It does not assert the status of pkg:rpm/suse/util-linux when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libfdisk1-in-pkg-oci-tephra-server-repository-url-index-docker-io-suse-observability-tephra-server",
+          "pkg-rpm-suse-util-linux-in-pkg-oci-tephra-server-repository-url-index-docker-io-suse-observability-tephra-server"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libfdisk1-in-pkg-oci-tephra-server-repository-url-index-docker-io-suse-observability-tephra-server"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-util-linux-in-pkg-oci-tephra-server-repository-url-index-docker-io-suse-observability-tephra-server"
+          ]
+        }
+      ]
+    }
+  ]
+}
