@@ -1,6 +1,6 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "https://openvex.dev/docs/public/vex-22e5f2fcba64f9ee135cae65f1daabb75c07a4f19c79b927202a2b3e91363a89",
+  "@id": "https://openvex.dev/docs/public/vex-73a82dc01d0c3063ea4b5aba2da1d213fe13459f5cd3a25ad2dad1ae222dda52",
   "author": "Rancher Security team",
   "version": 1,
   "statements": [
@@ -12404,6 +12404,29 @@
     },
     {
       "vulnerability": {
+        "name": "CVE-2026-61801",
+        "aliases": [
+          "GO-2026-6686",
+          "GHSA-mjcv-p78q-w5fw"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/github.com/derailed/k9s",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com%2Fmoby%2Fsys%2Fuser@v0.4.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Govulncheck determined that the vulnerable code isn't called",
+      "timestamp": "2026-10-20T05:18:45Z"
+    },
+    {
+      "vulnerability": {
         "name": "CVE-2026-78667",
         "aliases": [
           "GO-2026-6609"
@@ -12583,5 +12606,5 @@
       "timestamp": "2026-09-17T02:14:28Z"
     }
   ],
-  "timestamp": "2026-10-16T04:57:01Z"
+  "timestamp": "2026-10-20T05:21:28Z"
 }
