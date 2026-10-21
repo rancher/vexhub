@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/rancher/fleet",
     "tracking": {
-      "current_release_date": "2026-10-21T04:27:47Z",
+      "current_release_date": "2026-10-21T11:36:10Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-21T04:27:47Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-21T11:36:10Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -4235,6 +4240,17 @@
           "product_id": "pkg-golang-google-golang-org-grpc-v1-82-1",
           "product_identification_helper": {
             "purl": "pkg:golang/google.golang.org/grpc@v1.82.1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/docker/distribution@v2.8.3+incompatible",
+        "product": {
+          "name": "pkg:golang/github.com/docker/distribution@v2.8.3+incompatible",
+          "product_id": "pkg-golang-github-com-docker-distribution-v2-8-3-incompatible",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/docker/distribution@v2.8.3+incompatible"
           }
         }
       }
@@ -15831,6 +15847,15 @@
         },
         "product_reference": "pkg-golang-google-golang-org-grpc-v1-82-1",
         "relates_to_product_reference": "pkg-golang-github-com-rancher-fleet-v0-13-16-rc-1"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com/docker/distribution@v2.8.3+incompatible as a component of pkg:golang/github.com/rancher/fleet",
+          "product_id": "pkg-golang-github-com-docker-distribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-fleet"
+        },
+        "product_reference": "pkg-golang-github-com-docker-distribution-v2-8-3-incompatible",
+        "relates_to_product_reference": "pkg-golang-github-com-rancher-fleet"
       }
     ]
   },
@@ -72532,6 +72557,43 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-google-golang-org-grpc-v1-79-3-in-pkg-golang-github-com-rancher-fleet-v0-14-9-rc-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-85747",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-docker-distribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-fleet"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-685w-q87j-wqw3"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only registry/client/auth/challenge is linked into this binary; the vulnerable registry/client manifests.Get and registry/proxy packages are not compiled in. Advisory: https://github.com/advisories/GHSA-685w-q87j-wqw3. This statement concerns CVE-2026-85747 in pkg:golang/github.com/docker/distribution@v2.8.3+incompatible as a subcomponent of pkg:golang/github.com/rancher/fleet. It does not assert the status of pkg:golang/github.com/docker/distribution@v2.8.3+incompatible when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-docker-distribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-fleet"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-docker-distribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-fleet"
           ]
         }
       ]
