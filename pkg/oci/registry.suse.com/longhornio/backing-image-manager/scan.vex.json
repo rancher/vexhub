@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/backing-image-manager?repository_url=registry.suse.com%2Flonghornio%2Fbacking-image-manager",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-21T04:27:47Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/backing-image-manager?repository_url=registry.suse.com/longhornio/backing-image-manager"
+        },
+        {
+          "date": "2026-10-21T04:27:47Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -701,6 +706,17 @@
             "purl": "pkg:rpm/suse/rpcbind"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libiperf0",
+        "product": {
+          "name": "pkg:rpm/suse/libiperf0",
+          "product_id": "pkg-rpm-suse-libiperf0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libiperf0"
+          }
+        }
       }
     ],
     "relationships": [
@@ -1251,6 +1267,24 @@
           "product_id": "pkg-rpm-suse-rpcbind-in-pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager"
         },
         "product_reference": "pkg-rpm-suse-rpcbind",
+        "relates_to_product_reference": "pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/iperf as a component of pkg:oci/backing-image-manager?repository_url=registry.suse.com%2Flonghornio%2Fbacking-image-manager",
+          "product_id": "pkg-rpm-suse-iperf-in-pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager"
+        },
+        "product_reference": "pkg-rpm-suse-iperf",
+        "relates_to_product_reference": "pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libiperf0 as a component of pkg:oci/backing-image-manager?repository_url=registry.suse.com%2Flonghornio%2Fbacking-image-manager",
+          "product_id": "pkg-rpm-suse-libiperf0-in-pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager"
+        },
+        "product_reference": "pkg-rpm-suse-libiperf0",
         "relates_to_product_reference": "pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager"
       }
     ]
@@ -5320,6 +5354,60 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-glibc-devel-in-pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-iperf-in-pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libiperf0-in-pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4678-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "iperf3 is a bundled diagnostic tool; no iperf server is started by the image entrypoint. This statement concerns SUSE-SU-2026:4678-1 in pkg:rpm/suse/iperf as a subcomponent of pkg:oci/backing-image-manager?repository_url=registry.suse.com%2Flonghornio%2Fbacking-image-manager. It does not assert the status of pkg:rpm/suse/iperf when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "iperf3 is a bundled diagnostic tool; no iperf server is started by the image entrypoint. This statement concerns SUSE-SU-2026:4678-1 in pkg:rpm/suse/libiperf0 as a subcomponent of pkg:oci/backing-image-manager?repository_url=registry.suse.com%2Flonghornio%2Fbacking-image-manager. It does not assert the status of pkg:rpm/suse/libiperf0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-iperf-in-pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager",
+          "pkg-rpm-suse-libiperf0-in-pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-iperf-in-pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libiperf0-in-pkg-oci-backing-image-manager-repository-url-registry-suse-com-2Flonghornio-2Fbacking-image-manager"
           ]
         }
       ]

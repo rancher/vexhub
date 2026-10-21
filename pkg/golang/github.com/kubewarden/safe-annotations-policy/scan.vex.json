@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/kubewarden/safe-annotations-policy",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-21T04:27:47Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:golang/github.com/kubewarden/safe-annotations-policy"
+        },
+        {
+          "date": "2026-10-21T04:27:47Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -39,17 +44,6 @@
           "product_id": "pkg-golang-github-com-kubewarden-safe-annotations-policy",
           "product_identification_helper": {
             "purl": "pkg:golang/github.com/kubewarden/safe-annotations-policy"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:golang/stdlib@v1.26.4",
-        "product": {
-          "name": "pkg:golang/stdlib@v1.26.4",
-          "product_id": "pkg-golang-stdlib-v1-26-4",
-          "product_identification_helper": {
-            "purl": "pkg:golang/stdlib@v1.26.4"
           }
         }
       },
@@ -85,18 +79,31 @@
             "purl": "pkg:golang/stdlib@v1.27.1"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.27.2",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.27.2",
+          "product_id": "pkg-golang-stdlib-v1-27-2",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.27.2"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.26.4",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.26.4",
+          "product_id": "pkg-golang-stdlib-v1-26-4",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.26.4"
+          }
+        }
       }
     ],
     "relationships": [
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:golang/stdlib@v1.26.4 as a component of pkg:golang/github.com/kubewarden/safe-annotations-policy",
-          "product_id": "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-kubewarden-safe-annotations-policy"
-        },
-        "product_reference": "pkg-golang-stdlib-v1-26-4",
-        "relates_to_product_reference": "pkg-golang-github-com-kubewarden-safe-annotations-policy"
-      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -123,10 +130,119 @@
         },
         "product_reference": "pkg-golang-stdlib-v1-27-1",
         "relates_to_product_reference": "pkg-golang-github-com-kubewarden-safe-annotations-policy"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.27.2 as a component of pkg:golang/github.com/kubewarden/safe-annotations-policy",
+          "product_id": "pkg-golang-stdlib-v1-27-2-in-pkg-golang-github-com-kubewarden-safe-annotations-policy"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-27-2",
+        "relates_to_product_reference": "pkg-golang-github-com-kubewarden-safe-annotations-policy"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.4 as a component of pkg:golang/github.com/kubewarden/safe-annotations-policy",
+          "product_id": "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-kubewarden-safe-annotations-policy"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-4",
+        "relates_to_product_reference": "pkg-golang-github-com-kubewarden-safe-annotations-policy"
       }
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-111943",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-kubewarden-safe-annotations-policy"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-0-in-pkg-golang-github-com-kubewarden-safe-annotations-policy"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-1-in-pkg-golang-github-com-kubewarden-safe-annotations-policy"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-2-in-pkg-golang-github-com-kubewarden-safe-annotations-policy"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6809"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/github.com/kubewarden/safe-annotations-policy. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.27.0 as a subcomponent of pkg:golang/github.com/kubewarden/safe-annotations-policy. It does not assert the status of pkg:golang/stdlib@v1.27.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.27.1 as a subcomponent of pkg:golang/github.com/kubewarden/safe-annotations-policy. It does not assert the status of pkg:golang/stdlib@v1.27.1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.27.2 as a subcomponent of pkg:golang/github.com/kubewarden/safe-annotations-policy. It does not assert the status of pkg:golang/stdlib@v1.27.2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-kubewarden-safe-annotations-policy",
+          "pkg-golang-stdlib-v1-27-0-in-pkg-golang-github-com-kubewarden-safe-annotations-policy",
+          "pkg-golang-stdlib-v1-27-1-in-pkg-golang-github-com-kubewarden-safe-annotations-policy",
+          "pkg-golang-stdlib-v1-27-2-in-pkg-golang-github-com-kubewarden-safe-annotations-policy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-kubewarden-safe-annotations-policy"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-0-in-pkg-golang-github-com-kubewarden-safe-annotations-policy"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-1-in-pkg-golang-github-com-kubewarden-safe-annotations-policy"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-2-in-pkg-golang-github-com-kubewarden-safe-annotations-policy"
+          ]
+        }
+      ]
+    },
     {
       "cve": "CVE-2026-33818",
       "flags": [
