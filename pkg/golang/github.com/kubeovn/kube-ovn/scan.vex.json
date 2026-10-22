@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/kubeovn/kube-ovn",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-22T00:30:21Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:golang/github.com/kubeovn/kube-ovn"
+        },
+        {
+          "date": "2026-10-22T00:30:21Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -479,6 +484,17 @@
           "product_id": "pkg-golang-golang-org-x-crypto-v0-52-0",
           "product_identification_helper": {
             "purl": "pkg:golang/golang.org/x/crypto@v0.52.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.27.1",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.27.1",
+          "product_id": "pkg-golang-stdlib-v1-27-1",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.27.1"
           }
         }
       },
@@ -1018,6 +1034,15 @@
           "product_id": "pkg-golang-golang-org-x-crypto-v0-52-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
         },
         "product_reference": "pkg-golang-golang-org-x-crypto-v0-52-0",
+        "relates_to_product_reference": "pkg-golang-github-com-kubeovn-kube-ovn"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.27.1 as a component of pkg:golang/github.com/kubeovn/kube-ovn",
+          "product_id": "pkg-golang-stdlib-v1-27-1-in-pkg-golang-github-com-kubeovn-kube-ovn"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-27-1",
         "relates_to_product_reference": "pkg-golang-github-com-kubeovn-kube-ovn"
       },
       {
@@ -5578,6 +5603,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-kubeovn-kube-ovn"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-1-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
         }
       ],
       "ids": [
@@ -5598,13 +5629,18 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.4 as a subcomponent of pkg:golang/github.com/kubeovn/kube-ovn. It does not assert the status of pkg:golang/stdlib@v1.26.4 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.27.1 as a subcomponent of pkg:golang/github.com/kubeovn/kube-ovn. It does not assert the status of pkg:golang/stdlib@v1.27.1 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-golang-stdlib-v1-25-1-in-pkg-golang-github-com-kubeovn-kube-ovn",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-kubeovn-kube-ovn",
-          "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-kubeovn-kube-ovn",
+          "pkg-golang-stdlib-v1-27-1-in-pkg-golang-github-com-kubeovn-kube-ovn"
         ]
       },
       "threats": [
@@ -5627,6 +5663,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-1-in-pkg-golang-github-com-kubeovn-kube-ovn"
           ]
         }
       ]
@@ -6363,6 +6406,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-kubeovn-kube-ovn"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-1-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
         }
       ],
       "ids": [
@@ -6383,13 +6432,18 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.4 as a subcomponent of pkg:golang/github.com/kubeovn/kube-ovn. It does not assert the status of pkg:golang/stdlib@v1.26.4 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.27.1 as a subcomponent of pkg:golang/github.com/kubeovn/kube-ovn. It does not assert the status of pkg:golang/stdlib@v1.27.1 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-golang-stdlib-v1-25-1-in-pkg-golang-github-com-kubeovn-kube-ovn",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-kubeovn-kube-ovn",
-          "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-kubeovn-kube-ovn",
+          "pkg-golang-stdlib-v1-27-1-in-pkg-golang-github-com-kubeovn-kube-ovn"
         ]
       },
       "threats": [
@@ -6412,6 +6466,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-1-in-pkg-golang-github-com-kubeovn-kube-ovn"
           ]
         }
       ]
