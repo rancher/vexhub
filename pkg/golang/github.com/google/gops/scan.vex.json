@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/google/gops",
     "tracking": {
-      "current_release_date": "2026-10-21T04:27:47Z",
+      "current_release_date": "2026-10-22T00:30:21Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-21T04:27:47Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-22T00:30:21Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -236,6 +241,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.25.12",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.25.12",
+          "product_id": "pkg-golang-stdlib-v1-25-12",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.25.12"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/stdlib@v1.25.7",
         "product": {
           "name": "pkg:golang/stdlib@v1.25.7",
@@ -264,17 +280,6 @@
           "product_id": "pkg-golang-stdlib-v1-25-9",
           "product_identification_helper": {
             "purl": "pkg:golang/stdlib@v1.25.9"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:golang/stdlib@v1.25.12",
-        "product": {
-          "name": "pkg:golang/stdlib@v1.25.12",
-          "product_id": "pkg-golang-stdlib-v1-25-12",
-          "product_identification_helper": {
-            "purl": "pkg:golang/stdlib@v1.25.12"
           }
         }
       },
@@ -593,6 +598,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.25.12 as a component of pkg:golang/github.com/google/gops",
+          "product_id": "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-google-gops"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-25-12",
+        "relates_to_product_reference": "pkg-golang-github-com-google-gops"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/stdlib@v1.25.7 as a component of pkg:golang/github.com/google/gops",
           "product_id": "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-google-gops"
         },
@@ -643,15 +657,6 @@
         },
         "product_reference": "pkg-golang-stdlib-v1-25-9",
         "relates_to_product_reference": "pkg-golang-github-com-google-gops-v0-3-27"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:golang/stdlib@v1.25.12 as a component of pkg:golang/github.com/google/gops",
-          "product_id": "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-google-gops"
-        },
-        "product_reference": "pkg-golang-stdlib-v1-25-12",
-        "relates_to_product_reference": "pkg-golang-github-com-google-gops"
       },
       {
         "category": "default_component_of",
@@ -11424,6 +11429,12 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-google-gops"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-google-gops"
           ]
         },
@@ -11443,6 +11454,10 @@
       "notes": [
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.25.12 as a subcomponent of pkg:golang/github.com/google/gops. It does not assert the status of pkg:golang/stdlib@v1.25.12 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/google/gops. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
         },
         {
@@ -11452,11 +11467,19 @@
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-google-gops",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-google-gops",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-google-gops-v0-3-27"
         ]
       },
       "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-google-gops"
+          ]
+        },
         {
           "category": "impact",
           "details": "vulnerable_code_not_present",

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/rancher/fleet/pkg/apis",
     "tracking": {
-      "current_release_date": "2026-10-21T04:27:47Z",
+      "current_release_date": "2026-10-22T00:30:21Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-21T04:27:47Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-22T00:30:21Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -1534,6 +1539,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.27.2",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.27.2",
+          "product_id": "pkg-golang-stdlib-v1-27-2",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.27.2"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/github.com/rancher/fleet/pkg/apis@v0.12.19",
         "product": {
           "name": "pkg:golang/github.com/rancher/fleet/pkg/apis@v0.12.19",
@@ -1947,6 +1963,17 @@
           "product_id": "pkg-golang-github-com-rancher-fleet-pkg-apis-v0-16-3-rc-1",
           "product_identification_helper": {
             "purl": "pkg:golang/github.com/rancher/fleet/pkg/apis@v0.16.3-rc.1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/rancher/fleet/pkg/apis@v0.17.0-beta.1",
+        "product": {
+          "name": "pkg:golang/github.com/rancher/fleet/pkg/apis@v0.17.0-beta.1",
+          "product_id": "pkg-golang-github-com-rancher-fleet-pkg-apis-v0-17-0-beta-1",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/rancher/fleet/pkg/apis@v0.17.0-beta.1"
           }
         }
       },
@@ -4817,6 +4844,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.27.2 as a component of pkg:golang/github.com/rancher/fleet/pkg/apis",
+          "product_id": "pkg-golang-stdlib-v1-27-2-in-pkg-golang-github-com-rancher-fleet-pkg-apis"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-27-2",
+        "relates_to_product_reference": "pkg-golang-github-com-rancher-fleet-pkg-apis"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/stdlib@v1.25.13 as a component of pkg:golang/github.com/rancher/fleet/pkg/apis@v0.12.19",
           "product_id": "pkg-golang-stdlib-v1-25-13-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-12-19"
         },
@@ -5155,6 +5191,15 @@
         },
         "product_reference": "pkg-golang-stdlib-v1-26-9",
         "relates_to_product_reference": "pkg-golang-github-com-rancher-fleet-pkg-apis-v0-16-3-rc-1"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.27.2 as a component of pkg:golang/github.com/rancher/fleet/pkg/apis@v0.17.0-beta.1",
+          "product_id": "pkg-golang-stdlib-v1-27-2-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-17-0-beta-1"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-27-2",
+        "relates_to_product_reference": "pkg-golang-github-com-rancher-fleet-pkg-apis-v0-17-0-beta-1"
       },
       {
         "category": "default_component_of",
@@ -19835,6 +19880,12 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-27-2-in-pkg-golang-github-com-rancher-fleet-pkg-apis"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-25-13-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-12-19"
           ]
         },
@@ -20059,6 +20110,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-9-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-16-3-rc-1"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-2-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-17-0-beta-1"
+          ]
         }
       ],
       "ids": [
@@ -20091,6 +20148,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.26.9 as a subcomponent of pkg:golang/github.com/rancher/fleet/pkg/apis. It does not assert the status of pkg:golang/stdlib@v1.26.9 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.27.2 as a subcomponent of pkg:golang/github.com/rancher/fleet/pkg/apis. It does not assert the status of pkg:golang/stdlib@v1.27.2 when used independently or in other products."
         },
         {
           "category": "description",
@@ -20243,6 +20304,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.26.9 as a subcomponent of pkg:golang/github.com/rancher/fleet/pkg/apis@v0.16.3-rc.1. It does not assert the status of pkg:golang/stdlib@v1.26.9 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.27.2 as a subcomponent of pkg:golang/github.com/rancher/fleet/pkg/apis@v0.17.0-beta.1. It does not assert the status of pkg:golang/stdlib@v1.27.2 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -20253,6 +20318,7 @@
           "pkg-golang-stdlib-v1-26-6-in-pkg-golang-github-com-rancher-fleet-pkg-apis",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-rancher-fleet-pkg-apis",
           "pkg-golang-stdlib-v1-26-9-in-pkg-golang-github-com-rancher-fleet-pkg-apis",
+          "pkg-golang-stdlib-v1-27-2-in-pkg-golang-github-com-rancher-fleet-pkg-apis",
           "pkg-golang-stdlib-v1-25-13-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-12-19",
           "pkg-golang-stdlib-v1-25-13-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-12-19-rc-1",
           "pkg-golang-stdlib-v1-25-13-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-12-19-rc-2",
@@ -20290,7 +20356,8 @@
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-16-2",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-16-2-rc-1",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-16-2-rc-2",
-          "pkg-golang-stdlib-v1-26-9-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-16-3-rc-1"
+          "pkg-golang-stdlib-v1-26-9-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-16-3-rc-1",
+          "pkg-golang-stdlib-v1-27-2-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-17-0-beta-1"
         ]
       },
       "threats": [
@@ -20334,6 +20401,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-9-in-pkg-golang-github-com-rancher-fleet-pkg-apis"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-2-in-pkg-golang-github-com-rancher-fleet-pkg-apis"
           ]
         },
         {
@@ -20600,6 +20674,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-9-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-16-3-rc-1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-27-2-in-pkg-golang-github-com-rancher-fleet-pkg-apis-v0-17-0-beta-1"
           ]
         }
       ]

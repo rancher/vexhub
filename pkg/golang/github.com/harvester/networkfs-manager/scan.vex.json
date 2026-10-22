@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/harvester/networkfs-manager",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-22T00:30:21Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:golang/github.com/harvester/networkfs-manager"
+        },
+        {
+          "date": "2026-10-22T00:30:21Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -649,12 +654,34 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.26.0",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.26.0",
+          "product_id": "pkg-golang-stdlib-v1-26-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.26.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc1",
         "product": {
           "name": "pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc1",
           "product_id": "pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc1",
           "product_identification_helper": {
             "purl": "pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4",
+        "product": {
+          "name": "pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4",
+          "product_id": "pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4"
           }
         }
       },
@@ -1874,6 +1901,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.0 as a component of pkg:golang/github.com/harvester/networkfs-manager",
+          "product_id": "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-0",
+        "relates_to_product_reference": "pkg-golang-github-com-harvester-networkfs-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/stdlib@v1.25.6 as a component of pkg:golang/github.com/harvester/networkfs-manager@v1.7.1",
           "product_id": "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-1"
         },
@@ -1951,6 +1987,15 @@
         },
         "product_reference": "pkg-golang-stdlib-v1-25-7",
         "relates_to_product_reference": "pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.0 as a component of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4",
+          "product_id": "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-0",
+        "relates_to_product_reference": "pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
       },
       {
         "category": "default_component_of",
@@ -7540,6 +7585,12 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2"
           ]
         },
@@ -7638,6 +7689,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -7666,6 +7723,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27142 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27142 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -7734,6 +7795,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27142 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc6. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27142 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -7743,6 +7808,7 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2-rc2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-6-1",
@@ -7759,7 +7825,8 @@
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc1",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc5",
-          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -7796,6 +7863,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -7916,6 +7990,13 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ]
     },
@@ -7950,6 +8031,12 @@
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -8047,6 +8134,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -8075,6 +8168,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32282 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32282 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -8139,6 +8236,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32282 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc6. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32282 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -8148,6 +8249,7 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2-rc2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-6-1",
@@ -8163,7 +8265,8 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc5",
-          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -8206,6 +8309,13 @@
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2"
           ]
         },
@@ -8312,6 +8422,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
@@ -8352,6 +8469,12 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2"
           ]
         },
@@ -8444,6 +8567,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -8472,6 +8601,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32288 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32288 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -8536,6 +8669,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32288 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc6. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32288 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -8545,6 +8682,7 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2-rc2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-6-1",
@@ -8560,7 +8698,8 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc5",
-          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -8603,6 +8742,13 @@
           "category": "impact",
           "details": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2"
           ]
         },
@@ -8709,6 +8855,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
@@ -8749,6 +8902,12 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2"
           ]
         },
@@ -8841,6 +9000,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -8869,6 +9034,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32289 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32289 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -8933,6 +9102,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32289 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc6. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32289 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -8942,6 +9115,7 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2-rc2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-6-1",
@@ -8957,7 +9131,8 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc5",
-          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -8994,6 +9169,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -9107,6 +9289,13 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ]
     },
@@ -9147,6 +9336,12 @@
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -9250,6 +9445,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -9282,6 +9483,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33811 in pkg:golang/stdlib@v1.25.9 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.9 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33811 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -9350,6 +9555,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33811 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc6. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33811 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -9360,6 +9569,7 @@
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2-rc2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-6-1",
@@ -9376,7 +9586,8 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc5",
-          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -9420,6 +9631,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -9539,6 +9757,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
@@ -9616,6 +9841,12 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2"
           ]
         },
@@ -9714,6 +9945,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -9746,6 +9983,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39820 in pkg:golang/stdlib@v1.25.9 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.9 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39820 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -9814,6 +10055,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39820 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc6. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39820 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -9824,6 +10069,7 @@
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2-rc2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-6-1",
@@ -9840,7 +10086,8 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc5",
-          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -9884,6 +10131,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -10004,6 +10258,13 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ]
     },
@@ -10026,6 +10287,12 @@
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -10105,6 +10372,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2-rc1"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -10125,6 +10398,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.25.6 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.6 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -10177,6 +10454,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.26.4 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.2-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.4 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -10184,6 +10465,7 @@
           "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-1",
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-1-rc1",
@@ -10196,7 +10478,8 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-1",
           "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-1-rc2",
-          "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2-rc1"
+          "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -10219,6 +10502,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -10311,6 +10601,13 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2-rc1"
           ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ]
     },
@@ -10351,6 +10648,12 @@
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -10454,6 +10757,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -10486,6 +10795,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39823 in pkg:golang/stdlib@v1.25.9 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.9 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39823 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -10554,6 +10867,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39823 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc6. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39823 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -10564,6 +10881,7 @@
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2-rc2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-6-1",
@@ -10580,7 +10898,8 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc5",
-          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -10624,6 +10943,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -10743,6 +11069,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
@@ -11276,6 +11609,12 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2"
           ]
         },
@@ -11374,6 +11713,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -11406,6 +11751,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39825 in pkg:golang/stdlib@v1.25.9 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.9 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39825 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -11474,6 +11823,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39825 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc6. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39825 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -11484,6 +11837,7 @@
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2-rc2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-6-1",
@@ -11500,7 +11854,8 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc5",
-          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -11550,6 +11905,13 @@
           "category": "impact",
           "details": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2"
           ]
         },
@@ -11663,6 +12025,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
@@ -11709,6 +12078,12 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2"
           ]
         },
@@ -11807,6 +12182,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -11839,6 +12220,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39826 in pkg:golang/stdlib@v1.25.9 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.9 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39826 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -11907,6 +12292,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39826 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc6. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39826 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -11917,6 +12306,7 @@
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2-rc2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-6-1",
@@ -11933,7 +12323,8 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc5",
-          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -11983,6 +12374,13 @@
           "category": "impact",
           "details": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2"
           ]
         },
@@ -12096,6 +12494,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
@@ -12142,6 +12547,12 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2"
           ]
         },
@@ -12240,6 +12651,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -12272,6 +12689,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42499 in pkg:golang/stdlib@v1.25.9 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.9 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42499 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -12340,6 +12761,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42499 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.0-rc6. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42499 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -12350,6 +12775,7 @@
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-23-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-5-2-rc2",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-6-1",
@@ -12366,7 +12792,8 @@
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc5",
-          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -12410,6 +12837,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -12529,6 +12963,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-0-rc6"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
@@ -13617,6 +14058,12 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
@@ -13757,6 +14204,12 @@
           "product_ids": [
             "pkg-golang-golang-org-x-net-v0-49-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-0-rc3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -13793,6 +14246,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/stdlib@v1.25.3 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -13889,6 +14346,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/golang.org/x/net@v0.49.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.0-rc3. It does not assert the status of pkg:golang/golang.org/x/net@v0.49.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -13900,6 +14361,7 @@
           "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-golang-org-x-net-v0-38-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-1",
           "pkg-golang-golang-org-x-net-v0-38-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-1-rc1",
@@ -13923,7 +14385,8 @@
           "pkg-golang-golang-org-x-net-v0-49-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2-rc1",
           "pkg-golang-golang-org-x-net-v0-49-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-0-rc1",
           "pkg-golang-golang-org-x-net-v0-49-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-0-rc2",
-          "pkg-golang-golang-org-x-net-v0-49-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-0-rc3"
+          "pkg-golang-golang-org-x-net-v0-49-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-0-rc3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -13974,6 +14437,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -14142,6 +14612,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-x-net-v0-49-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-0-rc3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
@@ -14441,6 +14918,12 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
@@ -14473,6 +14956,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -14493,6 +14982,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56853 in pkg:golang/stdlib@v1.25.3 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56853 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -14517,6 +15010,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56853 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.2. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56853 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -14524,12 +15021,14 @@
           "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2",
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-3",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-3-rc1",
-          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2"
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -14558,6 +15057,13 @@
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
@@ -14595,6 +15101,13 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2"
           ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ]
     },
@@ -14605,6 +15118,12 @@
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -14672,6 +15191,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -14684,6 +15209,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.25.12 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.12 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -14728,11 +15257,16 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc3. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-3",
@@ -14743,7 +15277,8 @@
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-0-rc7",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc1",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc2",
-          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3"
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -14752,6 +15287,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -14830,6 +15372,13 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3"
           ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ]
     },
@@ -14852,6 +15401,12 @@
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -14889,6 +15444,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -14909,6 +15470,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56858 in pkg:golang/stdlib@v1.25.3 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56858 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -14933,6 +15498,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56858 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.2. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56858 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -14940,12 +15509,14 @@
           "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2",
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-3",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-3-rc1",
-          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2"
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -14974,6 +15545,13 @@
           "category": "impact",
           "details": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
@@ -15010,6 +15588,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
@@ -15038,6 +15623,12 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
@@ -15070,6 +15661,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -15090,6 +15687,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56859 in pkg:golang/stdlib@v1.25.3 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56859 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -15114,6 +15715,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56859 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.8.2. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56859 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -15121,12 +15726,14 @@
           "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2",
           "pkg-golang-stdlib-v1-25-3-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-2-rc3",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-3",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-3-rc1",
-          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2"
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -15155,6 +15762,13 @@
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
@@ -15191,6 +15805,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager-v1-8-2"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
@@ -16145,6 +16766,12 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
@@ -16207,6 +16834,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -16219,6 +16852,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.25.12 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.12 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -16263,11 +16900,16 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc3. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-3",
@@ -16278,7 +16920,8 @@
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-0-rc7",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc1",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc2",
-          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3"
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -16287,6 +16930,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -16364,6 +17014,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
@@ -16380,6 +17037,12 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
@@ -16442,6 +17105,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -16454,6 +17123,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94448 in pkg:golang/stdlib@v1.25.12 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.12 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94448 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -16498,11 +17171,16 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94448 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc3. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94448 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-3",
@@ -16513,7 +17191,8 @@
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-0-rc7",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc1",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc2",
-          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3"
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -16522,6 +17201,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -16599,6 +17285,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
@@ -16615,6 +17308,12 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
@@ -16677,6 +17376,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
+          ]
         }
       ],
       "ids": [
@@ -16689,6 +17394,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97030 in pkg:golang/stdlib@v1.25.12 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.25.12 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97030 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -16733,11 +17442,16 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97030 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc3. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97030 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/networkfs-manager@v1.9.1-rc4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager-v1-7-3",
@@ -16748,7 +17462,8 @@
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-0-rc7",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc1",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc2",
-          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3"
+          "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
         ]
       },
       "threats": [
@@ -16757,6 +17472,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager"
           ]
         },
         {
@@ -16834,6 +17556,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-networkfs-manager-v1-9-1-rc4"
           ]
         }
       ]
