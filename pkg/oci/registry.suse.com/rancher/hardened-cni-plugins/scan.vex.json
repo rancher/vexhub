@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/hardened-cni-plugins?repository_url=registry.suse.com%2Francher%2Fhardened-cni-plugins",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-23T15:35:10Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/hardened-cni-plugins?repository_url=registry.suse.com/rancher/hardened-cni-plugins"
+        },
+        {
+          "date": "2026-10-23T15:35:10Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -63,6 +68,17 @@
             "purl": "pkg:rpm/suse/libpcre2-8-0"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:oci/hardened-cni-plugins?repository_url=registry.suse.com%2Francher%2Fhardened-cni-plugins",
+        "product": {
+          "name": "pkg:oci/hardened-cni-plugins?repository_url=registry.suse.com%2Francher%2Fhardened-cni-plugins",
+          "product_id": "pkg-oci-hardened-cni-plugins-repository-url-registry-suse-com-2Francher-2Fhardened-cni-plugins",
+          "product_identification_helper": {
+            "purl": "pkg:oci/hardened-cni-plugins?repository_url=registry.suse.com%2Francher%2Fhardened-cni-plugins"
+          }
+        }
       }
     ],
     "relationships": [
@@ -83,6 +99,15 @@
         },
         "product_reference": "pkg-rpm-suse-libpcre2-8-0",
         "relates_to_product_reference": "pkg-oci-hardened-cni-plugins-repository-url-registry-suse-com-rancher-hardened-cni-plugins"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/busybox as a component of pkg:oci/hardened-cni-plugins?repository_url=registry.suse.com%2Francher%2Fhardened-cni-plugins",
+          "product_id": "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-suse-com-2Francher-2Fhardened-cni-plugins"
+        },
+        "product_reference": "pkg-rpm-suse-busybox",
+        "relates_to_product_reference": "pkg-oci-hardened-cni-plugins-repository-url-registry-suse-com-2Francher-2Fhardened-cni-plugins"
       }
     ]
   },
@@ -227,6 +252,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-cni-plugins-repository-url-registry-suse-com-rancher-hardened-cni-plugins"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-suse-com-2Francher-2Fhardened-cni-plugins"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4760-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "busybox applets are not invoked by the entrypoint. This statement concerns SUSE-SU-2026:4760-1 in pkg:rpm/suse/busybox as a subcomponent of pkg:oci/hardened-cni-plugins?repository_url=registry.suse.com%2Francher%2Fhardened-cni-plugins. It does not assert the status of pkg:rpm/suse/busybox when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-suse-com-2Francher-2Fhardened-cni-plugins"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-hardened-cni-plugins-repository-url-registry-suse-com-2Francher-2Fhardened-cni-plugins"
           ]
         }
       ]

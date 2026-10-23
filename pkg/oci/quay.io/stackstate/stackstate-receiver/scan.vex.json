@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/stackstate-receiver?repository_url=quay.io%2Fstackstate%2Fstackstate-receiver",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-23T15:35:10Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/stackstate-receiver?repository_url=quay.io/stackstate/stackstate-receiver"
+        },
+        {
+          "date": "2026-10-23T15:35:10Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -261,6 +266,17 @@
             "purl": "pkg:rpm/suse/libXtst6"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libpng16-16",
+        "product": {
+          "name": "pkg:rpm/suse/libpng16-16",
+          "product_id": "pkg-rpm-suse-libpng16-16",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpng16-16"
+          }
+        }
       }
     ],
     "relationships": [
@@ -433,6 +449,15 @@
           "product_id": "pkg-rpm-suse-libXtst6-in-pkg-oci-stackstate-receiver-repository-url-quay-io-2Fstackstate-2Fstackstate-receiver"
         },
         "product_reference": "pkg-rpm-suse-libXtst6",
+        "relates_to_product_reference": "pkg-oci-stackstate-receiver-repository-url-quay-io-2Fstackstate-2Fstackstate-receiver"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpng16-16 as a component of pkg:oci/stackstate-receiver?repository_url=quay.io%2Fstackstate%2Fstackstate-receiver",
+          "product_id": "pkg-rpm-suse-libpng16-16-in-pkg-oci-stackstate-receiver-repository-url-quay-io-2Fstackstate-2Fstackstate-receiver"
+        },
+        "product_reference": "pkg-rpm-suse-libpng16-16",
         "relates_to_product_reference": "pkg-oci-stackstate-receiver-repository-url-quay-io-2Fstackstate-2Fstackstate-receiver"
       }
     ]
@@ -1077,6 +1102,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libXtst6-in-pkg-oci-stackstate-receiver-repository-url-quay-io-2Fstackstate-2Fstackstate-receiver"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpng16-16-in-pkg-oci-stackstate-receiver-repository-url-quay-io-2Fstackstate-2Fstackstate-receiver"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4796-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libpng is an incidental dependency; no PNG decoding happens in the entrypoint execution path. This statement concerns SUSE-SU-2026:4796-1 in pkg:rpm/suse/libpng16-16 as a subcomponent of pkg:oci/stackstate-receiver?repository_url=quay.io%2Fstackstate%2Fstackstate-receiver. It does not assert the status of pkg:rpm/suse/libpng16-16 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpng16-16-in-pkg-oci-stackstate-receiver-repository-url-quay-io-2Fstackstate-2Fstackstate-receiver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpng16-16-in-pkg-oci-stackstate-receiver-repository-url-quay-io-2Fstackstate-2Fstackstate-receiver"
           ]
         }
       ]

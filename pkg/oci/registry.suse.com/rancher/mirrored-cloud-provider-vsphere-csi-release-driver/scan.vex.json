@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-23T15:35:10Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com/rancher/mirrored-cloud-provider-vsphere-csi-release-driver"
+        },
+        {
+          "date": "2026-10-23T15:35:10Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -575,6 +580,24 @@
         },
         "product_reference": "pkg-rpm-photon-ncurses-libs",
         "relates_to_product_reference": "pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-rancher-mirrored-cloud-provider-vsphere-csi-release-driver"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/photon/python3 as a component of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver",
+          "product_id": "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+        },
+        "product_reference": "pkg-rpm-photon-python3",
+        "relates_to_product_reference": "pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/photon/python3-libs as a component of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver",
+          "product_id": "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+        },
+        "product_reference": "pkg-rpm-photon-python3-libs",
+        "relates_to_product_reference": "pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
       },
       {
         "category": "default_component_of",
@@ -3006,6 +3029,104 @@
       ]
     },
     {
+      "cve": "CVE-2026-0864",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-0864 in pkg:rpm/photon/python3 as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-0864 in pkg:rpm/photon/python3-libs as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver",
+          "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-0865",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-0865 in pkg:rpm/photon/python3 as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-0865 in pkg:rpm/photon/python3-libs as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver",
+          "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-10536",
       "flags": [
         {
@@ -3393,6 +3514,55 @@
       ]
     },
     {
+      "cve": "CVE-2026-12003",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-12003 in pkg:rpm/photon/python3 as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-12003 in pkg:rpm/photon/python3-libs as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver",
+          "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-14456",
       "flags": [
         {
@@ -3620,6 +3790,55 @@
       ]
     },
     {
+      "cve": "CVE-2026-19672",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-19672 in pkg:rpm/photon/python3 as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-19672 in pkg:rpm/photon/python3-libs as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver",
+          "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-25210",
       "flags": [
         {
@@ -3775,6 +3994,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-rancher-mirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-3276",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-3276 in pkg:rpm/photon/python3 as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-3276 in pkg:rpm/photon/python3-libs as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver",
+          "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
           ]
         }
       ]
@@ -5308,6 +5576,55 @@
       ]
     },
     {
+      "cve": "CVE-2026-7774",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-7774 in pkg:rpm/photon/python3 as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-7774 in pkg:rpm/photon/python3-libs as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver",
+          "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-8286",
       "flags": [
         {
@@ -5352,6 +5669,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-rancher-mirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-8328",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-8328 in pkg:rpm/photon/python3 as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-8328 in pkg:rpm/photon/python3-libs as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver",
+          "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
           ]
         }
       ]
@@ -6028,6 +6394,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-rancher-mirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-9669",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-9669 in pkg:rpm/photon/python3 as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CSI driver entrypoint is a Go binary; the Python interpreter is never executed. This statement concerns CVE-2026-9669 in pkg:rpm/photon/python3-libs as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-driver?repository_url=registry.suse.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-driver. It does not assert the status of pkg:rpm/photon/python3-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver",
+          "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-python3-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-driver-repository-url-registry-suse-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-driver"
           ]
         }
       ]
