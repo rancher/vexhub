@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/harvester-networkfs-manager?repository_url=registry.suse.com%2Francher%2Fharvester-networkfs-manager",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-23T15:35:10Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/harvester-networkfs-manager?repository_url=registry.suse.com/rancher/harvester-networkfs-manager"
+        },
+        {
+          "date": "2026-10-23T15:35:10Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -382,6 +387,17 @@
             "purl": "pkg:rpm/suse/glibc-locale-base"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/openssl-3",
+        "product": {
+          "name": "pkg:rpm/suse/openssl-3",
+          "product_id": "pkg-rpm-suse-openssl-3",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/openssl-3"
+          }
+        }
       }
     ],
     "relationships": [
@@ -662,6 +678,33 @@
           "product_id": "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
         },
         "product_reference": "pkg-rpm-suse-glibc-locale-base",
+        "relates_to_product_reference": "pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libopenssl-3-fips-provider as a component of pkg:oci/harvester-networkfs-manager?repository_url=registry.suse.com%2Francher%2Fharvester-networkfs-manager",
+          "product_id": "pkg-rpm-suse-libopenssl-3-fips-provider-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+        },
+        "product_reference": "pkg-rpm-suse-libopenssl-3-fips-provider",
+        "relates_to_product_reference": "pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libopenssl3 as a component of pkg:oci/harvester-networkfs-manager?repository_url=registry.suse.com%2Francher%2Fharvester-networkfs-manager",
+          "product_id": "pkg-rpm-suse-libopenssl3-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+        },
+        "product_reference": "pkg-rpm-suse-libopenssl3",
+        "relates_to_product_reference": "pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/openssl-3 as a component of pkg:oci/harvester-networkfs-manager?repository_url=registry.suse.com%2Francher%2Fharvester-networkfs-manager",
+          "product_id": "pkg-rpm-suse-openssl-3-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+        },
+        "product_reference": "pkg-rpm-suse-openssl-3",
         "relates_to_product_reference": "pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
       }
     ]
@@ -2517,6 +2560,78 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libopenssl-3-fips-provider-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libopenssl3-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssl-3-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24245-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "FIPS provider module is only loaded when FIPS mode is enabled. This statement concerns SUSE-SU-2026:24245-1 in pkg:rpm/suse/libopenssl-3-fips-provider as a subcomponent of pkg:oci/harvester-networkfs-manager?repository_url=registry.suse.com%2Francher%2Fharvester-networkfs-manager. It does not assert the status of pkg:rpm/suse/libopenssl-3-fips-provider when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Go binaries use the Go crypto stack; system OpenSSL libraries are not loaded at runtime. This statement concerns SUSE-SU-2026:24245-1 in pkg:rpm/suse/libopenssl3 as a subcomponent of pkg:oci/harvester-networkfs-manager?repository_url=registry.suse.com%2Francher%2Fharvester-networkfs-manager. It does not assert the status of pkg:rpm/suse/libopenssl3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Go binaries use the Go crypto stack; system OpenSSL libraries are not loaded at runtime. This statement concerns SUSE-SU-2026:24245-1 in pkg:rpm/suse/openssl-3 as a subcomponent of pkg:oci/harvester-networkfs-manager?repository_url=registry.suse.com%2Francher%2Fharvester-networkfs-manager. It does not assert the status of pkg:rpm/suse/openssl-3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libopenssl-3-fips-provider-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager",
+          "pkg-rpm-suse-libopenssl3-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager",
+          "pkg-rpm-suse-openssl-3-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libopenssl-3-fips-provider-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libopenssl3-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssl-3-in-pkg-oci-harvester-networkfs-manager-repository-url-registry-suse-com-2Francher-2Fharvester-networkfs-manager"
           ]
         }
       ]

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/longhorn-instance-manager?repository_url=index.docker.io%2Flonghornio%2Flonghorn-instance-manager",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-23T15:35:10Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/longhorn-instance-manager?repository_url=index.docker.io/longhornio/longhorn-instance-manager"
+        },
+        {
+          "date": "2026-10-23T15:35:10Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -1367,6 +1372,24 @@
           "product_id": "pkg-rpm-suse-libexpat1-in-pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager"
         },
         "product_reference": "pkg-rpm-suse-libexpat1",
+        "relates_to_product_reference": "pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpython3_6m1_0 as a component of pkg:oci/longhorn-instance-manager?repository_url=index.docker.io%2Flonghornio%2Flonghorn-instance-manager",
+          "product_id": "pkg-rpm-suse-libpython3-6m1-0-in-pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager"
+        },
+        "product_reference": "pkg-rpm-suse-libpython3-6m1-0",
+        "relates_to_product_reference": "pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/python3-base as a component of pkg:oci/longhorn-instance-manager?repository_url=index.docker.io%2Flonghornio%2Flonghorn-instance-manager",
+          "product_id": "pkg-rpm-suse-python3-base-in-pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager"
+        },
+        "product_reference": "pkg-rpm-suse-python3-base",
         "relates_to_product_reference": "pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager"
       }
     ]
@@ -6228,6 +6251,60 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-glibc-devel-in-pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpython3-6m1-0-in-pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-python3-base-in-pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4754-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Python runtime is an incidental dependency; Longhorn entrypoints execute only Go binaries. This statement concerns SUSE-SU-2026:4754-1 in pkg:rpm/suse/libpython3_6m1_0 as a subcomponent of pkg:oci/longhorn-instance-manager?repository_url=index.docker.io%2Flonghornio%2Flonghorn-instance-manager. It does not assert the status of pkg:rpm/suse/libpython3_6m1_0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Python runtime is an incidental dependency; Longhorn entrypoints execute only Go binaries. This statement concerns SUSE-SU-2026:4754-1 in pkg:rpm/suse/python3-base as a subcomponent of pkg:oci/longhorn-instance-manager?repository_url=index.docker.io%2Flonghornio%2Flonghorn-instance-manager. It does not assert the status of pkg:rpm/suse/python3-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpython3-6m1-0-in-pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager",
+          "pkg-rpm-suse-python3-base-in-pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpython3-6m1-0-in-pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-python3-base-in-pkg-oci-longhorn-instance-manager-repository-url-index-docker-io-2Flonghornio-2Flonghorn-instance-manager"
           ]
         }
       ]

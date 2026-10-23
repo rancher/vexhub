@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/rancher-webhook?repository_url=registry.rancher.com%2Francher%2Francher-webhook",
     "tracking": {
-      "current_release_date": "2026-10-21T20:07:44Z",
+      "current_release_date": "2026-10-23T15:35:10Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-21T20:07:44Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-23T15:35:10Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -138,6 +143,15 @@
           "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-rancher-webhook-repository-url-registry-rancher-com-2Francher-2Francher-webhook"
         },
         "product_reference": "pkg-rpm-suse-libpcre2-8-0",
+        "relates_to_product_reference": "pkg-oci-rancher-webhook-repository-url-registry-rancher-com-2Francher-2Francher-webhook"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/glibc as a component of pkg:oci/rancher-webhook?repository_url=registry.rancher.com%2Francher%2Francher-webhook",
+          "product_id": "pkg-rpm-suse-glibc-in-pkg-oci-rancher-webhook-repository-url-registry-rancher-com-2Francher-2Francher-webhook"
+        },
+        "product_reference": "pkg-rpm-suse-glibc",
         "relates_to_product_reference": "pkg-oci-rancher-webhook-repository-url-registry-rancher-com-2Francher-2Francher-webhook"
       }
     ]
@@ -301,6 +315,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-rancher-webhook-repository-url-registry-rancher-com-2Francher-2Francher-webhook"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-rancher-webhook-repository-url-registry-rancher-com-2Francher-2Francher-webhook"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:23934-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Affected glibc routines are not reachable; the entrypoint is a statically linked Go binary. This statement concerns SUSE-SU-2026:23934-1 in pkg:rpm/suse/glibc as a subcomponent of pkg:oci/rancher-webhook?repository_url=registry.rancher.com%2Francher%2Francher-webhook. It does not assert the status of pkg:rpm/suse/glibc when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-glibc-in-pkg-oci-rancher-webhook-repository-url-registry-rancher-com-2Francher-2Francher-webhook"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-rancher-webhook-repository-url-registry-rancher-com-2Francher-2Francher-webhook"
           ]
         }
       ]
