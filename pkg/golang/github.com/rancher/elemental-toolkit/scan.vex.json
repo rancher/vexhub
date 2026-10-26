@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/rancher/elemental-toolkit",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-26T19:02:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:golang/github.com/rancher/elemental-toolkit"
+        },
+        {
+          "date": "2026-10-26T19:02:59Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -195,6 +200,17 @@
             "purl": "pkg:golang/golang.org/x/text@v0.14.0"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/docker/distribution@v2.8.2+incompatible",
+        "product": {
+          "name": "pkg:golang/github.com/docker/distribution@v2.8.2+incompatible",
+          "product_id": "pkg-golang-github-com-docker-distribution-v2-8-2-incompatible",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/docker/distribution@v2.8.2+incompatible"
+          }
+        }
       }
     ],
     "relationships": [
@@ -322,6 +338,15 @@
           "product_id": "pkg-golang-golang-org-x-text-v0-14-0-in-pkg-golang-github-com-rancher-elemental-toolkit"
         },
         "product_reference": "pkg-golang-golang-org-x-text-v0-14-0",
+        "relates_to_product_reference": "pkg-golang-github-com-rancher-elemental-toolkit"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com/docker/distribution@v2.8.2+incompatible as a component of pkg:golang/github.com/rancher/elemental-toolkit",
+          "product_id": "pkg-golang-github-com-docker-distribution-v2-8-2-incompatible-in-pkg-golang-github-com-rancher-elemental-toolkit"
+        },
+        "product_reference": "pkg-golang-github-com-docker-distribution-v2-8-2-incompatible",
         "relates_to_product_reference": "pkg-golang-github-com-rancher-elemental-toolkit"
       }
     ]
@@ -2931,6 +2956,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-53493",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-github-com-containerd-containerd-v1-7-12-in-pkg-golang-github-com-rancher-elemental-toolkit"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Harvester webhook does not use the containerd PullImage operation at runtime.. This statement concerns CVE-2026-53493 in pkg:golang/github.com/containerd/containerd@v1.7.12 as a subcomponent of pkg:golang/github.com/rancher/elemental-toolkit. It does not assert the status of pkg:golang/github.com/containerd/containerd@v1.7.12 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-containerd-containerd-v1-7-12-in-pkg-golang-github-com-rancher-elemental-toolkit"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-github-com-containerd-containerd-v1-7-12-in-pkg-golang-github-com-rancher-elemental-toolkit"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-56852",
       "flags": [
         {
@@ -3056,6 +3112,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-github-com-go-git-go-git-v5-v5-11-0-in-pkg-golang-github-com-rancher-elemental-toolkit"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-85747",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-github-com-docker-distribution-v2-8-2-incompatible-in-pkg-golang-github-com-rancher-elemental-toolkit"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Harvester webhook does not use docker's distribution package at runtime.. This statement concerns CVE-2026-85747 in pkg:golang/github.com/docker/distribution@v2.8.2+incompatible as a subcomponent of pkg:golang/github.com/rancher/elemental-toolkit. It does not assert the status of pkg:golang/github.com/docker/distribution@v2.8.2+incompatible when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-docker-distribution-v2-8-2-incompatible-in-pkg-golang-github-com-rancher-elemental-toolkit"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-github-com-docker-distribution-v2-8-2-incompatible-in-pkg-golang-github-com-rancher-elemental-toolkit"
           ]
         }
       ]
