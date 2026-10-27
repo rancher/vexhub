@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/rancher/kube-api-auth",
     "tracking": {
-      "current_release_date": "2026-10-26T18:53:33Z",
+      "current_release_date": "2026-10-27T11:00:47Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-10-26T18:53:33Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-27T11:00:47Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -1280,6 +1285,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/github.com/containerd/containerd@v1.7.35",
+        "product": {
+          "name": "pkg:golang/github.com/containerd/containerd@v1.7.35",
+          "product_id": "pkg-golang-github-com-containerd-containerd-v1-7-35",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/containerd/containerd@v1.7.35"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/golang.org%2Fx%2Ftext@v0.17.0",
         "product": {
           "name": "pkg:golang/golang.org%2Fx%2Ftext@v0.17.0",
@@ -1506,6 +1522,17 @@
           "product_id": "pkg-golang-github-com-lib-pq-v1-12-3",
           "product_identification_helper": {
             "purl": "pkg:golang/github.com/lib/pq@v1.12.3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/klauspost/compress@v1.18.0",
+        "product": {
+          "name": "pkg:golang/github.com/klauspost/compress@v1.18.0",
+          "product_id": "pkg-golang-github-com-klauspost-compress-v1-18-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/klauspost/compress@v1.18.0"
           }
         }
       },
@@ -3618,6 +3645,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/github.com/containerd/containerd@v1.7.35 as a component of pkg:golang/github.com/rancher/kube-api-auth",
+          "product_id": "pkg-golang-github-com-containerd-containerd-v1-7-35-in-pkg-golang-github-com-rancher-kube-api-auth"
+        },
+        "product_reference": "pkg-golang-github-com-containerd-containerd-v1-7-35",
+        "relates_to_product_reference": "pkg-golang-github-com-rancher-kube-api-auth"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/golang.org%2Fx%2Ftext@v0.17.0 as a component of pkg:golang/github.com/rancher/kube-api-auth",
           "product_id": "pkg-golang-golang-org-2Fx-2Ftext-v0-17-0-in-pkg-golang-github-com-rancher-kube-api-auth"
         },
@@ -4190,6 +4226,15 @@
         },
         "product_reference": "pkg-golang-github-com-lib-pq-v1-10-9",
         "relates_to_product_reference": "pkg-golang-github-com-rancher-kube-api-auth-v0-2-7-rc-1"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com/klauspost/compress@v1.18.0 as a component of pkg:golang/github.com/rancher/kube-api-auth",
+          "product_id": "pkg-golang-github-com-klauspost-compress-v1-18-0-in-pkg-golang-github-com-rancher-kube-api-auth"
+        },
+        "product_reference": "pkg-golang-github-com-klauspost-compress-v1-18-0",
+        "relates_to_product_reference": "pkg-golang-github-com-rancher-kube-api-auth"
       },
       {
         "category": "default_component_of",
@@ -17816,6 +17861,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-53493",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-github-com-containerd-containerd-v1-7-35-in-pkg-golang-github-com-rancher-kube-api-auth"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "__containerd v1.7.35__ is only an indirect dependency, reached through rancher/rancher __pkg/catalogv2/content__ --\u003e __helm.sh/helm/v3/pkg/registry__ --\u003e __containerd/remotes__. The linked packages are small helpers: __errdefs__, __filters__, __labels__, __content__, __images__, __remotes__ and __archive/compression__. The CRI image-pull service and the client __Pull__ code are not linked. In a built binary, __go tool nm__ finds no symbols from __containerd/images__, __containerd/remotes__ or __plugins/cri__ for children, dispatch, handler or pull. The linker's dead-code elimination removed the image-walking code. kube-api-auth only handles TokenReview and authentication requests. Nothing in the repo's own code pulls or parses OCI images or registries, so it can't be fed a malicious image index. Even if the code were present, it would be a denial of service during an image pull. kube-api-auth never performs one, and it doesn't act as a container runtime.. This statement concerns CVE-2026-53493 in pkg:golang/github.com/containerd/containerd@v1.7.35 as a subcomponent of pkg:golang/github.com/rancher/kube-api-auth. It does not assert the status of pkg:golang/github.com/containerd/containerd@v1.7.35 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-containerd-containerd-v1-7-35-in-pkg-golang-github-com-rancher-kube-api-auth"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-github-com-containerd-containerd-v1-7-35-in-pkg-golang-github-com-rancher-kube-api-auth"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-56851",
       "flags": [
         {
@@ -21063,6 +21139,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-github-com-lib-pq-v1-10-9-in-pkg-golang-github-com-rancher-kube-api-auth-v0-2-7-rc-1"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-63209",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-github-com-klauspost-compress-v1-18-0-in-pkg-golang-github-com-rancher-kube-api-auth"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "__klauspost/compress v1.18.0__ is only an indirect dependency in __go.mod__. It comes via rancher/rancher --\u003e rancher/lasso --\u003e __prometheus/client_golang__ --\u003e __promhttp__. Only the __zstd__ package is pulled in, along with its helpers: __fse__, __huff0__, __internal/{cpuinfo,le,snapref,xxhash}__ and the root package. __go list -deps .__ shows the __s2__ package is not in the dependency graph. In a built binary, __go tool nm__ finds no __compress/s2__ symbols and no __NewDict__. The repo's own code does not import __klauspost/compress__ at all. This statement concerns CVE-2026-63209 in pkg:golang/github.com/klauspost/compress@v1.18.0 as a subcomponent of pkg:golang/github.com/rancher/kube-api-auth. It does not assert the status of pkg:golang/github.com/klauspost/compress@v1.18.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-klauspost-compress-v1-18-0-in-pkg-golang-github-com-rancher-kube-api-auth"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-github-com-klauspost-compress-v1-18-0-in-pkg-golang-github-com-rancher-kube-api-auth"
           ]
         }
       ]
