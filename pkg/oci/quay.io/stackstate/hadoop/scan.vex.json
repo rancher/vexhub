@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/hadoop?repository_url=quay.io%2Fstackstate%2Fhadoop",
     "tracking": {
-      "current_release_date": "2026-10-23T15:35:10Z",
+      "current_release_date": "2026-10-28T10:21:36Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-23T15:35:10Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-28T10:21:36Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -167,6 +172,17 @@
             "purl": "pkg:rpm/suse/libpng16-16"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libsasl2-3",
+        "product": {
+          "name": "pkg:rpm/suse/libsasl2-3",
+          "product_id": "pkg-rpm-suse-libsasl2-3",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libsasl2-3"
+          }
+        }
       }
     ],
     "relationships": [
@@ -258,6 +274,15 @@
           "product_id": "pkg-rpm-suse-libpng16-16-in-pkg-oci-hadoop-repository-url-quay-io-2Fstackstate-2Fhadoop"
         },
         "product_reference": "pkg-rpm-suse-libpng16-16",
+        "relates_to_product_reference": "pkg-oci-hadoop-repository-url-quay-io-2Fstackstate-2Fhadoop"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libsasl2-3 as a component of pkg:oci/hadoop?repository_url=quay.io%2Fstackstate%2Fhadoop",
+          "product_id": "pkg-rpm-suse-libsasl2-3-in-pkg-oci-hadoop-repository-url-quay-io-2Fstackstate-2Fhadoop"
+        },
+        "product_reference": "pkg-rpm-suse-libsasl2-3",
         "relates_to_product_reference": "pkg-oci-hadoop-repository-url-quay-io-2Fstackstate-2Fhadoop"
       }
     ]
@@ -578,6 +603,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libpng16-16-in-pkg-oci-hadoop-repository-url-quay-io-2Fstackstate-2Fhadoop"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-suse-libsasl2-3-in-pkg-oci-hadoop-repository-url-quay-io-2Fstackstate-2Fhadoop"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4836-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CVE-2026-107161 lives in the DIGEST-MD5 SASL plugin; that plugin is not installed and libsasl2 lacks the code. This statement concerns SUSE-SU-2026:4836-1 in pkg:rpm/suse/libsasl2-3 as a subcomponent of pkg:oci/hadoop?repository_url=quay.io%2Fstackstate%2Fhadoop. It does not assert the status of pkg:rpm/suse/libsasl2-3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libsasl2-3-in-pkg-oci-hadoop-repository-url-quay-io-2Fstackstate-2Fhadoop"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-suse-libsasl2-3-in-pkg-oci-hadoop-repository-url-quay-io-2Fstackstate-2Fhadoop"
           ]
         }
       ]

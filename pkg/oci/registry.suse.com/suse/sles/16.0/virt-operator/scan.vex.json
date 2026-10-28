@@ -1,0 +1,107 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/virt-operator?repository_url=registry.suse.com%2Fsuse%2Fsles%2F16.0%2Fvirt-operator",
+    "tracking": {
+      "current_release_date": "2026-10-28T10:21:36Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/virt-operator?repository_url=registry.suse.com%2Fsuse%2Fsles%2F16.0%2Fvirt-operator",
+      "initial_release_date": "2026-10-28T10:21:36Z",
+      "revision_history": [
+        {
+          "date": "2026-10-28T10:21:36Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/virt-operator?repository_url=registry.suse.com%2Fsuse%2Fsles%2F16.0%2Fvirt-operator"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/virt-operator?repository_url=registry.suse.com%2Fsuse%2Fsles%2F16.0%2Fvirt-operator",
+        "product": {
+          "name": "pkg:oci/virt-operator?repository_url=registry.suse.com%2Fsuse%2Fsles%2F16.0%2Fvirt-operator",
+          "product_id": "pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F16-0-2Fvirt-operator",
+          "product_identification_helper": {
+            "purl": "pkg:oci/virt-operator?repository_url=registry.suse.com%2Fsuse%2Fsles%2F16.0%2Fvirt-operator"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/coreutils-single",
+        "product": {
+          "name": "pkg:rpm/suse/coreutils-single",
+          "product_id": "pkg-rpm-suse-coreutils-single",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/coreutils-single"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/coreutils-single as a component of pkg:oci/virt-operator?repository_url=registry.suse.com%2Fsuse%2Fsles%2F16.0%2Fvirt-operator",
+          "product_id": "pkg-rpm-suse-coreutils-single-in-pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F16-0-2Fvirt-operator"
+        },
+        "product_reference": "pkg-rpm-suse-coreutils-single",
+        "relates_to_product_reference": "pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F16-0-2Fvirt-operator"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-coreutils-single-in-pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F16-0-2Fvirt-operator"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24268-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CVE-2026-56391 needs uniq -w on multibyte input; uniq is not invoked by the container entrypoint. This statement concerns SUSE-SU-2026:24268-1 in pkg:rpm/suse/coreutils-single as a subcomponent of pkg:oci/virt-operator?repository_url=registry.suse.com%2Fsuse%2Fsles%2F16.0%2Fvirt-operator. It does not assert the status of pkg:rpm/suse/coreutils-single when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-coreutils-single-in-pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F16-0-2Fvirt-operator"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-coreutils-single-in-pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F16-0-2Fvirt-operator"
+          ]
+        }
+      ]
+    }
+  ]
+}
