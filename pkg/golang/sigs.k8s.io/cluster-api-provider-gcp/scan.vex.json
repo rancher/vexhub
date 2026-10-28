@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/sigs.k8s.io/cluster-api-provider-gcp",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-28T05:26:50Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:golang/sigs.k8s.io/cluster-api-provider-gcp"
+        },
+        {
+          "date": "2026-10-28T05:26:50Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -347,6 +352,17 @@
           "product_id": "pkg-golang-golang-org-x-mod-v0-38-0",
           "product_identification_helper": {
             "purl": "pkg:golang/golang.org/x/mod@v0.38.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.57.0",
+        "product": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.57.0",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/golang.org%2Fx%2Fnet@v0.57.0"
           }
         }
       },
@@ -912,6 +928,24 @@
           "product_id": "pkg-golang-golang-org-x-mod-v0-38-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp-v1-13-1"
         },
         "product_reference": "pkg-golang-golang-org-x-mod-v0-38-0",
+        "relates_to_product_reference": "pkg-golang-sigs-k8s-io-cluster-api-provider-gcp-v1-13-1"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.57.0 as a component of pkg:golang/sigs.k8s.io/cluster-api-provider-gcp",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0",
+        "relates_to_product_reference": "pkg-golang-sigs-k8s-io-cluster-api-provider-gcp"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.57.0 as a component of pkg:golang/sigs.k8s.io/cluster-api-provider-gcp@v1.13.1",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp-v1-13-1"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0",
         "relates_to_product_reference": "pkg-golang-sigs-k8s-io-cluster-api-provider-gcp-v1-13-1"
       },
       {
@@ -5879,6 +5913,61 @@
       ]
     },
     {
+      "cve": "CVE-2026-78661",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp-v1-13-1"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6860"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.57.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api-provider-gcp. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.57.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.57.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api-provider-gcp@v1.13.1. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.57.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp-v1-13-1"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp-v1-13-1"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-78662",
       "flags": [
         {
@@ -6336,6 +6425,61 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-google-golang-org-grpc-v1-81-1-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp-v1-13-1"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-97045",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp-v1-13-1"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6866"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.57.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api-provider-gcp. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.57.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.57.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api-provider-gcp@v1.13.1. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.57.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp-v1-13-1"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-57-0-in-pkg-golang-sigs-k8s-io-cluster-api-provider-gcp-v1-13-1"
           ]
         }
       ]

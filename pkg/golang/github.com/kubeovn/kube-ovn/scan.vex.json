@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/kubeovn/kube-ovn",
     "tracking": {
-      "current_release_date": "2026-10-22T00:30:21Z",
+      "current_release_date": "2026-10-28T05:26:50Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-22T00:30:21Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-28T05:26:50Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -610,6 +615,28 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.55.0",
+        "product": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.55.0",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/golang.org%2Fx%2Fnet@v0.55.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.59.0",
+        "product": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.59.0",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-59-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/golang.org%2Fx%2Fnet@v0.59.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/google.golang.org%2Fgrpc@v1.73.0",
         "product": {
           "name": "pkg:golang/google.golang.org%2Fgrpc@v1.73.0",
@@ -1133,6 +1160,24 @@
           "product_id": "pkg-golang-github-com-osrg-gobgp-v4-v4-1-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
         },
         "product_reference": "pkg-golang-github-com-osrg-gobgp-v4-v4-1-0",
+        "relates_to_product_reference": "pkg-golang-github-com-kubeovn-kube-ovn"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.55.0 as a component of pkg:golang/github.com/kubeovn/kube-ovn",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0",
+        "relates_to_product_reference": "pkg-golang-github-com-kubeovn-kube-ovn"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.59.0 as a component of pkg:golang/github.com/kubeovn/kube-ovn",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-59-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-59-0",
         "relates_to_product_reference": "pkg-golang-github-com-kubeovn-kube-ovn"
       },
       {
@@ -6296,6 +6341,79 @@
       ]
     },
     {
+      "cve": "CVE-2026-78661",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-50-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-59-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6860"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.50.0 as a subcomponent of pkg:golang/github.com/kubeovn/kube-ovn. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.50.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.55.0 as a subcomponent of pkg:golang/github.com/kubeovn/kube-ovn. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.55.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.59.0 as a subcomponent of pkg:golang/github.com/kubeovn/kube-ovn. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.59.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-50-0-in-pkg-golang-github-com-kubeovn-kube-ovn",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-kubeovn-kube-ovn",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-59-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-50-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-59-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-78662",
       "flags": [
         {
@@ -6776,6 +6894,79 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-97045",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-50-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-59-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6866"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.50.0 as a subcomponent of pkg:golang/github.com/kubeovn/kube-ovn. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.50.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.55.0 as a subcomponent of pkg:golang/github.com/kubeovn/kube-ovn. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.55.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.59.0 as a subcomponent of pkg:golang/github.com/kubeovn/kube-ovn. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.59.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-50-0-in-pkg-golang-github-com-kubeovn-kube-ovn",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-kubeovn-kube-ovn",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-59-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-50-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-59-0-in-pkg-golang-github-com-kubeovn-kube-ovn"
           ]
         }
       ]
