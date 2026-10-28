@@ -1,0 +1,140 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/litellm-database?repository_url=registry.suse.com%2Flitellm%2Flitellm-database",
+    "tracking": {
+      "current_release_date": "2026-10-28T17:35:55Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/litellm-database?repository_url=registry.suse.com%2Flitellm%2Flitellm-database",
+      "initial_release_date": "2026-10-28T17:35:55Z",
+      "revision_history": [
+        {
+          "date": "2026-10-28T17:35:55Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/litellm-database?repository_url=registry.suse.com%2Flitellm%2Flitellm-database"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/litellm-database?repository_url=registry.suse.com%2Flitellm%2Flitellm-database",
+        "product": {
+          "name": "pkg:oci/litellm-database?repository_url=registry.suse.com%2Flitellm%2Flitellm-database",
+          "product_id": "pkg-oci-litellm-database-repository-url-registry-suse-com-2Flitellm-2Flitellm-database",
+          "product_identification_helper": {
+            "purl": "pkg:oci/litellm-database?repository_url=registry.suse.com%2Flitellm%2Flitellm-database"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/wolfi/libbrotlicommon1",
+        "product": {
+          "name": "pkg:apk/wolfi/libbrotlicommon1",
+          "product_id": "pkg-apk-wolfi-libbrotlicommon1",
+          "product_identification_helper": {
+            "purl": "pkg:apk/wolfi/libbrotlicommon1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/wolfi/libbrotlienc1",
+        "product": {
+          "name": "pkg:apk/wolfi/libbrotlienc1",
+          "product_id": "pkg-apk-wolfi-libbrotlienc1",
+          "product_identification_helper": {
+            "purl": "pkg:apk/wolfi/libbrotlienc1"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/wolfi/libbrotlicommon1 as a component of pkg:oci/litellm-database?repository_url=registry.suse.com%2Flitellm%2Flitellm-database",
+          "product_id": "pkg-apk-wolfi-libbrotlicommon1-in-pkg-oci-litellm-database-repository-url-registry-suse-com-2Flitellm-2Flitellm-database"
+        },
+        "product_reference": "pkg-apk-wolfi-libbrotlicommon1",
+        "relates_to_product_reference": "pkg-oci-litellm-database-repository-url-registry-suse-com-2Flitellm-2Flitellm-database"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/wolfi/libbrotlienc1 as a component of pkg:oci/litellm-database?repository_url=registry.suse.com%2Flitellm%2Flitellm-database",
+          "product_id": "pkg-apk-wolfi-libbrotlienc1-in-pkg-oci-litellm-database-repository-url-registry-suse-com-2Flitellm-2Flitellm-database"
+        },
+        "product_reference": "pkg-apk-wolfi-libbrotlienc1",
+        "relates_to_product_reference": "pkg-oci-litellm-database-repository-url-registry-suse-com-2Flitellm-2Flitellm-database"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-111497",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-apk-wolfi-libbrotlicommon1-in-pkg-oci-litellm-database-repository-url-registry-suse-com-2Flitellm-2Flitellm-database"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-apk-wolfi-libbrotlienc1-in-pkg-oci-litellm-database-repository-url-registry-suse-com-2Flitellm-2Flitellm-database"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libbrotlicommon ships no decoder code; flaw is in c/dec/decode.c shipped by libbrotlidec1 only. This statement concerns CVE-2026-111497 in pkg:apk/wolfi/libbrotlicommon1 as a subcomponent of pkg:oci/litellm-database?repository_url=registry.suse.com%2Flitellm%2Flitellm-database. It does not assert the status of pkg:apk/wolfi/libbrotlicommon1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "libbrotlienc contains only encoder code; vulnerable c/dec/decode.c lives in libbrotlidec1. This statement concerns CVE-2026-111497 in pkg:apk/wolfi/libbrotlienc1 as a subcomponent of pkg:oci/litellm-database?repository_url=registry.suse.com%2Flitellm%2Flitellm-database. It does not assert the status of pkg:apk/wolfi/libbrotlienc1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-wolfi-libbrotlicommon1-in-pkg-oci-litellm-database-repository-url-registry-suse-com-2Flitellm-2Flitellm-database",
+          "pkg-apk-wolfi-libbrotlienc1-in-pkg-oci-litellm-database-repository-url-registry-suse-com-2Flitellm-2Flitellm-database"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-apk-wolfi-libbrotlicommon1-in-pkg-oci-litellm-database-repository-url-registry-suse-com-2Flitellm-2Flitellm-database"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-apk-wolfi-libbrotlienc1-in-pkg-oci-litellm-database-repository-url-registry-suse-com-2Flitellm-2Flitellm-database"
+          ]
+        }
+      ]
+    }
+  ]
+}
