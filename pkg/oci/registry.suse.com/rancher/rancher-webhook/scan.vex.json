@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/rancher-webhook?repository_url=registry.suse.com%2Francher%2Francher-webhook",
     "tracking": {
-      "current_release_date": "2026-10-23T15:35:10Z",
+      "current_release_date": "2026-10-28T10:21:36Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-10-23T15:35:10Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-28T10:21:36Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -106,6 +111,17 @@
             "purl": "pkg:rpm/suse/libpcre2-8-0"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/coreutils-single",
+        "product": {
+          "name": "pkg:rpm/suse/coreutils-single",
+          "product_id": "pkg-rpm-suse-coreutils-single",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/coreutils-single"
+          }
+        }
       }
     ],
     "relationships": [
@@ -152,6 +168,15 @@
           "product_id": "pkg-rpm-suse-glibc-in-pkg-oci-rancher-webhook-repository-url-registry-suse-com-2Francher-2Francher-webhook"
         },
         "product_reference": "pkg-rpm-suse-glibc",
+        "relates_to_product_reference": "pkg-oci-rancher-webhook-repository-url-registry-suse-com-2Francher-2Francher-webhook"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/coreutils-single as a component of pkg:oci/rancher-webhook?repository_url=registry.suse.com%2Francher%2Francher-webhook",
+          "product_id": "pkg-rpm-suse-coreutils-single-in-pkg-oci-rancher-webhook-repository-url-registry-suse-com-2Francher-2Francher-webhook"
+        },
+        "product_reference": "pkg-rpm-suse-coreutils-single",
         "relates_to_product_reference": "pkg-oci-rancher-webhook-repository-url-registry-suse-com-2Francher-2Francher-webhook"
       }
     ]
@@ -351,6 +376,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-glibc-in-pkg-oci-rancher-webhook-repository-url-registry-suse-com-2Francher-2Francher-webhook"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-coreutils-single-in-pkg-oci-rancher-webhook-repository-url-registry-suse-com-2Francher-2Francher-webhook"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24268-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CVE-2026-56391 needs uniq -w on multibyte input; uniq is not invoked by the container entrypoint. This statement concerns SUSE-SU-2026:24268-1 in pkg:rpm/suse/coreutils-single as a subcomponent of pkg:oci/rancher-webhook?repository_url=registry.suse.com%2Francher%2Francher-webhook. It does not assert the status of pkg:rpm/suse/coreutils-single when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-coreutils-single-in-pkg-oci-rancher-webhook-repository-url-registry-suse-com-2Francher-2Francher-webhook"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-coreutils-single-in-pkg-oci-rancher-webhook-repository-url-registry-suse-com-2Francher-2Francher-webhook"
           ]
         }
       ]

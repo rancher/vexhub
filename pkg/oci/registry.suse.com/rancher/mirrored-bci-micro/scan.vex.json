@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-bci-micro?repository_url=registry.suse.com%2Francher%2Fmirrored-bci-micro",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-28T10:21:36Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/mirrored-bci-micro?repository_url=registry.suse.com/rancher/mirrored-bci-micro"
+        },
+        {
+          "date": "2026-10-28T10:21:36Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -83,6 +88,17 @@
           "product_id": "pkg-rpm-suse-terminfo-base",
           "product_identification_helper": {
             "purl": "pkg:rpm/suse/terminfo-base"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:oci/mirrored-bci-micro?repository_url=registry.suse.com%2Francher%2Fmirrored-bci-micro",
+        "product": {
+          "name": "pkg:oci/mirrored-bci-micro?repository_url=registry.suse.com%2Francher%2Fmirrored-bci-micro",
+          "product_id": "pkg-oci-mirrored-bci-micro-repository-url-registry-suse-com-2Francher-2Fmirrored-bci-micro",
+          "product_identification_helper": {
+            "purl": "pkg:oci/mirrored-bci-micro?repository_url=registry.suse.com%2Francher%2Fmirrored-bci-micro"
           }
         }
       },
@@ -156,6 +172,15 @@
         },
         "product_reference": "pkg-rpm-suse-terminfo-base",
         "relates_to_product_reference": "pkg-oci-mirrored-bci-micro-repository-url-registry-suse-com-rancher-mirrored-bci-micro"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/coreutils as a component of pkg:oci/mirrored-bci-micro?repository_url=registry.suse.com%2Francher%2Fmirrored-bci-micro",
+          "product_id": "pkg-rpm-suse-coreutils-in-pkg-oci-mirrored-bci-micro-repository-url-registry-suse-com-2Francher-2Fmirrored-bci-micro"
+        },
+        "product_reference": "pkg-rpm-suse-coreutils",
+        "relates_to_product_reference": "pkg-oci-mirrored-bci-micro-repository-url-registry-suse-com-2Francher-2Fmirrored-bci-micro"
       },
       {
         "category": "default_component_of",
@@ -309,6 +334,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-terminfo-base-in-pkg-oci-mirrored-bci-micro-repository-url-registry-suse-com-rancher-mirrored-bci-micro"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-coreutils-in-pkg-oci-mirrored-bci-micro-repository-url-registry-suse-com-2Francher-2Fmirrored-bci-micro"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24268-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CVE-2026-56391 needs uniq -w on multibyte input; uniq is not invoked by the container entrypoint. This statement concerns SUSE-SU-2026:24268-1 in pkg:rpm/suse/coreutils as a subcomponent of pkg:oci/mirrored-bci-micro?repository_url=registry.suse.com%2Francher%2Fmirrored-bci-micro. It does not assert the status of pkg:rpm/suse/coreutils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-coreutils-in-pkg-oci-mirrored-bci-micro-repository-url-registry-suse-com-2Francher-2Fmirrored-bci-micro"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-coreutils-in-pkg-oci-mirrored-bci-micro-repository-url-registry-suse-com-2Francher-2Fmirrored-bci-micro"
           ]
         }
       ]

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/neuvector-enforcer?repository_url=registry.rancher.com%2Francher%2Fneuvector-enforcer",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-28T10:21:36Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/neuvector-enforcer?repository_url=registry.rancher.com/rancher/neuvector-enforcer"
+        },
+        {
+          "date": "2026-10-28T10:21:36Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -228,6 +233,28 @@
             "purl": "pkg:rpm/suse/pcre2-devel"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libsasl2-3",
+        "product": {
+          "name": "pkg:rpm/suse/libsasl2-3",
+          "product_id": "pkg-rpm-suse-libsasl2-3",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libsasl2-3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libstdc++6-devel-gcc7",
+        "product": {
+          "name": "pkg:rpm/suse/libstdc++6-devel-gcc7",
+          "product_id": "pkg-rpm-suse-libstdc--6-devel-gcc7",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libstdc++6-devel-gcc7"
+          }
+        }
       }
     ],
     "relationships": [
@@ -382,6 +409,24 @@
           "product_id": "pkg-rpm-suse-glibc-devel-in-pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
         },
         "product_reference": "pkg-rpm-suse-glibc-devel",
+        "relates_to_product_reference": "pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libsasl2-3 as a component of pkg:oci/neuvector-enforcer?repository_url=registry.rancher.com%2Francher%2Fneuvector-enforcer",
+          "product_id": "pkg-rpm-suse-libsasl2-3-in-pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
+        },
+        "product_reference": "pkg-rpm-suse-libsasl2-3",
+        "relates_to_product_reference": "pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libstdc++6-devel-gcc7 as a component of pkg:oci/neuvector-enforcer?repository_url=registry.rancher.com%2Francher%2Fneuvector-enforcer",
+          "product_id": "pkg-rpm-suse-libstdc--6-devel-gcc7-in-pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
+        },
+        "product_reference": "pkg-rpm-suse-libstdc--6-devel-gcc7",
         "relates_to_product_reference": "pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
       }
     ]
@@ -977,6 +1022,78 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-glibc-devel-in-pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-suse-libsasl2-3-in-pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4836-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CVE-2026-107161 lives in the DIGEST-MD5 SASL plugin; that plugin is not installed and libsasl2 lacks the code. This statement concerns SUSE-SU-2026:4836-1 in pkg:rpm/suse/libsasl2-3 as a subcomponent of pkg:oci/neuvector-enforcer?repository_url=registry.rancher.com%2Francher%2Fneuvector-enforcer. It does not assert the status of pkg:rpm/suse/libsasl2-3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libsasl2-3-in-pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-suse-libsasl2-3-in-pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libstdc--6-devel-gcc7-in-pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4913-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "GCC 7 compiler and header packages are build-time only and are never invoked by the container entrypoint. This statement concerns SUSE-SU-2026:4913-1 in pkg:rpm/suse/libstdc++6-devel-gcc7 as a subcomponent of pkg:oci/neuvector-enforcer?repository_url=registry.rancher.com%2Francher%2Fneuvector-enforcer. It does not assert the status of pkg:rpm/suse/libstdc++6-devel-gcc7 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libstdc--6-devel-gcc7-in-pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libstdc--6-devel-gcc7-in-pkg-oci-neuvector-enforcer-repository-url-registry-rancher-com-2Francher-2Fneuvector-enforcer"
           ]
         }
       ]

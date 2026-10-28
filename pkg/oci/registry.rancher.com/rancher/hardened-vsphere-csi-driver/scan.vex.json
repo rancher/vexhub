@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/hardened-vsphere-csi-driver?repository_url=registry.rancher.com%2Francher%2Fhardened-vsphere-csi-driver",
     "tracking": {
-      "current_release_date": "2026-10-23T15:35:10Z",
+      "current_release_date": "2026-10-28T10:21:36Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-23T15:35:10Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-28T10:21:36Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -101,6 +106,17 @@
             "purl": "pkg:rpm/suse/libopenssl3"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/coreutils",
+        "product": {
+          "name": "pkg:rpm/suse/coreutils",
+          "product_id": "pkg-rpm-suse-coreutils",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/coreutils"
+          }
+        }
       }
     ],
     "relationships": [
@@ -138,6 +154,15 @@
           "product_id": "pkg-rpm-suse-libopenssl3-in-pkg-oci-hardened-vsphere-csi-driver-repository-url-registry-rancher-com-2Francher-2Fhardened-vsphere-csi-driver"
         },
         "product_reference": "pkg-rpm-suse-libopenssl3",
+        "relates_to_product_reference": "pkg-oci-hardened-vsphere-csi-driver-repository-url-registry-rancher-com-2Francher-2Fhardened-vsphere-csi-driver"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/coreutils as a component of pkg:oci/hardened-vsphere-csi-driver?repository_url=registry.rancher.com%2Francher%2Fhardened-vsphere-csi-driver",
+          "product_id": "pkg-rpm-suse-coreutils-in-pkg-oci-hardened-vsphere-csi-driver-repository-url-registry-rancher-com-2Francher-2Fhardened-vsphere-csi-driver"
+        },
+        "product_reference": "pkg-rpm-suse-coreutils",
         "relates_to_product_reference": "pkg-oci-hardened-vsphere-csi-driver-repository-url-registry-rancher-com-2Francher-2Fhardened-vsphere-csi-driver"
       }
     ]
@@ -283,6 +308,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libopenssl3-in-pkg-oci-hardened-vsphere-csi-driver-repository-url-registry-rancher-com-2Francher-2Fhardened-vsphere-csi-driver"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-coreutils-in-pkg-oci-hardened-vsphere-csi-driver-repository-url-registry-rancher-com-2Francher-2Fhardened-vsphere-csi-driver"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24268-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CVE-2026-56391 needs uniq -w on multibyte input; uniq is not invoked by the container entrypoint. This statement concerns SUSE-SU-2026:24268-1 in pkg:rpm/suse/coreutils as a subcomponent of pkg:oci/hardened-vsphere-csi-driver?repository_url=registry.rancher.com%2Francher%2Fhardened-vsphere-csi-driver. It does not assert the status of pkg:rpm/suse/coreutils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-coreutils-in-pkg-oci-hardened-vsphere-csi-driver-repository-url-registry-rancher-com-2Francher-2Fhardened-vsphere-csi-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-coreutils-in-pkg-oci-hardened-vsphere-csi-driver-repository-url-registry-rancher-com-2Francher-2Fhardened-vsphere-csi-driver"
           ]
         }
       ]
