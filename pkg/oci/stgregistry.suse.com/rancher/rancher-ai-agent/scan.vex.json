@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/rancher-ai-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-ai-agent",
     "tracking": {
-      "current_release_date": "2026-10-21T04:27:47Z",
+      "current_release_date": "2026-10-28T14:09:52Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-21T04:27:47Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-28T14:09:52Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -55,6 +60,17 @@
           "product_id": "pkg-pypi-aiohttp-3-13-5",
           "product_identification_helper": {
             "purl": "pkg:pypi/aiohttp@3.13.5"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:pypi/mcp@1.26.0",
+        "product": {
+          "name": "pkg:pypi/mcp@1.26.0",
+          "product_id": "pkg-pypi-mcp-1-26-0",
+          "product_identification_helper": {
+            "purl": "pkg:pypi/mcp@1.26.0"
           }
         }
       },
@@ -127,6 +143,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:pypi/mcp@1.26.0 as a component of pkg:oci/rancher-ai-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-ai-agent",
+          "product_id": "pkg-pypi-mcp-1-26-0-in-pkg-oci-rancher-ai-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-ai-agent"
+        },
+        "product_reference": "pkg-pypi-mcp-1-26-0",
+        "relates_to_product_reference": "pkg-oci-rancher-ai-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-ai-agent"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:pypi/starlette@1.0.0 as a component of pkg:oci/rancher-ai-agent?repository_url=stgregistry.suse.com/rancher/rancher-ai-agent",
           "product_id": "pkg-pypi-starlette-1-0-0-in-pkg-oci-rancher-ai-agent-repository-url-stgregistry-suse-com-rancher-rancher-ai-agent"
         },
@@ -190,6 +215,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-pypi-aiohttp-3-13-5-in-pkg-oci-rancher-ai-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-ai-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-116684",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-mcp-1-26-0-in-pkg-oci-rancher-ai-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-ai-agent"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Image runs only an MCP client (MultiServerMCPClient); no MCP server AuthSettings/token_verifier is used.. This statement concerns CVE-2026-116684 in pkg:pypi/mcp@1.26.0 as a subcomponent of pkg:oci/rancher-ai-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-ai-agent. It does not assert the status of pkg:pypi/mcp@1.26.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-pypi-mcp-1-26-0-in-pkg-oci-rancher-ai-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-ai-agent"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-mcp-1-26-0-in-pkg-oci-rancher-ai-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-ai-agent"
           ]
         }
       ]
