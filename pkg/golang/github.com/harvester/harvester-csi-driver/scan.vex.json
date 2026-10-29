@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/harvester/harvester-csi-driver",
     "tracking": {
-      "current_release_date": "2026-10-28T05:26:50Z",
+      "current_release_date": "2026-10-29T19:42:47Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-28T05:26:50Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-29T19:42:47Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -880,6 +885,17 @@
           "product_id": "pkg-golang-golang-org-x-mod-v0-32-0",
           "product_identification_helper": {
             "purl": "pkg:golang/golang.org/x/mod@v0.32.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/golang.org/x/net@v0.58.0",
+        "product": {
+          "name": "pkg:golang/golang.org/x/net@v0.58.0",
+          "product_id": "pkg-golang-golang-org-x-net-v0-58-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/golang.org/x/net@v0.58.0"
           }
         }
       },
@@ -2331,6 +2347,15 @@
         },
         "product_reference": "pkg-golang-golang-org-x-mod-v0-32-0",
         "relates_to_product_reference": "pkg-golang-github-com-harvester-harvester-csi-driver-v0-2-9"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/golang.org/x/net@v0.58.0 as a component of pkg:golang/github.com/harvester/harvester-csi-driver",
+          "product_id": "pkg-golang-golang-org-x-net-v0-58-0-in-pkg-golang-github-com-harvester-harvester-csi-driver"
+        },
+        "product_reference": "pkg-golang-golang-org-x-net-v0-58-0",
+        "relates_to_product_reference": "pkg-golang-github-com-harvester-harvester-csi-driver"
       },
       {
         "category": "default_component_of",
@@ -20101,6 +20126,68 @@
       ]
     },
     {
+      "cve": "CVE-2026-78659",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-x-net-v0-58-0-in-pkg-golang-github-com-harvester-harvester-csi-driver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Harvester CSI driver runs no net/http or x/net/http2 server. Its only listener is the CSI gRPC endpoint (a Unix socket by default), served by grpc-go, which implements its own HTTP/2 server transport using only x/net/http2's Framer and hpack packages, not http2.Server. No vendored dependency constructs an http2.Server.. This statement concerns CVE-2026-78659 in pkg:golang/golang.org/x/net@v0.58.0 as a subcomponent of pkg:golang/github.com/harvester/harvester-csi-driver. It does not assert the status of pkg:golang/golang.org/x/net@v0.58.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-golang-org-x-net-v0-58-0-in-pkg-golang-github-com-harvester-harvester-csi-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-x-net-v0-58-0-in-pkg-golang-github-com-harvester-harvester-csi-driver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-78660",
+      "flags": [
+        {
+          "label": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-golang-golang-org-x-net-v0-58-0-in-pkg-golang-github-com-harvester-harvester-csi-driver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Exploitation requires forwarding responses received over the x/net/http2 transport to HTTP/1 clients (reverse-proxy usage). Harvester CSI driver only consumes Kubernetes API responses through client-go and never forwards them; no reverse-proxy code (httputil.ReverseProxy or equivalent) is present in the binary. Responses come only from the TLS-authenticated API servers above.. This statement concerns CVE-2026-78660 in pkg:golang/golang.org/x/net@v0.58.0 as a subcomponent of pkg:golang/github.com/harvester/harvester-csi-driver. It does not assert the status of pkg:golang/golang.org/x/net@v0.58.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-golang-org-x-net-v0-58-0-in-pkg-golang-github-com-harvester-harvester-csi-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-golang-golang-org-x-net-v0-58-0-in-pkg-golang-github-com-harvester-harvester-csi-driver"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-78661",
       "flags": [
         {
@@ -20693,6 +20780,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-3-in-pkg-golang-github-com-harvester-harvester-csi-driver-v0-2-9"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-78669",
+      "flags": [
+        {
+          "label": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-golang-golang-org-x-net-v0-58-0-in-pkg-golang-github-com-harvester-harvester-csi-driver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Server side: the CSI gRPC endpoint is served by grpc-go, which handles SETTINGS frames in its own transport rather than x/net/http2. Client side: the driver's only outbound HTTP/2 peers are Kubernetes API servers. These connections are TLS-authenticated against CAs from the service account and kubeconfig, so only a legitimate API server can send the malicious SETTINGS frames. An attacker controlling either API server already has full control over the driver's behavior.. This statement concerns CVE-2026-78669 in pkg:golang/golang.org/x/net@v0.58.0 as a subcomponent of pkg:golang/github.com/harvester/harvester-csi-driver. It does not assert the status of pkg:golang/golang.org/x/net@v0.58.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-golang-org-x-net-v0-58-0-in-pkg-golang-github-com-harvester-harvester-csi-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-golang-golang-org-x-net-v0-58-0-in-pkg-golang-github-com-harvester-harvester-csi-driver"
           ]
         }
       ]
