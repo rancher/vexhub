@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/cilium/cilium",
     "tracking": {
-      "current_release_date": "2026-10-28T05:26:50Z",
+      "current_release_date": "2026-10-29T05:26:45Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-10-28T05:26:50Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-29T05:26:45Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -1231,6 +1236,28 @@
           "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0",
           "product_identification_helper": {
             "purl": "pkg:golang/golang.org%2Fx%2Fnet@v0.56.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.60.0",
+        "product": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.60.0",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/golang.org%2Fx%2Fnet@v0.60.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/cilium/cilium@v1.20.4",
+        "product": {
+          "name": "pkg:golang/github.com/cilium/cilium@v1.20.4",
+          "product_id": "pkg-golang-github-com-cilium-cilium-v1-20-4",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/cilium/cilium@v1.20.4"
           }
         }
       },
@@ -3339,11 +3366,29 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 as a component of pkg:golang/github.com/cilium/cilium",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0",
+        "relates_to_product_reference": "pkg-golang-github-com-cilium-cilium"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.56.0 as a component of pkg:golang/github.com/cilium/cilium@v1.20.2",
           "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0-in-pkg-golang-github-com-cilium-cilium-v1-20-2"
         },
         "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0",
         "relates_to_product_reference": "pkg-golang-github-com-cilium-cilium-v1-20-2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 as a component of pkg:golang/github.com/cilium/cilium@v1.20.4",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium-v1-20-4"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0",
+        "relates_to_product_reference": "pkg-golang-github-com-cilium-cilium-v1-20-4"
       },
       {
         "category": "default_component_of",
@@ -19664,6 +19709,12 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-cilium-cilium-v1-19-6"
           ]
         },
@@ -19671,6 +19722,12 @@
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0-in-pkg-golang-github-com-cilium-cilium-v1-20-2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium-v1-20-4"
           ]
         }
       ],
@@ -19691,19 +19748,29 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 as a subcomponent of pkg:golang/github.com/cilium/cilium. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.55.0 as a subcomponent of pkg:golang/github.com/cilium/cilium@v1.19.6. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.55.0 when used independently or in other products."
         },
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.56.0 as a subcomponent of pkg:golang/github.com/cilium/cilium@v1.20.2. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.56.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 as a subcomponent of pkg:golang/github.com/cilium/cilium@v1.20.4. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-cilium-cilium",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0-in-pkg-golang-github-com-cilium-cilium",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-cilium-cilium-v1-19-6",
-          "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0-in-pkg-golang-github-com-cilium-cilium-v1-20-2"
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0-in-pkg-golang-github-com-cilium-cilium-v1-20-2",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium-v1-20-4"
         ]
       },
       "threats": [
@@ -19725,6 +19792,13 @@
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-cilium-cilium-v1-19-6"
           ]
         },
@@ -19733,6 +19807,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0-in-pkg-golang-github-com-cilium-cilium-v1-20-2"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium-v1-20-4"
           ]
         }
       ]
@@ -20976,6 +21057,12 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-cilium-cilium-v1-19-6"
           ]
         },
@@ -20983,6 +21070,12 @@
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0-in-pkg-golang-github-com-cilium-cilium-v1-20-2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium-v1-20-4"
           ]
         }
       ],
@@ -21003,19 +21096,29 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 as a subcomponent of pkg:golang/github.com/cilium/cilium. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.55.0 as a subcomponent of pkg:golang/github.com/cilium/cilium@v1.19.6. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.55.0 when used independently or in other products."
         },
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.56.0 as a subcomponent of pkg:golang/github.com/cilium/cilium@v1.20.2. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.56.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 as a subcomponent of pkg:golang/github.com/cilium/cilium@v1.20.4. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-cilium-cilium",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0-in-pkg-golang-github-com-cilium-cilium",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-cilium-cilium-v1-19-6",
-          "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0-in-pkg-golang-github-com-cilium-cilium-v1-20-2"
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0-in-pkg-golang-github-com-cilium-cilium-v1-20-2",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium-v1-20-4"
         ]
       },
       "threats": [
@@ -21037,6 +21140,13 @@
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-55-0-in-pkg-golang-github-com-cilium-cilium-v1-19-6"
           ]
         },
@@ -21045,6 +21155,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0-in-pkg-golang-github-com-cilium-cilium-v1-20-2"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-cilium-cilium-v1-20-4"
           ]
         }
       ]
