@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/litellm?repository_url=registry.rancher.com%2Flitellm%2Flitellm",
     "tracking": {
-      "current_release_date": "2026-10-28T17:35:55Z",
+      "current_release_date": "2026-10-30T14:12:36Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-28T17:35:55Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/litellm?repository_url=registry.rancher.com%2Flitellm%2Flitellm"
+        },
+        {
+          "date": "2026-10-30T14:12:36Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -55,6 +60,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:apk/wolfi/libbrotlidec1",
+        "product": {
+          "name": "pkg:apk/wolfi/libbrotlidec1",
+          "product_id": "pkg-apk-wolfi-libbrotlidec1",
+          "product_identification_helper": {
+            "purl": "pkg:apk/wolfi/libbrotlidec1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:apk/wolfi/libbrotlienc1",
         "product": {
           "name": "pkg:apk/wolfi/libbrotlienc1",
@@ -73,6 +89,15 @@
           "product_id": "pkg-apk-wolfi-libbrotlicommon1-in-pkg-oci-litellm-repository-url-registry-rancher-com-2Flitellm-2Flitellm"
         },
         "product_reference": "pkg-apk-wolfi-libbrotlicommon1",
+        "relates_to_product_reference": "pkg-oci-litellm-repository-url-registry-rancher-com-2Flitellm-2Flitellm"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/wolfi/libbrotlidec1 as a component of pkg:oci/litellm?repository_url=registry.rancher.com%2Flitellm%2Flitellm",
+          "product_id": "pkg-apk-wolfi-libbrotlidec1-in-pkg-oci-litellm-repository-url-registry-rancher-com-2Flitellm-2Flitellm"
+        },
+        "product_reference": "pkg-apk-wolfi-libbrotlidec1",
         "relates_to_product_reference": "pkg-oci-litellm-repository-url-registry-rancher-com-2Flitellm-2Flitellm"
       },
       {
@@ -99,6 +124,12 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-apk-wolfi-libbrotlidec1-in-pkg-oci-litellm-repository-url-registry-rancher-com-2Flitellm-2Flitellm"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-apk-wolfi-libbrotlienc1-in-pkg-oci-litellm-repository-url-registry-rancher-com-2Flitellm-2Flitellm"
           ]
         }
@@ -110,12 +141,17 @@
         },
         {
           "category": "description",
+          "text": "This statement concerns CVE-2026-111497 in pkg:apk/wolfi/libbrotlidec1 as a subcomponent of pkg:oci/litellm?repository_url=registry.rancher.com%2Flitellm%2Flitellm. It does not assert the status of pkg:apk/wolfi/libbrotlidec1 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "libbrotlienc contains only encoder code; vulnerable c/dec/decode.c lives in libbrotlidec1. This statement concerns CVE-2026-111497 in pkg:apk/wolfi/libbrotlienc1 as a subcomponent of pkg:oci/litellm?repository_url=registry.rancher.com%2Flitellm%2Flitellm. It does not assert the status of pkg:apk/wolfi/libbrotlienc1 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-apk-wolfi-libbrotlicommon1-in-pkg-oci-litellm-repository-url-registry-rancher-com-2Flitellm-2Flitellm",
+          "pkg-apk-wolfi-libbrotlidec1-in-pkg-oci-litellm-repository-url-registry-rancher-com-2Flitellm-2Flitellm",
           "pkg-apk-wolfi-libbrotlienc1-in-pkg-oci-litellm-repository-url-registry-rancher-com-2Flitellm-2Flitellm"
         ]
       },
@@ -125,6 +161,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-apk-wolfi-libbrotlicommon1-in-pkg-oci-litellm-repository-url-registry-rancher-com-2Flitellm-2Flitellm"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-apk-wolfi-libbrotlidec1-in-pkg-oci-litellm-repository-url-registry-rancher-com-2Flitellm-2Flitellm"
           ]
         },
         {

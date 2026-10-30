@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/jupyter-pytorch-cuda-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-cuda-full",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-30T14:12:36Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/jupyter-pytorch-cuda-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-cuda-full"
+        },
+        {
+          "date": "2026-10-30T14:12:36Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -83,6 +88,39 @@
           "product_id": "pkg-deb-ubuntu-libpython3-10-minimal",
           "product_identification_helper": {
             "purl": "pkg:deb/ubuntu/libpython3.10-minimal"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:oci/jupyter-pytorch-cuda-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-cuda-full",
+        "product": {
+          "name": "pkg:oci/jupyter-pytorch-cuda-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-cuda-full",
+          "product_id": "pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-cuda-full",
+          "product_identification_helper": {
+            "purl": "pkg:oci/jupyter-pytorch-cuda-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-cuda-full"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/libbrotli1",
+        "product": {
+          "name": "pkg:deb/ubuntu/libbrotli1",
+          "product_id": "pkg-deb-ubuntu-libbrotli1",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libbrotli1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:pypi/Brotli@1.2.0",
+        "product": {
+          "name": "pkg:pypi/Brotli@1.2.0",
+          "product_id": "pkg-pypi-Brotli-1-2-0",
+          "product_identification_helper": {
+            "purl": "pkg:pypi/Brotli@1.2.0"
           }
         }
       },
@@ -545,6 +583,24 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:deb/ubuntu/libbrotli1 as a component of pkg:oci/jupyter-pytorch-cuda-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-cuda-full",
+          "product_id": "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-cuda-full"
+        },
+        "product_reference": "pkg-deb-ubuntu-libbrotli1",
+        "relates_to_product_reference": "pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-cuda-full"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:pypi/Brotli@1.2.0 as a component of pkg:oci/jupyter-pytorch-cuda-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-cuda-full",
+          "product_id": "pkg-pypi-Brotli-1-2-0-in-pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-cuda-full"
+        },
+        "product_reference": "pkg-pypi-Brotli-1-2-0",
+        "relates_to_product_reference": "pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-cuda-full"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:deb/ubuntu/libgssapi-krb5-2 as a component of pkg:oci/jupyter-pytorch-cuda-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-cuda-full",
           "product_id": "pkg-deb-ubuntu-libgssapi-krb5-2-in-pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-kubeflow-kubeflow-notebook-servers-jupyter-pytorch-cuda-full"
         },
@@ -994,6 +1050,55 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-deb-ubuntu-libpython3-10-minimal-in-pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-kubeflow-kubeflow-notebook-servers-jupyter-pytorch-cuda-full"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-111497",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-cuda-full"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-Brotli-1-2-0-in-pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-cuda-full"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "This statement concerns CVE-2026-111497 in pkg:deb/ubuntu/libbrotli1 as a subcomponent of pkg:oci/jupyter-pytorch-cuda-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-cuda-full. It does not assert the status of pkg:deb/ubuntu/libbrotli1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "This statement concerns CVE-2026-111497 in pkg:pypi/Brotli@1.2.0 as a subcomponent of pkg:oci/jupyter-pytorch-cuda-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-cuda-full. It does not assert the status of pkg:pypi/Brotli@1.2.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-cuda-full",
+          "pkg-pypi-Brotli-1-2-0-in-pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-cuda-full"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-cuda-full"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-Brotli-1-2-0-in-pkg-oci-jupyter-pytorch-cuda-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-cuda-full"
           ]
         }
       ]
