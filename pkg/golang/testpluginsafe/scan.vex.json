@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/testpluginsafe",
     "tracking": {
-      "current_release_date": "2026-10-21T04:27:47Z",
+      "current_release_date": "2026-10-30T05:56:04Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-21T04:27:47Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-10-30T05:56:04Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -93,12 +98,34 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.26.9",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.26.9",
+          "product_id": "pkg-golang-stdlib-v1-26-9",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.26.9"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/testpluginsafe@v3.7.13",
         "product": {
           "name": "pkg:golang/testpluginsafe@v3.7.13",
           "product_id": "pkg-golang-testpluginsafe-v3-7-13",
           "product_identification_helper": {
             "purl": "pkg:golang/testpluginsafe@v3.7.13"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/testpluginsafe@v3.7.15",
+        "product": {
+          "name": "pkg:golang/testpluginsafe@v3.7.15",
+          "product_id": "pkg-golang-testpluginsafe-v3-7-15",
+          "product_identification_helper": {
+            "purl": "pkg:golang/testpluginsafe@v3.7.15"
           }
         }
       },
@@ -231,11 +258,29 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.9 as a component of pkg:golang/testpluginsafe",
+          "product_id": "pkg-golang-stdlib-v1-26-9-in-pkg-golang-testpluginsafe"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-9",
+        "relates_to_product_reference": "pkg-golang-testpluginsafe"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/stdlib@v1.26.8 as a component of pkg:golang/testpluginsafe@v3.7.13",
           "product_id": "pkg-golang-stdlib-v1-26-8-in-pkg-golang-testpluginsafe-v3-7-13"
         },
         "product_reference": "pkg-golang-stdlib-v1-26-8",
         "relates_to_product_reference": "pkg-golang-testpluginsafe-v3-7-13"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.9 as a component of pkg:golang/testpluginsafe@v3.7.15",
+          "product_id": "pkg-golang-stdlib-v1-26-9-in-pkg-golang-testpluginsafe-v3-7-15"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-9",
+        "relates_to_product_reference": "pkg-golang-testpluginsafe-v3-7-15"
       },
       {
         "category": "default_component_of",
@@ -550,7 +595,19 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-9-in-pkg-golang-testpluginsafe"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-testpluginsafe-v3-7-13"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-9-in-pkg-golang-testpluginsafe-v3-7-15"
           ]
         },
         {
@@ -577,7 +634,15 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.26.9 as a subcomponent of pkg:golang/testpluginsafe. It does not assert the status of pkg:golang/stdlib@v1.26.9 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.26.8 as a subcomponent of pkg:golang/testpluginsafe@v3.7.13. It does not assert the status of pkg:golang/stdlib@v1.26.8 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.26.9 as a subcomponent of pkg:golang/testpluginsafe@v3.7.15. It does not assert the status of pkg:golang/stdlib@v1.26.9 when used independently or in other products."
         },
         {
           "category": "description",
@@ -588,7 +653,9 @@
         "known_not_affected": [
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-testpluginsafe",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-testpluginsafe",
+          "pkg-golang-stdlib-v1-26-9-in-pkg-golang-testpluginsafe",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-testpluginsafe-v3-7-13",
+          "pkg-golang-stdlib-v1-26-9-in-pkg-golang-testpluginsafe-v3-7-15",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-testpluginsafe-v3-7-8"
         ]
       },
@@ -611,7 +678,21 @@
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-9-in-pkg-golang-testpluginsafe"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-testpluginsafe-v3-7-13"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-9-in-pkg-golang-testpluginsafe-v3-7-15"
           ]
         },
         {
