@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-30T14:12:36Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io/rancher/mirrored-cloud-provider-vsphere-csi-release-syncer"
+        },
+        {
+          "date": "2026-10-30T14:12:36Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -154,6 +159,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
+        "product": {
+          "name": "pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
+          "product_id": "pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
+          "product_identification_helper": {
+            "purl": "pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:rpm/photon/rpm-libs",
         "product": {
           "name": "pkg:rpm/photon/rpm-libs",
@@ -276,6 +292,24 @@
         },
         "product_reference": "pkg-rpm-photon-curl-libs",
         "relates_to_product_reference": "pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-rancher-mirrored-cloud-provider-vsphere-csi-release-syncer"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/photon/curl as a component of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
+          "product_id": "pkg-rpm-photon-curl-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+        },
+        "product_reference": "pkg-rpm-photon-curl",
+        "relates_to_product_reference": "pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/photon/curl-libs as a component of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
+          "product_id": "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+        },
+        "product_reference": "pkg-rpm-photon-curl-libs",
+        "relates_to_product_reference": "pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
       },
       {
         "category": "default_component_of",
@@ -1519,6 +1553,104 @@
       ]
     },
     {
+      "cve": "CVE-2026-18924",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-curl-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint /bin/vsphere-syncer is a static Go binary; curl/libcurl never executed at runtime. This statement concerns CVE-2026-18924 in pkg:rpm/photon/curl as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer. It does not assert the status of pkg:rpm/photon/curl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Entrypoint /bin/vsphere-syncer is a static Go binary; curl/libcurl never executed at runtime. This statement concerns CVE-2026-18924 in pkg:rpm/photon/curl-libs as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer. It does not assert the status of pkg:rpm/photon/curl-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-curl-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
+          "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-curl-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-19931",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-curl-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint /bin/vsphere-syncer is a static Go binary; curl/libcurl never executed at runtime. This statement concerns CVE-2026-19931 in pkg:rpm/photon/curl as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer. It does not assert the status of pkg:rpm/photon/curl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Entrypoint /bin/vsphere-syncer is a static Go binary; curl/libcurl never executed at runtime. This statement concerns CVE-2026-19931 in pkg:rpm/photon/curl-libs as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer. It does not assert the status of pkg:rpm/photon/curl-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-curl-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
+          "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-curl-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-25210",
       "flags": [
         {
@@ -1917,6 +2049,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-photon-libssh2-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-rancher-mirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-8458",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-curl-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint /bin/vsphere-syncer is a static Go binary; curl/libcurl never executed at runtime. This statement concerns CVE-2026-8458 in pkg:rpm/photon/curl as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer. It does not assert the status of pkg:rpm/photon/curl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Entrypoint /bin/vsphere-syncer is a static Go binary; curl/libcurl never executed at runtime. This statement concerns CVE-2026-8458 in pkg:rpm/photon/curl-libs as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer. It does not assert the status of pkg:rpm/photon/curl-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-curl-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
+          "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-curl-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
           ]
         }
       ]

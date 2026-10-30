@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/huggingfaceserver?repository_url=registry.rancher.com%2Fkserve%2Fhuggingfaceserver",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-10-30T14:12:36Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,14 +23,41 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/huggingfaceserver?repository_url=registry.rancher.com/kserve/huggingfaceserver"
+        },
+        {
+          "date": "2026-10-30T14:12:36Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/huggingfaceserver?repository_url=registry.rancher.com%2Fkserve%2Fhuggingfaceserver",
+        "product": {
+          "name": "pkg:oci/huggingfaceserver?repository_url=registry.rancher.com%2Fkserve%2Fhuggingfaceserver",
+          "product_id": "pkg-oci-huggingfaceserver-repository-url-registry-rancher-com-2Fkserve-2Fhuggingfaceserver",
+          "product_identification_helper": {
+            "purl": "pkg:oci/huggingfaceserver?repository_url=registry.rancher.com%2Fkserve%2Fhuggingfaceserver"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/libbrotli1",
+        "product": {
+          "name": "pkg:deb/ubuntu/libbrotli1",
+          "product_id": "pkg-deb-ubuntu-libbrotli1",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libbrotli1"
+          }
+        }
+      },
       {
         "category": "product_name",
         "name": "pkg:oci/huggingfaceserver?repository_url=registry.rancher.com/kserve/huggingfaceserver",
@@ -58,6 +85,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:deb/ubuntu/libbrotli1 as a component of pkg:oci/huggingfaceserver?repository_url=registry.rancher.com%2Fkserve%2Fhuggingfaceserver",
+          "product_id": "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-huggingfaceserver-repository-url-registry-rancher-com-2Fkserve-2Fhuggingfaceserver"
+        },
+        "product_reference": "pkg-deb-ubuntu-libbrotli1",
+        "relates_to_product_reference": "pkg-oci-huggingfaceserver-repository-url-registry-rancher-com-2Fkserve-2Fhuggingfaceserver"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:deb/ubuntu/linux-libc-dev as a component of pkg:oci/huggingfaceserver?repository_url=registry.rancher.com/kserve/huggingfaceserver",
           "product_id": "pkg-deb-ubuntu-linux-libc-dev-in-pkg-oci-huggingfaceserver-repository-url-registry-rancher-com-kserve-huggingfaceserver"
         },
@@ -67,6 +103,37 @@
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-111497",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-huggingfaceserver-repository-url-registry-rancher-com-2Fkserve-2Fhuggingfaceserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "This statement concerns CVE-2026-111497 in pkg:deb/ubuntu/libbrotli1 as a subcomponent of pkg:oci/huggingfaceserver?repository_url=registry.rancher.com%2Fkserve%2Fhuggingfaceserver. It does not assert the status of pkg:deb/ubuntu/libbrotli1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-huggingfaceserver-repository-url-registry-rancher-com-2Fkserve-2Fhuggingfaceserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-huggingfaceserver-repository-url-registry-rancher-com-2Fkserve-2Fhuggingfaceserver"
+          ]
+        }
+      ]
+    },
     {
       "cve": "CVE-2026-53266",
       "flags": [

@@ -1,0 +1,102 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/pmmlserver?repository_url=index.docker.io%2Fkserve%2Fpmmlserver",
+    "tracking": {
+      "current_release_date": "2026-10-30T14:12:36Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/pmmlserver?repository_url=index.docker.io%2Fkserve%2Fpmmlserver",
+      "initial_release_date": "2026-10-30T14:12:36Z",
+      "revision_history": [
+        {
+          "date": "2026-10-30T14:12:36Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/pmmlserver?repository_url=index.docker.io%2Fkserve%2Fpmmlserver"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/pmmlserver?repository_url=index.docker.io%2Fkserve%2Fpmmlserver",
+        "product": {
+          "name": "pkg:oci/pmmlserver?repository_url=index.docker.io%2Fkserve%2Fpmmlserver",
+          "product_id": "pkg-oci-pmmlserver-repository-url-index-docker-io-2Fkserve-2Fpmmlserver",
+          "product_identification_helper": {
+            "purl": "pkg:oci/pmmlserver?repository_url=index.docker.io%2Fkserve%2Fpmmlserver"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/libbrotli1",
+        "product": {
+          "name": "pkg:deb/ubuntu/libbrotli1",
+          "product_id": "pkg-deb-ubuntu-libbrotli1",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libbrotli1"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/libbrotli1 as a component of pkg:oci/pmmlserver?repository_url=index.docker.io%2Fkserve%2Fpmmlserver",
+          "product_id": "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-pmmlserver-repository-url-index-docker-io-2Fkserve-2Fpmmlserver"
+        },
+        "product_reference": "pkg-deb-ubuntu-libbrotli1",
+        "relates_to_product_reference": "pkg-oci-pmmlserver-repository-url-index-docker-io-2Fkserve-2Fpmmlserver"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-111497",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-pmmlserver-repository-url-index-docker-io-2Fkserve-2Fpmmlserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "This statement concerns CVE-2026-111497 in pkg:deb/ubuntu/libbrotli1 as a subcomponent of pkg:oci/pmmlserver?repository_url=index.docker.io%2Fkserve%2Fpmmlserver. It does not assert the status of pkg:deb/ubuntu/libbrotli1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-pmmlserver-repository-url-index-docker-io-2Fkserve-2Fpmmlserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-pmmlserver-repository-url-index-docker-io-2Fkserve-2Fpmmlserver"
+          ]
+        }
+      ]
+    }
+  ]
+}
