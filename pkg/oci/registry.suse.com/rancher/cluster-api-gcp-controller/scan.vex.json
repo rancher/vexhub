@@ -1,0 +1,102 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/cluster-api-gcp-controller?repository_url=registry.suse.com%2Francher%2Fcluster-api-gcp-controller",
+    "tracking": {
+      "current_release_date": "2026-11-03T01:59:29Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/cluster-api-gcp-controller?repository_url=registry.suse.com%2Francher%2Fcluster-api-gcp-controller",
+      "initial_release_date": "2026-11-03T01:59:29Z",
+      "revision_history": [
+        {
+          "date": "2026-11-03T01:59:29Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/cluster-api-gcp-controller?repository_url=registry.suse.com%2Francher%2Fcluster-api-gcp-controller"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/cluster-api-gcp-controller?repository_url=registry.suse.com%2Francher%2Fcluster-api-gcp-controller",
+        "product": {
+          "name": "pkg:oci/cluster-api-gcp-controller?repository_url=registry.suse.com%2Francher%2Fcluster-api-gcp-controller",
+          "product_id": "pkg-oci-cluster-api-gcp-controller-repository-url-registry-suse-com-2Francher-2Fcluster-api-gcp-controller",
+          "product_identification_helper": {
+            "purl": "pkg:oci/cluster-api-gcp-controller?repository_url=registry.suse.com%2Francher%2Fcluster-api-gcp-controller"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/wolfi/ca-certificates-bundle",
+        "product": {
+          "name": "pkg:apk/wolfi/ca-certificates-bundle",
+          "product_id": "pkg-apk-wolfi-ca-certificates-bundle",
+          "product_identification_helper": {
+            "purl": "pkg:apk/wolfi/ca-certificates-bundle"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/wolfi/ca-certificates-bundle as a component of pkg:oci/cluster-api-gcp-controller?repository_url=registry.suse.com%2Francher%2Fcluster-api-gcp-controller",
+          "product_id": "pkg-apk-wolfi-ca-certificates-bundle-in-pkg-oci-cluster-api-gcp-controller-repository-url-registry-suse-com-2Francher-2Fcluster-api-gcp-controller"
+        },
+        "product_reference": "pkg-apk-wolfi-ca-certificates-bundle",
+        "relates_to_product_reference": "pkg-oci-cluster-api-gcp-controller-repository-url-registry-suse-com-2Francher-2Fcluster-api-gcp-controller"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-91403",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-apk-wolfi-ca-certificates-bundle-in-pkg-oci-cluster-api-gcp-controller-repository-url-registry-suse-com-2Francher-2Fcluster-api-gcp-controller"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Oracle Java JSSE flaw; distroless apko image ships only the Go /manager binary. This statement concerns CVE-2026-91403 in pkg:apk/wolfi/ca-certificates-bundle as a subcomponent of pkg:oci/cluster-api-gcp-controller?repository_url=registry.suse.com%2Francher%2Fcluster-api-gcp-controller. It does not assert the status of pkg:apk/wolfi/ca-certificates-bundle when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-wolfi-ca-certificates-bundle-in-pkg-oci-cluster-api-gcp-controller-repository-url-registry-suse-com-2Francher-2Fcluster-api-gcp-controller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-apk-wolfi-ca-certificates-bundle-in-pkg-oci-cluster-api-gcp-controller-repository-url-registry-suse-com-2Francher-2Fcluster-api-gcp-controller"
+          ]
+        }
+      ]
+    }
+  ]
+}
