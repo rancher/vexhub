@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/controller?repository_url=registry.rancher.com%2Fneuvector%2Fcontroller",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-11-03T12:38:49Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/controller?repository_url=registry.rancher.com/neuvector/controller"
+        },
+        {
+          "date": "2026-11-03T12:38:49Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -140,6 +145,17 @@
             "purl": "pkg:oci/controller?repository_url=registry.rancher.com%2Fneuvector%2Fcontroller"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libbrotlicommon1",
+        "product": {
+          "name": "pkg:rpm/suse/libbrotlicommon1",
+          "product_id": "pkg-rpm-suse-libbrotlicommon1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libbrotlicommon1"
+          }
+        }
       }
     ],
     "relationships": [
@@ -222,6 +238,15 @@
           "product_id": "pkg-rpm-suse-glibc-devel-in-pkg-oci-controller-repository-url-registry-rancher-com-2Fneuvector-2Fcontroller"
         },
         "product_reference": "pkg-rpm-suse-glibc-devel",
+        "relates_to_product_reference": "pkg-oci-controller-repository-url-registry-rancher-com-2Fneuvector-2Fcontroller"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libbrotlicommon1 as a component of pkg:oci/controller?repository_url=registry.rancher.com%2Fneuvector%2Fcontroller",
+          "product_id": "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-controller-repository-url-registry-rancher-com-2Fneuvector-2Fcontroller"
+        },
+        "product_reference": "pkg-rpm-suse-libbrotlicommon1",
         "relates_to_product_reference": "pkg-oci-controller-repository-url-registry-rancher-com-2Fneuvector-2Fcontroller"
       }
     ]
@@ -637,6 +662,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-glibc-devel-in-pkg-oci-controller-repository-url-registry-rancher-com-2Fneuvector-2Fcontroller"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-controller-repository-url-registry-rancher-com-2Fneuvector-2Fcontroller"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4945-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CVE-2026-111497 is in the libbrotlidec decoder; libbrotlicommon ships no part of the vulnerable code. This statement concerns SUSE-SU-2026:4945-1 in pkg:rpm/suse/libbrotlicommon1 as a subcomponent of pkg:oci/controller?repository_url=registry.rancher.com%2Fneuvector%2Fcontroller. It does not assert the status of pkg:rpm/suse/libbrotlicommon1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-controller-repository-url-registry-rancher-com-2Fneuvector-2Fcontroller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-controller-repository-url-registry-rancher-com-2Fneuvector-2Fcontroller"
           ]
         }
       ]
