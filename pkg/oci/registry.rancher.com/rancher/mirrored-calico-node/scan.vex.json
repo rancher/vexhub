@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com%2Francher%2Fmirrored-calico-node",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-11-03T01:59:29Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com%2Francher%2Fmirrored-calico-node"
+        },
+        {
+          "date": "2026-11-03T01:59:29Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -110,6 +115,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:rpm/redhat/libgcc",
+        "product": {
+          "name": "pkg:rpm/redhat/libgcc",
+          "product_id": "pkg-rpm-redhat-libgcc",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/redhat/libgcc"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:rpm/redhat/openssl-libs",
         "product": {
           "name": "pkg:rpm/redhat/openssl-libs",
@@ -149,6 +165,28 @@
           "product_id": "pkg-rpm-redhat-libacl",
           "product_identification_helper": {
             "purl": "pkg:rpm/redhat/libacl"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/redhat/glibc",
+        "product": {
+          "name": "pkg:rpm/redhat/glibc",
+          "product_id": "pkg-rpm-redhat-glibc",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/redhat/glibc"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/redhat/glibc-common",
+        "product": {
+          "name": "pkg:rpm/redhat/glibc-common",
+          "product_id": "pkg-rpm-redhat-glibc-common",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/redhat/glibc-common"
           }
         }
       }
@@ -202,6 +240,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:rpm/redhat/libgcc as a component of pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com%2Francher%2Fmirrored-calico-node",
+          "product_id": "pkg-rpm-redhat-libgcc-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+        },
+        "product_reference": "pkg-rpm-redhat-libgcc",
+        "relates_to_product_reference": "pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:rpm/redhat/openssl-libs as a component of pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com/rancher/mirrored-calico-node",
           "product_id": "pkg-rpm-redhat-openssl-libs-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-rancher-mirrored-calico-node"
         },
@@ -234,6 +281,24 @@
         },
         "product_reference": "pkg-rpm-redhat-libacl",
         "relates_to_product_reference": "pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-rancher-mirrored-calico-node"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/redhat/glibc as a component of pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com%2Francher%2Fmirrored-calico-node",
+          "product_id": "pkg-rpm-redhat-glibc-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+        },
+        "product_reference": "pkg-rpm-redhat-glibc",
+        "relates_to_product_reference": "pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/redhat/glibc-common as a component of pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com%2Francher%2Fmirrored-calico-node",
+          "product_id": "pkg-rpm-redhat-glibc-common-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+        },
+        "product_reference": "pkg-rpm-redhat-glibc-common",
+        "relates_to_product_reference": "pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
       },
       {
         "category": "default_component_of",
@@ -421,6 +486,68 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-redhat-pcre2-syntax-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-rancher-mirrored-calico-node"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-114690",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-libgcc-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Flaw is in libstdc++ parallel mode; no libstdc++ is present in the image. This statement concerns CVE-2026-114690 in pkg:rpm/redhat/libgcc as a subcomponent of pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com%2Francher%2Fmirrored-calico-node. It does not assert the status of pkg:rpm/redhat/libgcc when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-libgcc-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-libgcc-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-114691",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-libgcc-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Flaw is in libstdc++ std::vector\u003cbool\u003e; no libstdc++ is present in the image. This statement concerns CVE-2026-114691 in pkg:rpm/redhat/libgcc as a subcomponent of pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com%2Francher%2Fmirrored-calico-node. It does not assert the status of pkg:rpm/redhat/libgcc when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-libgcc-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-libgcc-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
           ]
         }
       ]
@@ -1162,6 +1289,73 @@
         {
           "category": "impact",
           "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-glibc-minimal-langpack-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-84243",
+      "flags": [
+        {
+          "label": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-rpm-redhat-glibc-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+          ]
+        },
+        {
+          "label": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-rpm-redhat-glibc-common-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+          ]
+        },
+        {
+          "label": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-rpm-redhat-glibc-minimal-langpack-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "No gettext .mo catalogs are shipped and LANGUAGE is operator-set. This statement concerns CVE-2026-84243 in pkg:rpm/redhat/glibc as a subcomponent of pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com%2Francher%2Fmirrored-calico-node. It does not assert the status of pkg:rpm/redhat/glibc when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "No gettext .mo catalogs are shipped and LANGUAGE is operator-set. This statement concerns CVE-2026-84243 in pkg:rpm/redhat/glibc-common as a subcomponent of pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com%2Francher%2Fmirrored-calico-node. It does not assert the status of pkg:rpm/redhat/glibc-common when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "No gettext .mo catalogs are shipped and LANGUAGE is operator-set. This statement concerns CVE-2026-84243 in pkg:rpm/redhat/glibc-minimal-langpack as a subcomponent of pkg:oci/mirrored-calico-node?repository_url=registry.rancher.com%2Francher%2Fmirrored-calico-node. It does not assert the status of pkg:rpm/redhat/glibc-minimal-langpack when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-glibc-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node",
+          "pkg-rpm-redhat-glibc-common-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node",
+          "pkg-rpm-redhat-glibc-minimal-langpack-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-rpm-redhat-glibc-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-rpm-redhat-glibc-common-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_cannot_be_controlled_by_adversary",
           "product_ids": [
             "pkg-rpm-redhat-glibc-minimal-langpack-in-pkg-oci-mirrored-calico-node-repository-url-registry-rancher-com-2Francher-2Fmirrored-calico-node"
           ]
