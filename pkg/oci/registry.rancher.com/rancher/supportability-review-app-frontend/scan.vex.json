@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/supportability-review-app-frontend?repository_url=registry.rancher.com%2Francher%2Fsupportability-review-app-frontend",
     "tracking": {
-      "current_release_date": "2026-10-28T10:21:36Z",
+      "current_release_date": "2026-11-05T12:34:16Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-10-28T10:21:36Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-05T12:34:16Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -667,6 +672,15 @@
           "product_id": "pkg-rpm-suse-coreutils-in-pkg-oci-supportability-review-app-frontend-repository-url-registry-rancher-com-2Francher-2Fsupportability-review-app-frontend"
         },
         "product_reference": "pkg-rpm-suse-coreutils",
+        "relates_to_product_reference": "pkg-oci-supportability-review-app-frontend-repository-url-registry-rancher-com-2Francher-2Fsupportability-review-app-frontend"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libexpat1 as a component of pkg:oci/supportability-review-app-frontend?repository_url=registry.rancher.com%2Francher%2Fsupportability-review-app-frontend",
+          "product_id": "pkg-rpm-suse-libexpat1-in-pkg-oci-supportability-review-app-frontend-repository-url-registry-rancher-com-2Francher-2Fsupportability-review-app-frontend"
+        },
+        "product_reference": "pkg-rpm-suse-libexpat1",
         "relates_to_product_reference": "pkg-oci-supportability-review-app-frontend-repository-url-registry-rancher-com-2Francher-2Fsupportability-review-app-frontend"
       },
       {
@@ -1685,6 +1699,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-coreutils-in-pkg-oci-supportability-review-app-frontend-repository-url-registry-rancher-com-2Francher-2Fsupportability-review-app-frontend"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libexpat1-in-pkg-oci-supportability-review-app-frontend-repository-url-registry-rancher-com-2Francher-2Fsupportability-review-app-frontend"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24469-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Node.js entrypoint; libexpat only linked by unused git-http-push helper. This statement concerns SUSE-SU-2026:24469-1 in pkg:rpm/suse/libexpat1 as a subcomponent of pkg:oci/supportability-review-app-frontend?repository_url=registry.rancher.com%2Francher%2Fsupportability-review-app-frontend. It does not assert the status of pkg:rpm/suse/libexpat1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libexpat1-in-pkg-oci-supportability-review-app-frontend-repository-url-registry-rancher-com-2Francher-2Fsupportability-review-app-frontend"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libexpat1-in-pkg-oci-supportability-review-app-frontend-repository-url-registry-rancher-com-2Francher-2Fsupportability-review-app-frontend"
           ]
         }
       ]

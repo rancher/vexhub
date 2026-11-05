@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/harvester-vm-import-controller?repository_url=registry.suse.com%2Francher%2Fharvester-vm-import-controller",
     "tracking": {
-      "current_release_date": "2026-10-28T10:21:36Z",
+      "current_release_date": "2026-11-05T12:34:16Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-10-28T10:21:36Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-05T12:34:16Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -919,6 +924,15 @@
           "product_id": "pkg-rpm-suse-coreutils-in-pkg-oci-harvester-vm-import-controller-repository-url-registry-suse-com-2Francher-2Fharvester-vm-import-controller"
         },
         "product_reference": "pkg-rpm-suse-coreutils",
+        "relates_to_product_reference": "pkg-oci-harvester-vm-import-controller-repository-url-registry-suse-com-2Francher-2Fharvester-vm-import-controller"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libexpat1 as a component of pkg:oci/harvester-vm-import-controller?repository_url=registry.suse.com%2Francher%2Fharvester-vm-import-controller",
+          "product_id": "pkg-rpm-suse-libexpat1-in-pkg-oci-harvester-vm-import-controller-repository-url-registry-suse-com-2Francher-2Fharvester-vm-import-controller"
+        },
+        "product_reference": "pkg-rpm-suse-libexpat1",
         "relates_to_product_reference": "pkg-oci-harvester-vm-import-controller-repository-url-registry-suse-com-2Francher-2Fharvester-vm-import-controller"
       },
       {
@@ -3107,6 +3121,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-coreutils-in-pkg-oci-harvester-vm-import-controller-repository-url-registry-suse-com-2Francher-2Fharvester-vm-import-controller"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libexpat1-in-pkg-oci-harvester-vm-import-controller-repository-url-registry-suse-com-2Francher-2Fharvester-vm-import-controller"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24469-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go entrypoint; libexpat only reachable via unused python pyexpat module. This statement concerns SUSE-SU-2026:24469-1 in pkg:rpm/suse/libexpat1 as a subcomponent of pkg:oci/harvester-vm-import-controller?repository_url=registry.suse.com%2Francher%2Fharvester-vm-import-controller. It does not assert the status of pkg:rpm/suse/libexpat1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libexpat1-in-pkg-oci-harvester-vm-import-controller-repository-url-registry-suse-com-2Francher-2Fharvester-vm-import-controller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libexpat1-in-pkg-oci-harvester-vm-import-controller-repository-url-registry-suse-com-2Francher-2Fharvester-vm-import-controller"
           ]
         }
       ]

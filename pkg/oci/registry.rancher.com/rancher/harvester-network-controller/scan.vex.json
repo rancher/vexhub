@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/harvester-network-controller?repository_url=registry.rancher.com%2Francher%2Fharvester-network-controller",
     "tracking": {
-      "current_release_date": "2026-11-03T12:38:49Z",
+      "current_release_date": "2026-11-05T12:34:16Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-11-03T12:38:49Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-05T12:34:16Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -663,6 +668,24 @@
           "product_id": "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller"
         },
         "product_reference": "pkg-rpm-suse-libbrotlicommon1",
+        "relates_to_product_reference": "pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/curl as a component of pkg:oci/harvester-network-controller?repository_url=registry.rancher.com%2Francher%2Fharvester-network-controller",
+          "product_id": "pkg-rpm-suse-curl-in-pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller"
+        },
+        "product_reference": "pkg-rpm-suse-curl",
+        "relates_to_product_reference": "pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libcurl4 as a component of pkg:oci/harvester-network-controller?repository_url=registry.rancher.com%2Francher%2Fharvester-network-controller",
+          "product_id": "pkg-rpm-suse-libcurl4-in-pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller"
+        },
+        "product_reference": "pkg-rpm-suse-libcurl4",
         "relates_to_product_reference": "pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller"
       }
     ]
@@ -2410,6 +2433,60 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-curl-in-pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libcurl4-in-pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5068-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libcurl only used by unused curl CLI and build-time libzypp. This statement concerns SUSE-SU-2026:5068-1 in pkg:rpm/suse/curl as a subcomponent of pkg:oci/harvester-network-controller?repository_url=registry.rancher.com%2Francher%2Fharvester-network-controller. It does not assert the status of pkg:rpm/suse/curl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libcurl only used by unused curl CLI and build-time libzypp. This statement concerns SUSE-SU-2026:5068-1 in pkg:rpm/suse/libcurl4 as a subcomponent of pkg:oci/harvester-network-controller?repository_url=registry.rancher.com%2Francher%2Fharvester-network-controller. It does not assert the status of pkg:rpm/suse/libcurl4 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-curl-in-pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller",
+          "pkg-rpm-suse-libcurl4-in-pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-curl-in-pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libcurl4-in-pkg-oci-harvester-network-controller-repository-url-registry-rancher-com-2Francher-2Fharvester-network-controller"
           ]
         }
       ]
