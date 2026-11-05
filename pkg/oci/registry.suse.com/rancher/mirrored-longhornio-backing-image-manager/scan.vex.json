@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.suse.com%2Francher%2Fmirrored-longhornio-backing-image-manager",
     "tracking": {
-      "current_release_date": "2026-11-03T12:38:49Z",
+      "current_release_date": "2026-11-05T12:34:16Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -43,10 +43,15 @@
           "date": "2026-11-03T12:38:49Z",
           "number": "5",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-05T12:34:16Z",
+          "number": "6",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -567,6 +572,17 @@
             "purl": "pkg:rpm/suse/libsasl2-3"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libcurl4",
+        "product": {
+          "name": "pkg:rpm/suse/libcurl4",
+          "product_id": "pkg-rpm-suse-libcurl4",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libcurl4"
+          }
+        }
       }
     ],
     "relationships": [
@@ -1018,6 +1034,24 @@
           "product_id": "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager"
         },
         "product_reference": "pkg-rpm-suse-libbrotlicommon1",
+        "relates_to_product_reference": "pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/curl as a component of pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.suse.com%2Francher%2Fmirrored-longhornio-backing-image-manager",
+          "product_id": "pkg-rpm-suse-curl-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager"
+        },
+        "product_reference": "pkg-rpm-suse-curl",
+        "relates_to_product_reference": "pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libcurl4 as a component of pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.suse.com%2Francher%2Fmirrored-longhornio-backing-image-manager",
+          "product_id": "pkg-rpm-suse-libcurl4-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager"
+        },
+        "product_reference": "pkg-rpm-suse-libcurl4",
         "relates_to_product_reference": "pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager"
       }
     ]
@@ -3917,6 +3951,60 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-curl-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libcurl4-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5068-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libcurl only used by unused curl CLI and build-time libzypp. This statement concerns SUSE-SU-2026:5068-1 in pkg:rpm/suse/curl as a subcomponent of pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.suse.com%2Francher%2Fmirrored-longhornio-backing-image-manager. It does not assert the status of pkg:rpm/suse/curl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libcurl only used by unused curl CLI and build-time libzypp. This statement concerns SUSE-SU-2026:5068-1 in pkg:rpm/suse/libcurl4 as a subcomponent of pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=registry.suse.com%2Francher%2Fmirrored-longhornio-backing-image-manager. It does not assert the status of pkg:rpm/suse/libcurl4 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-curl-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager",
+          "pkg-rpm-suse-libcurl4-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-curl-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libcurl4-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-registry-suse-com-2Francher-2Fmirrored-longhornio-backing-image-manager"
           ]
         }
       ]

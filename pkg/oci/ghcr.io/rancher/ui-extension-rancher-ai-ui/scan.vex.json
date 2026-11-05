@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
     "tracking": {
-      "current_release_date": "2026-11-03T12:38:49Z",
+      "current_release_date": "2026-11-05T12:34:16Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-03T12:38:49Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-05T12:34:16Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -2660,6 +2665,114 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-curl-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libcurl4-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4954-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is nginx serving static files; nginx does not link libcurl and curl is never invoked. This statement concerns SUSE-SU-2026:4954-1 in pkg:rpm/suse/curl as a subcomponent of pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui. It does not assert the status of pkg:rpm/suse/curl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Entrypoint is nginx serving static files; nginx does not link libcurl and curl is never invoked. This statement concerns SUSE-SU-2026:4954-1 in pkg:rpm/suse/libcurl4 as a subcomponent of pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui. It does not assert the status of pkg:rpm/suse/libcurl4 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-curl-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui",
+          "pkg-rpm-suse-libcurl4-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-curl-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libcurl4-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-curl-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libcurl4-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5068-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Image runs only nginx; curl/libcurl are unused leftovers never invoked by the entrypoint. This statement concerns SUSE-SU-2026:5068-1 in pkg:rpm/suse/curl as a subcomponent of pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui. It does not assert the status of pkg:rpm/suse/curl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Image runs only nginx; curl/libcurl are unused leftovers never invoked by the entrypoint. This statement concerns SUSE-SU-2026:5068-1 in pkg:rpm/suse/libcurl4 as a subcomponent of pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui. It does not assert the status of pkg:rpm/suse/libcurl4 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-curl-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui",
+          "pkg-rpm-suse-libcurl4-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-curl-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libcurl4-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
           ]
         }
       ]
