@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/sigs.k8s.io/cluster-api/api",
     "tracking": {
-      "current_release_date": "2026-10-28T05:26:50Z",
+      "current_release_date": "2026-11-06T11:22:40Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-10-28T05:26:50Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-06T11:22:40Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -131,6 +136,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4",
+        "product": {
+          "name": "pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4",
+          "product_id": "pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4",
+          "product_identification_helper": {
+            "purl": "pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.49.0",
         "product": {
           "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.49.0",
@@ -170,6 +186,17 @@
           "product_id": "pkg-golang-golang-org-x-text-v0-40-0",
           "product_identification_helper": {
             "purl": "pkg:golang/golang.org/x/text@v0.40.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.60.0",
+        "product": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.60.0",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/golang.org%2Fx%2Fnet@v0.60.0"
           }
         }
       }
@@ -237,6 +264,15 @@
         },
         "product_reference": "pkg-golang-stdlib-v1-26-0",
         "relates_to_product_reference": "pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.0 as a component of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4",
+          "product_id": "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-0",
+        "relates_to_product_reference": "pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
       },
       {
         "category": "default_component_of",
@@ -489,6 +525,24 @@
         },
         "product_reference": "pkg-golang-golang-org-x-text-v0-40-0",
         "relates_to_product_reference": "pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 as a component of pkg:golang/sigs.k8s.io/cluster-api/api",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0",
+        "relates_to_product_reference": "pkg-golang-sigs-k8s-io-cluster-api-api"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 as a component of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0",
+        "relates_to_product_reference": "pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
       }
     ]
   },
@@ -537,6 +591,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -573,6 +633,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-111943 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -583,7 +647,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -634,6 +699,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -1495,6 +1567,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -1531,6 +1609,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27137 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27137 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -1541,7 +1623,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -1592,6 +1675,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -1640,6 +1730,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -1676,6 +1772,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27138 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27138 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -1686,7 +1786,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -1737,6 +1838,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -1785,6 +1893,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -1821,6 +1935,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27142 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27142 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -1831,7 +1949,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -1882,6 +2001,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -1930,6 +2056,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -1966,6 +2098,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32280 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32280 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -1976,7 +2112,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -2027,6 +2164,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -2075,6 +2219,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -2111,6 +2261,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32281 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32281 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -2121,7 +2275,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -2172,6 +2327,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -2220,6 +2382,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -2256,6 +2424,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32282 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32282 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -2266,7 +2438,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -2317,6 +2490,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -2365,6 +2545,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -2401,6 +2587,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32283 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32283 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -2411,7 +2601,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -2462,6 +2653,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -2510,6 +2708,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -2546,6 +2750,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32288 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32288 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -2556,7 +2764,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -2607,6 +2816,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -2655,6 +2871,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -2691,6 +2913,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32289 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32289 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -2701,7 +2927,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -2752,6 +2979,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -2800,6 +3034,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -2836,6 +3076,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33810 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33810 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -2846,7 +3090,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -2897,6 +3142,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -2945,6 +3197,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -2981,6 +3239,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33811 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33811 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -2991,7 +3253,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -3042,6 +3305,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -3174,6 +3444,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -3266,6 +3542,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33814 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33814 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -3290,7 +3570,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
           "pkg-golang-golang-org-x-net-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -3440,6 +3721,13 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ]
     },
@@ -3487,6 +3775,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -3523,6 +3817,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39820 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39820 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -3533,7 +3831,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -3584,6 +3883,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -3716,6 +4022,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -3808,6 +4120,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39821 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39821 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -3832,7 +4148,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
           "pkg-golang-golang-org-x-net-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -3982,6 +4299,13 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ]
     },
@@ -4029,6 +4353,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -4065,6 +4395,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -4075,7 +4409,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -4126,6 +4461,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -4174,6 +4516,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -4210,6 +4558,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39823 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39823 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -4220,7 +4572,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -4271,6 +4624,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -4319,6 +4679,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -4355,6 +4721,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39825 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39825 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -4365,7 +4735,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -4416,6 +4787,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -4464,6 +4842,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -4500,6 +4884,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39826 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39826 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -4510,7 +4898,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -4561,6 +4950,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -4609,6 +5005,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -4645,6 +5047,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39836 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39836 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -4655,7 +5061,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -4706,6 +5113,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -4754,6 +5168,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -4790,6 +5210,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42499 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42499 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -4800,7 +5224,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -4851,6 +5276,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -5170,6 +5602,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -5206,6 +5644,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42504 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42504 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -5216,7 +5658,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -5267,6 +5710,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -5315,6 +5765,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -5351,6 +5807,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42505 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42505 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -5361,7 +5821,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -5412,6 +5873,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -5731,6 +6199,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -5767,6 +6241,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42507 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42507 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -5777,7 +6255,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -5828,6 +6307,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -5900,6 +6386,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -5952,6 +6444,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -5966,7 +6462,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -6045,6 +6542,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -6364,6 +6868,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -6400,6 +6910,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56853 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56853 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -6410,7 +6924,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -6461,6 +6976,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -6509,6 +7031,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -6545,6 +7073,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -6555,7 +7087,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -6606,6 +7139,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -6654,6 +7194,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -6690,6 +7236,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56858 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56858 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -6700,7 +7250,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -6751,6 +7302,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -6799,6 +7357,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -6835,6 +7399,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56859 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56859 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -6845,7 +7413,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -6896,6 +7465,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -6944,6 +7520,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -6980,6 +7562,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56860 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56860 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -6990,7 +7576,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -7041,6 +7628,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -7089,6 +7683,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -7125,6 +7725,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56862 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56862 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -7135,7 +7739,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -7186,6 +7791,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -7234,6 +7846,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -7270,6 +7888,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56866 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56866 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -7280,7 +7902,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -7331,6 +7954,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -7421,6 +8051,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -7485,6 +8121,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78660 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78660 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -7502,7 +8142,8 @@
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -7603,6 +8244,13 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ]
     },
@@ -7613,6 +8261,12 @@
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api"
           ]
         },
         {
@@ -7644,6 +8298,12 @@
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -7656,6 +8316,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.49.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.49.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -7676,16 +8340,22 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.49.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.49.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -7694,6 +8364,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api"
           ]
         },
         {
@@ -7729,6 +8406,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -7777,6 +8461,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -7813,6 +8503,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -7823,7 +8517,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -7874,6 +8569,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -7922,6 +8624,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -7958,6 +8666,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94440 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94440 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -7968,7 +8680,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -8019,6 +8732,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -8067,6 +8787,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -8103,6 +8829,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94448 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94448 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -8113,7 +8843,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -8164,6 +8895,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -8212,6 +8950,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -8248,6 +8992,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97030 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97030 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -8258,7 +9006,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -8309,6 +9058,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]
@@ -8357,6 +9113,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -8393,6 +9155,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97031 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97031 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -8403,7 +9169,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -8455,6 +9222,13 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ]
     },
@@ -8465,6 +9239,12 @@
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api"
           ]
         },
         {
@@ -8496,6 +9276,12 @@
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
+          ]
         }
       ],
       "ids": [
@@ -8508,6 +9294,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.49.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.49.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 when used independently or in other products."
         },
         {
           "category": "description",
@@ -8528,16 +9318,22 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.49.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.3. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.49.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 as a subcomponent of pkg:golang/sigs.k8s.io/cluster-api/api@v1.14.4. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.60.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-0-rc-1",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-1",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-2",
-          "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
         ]
       },
       "threats": [
@@ -8546,6 +9342,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api"
           ]
         },
         {
@@ -8581,6 +9384,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-49-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-sigs-k8s-io-cluster-api-api-v1-14-4"
           ]
         }
       ]

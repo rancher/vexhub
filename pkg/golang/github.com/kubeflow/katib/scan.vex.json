@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/kubeflow/katib",
     "tracking": {
-      "current_release_date": "2026-10-28T05:26:50Z",
+      "current_release_date": "2026-11-06T11:22:40Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-28T05:26:50Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-06T11:22:40Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -167,6 +172,17 @@
             "purl": "pkg:golang/google.golang.org/grpc@v1.72.1"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible",
+        "product": {
+          "name": "pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible",
+          "product_id": "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible"
+          }
+        }
       }
     ],
     "relationships": [
@@ -267,6 +283,15 @@
           "product_id": "pkg-golang-google-golang-org-grpc-v1-72-1-in-pkg-golang-github-com-kubeflow-katib"
         },
         "product_reference": "pkg-golang-google-golang-org-grpc-v1-72-1",
+        "relates_to_product_reference": "pkg-golang-github-com-kubeflow-katib"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible as a component of pkg:golang/github.com/kubeflow/katib",
+          "product_id": "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-kubeflow-katib"
+        },
+        "product_reference": "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible",
         "relates_to_product_reference": "pkg-golang-github-com-kubeflow-katib"
       }
     ]
@@ -2868,6 +2893,47 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-google-golang-org-grpc-v1-72-1-in-pkg-golang-github-com-kubeflow-katib"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-85747",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-kubeflow-katib"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6778"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-685w-q87j-wqw3"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-85747 in pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible as a subcomponent of pkg:golang/github.com/kubeflow/katib. It does not assert the status of pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-kubeflow-katib"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-kubeflow-katib"
           ]
         }
       ]

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/harvester/docker-machine-driver-harvester",
     "tracking": {
-      "current_release_date": "2026-10-30T05:56:04Z",
+      "current_release_date": "2026-11-06T11:22:40Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-10-30T05:56:04Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-06T11:22:40Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -659,6 +664,17 @@
           "product_id": "pkg-golang-github-com-2Fcilium-2Febpf-v0-7-0",
           "product_identification_helper": {
             "purl": "pkg:golang/github.com%2Fcilium%2Febpf@v0.7.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com%2Fklauspost%2Fcompress@v1.17.9",
+        "product": {
+          "name": "pkg:golang/github.com%2Fklauspost%2Fcompress@v1.17.9",
+          "product_id": "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-17-9",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com%2Fklauspost%2Fcompress@v1.17.9"
           }
         }
       },
@@ -1960,6 +1976,24 @@
         },
         "product_reference": "pkg-golang-github-com-2Fcilium-2Febpf-v0-7-0",
         "relates_to_product_reference": "pkg-golang-github-com-harvester-docker-machine-driver-harvester-v1-1-1"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com%2Fklauspost%2Fcompress@v1.17.9 as a component of pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "product_id": "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-17-9-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester"
+        },
+        "product_reference": "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-17-9",
+        "relates_to_product_reference": "pkg-golang-github-com-harvester-docker-machine-driver-harvester"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com%2Fklauspost%2Fcompress@v1.17.9 as a component of pkg:golang/github.com/harvester/docker-machine-driver-harvester@v1.0.4",
+          "product_id": "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-17-9-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester-v1-0-4"
+        },
+        "product_reference": "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-17-9",
+        "relates_to_product_reference": "pkg-golang-github-com-harvester-docker-machine-driver-harvester-v1-0-4"
       },
       {
         "category": "default_component_of",
@@ -9425,6 +9459,65 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-github-com-2Fcilium-2Febpf-v0-7-0-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester-v1-1-1"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-116591",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-17-9-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-17-9-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester-v1-0-4"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6865"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-fpmh-frq8-7rj8"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-116591 in pkg:golang/github.com%2Fklauspost%2Fcompress@v1.17.9 as a subcomponent of pkg:golang/github.com/harvester/docker-machine-driver-harvester. It does not assert the status of pkg:golang/github.com%2Fklauspost%2Fcompress@v1.17.9 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-116591 in pkg:golang/github.com%2Fklauspost%2Fcompress@v1.17.9 as a subcomponent of pkg:golang/github.com/harvester/docker-machine-driver-harvester@v1.0.4. It does not assert the status of pkg:golang/github.com%2Fklauspost%2Fcompress@v1.17.9 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-17-9-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester",
+          "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-17-9-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester-v1-0-4"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-17-9-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-17-9-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester-v1-0-4"
           ]
         }
       ]

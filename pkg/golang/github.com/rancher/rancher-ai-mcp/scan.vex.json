@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/rancher/rancher-ai-mcp",
     "tracking": {
-      "current_release_date": "2026-11-03T12:50:14Z",
+      "current_release_date": "2026-11-06T11:22:40Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -43,10 +43,15 @@
           "date": "2026-11-03T12:50:14Z",
           "number": "5",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-06T11:22:40Z",
+          "number": "6",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -466,6 +471,17 @@
           "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-58-0",
           "product_identification_helper": {
             "purl": "pkg:golang/golang.org%2Fx%2Fnet@v0.58.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible",
+        "product": {
+          "name": "pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible",
+          "product_id": "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible"
           }
         }
       }
@@ -1379,6 +1395,33 @@
         },
         "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-56-0",
         "relates_to_product_reference": "pkg-golang-github-com-rancher-rancher-ai-mcp-v1-1-1-alpha-2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible as a component of pkg:golang/github.com/rancher/rancher-ai-mcp",
+          "product_id": "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-rancher-ai-mcp"
+        },
+        "product_reference": "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible",
+        "relates_to_product_reference": "pkg-golang-github-com-rancher-rancher-ai-mcp"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible as a component of pkg:golang/github.com/rancher/rancher-ai-mcp@v1.0.3",
+          "product_id": "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-rancher-ai-mcp-v1-0-3"
+        },
+        "product_reference": "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible",
+        "relates_to_product_reference": "pkg-golang-github-com-rancher-rancher-ai-mcp-v1-0-3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible as a component of pkg:golang/github.com/rancher/rancher-ai-mcp@v1.0.3-alpha.1",
+          "product_id": "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-rancher-ai-mcp-v1-0-3-alpha-1"
+        },
+        "product_reference": "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible",
+        "relates_to_product_reference": "pkg-golang-github-com-rancher-rancher-ai-mcp-v1-0-3-alpha-1"
       }
     ]
   },
@@ -10446,6 +10489,83 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-rancher-rancher-ai-mcp-v1-2-0-alpha-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-85747",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-rancher-ai-mcp"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-rancher-ai-mcp-v1-0-3"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-rancher-ai-mcp-v1-0-3-alpha-1"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6778"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-685w-q87j-wqw3"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-85747 in pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible as a subcomponent of pkg:golang/github.com/rancher/rancher-ai-mcp. It does not assert the status of pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-85747 in pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible as a subcomponent of pkg:golang/github.com/rancher/rancher-ai-mcp@v1.0.3. It does not assert the status of pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-85747 in pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible as a subcomponent of pkg:golang/github.com/rancher/rancher-ai-mcp@v1.0.3-alpha.1. It does not assert the status of pkg:golang/github.com%2Fdocker%2Fdistribution@v2.8.3+incompatible when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-rancher-ai-mcp",
+          "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-rancher-ai-mcp-v1-0-3",
+          "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-rancher-ai-mcp-v1-0-3-alpha-1"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-rancher-ai-mcp"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-rancher-ai-mcp-v1-0-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdistribution-v2-8-3-incompatible-in-pkg-golang-github-com-rancher-rancher-ai-mcp-v1-0-3-alpha-1"
           ]
         }
       ]
