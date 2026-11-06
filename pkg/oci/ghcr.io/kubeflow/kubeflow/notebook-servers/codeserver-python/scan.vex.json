@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python",
     "tracking": {
-      "current_release_date": "2026-10-30T14:12:36Z",
+      "current_release_date": "2026-11-06T20:24:55Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-30T14:12:36Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-06T20:24:55Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -44,6 +49,39 @@
           "product_id": "pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python",
           "product_identification_helper": {
             "purl": "pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/apt",
+        "product": {
+          "name": "pkg:deb/ubuntu/apt",
+          "product_id": "pkg-deb-ubuntu-apt",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/apt"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/apt-transport-https",
+        "product": {
+          "name": "pkg:deb/ubuntu/apt-transport-https",
+          "product_id": "pkg-deb-ubuntu-apt-transport-https",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/apt-transport-https"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/libapt-pkg6.0",
+        "product": {
+          "name": "pkg:deb/ubuntu/libapt-pkg6.0",
+          "product_id": "pkg-deb-ubuntu-libapt-pkg6-0",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libapt-pkg6.0"
           }
         }
       },
@@ -404,6 +442,33 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:deb/ubuntu/apt as a component of pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python",
+          "product_id": "pkg-deb-ubuntu-apt-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+        },
+        "product_reference": "pkg-deb-ubuntu-apt",
+        "relates_to_product_reference": "pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/apt-transport-https as a component of pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python",
+          "product_id": "pkg-deb-ubuntu-apt-transport-https-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+        },
+        "product_reference": "pkg-deb-ubuntu-apt-transport-https",
+        "relates_to_product_reference": "pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/libapt-pkg6.0 as a component of pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python",
+          "product_id": "pkg-deb-ubuntu-libapt-pkg6-0-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+        },
+        "product_reference": "pkg-deb-ubuntu-libapt-pkg6-0",
+        "relates_to_product_reference": "pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:deb/ubuntu/libbrotli1 as a component of pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python",
           "product_id": "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
         },
@@ -683,6 +748,73 @@
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-109518",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-apt-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-apt-transport-https-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libapt-pkg6-0-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "APT package manager is only used at build time and is never executed by the container entrypoint. This statement concerns CVE-2026-109518 in pkg:deb/ubuntu/apt as a subcomponent of pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python. It does not assert the status of pkg:deb/ubuntu/apt when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "APT package manager is only used at build time and is never executed by the container entrypoint. This statement concerns CVE-2026-109518 in pkg:deb/ubuntu/apt-transport-https as a subcomponent of pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python. It does not assert the status of pkg:deb/ubuntu/apt-transport-https when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "APT package manager is only used at build time and is never executed by the container entrypoint. This statement concerns CVE-2026-109518 in pkg:deb/ubuntu/libapt-pkg6.0 as a subcomponent of pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python. It does not assert the status of pkg:deb/ubuntu/libapt-pkg6.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-apt-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python",
+          "pkg-deb-ubuntu-apt-transport-https-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python",
+          "pkg-deb-ubuntu-libapt-pkg6-0-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-apt-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-apt-transport-https-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libapt-pkg6-0-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+          ]
+        }
+      ]
+    },
     {
       "cve": "CVE-2026-111497",
       "flags": [
