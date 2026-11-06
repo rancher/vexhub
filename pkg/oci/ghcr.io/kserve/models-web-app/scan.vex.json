@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/models-web-app?repository_url=ghcr.io%2Fkserve%2Fmodels-web-app",
     "tracking": {
-      "current_release_date": "2026-11-05T22:45:19Z",
+      "current_release_date": "2026-11-06T16:58:56Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-11-05T22:45:19Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-06T16:58:56Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -401,6 +406,17 @@
           "product_id": "pkg-pypi-oauthlib-3-3-1",
           "product_identification_helper": {
             "purl": "pkg:pypi/oauthlib@3.3.1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:pypi/oauthlib@4.0.0",
+        "product": {
+          "name": "pkg:pypi/oauthlib@4.0.0",
+          "product_id": "pkg-pypi-oauthlib-4-0-0",
+          "product_identification_helper": {
+            "purl": "pkg:pypi/oauthlib@4.0.0"
           }
         }
       },
@@ -790,6 +806,15 @@
         },
         "product_reference": "pkg-pypi-oauthlib-3-3-1",
         "relates_to_product_reference": "pkg-oci-models-web-app-repository-url-ghcr-io-kserve-models-web-app"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:pypi/oauthlib@4.0.0 as a component of pkg:oci/models-web-app?repository_url=ghcr.io%2Fkserve%2Fmodels-web-app",
+          "product_id": "pkg-pypi-oauthlib-4-0-0-in-pkg-oci-models-web-app-repository-url-ghcr-io-2Fkserve-2Fmodels-web-app"
+        },
+        "product_reference": "pkg-pypi-oauthlib-4-0-0",
+        "relates_to_product_reference": "pkg-oci-models-web-app-repository-url-ghcr-io-2Fkserve-2Fmodels-web-app"
       },
       {
         "category": "default_component_of",
@@ -2674,6 +2699,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-pypi-oauthlib-3-3-1-in-pkg-oci-models-web-app-repository-url-ghcr-io-kserve-models-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-49272",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-oauthlib-4-0-0-in-pkg-oci-models-web-app-repository-url-ghcr-io-2Fkserve-2Fmodels-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "App is an OAuth client via requests-oauthlib; server-side DeviceCodeGrant is never executed. This statement concerns CVE-2026-49272 in pkg:pypi/oauthlib@4.0.0 as a subcomponent of pkg:oci/models-web-app?repository_url=ghcr.io%2Fkserve%2Fmodels-web-app. It does not assert the status of pkg:pypi/oauthlib@4.0.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-pypi-oauthlib-4-0-0-in-pkg-oci-models-web-app-repository-url-ghcr-io-2Fkserve-2Fmodels-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-oauthlib-4-0-0-in-pkg-oci-models-web-app-repository-url-ghcr-io-2Fkserve-2Fmodels-web-app"
           ]
         }
       ]
