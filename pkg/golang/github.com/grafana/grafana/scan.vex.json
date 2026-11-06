@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/grafana/grafana",
     "tracking": {
-      "current_release_date": "2026-10-28T05:26:50Z",
+      "current_release_date": "2026-11-06T11:22:40Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-10-28T05:26:50Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-06T11:22:40Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -384,6 +389,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/github.com%2Fgetkin%2Fkin-openapi@v0.132.0",
+        "product": {
+          "name": "pkg:golang/github.com%2Fgetkin%2Fkin-openapi@v0.132.0",
+          "product_id": "pkg-golang-github-com-2Fgetkin-2Fkin-openapi-v0-132-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com%2Fgetkin%2Fkin-openapi@v0.132.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/go.mongodb.org%2Fmongo-driver@v1.16.1",
         "product": {
           "name": "pkg:golang/go.mongodb.org%2Fmongo-driver@v1.16.1",
@@ -588,17 +604,6 @@
           "product_id": "pkg-golang-go-etcd-io-etcd-client-pkg-v3-v3-5-16",
           "product_identification_helper": {
             "purl": "pkg:golang/go.etcd.io/etcd/client/pkg/v3@v3.5.16"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:golang/github.com%2Fgetkin%2Fkin-openapi@v0.132.0",
-        "product": {
-          "name": "pkg:golang/github.com%2Fgetkin%2Fkin-openapi@v0.132.0",
-          "product_id": "pkg-golang-github-com-2Fgetkin-2Fkin-openapi-v0-132-0",
-          "product_identification_helper": {
-            "purl": "pkg:golang/github.com%2Fgetkin%2Fkin-openapi@v0.132.0"
           }
         }
       },
@@ -928,6 +933,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/github.com%2Fgetkin%2Fkin-openapi@v0.132.0 as a component of pkg:golang/github.com/grafana/grafana",
+          "product_id": "pkg-golang-github-com-2Fgetkin-2Fkin-openapi-v0-132-0-in-pkg-golang-github-com-grafana-grafana"
+        },
+        "product_reference": "pkg-golang-github-com-2Fgetkin-2Fkin-openapi-v0-132-0",
+        "relates_to_product_reference": "pkg-golang-github-com-grafana-grafana"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/go.mongodb.org%2Fmongo-driver@v1.16.1 as a component of pkg:golang/github.com/grafana/grafana",
           "product_id": "pkg-golang-go-mongodb-org-2Fmongo-driver-v1-16-1-in-pkg-golang-github-com-grafana-grafana"
         },
@@ -1094,15 +1108,6 @@
           "product_id": "pkg-golang-go-etcd-io-etcd-client-pkg-v3-v3-5-16-in-pkg-golang-github-com-grafana-grafana"
         },
         "product_reference": "pkg-golang-go-etcd-io-etcd-client-pkg-v3-v3-5-16",
-        "relates_to_product_reference": "pkg-golang-github-com-grafana-grafana"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:golang/github.com%2Fgetkin%2Fkin-openapi@v0.132.0 as a component of pkg:golang/github.com/grafana/grafana",
-          "product_id": "pkg-golang-github-com-2Fgetkin-2Fkin-openapi-v0-132-0-in-pkg-golang-github-com-grafana-grafana"
-        },
-        "product_reference": "pkg-golang-github-com-2Fgetkin-2Fkin-openapi-v0-132-0",
         "relates_to_product_reference": "pkg-golang-github-com-grafana-grafana"
       },
       {
@@ -4602,6 +4607,47 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-24-3-in-pkg-golang-github-com-grafana-grafana"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-100349",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fgetkin-2Fkin-openapi-v0-132-0-in-pkg-golang-github-com-grafana-grafana"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6804"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-74vm-87hj-r66f"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-100349 in pkg:golang/github.com%2Fgetkin%2Fkin-openapi@v0.132.0 as a subcomponent of pkg:golang/github.com/grafana/grafana. It does not assert the status of pkg:golang/github.com%2Fgetkin%2Fkin-openapi@v0.132.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-2Fgetkin-2Fkin-openapi-v0-132-0-in-pkg-golang-github-com-grafana-grafana"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fgetkin-2Fkin-openapi-v0-132-0-in-pkg-golang-github-com-grafana-grafana"
           ]
         }
       ]
