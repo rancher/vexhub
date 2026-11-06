@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/projectcalico/calico",
     "tracking": {
-      "current_release_date": "2026-10-28T05:26:50Z",
+      "current_release_date": "2026-11-06T17:13:33Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-10-28T05:26:50Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-06T17:13:33Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -1396,6 +1401,17 @@
           "product_id": "pkg-golang-golang-org-x-crypto-v0-55-0",
           "product_identification_helper": {
             "purl": "pkg:golang/golang.org/x/crypto@v0.55.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/klauspost/compress@v1.18.0",
+        "product": {
+          "name": "pkg:golang/github.com/klauspost/compress@v1.18.0",
+          "product_id": "pkg-golang-github-com-klauspost-compress-v1-18-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/klauspost/compress@v1.18.0"
           }
         }
       },
@@ -3287,6 +3303,15 @@
           "product_id": "pkg-golang-golang-org-x-crypto-v0-55-0-in-pkg-golang-github-com-projectcalico-calico"
         },
         "product_reference": "pkg-golang-golang-org-x-crypto-v0-55-0",
+        "relates_to_product_reference": "pkg-golang-github-com-projectcalico-calico"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com/klauspost/compress@v1.18.0 as a component of pkg:golang/github.com/projectcalico/calico",
+          "product_id": "pkg-golang-github-com-klauspost-compress-v1-18-0-in-pkg-golang-github-com-projectcalico-calico"
+        },
+        "product_reference": "pkg-golang-github-com-klauspost-compress-v1-18-0",
         "relates_to_product_reference": "pkg-golang-github-com-projectcalico-calico"
       },
       {
@@ -34511,6 +34536,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-11-in-pkg-golang-github-com-projectcalico-calico-v3-32-1"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-63209",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-github-com-klauspost-compress-v1-18-0-in-pkg-golang-github-com-projectcalico-calico"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "The vulnerable path is s2.NewDict()/Dict.Encode() in the s2 package. Pulled the published image and extracted opt/cni/bin/calico; strings/symbol analysis shows only the zstd subtree is linked (fse, huff0, internal/{cpuinfo,le,snapref}, zstd, zstd/internal/xxhash). No compress/s2 symbols and no NewDict symbol exist anywhere in the binary, and calico's own code never imports klauspost/compress directly, so the vulnerable s2 dictionary code path cannot be reached.. This statement concerns CVE-2026-63209 in pkg:golang/github.com/klauspost/compress@v1.18.0 as a subcomponent of pkg:golang/github.com/projectcalico/calico. It does not assert the status of pkg:golang/github.com/klauspost/compress@v1.18.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-klauspost-compress-v1-18-0-in-pkg-golang-github-com-projectcalico-calico"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-github-com-klauspost-compress-v1-18-0-in-pkg-golang-github-com-projectcalico-calico"
           ]
         }
       ]
