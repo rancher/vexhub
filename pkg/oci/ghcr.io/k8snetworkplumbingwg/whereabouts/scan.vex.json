@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-11-07T01:10:48Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,14 +23,52 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/whereabouts?repository_url=ghcr.io/k8snetworkplumbingwg/whereabouts"
+        },
+        {
+          "date": "2026-11-07T01:10:48Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts",
+        "product": {
+          "name": "pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts",
+          "product_id": "pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts",
+          "product_identification_helper": {
+            "purl": "pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/musl",
+        "product": {
+          "name": "pkg:apk/alpine/musl",
+          "product_id": "pkg-apk-alpine-musl",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/musl"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/musl-utils",
+        "product": {
+          "name": "pkg:apk/alpine/musl-utils",
+          "product_id": "pkg-apk-alpine-musl-utils",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/musl-utils"
+          }
+        }
+      },
       {
         "category": "product_name",
         "name": "pkg:oci/whereabouts?repository_url=ghcr.io/k8snetworkplumbingwg/whereabouts",
@@ -74,42 +112,27 @@
             "purl": "pkg:apk/alpine/zlib"
           }
         }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:apk/alpine/musl",
-        "product": {
-          "name": "pkg:apk/alpine/musl",
-          "product_id": "pkg-apk-alpine-musl",
-          "product_identification_helper": {
-            "purl": "pkg:apk/alpine/musl"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:apk/alpine/musl-utils",
-        "product": {
-          "name": "pkg:apk/alpine/musl-utils",
-          "product_id": "pkg-apk-alpine-musl-utils",
-          "product_identification_helper": {
-            "purl": "pkg:apk/alpine/musl-utils"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts",
-        "product": {
-          "name": "pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts",
-          "product_id": "pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts",
-          "product_identification_helper": {
-            "purl": "pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts"
-          }
-        }
       }
     ],
     "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/musl as a component of pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts",
+          "product_id": "pkg-apk-alpine-musl-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+        },
+        "product_reference": "pkg-apk-alpine-musl",
+        "relates_to_product_reference": "pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/musl-utils as a component of pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts",
+          "product_id": "pkg-apk-alpine-musl-utils-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+        },
+        "product_reference": "pkg-apk-alpine-musl-utils",
+        "relates_to_product_reference": "pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -167,6 +190,55 @@
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-107891",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Main binaries are statically linked Go; no untrusted-input musl code path at runtime. This statement concerns CVE-2026-107891 in pkg:apk/alpine/musl as a subcomponent of pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts. It does not assert the status of pkg:apk/alpine/musl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Main binaries are statically linked Go; musl utils are not run by install-cni.sh. This statement concerns CVE-2026-107891 in pkg:apk/alpine/musl-utils as a subcomponent of pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts. It does not assert the status of pkg:apk/alpine/musl-utils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-musl-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts",
+          "pkg-apk-alpine-musl-utils-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        }
+      ]
+    },
     {
       "cve": "CVE-2026-14456",
       "flags": [

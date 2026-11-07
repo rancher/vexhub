@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full",
     "tracking": {
-      "current_release_date": "2026-10-30T14:12:36Z",
+      "current_release_date": "2026-11-07T01:10:48Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-30T14:12:36Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-07T01:10:48Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -99,6 +104,28 @@
           "product_id": "pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full",
           "product_identification_helper": {
             "purl": "pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/apt",
+        "product": {
+          "name": "pkg:deb/ubuntu/apt",
+          "product_id": "pkg-deb-ubuntu-apt",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/apt"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/apt-transport-https",
+        "product": {
+          "name": "pkg:deb/ubuntu/apt-transport-https",
+          "product_id": "pkg-deb-ubuntu-apt-transport-https",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/apt-transport-https"
           }
         }
       },
@@ -458,6 +485,24 @@
         },
         "product_reference": "pkg-deb-ubuntu-tar",
         "relates_to_product_reference": "pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-kubeflow-kubeflow-notebook-servers-jupyter-pytorch-full"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/apt as a component of pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full",
+          "product_id": "pkg-deb-ubuntu-apt-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+        },
+        "product_reference": "pkg-deb-ubuntu-apt",
+        "relates_to_product_reference": "pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/apt-transport-https as a component of pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full",
+          "product_id": "pkg-deb-ubuntu-apt-transport-https-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+        },
+        "product_reference": "pkg-deb-ubuntu-apt-transport-https",
+        "relates_to_product_reference": "pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
       },
       {
         "category": "default_component_of",
@@ -843,6 +888,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-tar-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-kubeflow-kubeflow-notebook-servers-jupyter-pytorch-full"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-109518",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-apt-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-apt-transport-https-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "No package operations at runtime; apt is never executed by the entrypoint. This statement concerns CVE-2026-109518 in pkg:deb/ubuntu/apt as a subcomponent of pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full. It does not assert the status of pkg:deb/ubuntu/apt when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "No package operations at runtime; apt is never executed by the entrypoint. This statement concerns CVE-2026-109518 in pkg:deb/ubuntu/apt-transport-https as a subcomponent of pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full. It does not assert the status of pkg:deb/ubuntu/apt-transport-https when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-apt-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full",
+          "pkg-deb-ubuntu-apt-transport-https-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-apt-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-apt-transport-https-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
           ]
         }
       ]
