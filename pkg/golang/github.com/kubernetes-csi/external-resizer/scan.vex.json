@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/kubernetes-csi/external-resizer",
     "tracking": {
-      "current_release_date": "2026-11-09T00:16:48Z",
+      "current_release_date": "2026-11-09T13:00:32Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-11-09T00:16:48Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-09T13:00:32Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -500,6 +505,17 @@
           "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-34-0",
           "product_identification_helper": {
             "purl": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.34.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.35.0",
+        "product": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.35.0",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-35-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/go.opentelemetry.io%2Fotel@v1.35.0"
           }
         }
       },
@@ -1133,6 +1149,15 @@
           "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-34-0-in-pkg-golang-github-com-kubernetes-csi-external-resizer"
         },
         "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-34-0",
+        "relates_to_product_reference": "pkg-golang-github-com-kubernetes-csi-external-resizer"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.35.0 as a component of pkg:golang/github.com/kubernetes-csi/external-resizer",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-35-0-in-pkg-golang-github-com-kubernetes-csi-external-resizer"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-35-0",
         "relates_to_product_reference": "pkg-golang-github-com-kubernetes-csi-external-resizer"
       },
       {
@@ -6016,6 +6041,12 @@
           "product_ids": [
             "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-34-0-in-pkg-golang-github-com-kubernetes-csi-external-resizer"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-35-0-in-pkg-golang-github-com-kubernetes-csi-external-resizer"
+          ]
         }
       ],
       "ids": [
@@ -6040,13 +6071,18 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39883 in pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.34.0 as a subcomponent of pkg:golang/github.com/kubernetes-csi/external-resizer. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.34.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39883 in pkg:golang/go.opentelemetry.io%2Fotel@v1.35.0 as a subcomponent of pkg:golang/github.com/kubernetes-csi/external-resizer. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel@v1.35.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-golang-go-opentelemetry-io-otel-sdk-v1-34-0-in-pkg-golang-github-com-kubernetes-csi-external-resizer",
           "pkg-golang-go-opentelemetry-io-otel-sdk-v1-39-0-in-pkg-golang-github-com-kubernetes-csi-external-resizer",
-          "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-34-0-in-pkg-golang-github-com-kubernetes-csi-external-resizer"
+          "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-34-0-in-pkg-golang-github-com-kubernetes-csi-external-resizer",
+          "pkg-golang-go-opentelemetry-io-2Fotel-v1-35-0-in-pkg-golang-github-com-kubernetes-csi-external-resizer"
         ]
       },
       "threats": [
@@ -6069,6 +6105,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-34-0-in-pkg-golang-github-com-kubernetes-csi-external-resizer"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-35-0-in-pkg-golang-github-com-kubernetes-csi-external-resizer"
           ]
         }
       ]
