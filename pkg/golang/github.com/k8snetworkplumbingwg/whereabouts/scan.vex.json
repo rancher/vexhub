@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/k8snetworkplumbingwg/whereabouts",
     "tracking": {
-      "current_release_date": "2026-10-28T05:26:50Z",
+      "current_release_date": "2026-11-09T00:16:48Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-28T05:26:50Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-09T00:16:48Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -341,6 +346,17 @@
           "product_id": "pkg-golang-stdlib-v1-25-11",
           "product_identification_helper": {
             "purl": "pkg:golang/stdlib@v1.25.11"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/golang.org%2Fx%2Fsys@v0.40.0",
+        "product": {
+          "name": "pkg:golang/golang.org%2Fx%2Fsys@v0.40.0",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fsys-v0-40-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/golang.org%2Fx%2Fsys@v0.40.0"
           }
         }
       },
@@ -893,6 +909,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Fsys@v0.40.0 as a component of pkg:golang/github.com/k8snetworkplumbingwg/whereabouts",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fsys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Fsys-v0-40-0",
+        "relates_to_product_reference": "pkg-golang-github-com-k8snetworkplumbingwg-whereabouts"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/golang.org/x/sys@v0.32.0 as a component of pkg:golang/github.com/k8snetworkplumbingwg/whereabouts",
           "product_id": "pkg-golang-golang-org-x-sys-v0-32-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts"
         },
@@ -925,6 +950,15 @@
         },
         "product_reference": "pkg-golang-golang-org-x-sys-v0-40-0",
         "relates_to_product_reference": "pkg-golang-github-com-k8snetworkplumbingwg-whereabouts-v0-9-3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Fsys@v0.40.0 as a component of pkg:golang/github.com/k8snetworkplumbingwg/whereabouts@v0.9.4",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fsys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts-v0-9-4"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Fsys-v0-40-0",
+        "relates_to_product_reference": "pkg-golang-github-com-k8snetworkplumbingwg-whereabouts-v0-9-4"
       },
       {
         "category": "default_component_of",
@@ -7033,6 +7067,12 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fsys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-golang-org-x-sys-v0-32-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts"
           ]
         },
@@ -7052,6 +7092,12 @@
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-x-sys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts-v0-9-3"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fsys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts-v0-9-4"
           ]
         },
         {
@@ -7070,6 +7116,10 @@
       "notes": [
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39824 in pkg:golang/golang.org%2Fx%2Fsys@v0.40.0 as a subcomponent of pkg:golang/github.com/k8snetworkplumbingwg/whereabouts. It does not assert the status of pkg:golang/golang.org%2Fx%2Fsys@v0.40.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39824 in pkg:golang/golang.org/x/sys@v0.32.0 as a subcomponent of pkg:golang/github.com/k8snetworkplumbingwg/whereabouts. It does not assert the status of pkg:golang/golang.org/x/sys@v0.32.0 when used independently or in other products."
         },
         {
@@ -7086,19 +7136,32 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39824 in pkg:golang/golang.org%2Fx%2Fsys@v0.40.0 as a subcomponent of pkg:golang/github.com/k8snetworkplumbingwg/whereabouts@v0.9.4. It does not assert the status of pkg:golang/golang.org%2Fx%2Fsys@v0.40.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39824 in pkg:golang/golang.org/x/sys@v0.40.0 as a subcomponent of pkg:golang/github.com/k8snetworkplumbingwg/whereabouts@v0.9.4. It does not assert the status of pkg:golang/golang.org/x/sys@v0.40.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-golang-golang-org-2Fx-2Fsys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts",
           "pkg-golang-golang-org-x-sys-v0-32-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts",
           "pkg-golang-golang-org-x-sys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts",
           "pkg-golang-golang-org-x-sys-v0-32-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts-v0-9-2",
           "pkg-golang-golang-org-x-sys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts-v0-9-3",
+          "pkg-golang-golang-org-2Fx-2Fsys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts-v0-9-4",
           "pkg-golang-golang-org-x-sys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts-v0-9-4"
         ]
       },
       "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fsys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts"
+          ]
+        },
         {
           "category": "impact",
           "details": "vulnerable_code_not_present",
@@ -7125,6 +7188,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-x-sys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts-v0-9-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fsys-v0-40-0-in-pkg-golang-github-com-k8snetworkplumbingwg-whereabouts-v0-9-4"
           ]
         },
         {
