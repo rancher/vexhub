@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-tensorflow-full",
     "tracking": {
-      "current_release_date": "2026-10-30T14:12:36Z",
+      "current_release_date": "2026-11-09T13:31:36Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-30T14:12:36Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-09T13:31:36Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -99,6 +104,28 @@
           "product_id": "pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-tensorflow-full",
           "product_identification_helper": {
             "purl": "pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-tensorflow-full"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/libsasl2-2",
+        "product": {
+          "name": "pkg:deb/ubuntu/libsasl2-2",
+          "product_id": "pkg-deb-ubuntu-libsasl2-2",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libsasl2-2"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/libsasl2-modules-db",
+        "product": {
+          "name": "pkg:deb/ubuntu/libsasl2-modules-db",
+          "product_id": "pkg-deb-ubuntu-libsasl2-modules-db",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libsasl2-modules-db"
           }
         }
       },
@@ -649,6 +676,24 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:deb/ubuntu/libsasl2-2 as a component of pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-tensorflow-full",
+          "product_id": "pkg-deb-ubuntu-libsasl2-2-in-pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-tensorflow-full"
+        },
+        "product_reference": "pkg-deb-ubuntu-libsasl2-2",
+        "relates_to_product_reference": "pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-tensorflow-full"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/libsasl2-modules-db as a component of pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-tensorflow-full",
+          "product_id": "pkg-deb-ubuntu-libsasl2-modules-db-in-pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-tensorflow-full"
+        },
+        "product_reference": "pkg-deb-ubuntu-libsasl2-modules-db",
+        "relates_to_product_reference": "pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-tensorflow-full"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:deb/ubuntu/libbrotli1 as a component of pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-tensorflow-full",
           "product_id": "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-tensorflow-full"
         },
@@ -1183,6 +1228,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-tar-in-pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-kubeflow-kubeflow-notebook-servers-jupyter-tensorflow-full"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-107161",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-libsasl2-2-in-pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-tensorflow-full"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-libsasl2-modules-db-in-pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-tensorflow-full"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "DIGEST-MD5 SASL plugin is not installed; only libsasldb.so ships. This statement concerns CVE-2026-107161 in pkg:deb/ubuntu/libsasl2-2 as a subcomponent of pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-tensorflow-full. It does not assert the status of pkg:deb/ubuntu/libsasl2-2 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "DIGEST-MD5 SASL plugin is not installed; only libsasldb.so ships. This statement concerns CVE-2026-107161 in pkg:deb/ubuntu/libsasl2-modules-db as a subcomponent of pkg:oci/jupyter-tensorflow-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-tensorflow-full. It does not assert the status of pkg:deb/ubuntu/libsasl2-modules-db when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libsasl2-2-in-pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-tensorflow-full",
+          "pkg-deb-ubuntu-libsasl2-modules-db-in-pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-tensorflow-full"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-libsasl2-2-in-pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-tensorflow-full"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-libsasl2-modules-db-in-pkg-oci-jupyter-tensorflow-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-tensorflow-full"
           ]
         }
       ]
