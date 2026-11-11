@@ -1,0 +1,102 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/k8s?repository_url=index.docker.io%2Falpine%2Fk8s",
+    "tracking": {
+      "current_release_date": "2026-11-11T12:31:16Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/k8s?repository_url=index.docker.io%2Falpine%2Fk8s",
+      "initial_release_date": "2026-11-11T12:31:16Z",
+      "revision_history": [
+        {
+          "date": "2026-11-11T12:31:16Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/k8s?repository_url=index.docker.io%2Falpine%2Fk8s"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/k8s?repository_url=index.docker.io%2Falpine%2Fk8s",
+        "product": {
+          "name": "pkg:oci/k8s?repository_url=index.docker.io%2Falpine%2Fk8s",
+          "product_id": "pkg-oci-k8s-repository-url-index-docker-io-2Falpine-2Fk8s",
+          "product_identification_helper": {
+            "purl": "pkg:oci/k8s?repository_url=index.docker.io%2Falpine%2Fk8s"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/brotli-libs",
+        "product": {
+          "name": "pkg:apk/alpine/brotli-libs",
+          "product_id": "pkg-apk-alpine-brotli-libs",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/brotli-libs"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/brotli-libs as a component of pkg:oci/k8s?repository_url=index.docker.io%2Falpine%2Fk8s",
+          "product_id": "pkg-apk-alpine-brotli-libs-in-pkg-oci-k8s-repository-url-index-docker-io-2Falpine-2Fk8s"
+        },
+        "product_reference": "pkg-apk-alpine-brotli-libs",
+        "relates_to_product_reference": "pkg-oci-k8s-repository-url-index-docker-io-2Falpine-2Fk8s"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-111497",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-brotli-libs-in-pkg-oci-k8s-repository-url-index-docker-io-2Falpine-2Fk8s"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only libcurl links libbrotlidec; image is a kubectl/helm toolbox (CMD /bin/sh), helm/kubectl are Go binaries and do not use libbrotli. This statement concerns CVE-2026-111497 in pkg:apk/alpine/brotli-libs as a subcomponent of pkg:oci/k8s?repository_url=index.docker.io%2Falpine%2Fk8s. It does not assert the status of pkg:apk/alpine/brotli-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-brotli-libs-in-pkg-oci-k8s-repository-url-index-docker-io-2Falpine-2Fk8s"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-brotli-libs-in-pkg-oci-k8s-repository-url-index-docker-io-2Falpine-2Fk8s"
+          ]
+        }
+      ]
+    }
+  ]
+}
