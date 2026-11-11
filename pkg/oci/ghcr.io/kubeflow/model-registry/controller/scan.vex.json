@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-11-11T02:16:34Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller"
+        },
+        {
+          "date": "2026-11-11T02:16:34Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -83,6 +88,17 @@
           "product_id": "pkg-rpm-redhat-glib2",
           "product_identification_helper": {
             "purl": "pkg:rpm/redhat/glib2"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/redhat/coreutils-single",
+        "product": {
+          "name": "pkg:rpm/redhat/coreutils-single",
+          "product_id": "pkg-rpm-redhat-coreutils-single",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/redhat/coreutils-single"
           }
         }
       },
@@ -331,6 +347,15 @@
           "product_id": "pkg-rpm-redhat-glib2-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
         },
         "product_reference": "pkg-rpm-redhat-glib2",
+        "relates_to_product_reference": "pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/redhat/coreutils-single as a component of pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller",
+          "product_id": "pkg-rpm-redhat-coreutils-single-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+        },
+        "product_reference": "pkg-rpm-redhat-coreutils-single",
         "relates_to_product_reference": "pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
       },
       {
@@ -694,6 +719,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-redhat-glib2-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-5278",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-coreutils-single-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a static Go manager binary; sort/uniq/unexpand are never executed at runtime. This statement concerns CVE-2025-5278 in pkg:rpm/redhat/coreutils-single as a subcomponent of pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller. It does not assert the status of pkg:rpm/redhat/coreutils-single when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-coreutils-single-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-coreutils-single-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
           ]
         }
       ]
@@ -2462,6 +2518,68 @@
       ]
     },
     {
+      "cve": "CVE-2026-56391",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-coreutils-single-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a static Go manager binary; sort/uniq/unexpand are never executed at runtime. This statement concerns CVE-2026-56391 in pkg:rpm/redhat/coreutils-single as a subcomponent of pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller. It does not assert the status of pkg:rpm/redhat/coreutils-single when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-coreutils-single-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-coreutils-single-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56392",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-coreutils-single-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a static Go manager binary; sort/uniq/unexpand are never executed at runtime. This statement concerns CVE-2026-56392 in pkg:rpm/redhat/coreutils-single as a subcomponent of pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller. It does not assert the status of pkg:rpm/redhat/coreutils-single when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-coreutils-single-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-coreutils-single-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-5745",
       "flags": [
         {
@@ -3585,6 +3703,130 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-redhat-libcurl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-9080",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-curl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a static Go manager binary; curl/libcurl is never invoked at runtime. This statement concerns CVE-2026-9080 in pkg:rpm/redhat/curl-minimal as a subcomponent of pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller. It does not assert the status of pkg:rpm/redhat/curl-minimal when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-curl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-curl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-92388",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-curl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a static Go manager binary; curl/libcurl is never invoked at runtime. This statement concerns CVE-2026-92388 in pkg:rpm/redhat/curl-minimal as a subcomponent of pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller. It does not assert the status of pkg:rpm/redhat/curl-minimal when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-curl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-curl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-9545",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-curl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a static Go manager binary; curl/libcurl is never invoked at runtime. This statement concerns CVE-2026-9545 in pkg:rpm/redhat/curl-minimal as a subcomponent of pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller. It does not assert the status of pkg:rpm/redhat/curl-minimal when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-curl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-curl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-9546",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-curl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a static Go manager binary; curl/libcurl is never invoked at runtime. This statement concerns CVE-2026-9546 in pkg:rpm/redhat/curl-minimal as a subcomponent of pkg:oci/controller?repository_url=ghcr.io%2Fkubeflow%2Fmodel-registry%2Fcontroller. It does not assert the status of pkg:rpm/redhat/curl-minimal when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-curl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-curl-minimal-in-pkg-oci-controller-repository-url-ghcr-io-2Fkubeflow-2Fmodel-registry-2Fcontroller"
           ]
         }
       ]
