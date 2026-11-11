@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app",
     "tracking": {
-      "current_release_date": "2026-11-11T15:11:48Z",
+      "current_release_date": "2026-11-11T18:56:41Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-11-11T15:11:48Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-11T18:56:41Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -296,6 +301,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:deb/debian/liblzma5",
+        "product": {
+          "name": "pkg:deb/debian/liblzma5",
+          "product_id": "pkg-deb-debian-liblzma5",
+          "product_identification_helper": {
+            "purl": "pkg:deb/debian/liblzma5"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:deb/debian/libsystemd0",
         "product": {
           "name": "pkg:deb/debian/libsystemd0",
@@ -522,6 +538,17 @@
           "product_id": "pkg-deb-debian-gzip",
           "product_identification_helper": {
             "purl": "pkg:deb/debian/gzip"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/debian/libbz2-1.0",
+        "product": {
+          "name": "pkg:deb/debian/libbz2-1.0",
+          "product_id": "pkg-deb-debian-libbz2-1-0",
+          "product_identification_helper": {
+            "purl": "pkg:deb/debian/libbz2-1.0"
           }
         }
       },
@@ -783,6 +810,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:deb/debian/liblzma5 as a component of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app",
+          "product_id": "pkg-deb-debian-liblzma5-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+        },
+        "product_reference": "pkg-deb-debian-liblzma5",
+        "relates_to_product_reference": "pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:deb/debian/libsystemd0 as a component of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app",
           "product_id": "pkg-deb-debian-libsystemd0-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
         },
@@ -967,6 +1003,15 @@
           "product_id": "pkg-deb-debian-gzip-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
         },
         "product_reference": "pkg-deb-debian-gzip",
+        "relates_to_product_reference": "pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/debian/libbz2-1.0 as a component of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app",
+          "product_id": "pkg-deb-debian-libbz2-1-0-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+        },
+        "product_reference": "pkg-deb-debian-libbz2-1-0",
         "relates_to_product_reference": "pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
       },
       {
@@ -1859,6 +1904,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-gpgv-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-31115",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-liblzma5-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only reachable via the Python _lzma extension and dpkg/apt; no application code imports lzma. This statement concerns CVE-2025-31115 in pkg:deb/debian/liblzma5 as a subcomponent of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app. It does not assert the status of pkg:deb/debian/liblzma5 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-liblzma5-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-liblzma5-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
           ]
         }
       ]
@@ -5799,6 +5875,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-34743",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-liblzma5-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only reachable via the Python _lzma extension and dpkg/apt; no application code imports lzma. This statement concerns CVE-2026-34743 in pkg:deb/debian/liblzma5 as a subcomponent of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app. It does not assert the status of pkg:deb/debian/liblzma5 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-liblzma5-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-liblzma5-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-3833",
       "flags": [
         {
@@ -6452,6 +6559,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-libgnutls30-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-42250",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libbz2-1-0-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only reachable via the Python _bz2 extension and dpkg/apt; no application code imports bz2. This statement concerns CVE-2026-42250 in pkg:deb/debian/libbz2-1.0 as a subcomponent of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app. It does not assert the status of pkg:deb/debian/libbz2-1.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libbz2-1-0-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libbz2-1-0-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
           ]
         }
       ]
