@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/go.etcd.io/etcd/tools/v3",
     "tracking": {
-      "current_release_date": "2026-10-21T04:27:47Z",
+      "current_release_date": "2026-11-12T04:41:47Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-21T04:27:47Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-12T04:41:47Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -508,6 +513,28 @@
             "purl": "pkg:golang/go.etcd.io/etcd/tools/v3@v3.7.0"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.26.10",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.26.10",
+          "product_id": "pkg-golang-stdlib-v1-26-10",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.26.10"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/go.etcd.io/etcd/tools/v3@v3.7.3",
+        "product": {
+          "name": "pkg:golang/go.etcd.io/etcd/tools/v3@v3.7.3",
+          "product_id": "pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-3",
+          "product_identification_helper": {
+            "purl": "pkg:golang/go.etcd.io/etcd/tools/v3@v3.7.3"
+          }
+        }
       }
     ],
     "relationships": [
@@ -888,6 +915,24 @@
         },
         "product_reference": "pkg-golang-stdlib-v1-26-5",
         "relates_to_product_reference": "pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-0"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.10 as a component of pkg:golang/go.etcd.io/etcd/tools/v3",
+          "product_id": "pkg-golang-stdlib-v1-26-10-in-pkg-golang-go-etcd-io-etcd-tools-v3"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-10",
+        "relates_to_product_reference": "pkg-golang-go-etcd-io-etcd-tools-v3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.10 as a component of pkg:golang/go.etcd.io/etcd/tools/v3@v3.7.3",
+          "product_id": "pkg-golang-stdlib-v1-26-10-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-3"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-10",
+        "relates_to_product_reference": "pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-3"
       }
     ]
   },
@@ -16432,6 +16477,169 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-97054",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-12-in-pkg-golang-go-etcd-io-etcd-tools-v3"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-10-in-pkg-golang-go-etcd-io-etcd-tools-v3"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-go-etcd-io-etcd-tools-v3"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-12-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-6-14-k3s2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-12-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-6-14-k3s3"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-1-k3s2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-1-k3s3"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-10-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-3"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6859"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97054 in pkg:golang/stdlib@v1.25.12 as a subcomponent of pkg:golang/go.etcd.io/etcd/tools/v3. It does not assert the status of pkg:golang/stdlib@v1.25.12 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97054 in pkg:golang/stdlib@v1.26.10 as a subcomponent of pkg:golang/go.etcd.io/etcd/tools/v3. It does not assert the status of pkg:golang/stdlib@v1.26.10 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97054 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/go.etcd.io/etcd/tools/v3. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97054 in pkg:golang/stdlib@v1.25.12 as a subcomponent of pkg:golang/go.etcd.io/etcd/tools/v3@v3.6.14-k3s2. It does not assert the status of pkg:golang/stdlib@v1.25.12 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97054 in pkg:golang/stdlib@v1.25.12 as a subcomponent of pkg:golang/go.etcd.io/etcd/tools/v3@v3.6.14-k3s3. It does not assert the status of pkg:golang/stdlib@v1.25.12 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97054 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/go.etcd.io/etcd/tools/v3@v3.7.1-k3s2. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97054 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/go.etcd.io/etcd/tools/v3@v3.7.1-k3s3. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97054 in pkg:golang/stdlib@v1.26.10 as a subcomponent of pkg:golang/go.etcd.io/etcd/tools/v3@v3.7.3. It does not assert the status of pkg:golang/stdlib@v1.26.10 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-25-12-in-pkg-golang-go-etcd-io-etcd-tools-v3",
+          "pkg-golang-stdlib-v1-26-10-in-pkg-golang-go-etcd-io-etcd-tools-v3",
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-go-etcd-io-etcd-tools-v3",
+          "pkg-golang-stdlib-v1-25-12-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-6-14-k3s2",
+          "pkg-golang-stdlib-v1-25-12-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-6-14-k3s3",
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-1-k3s2",
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-1-k3s3",
+          "pkg-golang-stdlib-v1-26-10-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-3"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-12-in-pkg-golang-go-etcd-io-etcd-tools-v3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-10-in-pkg-golang-go-etcd-io-etcd-tools-v3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-go-etcd-io-etcd-tools-v3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-12-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-6-14-k3s2"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-12-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-6-14-k3s3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-1-k3s2"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-1-k3s3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-10-in-pkg-golang-go-etcd-io-etcd-tools-v3-v3-7-3"
           ]
         }
       ]
