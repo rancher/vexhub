@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app",
     "tracking": {
-      "current_release_date": "2026-11-11T18:56:41Z",
+      "current_release_date": "2026-11-12T00:59:36Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-11T18:56:41Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-12T00:59:36Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -340,6 +345,28 @@
           "product_id": "pkg-deb-debian-libsqlite3-0",
           "product_identification_helper": {
             "purl": "pkg:deb/debian/libsqlite3-0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/debian/gcc-12-base",
+        "product": {
+          "name": "pkg:deb/debian/gcc-12-base",
+          "product_id": "pkg-deb-debian-gcc-12-base",
+          "product_identification_helper": {
+            "purl": "pkg:deb/debian/gcc-12-base"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/debian/libgcc-s1",
+        "product": {
+          "name": "pkg:deb/debian/libgcc-s1",
+          "product_id": "pkg-deb-debian-libgcc-s1",
+          "product_identification_helper": {
+            "purl": "pkg:deb/debian/libgcc-s1"
           }
         }
       },
@@ -841,6 +868,24 @@
           "product_id": "pkg-deb-debian-libsqlite3-0-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
         },
         "product_reference": "pkg-deb-debian-libsqlite3-0",
+        "relates_to_product_reference": "pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/debian/gcc-12-base as a component of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app",
+          "product_id": "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+        },
+        "product_reference": "pkg-deb-debian-gcc-12-base",
+        "relates_to_product_reference": "pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/debian/libgcc-s1 as a component of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app",
+          "product_id": "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+        },
+        "product_reference": "pkg-deb-debian-libgcc-s1",
         "relates_to_product_reference": "pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
       },
       {
@@ -2709,6 +2754,55 @@
       ]
     },
     {
+      "cve": "CVE-2026-102010",
+      "flags": [
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "gcc-base package ships only /usr/share/doc files; no libstdc++ or libgcc code is present in the image. This statement concerns CVE-2026-102010 in pkg:deb/debian/gcc-12-base as a subcomponent of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app. It does not assert the status of pkg:deb/debian/gcc-12-base when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "libgcc-s1 ships only libgcc_s.so.1; the flaw is in libstdc++ code not shipped by this package. This statement concerns CVE-2026-102010 in pkg:deb/debian/libgcc-s1 as a subcomponent of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app. It does not assert the status of pkg:deb/debian/libgcc-s1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app",
+          "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "component_not_present",
+          "product_ids": [
+            "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-103111",
       "flags": [
         {
@@ -4059,6 +4153,104 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-libkrb5support0-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-114690",
+      "flags": [
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "gcc-base package ships only /usr/share/doc files; no libstdc++ or libgcc code is present in the image. This statement concerns CVE-2026-114690 in pkg:deb/debian/gcc-12-base as a subcomponent of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app. It does not assert the status of pkg:deb/debian/gcc-12-base when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "libgcc-s1 ships only libgcc_s.so.1; the flaw is in libstdc++ code not shipped by this package. This statement concerns CVE-2026-114690 in pkg:deb/debian/libgcc-s1 as a subcomponent of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app. It does not assert the status of pkg:deb/debian/libgcc-s1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app",
+          "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "component_not_present",
+          "product_ids": [
+            "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-114691",
+      "flags": [
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "gcc-base package ships only /usr/share/doc files; no libstdc++ or libgcc code is present in the image. This statement concerns CVE-2026-114691 in pkg:deb/debian/gcc-12-base as a subcomponent of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app. It does not assert the status of pkg:deb/debian/gcc-12-base when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "libgcc-s1 ships only libgcc_s.so.1; the flaw is in libstdc++ code not shipped by this package. This statement concerns CVE-2026-114691 in pkg:deb/debian/libgcc-s1 as a subcomponent of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app. It does not assert the status of pkg:deb/debian/libgcc-s1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app",
+          "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "component_not_present",
+          "product_ids": [
+            "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
           ]
         }
       ]
@@ -9125,6 +9317,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-perl-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95619",
+      "flags": [
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "gcc-base package ships only /usr/share/doc files; no libstdc++ or libgcc code is present in the image. This statement concerns CVE-2026-95619 in pkg:deb/debian/gcc-12-base as a subcomponent of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app. It does not assert the status of pkg:deb/debian/gcc-12-base when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "libgcc-s1 ships only libgcc_s.so.1; the flaw is in libstdc++ code not shipped by this package. This statement concerns CVE-2026-95619 in pkg:deb/debian/libgcc-s1 as a subcomponent of pkg:oci/volumes-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fvolumes-web-app. It does not assert the status of pkg:deb/debian/libgcc-s1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app",
+          "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "component_not_present",
+          "product_ids": [
+            "pkg-deb-debian-gcc-12-base-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-libgcc-s1-in-pkg-oci-volumes-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fvolumes-web-app"
           ]
         }
       ]
