@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app",
     "tracking": {
-      "current_release_date": "2026-11-12T00:59:36Z",
+      "current_release_date": "2026-11-13T02:04:35Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-11-12T00:59:36Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-13T02:04:35Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -99,6 +104,17 @@
           "product_id": "pkg-deb-debian-ncurses-bin",
           "product_identification_helper": {
             "purl": "pkg:deb/debian/ncurses-bin"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:pypi/pip@25.0.1",
+        "product": {
+          "name": "pkg:pypi/pip@25.0.1",
+          "product_id": "pkg-pypi-pip-25-0-1",
+          "product_identification_helper": {
+            "purl": "pkg:pypi/pip@25.0.1"
           }
         }
       },
@@ -334,6 +350,15 @@
           "product_id": "pkg-deb-debian-ncurses-bin-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
         },
         "product_reference": "pkg-deb-debian-ncurses-bin",
+        "relates_to_product_reference": "pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:pypi/pip@25.0.1 as a component of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app",
+          "product_id": "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+        },
+        "product_reference": "pkg-pypi-pip-25-0-1",
         "relates_to_product_reference": "pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
       },
       {
@@ -609,6 +634,37 @@
       ]
     },
     {
+      "cve": "CVE-2025-8869",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "pip and setuptools are build-time tools; no package installation happens at container runtime. This statement concerns CVE-2025-8869 in pkg:pypi/pip@25.0.1 as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app. It does not assert the status of pkg:pypi/pip@25.0.1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-102010",
       "flags": [
         {
@@ -844,6 +900,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-perl-base-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-13346",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "pip and setuptools are build-time tools; no package installation happens at container runtime. This statement concerns CVE-2026-13346 in pkg:pypi/pip@25.0.1 as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app. It does not assert the status of pkg:pypi/pip@25.0.1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
           ]
         }
       ]
@@ -1493,6 +1580,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-util-linux-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-3219",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "pip and setuptools are build-time tools; no package installation happens at container runtime. This statement concerns CVE-2026-3219 in pkg:pypi/pip@25.0.1 as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app. It does not assert the status of pkg:pypi/pip@25.0.1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
           ]
         }
       ]
@@ -2593,6 +2711,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-6357",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "pip and setuptools are build-time tools; no package installation happens at container runtime. This statement concerns CVE-2026-6357 in pkg:pypi/pip@25.0.1 as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app. It does not assert the status of pkg:pypi/pip@25.0.1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-7010",
       "flags": [
         {
@@ -3355,6 +3504,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-82560",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-perl-base-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Perl is an incidental packaging dependency and is never executed by the container entrypoint. This statement concerns CVE-2026-82560 in pkg:deb/debian/perl-base as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app. It does not assert the status of pkg:deb/debian/perl-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-perl-base-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-perl-base-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-8376",
       "flags": [
         {
@@ -3381,6 +3561,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-perl-base-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-8643",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "pip and setuptools are build-time tools; no package installation happens at container runtime. This statement concerns CVE-2026-8643 in pkg:pypi/pip@25.0.1 as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app. It does not assert the status of pkg:pypi/pip@25.0.1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-pypi-pip-25-0-1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
           ]
         }
       ]

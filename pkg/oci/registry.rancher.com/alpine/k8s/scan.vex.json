@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/k8s?repository_url=registry.rancher.com%2Falpine%2Fk8s",
     "tracking": {
-      "current_release_date": "2026-11-11T12:31:16Z",
+      "current_release_date": "2026-11-13T02:04:35Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-11-11T12:31:16Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/k8s?repository_url=registry.rancher.com%2Falpine%2Fk8s"
+        },
+        {
+          "date": "2026-11-13T02:04:35Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -52,6 +57,28 @@
             "purl": "pkg:apk/alpine/brotli-libs"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/git",
+        "product": {
+          "name": "pkg:apk/alpine/git",
+          "product_id": "pkg-apk-alpine-git",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/git"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/git-init-template",
+        "product": {
+          "name": "pkg:apk/alpine/git-init-template",
+          "product_id": "pkg-apk-alpine-git-init-template",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/git-init-template"
+          }
+        }
       }
     ],
     "relationships": [
@@ -62,6 +89,24 @@
           "product_id": "pkg-apk-alpine-brotli-libs-in-pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s"
         },
         "product_reference": "pkg-apk-alpine-brotli-libs",
+        "relates_to_product_reference": "pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/git as a component of pkg:oci/k8s?repository_url=registry.rancher.com%2Falpine%2Fk8s",
+          "product_id": "pkg-apk-alpine-git-in-pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s"
+        },
+        "product_reference": "pkg-apk-alpine-git",
+        "relates_to_product_reference": "pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/git-init-template as a component of pkg:oci/k8s?repository_url=registry.rancher.com%2Falpine%2Fk8s",
+          "product_id": "pkg-apk-alpine-git-init-template-in-pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s"
+        },
+        "product_reference": "pkg-apk-alpine-git-init-template",
         "relates_to_product_reference": "pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s"
       }
     ]
@@ -94,6 +139,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-brotli-libs-in-pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-114467",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-git-in-pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-git-init-template-in-pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CLI toolbox image; git merge of a signed tag is never performed by any entrypoint. This statement concerns CVE-2026-114467 in pkg:apk/alpine/git as a subcomponent of pkg:oci/k8s?repository_url=registry.rancher.com%2Falpine%2Fk8s. It does not assert the status of pkg:apk/alpine/git when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CLI toolbox image; git merge of a signed tag is never performed by any entrypoint. This statement concerns CVE-2026-114467 in pkg:apk/alpine/git-init-template as a subcomponent of pkg:oci/k8s?repository_url=registry.rancher.com%2Falpine%2Fk8s. It does not assert the status of pkg:apk/alpine/git-init-template when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-git-in-pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s",
+          "pkg-apk-alpine-git-init-template-in-pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-git-in-pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-git-init-template-in-pkg-oci-k8s-repository-url-registry-rancher-com-2Falpine-2Fk8s"
           ]
         }
       ]
