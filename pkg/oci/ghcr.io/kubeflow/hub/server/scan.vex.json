@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver",
     "tracking": {
-      "current_release_date": "2026-11-12T00:59:36Z",
+      "current_release_date": "2026-11-13T02:04:35Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -43,10 +43,15 @@
           "date": "2026-11-12T00:59:36Z",
           "number": "5",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-13T02:04:35Z",
+          "number": "6",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -1632,6 +1637,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-105437",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only git init and git remote add are run; merge. This statement concerns CVE-2026-105437 in pkg:rpm/redhat/git-core as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/git-core when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-106552",
       "flags": [
         {
@@ -1655,6 +1691,104 @@
         {
           "category": "description",
           "text": "CLI tool from the UBI9 base image; never invoked by the static Go binary entrypoint. This statement concerns CVE-2026-106552 in pkg:rpm/redhat/openssh-clients as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/openssh-clients when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-openssh-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver",
+          "pkg-rpm-redhat-openssh-clients-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-openssh-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-openssh-clients-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-106553",
+      "flags": [
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-openssh-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        },
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-openssh-clients-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "No sshd is shipped in this image; only OpenSSH client binaries are present. This statement concerns CVE-2026-106553 in pkg:rpm/redhat/openssh as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/openssh when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "No sshd is shipped in this image; only OpenSSH client binaries are present. This statement concerns CVE-2026-106553 in pkg:rpm/redhat/openssh-clients as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/openssh-clients when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-openssh-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver",
+          "pkg-rpm-redhat-openssh-clients-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "component_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-openssh-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "component_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-openssh-clients-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-106583",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-openssh-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-openssh-clients-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "The ssh client is never invoked; git access uses HTTPS only in the Go entrypoint. This statement concerns CVE-2026-106583 in pkg:rpm/redhat/openssh as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/openssh when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "The ssh client is never invoked; git access uses HTTPS only in the Go entrypoint. This statement concerns CVE-2026-106583 in pkg:rpm/redhat/openssh-clients as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/openssh-clients when used independently or in other products."
         }
       ],
       "product_status": {
@@ -2252,6 +2386,130 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-redhat-expat-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-113408",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only git init and git remote add are run; merge. This statement concerns CVE-2026-113408 in pkg:rpm/redhat/git-core as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/git-core when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-114466",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only git init and git remote add are run; merge. This statement concerns CVE-2026-114466 in pkg:rpm/redhat/git-core as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/git-core when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-114467",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only git init and git remote add are run; merge. This statement concerns CVE-2026-114467 in pkg:rpm/redhat/git-core as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/git-core when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-114469",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only git init and git remote add are run; merge. This statement concerns CVE-2026-114469 in pkg:rpm/redhat/git-core as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/git-core when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
           ]
         }
       ]
@@ -2882,6 +3140,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-11979",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libxml2/glib2 have no consumer in the execute path. This statement concerns CVE-2026-11979 in pkg:rpm/redhat/libxml2 as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/libxml2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-120194",
       "flags": [
         {
@@ -3318,6 +3607,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-redhat-systemd-libs-in-pkg-oci-server-repository-url-ghcr-io-kubeflow-hub-server"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-16118",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-glib2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libxml2/glib2 have no consumer in the execute path. This statement concerns CVE-2026-16118 in pkg:rpm/redhat/glib2 as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/glib2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-glib2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-glib2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
           ]
         }
       ]
@@ -5392,6 +5712,68 @@
       ]
     },
     {
+      "cve": "CVE-2026-66046",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-expat-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only git-http-push links libexpat; it is never invoked by the static Go entrypoint. This statement concerns CVE-2026-66046 in pkg:rpm/redhat/expat as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/expat when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-expat-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-expat-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-6653",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libxml2/glib2 have no consumer in the execute path. This statement concerns CVE-2026-6653 in pkg:rpm/redhat/libxml2 as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/libxml2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-67693",
       "flags": [
         {
@@ -5609,6 +5991,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-redhat-openssl-libs-in-pkg-oci-server-repository-url-ghcr-io-kubeflow-hub-server"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-74860",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libxml2/glib2 have no consumer in the execute path. This statement concerns CVE-2026-74860 in pkg:rpm/redhat/libxml2 as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/libxml2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
           ]
         }
       ]
@@ -5880,6 +6293,37 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-redhat-glibc-minimal-langpack-in-pkg-oci-server-repository-url-ghcr-io-kubeflow-hub-server"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-77214",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-expat-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only git-http-push links libexpat; it is never invoked by the static Go entrypoint. This statement concerns CVE-2026-77214 in pkg:rpm/redhat/expat as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/expat when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-expat-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-expat-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
           ]
         }
       ]
@@ -6303,6 +6747,161 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-redhat-rpm-libs-in-pkg-oci-server-repository-url-ghcr-io-kubeflow-hub-server"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-86138",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libxml2/glib2 have no consumer in the execute path. This statement concerns CVE-2026-86138 in pkg:rpm/redhat/libxml2 as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/libxml2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-86140",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libxml2/glib2 have no consumer in the execute path. This statement concerns CVE-2026-86140 in pkg:rpm/redhat/libxml2 as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/libxml2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-86142",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libxml2/glib2 have no consumer in the execute path. This statement concerns CVE-2026-86142 in pkg:rpm/redhat/libxml2 as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/libxml2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-86143",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libxml2/glib2 have no consumer in the execute path. This statement concerns CVE-2026-86143 in pkg:rpm/redhat/libxml2 as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/libxml2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-86144",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; libxml2/glib2 have no consumer in the execute path. This statement concerns CVE-2026-86144 in pkg:rpm/redhat/libxml2 as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/libxml2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-libxml2-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
           ]
         }
       ]
@@ -7023,6 +7622,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-redhat-libmodulemd-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-93990",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-expat-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only git-http-push links libexpat; it is never invoked by the static Go entrypoint. This statement concerns CVE-2026-93990 in pkg:rpm/redhat/expat as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/expat when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-expat-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-expat-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
           ]
         }
       ]
