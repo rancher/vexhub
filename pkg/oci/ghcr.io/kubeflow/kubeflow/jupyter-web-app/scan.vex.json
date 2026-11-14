@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app",
     "tracking": {
-      "current_release_date": "2026-11-11T15:11:48Z",
+      "current_release_date": "2026-11-14T01:50:55Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-11T15:11:48Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-14T01:50:55Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -307,6 +312,28 @@
           "product_id": "pkg-deb-debian-gcc-12-base",
           "product_identification_helper": {
             "purl": "pkg:deb/debian/gcc-12-base"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/debian/libssl3",
+        "product": {
+          "name": "pkg:deb/debian/libssl3",
+          "product_id": "pkg-deb-debian-libssl3",
+          "product_identification_helper": {
+            "purl": "pkg:deb/debian/libssl3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/debian/openssl",
+        "product": {
+          "name": "pkg:deb/debian/openssl",
+          "product_id": "pkg-deb-debian-openssl",
+          "product_identification_helper": {
+            "purl": "pkg:deb/debian/openssl"
           }
         }
       },
@@ -786,6 +813,24 @@
           "product_id": "pkg-deb-debian-libkrb5support0-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
         },
         "product_reference": "pkg-deb-debian-libkrb5support0",
+        "relates_to_product_reference": "pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/debian/libssl3 as a component of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app",
+          "product_id": "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+        },
+        "product_reference": "pkg-deb-debian-libssl3",
+        "relates_to_product_reference": "pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/debian/openssl as a component of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app",
+          "product_id": "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+        },
+        "product_reference": "pkg-deb-debian-openssl",
         "relates_to_product_reference": "pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
       },
       {
@@ -2468,6 +2513,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-libkrb5support0-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-107496",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CMS/CMP/PKCS#7 APIs are never invoked; image only uses TLS for transport security. This statement concerns CVE-2026-107496 in pkg:deb/debian/libssl3 as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app. It does not assert the status of pkg:deb/debian/libssl3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CMS/CMP/PKCS#7 APIs are never invoked; image only uses TLS for transport security. This statement concerns CVE-2026-107496 in pkg:deb/debian/openssl as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app. It does not assert the status of pkg:deb/debian/openssl when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app",
+          "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
           ]
         }
       ]
@@ -7421,6 +7515,104 @@
       ]
     },
     {
+      "cve": "CVE-2026-88822",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "No QUIC endpoint or OpenSSL QUIC API use; image only performs TLS over TCP. This statement concerns CVE-2026-88822 in pkg:deb/debian/libssl3 as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app. It does not assert the status of pkg:deb/debian/libssl3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "No QUIC endpoint or OpenSSL QUIC API use; image only performs TLS over TCP. This statement concerns CVE-2026-88822 in pkg:deb/debian/openssl as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app. It does not assert the status of pkg:deb/debian/openssl when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app",
+          "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-88823",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "AES-OCB and AES-GCM-SIV ciphers are not negotiated or used by this image. This statement concerns CVE-2026-88823 in pkg:deb/debian/libssl3 as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app. It does not assert the status of pkg:deb/debian/libssl3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "AES-OCB and AES-GCM-SIV ciphers are not negotiated or used by this image. This statement concerns CVE-2026-88823 in pkg:deb/debian/openssl as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app. It does not assert the status of pkg:deb/debian/openssl when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app",
+          "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-9538",
       "flags": [
         {
@@ -7496,6 +7688,104 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-deb-debian-libgcc-s1-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-kubeflow-kubeflow-jupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95691",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "No QUIC endpoint or OpenSSL QUIC API use; image only performs TLS over TCP. This statement concerns CVE-2026-95691 in pkg:deb/debian/libssl3 as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app. It does not assert the status of pkg:deb/debian/libssl3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "No QUIC endpoint or OpenSSL QUIC API use; image only performs TLS over TCP. This statement concerns CVE-2026-95691 in pkg:deb/debian/openssl as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app. It does not assert the status of pkg:deb/debian/openssl when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app",
+          "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95692",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "AES-OCB and AES-GCM-SIV ciphers are not negotiated or used by this image. This statement concerns CVE-2026-95692 in pkg:deb/debian/libssl3 as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app. It does not assert the status of pkg:deb/debian/libssl3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "AES-OCB and AES-GCM-SIV ciphers are not negotiated or used by this image. This statement concerns CVE-2026-95692 in pkg:deb/debian/openssl as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fjupyter-web-app. It does not assert the status of pkg:deb/debian/openssl when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app",
+          "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libssl3-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-openssl-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fjupyter-web-app"
           ]
         }
       ]

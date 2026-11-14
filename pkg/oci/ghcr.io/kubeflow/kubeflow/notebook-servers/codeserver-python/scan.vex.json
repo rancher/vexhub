@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python",
     "tracking": {
-      "current_release_date": "2026-11-09T00:16:48Z",
+      "current_release_date": "2026-11-14T01:50:55Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -48,10 +48,15 @@
           "date": "2026-11-09T00:16:48Z",
           "number": "6",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-14T01:50:55Z",
+          "number": "7",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "6"
+      "version": "7"
     }
   },
   "product_tree": {
@@ -339,6 +344,17 @@
           "product_id": "pkg-deb-ubuntu-perl-modules-5-34",
           "product_identification_helper": {
             "purl": "pkg:deb/ubuntu/perl-modules-5.34"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:npm/basic-ftp@5.3.0",
+        "product": {
+          "name": "pkg:npm/basic-ftp@5.3.0",
+          "product_id": "pkg-npm-basic-ftp-5-3-0",
+          "product_identification_helper": {
+            "purl": "pkg:npm/basic-ftp@5.3.0"
           }
         }
       },
@@ -922,6 +938,15 @@
         },
         "product_reference": "pkg-deb-ubuntu-perl-modules-5-34",
         "relates_to_product_reference": "pkg-oci-codeserver-python-repository-url-ghcr-io-kubeflow-kubeflow-notebook-servers-codeserver-python"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:npm/basic-ftp@5.3.0 as a component of pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python",
+          "product_id": "pkg-npm-basic-ftp-5-3-0-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+        },
+        "product_reference": "pkg-npm-basic-ftp-5-3-0",
+        "relates_to_product_reference": "pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
       },
       {
         "category": "default_component_of",
@@ -2345,6 +2370,68 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-perl-modules-5-34-in-pkg-oci-codeserver-python-repository-url-ghcr-io-kubeflow-kubeflow-notebook-servers-codeserver-python"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-126345",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-basic-ftp-5-3-0-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Incidental code-server dependency; the FTP client is never invoked at runtime. This statement concerns CVE-2026-126345 in pkg:npm/basic-ftp@5.3.0 as a subcomponent of pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python. It does not assert the status of pkg:npm/basic-ftp@5.3.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-npm-basic-ftp-5-3-0-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-basic-ftp-5-3-0-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-126346",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-basic-ftp-5-3-0-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Incidental code-server dependency; the FTP client is never invoked at runtime. This statement concerns CVE-2026-126346 in pkg:npm/basic-ftp@5.3.0 as a subcomponent of pkg:oci/codeserver-python?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fcodeserver-python. It does not assert the status of pkg:npm/basic-ftp@5.3.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-npm-basic-ftp-5-3-0-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-basic-ftp-5-3-0-in-pkg-oci-codeserver-python-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fcodeserver-python"
           ]
         }
       ]
