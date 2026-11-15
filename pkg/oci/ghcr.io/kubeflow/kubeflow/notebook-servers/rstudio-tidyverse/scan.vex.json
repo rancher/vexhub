@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse",
     "tracking": {
-      "current_release_date": "2026-11-13T02:04:35Z",
+      "current_release_date": "2026-11-14T01:50:55Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-13T02:04:35Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-14T01:50:55Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -784,6 +789,33 @@
         },
         "product_reference": "pkg-deb-ubuntu-nano",
         "relates_to_product_reference": "pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-kubeflow-kubeflow-notebook-servers-rstudio-tidyverse"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/libc-dev-bin as a component of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse",
+          "product_id": "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+        },
+        "product_reference": "pkg-deb-ubuntu-libc-dev-bin",
+        "relates_to_product_reference": "pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/libc6-dev as a component of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse",
+          "product_id": "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+        },
+        "product_reference": "pkg-deb-ubuntu-libc6-dev",
+        "relates_to_product_reference": "pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/libc6-i386 as a component of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse",
+          "product_id": "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+        },
+        "product_reference": "pkg-deb-ubuntu-libc6-i386",
+        "relates_to_product_reference": "pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
       },
       {
         "category": "default_component_of",
@@ -121575,6 +121607,73 @@
       ]
     },
     {
+      "cve": "CVE-2026-84243",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-84243 in pkg:deb/ubuntu/libc-dev-bin as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc-dev-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-84243 in pkg:deb/ubuntu/libc6-dev as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc6-dev when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "No 32-bit binaries or i386-linux-gnu runtime present; 32-bit glibc is never loaded. This statement concerns CVE-2026-84243 in pkg:deb/ubuntu/libc6-i386 as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc6-i386 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse",
+          "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse",
+          "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-84782",
       "flags": [
         {
@@ -121704,6 +121803,140 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-polkitd-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-kubeflow-kubeflow-notebook-servers-rstudio-tidyverse"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-8674",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-8674 in pkg:deb/ubuntu/libc-dev-bin as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc-dev-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-8674 in pkg:deb/ubuntu/libc6-dev as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc6-dev when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "No 32-bit binaries or i386-linux-gnu runtime present; 32-bit glibc is never loaded. This statement concerns CVE-2026-8674 in pkg:deb/ubuntu/libc6-i386 as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc6-i386 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse",
+          "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse",
+          "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-86805",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-86805 in pkg:deb/ubuntu/libc-dev-bin as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc-dev-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-86805 in pkg:deb/ubuntu/libc6-dev as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc6-dev when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "No 32-bit binaries or i386-linux-gnu runtime present; 32-bit glibc is never loaded. This statement concerns CVE-2026-86805 in pkg:deb/ubuntu/libc6-i386 as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc6-i386 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse",
+          "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse",
+          "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
           ]
         }
       ]
@@ -145473,6 +145706,140 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-deb-ubuntu-libx11-data-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95818",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-95818 in pkg:deb/ubuntu/libc-dev-bin as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc-dev-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-95818 in pkg:deb/ubuntu/libc6-dev as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc6-dev when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "No 32-bit binaries or i386-linux-gnu runtime present; 32-bit glibc is never loaded. This statement concerns CVE-2026-95818 in pkg:deb/ubuntu/libc6-i386 as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc6-i386 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse",
+          "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse",
+          "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-97399",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-97399 in pkg:deb/ubuntu/libc-dev-bin as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc-dev-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-97399 in pkg:deb/ubuntu/libc6-dev as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc6-dev when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "No 32-bit binaries or i386-linux-gnu runtime present; 32-bit glibc is never loaded. This statement concerns CVE-2026-97399 in pkg:deb/ubuntu/libc6-i386 as a subcomponent of pkg:oci/rstudio-tidyverse?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Frstudio-tidyverse. It does not assert the status of pkg:deb/ubuntu/libc6-i386 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse",
+          "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse",
+          "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-i386-in-pkg-oci-rstudio-tidyverse-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Frstudio-tidyverse"
           ]
         }
       ]
