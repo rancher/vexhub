@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime",
     "tracking": {
-      "current_release_date": "2026-11-14T01:50:55Z",
+      "current_release_date": "2026-11-16T03:59:41Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-14T01:50:55Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-16T03:59:41Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -230,6 +235,17 @@
           "product_id": "pkg-deb-ubuntu-libbrotli1",
           "product_identification_helper": {
             "purl": "pkg:deb/ubuntu/libbrotli1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:pypi/filelock@3.32.2",
+        "product": {
+          "name": "pkg:pypi/filelock@3.32.2",
+          "product_id": "pkg-pypi-filelock-3-32-2",
+          "product_identification_helper": {
+            "purl": "pkg:pypi/filelock@3.32.2"
           }
         }
       },
@@ -450,6 +466,28 @@
           "product_id": "pkg-deb-ubuntu-diffutils",
           "product_identification_helper": {
             "purl": "pkg:deb/ubuntu/diffutils"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/libc-bin",
+        "product": {
+          "name": "pkg:deb/ubuntu/libc-bin",
+          "product_id": "pkg-deb-ubuntu-libc-bin",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libc-bin"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/libc6",
+        "product": {
+          "name": "pkg:deb/ubuntu/libc6",
+          "product_id": "pkg-deb-ubuntu-libc6",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libc6"
           }
         }
       },
@@ -778,6 +816,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:pypi/filelock@3.32.2 as a component of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime",
+          "product_id": "pkg-pypi-filelock-3-32-2-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+        },
+        "product_reference": "pkg-pypi-filelock-3-32-2",
+        "relates_to_product_reference": "pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:deb/ubuntu/libgssapi-krb5-2 as a component of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime",
           "product_id": "pkg-deb-ubuntu-libgssapi-krb5-2-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         },
@@ -953,6 +1000,24 @@
           "product_id": "pkg-deb-ubuntu-diffutils-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         },
         "product_reference": "pkg-deb-ubuntu-diffutils",
+        "relates_to_product_reference": "pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/libc-bin as a component of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime",
+          "product_id": "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+        },
+        "product_reference": "pkg-deb-ubuntu-libc-bin",
+        "relates_to_product_reference": "pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/libc6 as a component of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime",
+          "product_id": "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+        },
+        "product_reference": "pkg-deb-ubuntu-libc6",
         "relates_to_product_reference": "pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
       },
       {
@@ -23295,6 +23360,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-112910",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-pypi-filelock-3-32-2-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Affects WindowsFileLock only; linux image uses UnixFileLock. This statement concerns CVE-2026-112910 in pkg:pypi/filelock@3.32.2 as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:pypi/filelock@3.32.2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-pypi-filelock-3-32-2-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-pypi-filelock-3-32-2-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-11850",
       "flags": [
         {
@@ -30492,7 +30588,19 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         },
         {
@@ -30505,7 +30613,15 @@
       "notes": [
         {
           "category": "description",
+          "text": "Deprecated debug helpers ns_printrr/fp_nquery are not in the path used by the DNS resolver. This statement concerns CVE-2026-5435 in pkg:deb/ubuntu/libc-bin as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Development package shipping headers/static libs only; not loaded or executed by the container entrypoint.. This statement concerns CVE-2026-5435 in pkg:deb/ubuntu/libc-dev-bin as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc-dev-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Deprecated debug helpers ns_printrr/fp_nquery are not in the path used by the DNS resolver. This statement concerns CVE-2026-5435 in pkg:deb/ubuntu/libc6 as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc6 when used independently or in other products."
         },
         {
           "category": "description",
@@ -30514,7 +30630,9 @@
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
           "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
+          "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
           "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         ]
       },
@@ -30523,7 +30641,21 @@
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         },
         {
@@ -31429,7 +31561,19 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         },
         {
@@ -31442,7 +31586,15 @@
       "notes": [
         {
           "category": "description",
+          "text": "Deprecated debug helpers ns_printrr/fp_nquery are not in the path used by the DNS resolver. This statement concerns CVE-2026-6238 in pkg:deb/ubuntu/libc-bin as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Development package shipping headers/static libs only; not loaded or executed by the container entrypoint.. This statement concerns CVE-2026-6238 in pkg:deb/ubuntu/libc-dev-bin as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc-dev-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Deprecated debug helpers ns_printrr/fp_nquery are not in the path used by the DNS resolver. This statement concerns CVE-2026-6238 in pkg:deb/ubuntu/libc6 as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc6 when used independently or in other products."
         },
         {
           "category": "description",
@@ -31451,7 +31603,9 @@
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
           "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
+          "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
           "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         ]
       },
@@ -31460,7 +31614,21 @@
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         },
         {
@@ -32690,7 +32858,19 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         },
         {
@@ -32703,7 +32883,15 @@
       "notes": [
         {
           "category": "description",
+          "text": "Only affects AT_SECURE setuid/setgid programs with $ORIGIN in RPATH; entrypoint is not setuid. This statement concerns CVE-2026-86805 in pkg:deb/ubuntu/libc-bin as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-86805 in pkg:deb/ubuntu/libc-dev-bin as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc-dev-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Only affects AT_SECURE setuid/setgid programs with $ORIGIN in RPATH; entrypoint is not setuid. This statement concerns CVE-2026-86805 in pkg:deb/ubuntu/libc6 as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc6 when used independently or in other products."
         },
         {
           "category": "description",
@@ -32712,7 +32900,9 @@
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
           "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
+          "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
           "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         ]
       },
@@ -32721,7 +32911,21 @@
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         },
         {
@@ -33077,7 +33281,19 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         },
         {
@@ -33090,7 +33306,15 @@
       "notes": [
         {
           "category": "description",
+          "text": "Only affects AT_SECURE setuid/setgid programs with $ORIGIN in RPATH; entrypoint is not setuid. This statement concerns CVE-2026-95818 in pkg:deb/ubuntu/libc-bin as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-95818 in pkg:deb/ubuntu/libc-dev-bin as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc-dev-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Only affects AT_SECURE setuid/setgid programs with $ORIGIN in RPATH; entrypoint is not setuid. This statement concerns CVE-2026-95818 in pkg:deb/ubuntu/libc6 as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc6 when used independently or in other products."
         },
         {
           "category": "description",
@@ -33099,7 +33323,9 @@
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
           "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
+          "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
           "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         ]
       },
@@ -33108,7 +33334,21 @@
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         },
         {
@@ -33124,9 +33364,21 @@
       "cve": "CVE-2026-97399",
       "flags": [
         {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         },
         {
@@ -33139,7 +33391,15 @@
       "notes": [
         {
           "category": "description",
+          "text": "Bug is in the Power8-optimized strncasecmp ifunc variant; image is linux/amd64. This statement concerns CVE-2026-97399 in pkg:deb/ubuntu/libc-bin as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Build-time headers/static libs only; runtime always links the shared libc6 package. This statement concerns CVE-2026-97399 in pkg:deb/ubuntu/libc-dev-bin as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc-dev-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Bug is in the Power8-optimized strncasecmp ifunc variant; image is linux/amd64. This statement concerns CVE-2026-97399 in pkg:deb/ubuntu/libc6 as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libc6 when used independently or in other products."
         },
         {
           "category": "description",
@@ -33148,16 +33408,32 @@
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
           "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
+          "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
           "pkg-deb-ubuntu-libc6-dev-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         ]
       },
       "threats": [
         {
           "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-libc-dev-bin-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         },
         {

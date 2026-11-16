@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver",
     "tracking": {
-      "current_release_date": "2026-11-13T02:04:35Z",
+      "current_release_date": "2026-11-16T03:59:41Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -48,10 +48,15 @@
           "date": "2026-11-13T02:04:35Z",
           "number": "6",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-16T03:59:41Z",
+          "number": "7",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "6"
+      "version": "7"
     }
   },
   "product_tree": {
@@ -2045,6 +2050,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-redhat-krb5-libs-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-111760",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is the static Go model-registry binary; it never invokes git and performs no clones. This statement concerns CVE-2026-111760 in pkg:rpm/redhat/git-core as a subcomponent of pkg:oci/server?repository_url=ghcr.io%2Fkubeflow%2Fhub%2Fserver. It does not assert the status of pkg:rpm/redhat/git-core when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-git-core-in-pkg-oci-server-repository-url-ghcr-io-2Fkubeflow-2Fhub-2Fserver"
           ]
         }
       ]

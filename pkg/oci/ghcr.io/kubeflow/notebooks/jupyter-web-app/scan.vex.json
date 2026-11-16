@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app",
     "tracking": {
-      "current_release_date": "2026-11-14T01:50:55Z",
+      "current_release_date": "2026-11-16T03:59:41Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-14T01:50:55Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-16T03:59:41Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -65,6 +70,17 @@
           "product_id": "pkg-deb-debian-perl-base",
           "product_identification_helper": {
             "purl": "pkg:deb/debian/perl-base"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:pypi/urllib3@2.3.0",
+        "product": {
+          "name": "pkg:pypi/urllib3@2.3.0",
+          "product_id": "pkg-pypi-urllib3-2-3-0",
+          "product_identification_helper": {
+            "purl": "pkg:pypi/urllib3@2.3.0"
           }
         }
       },
@@ -342,6 +358,17 @@
             "purl": "pkg:deb/debian/libpam0g"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/debian/zlib1g",
+        "product": {
+          "name": "pkg:deb/debian/zlib1g",
+          "product_id": "pkg-deb-debian-zlib1g",
+          "product_identification_helper": {
+            "purl": "pkg:deb/debian/zlib1g"
+          }
+        }
       }
     ],
     "relationships": [
@@ -352,6 +379,15 @@
           "product_id": "pkg-deb-debian-perl-base-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
         },
         "product_reference": "pkg-deb-debian-perl-base",
+        "relates_to_product_reference": "pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:pypi/urllib3@2.3.0 as a component of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app",
+          "product_id": "pkg-pypi-urllib3-2-3-0-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+        },
+        "product_reference": "pkg-pypi-urllib3-2-3-0",
         "relates_to_product_reference": "pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
       },
       {
@@ -578,6 +614,15 @@
         },
         "product_reference": "pkg-deb-debian-libpam0g",
         "relates_to_product_reference": "pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/debian/zlib1g as a component of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app",
+          "product_id": "pkg-deb-debian-zlib1g-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+        },
+        "product_reference": "pkg-deb-debian-zlib1g",
+        "relates_to_product_reference": "pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
       }
     ]
   },
@@ -609,6 +654,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-perl-base-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-50182",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-pypi-urllib3-2-3-0-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only applies to urllib3 on Pyodide/Node.js runtimes; image runs CPython. This statement concerns CVE-2025-50182 in pkg:pypi/urllib3@2.3.0 as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app. It does not assert the status of pkg:pypi/urllib3@2.3.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-pypi-urllib3-2-3-0-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-pypi-urllib3-2-3-0-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
           ]
         }
       ]
@@ -3764,6 +3840,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-util-linux-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-76844",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-zlib1g-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "webpack-dev-middleware Node.js CVE misattributed to zlib1g; no Node/webpack component in image. This statement concerns CVE-2026-76844 in pkg:deb/debian/zlib1g as a subcomponent of pkg:oci/jupyter-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Fjupyter-web-app. It does not assert the status of pkg:deb/debian/zlib1g when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-zlib1g-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-zlib1g-in-pkg-oci-jupyter-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Fjupyter-web-app"
           ]
         }
       ]

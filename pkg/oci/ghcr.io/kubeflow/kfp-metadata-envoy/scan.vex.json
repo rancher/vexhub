@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io%2Fkubeflow%2Fkfp-metadata-envoy",
     "tracking": {
-      "current_release_date": "2026-11-06T16:58:56Z",
+      "current_release_date": "2026-11-16T03:59:41Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-11-06T16:58:56Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-16T03:59:41Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -170,6 +175,28 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:deb/ubuntu/libsystemd0",
+        "product": {
+          "name": "pkg:deb/ubuntu/libsystemd0",
+          "product_id": "pkg-deb-ubuntu-libsystemd0",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libsystemd0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/libudev1",
+        "product": {
+          "name": "pkg:deb/ubuntu/libudev1",
+          "product_id": "pkg-deb-ubuntu-libudev1",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libudev1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:deb/ubuntu/bsdutils",
         "product": {
           "name": "pkg:deb/ubuntu/bsdutils",
@@ -253,28 +280,6 @@
           "product_id": "pkg-deb-ubuntu-libp11-kit0",
           "product_identification_helper": {
             "purl": "pkg:deb/ubuntu/libp11-kit0"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:deb/ubuntu/libsystemd0",
-        "product": {
-          "name": "pkg:deb/ubuntu/libsystemd0",
-          "product_id": "pkg-deb-ubuntu-libsystemd0",
-          "product_identification_helper": {
-            "purl": "pkg:deb/ubuntu/libsystemd0"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:deb/ubuntu/libudev1",
-        "product": {
-          "name": "pkg:deb/ubuntu/libudev1",
-          "product_id": "pkg-deb-ubuntu-libudev1",
-          "product_identification_helper": {
-            "purl": "pkg:deb/ubuntu/libudev1"
           }
         }
       },
@@ -523,6 +528,24 @@
         },
         "product_reference": "pkg-deb-ubuntu-perl-base",
         "relates_to_product_reference": "pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-kubeflow-kfp-metadata-envoy"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/libsystemd0 as a component of pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io%2Fkubeflow%2Fkfp-metadata-envoy",
+          "product_id": "pkg-deb-ubuntu-libsystemd0-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+        },
+        "product_reference": "pkg-deb-ubuntu-libsystemd0",
+        "relates_to_product_reference": "pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/libudev1 as a component of pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io%2Fkubeflow%2Fkfp-metadata-envoy",
+          "product_id": "pkg-deb-ubuntu-libudev1-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+        },
+        "product_reference": "pkg-deb-ubuntu-libudev1",
+        "relates_to_product_reference": "pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
       },
       {
         "category": "default_component_of",
@@ -1046,6 +1069,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-perl-base-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-kubeflow-kfp-metadata-envoy"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-121876",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libsystemd0-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libudev1-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "systemd-gpt-auto-generator never runs; systemd is not PID 1 in this container image. This statement concerns CVE-2026-121876 in pkg:deb/ubuntu/libsystemd0 as a subcomponent of pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io%2Fkubeflow%2Fkfp-metadata-envoy. It does not assert the status of pkg:deb/ubuntu/libsystemd0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "systemd-gpt-auto-generator never runs; systemd is not PID 1 in this container image. This statement concerns CVE-2026-121876 in pkg:deb/ubuntu/libudev1 as a subcomponent of pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io%2Fkubeflow%2Fkfp-metadata-envoy. It does not assert the status of pkg:deb/ubuntu/libudev1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libsystemd0-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy",
+          "pkg-deb-ubuntu-libudev1-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libsystemd0-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libudev1-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
           ]
         }
       ]
@@ -3192,6 +3264,55 @@
       ]
     },
     {
+      "cve": "CVE-2026-86805",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only affects AT_SECURE setuid/setgid programs with $ORIGIN in RPATH; entrypoint is not setuid. This statement concerns CVE-2026-86805 in pkg:deb/ubuntu/libc-bin as a subcomponent of pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io%2Fkubeflow%2Fkfp-metadata-envoy. It does not assert the status of pkg:deb/ubuntu/libc-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Only affects AT_SECURE setuid/setgid programs with $ORIGIN in RPATH; entrypoint is not setuid. This statement concerns CVE-2026-86805 in pkg:deb/ubuntu/libc6 as a subcomponent of pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io%2Fkubeflow%2Fkfp-metadata-envoy. It does not assert the status of pkg:deb/ubuntu/libc6 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libc-bin-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy",
+          "pkg-deb-ubuntu-libc6-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-88647",
       "flags": [
         {
@@ -3422,6 +3543,104 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-libgnutls30-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95818",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Only affects AT_SECURE setuid/setgid programs with $ORIGIN in RPATH; entrypoint is not setuid. This statement concerns CVE-2026-95818 in pkg:deb/ubuntu/libc-bin as a subcomponent of pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io%2Fkubeflow%2Fkfp-metadata-envoy. It does not assert the status of pkg:deb/ubuntu/libc-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Only affects AT_SECURE setuid/setgid programs with $ORIGIN in RPATH; entrypoint is not setuid. This statement concerns CVE-2026-95818 in pkg:deb/ubuntu/libc6 as a subcomponent of pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io%2Fkubeflow%2Fkfp-metadata-envoy. It does not assert the status of pkg:deb/ubuntu/libc6 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libc-bin-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy",
+          "pkg-deb-ubuntu-libc6-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-97399",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Bug is in the Power8-optimized strncasecmp ifunc variant; image is linux/amd64. This statement concerns CVE-2026-97399 in pkg:deb/ubuntu/libc-bin as a subcomponent of pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io%2Fkubeflow%2Fkfp-metadata-envoy. It does not assert the status of pkg:deb/ubuntu/libc-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Bug is in the Power8-optimized strncasecmp ifunc variant; image is linux/amd64. This statement concerns CVE-2026-97399 in pkg:deb/ubuntu/libc6 as a subcomponent of pkg:oci/kfp-metadata-envoy?repository_url=ghcr.io%2Fkubeflow%2Fkfp-metadata-envoy. It does not assert the status of pkg:deb/ubuntu/libc6 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libc-bin-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy",
+          "pkg-deb-ubuntu-libc6-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc6-in-pkg-oci-kfp-metadata-envoy-repository-url-ghcr-io-2Fkubeflow-2Fkfp-metadata-envoy"
           ]
         }
       ]
