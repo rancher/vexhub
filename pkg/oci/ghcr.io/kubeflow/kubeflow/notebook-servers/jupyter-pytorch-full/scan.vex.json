@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full",
     "tracking": {
-      "current_release_date": "2026-11-16T03:59:41Z",
+      "current_release_date": "2026-11-16T20:41:25Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -53,10 +53,15 @@
           "date": "2026-11-16T03:59:41Z",
           "number": "7",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-16T20:41:25Z",
+          "number": "8",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "7"
+      "version": "8"
     }
   },
   "product_tree": {
@@ -580,6 +585,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:deb/ubuntu/libc-bin",
+        "product": {
+          "name": "pkg:deb/ubuntu/libc-bin",
+          "product_id": "pkg-deb-ubuntu-libc-bin",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/libc-bin"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:deb/ubuntu/libpolkit-agent-1-0",
         "product": {
           "name": "pkg:deb/ubuntu/libpolkit-agent-1-0",
@@ -630,17 +646,6 @@
           "product_id": "pkg-deb-ubuntu-polkitd",
           "product_identification_helper": {
             "purl": "pkg:deb/ubuntu/polkitd"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:deb/ubuntu/libc-bin",
-        "product": {
-          "name": "pkg:deb/ubuntu/libc-bin",
-          "product_id": "pkg-deb-ubuntu-libc-bin",
-          "product_identification_helper": {
-            "purl": "pkg:deb/ubuntu/libc-bin"
           }
         }
       },
@@ -1130,6 +1135,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:deb/ubuntu/libc-bin as a component of pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full",
+          "product_id": "pkg-deb-ubuntu-libc-bin-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+        },
+        "product_reference": "pkg-deb-ubuntu-libc-bin",
+        "relates_to_product_reference": "pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:deb/ubuntu/libpolkit-agent-1-0 as a component of pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-full",
           "product_id": "pkg-deb-ubuntu-libpolkit-agent-1-0-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-kubeflow-kubeflow-notebook-servers-jupyter-pytorch-full"
         },
@@ -1179,15 +1193,6 @@
           "product_id": "pkg-deb-ubuntu-libglib2-0-data-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
         },
         "product_reference": "pkg-deb-ubuntu-libglib2-0-data",
-        "relates_to_product_reference": "pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:deb/ubuntu/libc-bin as a component of pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full",
-          "product_id": "pkg-deb-ubuntu-libc-bin-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
-        },
-        "product_reference": "pkg-deb-ubuntu-libc-bin",
         "relates_to_product_reference": "pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
       },
       {
@@ -6713,6 +6718,55 @@
       ]
     },
     {
+      "cve": "CVE-2026-84243",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-locales-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-84243 in pkg:deb/ubuntu/libc-bin as a subcomponent of pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full. It does not assert the status of pkg:deb/ubuntu/libc-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "locales ships only locale-gen/update-locale/validlocale; not executed by the entrypoint. This statement concerns CVE-2026-84243 in pkg:deb/ubuntu/locales as a subcomponent of pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full. It does not assert the status of pkg:deb/ubuntu/locales when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libc-bin-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full",
+          "pkg-deb-ubuntu-locales-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-locales-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-85498",
       "flags": [
         {
@@ -6842,6 +6896,55 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-deb-ubuntu-libglib2-0-data-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-8674",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-locales-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-8674 in pkg:deb/ubuntu/libc-bin as a subcomponent of pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full. It does not assert the status of pkg:deb/ubuntu/libc-bin when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "locales ships only locale-gen/update-locale/validlocale; not executed by the entrypoint. This statement concerns CVE-2026-8674 in pkg:deb/ubuntu/locales as a subcomponent of pkg:oci/jupyter-pytorch-full?repository_url=ghcr.io%2Fkubeflow%2Fkubeflow%2Fnotebook-servers%2Fjupyter-pytorch-full. It does not assert the status of pkg:deb/ubuntu/locales when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libc-bin-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full",
+          "pkg-deb-ubuntu-locales-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libc-bin-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-locales-in-pkg-oci-jupyter-pytorch-full-repository-url-ghcr-io-2Fkubeflow-2Fkubeflow-2Fnotebook-servers-2Fjupyter-pytorch-full"
           ]
         }
       ]
