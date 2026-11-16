@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/suggestion-darts?repository_url=ghcr.io%2Fkubeflow%2Fkatib%2Fsuggestion-darts",
     "tracking": {
-      "current_release_date": "2026-11-14T01:50:55Z",
+      "current_release_date": "2026-11-16T20:41:25Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-14T01:50:55Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-16T20:41:25Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -725,6 +730,15 @@
           "product_id": "pkg-deb-debian-libsqlite3-0-in-pkg-oci-suggestion-darts-repository-url-ghcr-io-2Fkubeflow-2Fkatib-2Fsuggestion-darts"
         },
         "product_reference": "pkg-deb-debian-libsqlite3-0",
+        "relates_to_product_reference": "pkg-oci-suggestion-darts-repository-url-ghcr-io-2Fkubeflow-2Fkatib-2Fsuggestion-darts"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/debian/libgcc-s1 as a component of pkg:oci/suggestion-darts?repository_url=ghcr.io%2Fkubeflow%2Fkatib%2Fsuggestion-darts",
+          "product_id": "pkg-deb-debian-libgcc-s1-in-pkg-oci-suggestion-darts-repository-url-ghcr-io-2Fkubeflow-2Fkatib-2Fsuggestion-darts"
+        },
+        "product_reference": "pkg-deb-debian-libgcc-s1",
         "relates_to_product_reference": "pkg-oci-suggestion-darts-repository-url-ghcr-io-2Fkubeflow-2Fkatib-2Fsuggestion-darts"
       },
       {
@@ -1800,6 +1814,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-perl-base-in-pkg-oci-suggestion-darts-repository-url-ghcr-io-kubeflow-katib-suggestion-darts"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-125709",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-gcc-14-base-in-pkg-oci-suggestion-darts-repository-url-ghcr-io-2Fkubeflow-2Fkatib-2Fsuggestion-darts"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-libgcc-s1-in-pkg-oci-suggestion-darts-repository-url-ghcr-io-2Fkubeflow-2Fkatib-2Fsuggestion-darts"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "gcc base package ships only documentation files; vulnerable libstdc++ code not present. This statement concerns CVE-2026-125709 in pkg:deb/debian/gcc-14-base as a subcomponent of pkg:oci/suggestion-darts?repository_url=ghcr.io%2Fkubeflow%2Fkatib%2Fsuggestion-darts. It does not assert the status of pkg:deb/debian/gcc-14-base when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "libgcc-s1 ships only libgcc_s.so.1; vulnerable libstdc++ filebuf code not in this package. This statement concerns CVE-2026-125709 in pkg:deb/debian/libgcc-s1 as a subcomponent of pkg:oci/suggestion-darts?repository_url=ghcr.io%2Fkubeflow%2Fkatib%2Fsuggestion-darts. It does not assert the status of pkg:deb/debian/libgcc-s1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-gcc-14-base-in-pkg-oci-suggestion-darts-repository-url-ghcr-io-2Fkubeflow-2Fkatib-2Fsuggestion-darts",
+          "pkg-deb-debian-libgcc-s1-in-pkg-oci-suggestion-darts-repository-url-ghcr-io-2Fkubeflow-2Fkatib-2Fsuggestion-darts"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-gcc-14-base-in-pkg-oci-suggestion-darts-repository-url-ghcr-io-2Fkubeflow-2Fkatib-2Fsuggestion-darts"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-libgcc-s1-in-pkg-oci-suggestion-darts-repository-url-ghcr-io-2Fkubeflow-2Fkatib-2Fsuggestion-darts"
           ]
         }
       ]

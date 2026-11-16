@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app",
     "tracking": {
-      "current_release_date": "2026-11-16T03:59:41Z",
+      "current_release_date": "2026-11-16T20:41:25Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-16T03:59:41Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-16T20:41:25Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -389,6 +394,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:deb/debian/libc-bin",
+        "product": {
+          "name": "pkg:deb/debian/libc-bin",
+          "product_id": "pkg-deb-debian-libc-bin",
+          "product_identification_helper": {
+            "purl": "pkg:deb/debian/libc-bin"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:deb/debian/tar",
         "product": {
           "name": "pkg:deb/debian/tar",
@@ -417,17 +433,6 @@
           "product_id": "pkg-deb-debian-libbz2-1-0",
           "product_identification_helper": {
             "purl": "pkg:deb/debian/libbz2-1.0"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:deb/debian/libc-bin",
-        "product": {
-          "name": "pkg:deb/debian/libc-bin",
-          "product_id": "pkg-deb-debian-libc-bin",
-          "product_identification_helper": {
-            "purl": "pkg:deb/debian/libc-bin"
           }
         }
       },
@@ -794,6 +799,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:deb/debian/libc-bin as a component of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app",
+          "product_id": "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        },
+        "product_reference": "pkg-deb-debian-libc-bin",
+        "relates_to_product_reference": "pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:deb/debian/tar as a component of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app",
           "product_id": "pkg-deb-debian-tar-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
         },
@@ -816,15 +830,6 @@
           "product_id": "pkg-deb-debian-libbz2-1-0-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
         },
         "product_reference": "pkg-deb-debian-libbz2-1-0",
-        "relates_to_product_reference": "pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:deb/debian/libc-bin as a component of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app",
-          "product_id": "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
-        },
-        "product_reference": "pkg-deb-debian-libc-bin",
         "relates_to_product_reference": "pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
       },
       {
@@ -1930,6 +1935,55 @@
       ]
     },
     {
+      "cve": "CVE-2026-125709",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-gcc-14-base-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-libgcc-s1-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "gcc base package ships only documentation files; vulnerable libstdc++ code not present. This statement concerns CVE-2026-125709 in pkg:deb/debian/gcc-14-base as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/gcc-14-base when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "libgcc-s1 ships only libgcc_s.so.1; vulnerable libstdc++ filebuf code not in this package. This statement concerns CVE-2026-125709 in pkg:deb/debian/libgcc-s1 as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/libgcc-s1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-gcc-14-base-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app",
+          "pkg-deb-debian-libgcc-s1-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-gcc-14-base-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-debian-libgcc-s1-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-13221",
       "flags": [
         {
@@ -2363,6 +2417,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-18374",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-18374 in pkg:deb/debian/libc-bin as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/libc-bin when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-18477",
       "flags": [
         {
@@ -2518,6 +2603,68 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-perl-base-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-19499",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-19499 in pkg:deb/debian/libc-bin as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/libc-bin when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-19542",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-19542 in pkg:deb/debian/libc-bin as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/libc-bin when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
           ]
         }
       ]
@@ -4636,6 +4783,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-5450",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-5450 in pkg:deb/debian/libc-bin as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/libc-bin when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-54872",
       "flags": [
         {
@@ -4930,6 +5108,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-5928",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-5928 in pkg:deb/debian/libc-bin as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/libc-bin when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-6238",
       "flags": [
         {
@@ -5139,6 +5348,68 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-pypi-pip-25-0-1-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-6368",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-6368 in pkg:deb/debian/libc-bin as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/libc-bin when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-6791",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-6791 in pkg:deb/debian/libc-bin as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/libc-bin when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
           ]
         }
       ]
@@ -5657,6 +5928,37 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-deb-debian-zlib1g-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-77117",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-77117 in pkg:deb/debian/libc-bin as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/libc-bin when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
           ]
         }
       ]
@@ -6254,6 +6556,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-80489",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-80489 in pkg:deb/debian/libc-bin as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/libc-bin when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-82560",
       "flags": [
         {
@@ -6311,6 +6644,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-perl-base-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-84243",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-84243 in pkg:deb/debian/libc-bin as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/libc-bin when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
           ]
         }
       ]
@@ -6507,6 +6871,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-pypi-pip-25-0-1-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-8674",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libc-bin provides only CLI tools (iconv. This statement concerns CVE-2026-8674 in pkg:deb/debian/libc-bin as a subcomponent of pkg:oci/tensorboards-web-app?repository_url=ghcr.io%2Fkubeflow%2Fnotebooks%2Ftensorboards-web-app. It does not assert the status of pkg:deb/debian/libc-bin when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libc-bin-in-pkg-oci-tensorboards-web-app-repository-url-ghcr-io-2Fkubeflow-2Fnotebooks-2Ftensorboards-web-app"
           ]
         }
       ]
