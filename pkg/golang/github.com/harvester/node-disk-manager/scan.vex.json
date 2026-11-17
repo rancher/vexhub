@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/harvester/node-disk-manager",
     "tracking": {
-      "current_release_date": "2026-11-15T05:27:31Z",
+      "current_release_date": "2026-11-17T08:57:27Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -53,10 +53,15 @@
           "date": "2026-11-15T05:27:31Z",
           "number": "7",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-17T08:57:27Z",
+          "number": "8",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "7"
+      "version": "8"
     }
   },
   "product_tree": {
@@ -899,6 +904,28 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1",
+        "product": {
+          "name": "pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1",
+          "product_id": "pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2",
+        "product": {
+          "name": "pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2",
+          "product_id": "pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/github.com/harvester/node-disk-manager@v1.9.1",
         "product": {
           "name": "pkg:golang/github.com/harvester/node-disk-manager@v1.9.1",
@@ -1334,28 +1361,6 @@
           "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0",
           "product_identification_helper": {
             "purl": "pkg:golang/golang.org%2Fx%2Fnet@v0.60.0"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1",
-        "product": {
-          "name": "pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1",
-          "product_id": "pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
-          "product_identification_helper": {
-            "purl": "pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2",
-        "product": {
-          "name": "pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2",
-          "product_id": "pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
-          "product_identification_helper": {
-            "purl": "pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2"
           }
         }
       }
@@ -2485,6 +2490,24 @@
         },
         "product_reference": "pkg-golang-stdlib-v1-26-0",
         "relates_to_product_reference": "pkg-golang-github-com-harvester-node-disk-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.0 as a component of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1",
+          "product_id": "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-0",
+        "relates_to_product_reference": "pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.0 as a component of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2",
+          "product_id": "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-0",
+        "relates_to_product_reference": "pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
       },
       {
         "category": "default_component_of",
@@ -10977,6 +11000,18 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2"
           ]
         },
@@ -11158,6 +11193,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27142 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27142 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27142 in pkg:golang/stdlib@v1.24.6 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.5.2. It does not assert the status of pkg:golang/stdlib@v1.24.6 when used independently or in other products."
         },
         {
@@ -11265,6 +11308,8 @@
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc1",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc2",
@@ -11333,6 +11378,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -11554,6 +11613,18 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2"
           ]
         },
@@ -11735,6 +11806,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32282 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32282 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32282 in pkg:golang/stdlib@v1.24.6 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.5.2. It does not assert the status of pkg:golang/stdlib@v1.24.6 when used independently or in other products."
         },
         {
@@ -11842,6 +11921,8 @@
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc1",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc2",
@@ -11910,6 +11991,20 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -12131,6 +12226,18 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2"
           ]
         },
@@ -12312,6 +12419,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32288 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32288 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32288 in pkg:golang/stdlib@v1.24.6 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.5.2. It does not assert the status of pkg:golang/stdlib@v1.24.6 when used independently or in other products."
         },
         {
@@ -12419,6 +12534,8 @@
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc1",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc2",
@@ -12487,6 +12604,20 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -12708,6 +12839,18 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2"
           ]
         },
@@ -12889,6 +13032,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32289 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32289 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32289 in pkg:golang/stdlib@v1.24.6 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.5.2. It does not assert the status of pkg:golang/stdlib@v1.24.6 when used independently or in other products."
         },
         {
@@ -12996,6 +13147,8 @@
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc1",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc2",
@@ -13064,6 +13217,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -13291,6 +13458,18 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2"
           ]
         },
@@ -13482,6 +13661,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33811 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33811 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33811 in pkg:golang/stdlib@v1.24.6 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.5.2. It does not assert the status of pkg:golang/stdlib@v1.24.6 when used independently or in other products."
         },
         {
@@ -13594,6 +13781,8 @@
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc1",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc2",
@@ -13670,6 +13859,20 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -13935,6 +14138,18 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2"
           ]
         },
@@ -14126,6 +14341,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39820 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39820 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39820 in pkg:golang/stdlib@v1.24.6 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.5.2. It does not assert the status of pkg:golang/stdlib@v1.24.6 when used independently or in other products."
         },
         {
@@ -14238,6 +14461,8 @@
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc1",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc2",
@@ -14314,6 +14539,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -14536,6 +14775,18 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-1"
           ]
         },
@@ -14671,6 +14922,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.25.6 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.7.1. It does not assert the status of pkg:golang/stdlib@v1.25.6 when used independently or in other products."
         },
         {
@@ -14749,6 +15008,8 @@
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-1",
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-1-rc1",
           "pkg-golang-stdlib-v1-25-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-1-rc2",
@@ -14803,6 +15064,20 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-4-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -14976,6 +15251,18 @@
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -15172,6 +15459,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39823 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39823 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39823 in pkg:golang/stdlib@v1.24.6 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.5.2. It does not assert the status of pkg:golang/stdlib@v1.24.6 when used independently or in other products."
         },
         {
@@ -15284,6 +15579,8 @@
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc1",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc2",
@@ -15360,6 +15657,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -16369,6 +16680,18 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2"
           ]
         },
@@ -16560,6 +16883,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39825 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39825 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39825 in pkg:golang/stdlib@v1.24.6 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.5.2. It does not assert the status of pkg:golang/stdlib@v1.24.6 when used independently or in other products."
         },
         {
@@ -16672,6 +17003,8 @@
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc1",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc2",
@@ -16748,6 +17081,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -16982,6 +17329,18 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2"
           ]
         },
@@ -17173,6 +17532,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39826 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39826 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39826 in pkg:golang/stdlib@v1.24.6 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.5.2. It does not assert the status of pkg:golang/stdlib@v1.24.6 when used independently or in other products."
         },
         {
@@ -17285,6 +17652,8 @@
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc1",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc2",
@@ -17361,6 +17730,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -24609,6 +24992,18 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2"
           ]
         },
@@ -24800,6 +25195,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42499 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42499 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42499 in pkg:golang/stdlib@v1.24.6 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.5.2. It does not assert the status of pkg:golang/stdlib@v1.24.6 when used independently or in other products."
         },
         {
@@ -24912,6 +25315,8 @@
           "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-25-9-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2",
           "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc1",
           "pkg-golang-stdlib-v1-24-7-in-pkg-golang-github-com-harvester-node-disk-manager-v1-5-2-rc2",
@@ -24988,6 +25393,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -29948,6 +30367,18 @@
           ]
         },
         {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-x-net-v0-44-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-1"
@@ -30245,6 +30676,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/golang.org/x/net@v0.44.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.7.1. It does not assert the status of pkg:golang/golang.org/x/net@v0.44.0 when used independently or in other products."
         },
         {
@@ -30423,6 +30862,8 @@
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-golang-org-x-net-v0-44-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-1",
           "pkg-golang-golang-org-x-net-v0-44-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-1-rc1",
           "pkg-golang-golang-org-x-net-v0-44-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-1-rc2",
@@ -30529,6 +30970,20 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -32420,6 +32875,18 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-node-disk-manager-v1-8-2"
           ]
         },
@@ -32499,6 +32966,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.8.2. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
         },
         {
@@ -32543,6 +33018,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-node-disk-manager-v1-8-2",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-node-disk-manager-v1-9-0",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-node-disk-manager-v1-9-0-rc7",
@@ -32575,6 +33052,20 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -32679,6 +33170,18 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-25-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-2"
           ]
         },
@@ -32768,6 +33271,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56858 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56858 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56858 in pkg:golang/stdlib@v1.25.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.7.2. It does not assert the status of pkg:golang/stdlib@v1.25.0 when used independently or in other products."
         },
         {
@@ -32817,6 +33328,8 @@
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-25-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-2",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-2",
           "pkg-golang-stdlib-v1-25-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-3",
@@ -32857,6 +33370,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -34916,6 +35443,18 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-2"
           ]
         },
@@ -35017,6 +35556,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.25.12 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.7.2. It does not assert the status of pkg:golang/stdlib@v1.25.12 when used independently or in other products."
         },
         {
@@ -35074,6 +35621,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-2",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-3",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-3-rc1",
@@ -35116,6 +35665,20 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -35241,6 +35804,18 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-2"
           ]
         },
@@ -35342,6 +35917,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94448 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94448 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-94448 in pkg:golang/stdlib@v1.25.12 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.7.2. It does not assert the status of pkg:golang/stdlib@v1.25.12 when used independently or in other products."
         },
         {
@@ -35399,6 +35982,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-2",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-3",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-3-rc1",
@@ -35441,6 +36026,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
@@ -35566,6 +36165,18 @@
         {
           "label": "vulnerable_code_not_present",
           "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
             "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-2"
           ]
         },
@@ -35667,6 +36278,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97030 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97030 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.10.0-rc2. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97030 in pkg:golang/stdlib@v1.25.12 as a subcomponent of pkg:golang/github.com/harvester/node-disk-manager@v1.7.2. It does not assert the status of pkg:golang/stdlib@v1.25.12 when used independently or in other products."
         },
         {
@@ -35724,6 +36343,8 @@
           "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-harvester-node-disk-manager",
           "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-node-disk-manager",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-2",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-3",
           "pkg-golang-stdlib-v1-25-12-in-pkg-golang-github-com-harvester-node-disk-manager-v1-7-3-rc1",
@@ -35766,6 +36387,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-8-in-pkg-golang-github-com-harvester-node-disk-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-harvester-node-disk-manager-v1-10-0-rc2"
           ]
         },
         {
