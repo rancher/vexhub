@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend",
     "tracking": {
-      "current_release_date": "2026-11-08T20:49:39Z",
+      "current_release_date": "2026-11-18T10:52:39Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,14 +28,52 @@
           "date": "2026-11-08T20:49:39Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-18T10:52:39Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend",
+        "product": {
+          "name": "pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend",
+          "product_id": "pkg-oci-kfp-frontend-repository-url-ghcr-io-2Fkubeflow-2Fkfp-frontend",
+          "product_identification_helper": {
+            "purl": "pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:npm/picomatch@2.3.2",
+        "product": {
+          "name": "pkg:npm/picomatch@2.3.2",
+          "product_id": "pkg-npm-picomatch-2-3-2",
+          "product_identification_helper": {
+            "purl": "pkg:npm/picomatch@2.3.2"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:npm/picomatch@4.0.7",
+        "product": {
+          "name": "pkg:npm/picomatch@4.0.7",
+          "product_id": "pkg-npm-picomatch-4-0-7",
+          "product_identification_helper": {
+            "purl": "pkg:npm/picomatch@4.0.7"
+          }
+        }
+      },
       {
         "category": "product_name",
         "name": "pkg:oci/kfp-frontend?repository_url=ghcr.io/kubeflow/kfp-frontend",
@@ -55,17 +93,6 @@
           "product_id": "pkg-apk-alpine-zlib",
           "product_identification_helper": {
             "purl": "pkg:apk/alpine/zlib"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend",
-        "product": {
-          "name": "pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend",
-          "product_id": "pkg-oci-kfp-frontend-repository-url-ghcr-io-2Fkubeflow-2Fkfp-frontend",
-          "product_identification_helper": {
-            "purl": "pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend"
           }
         }
       },
@@ -104,6 +131,24 @@
       }
     ],
     "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:npm/picomatch@2.3.2 as a component of pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend",
+          "product_id": "pkg-npm-picomatch-2-3-2-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-2Fkubeflow-2Fkfp-frontend"
+        },
+        "product_reference": "pkg-npm-picomatch-2-3-2",
+        "relates_to_product_reference": "pkg-oci-kfp-frontend-repository-url-ghcr-io-2Fkubeflow-2Fkfp-frontend"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:npm/picomatch@4.0.7 as a component of pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend",
+          "product_id": "pkg-npm-picomatch-4-0-7-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-2Fkubeflow-2Fkfp-frontend"
+        },
+        "product_reference": "pkg-npm-picomatch-4-0-7",
+        "relates_to_product_reference": "pkg-oci-kfp-frontend-repository-url-ghcr-io-2Fkubeflow-2Fkfp-frontend"
+      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -152,6 +197,55 @@
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-112366",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-picomatch-2-3-2-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-2Fkubeflow-2Fkfp-frontend"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-picomatch-4-0-7-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-2Fkubeflow-2Fkfp-frontend"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "picomatch is only reachable via build tooling and unused proxy pathFilter globs; not in the server runtime path. This statement concerns CVE-2026-112366 in pkg:npm/picomatch@2.3.2 as a subcomponent of pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend. It does not assert the status of pkg:npm/picomatch@2.3.2 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "picomatch is only reachable via build tooling and unused proxy pathFilter globs; not in the server runtime path. This statement concerns CVE-2026-112366 in pkg:npm/picomatch@4.0.7 as a subcomponent of pkg:oci/kfp-frontend?repository_url=ghcr.io%2Fkubeflow%2Fkfp-frontend. It does not assert the status of pkg:npm/picomatch@4.0.7 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-npm-picomatch-2-3-2-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-2Fkubeflow-2Fkfp-frontend",
+          "pkg-npm-picomatch-4-0-7-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-2Fkubeflow-2Fkfp-frontend"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-picomatch-2-3-2-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-2Fkubeflow-2Fkfp-frontend"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-npm-picomatch-4-0-7-in-pkg-oci-kfp-frontend-repository-url-ghcr-io-2Fkubeflow-2Fkfp-frontend"
+          ]
+        }
+      ]
+    },
     {
       "cve": "CVE-2026-22184",
       "flags": [
