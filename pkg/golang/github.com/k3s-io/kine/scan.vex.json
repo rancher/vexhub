@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/k3s-io/kine",
     "tracking": {
-      "current_release_date": "2026-11-09T00:16:48Z",
+      "current_release_date": "2026-11-18T07:01:38Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-09T00:16:48Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-18T07:01:38Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -824,6 +829,17 @@
           "product_id": "pkg-golang-github-com-k3s-io-kine-v0-17-4",
           "product_identification_helper": {
             "purl": "pkg:golang/github.com/k3s-io/kine@v0.17.4"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/k3s-io/kine@v0.17.5",
+        "product": {
+          "name": "pkg:golang/github.com/k3s-io/kine@v0.17.5",
+          "product_id": "pkg-golang-github-com-k3s-io-kine-v0-17-5",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/k3s-io/kine@v0.17.5"
           }
         }
       },
@@ -2537,6 +2553,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.5 as a component of pkg:golang/github.com/k3s-io/kine@v0.17.5",
+          "product_id": "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-5",
+        "relates_to_product_reference": "pkg-golang-github-com-k3s-io-kine-v0-17-5"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/golang.org%2Fx%2Fcrypto@v0.54.0 as a component of pkg:golang/github.com/k3s-io/kine",
           "product_id": "pkg-golang-golang-org-2Fx-2Fcrypto-v0-54-0-in-pkg-golang-github-com-k3s-io-kine"
         },
@@ -3001,6 +3026,15 @@
         },
         "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0",
         "relates_to_product_reference": "pkg-golang-github-com-k3s-io-kine-v0-17-4"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Fnet@v0.61.0 as a component of pkg:golang/github.com/k3s-io/kine@v0.17.5",
+          "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0",
+        "relates_to_product_reference": "pkg-golang-github-com-k3s-io-kine-v0-17-5"
       },
       {
         "category": "default_component_of",
@@ -15663,6 +15697,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
+          ]
         }
       ],
       "ids": [
@@ -15747,6 +15787,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/github.com/k3s-io/kine@v0.17.4. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/github.com/k3s-io/kine@v0.17.5. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -15769,7 +15813,8 @@
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-1",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-2",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-3",
-          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-4",
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
         ]
       },
       "threats": [
@@ -15904,6 +15949,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
           ]
         }
       ]
@@ -16416,6 +16468,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
+          ]
         }
       ],
       "ids": [
@@ -16460,6 +16518,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/github.com/k3s-io/kine@v0.17.4. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/github.com/k3s-io/kine@v0.17.5. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -16472,7 +16534,8 @@
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-1",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-2",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-3",
-          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-4",
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
         ]
       },
       "threats": [
@@ -16537,6 +16600,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
           ]
         }
       ]
@@ -17165,6 +17235,12 @@
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
+          ]
         }
       ],
       "ids": [
@@ -17221,6 +17297,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.61.0 as a subcomponent of pkg:golang/github.com/k3s-io/kine@v0.17.4. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.61.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78661 in pkg:golang/golang.org%2Fx%2Fnet@v0.61.0 as a subcomponent of pkg:golang/github.com/k3s-io/kine@v0.17.5. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.61.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -17236,7 +17316,8 @@
           "pkg-golang-golang-org-2Fx-2Fnet-v0-58-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-1",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-59-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-2",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-3",
-          "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-4",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
         ]
       },
       "threats": [
@@ -17322,6 +17403,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
           ]
         }
       ]
@@ -17653,6 +17741,12 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
+          ]
         }
       ],
       "ids": [
@@ -17697,6 +17791,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/github.com/k3s-io/kine@v0.17.4. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.5 as a subcomponent of pkg:golang/github.com/k3s-io/kine@v0.17.5. It does not assert the status of pkg:golang/stdlib@v1.26.5 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -17709,7 +17807,8 @@
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-1",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-2",
           "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-3",
-          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-4",
+          "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
         ]
       },
       "threats": [
@@ -17774,6 +17873,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-5-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
           ]
         }
       ]
@@ -17983,6 +18089,12 @@
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
+          ]
         }
       ],
       "ids": [
@@ -18039,6 +18151,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.61.0 as a subcomponent of pkg:golang/github.com/k3s-io/kine@v0.17.4. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.61.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-97045 in pkg:golang/golang.org%2Fx%2Fnet@v0.61.0 as a subcomponent of pkg:golang/github.com/k3s-io/kine@v0.17.5. It does not assert the status of pkg:golang/golang.org%2Fx%2Fnet@v0.61.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -18054,7 +18170,8 @@
           "pkg-golang-golang-org-2Fx-2Fnet-v0-58-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-1",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-59-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-2",
           "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-3",
-          "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-4",
+          "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
         ]
       },
       "threats": [
@@ -18140,6 +18257,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-4"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Fnet-v0-61-0-in-pkg-golang-github-com-k3s-io-kine-v0-17-5"
           ]
         }
       ]
