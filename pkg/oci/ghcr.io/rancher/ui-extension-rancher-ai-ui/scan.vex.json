@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
     "tracking": {
-      "current_release_date": "2026-11-05T17:40:08Z",
+      "current_release_date": "2026-11-19T13:10:08Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -48,10 +48,15 @@
           "date": "2026-11-05T17:40:08Z",
           "number": "6",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-19T13:10:08Z",
+          "number": "7",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "6"
+      "version": "7"
     }
   },
   "product_tree": {
@@ -748,6 +753,17 @@
             "purl": "pkg:rpm/suse/libsasl2-3"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libzck1",
+        "product": {
+          "name": "pkg:rpm/suse/libzck1",
+          "product_id": "pkg-rpm-suse-libzck1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libzck1"
+          }
+        }
       }
     ],
     "relationships": [
@@ -1307,6 +1323,15 @@
           "product_id": "pkg-rpm-suse-libsasl2-3-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
         },
         "product_reference": "pkg-rpm-suse-libsasl2-3",
+        "relates_to_product_reference": "pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libzck1 as a component of pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui",
+          "product_id": "pkg-rpm-suse-libzck1-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+        },
+        "product_reference": "pkg-rpm-suse-libzck1",
         "relates_to_product_reference": "pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
       }
     ]
@@ -4890,6 +4915,114 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libcurl4-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libzck1-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5138-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libzck only used by libzypp package manager; not reachable from nginx entrypoint. This statement concerns SUSE-SU-2026:5138-1 in pkg:rpm/suse/libzck1 as a subcomponent of pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui. It does not assert the status of pkg:rpm/suse/libzck1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libzck1-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libzck1-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-tar-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5160-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "tar is an incidental CLI never invoked by the nginx entrypoint. This statement concerns SUSE-SU-2026:5160-1 in pkg:rpm/suse/tar as a subcomponent of pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui. It does not assert the status of pkg:rpm/suse/tar when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-tar-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-tar-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libtiff5-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5221-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libtiff only linked by libgd; nginx entrypoint serves static files and never loads it. This statement concerns SUSE-SU-2026:5221-1 in pkg:rpm/suse/libtiff5 as a subcomponent of pkg:oci/ui-extension-rancher-ai-ui?repository_url=ghcr.io%2Francher%2Fui-extension-rancher-ai-ui. It does not assert the status of pkg:rpm/suse/libtiff5 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libtiff5-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libtiff5-in-pkg-oci-ui-extension-rancher-ai-ui-repository-url-ghcr-io-2Francher-2Fui-extension-rancher-ai-ui"
           ]
         }
       ]
