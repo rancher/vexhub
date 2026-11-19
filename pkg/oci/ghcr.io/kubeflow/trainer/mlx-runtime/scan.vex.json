@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime",
     "tracking": {
-      "current_release_date": "2026-11-19T00:29:26Z",
+      "current_release_date": "2026-11-19T09:59:14Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -68,10 +68,15 @@
           "date": "2026-11-19T00:29:26Z",
           "number": "10",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-19T09:59:14Z",
+          "number": "11",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "10"
+      "version": "11"
     }
   },
   "product_tree": {
@@ -634,6 +639,17 @@
           "product_id": "pkg-deb-ubuntu-libssl3",
           "product_identification_helper": {
             "purl": "pkg:deb/ubuntu/libssl3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/openssl",
+        "product": {
+          "name": "pkg:deb/ubuntu/openssl",
+          "product_id": "pkg-deb-ubuntu-openssl",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/openssl"
           }
         }
       },
@@ -1417,6 +1433,15 @@
           "product_id": "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         },
         "product_reference": "pkg-deb-ubuntu-libssl3",
+        "relates_to_product_reference": "pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/openssl as a component of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime",
+          "product_id": "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+        },
+        "product_reference": "pkg-deb-ubuntu-openssl",
         "relates_to_product_reference": "pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
       },
       {
@@ -33757,17 +33782,28 @@
           "product_ids": [
             "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
         }
       ],
       "notes": [
         {
           "category": "description",
           "text": "CMS/CMP/PKCS#7 APIs are never invoked; image only uses TLS for transport security. This statement concerns CVE-2026-34182 in pkg:deb/ubuntu/libssl3 as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libssl3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CMS is not used by this image; only TLS client/server record paths are exercised. This statement concerns CVE-2026-34182 in pkg:deb/ubuntu/openssl as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/openssl when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
+          "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         ]
       },
       "threats": [
@@ -33776,6 +33812,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         }
       ]
@@ -39013,17 +39056,28 @@
           "product_ids": [
             "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
         }
       ],
       "notes": [
         {
           "category": "description",
           "text": "AES-OCB and AES-GCM-SIV ciphers are not negotiated or used by this image. This statement concerns CVE-2026-45445 in pkg:deb/ubuntu/libssl3 as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libssl3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "AES-OCB is not used by this image; only TLS client/server record paths are exercised. This statement concerns CVE-2026-45445 in pkg:deb/ubuntu/openssl as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/openssl when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
+          "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         ]
       },
       "threats": [
@@ -39032,6 +39086,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         }
       ]
@@ -39044,17 +39105,28 @@
           "product_ids": [
             "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
         }
       ],
       "notes": [
         {
           "category": "description",
           "text": "CMS/CMP/PKCS#7 APIs are never invoked; image only uses TLS for transport security. This statement concerns CVE-2026-45447 in pkg:deb/ubuntu/libssl3 as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libssl3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "PKCS#7/S-MIME is not used by this image; only TLS client/server record paths are exercised. This statement concerns CVE-2026-45447 in pkg:deb/ubuntu/openssl as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/openssl when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
+          "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         ]
       },
       "threats": [
@@ -39063,6 +39135,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         }
       ]
@@ -51118,17 +51197,28 @@
           "product_ids": [
             "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
         }
       ],
       "notes": [
         {
           "category": "description",
           "text": "CMS/CMP/PKCS#7 APIs are never invoked; image only uses TLS for transport security. This statement concerns CVE-2026-63072 in pkg:deb/ubuntu/libssl3 as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libssl3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CMS is not used by this image; only TLS client/server record paths are exercised. This statement concerns CVE-2026-63072 in pkg:deb/ubuntu/openssl as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/openssl when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
+          "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         ]
       },
       "threats": [
@@ -51137,6 +51227,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         }
       ]
@@ -51149,17 +51246,28 @@
           "product_ids": [
             "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
         }
       ],
       "notes": [
         {
           "category": "description",
           "text": "CMS/CMP/PKCS#7 APIs are never invoked; image only uses TLS for transport security. This statement concerns CVE-2026-63076 in pkg:deb/ubuntu/libssl3 as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libssl3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CMP is not used by this image; only TLS client/server record paths are exercised. This statement concerns CVE-2026-63076 in pkg:deb/ubuntu/openssl as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/openssl when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
+          "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         ]
       },
       "threats": [
@@ -51168,6 +51276,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         }
       ]
@@ -80180,17 +80295,28 @@
           "product_ids": [
             "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
         }
       ],
       "notes": [
         {
           "category": "description",
           "text": "No DTLS/UDP TLS endpoint in the image; only TLS over TCP is used. This statement concerns CVE-2026-84782 in pkg:deb/ubuntu/libssl3 as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/libssl3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "DTLS is not used by this image; only TLS client/server record paths are exercised. This statement concerns CVE-2026-84782 in pkg:deb/ubuntu/openssl as a subcomponent of pkg:oci/mlx-runtime?repository_url=ghcr.io%2Fkubeflow%2Ftrainer%2Fmlx-runtime. It does not assert the status of pkg:deb/ubuntu/openssl when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime",
+          "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
         ]
       },
       "threats": [
@@ -80199,6 +80325,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-libssl3-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-openssl-in-pkg-oci-mlx-runtime-repository-url-ghcr-io-2Fkubeflow-2Ftrainer-2Fmlx-runtime"
           ]
         }
       ]
