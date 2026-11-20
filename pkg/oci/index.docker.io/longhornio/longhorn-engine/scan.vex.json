@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/longhorn-engine?repository_url=index.docker.io%2Flonghornio%2Flonghorn-engine",
     "tracking": {
-      "current_release_date": "2026-11-20T15:49:03Z",
+      "current_release_date": "2026-11-20T19:43:23Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -53,10 +53,15 @@
           "date": "2026-11-20T15:49:03Z",
           "number": "7",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-20T19:43:23Z",
+          "number": "8",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "7"
+      "version": "8"
     }
   },
   "product_tree": {
@@ -624,6 +629,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:rpm/suse/qemu-pr-helper",
+        "product": {
+          "name": "pkg:rpm/suse/qemu-pr-helper",
+          "product_id": "pkg-rpm-suse-qemu-pr-helper",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/qemu-pr-helper"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:rpm/suse/libopenssl1_1",
         "product": {
           "name": "pkg:rpm/suse/libopenssl1_1",
@@ -740,6 +756,28 @@
           "product_id": "pkg-rpm-suse-curl",
           "product_identification_helper": {
             "purl": "pkg:rpm/suse/curl"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/qemu-img",
+        "product": {
+          "name": "pkg:rpm/suse/qemu-img",
+          "product_id": "pkg-rpm-suse-qemu-img",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/qemu-img"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/qemu-tools",
+        "product": {
+          "name": "pkg:rpm/suse/qemu-tools",
+          "product_id": "pkg-rpm-suse-qemu-tools",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/qemu-tools"
           }
         }
       },
@@ -1372,6 +1410,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:rpm/suse/qemu-pr-helper as a component of pkg:oci/longhorn-engine?repository_url=index.docker.io%2Flonghornio%2Flonghorn-engine",
+          "product_id": "pkg-rpm-suse-qemu-pr-helper-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+        },
+        "product_reference": "pkg-rpm-suse-qemu-pr-helper",
+        "relates_to_product_reference": "pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:rpm/suse/libopenssl1_1 as a component of pkg:oci/longhorn-engine?repository_url=index.docker.io%2Flonghornio%2Flonghorn-engine",
           "product_id": "pkg-rpm-suse-libopenssl1-1-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
         },
@@ -1475,6 +1522,24 @@
           "product_id": "pkg-rpm-suse-curl-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
         },
         "product_reference": "pkg-rpm-suse-curl",
+        "relates_to_product_reference": "pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/qemu-img as a component of pkg:oci/longhorn-engine?repository_url=index.docker.io%2Flonghornio%2Flonghorn-engine",
+          "product_id": "pkg-rpm-suse-qemu-img-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+        },
+        "product_reference": "pkg-rpm-suse-qemu-img",
+        "relates_to_product_reference": "pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/qemu-tools as a component of pkg:oci/longhorn-engine?repository_url=index.docker.io%2Flonghornio%2Flonghorn-engine",
+          "product_id": "pkg-rpm-suse-qemu-tools-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+        },
+        "product_reference": "pkg-rpm-suse-qemu-tools",
         "relates_to_product_reference": "pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
       },
       {
@@ -4869,6 +4934,12 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-rpm-suse-qemu-pr-helper-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-rpm-suse-qemu-vmsr-helper-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-longhornio-longhorn-engine"
           ]
         }
@@ -4882,15 +4953,27 @@
       "notes": [
         {
           "category": "description",
+          "text": "qemu-pr-helper is never executed by any Longhorn process; no SCSI persistent reservation helper is started. This statement concerns SUSE-SU-2026:2385-1 in pkg:rpm/suse/qemu-pr-helper as a subcomponent of pkg:oci/longhorn-engine?repository_url=index.docker.io%2Flonghornio%2Flonghorn-engine. It does not assert the status of pkg:rpm/suse/qemu-pr-helper when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Longhorn block storage engine does not run VMs; qemu-vmsr-helper AMD MSR daemon is never invoked at runtime. This statement concerns SUSE-SU-2026:2385-1 in pkg:rpm/suse/qemu-vmsr-helper as a subcomponent of pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine. It does not assert the status of pkg:rpm/suse/qemu-vmsr-helper when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-rpm-suse-qemu-pr-helper-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine",
           "pkg-rpm-suse-qemu-vmsr-helper-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-longhornio-longhorn-engine"
         ]
       },
       "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-qemu-pr-helper-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+          ]
+        },
         {
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
@@ -5463,6 +5546,24 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-rpm-suse-qemu-img-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-qemu-pr-helper-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-qemu-tools-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-rpm-suse-qemu-vmsr-helper-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-longhornio-longhorn-engine"
           ]
         }
@@ -5476,15 +5577,51 @@
       "notes": [
         {
           "category": "description",
+          "text": "CVEs require a running QEMU guest with emulated devices; only offline qemu image tooling is used. This statement concerns SUSE-SU-2026:3038-1 in pkg:rpm/suse/qemu-img as a subcomponent of pkg:oci/longhorn-engine?repository_url=index.docker.io%2Flonghornio%2Flonghorn-engine. It does not assert the status of pkg:rpm/suse/qemu-img when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CVEs require a running QEMU guest with emulated devices; qemu-pr-helper is never executed. This statement concerns SUSE-SU-2026:3038-1 in pkg:rpm/suse/qemu-pr-helper as a subcomponent of pkg:oci/longhorn-engine?repository_url=index.docker.io%2Flonghornio%2Flonghorn-engine. It does not assert the status of pkg:rpm/suse/qemu-pr-helper when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CVEs require a running QEMU guest with emulated devices; only offline qemu image tooling is used. This statement concerns SUSE-SU-2026:3038-1 in pkg:rpm/suse/qemu-tools as a subcomponent of pkg:oci/longhorn-engine?repository_url=index.docker.io%2Flonghornio%2Flonghorn-engine. It does not assert the status of pkg:rpm/suse/qemu-tools when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "qemu-vmsr-helper is a QEMU VM save/restore helper; longhorn-engine is a Go iSCSI/block storage engine. This statement concerns SUSE-SU-2026:3038-1 in pkg:rpm/suse/qemu-vmsr-helper as a subcomponent of pkg:oci/longhorn-engine?repository_url=index.docker.io/longhornio/longhorn-engine. It does not assert the status of pkg:rpm/suse/qemu-vmsr-helper when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-rpm-suse-qemu-img-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine",
+          "pkg-rpm-suse-qemu-pr-helper-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine",
+          "pkg-rpm-suse-qemu-tools-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine",
           "pkg-rpm-suse-qemu-vmsr-helper-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-longhornio-longhorn-engine"
         ]
       },
       "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-qemu-img-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-qemu-pr-helper-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-qemu-tools-in-pkg-oci-longhorn-engine-repository-url-index-docker-io-2Flonghornio-2Flonghorn-engine"
+          ]
+        },
         {
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",

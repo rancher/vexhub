@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/backing-image-manager?repository_url=registry.rancher.com%2Flonghornio%2Fbacking-image-manager",
     "tracking": {
-      "current_release_date": "2026-11-20T15:49:03Z",
+      "current_release_date": "2026-11-20T19:43:23Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -68,10 +68,15 @@
           "date": "2026-11-20T15:49:03Z",
           "number": "10",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-20T19:43:23Z",
+          "number": "11",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "10"
+      "version": "11"
     }
   },
   "product_tree": {
@@ -788,6 +793,28 @@
           "product_id": "pkg-rpm-suse-curl",
           "product_identification_helper": {
             "purl": "pkg:rpm/suse/curl"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/qemu-img",
+        "product": {
+          "name": "pkg:rpm/suse/qemu-img",
+          "product_id": "pkg-rpm-suse-qemu-img",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/qemu-img"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/qemu-tools",
+        "product": {
+          "name": "pkg:rpm/suse/qemu-tools",
+          "product_id": "pkg-rpm-suse-qemu-tools",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/qemu-tools"
           }
         }
       },
@@ -1605,6 +1632,24 @@
           "product_id": "pkg-rpm-suse-curl-in-pkg-oci-backing-image-manager-repository-url-registry-rancher-com-2Flonghornio-2Fbacking-image-manager"
         },
         "product_reference": "pkg-rpm-suse-curl",
+        "relates_to_product_reference": "pkg-oci-backing-image-manager-repository-url-registry-rancher-com-2Flonghornio-2Fbacking-image-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/qemu-img as a component of pkg:oci/backing-image-manager?repository_url=registry.rancher.com%2Flonghornio%2Fbacking-image-manager",
+          "product_id": "pkg-rpm-suse-qemu-img-in-pkg-oci-backing-image-manager-repository-url-registry-rancher-com-2Flonghornio-2Fbacking-image-manager"
+        },
+        "product_reference": "pkg-rpm-suse-qemu-img",
+        "relates_to_product_reference": "pkg-oci-backing-image-manager-repository-url-registry-rancher-com-2Flonghornio-2Fbacking-image-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/qemu-tools as a component of pkg:oci/backing-image-manager?repository_url=registry.rancher.com%2Flonghornio%2Fbacking-image-manager",
+          "product_id": "pkg-rpm-suse-qemu-tools-in-pkg-oci-backing-image-manager-repository-url-registry-rancher-com-2Flonghornio-2Fbacking-image-manager"
+        },
+        "product_reference": "pkg-rpm-suse-qemu-tools",
         "relates_to_product_reference": "pkg-oci-backing-image-manager-repository-url-registry-rancher-com-2Flonghornio-2Fbacking-image-manager"
       },
       {
@@ -5674,6 +5719,18 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-rpm-suse-qemu-img-in-pkg-oci-backing-image-manager-repository-url-registry-rancher-com-2Flonghornio-2Fbacking-image-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-qemu-tools-in-pkg-oci-backing-image-manager-repository-url-registry-rancher-com-2Flonghornio-2Fbacking-image-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-rpm-suse-qemu-pr-helper-in-pkg-oci-backing-image-manager-repository-url-registry-rancher-com-longhornio-backing-image-manager"
           ]
         },
@@ -5693,6 +5750,14 @@
       "notes": [
         {
           "category": "description",
+          "text": "CVEs require a running QEMU guest with emulated devices; only offline qemu image tooling is used. This statement concerns SUSE-SU-2026:3038-1 in pkg:rpm/suse/qemu-img as a subcomponent of pkg:oci/backing-image-manager?repository_url=registry.rancher.com%2Flonghornio%2Fbacking-image-manager. It does not assert the status of pkg:rpm/suse/qemu-img when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CVEs require a running QEMU guest with emulated devices; only offline qemu image tooling is used. This statement concerns SUSE-SU-2026:3038-1 in pkg:rpm/suse/qemu-tools as a subcomponent of pkg:oci/backing-image-manager?repository_url=registry.rancher.com%2Flonghornio%2Fbacking-image-manager. It does not assert the status of pkg:rpm/suse/qemu-tools when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "qemu-pr-helper is a SCSI persistent reservation helper; backing-image-manager Go binary does not invoke it. This statement concerns SUSE-SU-2026:3038-1 in pkg:rpm/suse/qemu-pr-helper as a subcomponent of pkg:oci/backing-image-manager?repository_url=registry.rancher.com/longhornio/backing-image-manager. It does not assert the status of pkg:rpm/suse/qemu-pr-helper when used independently or in other products."
         },
         {
@@ -5702,11 +5767,27 @@
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-rpm-suse-qemu-img-in-pkg-oci-backing-image-manager-repository-url-registry-rancher-com-2Flonghornio-2Fbacking-image-manager",
+          "pkg-rpm-suse-qemu-tools-in-pkg-oci-backing-image-manager-repository-url-registry-rancher-com-2Flonghornio-2Fbacking-image-manager",
           "pkg-rpm-suse-qemu-pr-helper-in-pkg-oci-backing-image-manager-repository-url-registry-rancher-com-longhornio-backing-image-manager",
           "pkg-rpm-suse-qemu-vmsr-helper-in-pkg-oci-backing-image-manager-repository-url-registry-rancher-com-longhornio-backing-image-manager"
         ]
       },
       "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-qemu-img-in-pkg-oci-backing-image-manager-repository-url-registry-rancher-com-2Flonghornio-2Fbacking-image-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-qemu-tools-in-pkg-oci-backing-image-manager-repository-url-registry-rancher-com-2Flonghornio-2Fbacking-image-manager"
+          ]
+        },
         {
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
