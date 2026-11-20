@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/vpc-nat-gateway?repository_url=registry.suse.com%2Fkubeovn%2Fvpc-nat-gateway",
     "tracking": {
-      "current_release_date": "2026-11-19T18:24:47Z",
+      "current_release_date": "2026-11-20T15:49:03Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-11-19T18:24:47Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-20T15:49:03Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -82,12 +87,45 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:apk/alpine/musl",
+        "product": {
+          "name": "pkg:apk/alpine/musl",
+          "product_id": "pkg-apk-alpine-musl",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/musl"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/musl-utils",
+        "product": {
+          "name": "pkg:apk/alpine/musl-utils",
+          "product_id": "pkg-apk-alpine-musl-utils",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/musl-utils"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:apk/alpine/zlib",
         "product": {
           "name": "pkg:apk/alpine/zlib",
           "product_id": "pkg-apk-alpine-zlib",
           "product_identification_helper": {
             "purl": "pkg:apk/alpine/zlib"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libcap2",
+        "product": {
+          "name": "pkg:apk/alpine/libcap2",
+          "product_id": "pkg-apk-alpine-libcap2",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libcap2"
           }
         }
       }
@@ -123,10 +161,37 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:apk/alpine/musl as a component of pkg:oci/vpc-nat-gateway?repository_url=registry.suse.com%2Fkubeovn%2Fvpc-nat-gateway",
+          "product_id": "pkg-apk-alpine-musl-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+        },
+        "product_reference": "pkg-apk-alpine-musl",
+        "relates_to_product_reference": "pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/musl-utils as a component of pkg:oci/vpc-nat-gateway?repository_url=registry.suse.com%2Fkubeovn%2Fvpc-nat-gateway",
+          "product_id": "pkg-apk-alpine-musl-utils-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+        },
+        "product_reference": "pkg-apk-alpine-musl-utils",
+        "relates_to_product_reference": "pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:apk/alpine/zlib as a component of pkg:oci/vpc-nat-gateway?repository_url=registry.suse.com%2Fkubeovn%2Fvpc-nat-gateway",
           "product_id": "pkg-apk-alpine-zlib-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
         },
         "product_reference": "pkg-apk-alpine-zlib",
+        "relates_to_product_reference": "pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libcap2 as a component of pkg:oci/vpc-nat-gateway?repository_url=registry.suse.com%2Fkubeovn%2Fvpc-nat-gateway",
+          "product_id": "pkg-apk-alpine-libcap2-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+        },
+        "product_reference": "pkg-apk-alpine-libcap2",
         "relates_to_product_reference": "pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
       }
     ]
@@ -208,6 +273,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libssl3-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-107891",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Flaw needs regcomp() on an attacker supplied regex; the gateway only runs fixed iptables/ip shell scripts. This statement concerns CVE-2026-107891 in pkg:apk/alpine/musl as a subcomponent of pkg:oci/vpc-nat-gateway?repository_url=registry.suse.com%2Fkubeovn%2Fvpc-nat-gateway. It does not assert the status of pkg:apk/alpine/musl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Flaw needs regcomp() on an attacker supplied regex; the gateway only runs fixed iptables/ip shell scripts. This statement concerns CVE-2026-107891 in pkg:apk/alpine/musl-utils as a subcomponent of pkg:oci/vpc-nat-gateway?repository_url=registry.suse.com%2Fkubeovn%2Fvpc-nat-gateway. It does not assert the status of pkg:apk/alpine/musl-utils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-musl-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway",
+          "pkg-apk-alpine-musl-utils-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
           ]
         }
       ]
@@ -876,6 +990,55 @@
       ]
     },
     {
+      "cve": "CVE-2026-40200",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Flaw needs qsort() over millions of elements; the gateway workload never sorts attacker controlled arrays. This statement concerns CVE-2026-40200 in pkg:apk/alpine/musl as a subcomponent of pkg:oci/vpc-nat-gateway?repository_url=registry.suse.com%2Fkubeovn%2Fvpc-nat-gateway. It does not assert the status of pkg:apk/alpine/musl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Flaw needs qsort() over millions of elements; the gateway workload never sorts attacker controlled arrays. This statement concerns CVE-2026-40200 in pkg:apk/alpine/musl-utils as a subcomponent of pkg:oci/vpc-nat-gateway?repository_url=registry.suse.com%2Fkubeovn%2Fvpc-nat-gateway. It does not assert the status of pkg:apk/alpine/musl-utils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-musl-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway",
+          "pkg-apk-alpine-musl-utils-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-42764",
       "flags": [
         {
@@ -1049,6 +1212,86 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-zlib-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-4878",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcap2-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "TOCTOU in cap_set_file requires a local unprivileged attacker; gateway runs iptables as root. This statement concerns CVE-2026-4878 in pkg:apk/alpine/libcap2 as a subcomponent of pkg:oci/vpc-nat-gateway?repository_url=registry.suse.com%2Fkubeovn%2Fvpc-nat-gateway. It does not assert the status of pkg:apk/alpine/libcap2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcap2-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcap2-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-6042",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Flaw is in the GB18030 iconv converter; the gateway shell and iptables tooling never performs GB18030 conversion. This statement concerns CVE-2026-6042 in pkg:apk/alpine/musl as a subcomponent of pkg:oci/vpc-nat-gateway?repository_url=registry.suse.com%2Fkubeovn%2Fvpc-nat-gateway. It does not assert the status of pkg:apk/alpine/musl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Flaw is in the GB18030 iconv converter; the gateway shell and iptables tooling never performs GB18030 conversion. This statement concerns CVE-2026-6042 in pkg:apk/alpine/musl-utils as a subcomponent of pkg:oci/vpc-nat-gateway?repository_url=registry.suse.com%2Fkubeovn%2Fvpc-nat-gateway. It does not assert the status of pkg:apk/alpine/musl-utils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-musl-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway",
+          "pkg-apk-alpine-musl-utils-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-vpc-nat-gateway-repository-url-registry-suse-com-2Fkubeovn-2Fvpc-nat-gateway"
           ]
         }
       ]
