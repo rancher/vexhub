@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/longhorn-share-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-share-manager",
     "tracking": {
-      "current_release_date": "2026-11-20T19:43:23Z",
+      "current_release_date": "2026-11-20T22:07:06Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-20T19:43:23Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-20T22:07:06Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -329,6 +334,28 @@
           "product_id": "pkg-rpm-suse-glibc-devel",
           "product_identification_helper": {
             "purl": "pkg:rpm/suse/glibc-devel"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libsolv-tools-base",
+        "product": {
+          "name": "pkg:rpm/suse/libsolv-tools-base",
+          "product_id": "pkg-rpm-suse-libsolv-tools-base",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libsolv-tools-base"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libzypp",
+        "product": {
+          "name": "pkg:rpm/suse/libzypp",
+          "product_id": "pkg-rpm-suse-libzypp",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libzypp"
           }
         }
       },
@@ -680,6 +707,24 @@
           "product_id": "pkg-rpm-suse-glibc-devel-in-pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-2Flonghornio-2Flonghorn-share-manager"
         },
         "product_reference": "pkg-rpm-suse-glibc-devel",
+        "relates_to_product_reference": "pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-2Flonghornio-2Flonghorn-share-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libsolv-tools-base as a component of pkg:oci/longhorn-share-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-share-manager",
+          "product_id": "pkg-rpm-suse-libsolv-tools-base-in-pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-2Flonghornio-2Flonghorn-share-manager"
+        },
+        "product_reference": "pkg-rpm-suse-libsolv-tools-base",
+        "relates_to_product_reference": "pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-2Flonghornio-2Flonghorn-share-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libzypp as a component of pkg:oci/longhorn-share-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-share-manager",
+          "product_id": "pkg-rpm-suse-libzypp-in-pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-2Flonghornio-2Flonghorn-share-manager"
+        },
+        "product_reference": "pkg-rpm-suse-libzypp",
         "relates_to_product_reference": "pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-2Flonghornio-2Flonghorn-share-manager"
       },
       {
@@ -2067,6 +2112,18 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-rpm-suse-libsolv-tools-base-in-pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-2Flonghornio-2Flonghorn-share-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libzypp-in-pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-2Flonghornio-2Flonghorn-share-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-rpm-suse-zypper-in-pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-longhornio-longhorn-share-manager"
           ]
         }
@@ -2080,15 +2137,39 @@
       "notes": [
         {
           "category": "description",
+          "text": "Flaws need crafted repo metadata parsed by zypper; no package management runs at container runtime. This statement concerns SUSE-SU-2026:2531-1 in pkg:rpm/suse/libsolv-tools-base as a subcomponent of pkg:oci/longhorn-share-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-share-manager. It does not assert the status of pkg:rpm/suse/libsolv-tools-base when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Flaws need crafted repo metadata parsed by zypper; no package management runs at container runtime. This statement concerns SUSE-SU-2026:2531-1 in pkg:rpm/suse/libzypp as a subcomponent of pkg:oci/longhorn-share-manager?repository_url=registry.rancher.com%2Flonghornio%2Flonghorn-share-manager. It does not assert the status of pkg:rpm/suse/libzypp when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "zypper package manager not invoked at runtime in this service container. This statement concerns SUSE-SU-2026:2531-1 in pkg:rpm/suse/zypper as a subcomponent of pkg:oci/longhorn-share-manager?repository_url=registry.rancher.com/longhornio/longhorn-share-manager. It does not assert the status of pkg:rpm/suse/zypper when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-rpm-suse-libsolv-tools-base-in-pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-2Flonghornio-2Flonghorn-share-manager",
+          "pkg-rpm-suse-libzypp-in-pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-2Flonghornio-2Flonghorn-share-manager",
           "pkg-rpm-suse-zypper-in-pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-longhornio-longhorn-share-manager"
         ]
       },
       "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libsolv-tools-base-in-pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-2Flonghornio-2Flonghorn-share-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libzypp-in-pkg-oci-longhorn-share-manager-repository-url-registry-rancher-com-2Flonghornio-2Flonghorn-share-manager"
+          ]
+        },
         {
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/hardened-multus-thick?repository_url=registry.suse.com%2Francher%2Fhardened-multus-thick",
     "tracking": {
-      "current_release_date": "2026-10-23T15:35:10Z",
+      "current_release_date": "2026-11-20T22:07:06Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-23T15:35:10Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-20T22:07:06Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -60,17 +65,6 @@
       },
       {
         "category": "product_name",
-        "name": "pkg:rpm/suse/libpcre2-8-0",
-        "product": {
-          "name": "pkg:rpm/suse/libpcre2-8-0",
-          "product_id": "pkg-rpm-suse-libpcre2-8-0",
-          "product_identification_helper": {
-            "purl": "pkg:rpm/suse/libpcre2-8-0"
-          }
-        }
-      },
-      {
-        "category": "product_name",
         "name": "pkg:oci/hardened-multus-thick?repository_url=registry.suse.com%2Francher%2Fhardened-multus-thick",
         "product": {
           "name": "pkg:oci/hardened-multus-thick?repository_url=registry.suse.com%2Francher%2Fhardened-multus-thick",
@@ -90,6 +84,17 @@
             "purl": "pkg:rpm/suse/busybox"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libpcre2-8-0",
+        "product": {
+          "name": "pkg:rpm/suse/libpcre2-8-0",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpcre2-8-0"
+          }
+        }
       }
     ],
     "relationships": [
@@ -105,20 +110,20 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/hardened-multus-thick?repository_url=registry.suse.com/rancher/hardened-multus-thick",
-          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-rancher-hardened-multus-thick"
-        },
-        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
-        "relates_to_product_reference": "pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-rancher-hardened-multus-thick"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
           "name": "pkg:rpm/suse/busybox as a component of pkg:oci/hardened-multus-thick?repository_url=registry.suse.com%2Francher%2Fhardened-multus-thick",
           "product_id": "pkg-rpm-suse-busybox-in-pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-2Francher-2Fhardened-multus-thick"
         },
         "product_reference": "pkg-rpm-suse-busybox",
         "relates_to_product_reference": "pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-2Francher-2Fhardened-multus-thick"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/hardened-multus-thick?repository_url=registry.suse.com/rancher/hardened-multus-thick",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-rancher-hardened-multus-thick"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
+        "relates_to_product_reference": "pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-rancher-hardened-multus-thick"
       }
     ]
   },
@@ -236,6 +241,42 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-2Francher-2Fhardened-multus-thick"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:3933-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a static Go binary; busybox applets (awk. This statement concerns SUSE-SU-2026:3933-1 in pkg:rpm/suse/busybox as a subcomponent of pkg:oci/hardened-multus-thick?repository_url=registry.suse.com%2Francher%2Fhardened-multus-thick. It does not assert the status of pkg:rpm/suse/busybox when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-busybox-in-pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-2Francher-2Fhardened-multus-thick"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-2Francher-2Fhardened-multus-thick"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-rancher-hardened-multus-thick"
           ]
         }
@@ -286,6 +327,42 @@
         {
           "category": "description",
           "text": "busybox applets are not invoked by the entrypoint. This statement concerns SUSE-SU-2026:4760-1 in pkg:rpm/suse/busybox as a subcomponent of pkg:oci/hardened-multus-thick?repository_url=registry.suse.com%2Francher%2Fhardened-multus-thick. It does not assert the status of pkg:rpm/suse/busybox when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-busybox-in-pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-2Francher-2Fhardened-multus-thick"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-2Francher-2Fhardened-multus-thick"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-hardened-multus-thick-repository-url-registry-suse-com-2Francher-2Fhardened-multus-thick"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5371-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a static Go binary; busybox applets (awk. This statement concerns SUSE-SU-2026:5371-1 in pkg:rpm/suse/busybox as a subcomponent of pkg:oci/hardened-multus-thick?repository_url=registry.suse.com%2Francher%2Fhardened-multus-thick. It does not assert the status of pkg:rpm/suse/busybox when used independently or in other products."
         }
       ],
       "product_status": {

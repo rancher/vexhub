@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/harvester-cluster-repo?repository_url=index.docker.io%2Francher%2Fharvester-cluster-repo",
     "tracking": {
-      "current_release_date": "2026-11-05T12:34:16Z",
+      "current_release_date": "2026-11-20T22:07:06Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-05T12:34:16Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-20T22:07:06Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -422,6 +427,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:rpm/suse/libgd3",
+        "product": {
+          "name": "pkg:rpm/suse/libgd3",
+          "product_id": "pkg-rpm-suse-libgd3",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libgd3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:rpm/suse/libX11-6",
         "product": {
           "name": "pkg:rpm/suse/libX11-6",
@@ -797,6 +813,15 @@
         },
         "product_reference": "pkg-rpm-suse-perl-base",
         "relates_to_product_reference": "pkg-oci-harvester-cluster-repo-repository-url-index-docker-io-rancher-harvester-cluster-repo"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libgd3 as a component of pkg:oci/harvester-cluster-repo?repository_url=index.docker.io%2Francher%2Fharvester-cluster-repo",
+          "product_id": "pkg-rpm-suse-libgd3-in-pkg-oci-harvester-cluster-repo-repository-url-index-docker-io-2Francher-2Fharvester-cluster-repo"
+        },
+        "product_reference": "pkg-rpm-suse-libgd3",
+        "relates_to_product_reference": "pkg-oci-harvester-cluster-repo-repository-url-index-docker-io-2Francher-2Fharvester-cluster-repo"
       },
       {
         "category": "default_component_of",
@@ -3011,6 +3036,78 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-perl-base-in-pkg-oci-harvester-cluster-repo-repository-url-index-docker-io-rancher-harvester-cluster-repo"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libgd3-in-pkg-oci-harvester-cluster-repo-repository-url-index-docker-io-2Francher-2Fharvester-cluster-repo"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:23213-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "nginx config loads no modules; ngx_http_image_filter_module is the only libgd/libtiff user and is unused. This statement concerns SUSE-SU-2026:23213-1 in pkg:rpm/suse/libgd3 as a subcomponent of pkg:oci/harvester-cluster-repo?repository_url=index.docker.io%2Francher%2Fharvester-cluster-repo. It does not assert the status of pkg:rpm/suse/libgd3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libgd3-in-pkg-oci-harvester-cluster-repo-repository-url-index-docker-io-2Francher-2Fharvester-cluster-repo"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libgd3-in-pkg-oci-harvester-cluster-repo-repository-url-index-docker-io-2Francher-2Fharvester-cluster-repo"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libgd3-in-pkg-oci-harvester-cluster-repo-repository-url-index-docker-io-2Francher-2Fharvester-cluster-repo"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:23224-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "nginx config loads no modules; ngx_http_image_filter_module is the only libgd/libtiff user and is unused. This statement concerns SUSE-SU-2026:23224-1 in pkg:rpm/suse/libgd3 as a subcomponent of pkg:oci/harvester-cluster-repo?repository_url=index.docker.io%2Francher%2Fharvester-cluster-repo. It does not assert the status of pkg:rpm/suse/libgd3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libgd3-in-pkg-oci-harvester-cluster-repo-repository-url-index-docker-io-2Francher-2Fharvester-cluster-repo"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libgd3-in-pkg-oci-harvester-cluster-repo-repository-url-index-docker-io-2Francher-2Fharvester-cluster-repo"
           ]
         }
       ]

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/hardened-calico?repository_url=registry.rancher.com%2Francher%2Fhardened-calico",
     "tracking": {
-      "current_release_date": "2026-11-03T12:38:49Z",
+      "current_release_date": "2026-11-20T22:07:06Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-03T12:38:49Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-20T22:07:06Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -455,6 +460,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:rpm/suse/kbd",
+        "product": {
+          "name": "pkg:rpm/suse/kbd",
+          "product_id": "pkg-rpm-suse-kbd",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/kbd"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:rpm/suse/libsasl2-3",
         "product": {
           "name": "pkg:rpm/suse/libsasl2-3",
@@ -789,6 +805,33 @@
         },
         "product_reference": "pkg-rpm-suse-perl-base",
         "relates_to_product_reference": "pkg-oci-hardened-calico-repository-url-registry-rancher-com-rancher-hardened-calico"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcap1 as a component of pkg:oci/hardened-calico?repository_url=registry.rancher.com%2Francher%2Fhardened-calico",
+          "product_id": "pkg-rpm-suse-libpcap1-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+        },
+        "product_reference": "pkg-rpm-suse-libpcap1",
+        "relates_to_product_reference": "pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/kbd as a component of pkg:oci/hardened-calico?repository_url=registry.rancher.com%2Francher%2Fhardened-calico",
+          "product_id": "pkg-rpm-suse-kbd-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+        },
+        "product_reference": "pkg-rpm-suse-kbd",
+        "relates_to_product_reference": "pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libexpat1 as a component of pkg:oci/hardened-calico?repository_url=registry.rancher.com%2Francher%2Fhardened-calico",
+          "product_id": "pkg-rpm-suse-libexpat1-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+        },
+        "product_reference": "pkg-rpm-suse-libexpat1",
+        "relates_to_product_reference": "pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
       },
       {
         "category": "default_component_of",
@@ -2211,6 +2254,114 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-gzip-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-rancher-hardened-calico"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcap1-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4188-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "No binary links libpcap and no tcpdump or rpcap client is present; calico-node is pure Go. This statement concerns SUSE-SU-2026:4188-1 in pkg:rpm/suse/libpcap1 as a subcomponent of pkg:oci/hardened-calico?repository_url=registry.rancher.com%2Francher%2Fhardened-calico. It does not assert the status of pkg:rpm/suse/libpcap1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcap1-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcap1-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-kbd-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4211-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "openvt local privesc needs a tty and is not setuid; no console or kbd tool runs in this container. This statement concerns SUSE-SU-2026:4211-1 in pkg:rpm/suse/kbd as a subcomponent of pkg:oci/hardened-calico?repository_url=registry.rancher.com%2Francher%2Fhardened-calico. It does not assert the status of pkg:rpm/suse/kbd when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-kbd-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-kbd-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libexpat1-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4619-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libexpat is only linked by dbus-daemon and pdata_tools. This statement concerns SUSE-SU-2026:4619-1 in pkg:rpm/suse/libexpat1 as a subcomponent of pkg:oci/hardened-calico?repository_url=registry.rancher.com%2Francher%2Fhardened-calico. It does not assert the status of pkg:rpm/suse/libexpat1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libexpat1-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libexpat1-in-pkg-oci-hardened-calico-repository-url-registry-rancher-com-2Francher-2Fhardened-calico"
           ]
         }
       ]
