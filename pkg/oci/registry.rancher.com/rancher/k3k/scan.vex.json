@@ -1,0 +1,145 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/k3k?repository_url=registry.rancher.com%2Francher%2Fk3k",
+    "tracking": {
+      "current_release_date": "2026-11-21T13:22:17Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/k3k?repository_url=registry.rancher.com%2Francher%2Fk3k",
+      "initial_release_date": "2026-11-21T13:22:17Z",
+      "revision_history": [
+        {
+          "date": "2026-11-21T13:22:17Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/k3k?repository_url=registry.rancher.com%2Francher%2Fk3k"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/k3k?repository_url=registry.rancher.com%2Francher%2Fk3k",
+        "product": {
+          "name": "pkg:oci/k3k?repository_url=registry.rancher.com%2Francher%2Fk3k",
+          "product_id": "pkg-oci-k3k-repository-url-registry-rancher-com-2Francher-2Fk3k",
+          "product_identification_helper": {
+            "purl": "pkg:oci/k3k?repository_url=registry.rancher.com%2Francher%2Fk3k"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/glibc",
+        "product": {
+          "name": "pkg:rpm/suse/glibc",
+          "product_id": "pkg-rpm-suse-glibc",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/glibc"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/glibc-locale-base",
+        "product": {
+          "name": "pkg:rpm/suse/glibc-locale-base",
+          "product_id": "pkg-rpm-suse-glibc-locale-base",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/glibc-locale-base"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/glibc as a component of pkg:oci/k3k?repository_url=registry.rancher.com%2Francher%2Fk3k",
+          "product_id": "pkg-rpm-suse-glibc-in-pkg-oci-k3k-repository-url-registry-rancher-com-2Francher-2Fk3k"
+        },
+        "product_reference": "pkg-rpm-suse-glibc",
+        "relates_to_product_reference": "pkg-oci-k3k-repository-url-registry-rancher-com-2Francher-2Fk3k"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/glibc-locale-base as a component of pkg:oci/k3k?repository_url=registry.rancher.com%2Francher%2Fk3k",
+          "product_id": "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-k3k-repository-url-registry-rancher-com-2Francher-2Fk3k"
+        },
+        "product_reference": "pkg-rpm-suse-glibc-locale-base",
+        "relates_to_product_reference": "pkg-oci-k3k-repository-url-registry-rancher-com-2Francher-2Fk3k"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-k3k-repository-url-registry-rancher-com-2Francher-2Fk3k"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-k3k-repository-url-registry-rancher-com-2Francher-2Fk3k"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24741-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go entrypoint; glibc not loaded by the container main process. This statement concerns SUSE-SU-2026:24741-1 in pkg:rpm/suse/glibc as a subcomponent of pkg:oci/k3k?repository_url=registry.rancher.com%2Francher%2Fk3k. It does not assert the status of pkg:rpm/suse/glibc when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Static Go entrypoint; glibc locale data never loaded at runtime. This statement concerns SUSE-SU-2026:24741-1 in pkg:rpm/suse/glibc-locale-base as a subcomponent of pkg:oci/k3k?repository_url=registry.rancher.com%2Francher%2Fk3k. It does not assert the status of pkg:rpm/suse/glibc-locale-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-glibc-in-pkg-oci-k3k-repository-url-registry-rancher-com-2Francher-2Fk3k",
+          "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-k3k-repository-url-registry-rancher-com-2Francher-2Fk3k"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-k3k-repository-url-registry-rancher-com-2Francher-2Fk3k"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-k3k-repository-url-registry-rancher-com-2Francher-2Fk3k"
+          ]
+        }
+      ]
+    }
+  ]
+}
