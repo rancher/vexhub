@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com%2Francher%2Fharvester-csi-driver",
     "tracking": {
-      "current_release_date": "2026-11-20T22:07:06Z",
+      "current_release_date": "2026-11-21T13:22:17Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -43,10 +43,15 @@
           "date": "2026-11-20T22:07:06Z",
           "number": "5",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-21T13:22:17Z",
+          "number": "6",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -636,6 +641,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:rpm/suse/sed",
+        "product": {
+          "name": "pkg:rpm/suse/sed",
+          "product_id": "pkg-rpm-suse-sed",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/sed"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:rpm/suse/curl",
         "product": {
           "name": "pkg:rpm/suse/curl",
@@ -664,6 +680,17 @@
           "product_id": "pkg-rpm-suse-rpcbind",
           "product_identification_helper": {
             "purl": "pkg:rpm/suse/rpcbind"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/rpm",
+        "product": {
+          "name": "pkg:rpm/suse/rpm",
+          "product_id": "pkg-rpm-suse-rpm",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/rpm"
           }
         }
       },
@@ -1230,6 +1257,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:rpm/suse/sed as a component of pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com%2Francher%2Fharvester-csi-driver",
+          "product_id": "pkg-rpm-suse-sed-in-pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
+        },
+        "product_reference": "pkg-rpm-suse-sed",
+        "relates_to_product_reference": "pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:rpm/suse/curl as a component of pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com/rancher/harvester-csi-driver",
           "product_id": "pkg-rpm-suse-curl-in-pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-rancher-harvester-csi-driver"
         },
@@ -1279,6 +1315,15 @@
           "product_id": "pkg-rpm-suse-rpcbind-in-pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
         },
         "product_reference": "pkg-rpm-suse-rpcbind",
+        "relates_to_product_reference": "pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/rpm as a component of pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com%2Francher%2Fharvester-csi-driver",
+          "product_id": "pkg-rpm-suse-rpm-in-pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
+        },
+        "product_reference": "pkg-rpm-suse-rpm",
         "relates_to_product_reference": "pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
       },
       {
@@ -5186,6 +5231,42 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-rpm-suse-sed-in-pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:22325-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "sed CLI is an incidental dependency; never invoked by the container entrypoint. This statement concerns SUSE-SU-2026:22325-1 in pkg:rpm/suse/sed as a subcomponent of pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com%2Francher%2Fharvester-csi-driver. It does not assert the status of pkg:rpm/suse/sed when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-sed-in-pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-sed-in-pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-rpm-suse-libuuid1-in-pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-rancher-harvester-csi-driver"
           ]
         }
@@ -5933,6 +6014,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-rpcbind-in-pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-rpm-in-pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:23787-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "rpm is build-time package tooling; never executed by the container entrypoint. This statement concerns SUSE-SU-2026:23787-1 in pkg:rpm/suse/rpm as a subcomponent of pkg:oci/harvester-csi-driver?repository_url=registry.rancher.com%2Francher%2Fharvester-csi-driver. It does not assert the status of pkg:rpm/suse/rpm when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-rpm-in-pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-rpm-in-pkg-oci-harvester-csi-driver-repository-url-registry-rancher-com-2Francher-2Fharvester-csi-driver"
           ]
         }
       ]

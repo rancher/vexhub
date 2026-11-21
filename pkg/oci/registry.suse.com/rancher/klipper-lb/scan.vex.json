@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-11-21T13:22:17Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/klipper-lb?repository_url=registry.suse.com/rancher/klipper-lb"
+        },
+        {
+          "date": "2026-11-21T13:22:17Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -61,6 +66,17 @@
           "product_id": "pkg-apk-alpine-libssl3",
           "product_identification_helper": {
             "purl": "pkg:apk/alpine/libssl3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb",
+        "product": {
+          "name": "pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb",
+          "product_id": "pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb",
+          "product_identification_helper": {
+            "purl": "pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb"
           }
         }
       },
@@ -109,6 +125,24 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:apk/alpine/libcrypto3 as a component of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb",
+          "product_id": "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+        },
+        "product_reference": "pkg-apk-alpine-libcrypto3",
+        "relates_to_product_reference": "pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libssl3 as a component of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb",
+          "product_id": "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+        },
+        "product_reference": "pkg-apk-alpine-libssl3",
+        "relates_to_product_reference": "pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:apk/alpine/zlib as a component of pkg:oci/klipper-lb?repository_url=registry.suse.com/rancher/klipper-lb",
           "product_id": "pkg-apk-alpine-zlib-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-rancher-klipper-lb"
         },
@@ -123,6 +157,15 @@
         },
         "product_reference": "pkg-apk-alpine-musl-utils",
         "relates_to_product_reference": "pkg-oci-klipper-lb-repository-url-registry-suse-com-rancher-klipper-lb"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/zlib as a component of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb",
+          "product_id": "pkg-apk-alpine-zlib-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+        },
+        "product_reference": "pkg-apk-alpine-zlib",
+        "relates_to_product_reference": "pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
       }
     ]
   },
@@ -301,6 +344,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-rancher-klipper-lb"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-18798",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-18798 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-18798 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
           ]
         }
       ]
@@ -631,6 +723,104 @@
       ]
     },
     {
+      "cve": "CVE-2026-34182",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-34182 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-34182 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-34183",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-34183 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-34183 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-40200",
       "flags": [
         {
@@ -657,6 +847,104 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-musl-utils-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-rancher-klipper-lb"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-42764",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-42764 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-42764 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-45445",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-45445 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-45445 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
           ]
         }
       ]
@@ -706,6 +994,166 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-rancher-klipper-lb"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-4738",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-zlib-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "zlib only linked by apk/libcrypto tooling; not reachable from the entrypoint. This statement concerns CVE-2026-4738 in pkg:apk/alpine/zlib as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/zlib when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-zlib-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-zlib-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-63072",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-63072 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-63072 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-63076",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-63076 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "OpenSSL only linked by apk/curl tooling; entrypoint uses Go crypto. This statement concerns CVE-2026-63076 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-85091",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-zlib-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "zlib only linked by apk/libcrypto tooling; not reachable from the entrypoint. This statement concerns CVE-2026-85091 in pkg:apk/alpine/zlib as a subcomponent of pkg:oci/klipper-lb?repository_url=registry.suse.com%2Francher%2Fklipper-lb. It does not assert the status of pkg:apk/alpine/zlib when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-zlib-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-zlib-in-pkg-oci-klipper-lb-repository-url-registry-suse-com-2Francher-2Fklipper-lb"
           ]
         }
       ]

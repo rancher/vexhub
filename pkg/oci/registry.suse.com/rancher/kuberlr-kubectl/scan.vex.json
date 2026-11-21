@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/kuberlr-kubectl?repository_url=registry.suse.com%2Francher%2Fkuberlr-kubectl",
     "tracking": {
-      "current_release_date": "2026-10-23T15:35:10Z",
+      "current_release_date": "2026-11-21T13:22:17Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-23T15:35:10Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-21T13:22:17Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -150,6 +155,24 @@
         },
         "product_reference": "pkg-rpm-suse-terminfo-base",
         "relates_to_product_reference": "pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-rancher-kuberlr-kubectl"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/kuberlr-kubectl?repository_url=registry.suse.com%2Francher%2Fkuberlr-kubectl",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
+        "relates_to_product_reference": "pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/glibc as a component of pkg:oci/kuberlr-kubectl?repository_url=registry.suse.com%2Francher%2Fkuberlr-kubectl",
+          "product_id": "pkg-rpm-suse-glibc-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+        },
+        "product_reference": "pkg-rpm-suse-glibc",
+        "relates_to_product_reference": "pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
       },
       {
         "category": "default_component_of",
@@ -753,6 +776,78 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:23906-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libpcre2 only linked by libselinux/glib; not in the entrypoint execution path. This statement concerns SUSE-SU-2026:23906-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/kuberlr-kubectl?repository_url=registry.suse.com%2Francher%2Fkuberlr-kubectl. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:23934-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go entrypoint; glibc not loaded by the container main process. This statement concerns SUSE-SU-2026:23934-1 in pkg:rpm/suse/glibc as a subcomponent of pkg:oci/kuberlr-kubectl?repository_url=registry.suse.com%2Francher%2Fkuberlr-kubectl. It does not assert the status of pkg:rpm/suse/glibc when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-glibc-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-rpm-suse-busybox-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
           ]
         }
@@ -825,6 +920,42 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24654-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libpcre2 only linked by libselinux/glib; not in the entrypoint execution path. This statement concerns SUSE-SU-2026:24654-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/kuberlr-kubectl?repository_url=registry.suse.com%2Francher%2Fkuberlr-kubectl. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-rpm-suse-glibc-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-rancher-kuberlr-kubectl"
           ]
         }
@@ -852,6 +983,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-glibc-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-rancher-kuberlr-kubectl"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:3933-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "busybox applets are incidental; the entrypoint is a static Go binary. This statement concerns SUSE-SU-2026:3933-1 in pkg:rpm/suse/busybox as a subcomponent of pkg:oci/kuberlr-kubectl?repository_url=registry.suse.com%2Francher%2Fkuberlr-kubectl. It does not assert the status of pkg:rpm/suse/busybox when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-busybox-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
           ]
         }
       ]
@@ -897,6 +1064,78 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4250-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go entrypoint; glibc not loaded by the container main process. This statement concerns SUSE-SU-2026:4250-1 in pkg:rpm/suse/glibc as a subcomponent of pkg:oci/kuberlr-kubectl?repository_url=registry.suse.com%2Francher%2Fkuberlr-kubectl. It does not assert the status of pkg:rpm/suse/glibc when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-glibc-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4656-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go entrypoint; glibc not loaded by the container main process. This statement concerns SUSE-SU-2026:4656-1 in pkg:rpm/suse/glibc as a subcomponent of pkg:oci/kuberlr-kubectl?repository_url=registry.suse.com%2Francher%2Fkuberlr-kubectl. It does not assert the status of pkg:rpm/suse/glibc when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-glibc-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-rpm-suse-busybox-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
           ]
         }
@@ -911,6 +1150,78 @@
         {
           "category": "description",
           "text": "busybox applets are not invoked by the entrypoint. This statement concerns SUSE-SU-2026:4760-1 in pkg:rpm/suse/busybox as a subcomponent of pkg:oci/kuberlr-kubectl?repository_url=registry.suse.com%2Francher%2Fkuberlr-kubectl. It does not assert the status of pkg:rpm/suse/busybox when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-busybox-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5371-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "busybox applets are incidental; the entrypoint is a static Go binary. This statement concerns SUSE-SU-2026:5371-1 in pkg:rpm/suse/busybox as a subcomponent of pkg:oci/kuberlr-kubectl?repository_url=registry.suse.com%2Francher%2Fkuberlr-kubectl. It does not assert the status of pkg:rpm/suse/busybox when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-busybox-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-busybox-in-pkg-oci-kuberlr-kubectl-repository-url-registry-suse-com-2Francher-2Fkuberlr-kubectl"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5372-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "busybox applets are incidental; the entrypoint is a static Go binary. This statement concerns SUSE-SU-2026:5372-1 in pkg:rpm/suse/busybox as a subcomponent of pkg:oci/kuberlr-kubectl?repository_url=registry.suse.com%2Francher%2Fkuberlr-kubectl. It does not assert the status of pkg:rpm/suse/busybox when used independently or in other products."
         }
       ],
       "product_status": {
