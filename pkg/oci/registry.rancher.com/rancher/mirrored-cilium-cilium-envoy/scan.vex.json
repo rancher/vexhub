@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy",
     "tracking": {
-      "current_release_date": "2026-11-22T00:15:40Z",
+      "current_release_date": "2026-11-22T20:37:49Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-11-22T00:15:40Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-22T20:37:49Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -49,6 +54,17 @@
           "product_id": "pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy",
           "product_identification_helper": {
             "purl": "pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/perl-base",
+        "product": {
+          "name": "pkg:deb/ubuntu/perl-base",
+          "product_id": "pkg-deb-ubuntu-perl-base",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/perl-base"
           }
         }
       },
@@ -219,17 +235,6 @@
       },
       {
         "category": "product_name",
-        "name": "pkg:deb/ubuntu/perl-base",
-        "product": {
-          "name": "pkg:deb/ubuntu/perl-base",
-          "product_id": "pkg-deb-ubuntu-perl-base",
-          "product_identification_helper": {
-            "purl": "pkg:deb/ubuntu/perl-base"
-          }
-        }
-      },
-      {
-        "category": "product_name",
         "name": "pkg:deb/ubuntu/zlib1g",
         "product": {
           "name": "pkg:deb/ubuntu/zlib1g",
@@ -241,6 +246,15 @@
       }
     ],
     "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/perl-base as a component of pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy",
+          "product_id": "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+        },
+        "product_reference": "pkg-deb-ubuntu-perl-base",
+        "relates_to_product_reference": "pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -379,15 +393,6 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "pkg:deb/ubuntu/perl-base as a component of pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy",
-          "product_id": "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
-        },
-        "product_reference": "pkg-deb-ubuntu-perl-base",
-        "relates_to_product_reference": "pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
           "name": "pkg:deb/ubuntu/zlib1g as a component of pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy",
           "product_id": "pkg-deb-ubuntu-zlib1g-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
         },
@@ -397,6 +402,37 @@
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2025-15649",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "IO::Uncompress is not shipped in perl-base; only core modules are present in this image. This statement concerns CVE-2025-15649 in pkg:deb/ubuntu/perl-base as a subcomponent of pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy. It does not assert the status of pkg:deb/ubuntu/perl-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ]
+    },
     {
       "cve": "CVE-2025-45582",
       "flags": [
@@ -664,6 +700,130 @@
       ]
     },
     {
+      "cve": "CVE-2026-42496",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Archive::Tar is not shipped in perl-base; only core modules are present in this image. This statement concerns CVE-2026-42496 in pkg:deb/ubuntu/perl-base as a subcomponent of pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy. It does not assert the status of pkg:deb/ubuntu/perl-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-42497",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Archive::Tar is not shipped in perl-base; only core modules are present in this image. This statement concerns CVE-2026-42497 in pkg:deb/ubuntu/perl-base as a subcomponent of pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy. It does not assert the status of pkg:deb/ubuntu/perl-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-48959",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "IO::Uncompress is not shipped in perl-base; only core modules are present in this image. This statement concerns CVE-2026-48959 in pkg:deb/ubuntu/perl-base as a subcomponent of pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy. It does not assert the status of pkg:deb/ubuntu/perl-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-48962",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "IO::Compress and File::GlobMapper are not shipped in perl-base in this image. This statement concerns CVE-2026-48962 in pkg:deb/ubuntu/perl-base as a subcomponent of pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy. It does not assert the status of pkg:deb/ubuntu/perl-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-53910",
       "flags": [
         {
@@ -842,6 +1002,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-57433",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Storable.pm is not shipped in perl-base in this image. This statement concerns CVE-2026-57433 in pkg:deb/ubuntu/perl-base as a subcomponent of pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy. It does not assert the status of pkg:deb/ubuntu/perl-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-63072",
       "flags": [
         {
@@ -966,6 +1157,68 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-libgnutls30t64-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-7017",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "HTTP::Tiny is not shipped in perl-base in this image. This statement concerns CVE-2026-7017 in pkg:deb/ubuntu/perl-base as a subcomponent of pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy. It does not assert the status of pkg:deb/ubuntu/perl-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-82560",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Pod::Text is not shipped in perl-base in this image. This statement concerns CVE-2026-82560 in pkg:deb/ubuntu/perl-base as a subcomponent of pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy. It does not assert the status of pkg:deb/ubuntu/perl-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
           ]
         }
       ]
@@ -1369,6 +1622,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-libgnutls30t64-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-9538",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Archive::Tar is not shipped in perl-base; only core modules are present in this image. This statement concerns CVE-2026-9538 in pkg:deb/ubuntu/perl-base as a subcomponent of pkg:oci/mirrored-cilium-cilium-envoy?repository_url=registry.rancher.com%2Francher%2Fmirrored-cilium-cilium-envoy. It does not assert the status of pkg:deb/ubuntu/perl-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-base-in-pkg-oci-mirrored-cilium-cilium-envoy-repository-url-registry-rancher-com-2Francher-2Fmirrored-cilium-cilium-envoy"
           ]
         }
       ]

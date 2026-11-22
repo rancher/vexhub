@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/k3s-upgrade?repository_url=registry.suse.com%2Francher%2Fk3s-upgrade",
     "tracking": {
-      "current_release_date": "2026-11-21T13:22:17Z",
+      "current_release_date": "2026-11-22T20:37:49Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-11-21T13:22:17Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-22T20:37:49Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -112,6 +117,17 @@
             "purl": "pkg:apk/alpine/musl-utils"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/jq",
+        "product": {
+          "name": "pkg:apk/alpine/jq",
+          "product_id": "pkg-apk-alpine-jq",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/jq"
+          }
+        }
       }
     ],
     "relationships": [
@@ -177,6 +193,15 @@
         },
         "product_reference": "pkg-apk-alpine-musl-utils",
         "relates_to_product_reference": "pkg-oci-k3s-upgrade-repository-url-registry-suse-com-rancher-k3s-upgrade"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/jq as a component of pkg:oci/k3s-upgrade?repository_url=registry.suse.com%2Francher%2Fk3s-upgrade",
+          "product_id": "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+        },
+        "product_reference": "pkg-apk-alpine-jq",
+        "relates_to_product_reference": "pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
       }
     ]
   },
@@ -1041,6 +1066,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-41256",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "jq is invoked only with hardcoded inline filters; the -f program-file path is never used. This statement concerns CVE-2026-41256 in pkg:apk/alpine/jq as a subcomponent of pkg:oci/k3s-upgrade?repository_url=registry.suse.com%2Francher%2Fk3s-upgrade. It does not assert the status of pkg:apk/alpine/jq when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-42764",
       "flags": [
         {
@@ -1085,6 +1141,68 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libssl3-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-43895",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "jq is invoked with hardcoded inline filters; no jq import paths are used. This statement concerns CVE-2026-43895 in pkg:apk/alpine/jq as a subcomponent of pkg:oci/k3s-upgrade?repository_url=registry.suse.com%2Francher%2Fk3s-upgrade. It does not assert the status of pkg:apk/alpine/jq when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-44777",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "jq is invoked with hardcoded inline filters; no jq modules are loaded or included. This statement concerns CVE-2026-44777 in pkg:apk/alpine/jq as a subcomponent of pkg:oci/k3s-upgrade?repository_url=registry.suse.com%2Francher%2Fk3s-upgrade. It does not assert the status of pkg:apk/alpine/jq when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
           ]
         }
       ]
@@ -1214,6 +1332,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-zlib-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-49839",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "jq is invoked only with hardcoded inline filters; --rawfile is never used. This statement concerns CVE-2026-49839 in pkg:apk/alpine/jq as a subcomponent of pkg:oci/k3s-upgrade?repository_url=registry.suse.com%2Francher%2Fk3s-upgrade. It does not assert the status of pkg:apk/alpine/jq when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-k3s-upgrade-repository-url-registry-suse-com-2Francher-2Fk3s-upgrade"
           ]
         }
       ]
