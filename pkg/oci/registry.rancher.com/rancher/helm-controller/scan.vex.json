@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/helm-controller?repository_url=registry.rancher.com%2Francher%2Fhelm-controller",
     "tracking": {
-      "current_release_date": "2026-11-21T13:22:17Z",
+      "current_release_date": "2026-11-22T00:15:40Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-11-21T13:22:17Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-22T00:15:40Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -66,6 +71,28 @@
           "product_id": "pkg-apk-alpine-libssl3",
           "product_identification_helper": {
             "purl": "pkg:apk/alpine/libssl3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/musl",
+        "product": {
+          "name": "pkg:apk/alpine/musl",
+          "product_id": "pkg-apk-alpine-musl",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/musl"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/musl-utils",
+        "product": {
+          "name": "pkg:apk/alpine/musl-utils",
+          "product_id": "pkg-apk-alpine-musl-utils",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/musl-utils"
           }
         }
       },
@@ -109,6 +136,24 @@
           "product_id": "pkg-apk-alpine-libssl3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller"
         },
         "product_reference": "pkg-apk-alpine-libssl3",
+        "relates_to_product_reference": "pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/musl as a component of pkg:oci/helm-controller?repository_url=registry.rancher.com%2Francher%2Fhelm-controller",
+          "product_id": "pkg-apk-alpine-musl-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller"
+        },
+        "product_reference": "pkg-apk-alpine-musl",
+        "relates_to_product_reference": "pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/musl-utils as a component of pkg:oci/helm-controller?repository_url=registry.rancher.com%2Francher%2Fhelm-controller",
+          "product_id": "pkg-apk-alpine-musl-utils-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller"
+        },
+        "product_reference": "pkg-apk-alpine-musl-utils",
         "relates_to_product_reference": "pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller"
       },
       {
@@ -186,6 +231,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libssl3-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-107891",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked binary; musl regcomp is never called with an untrusted regex. This statement concerns CVE-2026-107891 in pkg:apk/alpine/musl as a subcomponent of pkg:oci/helm-controller?repository_url=registry.rancher.com%2Francher%2Fhelm-controller. It does not assert the status of pkg:apk/alpine/musl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked binary; musl regcomp is never called with an untrusted regex. This statement concerns CVE-2026-107891 in pkg:apk/alpine/musl-utils as a subcomponent of pkg:oci/helm-controller?repository_url=registry.rancher.com%2Francher%2Fhelm-controller. It does not assert the status of pkg:apk/alpine/musl-utils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-musl-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller",
+          "pkg-apk-alpine-musl-utils-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-helm-controller-repository-url-registry-rancher-com-2Francher-2Fhelm-controller"
           ]
         }
       ]
