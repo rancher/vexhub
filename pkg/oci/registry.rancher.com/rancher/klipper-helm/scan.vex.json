@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/klipper-helm?repository_url=registry.rancher.com%2Francher%2Fklipper-helm",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-11-22T20:37:49Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/klipper-helm?repository_url=registry.rancher.com/rancher/klipper-helm"
+        },
+        {
+          "date": "2026-11-22T20:37:49Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -85,6 +90,28 @@
             "purl": "pkg:apk/alpine/musl-utils"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:oci/klipper-helm?repository_url=registry.rancher.com%2Francher%2Fklipper-helm",
+        "product": {
+          "name": "pkg:oci/klipper-helm?repository_url=registry.rancher.com%2Francher%2Fklipper-helm",
+          "product_id": "pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm",
+          "product_identification_helper": {
+            "purl": "pkg:oci/klipper-helm?repository_url=registry.rancher.com%2Francher%2Fklipper-helm"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/jq",
+        "product": {
+          "name": "pkg:apk/alpine/jq",
+          "product_id": "pkg-apk-alpine-jq",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/jq"
+          }
+        }
       }
     ],
     "relationships": [
@@ -123,6 +150,15 @@
         },
         "product_reference": "pkg-apk-alpine-musl-utils",
         "relates_to_product_reference": "pkg-oci-klipper-helm-repository-url-registry-rancher-com-rancher-klipper-helm"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/jq as a component of pkg:oci/klipper-helm?repository_url=registry.rancher.com%2Francher%2Fklipper-helm",
+          "product_id": "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
+        },
+        "product_reference": "pkg-apk-alpine-jq",
+        "relates_to_product_reference": "pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
       }
     ]
   },
@@ -608,6 +644,130 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-musl-utils-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-rancher-klipper-helm"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-41256",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "jq is invoked only with hardcoded inline filters; the -f program-file path is never used. This statement concerns CVE-2026-41256 in pkg:apk/alpine/jq as a subcomponent of pkg:oci/klipper-helm?repository_url=registry.rancher.com%2Francher%2Fklipper-helm. It does not assert the status of pkg:apk/alpine/jq when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-43895",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "jq is invoked with hardcoded inline filters; no jq import paths are used. This statement concerns CVE-2026-43895 in pkg:apk/alpine/jq as a subcomponent of pkg:oci/klipper-helm?repository_url=registry.rancher.com%2Francher%2Fklipper-helm. It does not assert the status of pkg:apk/alpine/jq when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-44777",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "jq is invoked with hardcoded inline filters; no jq modules are loaded or included. This statement concerns CVE-2026-44777 in pkg:apk/alpine/jq as a subcomponent of pkg:oci/klipper-helm?repository_url=registry.rancher.com%2Francher%2Fklipper-helm. It does not assert the status of pkg:apk/alpine/jq when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-49839",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "jq is invoked only with hardcoded inline filters; --rawfile is never used. This statement concerns CVE-2026-49839 in pkg:apk/alpine/jq as a subcomponent of pkg:oci/klipper-helm?repository_url=registry.rancher.com%2Francher%2Fklipper-helm. It does not assert the status of pkg:apk/alpine/jq when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-jq-in-pkg-oci-klipper-helm-repository-url-registry-rancher-com-2Francher-2Fklipper-helm"
           ]
         }
       ]
