@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/kube-logging/logging-operator",
     "tracking": {
-      "current_release_date": "2026-10-28T05:26:50Z",
+      "current_release_date": "2026-11-23T07:00:20Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-28T05:26:50Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-23T07:00:20Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -170,12 +175,34 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1",
+        "product": {
+          "name": "pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1",
+          "product_id": "pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/stdlib@v1.23.1",
         "product": {
           "name": "pkg:golang/stdlib@v1.23.1",
           "product_id": "pkg-golang-stdlib-v1-23-1",
           "product_identification_helper": {
             "purl": "pkg:golang/stdlib@v1.23.1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.26.0",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.26.0",
+          "product_id": "pkg-golang-stdlib-v1-26-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.26.0"
           }
         }
       },
@@ -305,11 +332,38 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/golang.org%2Fx%2Foauth2@v0.21.0 as a component of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1",
+          "product_id": "pkg-golang-golang-org-2Fx-2Foauth2-v0-21-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+        },
+        "product_reference": "pkg-golang-golang-org-2Fx-2Foauth2-v0-21-0",
+        "relates_to_product_reference": "pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/stdlib@v1.23.1 as a component of pkg:golang/github.com/kube-logging/logging-operator",
           "product_id": "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
         },
         "product_reference": "pkg-golang-stdlib-v1-23-1",
         "relates_to_product_reference": "pkg-golang-github-com-kube-logging-logging-operator"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.0 as a component of pkg:golang/github.com/kube-logging/logging-operator",
+          "product_id": "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-0",
+        "relates_to_product_reference": "pkg-golang-github-com-kube-logging-logging-operator"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.0 as a component of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1",
+          "product_id": "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-0",
+        "relates_to_product_reference": "pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
       },
       {
         "category": "default_component_of",
@@ -737,6 +791,12 @@
           "product_ids": [
             "pkg-golang-golang-org-x-oauth2-v0-5-0-in-pkg-golang-github-com-kube-logging-logging-operator"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Foauth2-v0-21-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+          ]
         }
       ],
       "ids": [
@@ -761,6 +821,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2025-22868 in pkg:golang/golang.org/x/oauth2@v0.5.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/golang.org/x/oauth2@v0.5.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2025-22868 in pkg:golang/golang.org%2Fx%2Foauth2@v0.21.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1. It does not assert the status of pkg:golang/golang.org%2Fx%2Foauth2@v0.21.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -768,7 +832,8 @@
           "pkg-golang-golang-org-2Fx-2Foauth2-v0-21-0-in-pkg-golang-github-com-kube-logging-logging-operator",
           "pkg-golang-golang-org-x-oauth2-v0-16-0-in-pkg-golang-github-com-kube-logging-logging-operator",
           "pkg-golang-golang-org-x-oauth2-v0-21-0-in-pkg-golang-github-com-kube-logging-logging-operator",
-          "pkg-golang-golang-org-x-oauth2-v0-5-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          "pkg-golang-golang-org-x-oauth2-v0-5-0-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-golang-org-2Fx-2Foauth2-v0-21-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
         ]
       },
       "threats": [
@@ -798,6 +863,13 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-x-oauth2-v0-5-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-golang-org-2Fx-2Foauth2-v0-21-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ]
@@ -1559,6 +1631,18 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+          ]
         }
       ],
       "ids": [
@@ -1571,11 +1655,21 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32282 in pkg:golang/stdlib@v1.23.1 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.23.1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32282 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32282 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
         ]
       },
       "threats": [
@@ -1584,6 +1678,20 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ]
@@ -1595,6 +1703,18 @@
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ],
@@ -1608,11 +1728,21 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32288 in pkg:golang/stdlib@v1.23.1 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.23.1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32288 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-32288 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
         ]
       },
       "threats": [
@@ -1621,6 +1751,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ]
@@ -1632,6 +1776,18 @@
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ],
@@ -1645,11 +1801,21 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33811 in pkg:golang/stdlib@v1.23.1 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.23.1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33811 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33811 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
         ]
       },
       "threats": [
@@ -1658,6 +1824,20 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ]
@@ -1669,6 +1849,18 @@
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ],
@@ -1682,11 +1874,21 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39820 in pkg:golang/stdlib@v1.23.1 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.23.1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39820 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39820 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
         ]
       },
       "threats": [
@@ -1695,6 +1897,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ]
@@ -1706,6 +1922,18 @@
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ],
@@ -1719,11 +1947,21 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.23.1 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.23.1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39822 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
         ]
       },
       "threats": [
@@ -1732,6 +1970,20 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ]
@@ -1743,6 +1995,18 @@
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ],
@@ -1756,11 +2020,21 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39825 in pkg:golang/stdlib@v1.23.1 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.23.1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39825 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-39825 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
         ]
       },
       "threats": [
@@ -1769,6 +2043,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ]
@@ -1780,6 +2068,18 @@
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ],
@@ -1793,11 +2093,21 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42499 in pkg:golang/stdlib@v1.23.1 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.23.1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42499 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-42499 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
         ]
       },
       "threats": [
@@ -1806,6 +2116,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ]
@@ -1940,6 +2264,18 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+          ]
         }
       ],
       "ids": [
@@ -1960,13 +2296,23 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/stdlib@v1.23.1 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.23.1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-46600 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-golang-golang-org-2Fx-2Fnet-v0-29-0-in-pkg-golang-github-com-kube-logging-logging-operator",
           "pkg-golang-golang-org-x-net-v0-29-0-in-pkg-golang-github-com-kube-logging-logging-operator",
-          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
         ]
       },
       "threats": [
@@ -1989,6 +2335,20 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ]
@@ -2104,6 +2464,116 @@
       ]
     },
     {
+      "cve": "CVE-2026-56857",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6604"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56857 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56859",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6088"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56859 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-56859 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-78661",
       "flags": [
         {
@@ -2148,6 +2618,18 @@
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
+          ]
         }
       ],
       "ids": [
@@ -2160,11 +2642,21 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.23.1 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.23.1 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-78667 in pkg:golang/stdlib@v1.26.0 as a subcomponent of pkg:golang/github.com/kube-logging/logging-operator@v4.10.0_rancher.1-rc.1. It does not assert the status of pkg:golang/stdlib@v1.26.0 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
-          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator",
+          "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
         ]
       },
       "threats": [
@@ -2173,6 +2665,20 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-23-1-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-0-in-pkg-golang-github-com-kube-logging-logging-operator-v4-10-0-rancher-1-rc-1"
           ]
         }
       ]
