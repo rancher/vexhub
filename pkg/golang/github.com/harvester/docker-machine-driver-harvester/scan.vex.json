@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/harvester/docker-machine-driver-harvester",
     "tracking": {
-      "current_release_date": "2026-11-09T15:29:44Z",
+      "current_release_date": "2026-11-23T17:43:04Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -48,10 +48,15 @@
           "date": "2026-11-09T15:29:44Z",
           "number": "6",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-23T17:43:04Z",
+          "number": "7",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "6"
+      "version": "7"
     }
   },
   "product_tree": {
@@ -707,6 +712,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/go.opentelemetry.io/otel/trace@v1.44.0",
+        "product": {
+          "name": "pkg:golang/go.opentelemetry.io/otel/trace@v1.44.0",
+          "product_id": "pkg-golang-go-opentelemetry-io-otel-trace-v1-44-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/go.opentelemetry.io/otel/trace@v1.44.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/kubevirt.io/kubevirt@v1.7.4",
         "product": {
           "name": "pkg:golang/kubevirt.io/kubevirt@v1.7.4",
@@ -1065,6 +1081,17 @@
           "product_id": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0",
           "product_identification_helper": {
             "purl": "pkg:golang/golang.org%2Fx%2Fnet@v0.60.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.26.10",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.26.10",
+          "product_id": "pkg-golang-stdlib-v1-26-10",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.26.10"
           }
         }
       }
@@ -2054,6 +2081,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io/otel/trace@v1.44.0 as a component of pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "product_id": "pkg-golang-go-opentelemetry-io-otel-trace-v1-44-0-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-otel-trace-v1-44-0",
+        "relates_to_product_reference": "pkg-golang-github-com-harvester-docker-machine-driver-harvester"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/kubevirt.io/kubevirt@v1.7.4 as a component of pkg:golang/github.com/harvester/docker-machine-driver-harvester",
           "product_id": "pkg-golang-kubevirt-io-kubevirt-v1-7-4-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester"
         },
@@ -2644,6 +2680,15 @@
         },
         "product_reference": "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0",
         "relates_to_product_reference": "pkg-golang-github-com-harvester-docker-machine-driver-harvester-v1-1-1"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.26.10 as a component of pkg:golang/github.com/harvester/docker-machine-driver-harvester",
+          "product_id": "pkg-golang-stdlib-v1-26-10-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-26-10",
+        "relates_to_product_reference": "pkg-golang-github-com-harvester-docker-machine-driver-harvester"
       }
     ]
   },
@@ -9668,6 +9713,37 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-17-9-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester-v1-0-4"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-128085",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-otel-trace-v1-44-0-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "This is an transitive dependency not used by the Harvester Docker machine driver. This statement concerns CVE-2026-128085 in pkg:golang/go.opentelemetry.io/otel/trace@v1.44.0 as a subcomponent of pkg:golang/github.com/harvester/docker-machine-driver-harvester. It does not assert the status of pkg:golang/go.opentelemetry.io/otel/trace@v1.44.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-go-opentelemetry-io-otel-trace-v1-44-0-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-otel-trace-v1-44-0-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester"
           ]
         }
       ]
@@ -21871,6 +21947,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-golang-org-2Fx-2Fnet-v0-60-0-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester-v1-1-1"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-97054",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-10-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "The Harvester Docker machine driver does not use the affected MaxBytesReader or MaxBytesHandler handlers in its request path. This statement concerns CVE-2026-97054 in pkg:golang/stdlib@v1.26.10 as a subcomponent of pkg:golang/github.com/harvester/docker-machine-driver-harvester. It does not assert the status of pkg:golang/stdlib@v1.26.10 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-26-10-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-26-10-in-pkg-golang-github-com-harvester-docker-machine-driver-harvester"
           ]
         }
       ]
