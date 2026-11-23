@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts",
     "tracking": {
-      "current_release_date": "2026-11-08T20:49:39Z",
+      "current_release_date": "2026-11-23T22:18:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-11-08T20:49:39Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-23T22:18:59Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -49,6 +54,28 @@
           "product_id": "pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts",
           "product_identification_helper": {
             "purl": "pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libcrypto3",
+        "product": {
+          "name": "pkg:apk/alpine/libcrypto3",
+          "product_id": "pkg-apk-alpine-libcrypto3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libcrypto3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libssl3",
+        "product": {
+          "name": "pkg:apk/alpine/libssl3",
+          "product_id": "pkg-apk-alpine-libssl3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libssl3"
           }
         }
       },
@@ -87,28 +114,6 @@
       },
       {
         "category": "product_name",
-        "name": "pkg:apk/alpine/libcrypto3",
-        "product": {
-          "name": "pkg:apk/alpine/libcrypto3",
-          "product_id": "pkg-apk-alpine-libcrypto3",
-          "product_identification_helper": {
-            "purl": "pkg:apk/alpine/libcrypto3"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:apk/alpine/libssl3",
-        "product": {
-          "name": "pkg:apk/alpine/libssl3",
-          "product_id": "pkg-apk-alpine-libssl3",
-          "product_identification_helper": {
-            "purl": "pkg:apk/alpine/libssl3"
-          }
-        }
-      },
-      {
-        "category": "product_name",
         "name": "pkg:apk/alpine/zlib",
         "product": {
           "name": "pkg:apk/alpine/zlib",
@@ -120,6 +125,24 @@
       }
     ],
     "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libcrypto3 as a component of pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts",
+          "product_id": "pkg-apk-alpine-libcrypto3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+        },
+        "product_reference": "pkg-apk-alpine-libcrypto3",
+        "relates_to_product_reference": "pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libssl3 as a component of pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts",
+          "product_id": "pkg-apk-alpine-libssl3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+        },
+        "product_reference": "pkg-apk-alpine-libssl3",
+        "relates_to_product_reference": "pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -195,6 +218,55 @@
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-107496",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go binary entrypoint; libssl/libcrypto only used by apk and busybox ssl_client. This statement concerns CVE-2026-107496 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Static Go binary entrypoint; libssl/libcrypto only used by apk and busybox ssl_client. This statement concerns CVE-2026-107496 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        }
+      ]
+    },
     {
       "cve": "CVE-2026-107891",
       "flags": [
@@ -1295,6 +1367,104 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-zlib-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95691",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go binary entrypoint; libssl/libcrypto only used by apk and busybox ssl_client. This statement concerns CVE-2026-95691 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Static Go binary entrypoint; libssl/libcrypto only used by apk and busybox ssl_client. This statement concerns CVE-2026-95691 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95692",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go binary entrypoint; libssl/libcrypto only used by apk and busybox ssl_client. This statement concerns CVE-2026-95692 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Static Go binary entrypoint; libssl/libcrypto only used by apk and busybox ssl_client. This statement concerns CVE-2026-95692 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/whereabouts?repository_url=ghcr.io%2Fk8snetworkplumbingwg%2Fwhereabouts. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-whereabouts-repository-url-ghcr-io-2Fk8snetworkplumbingwg-2Fwhereabouts"
           ]
         }
       ]
