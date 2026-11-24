@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=index.docker.io%2Francher%2Fmirrored-kube-vip-kube-vip-iptables",
     "tracking": {
-      "current_release_date": "2026-11-23T22:18:59Z",
+      "current_release_date": "2026-11-24T01:58:37Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-11-23T22:18:59Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-24T01:58:37Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -104,6 +109,28 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:apk/alpine/musl",
+        "product": {
+          "name": "pkg:apk/alpine/musl",
+          "product_id": "pkg-apk-alpine-musl",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/musl"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/musl-utils",
+        "product": {
+          "name": "pkg:apk/alpine/musl-utils",
+          "product_id": "pkg-apk-alpine-musl-utils",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/musl-utils"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:apk/alpine/zlib",
         "product": {
           "name": "pkg:apk/alpine/zlib",
@@ -169,6 +196,24 @@
           "product_id": "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
         },
         "product_reference": "pkg-apk-alpine-libssl3",
+        "relates_to_product_reference": "pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/musl as a component of pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=index.docker.io%2Francher%2Fmirrored-kube-vip-kube-vip-iptables",
+          "product_id": "pkg-apk-alpine-musl-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+        },
+        "product_reference": "pkg-apk-alpine-musl",
+        "relates_to_product_reference": "pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/musl-utils as a component of pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=index.docker.io%2Francher%2Fmirrored-kube-vip-kube-vip-iptables",
+          "product_id": "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+        },
+        "product_reference": "pkg-apk-alpine-musl-utils",
         "relates_to_product_reference": "pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
       },
       {
@@ -656,6 +701,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-107891",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; musl libc is never loaded or executed at runtime. This statement concerns CVE-2026-107891 in pkg:apk/alpine/musl as a subcomponent of pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=index.docker.io%2Francher%2Fmirrored-kube-vip-kube-vip-iptables. It does not assert the status of pkg:apk/alpine/musl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; musl libc is never loaded or executed at runtime. This statement concerns CVE-2026-107891 in pkg:apk/alpine/musl-utils as a subcomponent of pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=index.docker.io%2Francher%2Fmirrored-kube-vip-kube-vip-iptables. It does not assert the status of pkg:apk/alpine/musl-utils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-musl-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables",
+          "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
           ]
         }
       ]
@@ -1262,6 +1356,55 @@
       ]
     },
     {
+      "cve": "CVE-2026-40200",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; musl libc is never loaded or executed at runtime. This statement concerns CVE-2026-40200 in pkg:apk/alpine/musl as a subcomponent of pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=index.docker.io%2Francher%2Fmirrored-kube-vip-kube-vip-iptables. It does not assert the status of pkg:apk/alpine/musl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; musl libc is never loaded or executed at runtime. This statement concerns CVE-2026-40200 in pkg:apk/alpine/musl-utils as a subcomponent of pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=index.docker.io%2Francher%2Fmirrored-kube-vip-kube-vip-iptables. It does not assert the status of pkg:apk/alpine/musl-utils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-musl-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables",
+          "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-42764",
       "flags": [
         {
@@ -1435,6 +1578,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-zlib-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-6042",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; musl libc is never loaded or executed at runtime. This statement concerns CVE-2026-6042 in pkg:apk/alpine/musl as a subcomponent of pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=index.docker.io%2Francher%2Fmirrored-kube-vip-kube-vip-iptables. It does not assert the status of pkg:apk/alpine/musl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; musl libc is never loaded or executed at runtime. This statement concerns CVE-2026-6042 in pkg:apk/alpine/musl-utils as a subcomponent of pkg:oci/mirrored-kube-vip-kube-vip-iptables?repository_url=index.docker.io%2Francher%2Fmirrored-kube-vip-kube-vip-iptables. It does not assert the status of pkg:apk/alpine/musl-utils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-musl-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables",
+          "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-kube-vip-kube-vip-iptables-repository-url-index-docker-io-2Francher-2Fmirrored-kube-vip-kube-vip-iptables"
           ]
         }
       ]
