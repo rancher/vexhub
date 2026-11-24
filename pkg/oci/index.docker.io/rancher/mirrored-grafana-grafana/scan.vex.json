@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-grafana-grafana?repository_url=index.docker.io%2Francher%2Fmirrored-grafana-grafana",
     "tracking": {
-      "current_release_date": "2026-11-23T22:18:59Z",
+      "current_release_date": "2026-11-24T01:58:37Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-11-23T22:18:59Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-24T01:58:37Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -132,6 +137,28 @@
           "product_id": "pkg-apk-alpine-c-ares",
           "product_identification_helper": {
             "purl": "pkg:apk/alpine/c-ares"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/musl",
+        "product": {
+          "name": "pkg:apk/alpine/musl",
+          "product_id": "pkg-apk-alpine-musl",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/musl"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/musl-utils",
+        "product": {
+          "name": "pkg:apk/alpine/musl-utils",
+          "product_id": "pkg-apk-alpine-musl-utils",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/musl-utils"
           }
         }
       },
@@ -240,6 +267,24 @@
           "product_id": "pkg-apk-alpine-c-ares-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
         },
         "product_reference": "pkg-apk-alpine-c-ares",
+        "relates_to_product_reference": "pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/musl as a component of pkg:oci/mirrored-grafana-grafana?repository_url=index.docker.io%2Francher%2Fmirrored-grafana-grafana",
+          "product_id": "pkg-apk-alpine-musl-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+        },
+        "product_reference": "pkg-apk-alpine-musl",
+        "relates_to_product_reference": "pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/musl-utils as a component of pkg:oci/mirrored-grafana-grafana?repository_url=index.docker.io%2Francher%2Fmirrored-grafana-grafana",
+          "product_id": "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+        },
+        "product_reference": "pkg-apk-alpine-musl-utils",
         "relates_to_product_reference": "pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
       },
       {
@@ -856,6 +901,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-107891",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Grafana binaries are static Go; musl regcomp/qsort/iconv paths are unreachable at runtime. This statement concerns CVE-2026-107891 in pkg:apk/alpine/musl as a subcomponent of pkg:oci/mirrored-grafana-grafana?repository_url=index.docker.io%2Francher%2Fmirrored-grafana-grafana. It does not assert the status of pkg:apk/alpine/musl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Grafana binaries are static Go; musl regcomp/qsort/iconv paths are unreachable at runtime. This statement concerns CVE-2026-107891 in pkg:apk/alpine/musl-utils as a subcomponent of pkg:oci/mirrored-grafana-grafana?repository_url=index.docker.io%2Francher%2Fmirrored-grafana-grafana. It does not assert the status of pkg:apk/alpine/musl-utils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-musl-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana",
+          "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
           ]
         }
       ]
@@ -1604,6 +1698,55 @@
       ]
     },
     {
+      "cve": "CVE-2026-40200",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Grafana binaries are static Go; musl regcomp/qsort/iconv paths are unreachable at runtime. This statement concerns CVE-2026-40200 in pkg:apk/alpine/musl as a subcomponent of pkg:oci/mirrored-grafana-grafana?repository_url=index.docker.io%2Francher%2Fmirrored-grafana-grafana. It does not assert the status of pkg:apk/alpine/musl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Grafana binaries are static Go; musl regcomp/qsort/iconv paths are unreachable at runtime. This statement concerns CVE-2026-40200 in pkg:apk/alpine/musl-utils as a subcomponent of pkg:oci/mirrored-grafana-grafana?repository_url=index.docker.io%2Francher%2Fmirrored-grafana-grafana. It does not assert the status of pkg:apk/alpine/musl-utils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-musl-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana",
+          "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-45445",
       "flags": [
         {
@@ -1973,6 +2116,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libcurl-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-6042",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Grafana binaries are static Go; musl regcomp/qsort/iconv paths are unreachable at runtime. This statement concerns CVE-2026-6042 in pkg:apk/alpine/musl as a subcomponent of pkg:oci/mirrored-grafana-grafana?repository_url=index.docker.io%2Francher%2Fmirrored-grafana-grafana. It does not assert the status of pkg:apk/alpine/musl when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Grafana binaries are static Go; musl regcomp/qsort/iconv paths are unreachable at runtime. This statement concerns CVE-2026-6042 in pkg:apk/alpine/musl-utils as a subcomponent of pkg:oci/mirrored-grafana-grafana?repository_url=index.docker.io%2Francher%2Fmirrored-grafana-grafana. It does not assert the status of pkg:apk/alpine/musl-utils when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-musl-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana",
+          "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-grafana-grafana-repository-url-index-docker-io-2Francher-2Fmirrored-grafana-grafana"
           ]
         }
       ]
