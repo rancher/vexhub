@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=registry.rancher.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
     "tracking": {
-      "current_release_date": "2026-11-23T19:03:14Z",
+      "current_release_date": "2026-11-26T13:36:06Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -43,10 +43,15 @@
           "date": "2026-11-23T19:03:14Z",
           "number": "5",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T13:36:06Z",
+          "number": "6",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -213,6 +218,17 @@
           "product_id": "pkg-rpm-photon-ncurses-libs",
           "product_identification_helper": {
             "purl": "pkg:rpm/photon/ncurses-libs"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/photon/glibc",
+        "product": {
+          "name": "pkg:rpm/photon/glibc",
+          "product_id": "pkg-rpm-photon-glibc",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/photon/glibc"
           }
         }
       },
@@ -399,6 +415,15 @@
         },
         "product_reference": "pkg-rpm-photon-ncurses-libs",
         "relates_to_product_reference": "pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-registry-rancher-com-rancher-mirrored-cloud-provider-vsphere-csi-release-syncer"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/photon/glibc as a component of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=registry.rancher.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
+          "product_id": "pkg-rpm-photon-glibc-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-registry-rancher-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+        },
+        "product_reference": "pkg-rpm-photon-glibc",
+        "relates_to_product_reference": "pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-registry-rancher-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
       },
       {
         "category": "default_component_of",
@@ -3867,6 +3892,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-0915",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-glibc-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-registry-rancher-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint vsphere-syncer is a static Go binary; glibc getnetbyaddr and scanf are never executed. This statement concerns CVE-2026-0915 in pkg:rpm/photon/glibc as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=registry.rancher.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer. It does not assert the status of pkg:rpm/photon/glibc when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-glibc-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-registry-rancher-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-glibc-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-registry-rancher-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-102633",
       "flags": [
         {
@@ -5930,6 +5986,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-photon-expat-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-registry-rancher-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-5450",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-glibc-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-registry-rancher-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint vsphere-syncer is a static Go binary; glibc getnetbyaddr and scanf are never executed. This statement concerns CVE-2026-5450 in pkg:rpm/photon/glibc as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=registry.rancher.com%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer. It does not assert the status of pkg:rpm/photon/glibc when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-glibc-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-registry-rancher-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-glibc-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-registry-rancher-com-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
           ]
         }
       ]
