@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-calico-node?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-calico-node",
     "tracking": {
-      "current_release_date": "2026-11-26T05:51:51Z",
+      "current_release_date": "2026-11-26T13:36:06Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-11-26T05:51:51Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T13:36:06Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -164,6 +169,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:rpm/redhat/systemd-libs",
+        "product": {
+          "name": "pkg:rpm/redhat/systemd-libs",
+          "product_id": "pkg-rpm-redhat-systemd-libs",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/redhat/systemd-libs"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:rpm/redhat/util-linux",
         "product": {
           "name": "pkg:rpm/redhat/util-linux",
@@ -181,17 +197,6 @@
           "product_id": "pkg-rpm-redhat-util-linux-core",
           "product_identification_helper": {
             "purl": "pkg:rpm/redhat/util-linux-core"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:rpm/redhat/systemd-libs",
-        "product": {
-          "name": "pkg:rpm/redhat/systemd-libs",
-          "product_id": "pkg-rpm-redhat-systemd-libs",
-          "product_identification_helper": {
-            "purl": "pkg:rpm/redhat/systemd-libs"
           }
         }
       },
@@ -356,6 +361,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:rpm/redhat/systemd-libs as a component of pkg:oci/mirrored-calico-node?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-calico-node",
+          "product_id": "pkg-rpm-redhat-systemd-libs-in-pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
+        },
+        "product_reference": "pkg-rpm-redhat-systemd-libs",
+        "relates_to_product_reference": "pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:rpm/redhat/libpcap as a component of pkg:oci/mirrored-calico-node?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-calico-node",
           "product_id": "pkg-rpm-redhat-libpcap-in-pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
         },
@@ -378,15 +392,6 @@
           "product_id": "pkg-rpm-redhat-util-linux-core-in-pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
         },
         "product_reference": "pkg-rpm-redhat-util-linux-core",
-        "relates_to_product_reference": "pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:rpm/redhat/systemd-libs as a component of pkg:oci/mirrored-calico-node?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-calico-node",
-          "product_id": "pkg-rpm-redhat-systemd-libs-in-pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
-        },
-        "product_reference": "pkg-rpm-redhat-systemd-libs",
         "relates_to_product_reference": "pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
       },
       {
@@ -812,6 +817,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-125709",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-libgcc-in-pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "The flaw is in libstdc++ file stream buffering; no libstdc++ is shipped in the image. This statement concerns CVE-2026-125709 in pkg:rpm/redhat/libgcc as a subcomponent of pkg:oci/mirrored-calico-node?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-calico-node. It does not assert the status of pkg:rpm/redhat/libgcc when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-libgcc-in-pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-libgcc-in-pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-14456",
       "flags": [
         {
@@ -838,6 +874,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-redhat-openssl-libs-in-pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-rancher-mirrored-calico-node"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-15059",
+      "flags": [
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-systemd-libs-in-pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "No systemd binaries or libsystemd/libudev shared objects exist in the image; only unit files remain. This statement concerns CVE-2026-15059 in pkg:rpm/redhat/systemd-libs as a subcomponent of pkg:oci/mirrored-calico-node?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-calico-node. It does not assert the status of pkg:rpm/redhat/systemd-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-systemd-libs-in-pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "component_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-systemd-libs-in-pkg-oci-mirrored-calico-node-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-calico-node"
           ]
         }
       ]
