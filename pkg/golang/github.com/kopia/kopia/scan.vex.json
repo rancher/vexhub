@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/kopia/kopia",
     "tracking": {
-      "current_release_date": "2026-11-23T07:00:20Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-11-23T07:00:20Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:golang/github.com/kopia/kopia"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -44,12 +49,12 @@
       },
       {
         "category": "product_name",
-        "name": "pkg:golang/stdlib@v1.25.11",
+        "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0",
         "product": {
-          "name": "pkg:golang/stdlib@v1.25.11",
-          "product_id": "pkg-golang-stdlib-v1-25-11",
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0",
           "product_identification_helper": {
-            "purl": "pkg:golang/stdlib@v1.25.11"
+            "purl": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0"
           }
         }
       },
@@ -61,6 +66,17 @@
           "product_id": "pkg-golang-github-com-kopia-kopia-v0-23-1",
           "product_identification_helper": {
             "purl": "pkg:golang/github.com/kopia/kopia@v0.23.1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.25.11",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.25.11",
+          "product_id": "pkg-golang-stdlib-v1-25-11",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.25.11"
           }
         }
       },
@@ -110,6 +126,24 @@
       }
     ],
     "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 as a component of pkg:golang/github.com/kopia/kopia",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-kopia-kopia"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0",
+        "relates_to_product_reference": "pkg-golang-github-com-kopia-kopia"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 as a component of pkg:golang/github.com/kopia/kopia@v0.23.1",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-kopia-kopia-v0-23-1"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0",
+        "relates_to_product_reference": "pkg-golang-github-com-kopia-kopia-v0-23-1"
+      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -203,6 +237,65 @@
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-128086",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-kopia-kopia"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-kopia-kopia-v0-23-1"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6975"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-rrfc-gjm9-cgrj"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-128086 in pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 as a subcomponent of pkg:golang/github.com/kopia/kopia. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-128086 in pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 as a subcomponent of pkg:golang/github.com/kopia/kopia@v0.23.1. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-kopia-kopia",
+          "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-kopia-kopia-v0-23-1"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-kopia-kopia"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-kopia-kopia-v0-23-1"
+          ]
+        }
+      ]
+    },
     {
       "cve": "CVE-2026-39822",
       "flags": [

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx",
     "tracking": {
-      "current_release_date": "2026-11-24T01:58:37Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-24T01:58:37Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -81,12 +86,45 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:apk/alpine/ssl_client",
+        "product": {
+          "name": "pkg:apk/alpine/ssl_client",
+          "product_id": "pkg-apk-alpine-ssl-client",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/ssl_client"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:apk/alpine/libxslt",
         "product": {
           "name": "pkg:apk/alpine/libxslt",
           "product_id": "pkg-apk-alpine-libxslt",
           "product_identification_helper": {
             "purl": "pkg:apk/alpine/libxslt"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libcrypto3",
+        "product": {
+          "name": "pkg:apk/alpine/libcrypto3",
+          "product_id": "pkg-apk-alpine-libcrypto3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libcrypto3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libssl3",
+        "product": {
+          "name": "pkg:apk/alpine/libssl3",
+          "product_id": "pkg-apk-alpine-libssl3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libssl3"
           }
         }
       },
@@ -223,10 +261,37 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:apk/alpine/ssl_client as a component of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx",
+          "product_id": "pkg-apk-alpine-ssl-client-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        },
+        "product_reference": "pkg-apk-alpine-ssl-client",
+        "relates_to_product_reference": "pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:apk/alpine/libxslt as a component of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx",
           "product_id": "pkg-apk-alpine-libxslt-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
         },
         "product_reference": "pkg-apk-alpine-libxslt",
+        "relates_to_product_reference": "pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libcrypto3 as a component of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx",
+          "product_id": "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        },
+        "product_reference": "pkg-apk-alpine-libcrypto3",
+        "relates_to_product_reference": "pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libssl3 as a component of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx",
+          "product_id": "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        },
+        "product_reference": "pkg-apk-alpine-libssl3",
         "relates_to_product_reference": "pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
       },
       {
@@ -336,6 +401,12 @@
           "product_ids": [
             "pkg-apk-alpine-busybox-binsh-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-ssl-client-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
         }
       ],
       "notes": [
@@ -346,12 +417,17 @@
         {
           "category": "description",
           "text": "BusyBox netstat applet is never invoked by the container entrypoint. This statement concerns CVE-2024-58251 in pkg:apk/alpine/busybox-binsh as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/busybox-binsh when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "busybox netstat local TTY escape issue; netstat never run in container. This statement concerns CVE-2024-58251 in pkg:apk/alpine/ssl_client as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/ssl_client when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-apk-alpine-busybox-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
-          "pkg-apk-alpine-busybox-binsh-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          "pkg-apk-alpine-busybox-binsh-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-ssl-client-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
         ]
       },
       "threats": [
@@ -367,6 +443,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-busybox-binsh-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-ssl-client-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
           ]
         }
       ]
@@ -398,6 +481,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libxslt-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-11187",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "PKCS#12 PBMAC1 parsing; nginx never parses PKCS#12 files. This statement concerns CVE-2025-11187 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "PKCS#12 PBMAC1 parsing; nginx never parses PKCS#12 files. This statement concerns CVE-2025-11187 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
           ]
         }
       ]
@@ -478,6 +610,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libuuid-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-15467",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CMS EnvelopedData parsing unused by nginx. This statement concerns CVE-2025-15467 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CMS EnvelopedData parsing unused by nginx. This statement concerns CVE-2025-15467 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
           ]
         }
       ]
@@ -824,6 +1005,104 @@
       ]
     },
     {
+      "cve": "CVE-2025-69419",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "PKCS12_get_friendlyname not called by nginx. This statement concerns CVE-2025-69419 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "PKCS12_get_friendlyname not called by nginx. This statement concerns CVE-2025-69419 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-69421",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "PKCS12_item_decrypt_d2i_ex not reachable in nginx. This statement concerns CVE-2025-69421 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "PKCS12_item_decrypt_d2i_ex not reachable in nginx. This statement concerns CVE-2025-69421 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2025-9086",
       "flags": [
         {
@@ -868,6 +1147,104 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libcurl-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-9230",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CMS PWRI decryption unused by nginx. This statement concerns CVE-2025-9230 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CMS PWRI decryption unused by nginx. This statement concerns CVE-2025-9230 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-9231",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "SM2 signing; no SM2 keys. This statement concerns CVE-2025-9231 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "SM2 signing; no SM2 keys. This statement concerns CVE-2025-9231 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
           ]
         }
       ]
@@ -948,6 +1325,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libcurl-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-107496",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CMS_encrypt() never called by nginx. This statement concerns CVE-2026-107496 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CMS_encrypt() never called by nginx. This statement concerns CVE-2026-107496 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
           ]
         }
       ]
@@ -1384,6 +1810,104 @@
       ]
     },
     {
+      "cve": "CVE-2026-14456",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OpenSSL QUIC listener unused; nginx serves plain HTTP/1.1. This statement concerns CVE-2026-14456 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "OpenSSL QUIC listener unused; nginx serves plain HTTP/1.1. This statement concerns CVE-2026-14456 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-18798",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OpenSSL QUIC server stack not used by nginx. This statement concerns CVE-2026-18798 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "OpenSSL QUIC server stack not used by nginx. This statement concerns CVE-2026-18798 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-1965",
       "flags": [
         {
@@ -1606,6 +2130,55 @@
       ]
     },
     {
+      "cve": "CVE-2026-2673",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "TLS1.3 group selection; no TLS server configured. This statement concerns CVE-2026-2673 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "TLS1.3 group selection; no TLS server configured. This statement concerns CVE-2026-2673 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-27456",
       "flags": [
         {
@@ -1632,6 +2205,251 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libuuid-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-28387",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "DANE TLSA client code never used by nginx. This statement concerns CVE-2026-28387 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "DANE TLSA client code never used by nginx. This statement concerns CVE-2026-28387 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-28388",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Delta CRL processing requires X.509 verification; none enabled. This statement concerns CVE-2026-28388 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Delta CRL processing requires X.509 verification; none enabled. This statement concerns CVE-2026-28388 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-28389",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CMS KeyAgreeRecipientInfo parsing unused. This statement concerns CVE-2026-28389 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CMS KeyAgreeRecipientInfo parsing unused. This statement concerns CVE-2026-28389 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-28390",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CMS KeyTransRecipientInfo parsing unused. This statement concerns CVE-2026-28390 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CMS KeyTransRecipientInfo parsing unused. This statement concerns CVE-2026-28390 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-31790",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "RSASVE KEM encapsulation not used by nginx. This statement concerns CVE-2026-31790 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "RSASVE KEM encapsulation not used by nginx. This statement concerns CVE-2026-31790 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
           ]
         }
       ]
@@ -1818,6 +2636,104 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libpng-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-34182",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CMS AuthEnvelopedData validation unused. This statement concerns CVE-2026-34182 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CMS AuthEnvelopedData validation unused. This statement concerns CVE-2026-34182 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-34183",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "QUIC PATH_CHALLENGE handler; OpenSSL QUIC not used. This statement concerns CVE-2026-34183 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "QUIC PATH_CHALLENGE handler; OpenSSL QUIC not used. This statement concerns CVE-2026-34183 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
           ]
         }
       ]
@@ -2032,6 +2948,55 @@
       ]
     },
     {
+      "cve": "CVE-2026-42764",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "QUIC server initial packet handling not used. This statement concerns CVE-2026-42764 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "QUIC server initial packet handling not used. This statement concerns CVE-2026-42764 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-4367",
       "flags": [
         {
@@ -2089,6 +3054,104 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libexpat-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-45445",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "AES-OCB via EVP_Cipher() not used by nginx. This statement concerns CVE-2026-45445 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "AES-OCB via EVP_Cipher() not used by nginx. This statement concerns CVE-2026-45445 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-45447",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "PKCS7_verify/S-MIME never called by nginx. This statement concerns CVE-2026-45447 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "PKCS7_verify/S-MIME never called by nginx. This statement concerns CVE-2026-45447 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
           ]
         }
       ]
@@ -2892,6 +3955,104 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libcurl-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-63072",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CMS key unwrap path unused by nginx. This statement concerns CVE-2026-63072 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CMS key unwrap path unused by nginx. This statement concerns CVE-2026-63072 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-63076",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OpenSSL CMP client/server not used by nginx. This statement concerns CVE-2026-63076 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "OpenSSL CMP client/server not used by nginx. This statement concerns CVE-2026-63076 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
           ]
         }
       ]
@@ -4115,6 +5276,104 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libcurl-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95691",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "QUIC CRYPTO frame handling; no QUIC client in nginx. This statement concerns CVE-2026-95691 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "QUIC CRYPTO frame handling; no QUIC client in nginx. This statement concerns CVE-2026-95691 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95692",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "AES-GCM-SIV cipher not used by nginx. This statement concerns CVE-2026-95692 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "AES-GCM-SIV cipher not used by nginx. This statement concerns CVE-2026-95692 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-library-nginx?repository_url=registry.suse.com%2Francher%2Fmirrored-library-nginx. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-library-nginx-repository-url-registry-suse-com-2Francher-2Fmirrored-library-nginx"
           ]
         }
       ]

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/local-path-provisioner?repository_url=registry.suse.com%2Francher%2Flocal-path-provisioner",
     "tracking": {
-      "current_release_date": "2026-11-22T00:15:40Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-11-22T00:15:40Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -136,24 +141,6 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "pkg:apk/alpine/musl as a component of pkg:oci/local-path-provisioner?repository_url=registry.suse.com%2Francher%2Flocal-path-provisioner",
-          "product_id": "pkg-apk-alpine-musl-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
-        },
-        "product_reference": "pkg-apk-alpine-musl",
-        "relates_to_product_reference": "pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:apk/alpine/musl-utils as a component of pkg:oci/local-path-provisioner?repository_url=registry.suse.com%2Francher%2Flocal-path-provisioner",
-          "product_id": "pkg-apk-alpine-musl-utils-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
-        },
-        "product_reference": "pkg-apk-alpine-musl-utils",
-        "relates_to_product_reference": "pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
           "name": "pkg:apk/alpine/libcrypto3 as a component of pkg:oci/local-path-provisioner?repository_url=registry.suse.com%2Francher%2Flocal-path-provisioner",
           "product_id": "pkg-apk-alpine-libcrypto3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
         },
@@ -167,6 +154,24 @@
           "product_id": "pkg-apk-alpine-libssl3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
         },
         "product_reference": "pkg-apk-alpine-libssl3",
+        "relates_to_product_reference": "pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/musl as a component of pkg:oci/local-path-provisioner?repository_url=registry.suse.com%2Francher%2Flocal-path-provisioner",
+          "product_id": "pkg-apk-alpine-musl-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+        },
+        "product_reference": "pkg-apk-alpine-musl",
+        "relates_to_product_reference": "pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/musl-utils as a component of pkg:oci/local-path-provisioner?repository_url=registry.suse.com%2Francher%2Flocal-path-provisioner",
+          "product_id": "pkg-apk-alpine-musl-utils-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+        },
+        "product_reference": "pkg-apk-alpine-musl-utils",
         "relates_to_product_reference": "pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
       },
       {
@@ -734,6 +739,55 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-libssl3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-rancher-local-path-provisioner"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-107496",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go binary; OpenSSL only linked by unused busybox ssl_client/c_rehash apk helpers. This statement concerns CVE-2026-107496 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/local-path-provisioner?repository_url=registry.suse.com%2Francher%2Flocal-path-provisioner. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Static Go binary; OpenSSL only linked by unused busybox ssl_client/c_rehash apk helpers. This statement concerns CVE-2026-107496 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/local-path-provisioner?repository_url=registry.suse.com%2Francher%2Flocal-path-provisioner. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
           ]
         }
       ]
@@ -1740,6 +1794,104 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-zlib-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95691",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go binary; OpenSSL only linked by unused busybox ssl_client/c_rehash apk helpers. This statement concerns CVE-2026-95691 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/local-path-provisioner?repository_url=registry.suse.com%2Francher%2Flocal-path-provisioner. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Static Go binary; OpenSSL only linked by unused busybox ssl_client/c_rehash apk helpers. This statement concerns CVE-2026-95691 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/local-path-provisioner?repository_url=registry.suse.com%2Francher%2Flocal-path-provisioner. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95692",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go binary; OpenSSL only linked by unused busybox ssl_client/c_rehash apk helpers. This statement concerns CVE-2026-95692 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/local-path-provisioner?repository_url=registry.suse.com%2Francher%2Flocal-path-provisioner. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Static Go binary; OpenSSL only linked by unused busybox ssl_client/c_rehash apk helpers. This statement concerns CVE-2026-95692 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/local-path-provisioner?repository_url=registry.suse.com%2Francher%2Flocal-path-provisioner. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-local-path-provisioner-repository-url-registry-suse-com-2Francher-2Flocal-path-provisioner"
           ]
         }
       ]

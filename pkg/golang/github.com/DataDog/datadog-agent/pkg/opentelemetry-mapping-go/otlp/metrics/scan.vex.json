@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/DataDog/datadog-agent/pkg/opentelemetry-mapping-go/otlp/metrics",
     "tracking": {
-      "current_release_date": "2026-10-21T04:27:47Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-21T04:27:47Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -77,6 +82,28 @@
           "product_id": "pkg-golang-stdlib-v1-26-6",
           "product_identification_helper": {
             "purl": "pkg:golang/stdlib@v1.26.6"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Ftrace@v1.45.0",
+        "product": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Ftrace@v1.45.0",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Ftrace-v1-45-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/go.opentelemetry.io%2Fotel%2Ftrace@v1.45.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.45.0",
+        "product": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.45.0",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-45-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/go.opentelemetry.io%2Fotel@v1.45.0"
           }
         }
       },
@@ -195,6 +222,24 @@
           "product_id": "pkg-golang-stdlib-v1-26-6-in-pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
         },
         "product_reference": "pkg-golang-stdlib-v1-26-6",
+        "relates_to_product_reference": "pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Ftrace@v1.45.0 as a component of pkg:golang/github.com/DataDog/datadog-agent/pkg/opentelemetry-mapping-go/otlp/metrics",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Ftrace-v1-45-0-in-pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-2Ftrace-v1-45-0",
+        "relates_to_product_reference": "pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.45.0 as a component of pkg:golang/github.com/DataDog/datadog-agent/pkg/opentelemetry-mapping-go/otlp/metrics",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-45-0-in-pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-45-0",
         "relates_to_product_reference": "pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
       },
       {
@@ -601,6 +646,88 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-26-6-in-pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-128085",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-2Ftrace-v1-45-0-in-pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6974"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-q7gw-24fr-5p69"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-128085 in pkg:golang/go.opentelemetry.io%2Fotel%2Ftrace@v1.45.0 as a subcomponent of pkg:golang/github.com/DataDog/datadog-agent/pkg/opentelemetry-mapping-go/otlp/metrics. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel%2Ftrace@v1.45.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-go-opentelemetry-io-2Fotel-2Ftrace-v1-45-0-in-pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-2Ftrace-v1-45-0-in-pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-128086",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-45-0-in-pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6975"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-rrfc-gjm9-cgrj"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-128086 in pkg:golang/go.opentelemetry.io%2Fotel@v1.45.0 as a subcomponent of pkg:golang/github.com/DataDog/datadog-agent/pkg/opentelemetry-mapping-go/otlp/metrics. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel@v1.45.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-go-opentelemetry-io-2Fotel-v1-45-0-in-pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-45-0-in-pkg-golang-github-com-DataDog-datadog-agent-pkg-opentelemetry-mapping-go-otlp-metrics"
           ]
         }
       ]

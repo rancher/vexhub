@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/harvester/kubeovn-operator",
     "tracking": {
-      "current_release_date": "2026-11-09T00:16:48Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-09T00:16:48Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -164,6 +169,17 @@
           "product_id": "pkg-golang-golang-org-x-crypto-v0-36-0",
           "product_identification_helper": {
             "purl": "pkg:golang/golang.org/x/crypto@v0.36.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0",
+        "product": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0"
           }
         }
       },
@@ -520,6 +536,24 @@
         },
         "product_reference": "pkg-golang-golang-org-x-crypto-v0-36-0",
         "relates_to_product_reference": "pkg-golang-github-com-harvester-kubeovn-operator-v1-15-4-r2"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 as a component of pkg:golang/github.com/harvester/kubeovn-operator",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-harvester-kubeovn-operator"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0",
+        "relates_to_product_reference": "pkg-golang-github-com-harvester-kubeovn-operator"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 as a component of pkg:golang/github.com/harvester/kubeovn-operator@v1.16.2",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-harvester-kubeovn-operator-v1-16-2"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0",
+        "relates_to_product_reference": "pkg-golang-github-com-harvester-kubeovn-operator-v1-16-2"
       },
       {
         "category": "default_component_of",
@@ -1561,6 +1595,65 @@
       ]
     },
     {
+      "cve": "CVE-2026-128086",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-harvester-kubeovn-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-harvester-kubeovn-operator-v1-16-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6975"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-rrfc-gjm9-cgrj"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-128086 in pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 as a subcomponent of pkg:golang/github.com/harvester/kubeovn-operator. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-128086 in pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 as a subcomponent of pkg:golang/github.com/harvester/kubeovn-operator@v1.16.2. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-harvester-kubeovn-operator",
+          "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-harvester-kubeovn-operator-v1-16-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-harvester-kubeovn-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-github-com-harvester-kubeovn-operator-v1-16-2"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-25680",
       "flags": [
         {
@@ -1780,6 +1873,124 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-google-golang-org-grpc-v1-72-1-in-pkg-golang-github-com-harvester-kubeovn-operator-v1-15-4-r2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-33997",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdocker-v27-0-3-incompatible-in-pkg-golang-github-com-harvester-kubeovn-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdocker-v27-0-3-incompatible-in-pkg-golang-github-com-harvester-kubeovn-operator-v1-16-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-4883"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-pxq6-2prw-chj9"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33997 in pkg:golang/github.com%2Fdocker%2Fdocker@v27.0.3+incompatible as a subcomponent of pkg:golang/github.com/harvester/kubeovn-operator. It does not assert the status of pkg:golang/github.com%2Fdocker%2Fdocker@v27.0.3+incompatible when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-33997 in pkg:golang/github.com%2Fdocker%2Fdocker@v27.0.3+incompatible as a subcomponent of pkg:golang/github.com/harvester/kubeovn-operator@v1.16.2. It does not assert the status of pkg:golang/github.com%2Fdocker%2Fdocker@v27.0.3+incompatible when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-2Fdocker-2Fdocker-v27-0-3-incompatible-in-pkg-golang-github-com-harvester-kubeovn-operator",
+          "pkg-golang-github-com-2Fdocker-2Fdocker-v27-0-3-incompatible-in-pkg-golang-github-com-harvester-kubeovn-operator-v1-16-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdocker-v27-0-3-incompatible-in-pkg-golang-github-com-harvester-kubeovn-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdocker-v27-0-3-incompatible-in-pkg-golang-github-com-harvester-kubeovn-operator-v1-16-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-34040",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdocker-v27-0-3-incompatible-in-pkg-golang-github-com-harvester-kubeovn-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdocker-v27-0-3-incompatible-in-pkg-golang-github-com-harvester-kubeovn-operator-v1-16-2"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-4887"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-x744-4wpc-v9h2"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-34040 in pkg:golang/github.com%2Fdocker%2Fdocker@v27.0.3+incompatible as a subcomponent of pkg:golang/github.com/harvester/kubeovn-operator. It does not assert the status of pkg:golang/github.com%2Fdocker%2Fdocker@v27.0.3+incompatible when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-34040 in pkg:golang/github.com%2Fdocker%2Fdocker@v27.0.3+incompatible as a subcomponent of pkg:golang/github.com/harvester/kubeovn-operator@v1.16.2. It does not assert the status of pkg:golang/github.com%2Fdocker%2Fdocker@v27.0.3+incompatible when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-2Fdocker-2Fdocker-v27-0-3-incompatible-in-pkg-golang-github-com-harvester-kubeovn-operator",
+          "pkg-golang-github-com-2Fdocker-2Fdocker-v27-0-3-incompatible-in-pkg-golang-github-com-harvester-kubeovn-operator-v1-16-2"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdocker-v27-0-3-incompatible-in-pkg-golang-github-com-harvester-kubeovn-operator"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fdocker-2Fdocker-v27-0-3-incompatible-in-pkg-golang-github-com-harvester-kubeovn-operator-v1-16-2"
           ]
         }
       ]

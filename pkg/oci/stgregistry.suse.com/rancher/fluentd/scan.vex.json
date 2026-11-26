@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/fluentd?repository_url=stgregistry.suse.com%2Francher%2Ffluentd",
     "tracking": {
-      "current_release_date": "2026-11-23T23:27:18Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-11-23T23:27:18Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/fluentd?repository_url=stgregistry.suse.com%2Francher%2Ffluentd"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -52,6 +57,28 @@
             "purl": "pkg:gem/rack@3.0.18"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:gem/net-imap@0.4.25",
+        "product": {
+          "name": "pkg:gem/net-imap@0.4.25",
+          "product_id": "pkg-gem-net-imap-0-4-25",
+          "product_identification_helper": {
+            "purl": "pkg:gem/net-imap@0.4.25"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:gem/mail@2.8.1",
+        "product": {
+          "name": "pkg:gem/mail@2.8.1",
+          "product_id": "pkg-gem-mail-2-8-1",
+          "product_identification_helper": {
+            "purl": "pkg:gem/mail@2.8.1"
+          }
+        }
       }
     ],
     "relationships": [
@@ -62,6 +89,24 @@
           "product_id": "pkg-gem-rack-3-0-18-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
         },
         "product_reference": "pkg-gem-rack-3-0-18",
+        "relates_to_product_reference": "pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:gem/net-imap@0.4.25 as a component of pkg:oci/fluentd?repository_url=stgregistry.suse.com%2Francher%2Ffluentd",
+          "product_id": "pkg-gem-net-imap-0-4-25-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+        },
+        "product_reference": "pkg-gem-net-imap-0-4-25",
+        "relates_to_product_reference": "pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:gem/mail@2.8.1 as a component of pkg:oci/fluentd?repository_url=stgregistry.suse.com%2Francher%2Ffluentd",
+          "product_id": "pkg-gem-mail-2-8-1-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+        },
+        "product_reference": "pkg-gem-mail-2-8-1",
         "relates_to_product_reference": "pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
       }
     ]
@@ -342,6 +387,99 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-gem-rack-3-0-18-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-47240",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-gem-net-imap-0-4-25-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Gem is transitive dep of unused mail/IMAP plugins; fluentd entrypoint config never requires it. This statement concerns CVE-2026-47240 in pkg:gem/net-imap@0.4.25 as a subcomponent of pkg:oci/fluentd?repository_url=stgregistry.suse.com%2Francher%2Ffluentd. It does not assert the status of pkg:gem/net-imap@0.4.25 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-gem-net-imap-0-4-25-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-gem-net-imap-0-4-25-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-47242",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-gem-net-imap-0-4-25-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Gem is transitive dep of unused mail/IMAP plugins; fluentd entrypoint config never requires it. This statement concerns CVE-2026-47242 in pkg:gem/net-imap@0.4.25 as a subcomponent of pkg:oci/fluentd?repository_url=stgregistry.suse.com%2Francher%2Ffluentd. It does not assert the status of pkg:gem/net-imap@0.4.25 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-gem-net-imap-0-4-25-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-gem-net-imap-0-4-25-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-63435",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-gem-mail-2-8-1-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Gem is transitive dep of unused mail/IMAP plugins; fluentd entrypoint config never requires it. This statement concerns CVE-2026-63435 in pkg:gem/mail@2.8.1 as a subcomponent of pkg:oci/fluentd?repository_url=stgregistry.suse.com%2Francher%2Ffluentd. It does not assert the status of pkg:gem/mail@2.8.1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-gem-mail-2-8-1-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-gem-mail-2-8-1-in-pkg-oci-fluentd-repository-url-stgregistry-suse-com-2Francher-2Ffluentd"
           ]
         }
       ]

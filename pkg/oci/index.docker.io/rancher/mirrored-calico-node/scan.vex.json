@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-calico-node?repository_url=index.docker.io%2Francher%2Fmirrored-calico-node",
     "tracking": {
-      "current_release_date": "2026-11-24T01:58:37Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -43,10 +43,15 @@
           "date": "2026-11-24T01:58:37Z",
           "number": "5",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "6",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -130,6 +135,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:rpm/redhat/openssl-libs",
+        "product": {
+          "name": "pkg:rpm/redhat/openssl-libs",
+          "product_id": "pkg-rpm-redhat-openssl-libs",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/redhat/openssl-libs"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:rpm/redhat/libgcc",
         "product": {
           "name": "pkg:rpm/redhat/libgcc",
@@ -163,17 +179,6 @@
       },
       {
         "category": "product_name",
-        "name": "pkg:rpm/redhat/openssl-libs",
-        "product": {
-          "name": "pkg:rpm/redhat/openssl-libs",
-          "product_id": "pkg-rpm-redhat-openssl-libs",
-          "product_identification_helper": {
-            "purl": "pkg:rpm/redhat/openssl-libs"
-          }
-        }
-      },
-      {
-        "category": "product_name",
         "name": "pkg:rpm/redhat/util-linux",
         "product": {
           "name": "pkg:rpm/redhat/util-linux",
@@ -191,6 +196,17 @@
           "product_id": "pkg-rpm-redhat-util-linux-core",
           "product_identification_helper": {
             "purl": "pkg:rpm/redhat/util-linux-core"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/redhat/systemd-libs",
+        "product": {
+          "name": "pkg:rpm/redhat/systemd-libs",
+          "product_id": "pkg-rpm-redhat-systemd-libs",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/redhat/systemd-libs"
           }
         }
       },
@@ -310,6 +326,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:rpm/redhat/openssl-libs as a component of pkg:oci/mirrored-calico-node?repository_url=index.docker.io%2Francher%2Fmirrored-calico-node",
+          "product_id": "pkg-rpm-redhat-openssl-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+        },
+        "product_reference": "pkg-rpm-redhat-openssl-libs",
+        "relates_to_product_reference": "pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:rpm/redhat/libgcc as a component of pkg:oci/mirrored-calico-node?repository_url=index.docker.io%2Francher%2Fmirrored-calico-node",
           "product_id": "pkg-rpm-redhat-libgcc-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
         },
@@ -368,6 +393,15 @@
           "product_id": "pkg-rpm-redhat-util-linux-core-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
         },
         "product_reference": "pkg-rpm-redhat-util-linux-core",
+        "relates_to_product_reference": "pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/redhat/systemd-libs as a component of pkg:oci/mirrored-calico-node?repository_url=index.docker.io%2Francher%2Fmirrored-calico-node",
+          "product_id": "pkg-rpm-redhat-systemd-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+        },
+        "product_reference": "pkg-rpm-redhat-systemd-libs",
         "relates_to_product_reference": "pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
       },
       {
@@ -628,6 +662,37 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-redhat-pcre2-syntax-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-rancher-mirrored-calico-node"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-107496",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-openssl-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "calico-node is Go/crypto-tls; no CMS_encrypt use. This statement concerns CVE-2026-107496 in pkg:rpm/redhat/openssl-libs as a subcomponent of pkg:oci/mirrored-calico-node?repository_url=index.docker.io%2Francher%2Fmirrored-calico-node. It does not assert the status of pkg:rpm/redhat/openssl-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-openssl-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-openssl-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
           ]
         }
       ]
@@ -1051,6 +1116,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-4105",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-systemd-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Flaw is in systemd-machined RegisterMachine D-Bus; machined not present/not run in image. This statement concerns CVE-2026-4105 in pkg:rpm/redhat/systemd-libs as a subcomponent of pkg:oci/mirrored-calico-node?repository_url=index.docker.io%2Francher%2Fmirrored-calico-node. It does not assert the status of pkg:rpm/redhat/systemd-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-systemd-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-rpm-redhat-systemd-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-41991",
       "flags": [
         {
@@ -1348,6 +1444,37 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-redhat-glibc-minimal-langpack-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-56391",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-coreutils-single-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "uniq -w with attacker-controlled args; runit services (felix/bird/confd) never invoke uniq. This statement concerns CVE-2026-56391 in pkg:rpm/redhat/coreutils-single as a subcomponent of pkg:oci/mirrored-calico-node?repository_url=index.docker.io%2Francher%2Fmirrored-calico-node. It does not assert the status of pkg:rpm/redhat/coreutils-single when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-coreutils-single-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-coreutils-single-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
           ]
         }
       ]
@@ -1807,6 +1934,37 @@
       ]
     },
     {
+      "cve": "CVE-2026-84786",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-openssl-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "DANE/TLSA client path unused; calico/bird do not link libssl. This statement concerns CVE-2026-84786 in pkg:rpm/redhat/openssl-libs as a subcomponent of pkg:oci/mirrored-calico-node?repository_url=index.docker.io%2Francher%2Fmirrored-calico-node. It does not assert the status of pkg:rpm/redhat/openssl-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-openssl-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-openssl-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-86145",
       "flags": [
         {
@@ -2145,6 +2303,37 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-redhat-pcre2-syntax-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-rancher-mirrored-calico-node"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95690",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-openssl-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "DTLS reassembly path; no DTLS and no libssl usage by calico-node services. This statement concerns CVE-2026-95690 in pkg:rpm/redhat/openssl-libs as a subcomponent of pkg:oci/mirrored-calico-node?repository_url=index.docker.io%2Francher%2Fmirrored-calico-node. It does not assert the status of pkg:rpm/redhat/openssl-libs when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-redhat-openssl-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-redhat-openssl-libs-in-pkg-oci-mirrored-calico-node-repository-url-index-docker-io-2Francher-2Fmirrored-calico-node"
           ]
         }
       ]

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/google/cadvisor",
     "tracking": {
-      "current_release_date": "2026-10-28T05:26:50Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-28T05:26:50Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -198,6 +203,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0 as a component of pkg:golang/github.com/google/cadvisor@v0.60.5-k3s1",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-github-com-google-cadvisor-v0-60-5-k3s1"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0",
+        "relates_to_product_reference": "pkg-golang-github-com-google-cadvisor-v0-60-5-k3s1"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/go.opentelemetry.io/otel@v1.43.0 as a component of pkg:golang/github.com/google/cadvisor",
           "product_id": "pkg-golang-go-opentelemetry-io-otel-v1-43-0-in-pkg-golang-github-com-google-cadvisor"
         },
@@ -212,15 +226,6 @@
         },
         "product_reference": "pkg-golang-go-opentelemetry-io-otel-v1-43-0",
         "relates_to_product_reference": "pkg-golang-github-com-google-cadvisor-v0-60-5"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0 as a component of pkg:golang/github.com/google/cadvisor@v0.60.5-k3s1",
-          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-github-com-google-cadvisor-v0-60-5-k3s1"
-        },
-        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0",
-        "relates_to_product_reference": "pkg-golang-github-com-google-cadvisor-v0-60-5-k3s1"
       },
       {
         "category": "default_component_of",
@@ -701,6 +706,120 @@
         {
           "category": "impact",
           "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-0-in-pkg-golang-github-com-google-cadvisor-v0-60-5-k3s1"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-128086",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-github-com-google-cadvisor"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-github-com-google-cadvisor-v0-60-5-k3s1"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6975"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-rrfc-gjm9-cgrj"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-128086 in pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0 as a subcomponent of pkg:golang/github.com/google/cadvisor. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-128086 in pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0 as a subcomponent of pkg:golang/github.com/google/cadvisor@v0.60.5-k3s1. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-github-com-google-cadvisor",
+          "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-github-com-google-cadvisor-v0-60-5-k3s1"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-github-com-google-cadvisor"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-github-com-google-cadvisor-v0-60-5-k3s1"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27139",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-0-in-pkg-golang-github-com-google-cadvisor"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-0-in-pkg-golang-github-com-google-cadvisor-v0-60-5-k3s1"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-4602"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27139 in pkg:golang/stdlib@v1.25.0 as a subcomponent of pkg:golang/github.com/google/cadvisor. It does not assert the status of pkg:golang/stdlib@v1.25.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27139 in pkg:golang/stdlib@v1.25.0 as a subcomponent of pkg:golang/github.com/google/cadvisor@v0.60.5-k3s1. It does not assert the status of pkg:golang/stdlib@v1.25.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-25-0-in-pkg-golang-github-com-google-cadvisor",
+          "pkg-golang-stdlib-v1-25-0-in-pkg-golang-github-com-google-cadvisor-v0-60-5-k3s1"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-0-in-pkg-golang-github-com-google-cadvisor"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-stdlib-v1-25-0-in-pkg-golang-github-com-google-cadvisor-v0-60-5-k3s1"
           ]

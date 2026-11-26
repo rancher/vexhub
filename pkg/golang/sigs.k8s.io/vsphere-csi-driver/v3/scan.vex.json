@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3",
     "tracking": {
-      "current_release_date": "2026-10-28T05:26:50Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-28T05:26:50Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -247,6 +252,28 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0",
+        "product": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3@v3.8.0",
+        "product": {
+          "name": "pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3@v3.8.0",
+          "product_id": "pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3-v3-8-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3@v3.8.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/stdlib@v1.26.3",
         "product": {
           "name": "pkg:golang/stdlib@v1.26.3",
@@ -352,17 +379,6 @@
           "product_id": "pkg-golang-golang-org-x-text-v0-23-0",
           "product_identification_helper": {
             "purl": "pkg:golang/golang.org/x/text@v0.23.0"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3@v3.8.0",
-        "product": {
-          "name": "pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3@v3.8.0",
-          "product_id": "pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3-v3-8-0",
-          "product_identification_helper": {
-            "purl": "pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3@v3.8.0"
           }
         }
       },
@@ -606,6 +622,24 @@
         },
         "product_reference": "pkg-golang-stdlib-v1-24-10",
         "relates_to_product_reference": "pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 as a component of pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0",
+        "relates_to_product_reference": "pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 as a component of pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3@v3.8.0",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3-v3-8-0"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0",
+        "relates_to_product_reference": "pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3-v3-8-0"
       },
       {
         "category": "default_component_of",
@@ -2074,6 +2108,65 @@
       ]
     },
     {
+      "cve": "CVE-2026-128086",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3-v3-8-0"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6975"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-rrfc-gjm9-cgrj"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-128086 in pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 as a subcomponent of pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-128086 in pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 as a subcomponent of pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3@v3.8.0. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel@v1.44.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3",
+          "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3-v3-8-0"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-44-0-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3-v3-8-0"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-25680",
       "flags": [
         {
@@ -2396,6 +2489,61 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-x-net-v0-42-0-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27139",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-21-12-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-21-8-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-4602"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27139 in pkg:golang/stdlib@v1.21.12 as a subcomponent of pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3. It does not assert the status of pkg:golang/stdlib@v1.21.12 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27139 in pkg:golang/stdlib@v1.21.8 as a subcomponent of pkg:golang/sigs.k8s.io/vsphere-csi-driver/v3. It does not assert the status of pkg:golang/stdlib@v1.21.8 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-21-12-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3",
+          "pkg-golang-stdlib-v1-21-8-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-21-12-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-21-8-in-pkg-golang-sigs-k8s-io-vsphere-csi-driver-v3"
           ]
         }
       ]
