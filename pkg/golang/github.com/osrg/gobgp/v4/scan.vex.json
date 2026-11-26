@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/osrg/gobgp/v4",
     "tracking": {
-      "current_release_date": "2026-11-23T07:00:20Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-23T07:00:20Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -98,6 +103,17 @@
           "product_id": "pkg-golang-golang-org-x-net-v0-48-0",
           "product_identification_helper": {
             "purl": "pkg:golang/golang.org/x/net@v0.48.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/stdlib@v1.25.7",
+        "product": {
+          "name": "pkg:golang/stdlib@v1.25.7",
+          "product_id": "pkg-golang-stdlib-v1-25-7",
+          "product_identification_helper": {
+            "purl": "pkg:golang/stdlib@v1.25.7"
           }
         }
       },
@@ -164,17 +180,6 @@
           "product_id": "pkg-golang-github-com-osrg-gobgp-v4-v4-4-0",
           "product_identification_helper": {
             "purl": "pkg:golang/github.com/osrg/gobgp/v4@v4.4.0"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:golang/stdlib@v1.25.7",
-        "product": {
-          "name": "pkg:golang/stdlib@v1.25.7",
-          "product_id": "pkg-golang-stdlib-v1-25-7",
-          "product_identification_helper": {
-            "purl": "pkg:golang/stdlib@v1.25.7"
           }
         }
       },
@@ -395,6 +400,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/stdlib@v1.25.7 as a component of pkg:golang/github.com/osrg/gobgp/v4",
+          "product_id": "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-osrg-gobgp-v4"
+        },
+        "product_reference": "pkg-golang-stdlib-v1-25-7",
+        "relates_to_product_reference": "pkg-golang-github-com-osrg-gobgp-v4"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/github.com%2Fosrg%2Fgobgp%2Fv4@v4.1.0 as a component of pkg:golang/github.com/osrg/gobgp/v4",
           "product_id": "pkg-golang-github-com-2Fosrg-2Fgobgp-2Fv4-v4-1-0-in-pkg-golang-github-com-osrg-gobgp-v4"
         },
@@ -444,15 +458,6 @@
           "product_id": "pkg-golang-github-com-osrg-gobgp-v4-v4-4-0-in-pkg-golang-github-com-osrg-gobgp-v4"
         },
         "product_reference": "pkg-golang-github-com-osrg-gobgp-v4-v4-4-0",
-        "relates_to_product_reference": "pkg-golang-github-com-osrg-gobgp-v4"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:golang/stdlib@v1.25.7 as a component of pkg:golang/github.com/osrg/gobgp/v4",
-          "product_id": "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-osrg-gobgp-v4"
-        },
-        "product_reference": "pkg-golang-stdlib-v1-25-7",
         "relates_to_product_reference": "pkg-golang-github-com-osrg-gobgp-v4"
       },
       {
@@ -981,6 +986,43 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-x-net-v0-48-0-in-pkg-golang-github-com-osrg-gobgp-v4"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27139",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-osrg-gobgp-v4"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-4602"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27139 in pkg:golang/stdlib@v1.25.7 as a subcomponent of pkg:golang/github.com/osrg/gobgp/v4. It does not assert the status of pkg:golang/stdlib@v1.25.7 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-osrg-gobgp-v4"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-25-7-in-pkg-golang-github-com-osrg-gobgp-v4"
           ]
         }
       ]

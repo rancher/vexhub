@@ -1,0 +1,107 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/longhorn-ui?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-ui",
+    "tracking": {
+      "current_release_date": "2026-11-26T05:51:51Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/longhorn-ui?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-ui",
+      "initial_release_date": "2026-11-26T05:51:51Z",
+      "revision_history": [
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/longhorn-ui?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-ui"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/longhorn-ui?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-ui",
+        "product": {
+          "name": "pkg:oci/longhorn-ui?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-ui",
+          "product_id": "pkg-oci-longhorn-ui-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-ui",
+          "product_identification_helper": {
+            "purl": "pkg:oci/longhorn-ui?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-ui"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libtiff5",
+        "product": {
+          "name": "pkg:rpm/suse/libtiff5",
+          "product_id": "pkg-rpm-suse-libtiff5",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libtiff5"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libtiff5 as a component of pkg:oci/longhorn-ui?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-ui",
+          "product_id": "pkg-rpm-suse-libtiff5-in-pkg-oci-longhorn-ui-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-ui"
+        },
+        "product_reference": "pkg-rpm-suse-libtiff5",
+        "relates_to_product_reference": "pkg-oci-longhorn-ui-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-ui"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libtiff5-in-pkg-oci-longhorn-ui-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-ui"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5221-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Flaw is in the rgb2ycbcr CLI; image is an nginx static file server and ships no libtiff utilities. This statement concerns SUSE-SU-2026:5221-1 in pkg:rpm/suse/libtiff5 as a subcomponent of pkg:oci/longhorn-ui?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-ui. It does not assert the status of pkg:rpm/suse/libtiff5 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libtiff5-in-pkg-oci-longhorn-ui-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-ui"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libtiff5-in-pkg-oci-longhorn-ui-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-ui"
+          ]
+        }
+      ]
+    }
+  ]
+}

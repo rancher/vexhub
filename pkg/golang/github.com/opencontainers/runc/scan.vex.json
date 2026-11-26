@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/github.com/opencontainers/runc",
     "tracking": {
-      "current_release_date": "2026-11-12T04:41:47Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-12T04:41:47Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -362,6 +367,28 @@
           "product_id": "pkg-golang-stdlib-v1-25-6",
           "product_identification_helper": {
             "purl": "pkg:golang/stdlib@v1.25.6"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com%2Fcilium%2Febpf@v0.17.3",
+        "product": {
+          "name": "pkg:golang/github.com%2Fcilium%2Febpf@v0.17.3",
+          "product_id": "pkg-golang-github-com-2Fcilium-2Febpf-v0-17-3",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com%2Fcilium%2Febpf@v0.17.3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/github.com/opencontainers/runc@v1.5.3",
+        "product": {
+          "name": "pkg:golang/github.com/opencontainers/runc@v1.5.3",
+          "product_id": "pkg-golang-github-com-opencontainers-runc-v1-5-3",
+          "product_identification_helper": {
+            "purl": "pkg:golang/github.com/opencontainers/runc@v1.5.3"
           }
         }
       },
@@ -949,6 +976,24 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/github.com%2Fcilium%2Febpf@v0.17.3 as a component of pkg:golang/github.com/opencontainers/runc",
+          "product_id": "pkg-golang-github-com-2Fcilium-2Febpf-v0-17-3-in-pkg-golang-github-com-opencontainers-runc"
+        },
+        "product_reference": "pkg-golang-github-com-2Fcilium-2Febpf-v0-17-3",
+        "relates_to_product_reference": "pkg-golang-github-com-opencontainers-runc"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com%2Fcilium%2Febpf@v0.17.3 as a component of pkg:golang/github.com/opencontainers/runc@v1.5.3",
+          "product_id": "pkg-golang-github-com-2Fcilium-2Febpf-v0-17-3-in-pkg-golang-github-com-opencontainers-runc-v1-5-3"
+        },
+        "product_reference": "pkg-golang-github-com-2Fcilium-2Febpf-v0-17-3",
+        "relates_to_product_reference": "pkg-golang-github-com-opencontainers-runc-v1-5-3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/stdlib@v1.24.13 as a component of pkg:golang/github.com/opencontainers/runc",
           "product_id": "pkg-golang-stdlib-v1-24-13-in-pkg-golang-github-com-opencontainers-runc"
         },
@@ -1413,6 +1458,15 @@
         },
         "product_reference": "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0",
         "relates_to_product_reference": "pkg-golang-github-com-opencontainers-runc-v1-4-3"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/github.com%2Fmoby%2Fsys%2Fuser@v0.4.0 as a component of pkg:golang/github.com/opencontainers/runc@v1.5.3",
+          "product_id": "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0-in-pkg-golang-github-com-opencontainers-runc-v1-5-3"
+        },
+        "product_reference": "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0",
+        "relates_to_product_reference": "pkg-golang-github-com-opencontainers-runc-v1-5-3"
       },
       {
         "category": "default_component_of",
@@ -6442,6 +6496,65 @@
       ]
     },
     {
+      "cve": "CVE-2026-10722",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fcilium-2Febpf-v0-17-3-in-pkg-golang-github-com-opencontainers-runc"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fcilium-2Febpf-v0-17-3-in-pkg-golang-github-com-opencontainers-runc-v1-5-3"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6238"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-xhgw-qwwf-pg32"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-10722 in pkg:golang/github.com%2Fcilium%2Febpf@v0.17.3 as a subcomponent of pkg:golang/github.com/opencontainers/runc. It does not assert the status of pkg:golang/github.com%2Fcilium%2Febpf@v0.17.3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-10722 in pkg:golang/github.com%2Fcilium%2Febpf@v0.17.3 as a subcomponent of pkg:golang/github.com/opencontainers/runc@v1.5.3. It does not assert the status of pkg:golang/github.com%2Fcilium%2Febpf@v0.17.3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-github-com-2Fcilium-2Febpf-v0-17-3-in-pkg-golang-github-com-opencontainers-runc",
+          "pkg-golang-github-com-2Fcilium-2Febpf-v0-17-3-in-pkg-golang-github-com-opencontainers-runc-v1-5-3"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fcilium-2Febpf-v0-17-3-in-pkg-golang-github-com-opencontainers-runc"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-github-com-2Fcilium-2Febpf-v0-17-3-in-pkg-golang-github-com-opencontainers-runc-v1-5-3"
+          ]
+        }
+      ]
+    },
+    {
       "cve": "CVE-2026-111943",
       "flags": [
         {
@@ -7072,6 +7185,133 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-golang-org-x-net-v0-43-0-in-pkg-golang-github-com-opencontainers-runc-v1-4-2"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-27139",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-24-13-in-pkg-golang-github-com-opencontainers-runc"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-24-2-in-pkg-golang-github-com-opencontainers-runc"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-opencontainers-runc"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-24-2-in-pkg-golang-github-com-opencontainers-runc-v1-2-6"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-opencontainers-runc-v1-3-1"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-24-13-in-pkg-golang-github-com-opencontainers-runc-v1-4-0"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-4602"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27139 in pkg:golang/stdlib@v1.24.13 as a subcomponent of pkg:golang/github.com/opencontainers/runc. It does not assert the status of pkg:golang/stdlib@v1.24.13 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27139 in pkg:golang/stdlib@v1.24.2 as a subcomponent of pkg:golang/github.com/opencontainers/runc. It does not assert the status of pkg:golang/stdlib@v1.24.2 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27139 in pkg:golang/stdlib@v1.24.6 as a subcomponent of pkg:golang/github.com/opencontainers/runc. It does not assert the status of pkg:golang/stdlib@v1.24.6 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27139 in pkg:golang/stdlib@v1.24.2 as a subcomponent of pkg:golang/github.com/opencontainers/runc@v1.2.6. It does not assert the status of pkg:golang/stdlib@v1.24.2 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27139 in pkg:golang/stdlib@v1.24.6 as a subcomponent of pkg:golang/github.com/opencontainers/runc@v1.3.1. It does not assert the status of pkg:golang/stdlib@v1.24.6 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-27139 in pkg:golang/stdlib@v1.24.13 as a subcomponent of pkg:golang/github.com/opencontainers/runc@v1.4.0. It does not assert the status of pkg:golang/stdlib@v1.24.13 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-stdlib-v1-24-13-in-pkg-golang-github-com-opencontainers-runc",
+          "pkg-golang-stdlib-v1-24-2-in-pkg-golang-github-com-opencontainers-runc",
+          "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-opencontainers-runc",
+          "pkg-golang-stdlib-v1-24-2-in-pkg-golang-github-com-opencontainers-runc-v1-2-6",
+          "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-opencontainers-runc-v1-3-1",
+          "pkg-golang-stdlib-v1-24-13-in-pkg-golang-github-com-opencontainers-runc-v1-4-0"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-24-13-in-pkg-golang-github-com-opencontainers-runc"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-24-2-in-pkg-golang-github-com-opencontainers-runc"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-opencontainers-runc"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-24-2-in-pkg-golang-github-com-opencontainers-runc-v1-2-6"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-24-6-in-pkg-golang-github-com-opencontainers-runc-v1-3-1"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-stdlib-v1-24-13-in-pkg-golang-github-com-opencontainers-runc-v1-4-0"
           ]
         }
       ]
@@ -18451,6 +18691,12 @@
           "product_ids": [
             "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0-in-pkg-golang-github-com-opencontainers-runc-v1-4-3"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0-in-pkg-golang-github-com-opencontainers-runc-v1-5-3"
+          ]
         }
       ],
       "ids": [
@@ -18479,6 +18725,10 @@
         {
           "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-61801 in pkg:golang/github.com%2Fmoby%2Fsys%2Fuser@v0.4.0 as a subcomponent of pkg:golang/github.com/opencontainers/runc@v1.4.3. It does not assert the status of pkg:golang/github.com%2Fmoby%2Fsys%2Fuser@v0.4.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-61801 in pkg:golang/github.com%2Fmoby%2Fsys%2Fuser@v0.4.0 as a subcomponent of pkg:golang/github.com/opencontainers/runc@v1.5.3. It does not assert the status of pkg:golang/github.com%2Fmoby%2Fsys%2Fuser@v0.4.0 when used independently or in other products."
         }
       ],
       "product_status": {
@@ -18486,7 +18736,8 @@
           "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0-in-pkg-golang-github-com-opencontainers-runc",
           "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0-in-pkg-golang-github-com-opencontainers-runc-v1-4-0",
           "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0-in-pkg-golang-github-com-opencontainers-runc-v1-4-2",
-          "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0-in-pkg-golang-github-com-opencontainers-runc-v1-4-3"
+          "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0-in-pkg-golang-github-com-opencontainers-runc-v1-4-3",
+          "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0-in-pkg-golang-github-com-opencontainers-runc-v1-5-3"
         ]
       },
       "threats": [
@@ -18516,6 +18767,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0-in-pkg-golang-github-com-opencontainers-runc-v1-4-3"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-github-com-2Fmoby-2Fsys-2Fuser-v0-4-0-in-pkg-golang-github-com-opencontainers-runc-v1-5-3"
           ]
         }
       ]

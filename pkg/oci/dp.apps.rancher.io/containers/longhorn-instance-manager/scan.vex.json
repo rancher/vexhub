@@ -1,0 +1,145 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/longhorn-instance-manager?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-instance-manager",
+    "tracking": {
+      "current_release_date": "2026-11-26T05:51:51Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/longhorn-instance-manager?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-instance-manager",
+      "initial_release_date": "2026-11-26T05:51:51Z",
+      "revision_history": [
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/longhorn-instance-manager?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-instance-manager"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/longhorn-instance-manager?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-instance-manager",
+        "product": {
+          "name": "pkg:oci/longhorn-instance-manager?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-instance-manager",
+          "product_id": "pkg-oci-longhorn-instance-manager-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-instance-manager",
+          "product_identification_helper": {
+            "purl": "pkg:oci/longhorn-instance-manager?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-instance-manager"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libpython3_6m1_0",
+        "product": {
+          "name": "pkg:rpm/suse/libpython3_6m1_0",
+          "product_id": "pkg-rpm-suse-libpython3-6m1-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpython3_6m1_0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/python3-base",
+        "product": {
+          "name": "pkg:rpm/suse/python3-base",
+          "product_id": "pkg-rpm-suse-python3-base",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/python3-base"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpython3_6m1_0 as a component of pkg:oci/longhorn-instance-manager?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-instance-manager",
+          "product_id": "pkg-rpm-suse-libpython3-6m1-0-in-pkg-oci-longhorn-instance-manager-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-instance-manager"
+        },
+        "product_reference": "pkg-rpm-suse-libpython3-6m1-0",
+        "relates_to_product_reference": "pkg-oci-longhorn-instance-manager-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-instance-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/python3-base as a component of pkg:oci/longhorn-instance-manager?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-instance-manager",
+          "product_id": "pkg-rpm-suse-python3-base-in-pkg-oci-longhorn-instance-manager-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-instance-manager"
+        },
+        "product_reference": "pkg-rpm-suse-python3-base",
+        "relates_to_product_reference": "pkg-oci-longhorn-instance-manager-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-instance-manager"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpython3-6m1-0-in-pkg-oci-longhorn-instance-manager-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-instance-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-python3-base-in-pkg-oci-longhorn-instance-manager-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-instance-manager"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5251-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Python 3.6 is an unused SLES base dep; longhorn Go binaries and tgt scripts never invoke python. This statement concerns SUSE-SU-2026:5251-1 in pkg:rpm/suse/libpython3_6m1_0 as a subcomponent of pkg:oci/longhorn-instance-manager?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-instance-manager. It does not assert the status of pkg:rpm/suse/libpython3_6m1_0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Python 3.6 is an unused SLES base dep; longhorn Go binaries and tgt scripts never invoke python. This statement concerns SUSE-SU-2026:5251-1 in pkg:rpm/suse/python3-base as a subcomponent of pkg:oci/longhorn-instance-manager?repository_url=dp.apps.rancher.io%2Fcontainers%2Flonghorn-instance-manager. It does not assert the status of pkg:rpm/suse/python3-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpython3-6m1-0-in-pkg-oci-longhorn-instance-manager-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-instance-manager",
+          "pkg-rpm-suse-python3-base-in-pkg-oci-longhorn-instance-manager-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-instance-manager"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpython3-6m1-0-in-pkg-oci-longhorn-instance-manager-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-instance-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-python3-base-in-pkg-oci-longhorn-instance-manager-repository-url-dp-apps-rancher-io-2Fcontainers-2Flonghorn-instance-manager"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/k8s.io/dns",
     "tracking": {
-      "current_release_date": "2026-11-06T11:22:40Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-11-06T11:22:40Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -417,6 +422,28 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Ftrace@v1.43.0",
+        "product": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Ftrace@v1.43.0",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Ftrace-v1-43-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/go.opentelemetry.io%2Fotel%2Ftrace@v1.43.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0",
+        "product": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/go.opentelemetry.io/otel/sdk@v1.37.0",
         "product": {
           "name": "pkg:golang/go.opentelemetry.io/otel/sdk@v1.37.0",
@@ -621,17 +648,6 @@
           "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-37-0",
           "product_identification_helper": {
             "purl": "pkg:golang/go.opentelemetry.io%2Fotel@v1.37.0"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0",
-        "product": {
-          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0",
-          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0",
-          "product_identification_helper": {
-            "purl": "pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0"
           }
         }
       },
@@ -1201,6 +1217,24 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Ftrace@v1.43.0 as a component of pkg:golang/k8s.io/dns",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Ftrace-v1-43-0-in-pkg-golang-k8s-io-dns"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-2Ftrace-v1-43-0",
+        "relates_to_product_reference": "pkg-golang-k8s-io-dns"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0 as a component of pkg:golang/k8s.io/dns",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-k8s-io-dns"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0",
+        "relates_to_product_reference": "pkg-golang-k8s-io-dns"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/go.opentelemetry.io/otel/sdk@v1.37.0 as a component of pkg:golang/k8s.io/dns",
           "product_id": "pkg-golang-go-opentelemetry-io-otel-sdk-v1-37-0-in-pkg-golang-k8s-io-dns"
         },
@@ -1367,15 +1401,6 @@
           "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-37-0-in-pkg-golang-k8s-io-dns"
         },
         "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-37-0",
-        "relates_to_product_reference": "pkg-golang-k8s-io-dns"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0 as a component of pkg:golang/k8s.io/dns",
-          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-k8s-io-dns"
-        },
-        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0",
         "relates_to_product_reference": "pkg-golang-k8s-io-dns"
       },
       {
@@ -4617,6 +4642,88 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-github-com-2Fklauspost-2Fcompress-v1-18-4-in-pkg-golang-k8s-io-dns"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-128085",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-2Ftrace-v1-43-0-in-pkg-golang-k8s-io-dns"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6974"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-q7gw-24fr-5p69"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-128085 in pkg:golang/go.opentelemetry.io%2Fotel%2Ftrace@v1.43.0 as a subcomponent of pkg:golang/k8s.io/dns. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel%2Ftrace@v1.43.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-go-opentelemetry-io-2Fotel-2Ftrace-v1-43-0-in-pkg-golang-k8s-io-dns"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-2Ftrace-v1-43-0-in-pkg-golang-k8s-io-dns"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-128086",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-k8s-io-dns"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "GO",
+          "text": "GO-2026-6975"
+        },
+        {
+          "system_name": "GHSA",
+          "text": "GHSA-rrfc-gjm9-cgrj"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-128086 in pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0 as a subcomponent of pkg:golang/k8s.io/dns. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel@v1.43.0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-k8s-io-dns"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_present",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-v1-43-0-in-pkg-golang-k8s-io-dns"
           ]
         }
       ]

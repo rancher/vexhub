@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/longhorn-ui?repository_url=registry.suse.com%2Flonghornio%2Flonghorn-ui",
     "tracking": {
-      "current_release_date": "2026-11-20T22:07:06Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -48,10 +48,15 @@
           "date": "2026-11-20T22:07:06Z",
           "number": "6",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "7",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "6"
+      "version": "7"
     }
   },
   "product_tree": {
@@ -561,6 +566,17 @@
             "purl": "pkg:rpm/suse/curl"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/nginx",
+        "product": {
+          "name": "pkg:rpm/suse/nginx",
+          "product_id": "pkg-rpm-suse-nginx",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/nginx"
+          }
+        }
       }
     ],
     "relationships": [
@@ -976,6 +992,15 @@
           "product_id": "pkg-rpm-suse-libcurl4-in-pkg-oci-longhorn-ui-repository-url-registry-suse-com-2Flonghornio-2Flonghorn-ui"
         },
         "product_reference": "pkg-rpm-suse-libcurl4",
+        "relates_to_product_reference": "pkg-oci-longhorn-ui-repository-url-registry-suse-com-2Flonghornio-2Flonghorn-ui"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/nginx as a component of pkg:oci/longhorn-ui?repository_url=registry.suse.com%2Flonghornio%2Flonghorn-ui",
+          "product_id": "pkg-rpm-suse-nginx-in-pkg-oci-longhorn-ui-repository-url-registry-suse-com-2Flonghornio-2Flonghorn-ui"
+        },
+        "product_reference": "pkg-rpm-suse-nginx",
         "relates_to_product_reference": "pkg-oci-longhorn-ui-repository-url-registry-suse-com-2Flonghornio-2Flonghorn-ui"
       }
     ]
@@ -4127,6 +4152,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libtiff5-in-pkg-oci-longhorn-ui-repository-url-registry-suse-com-2Flonghornio-2Flonghorn-ui"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-nginx-in-pkg-oci-longhorn-ui-repository-url-registry-suse-com-2Flonghornio-2Flonghorn-ui"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5415-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "nginx serves plain HTTP only: no TLS. This statement concerns SUSE-SU-2026:5415-1 in pkg:rpm/suse/nginx as a subcomponent of pkg:oci/longhorn-ui?repository_url=registry.suse.com%2Flonghornio%2Flonghorn-ui. It does not assert the status of pkg:rpm/suse/nginx when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-nginx-in-pkg-oci-longhorn-ui-repository-url-registry-suse-com-2Flonghornio-2Flonghorn-ui"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-nginx-in-pkg-oci-longhorn-ui-repository-url-registry-suse-com-2Flonghornio-2Flonghorn-ui"
           ]
         }
       ]

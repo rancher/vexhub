@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-cilium-hubble-ui",
     "tracking": {
-      "current_release_date": "2026-11-23T23:27:18Z",
+      "current_release_date": "2026-11-26T05:51:51Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,14 +23,52 @@
           "date": "2026-11-23T23:27:18Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com/rancher/mirrored-cilium-hubble-ui"
+        },
+        {
+          "date": "2026-11-26T05:51:51Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-cilium-hubble-ui",
+        "product": {
+          "name": "pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-cilium-hubble-ui",
+          "product_id": "pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui",
+          "product_identification_helper": {
+            "purl": "pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-cilium-hubble-ui"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libcrypto3",
+        "product": {
+          "name": "pkg:apk/alpine/libcrypto3",
+          "product_id": "pkg-apk-alpine-libcrypto3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libcrypto3"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:apk/alpine/libssl3",
+        "product": {
+          "name": "pkg:apk/alpine/libssl3",
+          "product_id": "pkg-apk-alpine-libssl3",
+          "product_identification_helper": {
+            "purl": "pkg:apk/alpine/libssl3"
+          }
+        }
+      },
       {
         "category": "product_name",
         "name": "pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com/rancher/mirrored-cilium-hubble-ui",
@@ -58,6 +96,24 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:apk/alpine/libcrypto3 as a component of pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-cilium-hubble-ui",
+          "product_id": "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+        },
+        "product_reference": "pkg-apk-alpine-libcrypto3",
+        "relates_to_product_reference": "pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:apk/alpine/libssl3 as a component of pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-cilium-hubble-ui",
+          "product_id": "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+        },
+        "product_reference": "pkg-apk-alpine-libssl3",
+        "relates_to_product_reference": "pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:apk/alpine/musl-utils as a component of pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com/rancher/mirrored-cilium-hubble-ui",
           "product_id": "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-rancher-mirrored-cilium-hubble-ui"
         },
@@ -67,6 +123,55 @@
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-107496",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "CMS_encrypt() unused; nginx on 8080 plain HTTP. This statement concerns CVE-2026-107496 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-cilium-hubble-ui. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "CMS_encrypt() unused; nginx on 8080 plain HTTP. This statement concerns CVE-2026-107496 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-cilium-hubble-ui. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+          ]
+        }
+      ]
+    },
     {
       "cve": "CVE-2026-40200",
       "flags": [
@@ -94,6 +199,104 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-apk-alpine-musl-utils-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-rancher-mirrored-cilium-hubble-ui"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95691",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "OpenSSL QUIC client not used by nginx. This statement concerns CVE-2026-95691 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-cilium-hubble-ui. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "OpenSSL QUIC client not used by nginx. This statement concerns CVE-2026-95691 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-cilium-hubble-ui. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-95692",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "AES-GCM-SIV cipher not used by nginx. This statement concerns CVE-2026-95692 in pkg:apk/alpine/libcrypto3 as a subcomponent of pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-cilium-hubble-ui. It does not assert the status of pkg:apk/alpine/libcrypto3 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "AES-GCM-SIV cipher not used by nginx. This statement concerns CVE-2026-95692 in pkg:apk/alpine/libssl3 as a subcomponent of pkg:oci/mirrored-cilium-hubble-ui?repository_url=stgregistry.suse.com%2Francher%2Fmirrored-cilium-hubble-ui. It does not assert the status of pkg:apk/alpine/libssl3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui",
+          "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libcrypto3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-apk-alpine-libssl3-in-pkg-oci-mirrored-cilium-hubble-ui-repository-url-stgregistry-suse-com-2Francher-2Fmirrored-cilium-hubble-ui"
           ]
         }
       ]
