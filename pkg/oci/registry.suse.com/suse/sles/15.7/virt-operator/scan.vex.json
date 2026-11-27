@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/virt-operator?repository_url=registry.suse.com%2Fsuse%2Fsles%2F15.7%2Fvirt-operator",
     "tracking": {
-      "current_release_date": "2026-11-27T18:39:40Z",
+      "current_release_date": "2026-11-27T23:30:56Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -43,10 +43,15 @@
           "date": "2026-11-27T18:39:40Z",
           "number": "5",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-27T23:30:56Z",
+          "number": "6",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -422,6 +427,17 @@
           "product_id": "pkg-rpm-suse-libsqlite3-0",
           "product_identification_helper": {
             "purl": "pkg:rpm/suse/libsqlite3-0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/zypper",
+        "product": {
+          "name": "pkg:rpm/suse/zypper",
+          "product_id": "pkg-rpm-suse-zypper",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/zypper"
           }
         }
       },
@@ -942,6 +958,15 @@
           "product_id": "pkg-rpm-suse-libsqlite3-0-in-pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F15-7-2Fvirt-operator"
         },
         "product_reference": "pkg-rpm-suse-libsqlite3-0",
+        "relates_to_product_reference": "pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F15-7-2Fvirt-operator"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/zypper as a component of pkg:oci/virt-operator?repository_url=registry.suse.com%2Fsuse%2Fsles%2F15.7%2Fvirt-operator",
+          "product_id": "pkg-rpm-suse-zypper-in-pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F15-7-2Fvirt-operator"
+        },
+        "product_reference": "pkg-rpm-suse-zypper",
         "relates_to_product_reference": "pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F15-7-2Fvirt-operator"
       },
       {
@@ -2626,6 +2651,12 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-rpm-suse-zypper-in-pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F15-7-2Fvirt-operator"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-rpm-suse-libsolv-tools-base-in-pkg-oci-virt-operator-repository-url-registry-suse-com-suse-sles-15-7-virt-operator"
           ]
         },
@@ -2645,6 +2676,10 @@
       "notes": [
         {
           "category": "description",
+          "text": "zypper is only used at image build time; entrypoint /usr/bin/virt-operator never invokes the package manager. This statement concerns SUSE-SU-2026:2531-1 in pkg:rpm/suse/zypper as a subcomponent of pkg:oci/virt-operator?repository_url=registry.suse.com%2Fsuse%2Fsles%2F15.7%2Fvirt-operator. It does not assert the status of pkg:rpm/suse/zypper when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "libsolv-tools-base is an RPM dependency resolver; KubeVirt virt-operator Go binary never invokes it. This statement concerns SUSE-SU-2026:2531-1 in pkg:rpm/suse/libsolv-tools-base as a subcomponent of pkg:oci/virt-operator?repository_url=registry.suse.com/suse/sles/15.7/virt-operator. It does not assert the status of pkg:rpm/suse/libsolv-tools-base when used independently or in other products."
         },
         {
@@ -2654,11 +2689,19 @@
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-rpm-suse-zypper-in-pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F15-7-2Fvirt-operator",
           "pkg-rpm-suse-libsolv-tools-base-in-pkg-oci-virt-operator-repository-url-registry-suse-com-suse-sles-15-7-virt-operator",
           "pkg-rpm-suse-libzypp-in-pkg-oci-virt-operator-repository-url-registry-suse-com-suse-sles-15-7-virt-operator"
         ]
       },
       "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-zypper-in-pkg-oci-virt-operator-repository-url-registry-suse-com-2Fsuse-2Fsles-2F15-7-2Fvirt-operator"
+          ]
+        },
         {
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",

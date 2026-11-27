@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
     "tracking": {
-      "current_release_date": "2026-11-26T13:36:06Z",
+      "current_release_date": "2026-11-27T23:30:56Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -48,10 +48,15 @@
           "date": "2026-11-26T13:36:06Z",
           "number": "6",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-27T23:30:56Z",
+          "number": "7",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "6"
+      "version": "7"
     }
   },
   "product_tree": {
@@ -311,6 +316,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:rpm/photon/krb5 as a component of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
+          "product_id": "pkg-rpm-photon-krb5-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+        },
+        "product_reference": "pkg-rpm-photon-krb5",
+        "relates_to_product_reference": "pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:rpm/photon/libssh2 as a component of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io/rancher/mirrored-cloud-provider-vsphere-csi-release-syncer",
           "product_id": "pkg-rpm-photon-libssh2-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-rancher-mirrored-cloud-provider-vsphere-csi-release-syncer"
         },
@@ -361,15 +375,6 @@
         },
         "product_reference": "pkg-rpm-photon-nss-libs",
         "relates_to_product_reference": "pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-rancher-mirrored-cloud-provider-vsphere-csi-release-syncer"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:rpm/photon/krb5 as a component of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer",
-          "product_id": "pkg-rpm-photon-krb5-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
-        },
-        "product_reference": "pkg-rpm-photon-krb5",
-        "relates_to_product_reference": "pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
       },
       {
         "category": "default_component_of",
@@ -1414,6 +1419,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-photon-curl-libs-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-krb5-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "BDSA",
+          "text": "BDSA-2026-39991"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint /bin/vsphere-syncer is a static Go binary; krb5 libraries are never loaded or executed. This statement concerns BDSA-2026-39991 in pkg:rpm/photon/krb5 as a subcomponent of pkg:oci/mirrored-cloud-provider-vsphere-csi-release-syncer?repository_url=index.docker.io%2Francher%2Fmirrored-cloud-provider-vsphere-csi-release-syncer. It does not assert the status of pkg:rpm/photon/krb5 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-photon-krb5-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-photon-krb5-in-pkg-oci-mirrored-cloud-provider-vsphere-csi-release-syncer-repository-url-index-docker-io-2Francher-2Fmirrored-cloud-provider-vsphere-csi-release-syncer"
           ]
         }
       ]
