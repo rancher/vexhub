@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/kafkaup-operator?repository_url=registry.suse.com%2Fsuse-observability%2Fkafkaup-operator",
     "tracking": {
-      "current_release_date": "2026-10-28T10:21:36Z",
+      "current_release_date": "2026-11-27T18:39:40Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-10-28T10:21:36Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-27T18:39:40Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -90,6 +95,17 @@
             "purl": "pkg:rpm/suse/coreutils-single"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libpcre2-8-0",
+        "product": {
+          "name": "pkg:rpm/suse/libpcre2-8-0",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpcre2-8-0"
+          }
+        }
       }
     ],
     "relationships": [
@@ -118,6 +134,15 @@
           "product_id": "pkg-rpm-suse-coreutils-single-in-pkg-oci-kafkaup-operator-repository-url-registry-suse-com-2Fsuse-observability-2Fkafkaup-operator"
         },
         "product_reference": "pkg-rpm-suse-coreutils-single",
+        "relates_to_product_reference": "pkg-oci-kafkaup-operator-repository-url-registry-suse-com-2Fsuse-observability-2Fkafkaup-operator"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/kafkaup-operator?repository_url=registry.suse.com%2Fsuse-observability%2Fkafkaup-operator",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-kafkaup-operator-repository-url-registry-suse-com-2Fsuse-observability-2Fkafkaup-operator"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
         "relates_to_product_reference": "pkg-oci-kafkaup-operator-repository-url-registry-suse-com-2Fsuse-observability-2Fkafkaup-operator"
       }
     ]
@@ -209,6 +234,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-coreutils-single-in-pkg-oci-kafkaup-operator-repository-url-registry-suse-com-2Fsuse-observability-2Fkafkaup-operator"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-kafkaup-operator-repository-url-registry-suse-com-2Fsuse-observability-2Fkafkaup-operator"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24654-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Entrypoint is a statically linked Go binary; no dynamic library is ever loaded. This statement concerns SUSE-SU-2026:24654-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/kafkaup-operator?repository_url=registry.suse.com%2Fsuse-observability%2Fkafkaup-operator. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-kafkaup-operator-repository-url-registry-suse-com-2Fsuse-observability-2Fkafkaup-operator"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-kafkaup-operator-repository-url-registry-suse-com-2Fsuse-observability-2Fkafkaup-operator"
           ]
         }
       ]
