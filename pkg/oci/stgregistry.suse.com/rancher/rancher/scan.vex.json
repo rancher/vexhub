@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/rancher?repository_url=stgregistry.suse.com%2Francher%2Francher",
     "tracking": {
-      "current_release_date": "2026-11-23T23:27:18Z",
+      "current_release_date": "2026-11-27T15:31:22Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-11-23T23:27:18Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/rancher?repository_url=stgregistry.suse.com/rancher/rancher"
+        },
+        {
+          "date": "2026-11-27T15:31:22Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -330,6 +335,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:rpm/suse/libpcre2-8-0",
+        "product": {
+          "name": "pkg:rpm/suse/libpcre2-8-0",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpcre2-8-0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:rpm/suse/libsasl2-3",
         "product": {
           "name": "pkg:rpm/suse/libsasl2-3",
@@ -576,6 +592,15 @@
         },
         "product_reference": "pkg-rpm-suse-libsmartcols1",
         "relates_to_product_reference": "pkg-oci-rancher-repository-url-stgregistry-suse-com-rancher-rancher"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/rancher?repository_url=stgregistry.suse.com%2Francher%2Francher",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-rancher-repository-url-stgregistry-suse-com-2Francher-2Francher"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
+        "relates_to_product_reference": "pkg-oci-rancher-repository-url-stgregistry-suse-com-2Francher-2Francher"
       },
       {
         "category": "default_component_of",
@@ -3087,6 +3112,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-curl-in-pkg-oci-rancher-repository-url-stgregistry-suse-com-rancher-rancher"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-rancher-repository-url-stgregistry-suse-com-2Francher-2Francher"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4241-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "pcre2 only used by libselinux/glib/grep with fixed patterns; no attacker-controlled regex or JIT API. This statement concerns SUSE-SU-2026:4241-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/rancher?repository_url=stgregistry.suse.com%2Francher%2Francher. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-rancher-repository-url-stgregistry-suse-com-2Francher-2Francher"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-rancher-repository-url-stgregistry-suse-com-2Francher-2Francher"
           ]
         }
       ]

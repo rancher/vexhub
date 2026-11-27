@@ -1,0 +1,163 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io%2Fharvester%2Fharvester-networkfs-manager",
+    "tracking": {
+      "current_release_date": "2026-11-27T15:31:22Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io%2Fharvester%2Fharvester-networkfs-manager",
+      "initial_release_date": "2026-11-27T15:31:22Z",
+      "revision_history": [
+        {
+          "date": "2026-11-27T15:31:22Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io%2Fharvester%2Fharvester-networkfs-manager"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io%2Fharvester%2Fharvester-networkfs-manager",
+        "product": {
+          "name": "pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io%2Fharvester%2Fharvester-networkfs-manager",
+          "product_id": "pkg-oci-harvester-networkfs-manager-repository-url-index-docker-io-2Fharvester-2Fharvester-networkfs-manager",
+          "product_identification_helper": {
+            "purl": "pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io%2Fharvester%2Fharvester-networkfs-manager"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libpcre2-8-0",
+        "product": {
+          "name": "pkg:rpm/suse/libpcre2-8-0",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpcre2-8-0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libzck1",
+        "product": {
+          "name": "pkg:rpm/suse/libzck1",
+          "product_id": "pkg-rpm-suse-libzck1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libzck1"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io%2Fharvester%2Fharvester-networkfs-manager",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-networkfs-manager-repository-url-index-docker-io-2Fharvester-2Fharvester-networkfs-manager"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
+        "relates_to_product_reference": "pkg-oci-harvester-networkfs-manager-repository-url-index-docker-io-2Fharvester-2Fharvester-networkfs-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libzck1 as a component of pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io%2Fharvester%2Fharvester-networkfs-manager",
+          "product_id": "pkg-rpm-suse-libzck1-in-pkg-oci-harvester-networkfs-manager-repository-url-index-docker-io-2Fharvester-2Fharvester-networkfs-manager"
+        },
+        "product_reference": "pkg-rpm-suse-libzck1",
+        "relates_to_product_reference": "pkg-oci-harvester-networkfs-manager-repository-url-index-docker-io-2Fharvester-2Fharvester-networkfs-manager"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-networkfs-manager-repository-url-index-docker-io-2Fharvester-2Fharvester-networkfs-manager"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24654-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "pcre2 only used by libselinux/glib/grep with fixed patterns; no attacker-controlled regex or JIT API. This statement concerns SUSE-SU-2026:24654-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io%2Fharvester%2Fharvester-networkfs-manager. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-networkfs-manager-repository-url-index-docker-io-2Fharvester-2Fharvester-networkfs-manager"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-networkfs-manager-repository-url-index-docker-io-2Fharvester-2Fharvester-networkfs-manager"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libzck1-in-pkg-oci-harvester-networkfs-manager-repository-url-index-docker-io-2Fharvester-2Fharvester-networkfs-manager"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24657-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "zchunk only linked by libzypp; zypper/package metadata is never processed at container runtime. This statement concerns SUSE-SU-2026:24657-1 in pkg:rpm/suse/libzck1 as a subcomponent of pkg:oci/harvester-networkfs-manager?repository_url=index.docker.io%2Fharvester%2Fharvester-networkfs-manager. It does not assert the status of pkg:rpm/suse/libzck1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libzck1-in-pkg-oci-harvester-networkfs-manager-repository-url-index-docker-io-2Fharvester-2Fharvester-networkfs-manager"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libzck1-in-pkg-oci-harvester-networkfs-manager-repository-url-index-docker-io-2Fharvester-2Fharvester-networkfs-manager"
+          ]
+        }
+      ]
+    }
+  ]
+}
