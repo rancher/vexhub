@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/hardened-whereabouts?repository_url=index.docker.io%2Francher%2Fhardened-whereabouts",
     "tracking": {
-      "current_release_date": "2026-11-20T22:07:06Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-11-20T22:07:06Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -65,23 +70,23 @@
       },
       {
         "category": "product_name",
-        "name": "pkg:rpm/suse/libpcre2-8-0",
-        "product": {
-          "name": "pkg:rpm/suse/libpcre2-8-0",
-          "product_id": "pkg-rpm-suse-libpcre2-8-0",
-          "product_identification_helper": {
-            "purl": "pkg:rpm/suse/libpcre2-8-0"
-          }
-        }
-      },
-      {
-        "category": "product_name",
         "name": "pkg:oci/hardened-whereabouts?repository_url=index.docker.io%2Francher%2Fhardened-whereabouts",
         "product": {
           "name": "pkg:oci/hardened-whereabouts?repository_url=index.docker.io%2Francher%2Fhardened-whereabouts",
           "product_id": "pkg-oci-hardened-whereabouts-repository-url-index-docker-io-2Francher-2Fhardened-whereabouts",
           "product_identification_helper": {
             "purl": "pkg:oci/hardened-whereabouts?repository_url=index.docker.io%2Francher%2Fhardened-whereabouts"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libpcre2-8-0",
+        "product": {
+          "name": "pkg:rpm/suse/libpcre2-8-0",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpcre2-8-0"
           }
         }
       },
@@ -106,6 +111,15 @@
         },
         "product_reference": "pkg-rpm-suse-glibc",
         "relates_to_product_reference": "pkg-oci-hardened-whereabouts-repository-url-index-docker-io-rancher-hardened-whereabouts"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/hardened-whereabouts?repository_url=index.docker.io%2Francher%2Fhardened-whereabouts",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-whereabouts-repository-url-index-docker-io-2Francher-2Fhardened-whereabouts"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
+        "relates_to_product_reference": "pkg-oci-hardened-whereabouts-repository-url-index-docker-io-2Francher-2Fhardened-whereabouts"
       },
       {
         "category": "default_component_of",
@@ -196,6 +210,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-glibc-in-pkg-oci-hardened-whereabouts-repository-url-index-docker-io-rancher-hardened-whereabouts"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-whereabouts-repository-url-index-docker-io-2Francher-2Fhardened-whereabouts"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24891-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go-only runtime; no component links or calls libpcre2 during container execution. This statement concerns SUSE-SU-2026:24891-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/hardened-whereabouts?repository_url=index.docker.io%2Francher%2Fhardened-whereabouts. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-whereabouts-repository-url-index-docker-io-2Francher-2Fhardened-whereabouts"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-whereabouts-repository-url-index-docker-io-2Francher-2Fhardened-whereabouts"
           ]
         }
       ]

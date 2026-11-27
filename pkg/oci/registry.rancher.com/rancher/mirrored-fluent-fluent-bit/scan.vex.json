@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com%2Francher%2Fmirrored-fluent-fluent-bit",
     "tracking": {
-      "current_release_date": "2026-11-26T05:51:51Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -43,10 +43,15 @@
           "date": "2026-11-26T05:51:51Z",
           "number": "5",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "6",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -174,6 +179,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:deb/debian/libcap2",
+        "product": {
+          "name": "pkg:deb/debian/libcap2",
+          "product_id": "pkg-deb-debian-libcap2",
+          "product_identification_helper": {
+            "purl": "pkg:deb/debian/libcap2"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:deb/debian/libatomic1",
         "product": {
           "name": "pkg:deb/debian/libatomic1",
@@ -235,17 +251,6 @@
           "product_id": "pkg-deb-debian-libgcrypt20",
           "product_identification_helper": {
             "purl": "pkg:deb/debian/libgcrypt20"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:deb/debian/libcap2",
-        "product": {
-          "name": "pkg:deb/debian/libcap2",
-          "product_id": "pkg-deb-debian-libcap2",
-          "product_identification_helper": {
-            "purl": "pkg:deb/debian/libcap2"
           }
         }
       }
@@ -330,6 +335,15 @@
           "product_id": "pkg-deb-debian-libkrb5support0-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-2Francher-2Fmirrored-fluent-fluent-bit"
         },
         "product_reference": "pkg-deb-debian-libkrb5support0",
+        "relates_to_product_reference": "pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-2Francher-2Fmirrored-fluent-fluent-bit"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/debian/libcap2 as a component of pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com%2Francher%2Fmirrored-fluent-fluent-bit",
+          "product_id": "pkg-deb-debian-libcap2-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-2Francher-2Fmirrored-fluent-fluent-bit"
+        },
+        "product_reference": "pkg-deb-debian-libcap2",
         "relates_to_product_reference": "pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-2Francher-2Fmirrored-fluent-fluent-bit"
       },
       {
@@ -758,6 +772,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-debian-libpq5-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-2Francher-2Fmirrored-fluent-fluent-bit"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-1390",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libcap2-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-2Francher-2Fmirrored-fluent-fluent-bit"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Capabilities are set by the container runtime; the libcap parsing code is not called by the app. This statement concerns CVE-2025-1390 in pkg:deb/debian/libcap2 as a subcomponent of pkg:oci/mirrored-fluent-fluent-bit?repository_url=registry.rancher.com%2Francher%2Fmirrored-fluent-fluent-bit. It does not assert the status of pkg:deb/debian/libcap2 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-debian-libcap2-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-2Francher-2Fmirrored-fluent-fluent-bit"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-debian-libcap2-in-pkg-oci-mirrored-fluent-fluent-bit-repository-url-registry-rancher-com-2Francher-2Fmirrored-fluent-fluent-bit"
           ]
         }
       ]

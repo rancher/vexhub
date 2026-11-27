@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=index.docker.io%2Francher%2Fmirrored-longhornio-backing-image-manager",
     "tracking": {
-      "current_release_date": "2026-11-05T12:34:16Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -48,10 +48,15 @@
           "date": "2026-11-05T12:34:16Z",
           "number": "6",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "7",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "6"
+      "version": "7"
     }
   },
   "product_tree": {
@@ -1052,6 +1057,15 @@
           "product_id": "pkg-rpm-suse-libcurl4-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
         },
         "product_reference": "pkg-rpm-suse-libcurl4",
+        "relates_to_product_reference": "pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/tar as a component of pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=index.docker.io%2Francher%2Fmirrored-longhornio-backing-image-manager",
+          "product_id": "pkg-rpm-suse-tar-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
+        },
+        "product_reference": "pkg-rpm-suse-tar",
         "relates_to_product_reference": "pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
       }
     ]
@@ -4005,6 +4019,96 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libcurl4-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-tar-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5160-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "tar is not executed at runtime; it is an incidental SLES base-image dependency. This statement concerns SUSE-SU-2026:5160-1 in pkg:rpm/suse/tar as a subcomponent of pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=index.docker.io%2Francher%2Fmirrored-longhornio-backing-image-manager. It does not assert the status of pkg:rpm/suse/tar when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-tar-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-tar-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpython3-6m1-0-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-python3-base-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5251-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Backing-image-manager is a Go binary; no Python runtime used. This statement concerns SUSE-SU-2026:5251-1 in pkg:rpm/suse/libpython3_6m1_0 as a subcomponent of pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=index.docker.io%2Francher%2Fmirrored-longhornio-backing-image-manager. It does not assert the status of pkg:rpm/suse/libpython3_6m1_0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Python is not used at runtime in this container; it is an incidental SLES base-image dependency. This statement concerns SUSE-SU-2026:5251-1 in pkg:rpm/suse/python3-base as a subcomponent of pkg:oci/mirrored-longhornio-backing-image-manager?repository_url=index.docker.io%2Francher%2Fmirrored-longhornio-backing-image-manager. It does not assert the status of pkg:rpm/suse/python3-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpython3-6m1-0-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager",
+          "pkg-rpm-suse-python3-base-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpython3-6m1-0-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-python3-base-in-pkg-oci-mirrored-longhornio-backing-image-manager-repository-url-index-docker-io-2Francher-2Fmirrored-longhornio-backing-image-manager"
           ]
         }
       ]

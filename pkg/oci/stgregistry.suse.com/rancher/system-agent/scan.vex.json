@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/system-agent?repository_url=stgregistry.suse.com%2Francher%2Fsystem-agent",
     "tracking": {
-      "current_release_date": "2026-11-23T23:27:18Z",
+      "current_release_date": "2026-11-27T13:34:02Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-11-23T23:27:18Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/system-agent?repository_url=stgregistry.suse.com/rancher/system-agent"
+        },
+        {
+          "date": "2026-11-27T13:34:02Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -118,6 +123,28 @@
             "purl": "pkg:rpm/suse/terminfo-base"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:oci/system-agent?repository_url=stgregistry.suse.com%2Francher%2Fsystem-agent",
+        "product": {
+          "name": "pkg:oci/system-agent?repository_url=stgregistry.suse.com%2Francher%2Fsystem-agent",
+          "product_id": "pkg-oci-system-agent-repository-url-stgregistry-suse-com-2Francher-2Fsystem-agent",
+          "product_identification_helper": {
+            "purl": "pkg:oci/system-agent?repository_url=stgregistry.suse.com%2Francher%2Fsystem-agent"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libpcre2-8-0",
+        "product": {
+          "name": "pkg:rpm/suse/libpcre2-8-0",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpcre2-8-0"
+          }
+        }
       }
     ],
     "relationships": [
@@ -183,6 +210,15 @@
         },
         "product_reference": "pkg-rpm-suse-terminfo-base",
         "relates_to_product_reference": "pkg-oci-system-agent-repository-url-stgregistry-suse-com-rancher-system-agent"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/system-agent?repository_url=stgregistry.suse.com%2Francher%2Fsystem-agent",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-system-agent-repository-url-stgregistry-suse-com-2Francher-2Fsystem-agent"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
+        "relates_to_product_reference": "pkg-oci-system-agent-repository-url-stgregistry-suse-com-2Francher-2Fsystem-agent"
       }
     ]
   },
@@ -867,6 +903,42 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-glibc-in-pkg-oci-system-agent-repository-url-stgregistry-suse-com-rancher-system-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-system-agent-repository-url-stgregistry-suse-com-2Francher-2Fsystem-agent"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24891-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Indirect leftover OS dependency.. This statement concerns SUSE-SU-2026:24891-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/system-agent?repository_url=stgregistry.suse.com%2Francher%2Fsystem-agent. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-system-agent-repository-url-stgregistry-suse-com-2Francher-2Fsystem-agent"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-system-agent-repository-url-stgregistry-suse-com-2Francher-2Fsystem-agent"
           ]
         }
       ]

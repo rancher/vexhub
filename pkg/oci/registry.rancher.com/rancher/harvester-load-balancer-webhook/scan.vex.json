@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/harvester-load-balancer-webhook?repository_url=registry.rancher.com%2Francher%2Fharvester-load-balancer-webhook",
     "tracking": {
-      "current_release_date": "2026-11-21T13:22:17Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-11-21T13:22:17Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -138,6 +143,15 @@
           "product_id": "pkg-rpm-suse-glibc-in-pkg-oci-harvester-load-balancer-webhook-repository-url-registry-rancher-com-2Francher-2Fharvester-load-balancer-webhook"
         },
         "product_reference": "pkg-rpm-suse-glibc",
+        "relates_to_product_reference": "pkg-oci-harvester-load-balancer-webhook-repository-url-registry-rancher-com-2Francher-2Fharvester-load-balancer-webhook"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/harvester-load-balancer-webhook?repository_url=registry.rancher.com%2Francher%2Fharvester-load-balancer-webhook",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-load-balancer-webhook-repository-url-registry-rancher-com-2Francher-2Fharvester-load-balancer-webhook"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
         "relates_to_product_reference": "pkg-oci-harvester-load-balancer-webhook-repository-url-registry-rancher-com-2Francher-2Fharvester-load-balancer-webhook"
       }
     ]
@@ -265,6 +279,78 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-glibc-in-pkg-oci-harvester-load-balancer-webhook-repository-url-registry-rancher-com-2Francher-2Fharvester-load-balancer-webhook"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-harvester-load-balancer-webhook-repository-url-registry-rancher-com-2Francher-2Fharvester-load-balancer-webhook"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24872-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go entrypoint; glibc not loaded by the container main process. This statement concerns SUSE-SU-2026:24872-1 in pkg:rpm/suse/glibc as a subcomponent of pkg:oci/harvester-load-balancer-webhook?repository_url=registry.rancher.com%2Francher%2Fharvester-load-balancer-webhook. It does not assert the status of pkg:rpm/suse/glibc when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-glibc-in-pkg-oci-harvester-load-balancer-webhook-repository-url-registry-rancher-com-2Francher-2Fharvester-load-balancer-webhook"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-harvester-load-balancer-webhook-repository-url-registry-rancher-com-2Francher-2Fharvester-load-balancer-webhook"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-load-balancer-webhook-repository-url-registry-rancher-com-2Francher-2Fharvester-load-balancer-webhook"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24891-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Go Kubernetes webhook uses stdlib regexp package; libpcre2 C library is not loaded by the Go runtime. This statement concerns SUSE-SU-2026:24891-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/harvester-load-balancer-webhook?repository_url=registry.rancher.com%2Francher%2Fharvester-load-balancer-webhook. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-load-balancer-webhook-repository-url-registry-rancher-com-2Francher-2Fharvester-load-balancer-webhook"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-load-balancer-webhook-repository-url-registry-rancher-com-2Francher-2Fharvester-load-balancer-webhook"
           ]
         }
       ]

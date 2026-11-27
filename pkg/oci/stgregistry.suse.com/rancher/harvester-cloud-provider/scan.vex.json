@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/harvester-cloud-provider?repository_url=stgregistry.suse.com%2Francher%2Fharvester-cloud-provider",
     "tracking": {
-      "current_release_date": "2026-11-23T23:27:18Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-11-23T23:27:18Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/harvester-cloud-provider?repository_url=stgregistry.suse.com/rancher/harvester-cloud-provider"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -154,6 +159,28 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:oci/harvester-cloud-provider?repository_url=stgregistry.suse.com%2Francher%2Fharvester-cloud-provider",
+        "product": {
+          "name": "pkg:oci/harvester-cloud-provider?repository_url=stgregistry.suse.com%2Francher%2Fharvester-cloud-provider",
+          "product_id": "pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-2Francher-2Fharvester-cloud-provider",
+          "product_identification_helper": {
+            "purl": "pkg:oci/harvester-cloud-provider?repository_url=stgregistry.suse.com%2Francher%2Fharvester-cloud-provider"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libpcre2-8-0",
+        "product": {
+          "name": "pkg:rpm/suse/libpcre2-8-0",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpcre2-8-0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:rpm/suse/rpm-ndb",
         "product": {
           "name": "pkg:rpm/suse/rpm-ndb",
@@ -182,17 +209,6 @@
           "product_id": "pkg-rpm-suse-libattr1",
           "product_identification_helper": {
             "purl": "pkg:rpm/suse/libattr1"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:rpm/suse/libpcre2-8-0",
-        "product": {
-          "name": "pkg:rpm/suse/libpcre2-8-0",
-          "product_id": "pkg-rpm-suse-libpcre2-8-0",
-          "product_identification_helper": {
-            "purl": "pkg:rpm/suse/libpcre2-8-0"
           }
         }
       }
@@ -287,6 +303,24 @@
         },
         "product_reference": "pkg-rpm-suse-terminfo-base",
         "relates_to_product_reference": "pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-rancher-harvester-cloud-provider"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/glibc as a component of pkg:oci/harvester-cloud-provider?repository_url=stgregistry.suse.com%2Francher%2Fharvester-cloud-provider",
+          "product_id": "pkg-rpm-suse-glibc-in-pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-2Francher-2Fharvester-cloud-provider"
+        },
+        "product_reference": "pkg-rpm-suse-glibc",
+        "relates_to_product_reference": "pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-2Francher-2Fharvester-cloud-provider"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/harvester-cloud-provider?repository_url=stgregistry.suse.com%2Francher%2Fharvester-cloud-provider",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-2Francher-2Fharvester-cloud-provider"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
+        "relates_to_product_reference": "pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-2Francher-2Fharvester-cloud-provider"
       },
       {
         "category": "default_component_of",
@@ -971,6 +1005,78 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libgcrypt20-in-pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-rancher-harvester-cloud-provider"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-2Francher-2Fharvester-cloud-provider"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24872-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go cloud-provider binary; glibc present only as base OS dependency. This statement concerns SUSE-SU-2026:24872-1 in pkg:rpm/suse/glibc as a subcomponent of pkg:oci/harvester-cloud-provider?repository_url=stgregistry.suse.com%2Francher%2Fharvester-cloud-provider. It does not assert the status of pkg:rpm/suse/glibc when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-glibc-in-pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-2Francher-2Fharvester-cloud-provider"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-2Francher-2Fharvester-cloud-provider"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-2Francher-2Fharvester-cloud-provider"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24891-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Application uses its own regex engine; the system PCRE2 C library is not called at runtime. This statement concerns SUSE-SU-2026:24891-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/harvester-cloud-provider?repository_url=stgregistry.suse.com%2Francher%2Fharvester-cloud-provider. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-2Francher-2Fharvester-cloud-provider"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-cloud-provider-repository-url-stgregistry-suse-com-2Francher-2Fharvester-cloud-provider"
           ]
         }
       ]

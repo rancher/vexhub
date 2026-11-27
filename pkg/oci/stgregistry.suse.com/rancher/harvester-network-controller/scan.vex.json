@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/harvester-network-controller?repository_url=stgregistry.suse.com%2Francher%2Fharvester-network-controller",
     "tracking": {
-      "current_release_date": "2026-11-23T23:27:18Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-11-23T23:27:18Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/harvester-network-controller?repository_url=stgregistry.suse.com/rancher/harvester-network-controller"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -352,6 +357,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:rpm/suse/libpcre2-8-0",
+        "product": {
+          "name": "pkg:rpm/suse/libpcre2-8-0",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpcre2-8-0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:rpm/suse/pam",
         "product": {
           "name": "pkg:rpm/suse/pam",
@@ -468,17 +484,6 @@
           "product_id": "pkg-rpm-suse-libattr1",
           "product_identification_helper": {
             "purl": "pkg:rpm/suse/libattr1"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:rpm/suse/libpcre2-8-0",
-        "product": {
-          "name": "pkg:rpm/suse/libpcre2-8-0",
-          "product_id": "pkg-rpm-suse-libpcre2-8-0",
-          "product_identification_helper": {
-            "purl": "pkg:rpm/suse/libpcre2-8-0"
           }
         }
       },
@@ -783,6 +788,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/harvester-network-controller?repository_url=stgregistry.suse.com%2Francher%2Fharvester-network-controller",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
+        "relates_to_product_reference": "pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:rpm/suse/pam as a component of pkg:oci/harvester-network-controller?repository_url=stgregistry.suse.com/rancher/harvester-network-controller",
           "product_id": "pkg-rpm-suse-pam-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-rancher-harvester-network-controller"
         },
@@ -904,15 +918,6 @@
           "product_id": "pkg-rpm-suse-libattr1-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
         },
         "product_reference": "pkg-rpm-suse-libattr1",
-        "relates_to_product_reference": "pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/harvester-network-controller?repository_url=stgregistry.suse.com%2Francher%2Fharvester-network-controller",
-          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
-        },
-        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
         "relates_to_product_reference": "pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
       },
       {
@@ -2372,6 +2377,96 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libsmartcols1-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-rancher-harvester-network-controller"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24872-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go entrypoint; glibc not loaded by the container main process. This statement concerns SUSE-SU-2026:24872-1 in pkg:rpm/suse/glibc as a subcomponent of pkg:oci/harvester-network-controller?repository_url=stgregistry.suse.com%2Francher%2Fharvester-network-controller. It does not assert the status of pkg:rpm/suse/glibc when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Static Go entrypoint; glibc locale data never loaded at runtime. This statement concerns SUSE-SU-2026:24872-1 in pkg:rpm/suse/glibc-locale-base as a subcomponent of pkg:oci/harvester-network-controller?repository_url=stgregistry.suse.com%2Francher%2Fharvester-network-controller. It does not assert the status of pkg:rpm/suse/glibc-locale-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-glibc-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller",
+          "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24891-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libpcre2 only linked by libselinux/glib; not in the entrypoint execution path. This statement concerns SUSE-SU-2026:24891-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/harvester-network-controller?repository_url=stgregistry.suse.com%2Francher%2Fharvester-network-controller. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-network-controller-repository-url-stgregistry-suse-com-2Francher-2Fharvester-network-controller"
           ]
         }
       ]

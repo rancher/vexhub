@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:golang/k8s.io/cloud-provider-vsphere",
     "tracking": {
-      "current_release_date": "2026-11-26T05:51:51Z",
+      "current_release_date": "2026-11-27T05:21:19Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -38,10 +38,15 @@
           "date": "2026-11-26T05:51:51Z",
           "number": "4",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-27T05:21:19Z",
+          "number": "5",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -697,6 +702,17 @@
       },
       {
         "category": "product_name",
+        "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.28.0",
+        "product": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.28.0",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-28-0",
+          "product_identification_helper": {
+            "purl": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.28.0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
         "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.34.0",
         "product": {
           "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.34.0",
@@ -813,17 +829,6 @@
           "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-19-0",
           "product_identification_helper": {
             "purl": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.19.0"
-          }
-        }
-      },
-      {
-        "category": "product_name",
-        "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.28.0",
-        "product": {
-          "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.28.0",
-          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-28-0",
-          "product_identification_helper": {
-            "purl": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.28.0"
           }
         }
       },
@@ -1920,6 +1925,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.28.0 as a component of pkg:golang/k8s.io/cloud-provider-vsphere",
+          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-28-0-in-pkg-golang-k8s-io-cloud-provider-vsphere"
+        },
+        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-28-0",
+        "relates_to_product_reference": "pkg-golang-k8s-io-cloud-provider-vsphere"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.34.0 as a component of pkg:golang/k8s.io/cloud-provider-vsphere",
           "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-34-0-in-pkg-golang-k8s-io-cloud-provider-vsphere"
         },
@@ -2050,15 +2064,6 @@
           "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-19-0-in-pkg-golang-k8s-io-cloud-provider-vsphere"
         },
         "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-19-0",
-        "relates_to_product_reference": "pkg-golang-k8s-io-cloud-provider-vsphere"
-      },
-      {
-        "category": "default_component_of",
-        "full_product_name": {
-          "name": "pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.28.0 as a component of pkg:golang/k8s.io/cloud-provider-vsphere",
-          "product_id": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-28-0-in-pkg-golang-k8s-io-cloud-provider-vsphere"
-        },
-        "product_reference": "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-28-0",
         "relates_to_product_reference": "pkg-golang-k8s-io-cloud-provider-vsphere"
       },
       {
@@ -6077,6 +6082,18 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-28-0-in-pkg-golang-k8s-io-cloud-provider-vsphere"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-33-0-in-pkg-golang-k8s-io-cloud-provider-vsphere"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-34-0-in-pkg-golang-k8s-io-cloud-provider-vsphere"
           ]
         },
@@ -6122,6 +6139,14 @@
         },
         {
           "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-24051 in pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.28.0 as a subcomponent of pkg:golang/k8s.io/cloud-provider-vsphere. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.28.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-24051 in pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.33.0 as a subcomponent of pkg:golang/k8s.io/cloud-provider-vsphere. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.33.0 when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "Govulncheck determined that the vulnerable code isn't called. This statement concerns CVE-2026-24051 in pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.34.0 as a subcomponent of pkg:golang/k8s.io/cloud-provider-vsphere. It does not assert the status of pkg:golang/go.opentelemetry.io%2Fotel%2Fsdk@v1.34.0 when used independently or in other products."
         },
         {
@@ -6139,6 +6164,8 @@
           "pkg-golang-go-opentelemetry-io-otel-sdk-v1-33-0-in-pkg-golang-k8s-io-cloud-provider-vsphere",
           "pkg-golang-go-opentelemetry-io-otel-sdk-v1-34-0-in-pkg-golang-k8s-io-cloud-provider-vsphere",
           "pkg-golang-go-opentelemetry-io-otel-sdk-v1-36-0-in-pkg-golang-k8s-io-cloud-provider-vsphere",
+          "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-28-0-in-pkg-golang-k8s-io-cloud-provider-vsphere",
+          "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-33-0-in-pkg-golang-k8s-io-cloud-provider-vsphere",
           "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-34-0-in-pkg-golang-k8s-io-cloud-provider-vsphere",
           "pkg-golang-go-opentelemetry-io-2Fotel-v1-28-0-in-pkg-golang-k8s-io-cloud-provider-vsphere",
           "pkg-golang-go-opentelemetry-io-2Fotel-v1-33-0-in-pkg-golang-k8s-io-cloud-provider-vsphere"
@@ -6171,6 +6198,20 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-golang-go-opentelemetry-io-otel-sdk-v1-36-0-in-pkg-golang-k8s-io-cloud-provider-vsphere"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-28-0-in-pkg-golang-k8s-io-cloud-provider-vsphere"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-golang-go-opentelemetry-io-2Fotel-2Fsdk-v1-33-0-in-pkg-golang-k8s-io-cloud-provider-vsphere"
           ]
         },
         {

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com%2Francher%2Fneuvector-manager",
     "tracking": {
-      "current_release_date": "2026-11-23T23:27:18Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,22 +23,27 @@
           "date": "2026-11-23T23:27:18Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com/rancher/neuvector-manager"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
       {
         "category": "product_name",
-        "name": "pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com/rancher/neuvector-manager",
+        "name": "pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com%2Francher%2Fneuvector-manager",
         "product": {
-          "name": "pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com/rancher/neuvector-manager",
-          "product_id": "pkg-oci-neuvector-manager-repository-url-stgregistry-suse-com-rancher-neuvector-manager",
+          "name": "pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com%2Francher%2Fneuvector-manager",
+          "product_id": "pkg-oci-neuvector-manager-repository-url-stgregistry-suse-com-2Francher-2Fneuvector-manager",
           "product_identification_helper": {
-            "purl": "pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com/rancher/neuvector-manager"
+            "purl": "pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com%2Francher%2Fneuvector-manager"
           }
         }
       },
@@ -55,12 +60,12 @@
       },
       {
         "category": "product_name",
-        "name": "pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com%2Francher%2Fneuvector-manager",
+        "name": "pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com/rancher/neuvector-manager",
         "product": {
-          "name": "pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com%2Francher%2Fneuvector-manager",
-          "product_id": "pkg-oci-neuvector-manager-repository-url-stgregistry-suse-com-2Francher-2Fneuvector-manager",
+          "name": "pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com/rancher/neuvector-manager",
+          "product_id": "pkg-oci-neuvector-manager-repository-url-stgregistry-suse-com-rancher-neuvector-manager",
           "product_identification_helper": {
-            "purl": "pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com%2Francher%2Fneuvector-manager"
+            "purl": "pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com/rancher/neuvector-manager"
           }
         }
       },
@@ -102,6 +107,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:rpm/suse/openssl-3 as a component of pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com%2Francher%2Fneuvector-manager",
+          "product_id": "pkg-rpm-suse-openssl-3-in-pkg-oci-neuvector-manager-repository-url-stgregistry-suse-com-2Francher-2Fneuvector-manager"
+        },
+        "product_reference": "pkg-rpm-suse-openssl-3",
+        "relates_to_product_reference": "pkg-oci-neuvector-manager-repository-url-stgregistry-suse-com-2Francher-2Fneuvector-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:rpm/suse/openssl-3 as a component of pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com/rancher/neuvector-manager",
           "product_id": "pkg-rpm-suse-openssl-3-in-pkg-oci-neuvector-manager-repository-url-stgregistry-suse-com-rancher-neuvector-manager"
         },
@@ -138,6 +152,42 @@
     ]
   },
   "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssl-3-in-pkg-oci-neuvector-manager-repository-url-stgregistry-suse-com-2Francher-2Fneuvector-manager"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-RU-2026:5149-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "NeuVector manager is a Java webapp using JCE; openssl CLI is not called at runtime. This statement concerns SUSE-RU-2026:5149-1 in pkg:rpm/suse/openssl-3 as a subcomponent of pkg:oci/neuvector-manager?repository_url=stgregistry.suse.com%2Francher%2Fneuvector-manager. It does not assert the status of pkg:rpm/suse/openssl-3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-openssl-3-in-pkg-oci-neuvector-manager-repository-url-stgregistry-suse-com-2Francher-2Fneuvector-manager"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssl-3-in-pkg-oci-neuvector-manager-repository-url-stgregistry-suse-com-2Francher-2Fneuvector-manager"
+          ]
+        }
+      ]
+    },
     {
       "flags": [
         {
