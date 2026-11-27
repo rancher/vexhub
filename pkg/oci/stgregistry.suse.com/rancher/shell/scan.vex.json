@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/shell?repository_url=stgregistry.suse.com%2Francher%2Fshell",
     "tracking": {
-      "current_release_date": "2026-11-27T13:34:02Z",
+      "current_release_date": "2026-11-27T15:31:22Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-11-27T13:34:02Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-27T15:31:22Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -225,23 +230,23 @@
       },
       {
         "category": "product_name",
-        "name": "pkg:rpm/suse/libsasl2-3",
-        "product": {
-          "name": "pkg:rpm/suse/libsasl2-3",
-          "product_id": "pkg-rpm-suse-libsasl2-3",
-          "product_identification_helper": {
-            "purl": "pkg:rpm/suse/libsasl2-3"
-          }
-        }
-      },
-      {
-        "category": "product_name",
         "name": "pkg:rpm/suse/libpcre2-8-0",
         "product": {
           "name": "pkg:rpm/suse/libpcre2-8-0",
           "product_id": "pkg-rpm-suse-libpcre2-8-0",
           "product_identification_helper": {
             "purl": "pkg:rpm/suse/libpcre2-8-0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libsasl2-3",
+        "product": {
+          "name": "pkg:rpm/suse/libsasl2-3",
+          "product_id": "pkg-rpm-suse-libsasl2-3",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libsasl2-3"
           }
         }
       }
@@ -403,19 +408,19 @@
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "pkg:rpm/suse/libsasl2-3 as a component of pkg:oci/shell?repository_url=stgregistry.suse.com%2Francher%2Fshell",
-          "product_id": "pkg-rpm-suse-libsasl2-3-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/shell?repository_url=stgregistry.suse.com%2Francher%2Fshell",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
         },
-        "product_reference": "pkg-rpm-suse-libsasl2-3",
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
         "relates_to_product_reference": "pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
       },
       {
         "category": "default_component_of",
         "full_product_name": {
-          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/shell?repository_url=stgregistry.suse.com%2Francher%2Fshell",
-          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
+          "name": "pkg:rpm/suse/libsasl2-3 as a component of pkg:oci/shell?repository_url=stgregistry.suse.com%2Francher%2Fshell",
+          "product_id": "pkg-rpm-suse-libsasl2-3-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
         },
-        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
+        "product_reference": "pkg-rpm-suse-libsasl2-3",
         "relates_to_product_reference": "pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
       }
     ]
@@ -1792,6 +1797,42 @@
     {
       "flags": [
         {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:23906-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "pcre2 only used by libselinux/glib/grep with fixed patterns; no attacker-controlled regex or JIT API. This statement concerns SUSE-SU-2026:23906-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/shell?repository_url=stgregistry.suse.com%2Francher%2Fshell. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-suse-libsasl2-3-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
@@ -1828,6 +1869,42 @@
     {
       "flags": [
         {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24654-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "pcre2 only used by libselinux/glib/grep with fixed patterns; no attacker-controlled regex or JIT API. This statement concerns SUSE-SU-2026:24654-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/shell?repository_url=stgregistry.suse.com%2Francher%2Fshell. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
           "label": "vulnerable_code_cannot_be_controlled_by_adversary",
           "product_ids": [
             "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
@@ -1855,6 +1932,42 @@
         {
           "category": "impact",
           "details": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24946-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "pcre2 only used by libselinux/glib/grep with fixed patterns; no attacker-controlled regex or JIT API. This statement concerns SUSE-SU-2026:24946-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/shell?repository_url=stgregistry.suse.com%2Francher%2Fshell. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-shell-repository-url-stgregistry-suse-com-2Francher-2Fshell"
           ]

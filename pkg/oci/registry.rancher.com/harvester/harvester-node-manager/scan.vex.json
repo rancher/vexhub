@@ -1,0 +1,163 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en",
+    "publisher": {
+      "category": "vendor",
+      "name": "Rancher Security team",
+      "namespace": "https://github.com/rancher"
+    },
+    "title": "Rancher VEX report for pkg:oci/harvester-node-manager?repository_url=registry.rancher.com%2Fharvester%2Fharvester-node-manager",
+    "tracking": {
+      "current_release_date": "2026-11-27T15:31:22Z",
+      "generator": {
+        "engine": {
+          "name": "rancher/image-scanning"
+        }
+      },
+      "id": "pkg:oci/harvester-node-manager?repository_url=registry.rancher.com%2Fharvester%2Fharvester-node-manager",
+      "initial_release_date": "2026-11-27T15:31:22Z",
+      "revision_history": [
+        {
+          "date": "2026-11-27T15:31:22Z",
+          "number": "1",
+          "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/harvester-node-manager?repository_url=registry.rancher.com%2Fharvester%2Fharvester-node-manager"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "product_name",
+        "name": "pkg:oci/harvester-node-manager?repository_url=registry.rancher.com%2Fharvester%2Fharvester-node-manager",
+        "product": {
+          "name": "pkg:oci/harvester-node-manager?repository_url=registry.rancher.com%2Fharvester%2Fharvester-node-manager",
+          "product_id": "pkg-oci-harvester-node-manager-repository-url-registry-rancher-com-2Fharvester-2Fharvester-node-manager",
+          "product_identification_helper": {
+            "purl": "pkg:oci/harvester-node-manager?repository_url=registry.rancher.com%2Fharvester%2Fharvester-node-manager"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libpcre2-8-0",
+        "product": {
+          "name": "pkg:rpm/suse/libpcre2-8-0",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpcre2-8-0"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libzck1",
+        "product": {
+          "name": "pkg:rpm/suse/libzck1",
+          "product_id": "pkg-rpm-suse-libzck1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libzck1"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/harvester-node-manager?repository_url=registry.rancher.com%2Fharvester%2Fharvester-node-manager",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-node-manager-repository-url-registry-rancher-com-2Fharvester-2Fharvester-node-manager"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
+        "relates_to_product_reference": "pkg-oci-harvester-node-manager-repository-url-registry-rancher-com-2Fharvester-2Fharvester-node-manager"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libzck1 as a component of pkg:oci/harvester-node-manager?repository_url=registry.rancher.com%2Fharvester%2Fharvester-node-manager",
+          "product_id": "pkg-rpm-suse-libzck1-in-pkg-oci-harvester-node-manager-repository-url-registry-rancher-com-2Fharvester-2Fharvester-node-manager"
+        },
+        "product_reference": "pkg-rpm-suse-libzck1",
+        "relates_to_product_reference": "pkg-oci-harvester-node-manager-repository-url-registry-rancher-com-2Fharvester-2Fharvester-node-manager"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-node-manager-repository-url-registry-rancher-com-2Fharvester-2Fharvester-node-manager"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24654-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "pcre2 only used by libselinux/glib/grep with fixed patterns; no attacker-controlled regex or JIT API. This statement concerns SUSE-SU-2026:24654-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/harvester-node-manager?repository_url=registry.rancher.com%2Fharvester%2Fharvester-node-manager. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-node-manager-repository-url-registry-rancher-com-2Fharvester-2Fharvester-node-manager"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-node-manager-repository-url-registry-rancher-com-2Fharvester-2Fharvester-node-manager"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libzck1-in-pkg-oci-harvester-node-manager-repository-url-registry-rancher-com-2Fharvester-2Fharvester-node-manager"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24657-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "zchunk only linked by libzypp; zypper/package metadata is never processed at container runtime. This statement concerns SUSE-SU-2026:24657-1 in pkg:rpm/suse/libzck1 as a subcomponent of pkg:oci/harvester-node-manager?repository_url=registry.rancher.com%2Fharvester%2Fharvester-node-manager. It does not assert the status of pkg:rpm/suse/libzck1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libzck1-in-pkg-oci-harvester-node-manager-repository-url-registry-rancher-com-2Fharvester-2Fharvester-node-manager"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libzck1-in-pkg-oci-harvester-node-manager-repository-url-registry-rancher-com-2Fharvester-2Fharvester-node-manager"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/supportability-review-internal?repository_url=index.docker.io%2Francher%2Fsupportability-review-internal",
     "tracking": {
-      "current_release_date": "2026-11-27T13:34:02Z",
+      "current_release_date": "2026-11-27T15:31:22Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -28,10 +28,15 @@
           "date": "2026-11-27T13:34:02Z",
           "number": "2",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-27T15:31:22Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -121,6 +126,17 @@
           "product_id": "pkg-oci-supportability-review-internal-repository-url-index-docker-io-2Francher-2Fsupportability-review-internal",
           "product_identification_helper": {
             "purl": "pkg:oci/supportability-review-internal?repository_url=index.docker.io%2Francher%2Fsupportability-review-internal"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libfdisk1",
+        "product": {
+          "name": "pkg:rpm/suse/libfdisk1",
+          "product_id": "pkg-rpm-suse-libfdisk1",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libfdisk1"
           }
         }
       },
@@ -256,6 +272,15 @@
         },
         "product_reference": "pkg-rpm-suse-python311-devel",
         "relates_to_product_reference": "pkg-oci-supportability-review-internal-repository-url-index-docker-io-rancher-supportability-review-internal"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libfdisk1 as a component of pkg:oci/supportability-review-internal?repository_url=index.docker.io%2Francher%2Fsupportability-review-internal",
+          "product_id": "pkg-rpm-suse-libfdisk1-in-pkg-oci-supportability-review-internal-repository-url-index-docker-io-2Francher-2Fsupportability-review-internal"
+        },
+        "product_reference": "pkg-rpm-suse-libfdisk1",
+        "relates_to_product_reference": "pkg-oci-supportability-review-internal-repository-url-index-docker-io-2Francher-2Fsupportability-review-internal"
       },
       {
         "category": "default_component_of",
@@ -488,6 +513,42 @@
     {
       "flags": [
         {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libfdisk1-in-pkg-oci-supportability-review-internal-repository-url-index-docker-io-2Francher-2Fsupportability-review-internal"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24881-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libfdisk has no linked consumer in the image; no partitioning tool runs at container runtime. This statement concerns SUSE-SU-2026:24881-1 in pkg:rpm/suse/libfdisk1 as a subcomponent of pkg:oci/supportability-review-internal?repository_url=index.docker.io%2Francher%2Fsupportability-review-internal. It does not assert the status of pkg:rpm/suse/libfdisk1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libfdisk1-in-pkg-oci-supportability-review-internal-repository-url-index-docker-io-2Francher-2Fsupportability-review-internal"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libfdisk1-in-pkg-oci-supportability-review-internal-repository-url-index-docker-io-2Francher-2Fsupportability-review-internal"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
           "label": "vulnerable_code_cannot_be_controlled_by_adversary",
           "product_ids": [
             "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-supportability-review-internal-repository-url-index-docker-io-2Francher-2Fsupportability-review-internal"
@@ -515,6 +576,42 @@
         {
           "category": "impact",
           "details": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-supportability-review-internal-repository-url-index-docker-io-2Francher-2Fsupportability-review-internal"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-supportability-review-internal-repository-url-index-docker-io-2Francher-2Fsupportability-review-internal"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24946-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "pcre2 only used by libselinux/glib/grep with fixed patterns; no attacker-controlled regex or JIT API. This statement concerns SUSE-SU-2026:24946-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/supportability-review-internal?repository_url=index.docker.io%2Francher%2Fsupportability-review-internal. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-supportability-review-internal-repository-url-index-docker-io-2Francher-2Fsupportability-review-internal"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-supportability-review-internal-repository-url-index-docker-io-2Francher-2Fsupportability-review-internal"
           ]
