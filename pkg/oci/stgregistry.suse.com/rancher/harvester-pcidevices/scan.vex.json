@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/harvester-pcidevices?repository_url=stgregistry.suse.com%2Francher%2Fharvester-pcidevices",
     "tracking": {
-      "current_release_date": "2026-11-23T23:27:18Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-11-23T23:27:18Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/harvester-pcidevices?repository_url=stgregistry.suse.com/rancher/harvester-pcidevices"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -615,6 +620,15 @@
           "product_id": "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices"
         },
         "product_reference": "pkg-rpm-suse-glibc-locale-base",
+        "relates_to_product_reference": "pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/harvester-pcidevices?repository_url=stgregistry.suse.com%2Francher%2Fharvester-pcidevices",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
         "relates_to_product_reference": "pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices"
       },
       {
@@ -2020,6 +2034,96 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libfdisk1-in-pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-rancher-harvester-pcidevices"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24872-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go entrypoint; glibc not loaded by the container main process. This statement concerns SUSE-SU-2026:24872-1 in pkg:rpm/suse/glibc as a subcomponent of pkg:oci/harvester-pcidevices?repository_url=stgregistry.suse.com%2Francher%2Fharvester-pcidevices. It does not assert the status of pkg:rpm/suse/glibc when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Static Go entrypoint; glibc locale data never loaded at runtime. This statement concerns SUSE-SU-2026:24872-1 in pkg:rpm/suse/glibc-locale-base as a subcomponent of pkg:oci/harvester-pcidevices?repository_url=stgregistry.suse.com%2Francher%2Fharvester-pcidevices. It does not assert the status of pkg:rpm/suse/glibc-locale-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-glibc-in-pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices",
+          "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24891-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "PCRE2 regex C library; Go uses regexp stdlib. This statement concerns SUSE-SU-2026:24891-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/harvester-pcidevices?repository_url=stgregistry.suse.com%2Francher%2Fharvester-pcidevices. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-harvester-pcidevices-repository-url-stgregistry-suse-com-2Francher-2Fharvester-pcidevices"
           ]
         }
       ]

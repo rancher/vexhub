@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/k3k-kubelet?repository_url=index.docker.io%2Francher%2Fk3k-kubelet",
     "tracking": {
-      "current_release_date": "2026-11-21T13:22:17Z",
+      "current_release_date": "2026-11-27T13:34:02Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,20 @@
           "date": "2026-11-21T13:22:17Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/k3k-kubelet?repository_url=index.docker.io%2Francher%2Fk3k-kubelet"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-27T13:34:02Z",
+          "number": "3",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -63,6 +73,17 @@
             "purl": "pkg:rpm/suse/glibc-locale-base"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:rpm/suse/libpcre2-8-0",
+        "product": {
+          "name": "pkg:rpm/suse/libpcre2-8-0",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0",
+          "product_identification_helper": {
+            "purl": "pkg:rpm/suse/libpcre2-8-0"
+          }
+        }
       }
     ],
     "relationships": [
@@ -82,6 +103,15 @@
           "product_id": "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
         },
         "product_reference": "pkg-rpm-suse-glibc-locale-base",
+        "relates_to_product_reference": "pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/k3k-kubelet?repository_url=index.docker.io%2Francher%2Fk3k-kubelet",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
         "relates_to_product_reference": "pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
       }
     ]
@@ -137,6 +167,96 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24872-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Static Go entrypoint; glibc not loaded by the container main process. This statement concerns SUSE-SU-2026:24872-1 in pkg:rpm/suse/glibc as a subcomponent of pkg:oci/k3k-kubelet?repository_url=index.docker.io%2Francher%2Fk3k-kubelet. It does not assert the status of pkg:rpm/suse/glibc when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "Static Go entrypoint; glibc locale data never loaded at runtime. This statement concerns SUSE-SU-2026:24872-1 in pkg:rpm/suse/glibc-locale-base as a subcomponent of pkg:oci/k3k-kubelet?repository_url=index.docker.io%2Francher%2Fk3k-kubelet. It does not assert the status of pkg:rpm/suse/glibc-locale-base when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-glibc-in-pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet",
+          "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-in-pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-glibc-locale-base-in-pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24891-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Indirect leftover OS dependency.. This statement concerns SUSE-SU-2026:24891-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/k3k-kubelet?repository_url=index.docker.io%2Francher%2Fk3k-kubelet. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_cannot_be_controlled_by_adversary",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-k3k-kubelet-repository-url-index-docker-io-2Francher-2Fk3k-kubelet"
           ]
         }
       ]

@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io%2Francher%2Fneuvector-registry-adapter",
     "tracking": {
-      "current_release_date": "2026-10-20T21:41:46Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,22 +23,27 @@
           "date": "2026-10-20T21:41:46Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io/rancher/neuvector-registry-adapter"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
     "branches": [
       {
         "category": "product_name",
-        "name": "pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io/rancher/neuvector-registry-adapter",
+        "name": "pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io%2Francher%2Fneuvector-registry-adapter",
         "product": {
-          "name": "pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io/rancher/neuvector-registry-adapter",
-          "product_id": "pkg-oci-neuvector-registry-adapter-repository-url-index-docker-io-rancher-neuvector-registry-adapter",
+          "name": "pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io%2Francher%2Fneuvector-registry-adapter",
+          "product_id": "pkg-oci-neuvector-registry-adapter-repository-url-index-docker-io-2Francher-2Fneuvector-registry-adapter",
           "product_identification_helper": {
-            "purl": "pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io/rancher/neuvector-registry-adapter"
+            "purl": "pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io%2Francher%2Fneuvector-registry-adapter"
           }
         }
       },
@@ -52,9 +57,29 @@
             "purl": "pkg:rpm/suse/openssl-3"
           }
         }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io/rancher/neuvector-registry-adapter",
+        "product": {
+          "name": "pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io/rancher/neuvector-registry-adapter",
+          "product_id": "pkg-oci-neuvector-registry-adapter-repository-url-index-docker-io-rancher-neuvector-registry-adapter",
+          "product_identification_helper": {
+            "purl": "pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io/rancher/neuvector-registry-adapter"
+          }
+        }
       }
     ],
     "relationships": [
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/openssl-3 as a component of pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io%2Francher%2Fneuvector-registry-adapter",
+          "product_id": "pkg-rpm-suse-openssl-3-in-pkg-oci-neuvector-registry-adapter-repository-url-index-docker-io-2Francher-2Fneuvector-registry-adapter"
+        },
+        "product_reference": "pkg-rpm-suse-openssl-3",
+        "relates_to_product_reference": "pkg-oci-neuvector-registry-adapter-repository-url-index-docker-io-2Francher-2Fneuvector-registry-adapter"
+      },
       {
         "category": "default_component_of",
         "full_product_name": {
@@ -67,6 +92,42 @@
     ]
   },
   "vulnerabilities": [
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssl-3-in-pkg-oci-neuvector-registry-adapter-repository-url-index-docker-io-2Francher-2Fneuvector-registry-adapter"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-RU-2026:5149-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "registry-adapter is a Go binary using crypto/tls; openssl-3 CLI tool is never invoked at runtime. This statement concerns SUSE-RU-2026:5149-1 in pkg:rpm/suse/openssl-3 as a subcomponent of pkg:oci/neuvector-registry-adapter?repository_url=index.docker.io%2Francher%2Fneuvector-registry-adapter. It does not assert the status of pkg:rpm/suse/openssl-3 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-openssl-3-in-pkg-oci-neuvector-registry-adapter-repository-url-index-docker-io-2Francher-2Fneuvector-registry-adapter"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssl-3-in-pkg-oci-neuvector-registry-adapter-repository-url-index-docker-io-2Francher-2Fneuvector-registry-adapter"
+          ]
+        }
+      ]
+    },
     {
       "flags": [
         {

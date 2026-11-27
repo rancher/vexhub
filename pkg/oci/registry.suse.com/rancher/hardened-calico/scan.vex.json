@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/hardened-calico?repository_url=registry.suse.com%2Francher%2Fhardened-calico",
     "tracking": {
-      "current_release_date": "2026-11-20T22:07:06Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -43,10 +43,15 @@
           "date": "2026-11-20T22:07:06Z",
           "number": "5",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "6",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -723,6 +728,24 @@
           "product_id": "pkg-rpm-suse-coreutils-single-in-pkg-oci-hardened-calico-repository-url-registry-suse-com-2Francher-2Fhardened-calico"
         },
         "product_reference": "pkg-rpm-suse-coreutils-single",
+        "relates_to_product_reference": "pkg-oci-hardened-calico-repository-url-registry-suse-com-2Francher-2Fhardened-calico"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libuuid1 as a component of pkg:oci/hardened-calico?repository_url=registry.suse.com%2Francher%2Fhardened-calico",
+          "product_id": "pkg-rpm-suse-libuuid1-in-pkg-oci-hardened-calico-repository-url-registry-suse-com-2Francher-2Fhardened-calico"
+        },
+        "product_reference": "pkg-rpm-suse-libuuid1",
+        "relates_to_product_reference": "pkg-oci-hardened-calico-repository-url-registry-suse-com-2Francher-2Fhardened-calico"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/libpcre2-8-0 as a component of pkg:oci/hardened-calico?repository_url=registry.suse.com%2Francher%2Fhardened-calico",
+          "product_id": "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-calico-repository-url-registry-suse-com-2Francher-2Fhardened-calico"
+        },
+        "product_reference": "pkg-rpm-suse-libpcre2-8-0",
         "relates_to_product_reference": "pkg-oci-hardened-calico-repository-url-registry-suse-com-2Francher-2Fhardened-calico"
       },
       {
@@ -1894,6 +1917,78 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-rpm-suse-libuuid1-in-pkg-oci-hardened-calico-repository-url-registry-suse-com-rancher-hardened-calico"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libuuid1-in-pkg-oci-hardened-calico-repository-url-registry-suse-com-2Francher-2Fhardened-calico"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24881-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Pure Go Calico CNI plugin; Go uses own UUID library. This statement concerns SUSE-SU-2026:24881-1 in pkg:rpm/suse/libuuid1 as a subcomponent of pkg:oci/hardened-calico?repository_url=registry.suse.com%2Francher%2Fhardened-calico. It does not assert the status of pkg:rpm/suse/libuuid1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libuuid1-in-pkg-oci-hardened-calico-repository-url-registry-suse-com-2Francher-2Fhardened-calico"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libuuid1-in-pkg-oci-hardened-calico-repository-url-registry-suse-com-2Francher-2Fhardened-calico"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-calico-repository-url-registry-suse-com-2Francher-2Fhardened-calico"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:24891-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "Calico components are statically-linked Go binaries plus BIRD/runit/xtables; none link against or call libpcre2 at.... This statement concerns SUSE-SU-2026:24891-1 in pkg:rpm/suse/libpcre2-8-0 as a subcomponent of pkg:oci/hardened-calico?repository_url=registry.suse.com%2Francher%2Fhardened-calico. It does not assert the status of pkg:rpm/suse/libpcre2-8-0 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-calico-repository-url-registry-suse-com-2Francher-2Fhardened-calico"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-libpcre2-8-0-in-pkg-oci-hardened-calico-repository-url-registry-suse-com-2Francher-2Fhardened-calico"
           ]
         }
       ]

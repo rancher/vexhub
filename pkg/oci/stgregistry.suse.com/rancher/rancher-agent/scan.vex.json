@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent",
     "tracking": {
-      "current_release_date": "2026-11-23T23:27:18Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -23,10 +23,15 @@
           "date": "2026-11-23T23:27:18Z",
           "number": "1",
           "summary": "CSAF-VEX report made by SUSE Rancher for pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "2",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -720,6 +725,15 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:rpm/suse/openssh-clients as a component of pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent",
+          "product_id": "pkg-rpm-suse-openssh-clients-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+        },
+        "product_reference": "pkg-rpm-suse-openssh-clients",
+        "relates_to_product_reference": "pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:rpm/suse/bind-utils as a component of pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent",
           "product_id": "pkg-rpm-suse-bind-utils-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
         },
@@ -747,6 +761,24 @@
       {
         "category": "default_component_of",
         "full_product_name": {
+          "name": "pkg:rpm/suse/openssh-common as a component of pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent",
+          "product_id": "pkg-rpm-suse-openssh-common-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+        },
+        "product_reference": "pkg-rpm-suse-openssh-common",
+        "relates_to_product_reference": "pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/openssh-fips as a component of pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent",
+          "product_id": "pkg-rpm-suse-openssh-fips-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+        },
+        "product_reference": "pkg-rpm-suse-openssh-fips",
+        "relates_to_product_reference": "pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
           "name": "pkg:rpm/suse/libsasl2-3 as a component of pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent",
           "product_id": "pkg-rpm-suse-libsasl2-3-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
         },
@@ -760,6 +792,15 @@
           "product_id": "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
         },
         "product_reference": "pkg-rpm-suse-libbrotlicommon1",
+        "relates_to_product_reference": "pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/tar as a component of pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent",
+          "product_id": "pkg-rpm-suse-tar-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+        },
+        "product_reference": "pkg-rpm-suse-tar",
         "relates_to_product_reference": "pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
       }
     ]
@@ -4946,6 +4987,12 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-rpm-suse-openssh-clients-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-rpm-suse-openssh-common-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-rancher-rancher-agent"
           ]
         },
@@ -4965,6 +5012,10 @@
       "notes": [
         {
           "category": "description",
+          "text": "rancher-agent connects to Rancher server over HTTPS/WebSocket; openssh-clients CLI is never invoked. This statement concerns SUSE-SU-2026:3605-1 in pkg:rpm/suse/openssh-clients as a subcomponent of pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent. It does not assert the status of pkg:rpm/suse/openssh-clients when used independently or in other products."
+        },
+        {
+          "category": "description",
           "text": "No sshd server run by rancher-agent; ssh not invoked. This statement concerns SUSE-SU-2026:3605-1 in pkg:rpm/suse/openssh-common as a subcomponent of pkg:oci/rancher-agent?repository_url=stgregistry.suse.com/rancher/rancher-agent. It does not assert the status of pkg:rpm/suse/openssh-common when used independently or in other products."
         },
         {
@@ -4974,11 +5025,19 @@
       ],
       "product_status": {
         "known_not_affected": [
+          "pkg-rpm-suse-openssh-clients-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent",
           "pkg-rpm-suse-openssh-common-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-rancher-rancher-agent",
           "pkg-rpm-suse-openssh-fips-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-rancher-rancher-agent"
         ]
       },
       "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssh-clients-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+          ]
+        },
         {
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
@@ -5178,6 +5237,78 @@
     {
       "flags": [
         {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssh-clients-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssh-common-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssh-fips-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:4827-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "rancher-agent connects to Rancher server over HTTPS/WebSocket; openssh-clients CLI is never invoked. This statement concerns SUSE-SU-2026:4827-1 in pkg:rpm/suse/openssh-clients as a subcomponent of pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent. It does not assert the status of pkg:rpm/suse/openssh-clients when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "rancher-agent Go binary communicates via websocket/TLS; OpenSSH utilities not invoked. This statement concerns SUSE-SU-2026:4827-1 in pkg:rpm/suse/openssh-common as a subcomponent of pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent. It does not assert the status of pkg:rpm/suse/openssh-common when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "OpenSSH server/client; rancher-agent communicates via HTTPS/WebSocket. This statement concerns SUSE-SU-2026:4827-1 in pkg:rpm/suse/openssh-fips as a subcomponent of pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent. It does not assert the status of pkg:rpm/suse/openssh-fips when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-openssh-clients-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent",
+          "pkg-rpm-suse-openssh-common-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent",
+          "pkg-rpm-suse-openssh-fips-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssh-clients-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssh-common-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-openssh-fips-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
           "label": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-suse-libsasl2-3-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
@@ -5243,6 +5374,42 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-tar-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5160-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "tar is not executed at runtime; it is an incidental SLES base-image dependency. This statement concerns SUSE-SU-2026:5160-1 in pkg:rpm/suse/tar as a subcomponent of pkg:oci/rancher-agent?repository_url=stgregistry.suse.com%2Francher%2Francher-agent. It does not assert the status of pkg:rpm/suse/tar when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-tar-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-tar-in-pkg-oci-rancher-agent-repository-url-stgregistry-suse-com-2Francher-2Francher-agent"
           ]
         }
       ]

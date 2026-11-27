@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/kube-ovn?repository_url=registry.rancher.com%2Fkubeovn%2Fkube-ovn",
     "tracking": {
-      "current_release_date": "2026-11-26T13:36:06Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -78,10 +78,15 @@
           "date": "2026-11-26T13:36:06Z",
           "number": "12",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "13",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "12"
+      "version": "13"
     }
   },
   "product_tree": {
@@ -468,6 +473,17 @@
           "product_id": "pkg-deb-ubuntu-libbrotli1",
           "product_identification_helper": {
             "purl": "pkg:deb/ubuntu/libbrotli1"
+          }
+        }
+      },
+      {
+        "category": "product_name",
+        "name": "pkg:deb/ubuntu/librtmp1",
+        "product": {
+          "name": "pkg:deb/ubuntu/librtmp1",
+          "product_id": "pkg-deb-ubuntu-librtmp1",
+          "product_identification_helper": {
+            "purl": "pkg:deb/ubuntu/librtmp1"
           }
         }
       },
@@ -1448,6 +1464,15 @@
           "product_id": "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
         },
         "product_reference": "pkg-deb-ubuntu-libbrotli1",
+        "relates_to_product_reference": "pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:deb/ubuntu/librtmp1 as a component of pkg:oci/kube-ovn?repository_url=registry.rancher.com%2Fkubeovn%2Fkube-ovn",
+          "product_id": "pkg-deb-ubuntu-librtmp1-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+        },
+        "product_reference": "pkg-deb-ubuntu-librtmp1",
         "relates_to_product_reference": "pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
       },
       {
@@ -3398,6 +3423,37 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-libbrotli1-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-112060",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-librtmp1-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "librtmp only reachable via libcurl RTMP URLs; no running kube-ovn process links curl or uses rtmp. This statement concerns CVE-2026-112060 in pkg:deb/ubuntu/librtmp1 as a subcomponent of pkg:oci/kube-ovn?repository_url=registry.rancher.com%2Fkubeovn%2Fkube-ovn. It does not assert the status of pkg:deb/ubuntu/librtmp1 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-librtmp1-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-librtmp1-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
           ]
         }
       ]
@@ -7034,6 +7090,68 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-udev-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-18238",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libpcap0-8t64-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libpcap only linked by arping debug helper; tcpdump/ncat are absent from this image. This statement concerns CVE-2026-18238 in pkg:deb/ubuntu/libpcap0.8t64 as a subcomponent of pkg:oci/kube-ovn?repository_url=registry.rancher.com%2Fkubeovn%2Fkube-ovn. It does not assert the status of pkg:deb/ubuntu/libpcap0.8t64 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libpcap0-8t64-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libpcap0-8t64-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-18313",
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libpcap0-8t64-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "libpcap only linked by arping debug helper; tcpdump/ncat are absent from this image. This statement concerns CVE-2026-18313 in pkg:deb/ubuntu/libpcap0.8t64 as a subcomponent of pkg:oci/kube-ovn?repository_url=registry.rancher.com%2Fkubeovn%2Fkube-ovn. It does not assert the status of pkg:deb/ubuntu/libpcap0.8t64 when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-deb-ubuntu-libpcap0-8t64-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-libpcap0-8t64-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
           ]
         }
       ]
@@ -11848,6 +11966,12 @@
         {
           "label": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-deb-ubuntu-libperl5-40-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+          ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-deb-ubuntu-perl-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
           ]
         },
@@ -11862,12 +11986,22 @@
           "product_ids": [
             "pkg-deb-ubuntu-perl-modules-5-38-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
           ]
+        },
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-modules-5-40-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+          ]
         }
       ],
       "notes": [
         {
           "category": "description",
           "text": "Perl interpreter is an incidental dependency and is never executed by the entrypoint. This statement concerns CVE-2026-48959 in pkg:deb/ubuntu/libperl5.38t64 as a subcomponent of pkg:oci/kube-ovn?repository_url=registry.rancher.com%2Fkubeovn%2Fkube-ovn. It does not assert the status of pkg:deb/ubuntu/libperl5.38t64 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "perl is an incidental dependency and is never executed by the kube-ovn entrypoint. This statement concerns CVE-2026-48959 in pkg:deb/ubuntu/libperl5.40 as a subcomponent of pkg:oci/kube-ovn?repository_url=registry.rancher.com%2Fkubeovn%2Fkube-ovn. It does not assert the status of pkg:deb/ubuntu/libperl5.40 when used independently or in other products."
         },
         {
           "category": "description",
@@ -11880,14 +12014,20 @@
         {
           "category": "description",
           "text": "Perl interpreter is an incidental dependency and is never executed by the entrypoint. This statement concerns CVE-2026-48959 in pkg:deb/ubuntu/perl-modules-5.38 as a subcomponent of pkg:oci/kube-ovn?repository_url=registry.rancher.com%2Fkubeovn%2Fkube-ovn. It does not assert the status of pkg:deb/ubuntu/perl-modules-5.38 when used independently or in other products."
+        },
+        {
+          "category": "description",
+          "text": "perl is an incidental dependency and is never executed by the kube-ovn entrypoint. This statement concerns CVE-2026-48959 in pkg:deb/ubuntu/perl-modules-5.40 as a subcomponent of pkg:oci/kube-ovn?repository_url=registry.rancher.com%2Fkubeovn%2Fkube-ovn. It does not assert the status of pkg:deb/ubuntu/perl-modules-5.40 when used independently or in other products."
         }
       ],
       "product_status": {
         "known_not_affected": [
           "pkg-deb-ubuntu-libperl5-38t64-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn",
+          "pkg-deb-ubuntu-libperl5-40-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn",
           "pkg-deb-ubuntu-perl-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn",
           "pkg-deb-ubuntu-perl-base-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn",
-          "pkg-deb-ubuntu-perl-modules-5-38-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+          "pkg-deb-ubuntu-perl-modules-5-38-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn",
+          "pkg-deb-ubuntu-perl-modules-5-40-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
         ]
       },
       "threats": [
@@ -11902,6 +12042,13 @@
           "category": "impact",
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
+            "pkg-deb-ubuntu-libperl5-40-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "pkg-deb-ubuntu-perl-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
           ]
         },
@@ -11917,6 +12064,13 @@
           "details": "vulnerable_code_not_in_execute_path",
           "product_ids": [
             "pkg-deb-ubuntu-perl-modules-5-38-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-deb-ubuntu-perl-modules-5-40-in-pkg-oci-kube-ovn-repository-url-registry-rancher-com-2Fkubeovn-2Fkube-ovn"
           ]
         }
       ]

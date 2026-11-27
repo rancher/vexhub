@@ -10,7 +10,7 @@
     },
     "title": "Rancher VEX report for pkg:oci/neuvector-enforcer?repository_url=index.docker.io%2Francher%2Fneuvector-enforcer",
     "tracking": {
-      "current_release_date": "2026-11-03T12:38:49Z",
+      "current_release_date": "2026-11-26T23:29:59Z",
       "generator": {
         "engine": {
           "name": "rancher/image-scanning"
@@ -33,10 +33,15 @@
           "date": "2026-11-03T12:38:49Z",
           "number": "3",
           "summary": "Updated from the VEX database"
+        },
+        {
+          "date": "2026-11-26T23:29:59Z",
+          "number": "4",
+          "summary": "Updated from the VEX database"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -452,6 +457,15 @@
           "product_id": "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-neuvector-enforcer-repository-url-index-docker-io-2Francher-2Fneuvector-enforcer"
         },
         "product_reference": "pkg-rpm-suse-libbrotlicommon1",
+        "relates_to_product_reference": "pkg-oci-neuvector-enforcer-repository-url-index-docker-io-2Francher-2Fneuvector-enforcer"
+      },
+      {
+        "category": "default_component_of",
+        "full_product_name": {
+          "name": "pkg:rpm/suse/tar as a component of pkg:oci/neuvector-enforcer?repository_url=index.docker.io%2Francher%2Fneuvector-enforcer",
+          "product_id": "pkg-rpm-suse-tar-in-pkg-oci-neuvector-enforcer-repository-url-index-docker-io-2Francher-2Fneuvector-enforcer"
+        },
+        "product_reference": "pkg-rpm-suse-tar",
         "relates_to_product_reference": "pkg-oci-neuvector-enforcer-repository-url-index-docker-io-2Francher-2Fneuvector-enforcer"
       }
     ]
@@ -1155,6 +1169,42 @@
           "details": "vulnerable_code_not_present",
           "product_ids": [
             "pkg-rpm-suse-libbrotlicommon1-in-pkg-oci-neuvector-enforcer-repository-url-index-docker-io-2Francher-2Fneuvector-enforcer"
+          ]
+        }
+      ]
+    },
+    {
+      "flags": [
+        {
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-tar-in-pkg-oci-neuvector-enforcer-repository-url-index-docker-io-2Francher-2Fneuvector-enforcer"
+          ]
+        }
+      ],
+      "ids": [
+        {
+          "system_name": "SUSE",
+          "text": "SUSE-SU-2026:5160-1"
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "tar is not executed at runtime; it is an incidental SLES base-image dependency. This statement concerns SUSE-SU-2026:5160-1 in pkg:rpm/suse/tar as a subcomponent of pkg:oci/neuvector-enforcer?repository_url=index.docker.io%2Francher%2Fneuvector-enforcer. It does not assert the status of pkg:rpm/suse/tar when used independently or in other products."
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "pkg-rpm-suse-tar-in-pkg-oci-neuvector-enforcer-repository-url-index-docker-io-2Francher-2Fneuvector-enforcer"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
+            "pkg-rpm-suse-tar-in-pkg-oci-neuvector-enforcer-repository-url-index-docker-io-2Francher-2Fneuvector-enforcer"
           ]
         }
       ]
